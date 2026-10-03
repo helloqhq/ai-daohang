@@ -1,5 +1,7 @@
 # 知更 · AI 信息聚合
 
+[在线访问](https://helloqhq.github.io/ai-daohang/) · [项目仓库](https://github.com/helloqhq/ai-daohang)
+
 纯静态中文 AI 信息站。统一通过 RSS / Atom 订阅官方与已核实负责人信息，由用户已有 AI agent 调用采集 skill，筛选、翻译和归纳后产出 JSON。网站本身不抓取上游、不调用模型。
 
 ## 使用

@@ -1,7 +1,43 @@
 {
   "schema_version": "1.0",
-  "snapshot_id": "839f80a866877be8",
+  "snapshot_id": "401134a7a4e79d82",
   "events": [
+    {
+      "id": "deepseek-harness-v021-alpha1",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "DeepSeek Harness 0.2.1-alpha.1：试验 Claude Code Mods 兼容层，调整自动化与插件接口",
+      "summary_zh": "DeepSeek Harness 发布 0.2.1-alpha.1 预览版，新增实验性 Claude Code Mods 兼容层，当前仅用于验证 API 能力对应关系，并不提供完整实用兼容。自动化任务改为 Web 内置能力；插件与扩展接口包含破坏性变更。该版本还修复任务反复停止后消息滞留队列，以及 Windows 保留端口导致桌面端无法启动等问题。",
+      "key_points_zh": [
+        "Claude Code Mods 兼容层处于实验阶段，主要验证其 API 能力大致属于 Harness 插件能力的子集；不应理解为已实现完整兼容。",
+        "自动化任务成为 Web 内置能力，提醒工具供标准、创造和 PTC 模式使用；极简模式和子代理不可用。旧实验组合包选择会清理，已有任务保留。",
+        "Web 新增 --public-url，用于显示、打开并向模型提供对外访问地址，支持带路径前缀的反向代理入口。",
+        "移除运行时 invariant 插件及各包的 ./invariant 导出；依赖这些诊断入口的扩展与自定义 profile 需要调整。子路径插件不再读取独立 package.json；输入区统计扩展拆为 activity 与 usage，覆盖旧 stats 整行的插件需要更新注册 ID。",
+        "修复目标任务停止、恢复、再次停止后新消息滞留队列的问题；桌面端默认使用系统分配端口，规避 Windows 保留端口导致的启动失败。修复组合包依赖缺失与停用后的残留映射，替换已安装包版本仍需重启。"
+      ],
+      "importance_reason_zh": "影响 Agent 自动化可用模式、跨生态插件试验和现有扩展兼容性；使用旧插件诊断入口或统计扩展的用户需要关注迁移要求。",
+      "published_at": "2026-10-03T06:42:19Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T10:47:33+00:00",
+      "updated_at": "2026-10-03T10:50:21+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1",
+          "collected_at": "2026-10-03T10:47:33+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-03T06:42:19Z"
+        }
+      ]
+    },
     {
       "id": "copilot-cli-1092-pre3",
       "entity_ids": [

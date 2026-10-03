@@ -28,7 +28,7 @@ def main():
     elif args.command=='feeds':
         values=[{'source_id':s['id'],'name':s['name'],'enabled':s['enabled'],'platform':s['platform'],'feed_url':feed_address(s,pipeline.config),'provider':s['feed_provider']} for s in pipeline.sources]
         if args.opml:
-            root=ET.Element('opml',version='2.0');head=ET.SubElement(root,'head');ET.SubElement(head,'title').text='知更 · AI 信息订阅'
+            root=ET.Element('opml',version='2.0');head=ET.SubElement(root,'head');ET.SubElement(head,'title').text='AI 简报 · AI 信息订阅'
             body=ET.SubElement(root,'body')
             for item in values:
                 if item['enabled'] and item['feed_url']:ET.SubElement(body,'outline',text=item['name'],title=item['name'],type='rss',xmlUrl=item['feed_url'],category=item['platform'])

@@ -206,7 +206,7 @@ class Pipeline:
             month=old_locations.get(event['id'],(event['published_at'] or event['first_collected_at'])[:7])
             months[month].append(event)
             locations[event['id']]=month
-        opml=ET.Element('opml',version='2.0');head=ET.SubElement(opml,'head');ET.SubElement(head,'title').text='知更 · AI 信息订阅';body=ET.SubElement(opml,'body')
+        opml=ET.Element('opml',version='2.0');head=ET.SubElement(opml,'head');ET.SubElement(head,'title').text='AI 简报 · AI 信息订阅';body=ET.SubElement(opml,'body')
         for source in catalog['sources']:
             if source.get('enabled') and source.get('feed_url'):
                 ET.SubElement(body,'outline',text=source['name'],title=source['name'],type='rss',xmlUrl=source['feed_url'],htmlUrl=source['url'],category=source['platform'])

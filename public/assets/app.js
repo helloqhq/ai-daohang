@@ -1,4 +1,4 @@
-import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary} from './model.js';
+import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventTime,followingObjects,eventObjectIds} from './model.js';
 import {resolveLanguage,LANGUAGE_STORAGE_KEY,translate,LABELS,eventContent,coverageNote} from './i18n.js';
 let storedLanguage;
 try {storedLanguage=localStorage.getItem(LANGUAGE_STORAGE_KEY);} catch {}
@@ -10,9 +10,9 @@ const failure=(key,values)=>Object.assign(new Error(key),{key,values});
 const $ = id => document.getElementById(id);
 const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeURL = value => {try {const u = new URL(value);return ['http:','https:'].includes(u.protocol) ? u.href : '#';} catch {return '#';}};
-const color = value => /^#[a-f\d]{6}$/i.test(value || '') ? value : '#1d463a';
 const formatDate = value => {const d = dateKey(value);return d ? d.replaceAll('-','.') : t('dateUnknown');};
-const state = {catalog:null,index:null,coverage:null,events:new Map(),loaded:new Set(),filters:{category:'all',entity:'',kind:'',query:'',from:daysAgo(6),to:daysAgo(0)},visible:18,request:0,view:'feed',detailId:null,error:null,ready:false,unavailable:false};
+const eventTime = event => formatEventTime(event.published_at,event.date_precision,language);
+const state = {expanded:new Set(),catalog:null,index:null,coverage:null,events:new Map(),loaded:new Set(),filters:{category:'all',entity:'',kind:'',query:'',from:daysAgo(6),to:daysAgo(0)},visible:18,request:0,view:'feed',detailId:null,error:null,ready:false,unavailable:false};
 async function json(path, suffix='') {
   const response = await fetch(new URL(`data/${path}${suffix}`,document.baseURI),{cache:'no-cache'});
   if (!response.ok) throw failure('httpError',{status:response.status});
@@ -20,11 +20,15 @@ async function json(path, suffix='') {
 }
 function checkSnapshot(value) {if (value.snapshot_id !== state.index.snapshot_id) throw failure('snapshotError');}
 function error(value) {state.error=value;$('error-box').hidden=false;$('error-box').textContent=t(value.key || 'loadError',value.values);}
-function tags(event) {return event.entity_ids.map(id=>{const e=state.catalog.entities.find(x=>x.id===id);return e ? `<span class="entity-tag"><i style="background:${color(e.color)}"></i>${escape(name(e))}</span>`:'';}).join('<span class="meta-divider">/</span>');}
+function tags(event) {const objects=followingObjects(state.catalog);return eventObjectIds(event,state.catalog).map(id=>{const e=objects.find(x=>x.id===id);return e ? `<span class="entity-tag">${escape(name(e))}</span>`:'';}).join('');}
 function sourceName(sourceId) {const source=state.catalog.sources.find(s=>s.id===sourceId);return source ? name(source) : sourceId;}
+function eventDetails(event) {
+  const content=eventContent(event,language);
+  return `${language==='en'&&content.lang==='zh'?`<span class="translation-notice">${t('chineseOnly')}</span>`:''}<p class="event-summary" lang="${content.lang}">${escape(content.summary)}</p><ul class="key-points" lang="${content.lang}">${content.key_points.map(p=>`<li>${escape(p)}</li>`).join('')}</ul>${content.translation?`<h3>${translate(content.lang,'translation')}</h3><p class="event-summary" lang="${content.lang}">${escape(content.translation)}</p>`:''}${(event.corrections||[]).map(c=>`<div class="correction">${escape(formatEventTime(c.at,'datetime',language))} ${t('correction')}: <span lang="${language==='en'&&c.reason_en?'en':'zh'}">${escape(language==='en'?c.reason_en || c.reason_zh:c.reason_zh)}</span> <a href="${escape(safeURL(c.url))}" target="_blank" rel="noopener noreferrer">${t('evidence')} ↗</a></div>`).join('')}<div class="topics">${event.topics.map(topic=>`<span class="topic">${escape(labels().topic[topic] || topic)}</span>`).join('')}</div><div class="related-links">${(event.related_event_ids||[]).map(related=>`<button data-detail="${escape(related)}">${t('related')} ↗</button>`).join('')}</div><div class="event-sources"><h4>${t('sourceEvidence')} · ${escape(eventTime(event))}</h4>${event.sources.map(source=>`<a href="${escape(safeURL(source.url))}" target="_blank" rel="noopener noreferrer">${escape(sourceName(source.source_id))} ↗<small>${t(source.material_scope==='metadata_only'?'metadata':source.material_scope==='partial_text'?'partialText':'fullText')}${source.evidence_locator?.start_seconds!=null?' · '+t('seconds',{seconds:escape(source.evidence_locator.start_seconds)}):''}</small></a>`).join('')}</div>`;
+}
 function card(event) {
-  const first=event.sources[0],content=eventContent(event,language);
-  return `<article class="event-card" data-event-id="${escape(event.id)}"><div class="card-meta">${tags(event)}<span class="meta-divider">·</span><span class="kind-tag ${escape(event.kind)}">${labels().kind[event.kind]}</span>${event.corrections?.length?`<span class="corrected-tag">${t('corrected')}</span>`:''}<span class="card-time">${escape(formatDate(event.published_at))}</span></div>${language==='en'&&content.lang==='zh'?`<span class="translation-notice">${t('chineseOnly')}</span>`:''}<h3 class="event-title" lang="${content.lang}"><button data-detail="${escape(event.id)}">${escape(content.title)}</button></h3><p class="event-summary" lang="${content.lang}">${escape(content.summary)}</p><ul class="key-points" lang="${content.lang}">${content.key_points.map(p=>`<li>${escape(p)}</li>`).join('')}</ul><div class="card-bottom"><div class="topics">${event.topics.map(t=>`<span class="topic">${escape(labels().topic[t] || t)}</span>`).join('')}</div><a class="source-link" href="${escape(safeURL(first.url))}" target="_blank" rel="noopener noreferrer"><span>${event.sources.length>1?t('originalCount',{count:event.sources.length}):escape(labels().platform[state.catalog.sources.find(s=>s.id===first.source_id)?.platform] || t('original'))}</span>${t('readOriginal')} ↗</a></div></article>`;
+  const content=eventContent(event,language);
+  return `<article data-event-id="${escape(event.id)}"><details class="event-card" data-event-id="${escape(event.id)}"${state.expanded.has(event.id)?' open':''}><summary><span class="expand-icon" aria-hidden="true">›</span><h3 class="event-title" lang="${content.lang}">${escape(content.title)}</h3><div class="card-meta">${tags(event)}<span class="kind-tag ${escape(event.kind)}">${labels().kind[event.kind]}</span>${event.corrections?.length?`<span class="corrected-tag">${t('corrected')}</span>`:''}</div><time class="card-time"${event.published_at?` datetime="${escape(event.published_at)}"`:''}>${escape(eventTime(event))}</time></summary><div class="event-body">${eventDetails(event)}</div></details></article>`;
 }
 async function loadMonths(from,to) {
   const requested=relevantMonths(state.index,from,to);
@@ -38,7 +42,7 @@ async function loadMonths(from,to) {
 }
 function updateCounts() {
   const all=[...state.events.values()];
-  for(const [id,category] of [['count-all','all'],['count-model','model'],['count-agent','agent']]) {
+  for(const [id,category] of [['count-all','all'],['count-model','model'],['count-agent','agent'],['count-platform','platform'],['count-person','person']]) {
     $(id).textContent=filterEvents(all,state.catalog,{...state.filters,category,entity:'',kind:'',query:''}).length;
   }
 }
@@ -69,16 +73,15 @@ async function refreshFeed() {
   catch(e){if(request===state.request){error(e);$('feed-list').setAttribute('aria-busy','false');}}
 }
 function fillEntities() {
-  const selected=state.filters.entity;
-  const values=state.catalog.entities.filter(e=>e.enabled && (state.filters.category==='all'||e.category===state.filters.category));
-  $('entity-filter').innerHTML=`<option value="">${t('allEntities')}</option>`+values.map(e=>`<option value="${escape(e.id)}">${escape(name(e))}</option>`).join('');
-  $('entity-filter').value=values.some(e=>e.id===selected)?selected:'';
-  state.filters.entity=$('entity-filter').value;
+  const values=followingObjects(state.catalog).filter(e=>e.category===state.filters.category);
+  if(!values.some(e=>e.id===state.filters.entity)) state.filters.entity='';
+  $('entity-filter').hidden=state.filters.category==='all';
+  $('entity-filter').innerHTML=[{id:'',name:t('allEntities'),name_en:t('allEntities')},...values].map(e=>`<button type="button" data-entity="${escape(e.id)}" aria-pressed="${e.id===state.filters.entity}">${escape(name(e))}</button>`).join('');
 }
 function resetFilters() {
   Object.assign(state.filters,{category:'all',entity:'',kind:'',query:''});
   $('search-input').value='';$('kind-filter').value='';
-  document.querySelectorAll('[data-category]').forEach(b=>b.classList.toggle('selected',b.dataset.category==='all'));
+  document.querySelectorAll('[data-category]').forEach(b=>{b.classList.toggle('selected',b.dataset.category==='all');b.setAttribute('aria-pressed',String(b.dataset.category==='all'));});
   fillEntities();state.visible=18;refreshFeed();
 }
 function switchView(view) {
@@ -114,7 +117,7 @@ async function detail(id) {
     if(!event) throw failure('relatedUnavailable');
     state.detailId=id;
     const content=eventContent(event,language);
-    $('dialog-content').innerHTML=`<div class="card-meta">${tags(event)}<span class="kind-tag ${escape(event.kind)}">${labels().kind[event.kind]}</span></div>${language==='en'&&content.lang==='zh'?`<span class="translation-notice">${t('chineseOnly')}</span>`:''}<h2 id="dialog-title" class="dialog-title" lang="${content.lang}">${escape(content.title)}</h2><p class="event-summary" lang="${content.lang}">${escape(content.summary)}</p><ul class="key-points" lang="${content.lang}">${content.key_points.map(p=>`<li>${escape(p)}</li>`).join('')}</ul><div class="dialog-reason" lang="${content.lang}"><strong>${t('why')}</strong><br>${escape(content.importance_reason)}</div>${content.translation?`<h3>${translate(content.lang,'translation')}</h3><p class="event-summary" lang="${content.lang}">${escape(content.translation)}</p>`:''}${(event.corrections||[]).map(c=>`<div class="correction">${escape(formatDate(c.at))} ${t('correction')}: <span lang="${language==='en'&&c.reason_en?'en':'zh'}">${escape(language==='en'?c.reason_en || c.reason_zh:c.reason_zh)}</span> <a href="${escape(safeURL(c.url))}" target="_blank" rel="noopener noreferrer">${t('evidence')} ↗</a></div>`).join('')}<div class="related-links">${(event.related_event_ids||[]).map(related=>`<button data-detail="${escape(related)}">${t('related')} ↗</button>`).join('')}</div><div class="dialog-sources"><h3>${t('sourceEvidence')} · ${escape(formatDate(event.published_at))}</h3>${event.sources.map(s=>`<a href="${escape(safeURL(s.url))}" target="_blank" rel="noopener noreferrer">${escape(sourceName(s.source_id))} ↗<small>${t(s.material_scope==='metadata_only'?'metadata':s.material_scope==='partial_text'?'partialText':'fullText')}${s.evidence_locator?.start_seconds!=null?' · '+t('seconds',{seconds:escape(s.evidence_locator.start_seconds)}):''}</small></a>`).join('')}</div>`;
+    $('dialog-content').innerHTML=`<div class="card-meta">${tags(event)}<span class="kind-tag ${escape(event.kind)}">${labels().kind[event.kind]}</span></div><h2 id="dialog-title" class="dialog-title" lang="${content.lang}">${escape(content.title)}</h2>${eventDetails(event)}`;
     if(!$('event-dialog').open) $('event-dialog').showModal();
   }catch(e){error(e);}
 }
@@ -126,19 +129,17 @@ function applyLanguage() {
   for(const attribute of ['aria-label','placeholder']) document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(el=>el.setAttribute(attribute,t(el.getAttribute(`data-i18n-${attribute}`))));
   document.querySelectorAll('[data-i18n-kind]').forEach(el=>el.textContent=labels().kind[el.dataset.i18nKind]);
   document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===language)));
-  document.querySelectorAll('.brand-name').forEach(el=>el.textContent=language==='en'?'Zhigeng':'知更');
+  document.querySelectorAll('.brand-name').forEach(el=>el.textContent=language==='en'?'AI Brief':'AI 简报');
   if(state.error && !$('error-box').hidden) error(state.error);
-  if(state.unavailable){$('coverage-status').textContent=t('unavailable');$('feed-list').textContent=t('retry');}
+  if(state.unavailable){$('snapshot-time').textContent=t('unavailable');$('feed-list').textContent=t('retry');}
 }
 function renderSnapshot() {
-  $('issue-date').textContent=daysAgo(0).replaceAll('-','.');
-  $('snapshot-time').textContent=t('snapshot',{time:new Date(state.index.generated_at).toLocaleString(language==='en'?'en-GB':'zh-CN',{timeZone:'Asia/Shanghai',hour12:false})});
-  $('entity-count').textContent=state.catalog.entities.length;$('source-count').textContent=state.catalog.sources.length;
+  $('snapshot-time').textContent=t('snapshot',{time:formatEventTime(state.index.generated_at,'datetime',language)});
+  $('source-count').textContent=state.catalog.sources.length;
   const summary=coverageSummary(state.coverage.sources);
   const stale=Date.now()-new Date(state.index.generated_at).getTime()>48*3600000;
   const incomplete=summary.failed||summary.pending||summary.complete<summary.total;
   $('coverage-status').textContent=t(stale?'stale':incomplete?'incomplete':'complete');
-  document.querySelector('.status-strip').classList.toggle('pending',Boolean(stale||incomplete));
   $('coverage-description').textContent=t('coverageSummary',summary)+(summary.pending?t('pendingSuffix',{count:summary.pending}):'');
 }
 function setLanguage(next) {
@@ -155,9 +156,12 @@ function setLanguage(next) {
 function bind() {
   document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.language)));
   $('event-dialog').addEventListener('close',()=>{state.detailId=null;});
-  $('feed-nav').addEventListener('click',()=>switchView('feed'));for(const id of ['sources-nav','coverage-link'])$(id).addEventListener('click',()=>switchView('sources'));
-  document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{state.filters.category=button.dataset.category;document.querySelectorAll('[data-category]').forEach(b=>b.classList.toggle('selected',b===button));fillEntities();state.visible=18;refreshFeed();}));
-  for(const [id,key] of [['entity-filter','entity'],['kind-filter','kind']])$(id).addEventListener('change',e=>{state.filters[key]=e.target.value;state.visible=18;refreshFeed();});
+  $('feed-nav').addEventListener('click',()=>switchView('feed'));$('sources-nav').addEventListener('click',()=>switchView('sources'));
+  $('filter-reset').addEventListener('click',resetFilters);
+  document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{state.filters.category=button.dataset.category;state.filters.entity='';document.querySelectorAll('[data-category]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button));});fillEntities();state.visible=18;refreshFeed();}));
+  $('entity-filter').addEventListener('click',e=>{const button=e.target.closest('[data-entity]');if(!button)return;state.filters.entity=button.dataset.entity;$('entity-filter').querySelectorAll('[data-entity]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));state.visible=18;refreshFeed();});
+  $('kind-filter').addEventListener('change',e=>{state.filters.kind=e.target.value;state.visible=18;refreshFeed();});
+  $('feed-list').addEventListener('toggle',e=>{if(!e.target.matches('details[data-event-id]'))return;const id=e.target.dataset.eventId;if(e.target.open)state.expanded.add(id);else state.expanded.delete(id);},true);
   let debounce; $('search-input').addEventListener('input',e=>{clearTimeout(debounce);debounce=setTimeout(()=>{state.filters.query=e.target.value;state.visible=18;refreshFeed();},160);});
   document.querySelectorAll('[data-days]').forEach(button=>button.addEventListener('click',()=>{const days=button.dataset.days;state.filters.from=days==='all'?'':daysAgo(Number(days)-1);state.filters.to=days==='all'?'':daysAgo(0);document.querySelectorAll('[data-days]').forEach(b=>b.classList.toggle('selected',b===button));$('date-from').value=state.filters.from;$('date-to').value=state.filters.to;state.visible=18;refreshFeed();}));
   $('custom-date').addEventListener('click',()=>{$('custom-range').hidden=!$('custom-range').hidden;$('custom-date').setAttribute('aria-expanded',String(!$('custom-range').hidden));});
@@ -176,7 +180,7 @@ async function init() {
       const suffix=attempt?`?refresh=${Date.now()}`:'';
       [state.index,state.catalog,state.coverage]=await Promise.all([json('index.json',suffix),json('catalog.json',suffix),json('coverage.json',suffix)]);
       checkSnapshot(state.catalog);checkSnapshot(state.coverage);break;
-    }catch(e){if(attempt===1){error(e);state.unavailable=true;$('coverage-status').textContent=t('unavailable');$('feed-list').textContent=t('retry');$('feed-list').setAttribute('aria-busy','false');return;}}
+    }catch(e){if(attempt===1){error(e);state.unavailable=true;$('snapshot-time').textContent=t('unavailable');$('feed-list').textContent=t('retry');$('feed-list').setAttribute('aria-busy','false');return;}}
   }
   state.ready=true;renderSnapshot();
   fillEntities();await refreshFeed();

@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "01be142a3cdc3eeb",
+  "events": [
+    {
+      "id": "opencode-v11834",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "OpenCode 1.18.34：修复新版 macOS 二进制运行问题",
+      "summary_zh": "OpenCode 调整 macOS 二进制签名，改善本地编译产物在 macOS 27 及以上系统的运行可靠性。",
+      "key_points_zh": [
+        "本地编译后的 macOS 二进制重新签名；官方 CLI 发布包使用 Developer ID 签名。",
+        "模型请求携带带命名空间的会话及父会话身份头。"
+      ],
+      "importance_reason_zh": "直接影响 macOS 用户能否可靠运行 CLI。",
+      "published_at": "2026-09-30T22:39:45Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:50:32+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v1.18.34",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.34",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-09-30T22:39:45Z"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1090",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.90：支持 GPT-6.1 Sol 与 GitHub MCP 认证",
+      "summary_zh": "Copilot CLI 正式版本加入 GPT-6.1 Sol 支持，并改进 GitHub MCP 身份授权、会话权限与连接恢复。",
+      "key_points_zh": [
+        "新增 GPT-6.1 Sol 模型支持。",
+        "--mcp-github-auth 可将 GitHub 账号认证用于获准的 MCP 来源。",
+        "改进 MCP 发现与临时故障恢复，以及会话恢复后的权限响应。"
+      ],
+      "importance_reason_zh": "影响模型选择、第三方工具接入和长会话连续性。",
+      "published_at": "2026-09-30T21:38:30Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:35:51+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.90",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.90",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-09-30T21:38:30Z"
+        }
+      ]
+    },
+    {
+      "id": "pi-v0992",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Pi 0.99.2：MCP 延迟加载不再阻塞首个提示",
+      "summary_zh": "Pi 改善默认 codemode 下的 MCP 工具加载，并扩展认证及供应商兼容性。",
+      "key_points_zh": [
+        "MCP 工具延迟加载，首个提示无需等待全部工具准备完成。",
+        "新增 searchTools 与 describeNamespace 工具发现方式。",
+        "支持 Anthropic 工作负载联合认证配置；改进 MCP 作用域与供应商重试行为。"
+      ],
+      "importance_reason_zh": "降低工具多的项目启动等待，并改善企业认证接入。",
+      "published_at": "2026-09-30T19:30:47Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:35:51+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v0.99.2",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v0.99.2",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-09-30T19:30:47Z"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21286",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.286：修复会话记录丢失与凭据脱敏",
+      "summary_zh": "这一版本修复并行工具调用后恢复会话可能丢失后续轮次的问题，并堵住多种日志和 MCP 错误中的凭据脱敏遗漏。",
+      "key_points_zh": [
+        "崩溃或被终止后，--resume 与 --continue 不再因并行工具调用丢失后续轮次。",
+        "修复 Bearer/Basic、百分号编码及不可见字符情况下的凭据屏蔽遗漏。",
+        "组织关闭 Remote Control 后，现有远程会话会断开并提示。"
+      ],
+      "importance_reason_zh": "会话历史与凭据保护都影响实际使用，值得及时关注。",
+      "published_at": "2026-09-30T19:10:13Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T03:22:34+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-09-30T19:10:13Z"
+        }
+      ]
+    }
+  ]
+}

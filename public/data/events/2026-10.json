@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "01be142a3cdc3eeb",
+  "events": [
+    {
+      "id": "copilot-cli-1092-pre3",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.92-3 预览：对话前选择本地或云环境",
+      "summary_zh": "这是一项预览版本更新：Ctrl+E 环境选择器可在开始对话前切换本地或云端，并改善沙箱联网和子 Agent 认证连续性。",
+      "key_points_zh": [
+        "Ctrl+E 在对话开始前选择本地或云环境。",
+        "代理拦截网络时可显示沙箱网络绕行提示。",
+        "认证替换后子 Agent 可继续工作；修复输入排序相关行为。"
+      ],
+      "importance_reason_zh": "新增任务执行环境选择，但仍属于预览版本。",
+      "published_at": "2026-10-02T22:06:14Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:35:51+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-3",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-3",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-10-02T22:06:14Z"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21288",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.288：改善长会话恢复与 MCP 授权",
+      "summary_zh": "正式版本修复超时、自动压缩及会话恢复中的上下文丢失问题，并支持 MCP 工具调用时申请更多 OAuth 权限。",
+      "key_points_zh": [
+        "非交互会话和子 Agent 可从超时前的部分响应继续；修复零 token 用量导致未自动压缩的问题。",
+        "恢复会话时保留刚从压缩中恢复的文件与上下文，并修复转录加载截断。",
+        "MCP 请求更多作用域时可重新认证；BASHPID 算术赋值的权限检查会先提示。"
+      ],
+      "importance_reason_zh": "直接影响长任务连续性与工具权限验证。",
+      "published_at": "2026-10-02T20:19:57Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T03:22:34+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-10-02T20:19:57Z"
+        }
+      ],
+      "related_event_ids": [
+        "claude-code-v21287"
+      ]
+    },
+    {
+      "id": "copilot-cli-1092-pre1",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.92-1 预览：改善 MCP 重连与上下文续接",
+      "summary_zh": "本次预览更新处理远程 MCP HTTP 连接过期、后台任务引导和上下文滚动后的请求保留。",
+      "key_points_zh": [
+        "远程 MCP 连接过期后可重新连接。",
+        "向运行中的后台任务发送消息会引导当前工作。",
+        "上下文滚动时保留最近请求；修复错误报告子 Agent 已配置的问题。"
+      ],
+      "importance_reason_zh": "影响长任务的工具连接与请求连续性；稳定性结论仍需后续使用验证。",
+      "published_at": "2026-10-02T16:09:17Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:35:51+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-1",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-1",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-10-02T16:09:17Z"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-nightly-20261002",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "Gemini CLI 10 月 2 日夜间版：原子存储与损坏恢复",
+      "summary_zh": "Gemini CLI 的夜间预览版改善对话记录写入、状态备份恢复和运行中断处理。",
+      "key_points_zh": [
+        "ChatRecordingService 改用追加式增量补丁与有界历史窗口。",
+        "状态持久化采用原子方式，并可从备份恢复损坏状态。",
+        "Ctrl+C 紧急中止能在活动操作期间到达处理器；修复输入和滚动相关问题。"
+      ],
+      "importance_reason_zh": "涉及记录损坏恢复和紧急停止可靠性，但尚非稳定发布。",
+      "published_at": "2026-10-02T01:33:21Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:35:51+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0-nightly.20261002.gc9096a847",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0-nightly.20261002.gc9096a847",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-10-02T01:33:21Z"
+        }
+      ]
+    },
+    {
+      "id": "codex-01600",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Codex 0.160.0：项目外会话、权限恢复与 Windows 修复",
+      "summary_zh": "本次正式更新改善会话恢复、Windows 沙箱及子 Agent 环境准备，并增加按需启用的 Guardian 审查上下文。",
+      "key_points_zh": [
+        "策略允许时，可在项目外用工作区默认配置启动会话；恢复会话时还原已保存权限。",
+        "修复 Windows PowerShell 回退、长路径权限修复和后台控制台窗口问题。",
+        "重连后继续发送未发出的排队消息，同时避免重复发送；子 Agent 能保留仍在启动的环境。"
+      ],
+      "importance_reason_zh": "影响会话连续性与 Windows 开发环境的稳定性。",
+      "published_at": "2026-10-01T20:19:13Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:50:32+00:00",
+      "updated_at": "2026-10-03T03:13:04+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "401312540",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.0",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T02:50:32+00:00",
+          "published_at": "2026-10-01T20:19:13Z"
+        }
+      ]
+    },
+    {
+      "id": "pi-v100",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Pi 1.0.0：默认全屏界面，强化 MCP OAuth 校验",
+      "summary_zh": "Pi 的正式 1.0 版本启用默认全屏终端界面，并加入脚本内图像生成、Radius 登录及更严格的 MCP OAuth 验证。",
+      "key_points_zh": [
+        "全屏 TUI 成为默认，仍可选择常规界面。",
+        "新增 models.generateImages；支持 Radius 登录和 MCP。",
+        "MCP OAuth 检查 RFC 9207 的发行方标识，并按服务端步骤处理凭据与作用域。"
+      ],
+      "importance_reason_zh": "同时改变默认交互方式并增强第三方工具授权验证。",
+      "published_at": "2026-10-01T19:20:55Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:35:51+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.0.0",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.0.0",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-10-01T19:20:55Z"
+        }
+      ],
+      "related_event_ids": [
+        "pi-v0992"
+      ]
+    },
+    {
+      "id": "claude-code-v21287",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.287：推出 Claude Mods，修复权限保护缺口",
+      "summary_zh": "新版本允许插件修改更深层行为，新增可选的辅助观察 mod，并修复危险删除命令及 MCP 工具权限上限的保护问题。",
+      "key_points_zh": [
+        "新增 Claude Mods；内置 You should know 由旁侧 Agent 提醒遗漏，限开启遥测的第一方会话。",
+        "支持 MCP 2025-11-25 协议的 URL 提示；部分服务器可能需要 bareElicitationCapability 兼容配置。",
+        "修复重定向路径使危险 rm 命令丢失始终询问保护，以及名为 __proto__ 的 MCP 工具丢失组织权限上限的问题。"
+      ],
+      "importance_reason_zh": "提供新的插件能力，同时修复实际权限控制缺口。",
+      "published_at": "2026-10-01T18:43:19Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T03:22:34+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-10-01T18:43:19Z"
+        }
+      ],
+      "related_event_ids": [
+        "claude-code-v21286"
+      ]
+    },
+    {
+      "id": "copilot-cli-1091",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.91：完善 Windows 沙箱与证书管理",
+      "summary_zh": "正式版本为沙箱 CA 增加检查、创建、信任、轮换与移除能力，同时调整 Windows 环境兼容性及执行证据审查。",
+      "key_points_zh": [
+        "/sandboxca install 执行创建及信任操作；改进 Windows 无人值守设置。",
+        "可静态分析的完整只读命令管道进入执行证据审查；不完整的分析仍要求明确批准。",
+        "改善 node/npm 的 EACCES 网络绕行处理及沙箱行为。"
+      ],
+      "importance_reason_zh": "直接影响 Windows 使用、联网工具运行及权限判断。",
+      "published_at": "2026-10-01T17:25:02Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:35:51+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.91",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.91",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-10-01T17:25:02Z"
+        }
+      ],
+      "related_event_ids": [
+        "copilot-cli-1090"
+      ]
+    },
+    {
+      "id": "gemini-cli-nightly-20261001",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "Gemini CLI 10 月 1 日夜间版：修复 @code 卡顿与文件写入竞争",
+      "summary_zh": "这一夜间预览版本集中修复可能导致任务卡住或文件工具相互干扰的问题。",
+      "key_points_zh": [
+        "防止 @code 场景出现 CPU 挂起。",
+        "文件工具操作串行化，并采用原子写入。"
+      ],
+      "importance_reason_zh": "修复会影响实际任务能否继续完成的问题，属于预览阶段。",
+      "published_at": "2026-10-01T01:34:16Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T02:35:51+00:00",
+      "updated_at": "2026-10-03T03:25:31+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0-nightly.20261001.gc6bccb7ec",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0-nightly.20261001.gc6bccb7ec",
+          "material_scope": "full_text",
+          "collected_at": "2026-10-03T03:22:34+00:00",
+          "published_at": "2026-10-01T01:34:16Z"
+        }
+      ]
+    }
+  ]
+}

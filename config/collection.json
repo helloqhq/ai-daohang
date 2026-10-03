@@ -1,0 +1,21 @@
+{
+  "rules_version": "1",
+  "first_lookback_days": 3,
+  "overlap_hours": 48,
+  "request_timeout_seconds": 18,
+  "workers": 6,
+  "cache_retention_days": 14,
+  "preview_characters": 650,
+  "topics": [
+    "model_release",
+    "capability",
+    "api",
+    "pricing",
+    "availability",
+    "feature",
+    "compatibility",
+    "critical_fix"
+  ],
+  "rsshub_base_url": "https://rsshub.app",
+  "parser_version": "2"
+}

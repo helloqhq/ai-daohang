@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "01be142a3cdc3eeb",
+  "generated_at": "2026-10-03T03:31:19+00:00",
+  "months": [
+    {
+      "month": "2026-10",
+      "path": "events/2026-10.json",
+      "count": 9,
+      "min_date": "2026-10-01T01:34:16Z",
+      "max_date": "2026-10-02T22:06:14Z"
+    },
+    {
+      "month": "2026-09",
+      "path": "events/2026-09.json",
+      "count": 4,
+      "min_date": "2026-09-30T19:10:13Z",
+      "max_date": "2026-09-30T22:39:45Z"
+    }
+  ],
+  "event_locations": {
+    "copilot-cli-1092-pre3": "2026-10",
+    "claude-code-v21288": "2026-10",
+    "copilot-cli-1092-pre1": "2026-10",
+    "gemini-cli-nightly-20261002": "2026-10",
+    "codex-01600": "2026-10",
+    "pi-v100": "2026-10",
+    "claude-code-v21287": "2026-10",
+    "copilot-cli-1091": "2026-10",
+    "gemini-cli-nightly-20261001": "2026-10",
+    "opencode-v11834": "2026-09",
+    "copilot-cli-1090": "2026-09",
+    "pi-v0992": "2026-09",
+    "claude-code-v21286": "2026-09"
+  },
+  "total_events": 13
+}

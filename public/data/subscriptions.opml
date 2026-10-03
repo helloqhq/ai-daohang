@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<opml version="2.0">
+  <head>
+    <title>知更 · AI 信息订阅</title>
+  </head>
+  <body>
+    <outline text="OpenAI 官方新闻" title="OpenAI 官方新闻" type="rss" xmlUrl="https://openai.com/news/rss.xml" htmlUrl="https://openai.com/news/" category="web" />
+    <outline text="Anthropic 官方新闻" title="Anthropic 官方新闻" type="rss" xmlUrl="https://rsshub.app/anthropic/news" htmlUrl="https://www.anthropic.com/news" category="web" />
+    <outline text="Google DeepMind 博客" title="Google DeepMind 博客" type="rss" xmlUrl="https://deepmind.google/blog/rss.xml" htmlUrl="https://deepmind.google/blog/" category="web" />
+    <outline text="DeepSeek API 更新" title="DeepSeek API 更新" type="rss" xmlUrl="https://rsshub.app/deepseek/news" htmlUrl="https://api-docs.deepseek.com/updates" category="web" />
+    <outline text="Qwen 官方博客" title="Qwen 官方博客" type="rss" xmlUrl="https://rsshub.app/qwen/blog" htmlUrl="https://qwen.ai/blog" category="web" />
+    <outline text="美团技术团队" title="美团技术团队" type="rss" xmlUrl="https://tech.meituan.com/rss.xml" htmlUrl="https://tech.meituan.com/" category="web" />
+    <outline text="Meta AI 博客" title="Meta AI 博客" type="rss" xmlUrl="https://rsshub.app/meta/ai/blog" htmlUrl="https://ai.meta.com/blog/" category="web" />
+    <outline text="Cursor 更新" title="Cursor 更新" type="rss" xmlUrl="https://cursor.com/changelog/rss.xml" htmlUrl="https://cursor.com/changelog" category="web" />
+    <outline text="Codex Releases" title="Codex Releases" type="rss" xmlUrl="https://github.com/openai/codex/releases.atom" htmlUrl="https://github.com/openai/codex/releases" category="github" />
+    <outline text="Gemini CLI Releases" title="Gemini CLI Releases" type="rss" xmlUrl="https://github.com/google-gemini/gemini-cli/releases.atom" htmlUrl="https://github.com/google-gemini/gemini-cli/releases" category="github" />
+    <outline text="DeepSeek Harness Releases" title="DeepSeek Harness Releases" type="rss" xmlUrl="https://github.com/deepseek-ai/deepseek-harness/releases.atom" htmlUrl="https://github.com/deepseek-ai/deepseek-harness/releases" category="github" />
+    <outline text="Hermes Agent Releases" title="Hermes Agent Releases" type="rss" xmlUrl="https://github.com/NousResearch/hermes-agent/releases.atom" htmlUrl="https://github.com/NousResearch/hermes-agent/releases" category="github" />
+    <outline text="OpenCode Releases" title="OpenCode Releases" type="rss" xmlUrl="https://github.com/anomalyco/opencode/releases.atom" htmlUrl="https://github.com/anomalyco/opencode/releases" category="github" />
+    <outline text="Copilot CLI Releases" title="Copilot CLI Releases" type="rss" xmlUrl="https://github.com/github/copilot-cli/releases.atom" htmlUrl="https://github.com/github/copilot-cli/releases" category="github" />
+    <outline text="Pi Agent Harness Releases" title="Pi Agent Harness Releases" type="rss" xmlUrl="https://github.com/earendil-works/pi/releases.atom" htmlUrl="https://github.com/earendil-works/pi/releases" category="github" />
+    <outline text="MiniMax Code CLI Releases" title="MiniMax Code CLI Releases" type="rss" xmlUrl="https://github.com/MiniMax-AI/minimax-code/releases.atom" htmlUrl="https://github.com/MiniMax-AI/minimax-code/releases" category="github" />
+    <outline text="Claude Code 发布订阅" title="Claude Code 发布订阅" type="rss" xmlUrl="https://github.com/anthropics/claude-code/releases.atom" htmlUrl="https://github.com/anthropics/claude-code/releases" category="web" />
+    <outline text="Sam Altman 个人博客" title="Sam Altman 个人博客" type="rss" xmlUrl="https://blog.samaltman.com/posts.atom" htmlUrl="https://blog.samaltman.com/posts.atom" category="web" />
+    <outline text="OpenAI YouTube" title="OpenAI YouTube" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A" htmlUrl="https://www.youtube.com/OpenAI" category="youtube" />
+    <outline text="OpenAI X" title="OpenAI X" type="rss" xmlUrl="https://rsshub.app/twitter/user/OpenAI" htmlUrl="https://x.com/OpenAI" category="x" />
+    <outline text="ZCode X" title="ZCode X" type="rss" xmlUrl="https://rsshub.app/twitter/user/zcode_ai" htmlUrl="https://x.com/zcode_ai" category="x" />
+    <outline text="OpenAI TikTok" title="OpenAI TikTok" type="rss" xmlUrl="https://rsshub.app/tiktok/user/@openai" htmlUrl="https://www.tiktok.com/@openai" category="tiktok" />
+  </body>
+</opml>

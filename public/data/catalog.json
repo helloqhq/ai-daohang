@@ -1,0 +1,1029 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "01be142a3cdc3eeb",
+  "entities": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "openai",
+        "openai"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#175f4a"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "anthropic",
+        "anthropic"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#bc6037"
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "google",
+        "google"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#336eab"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "deepseek",
+        "deepseek"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#4b62ba"
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "qwen",
+        "qwen"
+      ],
+      "category": "model",
+      "kind": "model_brand",
+      "enabled": true,
+      "color": "#6a5a95"
+    },
+    {
+      "id": "zhipu",
+      "name": "智谱",
+      "aliases": [
+        "智谱",
+        "zhipu"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#317d73"
+    },
+    {
+      "id": "moonshot",
+      "name": "月之暗面",
+      "aliases": [
+        "月之暗面",
+        "moonshot"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#946b35"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "aliases": [
+        "minimax",
+        "minimax"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#c45043"
+    },
+    {
+      "id": "tencent",
+      "name": "腾讯",
+      "aliases": [
+        "腾讯",
+        "tencent"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#3478a3"
+    },
+    {
+      "id": "meituan",
+      "name": "美团",
+      "aliases": [
+        "美团",
+        "meituan"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#bc872b"
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "aliases": [
+        "grok",
+        "grok"
+      ],
+      "category": "model",
+      "kind": "model_brand",
+      "enabled": true,
+      "color": "#404044"
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "meta",
+        "meta"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#4866aa"
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "aliases": [
+        "codex",
+        "codex"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#175f4a"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "aliases": [
+        "claude code",
+        "claude-code"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#bc6037"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "aliases": [
+        "cursor",
+        "cursor"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#336eab"
+    },
+    {
+      "id": "gemini-cli",
+      "name": "Gemini CLI",
+      "aliases": [
+        "gemini cli",
+        "gemini-cli"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#4b62ba"
+    },
+    {
+      "id": "deepseek-harness",
+      "name": "DeepSeek Harness",
+      "aliases": [
+        "deepseek harness",
+        "deepseek-harness"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#6a5a95"
+    },
+    {
+      "id": "hermes",
+      "name": "Hermes Agent",
+      "aliases": [
+        "hermes agent",
+        "hermes"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#317d73"
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "aliases": [
+        "opencode",
+        "opencode"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#946b35"
+    },
+    {
+      "id": "copilot",
+      "name": "GitHub Copilot",
+      "aliases": [
+        "github copilot",
+        "copilot"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#c45043"
+    },
+    {
+      "id": "qoder",
+      "name": "Qoder",
+      "aliases": [
+        "qoder",
+        "qoder"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#3478a3"
+    },
+    {
+      "id": "pi",
+      "name": "Pi Agent Harness",
+      "aliases": [
+        "pi agent harness",
+        "pi"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#bc872b"
+    },
+    {
+      "id": "trae",
+      "name": "TRAE",
+      "aliases": [
+        "trae",
+        "trae"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#404044"
+    },
+    {
+      "id": "zcode",
+      "name": "ZCode",
+      "aliases": [
+        "zcode",
+        "zcode"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#4866aa"
+    },
+    {
+      "id": "minimax-code",
+      "name": "MiniMax Code",
+      "aliases": [
+        "minimax code",
+        "minimax-code"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#175f4a"
+    }
+  ],
+  "sources": [
+    {
+      "id": "openai-official",
+      "name": "OpenAI 官方新闻",
+      "entity_ids": [
+        "openai"
+      ],
+      "url": "https://openai.com/news/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://openai.com/news/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "feed_provider": "native"
+    },
+    {
+      "id": "anthropic-official",
+      "name": "Anthropic 官方新闻",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "url": "https://www.anthropic.com/news",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://www.anthropic.com/news",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/anthropic/news",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/anthropic/news",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/anthropic"
+    },
+    {
+      "id": "google-official",
+      "name": "Google DeepMind 博客",
+      "entity_ids": [
+        "google"
+      ],
+      "url": "https://deepmind.google/blog/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://deepmind.google/blog/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://deepmind.google/blog/rss.xml",
+      "feed_provider": "native"
+    },
+    {
+      "id": "deepseek-official",
+      "name": "DeepSeek API 更新",
+      "entity_ids": [
+        "deepseek"
+      ],
+      "url": "https://api-docs.deepseek.com/updates",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://api-docs.deepseek.com/updates",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/deepseek/news",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/deepseek/news",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/deepseek"
+    },
+    {
+      "id": "qwen-official",
+      "name": "Qwen 官方博客",
+      "entity_ids": [
+        "qwen"
+      ],
+      "url": "https://qwen.ai/blog",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://qwen.ai/blog",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/qwen/blog",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/qwen/blog",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/qwen"
+    },
+    {
+      "id": "zhipu-official",
+      "name": "智谱模型发布",
+      "entity_ids": [
+        "zhipu"
+      ],
+      "url": "https://docs.z.ai/release-notes/new-released",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://docs.z.ai/release-notes/new-released",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "pending",
+      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+    },
+    {
+      "id": "moonshot-official",
+      "name": "Kimi 研究博客",
+      "entity_ids": [
+        "moonshot"
+      ],
+      "url": "https://www.kimi.com/en/blog/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://www.kimi.com/en/blog/",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "pending",
+      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+    },
+    {
+      "id": "minimax-official",
+      "name": "MiniMax 官方博客",
+      "entity_ids": [
+        "minimax"
+      ],
+      "url": "https://www.minimax.io/blog",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://www.minimax.io/blog",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "pending",
+      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+    },
+    {
+      "id": "tencent-official",
+      "name": "腾讯混元",
+      "entity_ids": [
+        "tencent"
+      ],
+      "url": "https://hunyuan.tencent.com/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://hunyuan.tencent.com/",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "pending",
+      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+    },
+    {
+      "id": "meituan-official",
+      "name": "美团技术团队",
+      "entity_ids": [
+        "meituan"
+      ],
+      "url": "https://tech.meituan.com/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://tech.meituan.com/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://tech.meituan.com/rss.xml",
+      "feed_provider": "native"
+    },
+    {
+      "id": "grok-official",
+      "name": "Grok 官方新闻",
+      "entity_ids": [
+        "grok"
+      ],
+      "url": "https://x.ai/news",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://x.ai/news",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "pending",
+      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+    },
+    {
+      "id": "meta-official",
+      "name": "Meta AI 博客",
+      "entity_ids": [
+        "meta"
+      ],
+      "url": "https://ai.meta.com/blog/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://ai.meta.com/blog/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/meta/ai/blog",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/meta/ai/blog",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/meta"
+    },
+    {
+      "id": "cursor-official",
+      "name": "Cursor 更新",
+      "entity_ids": [
+        "cursor"
+      ],
+      "url": "https://cursor.com/changelog",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://cursor.com/changelog",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://cursor.com/changelog/rss.xml",
+      "feed_provider": "native",
+      "feed_verified_at": "2026-10-03"
+    },
+    {
+      "id": "qoder-official",
+      "name": "Qoder 更新",
+      "entity_ids": [
+        "qoder"
+      ],
+      "url": "https://docs.qoder.com/release-notes/qoder",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://docs.qoder.com/release-notes/qoder",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "pending",
+      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+    },
+    {
+      "id": "trae-official",
+      "name": "TRAE 中文版更新",
+      "entity_ids": [
+        "trae"
+      ],
+      "url": "https://docs.trae.cn/ide_changelog",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://docs.trae.cn/ide_changelog",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "pending",
+      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+    },
+    {
+      "id": "zcode-official",
+      "name": "ZCode 更新",
+      "entity_ids": [
+        "zcode"
+      ],
+      "url": "https://zcode.z.ai/en/changelog",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://zcode.z.ai/en/changelog",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "pending",
+      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+    },
+    {
+      "id": "codex-releases",
+      "name": "Codex Releases",
+      "entity_ids": [
+        "codex"
+      ],
+      "url": "https://github.com/openai/codex/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/openai/codex/releases",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/openai/codex/releases.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "gemini-cli-releases",
+      "name": "Gemini CLI Releases",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "url": "https://github.com/google-gemini/gemini-cli/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/google-gemini/gemini-cli/releases",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/google-gemini/gemini-cli/releases.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "deepseek-harness-releases",
+      "name": "DeepSeek Harness Releases",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "url": "https://github.com/deepseek-ai/deepseek-harness/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/deepseek-ai/deepseek-harness/releases",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/deepseek-ai/deepseek-harness/releases.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "hermes-releases",
+      "name": "Hermes Agent Releases",
+      "entity_ids": [
+        "hermes"
+      ],
+      "url": "https://github.com/NousResearch/hermes-agent/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/NousResearch/hermes-agent/releases",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "opencode-releases",
+      "name": "OpenCode Releases",
+      "entity_ids": [
+        "opencode"
+      ],
+      "url": "https://github.com/anomalyco/opencode/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/anomalyco/opencode/releases",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/anomalyco/opencode/releases.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "copilot-releases",
+      "name": "Copilot CLI Releases",
+      "entity_ids": [
+        "copilot"
+      ],
+      "url": "https://github.com/github/copilot-cli/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/github/copilot-cli/releases",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/github/copilot-cli/releases.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "pi-releases",
+      "name": "Pi Agent Harness Releases",
+      "entity_ids": [
+        "pi"
+      ],
+      "url": "https://github.com/earendil-works/pi/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/earendil-works/pi/releases",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/earendil-works/pi/releases.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "minimax-code-releases",
+      "name": "MiniMax Code CLI Releases",
+      "entity_ids": [
+        "minimax-code"
+      ],
+      "url": "https://github.com/MiniMax-AI/minimax-code/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/MiniMax-AI/minimax-code/releases",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/MiniMax-AI/minimax-code/releases.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "claude-code-changelog",
+      "name": "Claude Code 发布订阅",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "url": "https://github.com/anthropics/claude-code/releases",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/anthropics/claude-code/releases.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "sam-altman-blog",
+      "name": "Sam Altman 个人博客",
+      "entity_ids": [
+        "openai"
+      ],
+      "url": "https://blog.samaltman.com/posts.atom",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://openai.com/our-structure/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "person_id": "sam-altman",
+      "adapter": "rss",
+      "feed_url": "https://blog.samaltman.com/posts.atom",
+      "feed_provider": "native"
+    },
+    {
+      "id": "dario-blog",
+      "name": "Dario Amodei 个人博客",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "url": "https://www.darioamodei.com/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://www.anthropic.com/company/leadership",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "person_id": "dario-amodei",
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "pending",
+      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+    },
+    {
+      "id": "openai-youtube",
+      "name": "OpenAI YouTube",
+      "entity_ids": [
+        "openai"
+      ],
+      "url": "https://www.youtube.com/OpenAI",
+      "platform": "youtube",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://openai.com/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A",
+      "feed_provider": "native"
+    },
+    {
+      "id": "openai-x",
+      "name": "OpenAI X",
+      "entity_ids": [
+        "openai"
+      ],
+      "url": "https://x.com/OpenAI",
+      "platform": "x",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://openai.com/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/twitter/user/OpenAI",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/twitter/user/OpenAI",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/twitter"
+    },
+    {
+      "id": "zcode-x",
+      "name": "ZCode X",
+      "entity_ids": [
+        "zcode"
+      ],
+      "url": "https://x.com/zcode_ai",
+      "platform": "x",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://zcode.z.ai/en/docs/welcome",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/twitter/user/zcode_ai",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/twitter/user/zcode_ai",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/twitter"
+    },
+    {
+      "id": "openai-tiktok",
+      "name": "OpenAI TikTok",
+      "entity_ids": [
+        "openai"
+      ],
+      "url": "https://www.tiktok.com/@openai",
+      "platform": "tiktok",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://openai.com/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/tiktok/user/@openai",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/tiktok/user/@openai",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/tiktok"
+    }
+  ],
+  "people": [
+    {
+      "id": "sam-altman",
+      "name": "Sam Altman",
+      "entity_ids": [
+        "openai"
+      ],
+      "verification_url": "https://openai.com/our-structure/"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "verification_url": "https://www.anthropic.com/company/leadership"
+    }
+  ],
+  "platforms": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "adapter": "rss",
+      "requires_account_configuration": true
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "adapter": "rss",
+      "requires_account_configuration": true
+    },
+    {
+      "id": "x",
+      "name": "X",
+      "adapter": "rss",
+      "requires_account_configuration": true
+    },
+    {
+      "id": "wechat",
+      "name": "微信公众号",
+      "adapter": "rss",
+      "requires_account_configuration": true
+    }
+  ]
+}

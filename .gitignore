@@ -1,0 +1,9 @@
+.collector/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+dist/
+node_modules/
+.env
+.env.*

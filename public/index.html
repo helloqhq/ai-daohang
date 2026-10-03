@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d463a">
+  <meta name="description" content="聚合模型、Agent 与负责人一手动态。筛选重要变化，用中文快速了解，并回到原始来源。">
+  <title>知更 · AI 重要动态</title>
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script type="module" src="./assets/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#content">跳到动态内容</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="知更首页"><img src="./assets/mark.svg" width="34" height="34" alt=""><span>知更<span class="brand-en">AI SIGNAL</span></span></a>
+    <nav aria-label="主导航"><button class="nav-button selected" id="feed-nav" aria-current="page">动态</button><button class="nav-button" id="sources-nav">信息源 <span id="source-count"></span></button></nav>
+    <div class="edition"><span class="live-dot"></span> 一手信息 · 中文精选</div>
+  </header>
+  <main id="content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div><p class="eyebrow">LESS NOISE. MORE SIGNAL.</p><h1 id="hero-title">AI 的新动向，<br><em>只看值得关注的。</em></h1><p class="hero-copy">模型、Agent 与负责人动态。留下重要变化，回到原始来源。</p></div>
+      <div class="hero-aside"><span class="issue-label">THE AI BRIEF</span><div class="issue-date" id="issue-date">—</div><div class="snapshot-label" id="snapshot-time">正在读取数据…</div><button class="text-button" id="coverage-link">查看采集覆盖 <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <section class="status-strip" aria-label="采集状态"><span><i class="status-dot"></i><strong id="coverage-status">正在加载</strong></span><span id="coverage-description"></span></section>
+    <div id="error-box" class="error-box" role="alert" hidden></div>
+    <section id="feed-view" class="workspace">
+      <aside class="filter-rail" aria-label="动态筛选">
+        <div class="rail-heading">关注范围 <span id="entity-count"></span></div>
+        <div class="category-buttons" role="group" aria-label="信息分类"><button class="category selected" data-category="all">全部动态 <span id="count-all">—</span></button><button class="category" data-category="model">模型动态 <span id="count-model">—</span></button><button class="category" data-category="agent">Agent 更新 <span id="count-agent">—</span></button></div>
+        <label class="field-label" for="entity-filter">关注对象</label><select id="entity-filter"><option value="">全部关注对象</option></select>
+        <label class="field-label" for="kind-filter">内容类型</label><select id="kind-filter"><option value="">全部类型</option><option value="update">正式更新</option><option value="preview">预览 / 预告</option><option value="opinion">负责人观点</option></select>
+        <div class="rail-note"><span class="tiny-rule"></span><p>重要变化，<br>始终有迹可循。</p><span>每条动态保留原始来源。<br>预告与观点分别标注。</span></div>
+      </aside>
+      <section class="feed-column" aria-label="动态列表">
+        <div class="feed-toolbar"><h2>动态手记 <span id="result-count"></span></h2><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.7" cy="10.7" r="6.2"/><path d="m15.3 15.3 4.8 4.8"/></svg><input id="search-input" type="search" placeholder="搜索变化、模型或工具" aria-label="搜索当前日期范围的动态"><kbd>/</kbd></label></div>
+        <div class="date-toolbar"><div class="date-presets" role="group" aria-label="日期范围"><button data-days="3">近 3 天</button><button data-days="7" class="selected">近 7 天</button><button data-days="30">近 30 天</button><button data-days="all">全部历史</button></div><button class="text-button" id="custom-date" aria-expanded="false">自定日期 <span aria-hidden="true">⌄</span></button></div>
+        <div class="custom-range" id="custom-range" hidden><label>开始日期 <input id="date-from" type="date"></label><span>至</span><label>结束日期 <input id="date-to" type="date"></label><button id="date-apply" class="small-button">应用</button></div>
+        <div id="feed-list" aria-live="polite" aria-busy="true"><div class="loading-state">正在整理动态…</div></div>
+        <button id="more-button" class="more-button" hidden>继续阅读</button>
+        <p class="range-note" id="range-note">搜索在当前日期范围内进行，可切换到全部历史。</p>
+      </section>
+    </section>
+    <section id="sources-view" hidden aria-labelledby="sources-title"><div class="sources-heading"><div><p class="eyebrow">FOLLOW THE SOURCE</p><h2 id="sources-title">好信息，从源头开始。</h2><p>统一通过 RSS / Atom 订阅获取。已检查、待审阅与读取受限分别记录。</p></div><label class="search"><input id="source-search" type="search" placeholder="搜索对象或信息源" aria-label="搜索信息源"></label></div><p><a href="./data/subscriptions.opml" download class="text-button">下载全部订阅 OPML ↗</a></p><div id="platform-notes" class="platform-notes"></div><div id="source-list" class="source-grid"></div></section>
+  </main>
+  <footer><div class="footer-brand">知更 <span>保持好奇，保持判断。</span></div><p>只聚合值得关注的信息。摘要供快速阅读，完整内容请查看原文。</p><a href="#content">回到顶部 ↑</a></footer>
+  <dialog id="event-dialog" aria-labelledby="dialog-title"><button id="dialog-close" class="dialog-close" aria-label="关闭详情">×</button><div id="dialog-content"></div></dialog>
+  <noscript><p class="error-box">请启用 JavaScript 以读取静态 JSON 信息流。</p></noscript>
+</body>
+</html>

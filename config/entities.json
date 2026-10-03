@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0",
+  "entities": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": [
+        "openai",
+        "openai"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#175f4a"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": [
+        "anthropic",
+        "anthropic"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#bc6037"
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": [
+        "google",
+        "google"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#336eab"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": [
+        "deepseek",
+        "deepseek"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#4b62ba"
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "aliases": [
+        "qwen",
+        "qwen"
+      ],
+      "category": "model",
+      "kind": "model_brand",
+      "enabled": true,
+      "color": "#6a5a95"
+    },
+    {
+      "id": "zhipu",
+      "name": "智谱",
+      "aliases": [
+        "智谱",
+        "zhipu"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#317d73"
+    },
+    {
+      "id": "moonshot",
+      "name": "月之暗面",
+      "aliases": [
+        "月之暗面",
+        "moonshot"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#946b35"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "aliases": [
+        "minimax",
+        "minimax"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#c45043"
+    },
+    {
+      "id": "tencent",
+      "name": "腾讯",
+      "aliases": [
+        "腾讯",
+        "tencent"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#3478a3"
+    },
+    {
+      "id": "meituan",
+      "name": "美团",
+      "aliases": [
+        "美团",
+        "meituan"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#bc872b"
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "aliases": [
+        "grok",
+        "grok"
+      ],
+      "category": "model",
+      "kind": "model_brand",
+      "enabled": true,
+      "color": "#404044"
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": [
+        "meta",
+        "meta"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#4866aa"
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "aliases": [
+        "codex",
+        "codex"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#175f4a"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "aliases": [
+        "claude code",
+        "claude-code"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#bc6037"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "aliases": [
+        "cursor",
+        "cursor"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#336eab"
+    },
+    {
+      "id": "gemini-cli",
+      "name": "Gemini CLI",
+      "aliases": [
+        "gemini cli",
+        "gemini-cli"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#4b62ba"
+    },
+    {
+      "id": "deepseek-harness",
+      "name": "DeepSeek Harness",
+      "aliases": [
+        "deepseek harness",
+        "deepseek-harness"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#6a5a95"
+    },
+    {
+      "id": "hermes",
+      "name": "Hermes Agent",
+      "aliases": [
+        "hermes agent",
+        "hermes"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#317d73"
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "aliases": [
+        "opencode",
+        "opencode"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#946b35"
+    },
+    {
+      "id": "copilot",
+      "name": "GitHub Copilot",
+      "aliases": [
+        "github copilot",
+        "copilot"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#c45043"
+    },
+    {
+      "id": "qoder",
+      "name": "Qoder",
+      "aliases": [
+        "qoder",
+        "qoder"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#3478a3"
+    },
+    {
+      "id": "pi",
+      "name": "Pi Agent Harness",
+      "aliases": [
+        "pi agent harness",
+        "pi"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#bc872b"
+    },
+    {
+      "id": "trae",
+      "name": "TRAE",
+      "aliases": [
+        "trae",
+        "trae"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#404044"
+    },
+    {
+      "id": "zcode",
+      "name": "ZCode",
+      "aliases": [
+        "zcode",
+        "zcode"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#4866aa"
+    },
+    {
+      "id": "minimax-code",
+      "name": "MiniMax Code",
+      "aliases": [
+        "minimax code",
+        "minimax-code"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#175f4a"
+    }
+  ]
+}

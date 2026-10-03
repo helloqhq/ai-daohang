@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI 信息采集"
+  short_description: "复用脚本采集重要 AI 动态并生成中文 JSON"
+  default_prompt: "使用 $ai-news-collect 更新 ai-daohang 的重要 AI 动态，补采失败来源并校验本地 JSON。"
+policy:
+  allow_implicit_invocation: true

@@ -73,6 +73,7 @@ def in_window(value,since,until):
     return since<=parsed<=until
 
 def feed_address(source,config):
+    if source.get('feed_provider')=='offline':return None
     if source.get('feed_url'):return source['feed_url']
     if source.get('rsshub_route') and config.get('rsshub_base_url'):
         return config['rsshub_base_url'].rstrip('/')+'/'+source['rsshub_route'].lstrip('/')
@@ -88,7 +89,12 @@ def parse_feed(body,source,since,until,feed_url=None):
     for entry in entries:
         def field(*names):return next((c for c in entry if local(c.tag) in names),None)
         title=field('title');date=field('published','pubDate')
+        date_kind='published'
         if date is None:date=field('updated','date')
+        if date is not None and local(date.tag)=='updated':date_kind='updated'
+        declared_kind=entry.find('{urn:ai-daohang:offline-feed}date_kind')
+        if declared_kind is not None and declared_kind.text in ('published','updated'):
+            date_kind=declared_kind.text
         published=date.text.strip() if date is not None and date.text else None
         if published and not parse_time(published):
             try:published=email.utils.parsedate_to_datetime(published).isoformat()
@@ -104,22 +110,31 @@ def parse_feed(body,source,since,until,feed_url=None):
         if urllib.parse.urlparse(url).scheme not in ('http','https'):
             continue
         if not in_window(published,since,until):continue
-        content=field('encoded','content')
-        full=content is not None
-        if content is None:content=field('description','summary')
-        raw=''.join(content.itertext()) if content is not None else ''
-        # XHTML Atom content uses real XML children rather than escaped HTML.
-        if content is not None and list(content):
-            raw=''.join(ET.tostring(c,encoding='unicode') for c in content)
-        text=clean_text(raw)
+        # Media RSS content describes an attachment, not article text.
+        body_tags=('{http://purl.org/rss/1.0/modules/content/}encoded',
+                   '{http://www.w3.org/2005/Atom}content','content')
+        content=next((c for c in entry if c.tag in body_tags),None)
+        full=False;text=''
+        for candidate,is_full in ((content,True),(field('description','summary'),False)):
+            if candidate is None:continue
+            raw=''.join(candidate.itertext())
+            # XHTML Atom content uses real XML children rather than escaped HTML.
+            if list(candidate):raw=''.join(ET.tostring(c,encoding='unicode') for c in candidate)
+            text=clean_text(raw)
+            if text:full=is_full;break
         scope='full_text' if full else 'partial_text'
         if source.get('platform') in ('youtube','tiktok'):scope='metadata_only'
         name=html.unescape(''.join(title.itertext()).strip()) if title is not None else url
-        if not text:scope='metadata_only';text=name
-        records.append({'title':name or url,'url':url,'content_id':url,'text':text,
+        if not text or text==name:scope='metadata_only';text=name
+        declared_id=entry.find('{urn:ai-daohang:offline-feed}content_id')
+        content_id=declared_id.text if declared_id is not None and declared_id.text else url
+        records.append({'title':name or url,'url':url,'content_id':content_id,'text':text,
                         'published_at':published,'date_precision':'datetime' if published and 'T' in published else 'date' if published else 'unknown',
+                        'date_kind':date_kind if published else 'unknown',
                         'material_scope':scope,'feed_url':feed_url,
                         'prerelease':bool(source.get('platform')=='github' and re.search(r'alpha|beta|nightly|preview|canary|(?:^|[.-])rc[.\d-]',name,re.I))})
+        label=entry.findtext('{urn:ai-daohang:offline-feed}date_label')
+        if label:records[-1]['date_label']=label
     # Empty feed or undated entries cannot establish historical coverage.
     complete=bool(dates and min(dates)<=since and len(dates)==len(entries))
     if not entries:note='订阅没有条目，无法确认历史时间窗'

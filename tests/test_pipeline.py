@@ -31,6 +31,7 @@ class PipelineTests(unittest.TestCase):
         return next(m for m in self.p.store.materials().values() if m['content_id']==self.record['content_id'])
     def packet(self,m):
         event={'id':'pi-v1','entity_ids':['pi'],'kind':'update','topics':['feature'],'title_zh':'新增重要功能','summary_zh':'变更影响实际使用。','key_points_zh':['保留限制条件'],'importance_reason_zh':'影响工作流程','published_at':m['published_at'],'date_precision':'datetime','first_collected_at':m['collected_at'],'updated_at':m['collected_at'],'sources':[{k:m[k] for k in ('source_id','url','content_id','material_scope','collected_at')}]}
+        event.update(title_en='Important new feature',summary_en='A change that affects everyday use.',key_points_en=['Preserves limitations'],importance_reason_en='Affects the workflow')
         return {'events':[event],'decisions':[{'material_id':m['id'],'fingerprint':m['fingerprint'],'action':'keep','event_id':event['id'],'reason_zh':'重要功能'}]}
     def test_first_window_failure_gap_and_recovery(self):
         windows=[]
@@ -66,6 +67,18 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(self.p.store.pending()),1)
         with self.assertRaises(ValidationError):self.p.apply(packet)
         self.assertEqual(self.p.validate()['events'],1)
+    def test_default_queue_reopens_decisions_after_configured_rule_change(self):
+        m=self.candidate();self.p.apply(self.packet(m))
+        self.assertEqual(self.p.store.pending(),[])
+        config=read_json(self.root/'config/collection.json')
+        previous_version=config['rules_version']
+        config['rules_version']='next-revision'
+        write_json(self.root/'config/collection.json',config)
+        self.assertEqual([item['id'] for item in self.p.store.pending()],[m['id']])
+        self.assertEqual(self.p.store.pending(rules_version=previous_version),[])
+        self.p.store.save_pending()
+        saved=[json.loads(line) for line in (self.p.store.work/'pending.jsonl').read_text().splitlines()]
+        self.assertEqual([item['id'] for item in saved],[m['id']])
     def test_unknown_time_preview_and_invalid_json_preserve_snapshot(self):
         m=self.candidate();packet=self.packet(m);self.p.apply(packet)
         old=(self.root/'public/data/index.json').read_bytes()
@@ -80,10 +93,34 @@ class PipelineTests(unittest.TestCase):
         m=self.candidate();packet=self.packet(m);self.p.apply(packet)
         event=copy.deepcopy(packet['events'][0]);event['published_at']='2026-11-01T00:00:00Z';event['title_zh']='更正标题'
         with self.assertRaises(ValidationError):self.p.apply({'events':[event]})
-        event['corrections']=[{'at':'2026-11-02T00:00:00Z','reason_zh':'更正来源日期','url':m['url']}]
+        event['corrections']=[{'at':'2026-11-02T00:00:00Z','reason_zh':'更正来源日期','reason_en':'Correct the source date','url':m['url']}]
         self.p.apply({'events':[event]});self.p.apply({'events':[],'decisions':[]})
         self.assertEqual(self.p.validate()['events'],1)
         self.assertEqual(self.p.store.snapshot()[1]['event_locations']['pi-v1'],'2026-10')
+    def test_bilingual_content_is_required_and_invalid_updates_preserve_snapshot(self):
+        m=self.candidate();packet=self.packet(m);self.p.apply(packet)
+        original=(self.root/'public/data/index.json').read_bytes()
+        for mutate in (
+            lambda e:e.pop('title_en'),
+            lambda e:e.update(summary_en='  '),
+            lambda e:e.update(key_points_en=['One','Two']),
+            lambda e:e.update(key_points_en=['  ']),
+            lambda e:e.update(translation_zh='只有中文译文'),
+            lambda e:e.update(corrections=[{'at':'2026-10-03T00:00:00Z','reason_zh':'更正','url':m['url']}]),
+        ):
+            invalid=copy.deepcopy(packet);mutate(invalid['events'][0])
+            with self.assertRaises(ValidationError):self.p.apply(invalid)
+            self.assertEqual((self.root/'public/data/index.json').read_bytes(),original)
+    def test_english_corrections_require_evidence_and_refresh_preserves_both_languages(self):
+        m=self.candidate();packet=self.packet(m);self.p.apply(packet)
+        event=copy.deepcopy(packet['events'][0]);event['summary_en']='Corrected English summary.'
+        with self.assertRaises(ValidationError):self.p.apply({'events':[event]})
+        event['corrections']=[{'at':'2026-10-03T00:00:00Z','reason_zh':'更正英文摘要','reason_en':'Correct the English summary','url':m['url']}]
+        self.p.apply({'events':[event]});self.p.refresh()
+        snapshot=self.p.store.snapshot()
+        self.assertEqual(snapshot[3][0]['summary_en'],'Corrected English summary.')
+        self.assertEqual(snapshot[3][0]['summary_zh'],event['summary_zh'])
+        self.assertEqual(snapshot[0]['sources'][0]['name_en'],self.source['name_en'])
     def test_no_false_source_progress_from_link_import_or_partial(self):
         self.candidate();self.assertEqual(self.p.store.state()['sources'],{})
         with patch.dict('collector.pipeline.ADAPTERS',{'rss':lambda *args:([self.record.copy()],False,'partial')}):self.p.collect(now='2026-10-03T00:00:00Z')
@@ -123,6 +160,17 @@ class ExtractionTests(unittest.TestCase):
     def test_videos_remain_metadata_only(self):
         xml='<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Video</title><link href="https://youtube.com/watch?v=123"/><published>2026-10-02T00:00:00Z</published><content>Only text, no video viewing</content></entry></feed>'
         items,_,_=parse_feed(xml,{'platform':'youtube'},self.start,self.end);self.assertEqual(items[0]['material_scope'],'metadata_only')
+    def test_media_content_does_not_hide_description(self):
+        xml='<rss xmlns:media="http://search.yahoo.com/mrss/"><channel><item><title>Watermarking</title><link>https://example.com/post</link><pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate><media:content url="https://example.com/image.png"/><description>A supported summary</description></item></channel></rss>'
+        items,_,_=parse_feed(xml,{'platform':'web'},self.start,self.end)
+        self.assertEqual(items[0]['text'],'A supported summary')
+        self.assertEqual(items[0]['material_scope'],'partial_text')
+    def test_empty_article_content_falls_back_and_updated_keeps_its_meaning(self):
+        xml='<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Post</title><link href="https://example.com/post"/><updated>2026-10-02T00:00:00Z</updated><content/><summary>Useful summary</summary></entry></feed>'
+        items,_,_=parse_feed(xml,{'platform':'web'},self.start,self.end)
+        self.assertEqual(items[0]['text'],'Useful summary')
+        self.assertEqual(items[0]['material_scope'],'partial_text')
+        self.assertEqual(items[0]['date_kind'],'updated')
     def test_shared_rsshub_provider_and_native_override(self):
         self.assertEqual(feed_address({'rsshub_route':'/cursor/changelog'},{'rsshub_base_url':'https://rss.example.com/'}),'https://rss.example.com/cursor/changelog')
         self.assertEqual(feed_address({'feed_url':'https://native.example.com/rss','rsshub_route':'/unused'},{}),'https://native.example.com/rss')

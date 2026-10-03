@@ -46,6 +46,15 @@ def validate_events(events, catalog, schema):
     require(len(ids) == len(set(ids)), '事件标识重复')
     for event in events:
         validate_schema(event, schema)
+        for field in ('title','summary','importance_reason'):
+            for language in ('zh','en'):
+                require(bool(event[f'{field}_{language}'].strip()), f"{event['id']}: {field}_{language} 不能为空白")
+        require(len(event['key_points_zh'])==len(event['key_points_en']), f"{event['id']}: 中英文关键点数量不一致")
+        require(('translation_zh' in event)==('translation_en' in event), f"{event['id']}: 全文译文必须同时提供中英文")
+        for language in ('zh','en'):
+            require(all(point.strip() for point in event[f'key_points_{language}']), f"{event['id']}: 关键点不能为空白")
+            for correction in event.get('corrections',[]):
+                require(bool(correction[f'reason_{language}'].strip()), f"{event['id']}: 更正理由不能为空白")
         require(set(event['entity_ids']) <= entities, f"{event['id']}: 未登记关注对象")
         require(event['date_precision'] in ('date','datetime','unknown'), '时间精度无效')
         for stamp in [event['first_collected_at'],event['updated_at'],*[s['collected_at'] for s in event['sources']],*[c['at'] for c in event.get('corrections',[])]]:

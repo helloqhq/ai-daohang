@@ -15,7 +15,11 @@
     "date_precision",
     "first_collected_at",
     "updated_at",
-    "sources"
+    "sources",
+    "title_en",
+    "summary_en",
+    "key_points_en",
+    "importance_reason_en"
   ],
   "properties": {
     "id": {
@@ -172,7 +176,8 @@
         "required": [
           "at",
           "reason_zh",
-          "url"
+          "url",
+          "reason_en"
         ],
         "properties": {
           "at": {
@@ -187,9 +192,37 @@
             "type": "string",
             "minLength": 1,
             "format": "uri"
+          },
+          "reason_en": {
+            "type": "string",
+            "minLength": 1
           }
         }
       }
+    },
+    "title_en": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary_en": {
+      "type": "string",
+      "minLength": 1
+    },
+    "key_points_en": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "importance_reason_en": {
+      "type": "string",
+      "minLength": 1
+    },
+    "translation_en": {
+      "type": "string",
+      "minLength": 1
     }
   }
 }

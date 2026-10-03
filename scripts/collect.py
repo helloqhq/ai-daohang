@@ -6,7 +6,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from collector.pipeline import Pipeline
-from collector.adapters import feed_address,parse_feed
+from collector.adapters import feed_address,SourceError
 from collector.storage import read_json,parse_time
 from collector.validation import ValidationError
 
@@ -20,13 +20,15 @@ def main():
     apply=sub.add_parser('apply');apply.add_argument('file')
     feeds=sub.add_parser('feeds');feeds.add_argument('--opml')
     imp=sub.add_parser('import-feed');imp.add_argument('source_id');imp.add_argument('file');imp.add_argument('--since',required=True);imp.add_argument('--until',required=True)
+    imp.add_argument('--reconcile-existing',action='store_true',help='同时重新解析订阅中已有的待审阅材料，保留原文日期与处置记录')
+    converted=sub.add_parser('import-converted');converted.add_argument('manifest')
     sub.add_parser('refresh');sub.add_parser('validate')
     args=parser.parse_args();pipeline=Pipeline(args.root)
     if args.command=='fetch':result=pipeline.collect(args.entities,args.now,args.since)
     elif args.command=='feeds':
         values=[{'source_id':s['id'],'name':s['name'],'enabled':s['enabled'],'platform':s['platform'],'feed_url':feed_address(s,pipeline.config),'provider':s['feed_provider']} for s in pipeline.sources]
         if args.opml:
-            root=ET.Element('opml',version='2.0');head=ET.SubElement(root,'head');ET.SubElement(head,'title').text='知更 · AI 信息订阅'
+            root=ET.Element('opml',version='2.0');head=ET.SubElement(root,'head');ET.SubElement(head,'title').text='AI 简报 · AI 信息订阅'
             body=ET.SubElement(root,'body')
             for item in values:
                 if item['enabled'] and item['feed_url']:ET.SubElement(body,'outline',text=item['name'],title=item['name'],type='rss',xmlUrl=item['feed_url'],category=item['platform'])
@@ -46,8 +48,8 @@ def main():
         if not source:raise ValidationError('订阅来源不存在')
         since,until=parse_time(args.since),parse_time(args.until)
         if not since or not until or since>until:raise ValidationError('导入时间窗无效')
-        records,complete,note=parse_feed(Path(args.file).read_text(encoding='utf-8'),source,since,until,feed_address(source,pipeline.config))
-        result=pipeline.ingest([{**r,'source_id':source['id']} for r in records]);result['note']='本地订阅导入；'+note
+        result=pipeline.import_feed(source['id'],Path(args.file).read_text(encoding='utf-8'),since,until,args.reconcile_existing)
+    elif args.command=='import-converted':result=pipeline.import_converted(read_json(args.manifest))
     elif args.command=='apply':result=pipeline.apply(read_json(args.file))
     elif args.command=='refresh':result=pipeline.refresh()
     else:result=pipeline.validate()
@@ -55,5 +57,5 @@ def main():
 
 if __name__=='__main__':
     try:main()
-    except (ValidationError,OSError,ValueError,KeyError) as exc:
+    except (ValidationError,OSError,ValueError,KeyError,ET.ParseError,SourceError) as exc:
         print(json.dumps({'error':str(exc)},ensure_ascii=False),file=sys.stderr);sys.exit(1)

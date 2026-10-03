@@ -15,6 +15,7 @@
 | `public/data/events/YYYY-MM.json` | 相应月份的事件内容 |
 | `public/data/coverage.json` | 经过整理的来源采集覆盖状态 |
 | `.collector/state.json` | 各来源成功区间、未完成区间和去重状态，不进入发布目录 |
+| `.collector/converted/`、`.collector/conversion-cache/` | 私有离线 RSS、导入清单与原始转换缓存，不进入发布目录 |
 | `.collector/cache/` | 有保留期限的RSS/Atom 原始 XML 缓存，不进入发布目录 |
 | `.collector/pending.jsonl` | 已发现／已取回但尚未完成语义加工的候选材料，不进入发布目录 |
 | `.collector/runs/` | 必要的本地运行结果与修订核查记录，不进入发布目录 |
@@ -25,7 +26,7 @@
 
 ## 共同约定
 
-公开文件带 `schema_version` 与同一 `snapshot_id`，使页面能够识别数据契约和快照是否一致。`index.json` 的 `generated_at` 表示数据快照生成时间，不表示所有来源成功时间或站点发布时刻。
+公开文件带 `schema_version: "1.1"`（双语必填）与同一 `snapshot_id`，使页面能够识别数据契约和快照是否一致。`index.json` 的 `generated_at` 表示数据快照生成时间，不表示所有来源成功时间或站点发布时刻。
 
 对象、来源和事件使用稳定且唯一的标识。名称或来源地址变化不更换对象标识；中文摘要修改不更换事件标识。记录按标识引用，不能用展示名称作为关联键。
 
@@ -41,6 +42,12 @@
 
 `platform` 支持官网、GitHub、YouTube、TikTok、X、微信公众号及后续扩展；`adapter` 统一为 rss；`feed_url` 是 RSS/Atom 订阅，`url` 是原始来源入口，`rsshub_route` 可配合全局转换服务地址。`capabilities` 分别描述能否发现列表、读取正文或字幕，以及当前访问要求。账号凭据、会话或 access token 不写入公开配置。
 
+`feed_provider: offline` 表示使用独立按需转换器，`feed_url: null`，不加入公开 OPML；`offline_conversion: true` 也可用于原生 RSS 的正文补充。`offline_import_at` 只表示本地导入时间，不证明在线完整覆盖。
+
+内部材料的 `date_kind` 区分 `published`、`updated` 和 `unknown`。只有 Atom `updated` 时保留该语义，不据此推断首次发表日期；月份标签保存为 `date_label`，`published_at` 仍为 null。转换 RSS 的审计命名空间为 `urn:ai-daohang:offline-feed`，记录来源 ID、原始入口、日期语义和版本内容标识。同一更新页的多个版本可用带版本的稳定 `content_id` 共用真实原文 URL。导入清单校验文件 SHA-256 与来源对应关系；先验证全部文件再导入。
+
+展示名称同时维护 `name`（默认中文／品牌名）与 `name_en`；来源订阅说明同时维护 `subscription_note` / `subscription_note_en`，刷新目录时保留这些字段。
+
 官网、官方仓库与指定负责人账号在可信来源类型上区分；搜索页不作为事件最终原始依据。
 
 ## 事件字段
@@ -55,14 +62,19 @@
 | `summary_zh` | 忠于原始依据的简短中文摘要 |
 | `key_points_zh` | 关键变化列表，不添加原文没有的结论 |
 | `importance_reason_zh` | 入选的实际影响或价值 |
-| `translation_zh` | 可选；短公告的完整中文译文，不替代摘要字段 |
+| `title_en` / `summary_en` | 必填；与中文同事实的英文标题及摘要 |
+| `key_points_en` | 必填；与中文关键点数量、顺序一致 |
+| `importance_reason_en` | 必填；入选理由的英文版本 |
+| `translation_zh` / `translation_en` | 可选，填写时两份齐全；短公告全文译文，不替代摘要 |
 | `published_at` | 已核实的发布时间或原文日期；未知为 `null` |
 | `date_precision` | `datetime`、`date` 或 `unknown`，与时间字段一致 |
 | `first_collected_at` | 本站首次取得该事件的实际时间 |
 | `updated_at` | 本站事件记录最后修改时间，不冒充原文发布时间 |
 | `sources` | 至少一个原始依据，包含来源标识、平台原始内容标识、原文链接、可核实原文日期、采集时间、实际材料范围与当前可访问状态 |
 | `related_event_ids` | 可选；连接预告与正式发布等关联事件 |
-| `corrections` | 可选；更正时间、原因及核实依据 |
+| `corrections` | 可选；更正时间、双语原因 `reason_zh` / `reason_en` 及核实依据 |
+
+同一 JSON 记录内保存两份语言内容，共用 ID、时间和来源，不重复计数。必填文案不能是空白，中英文关键点必须一一对应。实质更正同步修改双语并记录双语理由；仅为旧中文事件补齐英文时保留 ID、首次采集时间，更新 `updated_at`，不添加虚构事实更正。
 
 新内容只有日期时可以按日期展示，日期边界有不确定性时如实标记；完全未知的时间不能仅凭抓取时间认定原文发布于最近 3 天。未能确认时间窗归属的候选内容先进入内部待核查记录。
 

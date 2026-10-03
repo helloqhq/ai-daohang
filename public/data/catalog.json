@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "snapshot_id": "01be142a3cdc3eeb",
+  "schema_version": "1.1",
+  "snapshot_id": "3bf479d156e0acf1",
   "entities": [
     {
       "id": "openai",
@@ -12,7 +12,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#175f4a"
+      "color": "#175f4a",
+      "name_en": "OpenAI"
     },
     {
       "id": "anthropic",
@@ -24,7 +25,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#bc6037"
+      "color": "#bc6037",
+      "name_en": "Anthropic"
     },
     {
       "id": "google",
@@ -36,7 +38,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#336eab"
+      "color": "#336eab",
+      "name_en": "Google"
     },
     {
       "id": "deepseek",
@@ -48,7 +51,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#4b62ba"
+      "color": "#4b62ba",
+      "name_en": "DeepSeek"
     },
     {
       "id": "qwen",
@@ -60,7 +64,8 @@
       "category": "model",
       "kind": "model_brand",
       "enabled": true,
-      "color": "#6a5a95"
+      "color": "#6a5a95",
+      "name_en": "Qwen"
     },
     {
       "id": "zhipu",
@@ -72,7 +77,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#317d73"
+      "color": "#317d73",
+      "name_en": "Zhipu"
     },
     {
       "id": "moonshot",
@@ -84,7 +90,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#946b35"
+      "color": "#946b35",
+      "name_en": "Moonshot AI"
     },
     {
       "id": "minimax",
@@ -96,7 +103,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#c45043"
+      "color": "#c45043",
+      "name_en": "MiniMax"
     },
     {
       "id": "tencent",
@@ -108,7 +116,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#3478a3"
+      "color": "#3478a3",
+      "name_en": "Tencent"
     },
     {
       "id": "meituan",
@@ -120,7 +129,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#bc872b"
+      "color": "#bc872b",
+      "name_en": "Meituan"
     },
     {
       "id": "grok",
@@ -132,7 +142,8 @@
       "category": "model",
       "kind": "model_brand",
       "enabled": true,
-      "color": "#404044"
+      "color": "#404044",
+      "name_en": "Grok"
     },
     {
       "id": "meta",
@@ -144,7 +155,47 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#4866aa"
+      "color": "#4866aa",
+      "name_en": "Meta"
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "aliases": [
+        "openrouter",
+        "open router"
+      ],
+      "category": "model",
+      "kind": "api_platform",
+      "enabled": true,
+      "color": "#476c91",
+      "name_en": "OpenRouter"
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "aliases": [
+        "nvidia",
+        "英伟达"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#527d32",
+      "name_en": "NVIDIA"
+    },
+    {
+      "id": "discovery-loop",
+      "name": "Discovery Loop",
+      "aliases": [
+        "discovery loop",
+        "discoveryloop"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#527d69",
+      "name_en": "Discovery Loop"
     },
     {
       "id": "codex",
@@ -156,7 +207,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#175f4a"
+      "color": "#175f4a",
+      "name_en": "Codex"
     },
     {
       "id": "claude-code",
@@ -168,7 +220,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#bc6037"
+      "color": "#bc6037",
+      "name_en": "Claude Code"
     },
     {
       "id": "cursor",
@@ -180,7 +233,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#336eab"
+      "color": "#336eab",
+      "name_en": "Cursor"
     },
     {
       "id": "gemini-cli",
@@ -192,7 +246,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#4b62ba"
+      "color": "#4b62ba",
+      "name_en": "Gemini CLI"
     },
     {
       "id": "deepseek-harness",
@@ -204,7 +259,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#6a5a95"
+      "color": "#6a5a95",
+      "name_en": "DeepSeek Harness"
     },
     {
       "id": "hermes",
@@ -216,7 +272,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#317d73"
+      "color": "#317d73",
+      "name_en": "Hermes Agent"
     },
     {
       "id": "opencode",
@@ -228,7 +285,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#946b35"
+      "color": "#946b35",
+      "name_en": "OpenCode"
     },
     {
       "id": "copilot",
@@ -240,7 +298,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#c45043"
+      "color": "#c45043",
+      "name_en": "GitHub Copilot"
     },
     {
       "id": "qoder",
@@ -252,7 +311,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#3478a3"
+      "color": "#3478a3",
+      "name_en": "Qoder"
     },
     {
       "id": "pi",
@@ -264,7 +324,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#bc872b"
+      "color": "#bc872b",
+      "name_en": "Pi Agent Harness"
     },
     {
       "id": "trae",
@@ -276,7 +337,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#404044"
+      "color": "#404044",
+      "name_en": "TRAE"
     },
     {
       "id": "zcode",
@@ -288,7 +350,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#4866aa"
+      "color": "#4866aa",
+      "name_en": "ZCode"
     },
     {
       "id": "minimax-code",
@@ -300,7 +363,22 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#175f4a"
+      "color": "#175f4a",
+      "name_en": "MiniMax Code"
+    },
+    {
+      "id": "deeptutor",
+      "name": "DeepTutor",
+      "aliases": [
+        "deeptutor",
+        "deep tutor",
+        "HKUDS/DeepTutor"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#527d69",
+      "name_en": "DeepTutor"
     }
   ],
   "sources": [
@@ -323,7 +401,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://openai.com/news/rss.xml",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "OpenAI News"
     },
     {
       "id": "anthropic-official",
@@ -343,10 +422,13 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://rsshub.app/anthropic/news",
-      "feed_provider": "rsshub",
-      "rsshub_route": "/anthropic/news",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/anthropic"
+      "feed_url": null,
+      "feed_provider": "offline",
+      "name_en": "Anthropic News",
+      "offline_conversion": true,
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "google-official",
@@ -367,7 +449,9 @@
       },
       "adapter": "rss",
       "feed_url": "https://deepmind.google/blog/rss.xml",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Google DeepMind Blog",
+      "offline_conversion": true
     },
     {
       "id": "deepseek-official",
@@ -387,10 +471,13 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://rsshub.app/deepseek/news",
-      "feed_provider": "rsshub",
-      "rsshub_route": "/deepseek/news",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/deepseek"
+      "feed_url": null,
+      "feed_provider": "offline",
+      "name_en": "DeepSeek API Updates",
+      "offline_conversion": true,
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "qwen-official",
@@ -410,10 +497,13 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://rsshub.app/qwen/blog",
-      "feed_provider": "rsshub",
-      "rsshub_route": "/qwen/blog",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/qwen"
+      "feed_url": null,
+      "feed_provider": "offline",
+      "name_en": "Qwen Blog",
+      "offline_conversion": true,
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "zhipu-official",
@@ -427,15 +517,19 @@
       "verification": "verified",
       "verification_url": "https://docs.z.ai/release-notes/new-released",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
       "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_provider": "offline",
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Zhipu Model Releases",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "offline_conversion": true
     },
     {
       "id": "moonshot-official",
@@ -449,15 +543,19 @@
       "verification": "verified",
       "verification_url": "https://www.kimi.com/en/blog/",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
       "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_provider": "offline",
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Kimi Research Blog",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "offline_conversion": true
     },
     {
       "id": "minimax-official",
@@ -471,15 +569,19 @@
       "verification": "verified",
       "verification_url": "https://www.minimax.io/blog",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
       "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_provider": "offline",
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "feed_checked_at": "2026-10-03",
+      "name_en": "MiniMax Blog",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "offline_conversion": true
     },
     {
       "id": "tencent-official",
@@ -493,15 +595,19 @@
       "verification": "verified",
       "verification_url": "https://hunyuan.tencent.com/",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
       "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_provider": "offline",
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Tencent Hunyuan",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "offline_conversion": true
     },
     {
       "id": "meituan-official",
@@ -521,8 +627,11 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://tech.meituan.com/rss.xml",
-      "feed_provider": "native"
+      "feed_url": "https://tech.meituan.com/atom.xml",
+      "feed_provider": "native",
+      "name_en": "Meituan Tech Team",
+      "subscription_note": "官方 Atom 提供全文和条目更新时间（updated），不冒充首次发布时间。",
+      "subscription_note_en": "The official Atom feed provides full text and entry update times (updated), not necessarily original publication times."
     },
     {
       "id": "grok-official",
@@ -536,15 +645,19 @@
       "verification": "verified",
       "verification_url": "https://x.ai/news",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
       "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_provider": "offline",
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Grok News",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "offline_conversion": true
     },
     {
       "id": "meta-official",
@@ -564,10 +677,13 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://rsshub.app/meta/ai/blog",
-      "feed_provider": "rsshub",
-      "rsshub_route": "/meta/ai/blog",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/meta"
+      "feed_url": null,
+      "feed_provider": "offline",
+      "name_en": "Meta AI Blog",
+      "offline_conversion": true,
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "cursor-official",
@@ -589,7 +705,8 @@
       "adapter": "rss",
       "feed_url": "https://cursor.com/changelog/rss.xml",
       "feed_provider": "native",
-      "feed_verified_at": "2026-10-03"
+      "feed_verified_at": "2026-10-03",
+      "name_en": "Cursor Changelog"
     },
     {
       "id": "qoder-official",
@@ -603,15 +720,19 @@
       "verification": "verified",
       "verification_url": "https://docs.qoder.com/release-notes/qoder",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
       "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_provider": "offline",
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Qoder Changelog",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "offline_conversion": true
     },
     {
       "id": "trae-official",
@@ -625,15 +746,19 @@
       "verification": "verified",
       "verification_url": "https://docs.trae.cn/ide_changelog",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
       "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_provider": "offline",
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "feed_checked_at": "2026-10-03",
+      "name_en": "TRAE Chinese Edition Changelog",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "offline_conversion": true
     },
     {
       "id": "zcode-official",
@@ -647,15 +772,19 @@
       "verification": "verified",
       "verification_url": "https://zcode.z.ai/en/changelog",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
       "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_provider": "offline",
+      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
+      "feed_checked_at": "2026-10-03",
+      "name_en": "ZCode Changelog",
+      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "offline_conversion": true
     },
     {
       "id": "codex-releases",
@@ -676,7 +805,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/openai/codex/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Codex Releases"
     },
     {
       "id": "gemini-cli-releases",
@@ -697,7 +827,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/google-gemini/gemini-cli/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Gemini CLI Releases"
     },
     {
       "id": "deepseek-harness-releases",
@@ -718,7 +849,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/deepseek-ai/deepseek-harness/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "DeepSeek Harness Releases"
     },
     {
       "id": "hermes-releases",
@@ -739,7 +871,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Hermes Agent Releases"
     },
     {
       "id": "opencode-releases",
@@ -760,7 +893,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/anomalyco/opencode/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "OpenCode Releases"
     },
     {
       "id": "copilot-releases",
@@ -781,7 +915,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/github/copilot-cli/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Copilot CLI Releases"
     },
     {
       "id": "pi-releases",
@@ -802,7 +937,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/earendil-works/pi/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Pi Agent Harness Releases"
     },
     {
       "id": "minimax-code-releases",
@@ -823,7 +959,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/MiniMax-AI/minimax-code/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "MiniMax Code CLI Releases"
     },
     {
       "id": "claude-code-changelog",
@@ -844,7 +981,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/anthropics/claude-code/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Claude Code Releases"
     },
     {
       "id": "sam-altman-blog",
@@ -866,7 +1004,8 @@
       "person_id": "sam-altman",
       "adapter": "rss",
       "feed_url": "https://blog.samaltman.com/posts.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Sam Altman’s Blog"
     },
     {
       "id": "dario-blog",
@@ -880,7 +1019,7 @@
       "verification": "verified",
       "verification_url": "https://www.anthropic.com/company/leadership",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
@@ -888,8 +1027,12 @@
       "person_id": "dario-amodei",
       "adapter": "rss",
       "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_provider": "offline",
+      "subscription_note": "按需离线 RSS 已取得官网全文；原文仅标月份，保留月份说明，不编造具体发布日期。",
+      "name_en": "Dario Amodei’s Blog",
+      "subscription_note_en": "On-demand offline RSS retrieves official full text. The original pages show months only; month labels are preserved without inventing publication days.",
+      "offline_conversion": true,
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "openai-youtube",
@@ -910,7 +1053,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "OpenAI YouTube"
     },
     {
       "id": "openai-x",
@@ -930,10 +1074,13 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://rsshub.app/twitter/user/OpenAI",
-      "feed_provider": "rsshub",
-      "rsshub_route": "/twitter/user/OpenAI",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/twitter"
+      "feed_url": null,
+      "feed_provider": "offline",
+      "name_en": "OpenAI X",
+      "offline_conversion": true,
+      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
+      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "zcode-x",
@@ -953,10 +1100,13 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://rsshub.app/twitter/user/zcode_ai",
-      "feed_provider": "rsshub",
-      "rsshub_route": "/twitter/user/zcode_ai",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/twitter"
+      "feed_url": null,
+      "feed_provider": "offline",
+      "name_en": "ZCode X",
+      "offline_conversion": true,
+      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
+      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "openai-tiktok",
@@ -970,16 +1120,235 @@
       "verification": "verified",
       "verification_url": "https://openai.com/",
       "capabilities": {
+        "list": false,
+        "text": false,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "name_en": "OpenAI TikTok",
+      "offline_conversion": true,
+      "subscription_note": "已纳入本轮按需离线转换，但匿名页面未提供帖子列表；仍受限，需要可读取的登录态或订阅服务，在线覆盖未确认。",
+      "subscription_note_en": "Included in this on-demand conversion run, but the anonymous page provides no post list. Access remains blocked and requires a readable authenticated session or feed service; online coverage is unconfirmed.",
+      "feed_checked_at": "2026-10-03"
+    },
+    {
+      "id": "openrouter-official",
+      "name": "OpenRouter 官方博客",
+      "entity_ids": [
+        "openrouter"
+      ],
+      "url": "https://openrouter.ai/blog/all/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://openrouter.ai/blog/all/",
+      "capabilities": {
         "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://rsshub.app/tiktok/user/@openai",
-      "feed_provider": "rsshub",
-      "rsshub_route": "/tiktok/user/@openai",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/tiktok"
+      "feed_url": "https://openrouter.ai/blog/feed.xml",
+      "feed_provider": "native",
+      "feed_verified_at": "2026-10-03",
+      "subscription_note": "官方博客 RSS；关注平台功能、API、价格和可用性变化，普通教程和宣传按编辑规则过滤。",
+      "name_en": "OpenRouter Blog",
+      "subscription_note_en": "Official blog RSS. Tracks important changes to platform features, APIs, pricing and availability; ordinary tutorials and promotional posts are filtered under the editorial rules."
+    },
+    {
+      "id": "deeptutor-releases",
+      "name": "DeepTutor Releases",
+      "entity_ids": [
+        "deeptutor"
+      ],
+      "url": "https://github.com/HKUDS/DeepTutor/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/HKUDS/DeepTutor",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/HKUDS/DeepTutor/releases.atom",
+      "feed_provider": "native",
+      "feed_verified_at": "2026-10-03",
+      "name_en": "DeepTutor Releases"
+    },
+    {
+      "id": "elon-musk-x",
+      "name": "马斯克 Elon Musk · X",
+      "entity_ids": [
+        "grok"
+      ],
+      "url": "https://x.com/elonmusk",
+      "platform": "x",
+      "person_id": "elon-musk",
+      "account_handle": "elonmusk",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://ir.tesla.com/_flysystem/s3/sec/000110465924070994/tm2413800d27_defa14a-gen.pdf",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "feed_checked_at": "2026-10-03",
+      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
+      "name_en": "Elon Musk · X",
+      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
+      "offline_conversion": true
+    },
+    {
+      "id": "mark-zuckerberg-threads",
+      "name": "扎克伯格 Mark Zuckerberg · Threads",
+      "entity_ids": [
+        "meta"
+      ],
+      "url": "https://www.threads.net/@zuck",
+      "platform": "threads",
+      "person_id": "mark-zuckerberg",
+      "account_handle": "zuck",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://about.fb.com/news/2023/07/introducing-threads-new-app-text-sharing/",
+      "capabilities": {
+        "list": false,
+        "text": false,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "feed_checked_at": "2026-10-03",
+      "subscription_note": "已纳入本轮按需离线转换，但匿名页面未提供帖子列表；仍受限，需要可读取的登录态或订阅服务，在线覆盖未确认。",
+      "name_en": "Mark Zuckerberg · Threads",
+      "subscription_note_en": "Included in this on-demand conversion run, but the anonymous page provides no post list. Access remains blocked and requires a readable authenticated session or feed service; online coverage is unconfirmed.",
+      "offline_conversion": true
+    },
+    {
+      "id": "demis-hassabis-x",
+      "name": "Demis Hassabis · X",
+      "entity_ids": [
+        "google"
+      ],
+      "url": "https://x.com/demishassabis",
+      "platform": "x",
+      "person_id": "demis-hassabis",
+      "account_handle": "demishassabis",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "feed_checked_at": "2026-10-03",
+      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
+      "name_en": "Demis Hassabis · X",
+      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
+      "offline_conversion": true
+    },
+    {
+      "id": "jeff-dean-x",
+      "name": "Jeff Dean · X",
+      "entity_ids": [
+        "discovery-loop"
+      ],
+      "url": "https://x.com/JeffDean",
+      "platform": "x",
+      "person_id": "jeff-dean",
+      "account_handle": "JeffDean",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://research.google/blog/the-google-brain-team-looking-back-on-2017-part-2-of-2/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "feed_checked_at": "2026-10-03",
+      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
+      "name_en": "Jeff Dean · X",
+      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
+      "offline_conversion": true
+    },
+    {
+      "id": "jensen-huang-blog",
+      "name": "黄仁勋 Jensen Huang · NVIDIA 署名文章",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/",
+      "platform": "web",
+      "person_id": "jensen-huang",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/feed/",
+      "feed_provider": "native",
+      "feed_verified_at": "2026-10-03",
+      "subscription_note": "NVIDIA 创始人、总裁兼 CEO；官方本人署名文章 RSS，已解析 10 篇文章（9 篇含正文、1 篇仅元数据），均有发布时间；仅覆盖该作者博客，不代表全部个人动态。",
+      "name_en": "Jensen Huang · NVIDIA Articles",
+      "subscription_note_en": "NVIDIA founder, president and CEO. Official RSS for articles under his byline. Ten articles were parsed: nine with body text and one with metadata only, all with publication dates. Covers this author’s blog only, not all of his public activity."
+    },
+    {
+      "id": "tibo-x",
+      "name": "Tibo（Thibault Sottiaux）· X",
+      "name_en": "Tibo (Thibault Sottiaux) · X",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "url": "https://x.com/thsottiaux",
+      "platform": "x",
+      "person_id": "thibault-sottiaux",
+      "account_handle": "thsottiaux",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://forum.openai.com/public/events/codex-is-for-everyone-why-codex-matters-beyond-code-fa40puy7wi",
+      "account_verification_url": "https://community.openai.com/t/how-should-developers-plan-around-codex-resets/1395030/3",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "offline_conversion": true,
+      "subscription_note": "按需读取本人 X 公开帖子并转换为本地 RSS；2026-10-03 检查取得 5 条带日期帖子，按部分正文保存，不代表完整账号时间窗或定时推送。",
+      "subscription_note_en": "The account’s own public X posts are converted on demand to local RSS. The October 3, 2026 check retrieved five dated posts, stored as partial text; a complete account time window or scheduled notifications are not confirmed.",
+      "feed_checked_at": "2026-10-03"
     }
   ],
   "people": [
@@ -989,7 +1358,8 @@
       "entity_ids": [
         "openai"
       ],
-      "verification_url": "https://openai.com/our-structure/"
+      "verification_url": "https://openai.com/our-structure/",
+      "name_en": "Sam Altman"
     },
     {
       "id": "dario-amodei",
@@ -997,7 +1367,75 @@
       "entity_ids": [
         "anthropic"
       ],
-      "verification_url": "https://www.anthropic.com/company/leadership"
+      "verification_url": "https://www.anthropic.com/company/leadership",
+      "name_en": "Dario Amodei"
+    },
+    {
+      "id": "elon-musk",
+      "name": "马斯克 Elon Musk",
+      "entity_ids": [
+        "grok"
+      ],
+      "role": "Tesla 联合创始人、CEO",
+      "verification_url": "https://www.tesla.com/elon-musk",
+      "name_en": "Elon Musk"
+    },
+    {
+      "id": "mark-zuckerberg",
+      "name": "扎克伯格 Mark Zuckerberg",
+      "entity_ids": [
+        "meta"
+      ],
+      "role": "Meta 创始人、CEO",
+      "verification_url": "https://about.fb.com/news/2026/01/dina-powell-mccormick-joins-meta-as-president-and-vice-chairman/",
+      "name_en": "Mark Zuckerberg"
+    },
+    {
+      "id": "jensen-huang",
+      "name": "黄仁勋 Jensen Huang",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "role": "NVIDIA 创始人、总裁兼 CEO",
+      "verification_url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/",
+      "name_en": "Jensen Huang"
+    },
+    {
+      "id": "demis-hassabis",
+      "name": "Demis Hassabis",
+      "entity_ids": [
+        "google"
+      ],
+      "role": "Google DeepMind 主席、Alphabet 首席科学家",
+      "verification_url": "https://blog.google/authors/demis-hassabis/",
+      "name_en": "Demis Hassabis"
+    },
+    {
+      "id": "jeff-dean",
+      "name": "Jeff Dean",
+      "entity_ids": [
+        "discovery-loop"
+      ],
+      "role": "Discovery Loop 联合创始人；前 Google 首席科学家",
+      "verification_url": "https://www.discoveryloop.com/",
+      "name_en": "Jeff Dean"
+    },
+    {
+      "id": "thibault-sottiaux",
+      "name": "Thibault “Tibo” Sottiaux",
+      "name_en": "Thibault “Tibo” Sottiaux",
+      "aliases": [
+        "Tibo",
+        "Thibault Sottiaux",
+        "thsottiaux"
+      ],
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "role": "OpenAI 技术团队成员，负责 Codex",
+      "role_en": "Member of Technical Staff at OpenAI, leading Codex",
+      "verification_url": "https://forum.openai.com/public/events/codex-is-for-everyone-why-codex-matters-beyond-code-fa40puy7wi"
     }
   ],
   "platforms": [
@@ -1005,25 +1443,36 @@
       "id": "youtube",
       "name": "YouTube",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "YouTube"
     },
     {
       "id": "tiktok",
       "name": "TikTok",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "TikTok"
     },
     {
       "id": "x",
       "name": "X",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "X"
+    },
+    {
+      "id": "threads",
+      "name": "Threads",
+      "adapter": "rss",
+      "requires_account_configuration": true,
+      "name_en": "Threads"
     },
     {
       "id": "wechat",
       "name": "微信公众号",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "WeChat"
     }
   ]
 }

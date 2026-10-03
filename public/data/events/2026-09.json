@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "snapshot_id": "01be142a3cdc3eeb",
+  "schema_version": "1.1",
+  "snapshot_id": "3bf479d156e0acf1",
   "events": [
     {
       "id": "opencode-v11834",
@@ -22,7 +22,7 @@
       "published_at": "2026-09-30T22:39:45Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:50:32+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "opencode-releases",
@@ -32,7 +32,14 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-09-30T22:39:45Z"
         }
-      ]
+      ],
+      "title_en": "OpenCode 1.18.34: fixes for macOS binary execution",
+      "summary_en": "OpenCode adjusts macOS binary signing to improve the reliability of locally compiled binaries on macOS 27 and later.",
+      "key_points_en": [
+        "Locally compiled macOS binaries are re-signed; official CLI releases use Developer ID signing.",
+        "Model requests include namespaced session and parent-session identity headers."
+      ],
+      "importance_reason_en": "Directly affects whether macOS users can run the CLI reliably."
     },
     {
       "id": "copilot-cli-1090",
@@ -55,7 +62,7 @@
       "published_at": "2026-09-30T21:38:30Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "copilot-releases",
@@ -64,6 +71,65 @@
           "material_scope": "full_text",
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-09-30T21:38:30Z"
+        }
+      ],
+      "title_en": "Copilot CLI 1.0.90: GPT-6.1 Sol support and GitHub MCP authentication",
+      "summary_en": "This stable Copilot CLI release adds GPT-6.1 Sol support and improves GitHub MCP authentication, session permissions and connection recovery.",
+      "key_points_en": [
+        "Adds support for the GPT-6.1 Sol model.",
+        "--mcp-github-auth allows GitHub account authentication for approved MCP sources.",
+        "Improves MCP discovery, recovery from transient failures and permission responses after resuming a session."
+      ],
+      "importance_reason_en": "Affects model selection, third-party tool integration and continuity in long sessions."
+    },
+    {
+      "id": "google-gemini4-argon-preview",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "preview",
+      "topics": [
+        "model_release",
+        "capability",
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "Gemini 4 Argon：先向可信网络防御团队开放，输出上限增至 100 万 token",
+      "summary_zh": "Google 公布 Gemini 4 Argon，强调长程软件工程、企业知识工作与网络安全防御能力。目前通过 Fairwind Program 向部分可信网络防御团队分阶段开放，面向开发者、企业与消费者的更广泛可用性仍待推出。",
+      "key_points_zh": [
+        "输出 token 上限由此前的 64K 提高至 1M；Google 报告其 DeepSWE v1.1 得分为 77.9%，属于厂商评测结果。",
+        "宣布的入门价格为每百万输入／输出 token 2／10 美元，缓存输入优惠 95%；入门期结束后价格为 4／20 美元。",
+        "更广泛推出将从付费 API 客户与 Google AI Ultra 订阅者开始，目前不代表已对所有用户开放。"
+      ],
+      "importance_reason_zh": "长任务能力、输出容量和公布的定价会影响开发者选型，但需要保留受限开放阶段。",
+      "title_en": "Gemini 4 Argon: limited initial access and a one-million-token output limit",
+      "summary_en": "Google announced Gemini 4 Argon for long-horizon software engineering, enterprise knowledge work and cybersecurity defense. Access is rolling out in phases to selected trusted cyber defenders through the Fairwind Program; broader access for developers, enterprises and consumers is still forthcoming.",
+      "key_points_en": [
+        "The output token limit rises from 64K to 1M. Google reports a 77.9% score on DeepSWE v1.1; this is a vendor-reported evaluation result.",
+        "Announced introductory pricing is $2/$10 per million input/output tokens, with a 95% cached-input discount. After the introductory period, input/output pricing will be $4/$20.",
+        "Broader rollout will start with paid API customers and Google AI Ultra subscribers; the model is not yet available to everyone."
+      ],
+      "importance_reason_en": "Long-horizon capabilities, output capacity and announced pricing affect developer choices, while the limited rollout remains a key constraint.",
+      "published_at": "2026-09-30T20:01:45+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T12:10:56+00:00",
+      "updated_at": "2026-10-03T12:14:34.669891+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+          "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+          "collected_at": "2026-10-03T12:10:56+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-09-30T20:01:45+00:00"
+        },
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2105417239432200636",
+          "url": "https://x.com/demishassabis/status/2105417239432200636",
+          "collected_at": "2026-10-03T12:10:56+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-09-30T21:59:21+00:00"
         }
       ]
     },
@@ -88,7 +154,7 @@
       "published_at": "2026-09-30T19:30:47Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "pi-releases",
@@ -98,7 +164,15 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-09-30T19:30:47Z"
         }
-      ]
+      ],
+      "title_en": "Pi 0.99.2: lazy MCP loading no longer blocks the first prompt",
+      "summary_en": "Pi improves MCP tool loading in the default codemode and expands authentication and provider compatibility.",
+      "key_points_en": [
+        "MCP tools load lazily, so the first prompt does not have to wait for all tools to be ready.",
+        "Adds searchTools and describeNamespace for tool discovery.",
+        "Supports Anthropic workload identity federation configuration; improves MCP scopes and provider retries."
+      ],
+      "importance_reason_en": "Reduces startup delays in projects with many tools and improves enterprise authentication integration."
     },
     {
       "id": "claude-code-v21286",
@@ -120,7 +194,7 @@
       "published_at": "2026-09-30T19:10:13Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T03:22:34+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "claude-code-changelog",
@@ -129,6 +203,63 @@
           "material_scope": "full_text",
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-09-30T19:10:13Z"
+        }
+      ],
+      "title_en": "Claude Code 2.1.286: session history recovery and credential redaction fixes",
+      "summary_en": "This release fixes the loss of subsequent turns when resuming sessions after parallel tool calls, and closes credential redaction gaps in logs and MCP errors.",
+      "key_points_en": [
+        "After a crash or termination, --resume and --continue no longer lose subsequent turns due to parallel tool calls.",
+        "Fixes credential masking gaps involving Bearer/Basic authentication, percent encoding and invisible characters.",
+        "Existing remote sessions disconnect with a notice when an organization disables Remote Control."
+      ],
+      "importance_reason_en": "Session history and credential protection both affect everyday use and deserve timely attention."
+    },
+    {
+      "id": "google-synthid-bio",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature"
+      ],
+      "title_zh": "SynthID Bio：为 AI 生成蛋白质与预测结构添加可检测水印",
+      "summary_zh": "Google DeepMind 推出 SynthID Bio，将水印嵌入蛋白质序列或预测的三维结构，用于识别 AI 生成的生物设计。研究展示了在湿实验中仍保留功能的水印蛋白质，并开放工具供研究社区使用；增强抵抗刻意篡改的能力仍是后续工作。",
+      "key_points_zh": [
+        "序列方法引导氨基酸选择，结构方法调整原子坐标；水印可在合成后的实际蛋白质上验证。",
+        "DeepMind 报告，在三个目标蛋白质的测试中，带水印的结合蛋白保留了与对照相当的命中率、结合亲和力和序列多样性。",
+        "AlphaFold 3 的结构水印方法在模型权重内嵌入检测信号；这些实验结果不代表水印已解决所有生物安全风险。"
+      ],
+      "importance_reason_zh": "提供 AI 生物设计溯源的新工具，同时明确实验验证范围和仍需改进的抗篡改能力。",
+      "title_en": "SynthID Bio adds detectable watermarks to AI-generated proteins and predicted structures",
+      "summary_en": "Google DeepMind introduced SynthID Bio to embed watermarks in protein sequences or predicted 3D structures and identify AI-generated biological designs. The research demonstrates watermarked proteins that retain function in laboratory testing, with tools made available to researchers. Improving robustness against deliberate tampering remains future work.",
+      "key_points_en": [
+        "Sequence methods guide amino-acid choices, while structure methods adjust atomic coordinates. Watermarks can be verified in synthesized physical proteins.",
+        "DeepMind reports that tests across three target proteins preserved hit rates, binding affinity and sequence diversity comparable to unwatermarked controls.",
+        "The AlphaFold 3 structural method embeds the detection signal in model weights. These experimental results do not mean watermarking resolves every biosecurity risk."
+      ],
+      "importance_reason_en": "The work offers a new provenance tool for AI-designed biology, with explicit limits on validation and tamper resistance.",
+      "published_at": "2026-09-30T15:03:07+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T12:10:56+00:00",
+      "updated_at": "2026-10-03T12:14:34.669891+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/introducing-synthid-bio/",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+          "collected_at": "2026-10-03T12:10:56+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-09-30T15:03:07+00:00"
+        },
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2105348732464070823",
+          "url": "https://x.com/demishassabis/status/2105348732464070823",
+          "collected_at": "2026-10-03T12:10:56+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-09-30T17:27:07+00:00"
         }
       ]
     }

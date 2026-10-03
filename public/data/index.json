@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "8518f887b07d3f70",
-  "generated_at": "2026-10-03T11:09:28+00:00",
+  "snapshot_id": "b1f77bb0bfdd915e",
+  "generated_at": "2026-10-03T12:16:48+00:00",
   "months": [
     {
       "month": "2026-10",
@@ -13,8 +13,8 @@
     {
       "month": "2026-09",
       "path": "events/2026-09.json",
-      "count": 4,
-      "min_date": "2026-09-30T19:10:13Z",
+      "count": 6,
+      "min_date": "2026-09-30T15:03:07+00:00",
       "max_date": "2026-09-30T22:39:45Z"
     }
   ],
@@ -31,8 +31,10 @@
     "gemini-cli-nightly-20261001": "2026-10",
     "opencode-v11834": "2026-09",
     "copilot-cli-1090": "2026-09",
+    "google-gemini4-argon-preview": "2026-09",
     "pi-v0992": "2026-09",
-    "claude-code-v21286": "2026-09"
+    "claude-code-v21286": "2026-09",
+    "google-synthid-bio": "2026-09"
   },
-  "total_events": 14
+  "total_events": 16
 }

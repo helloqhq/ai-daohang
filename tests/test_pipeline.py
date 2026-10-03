@@ -148,6 +148,17 @@ class ExtractionTests(unittest.TestCase):
     def test_videos_remain_metadata_only(self):
         xml='<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Video</title><link href="https://youtube.com/watch?v=123"/><published>2026-10-02T00:00:00Z</published><content>Only text, no video viewing</content></entry></feed>'
         items,_,_=parse_feed(xml,{'platform':'youtube'},self.start,self.end);self.assertEqual(items[0]['material_scope'],'metadata_only')
+    def test_media_content_does_not_hide_description(self):
+        xml='<rss xmlns:media="http://search.yahoo.com/mrss/"><channel><item><title>Watermarking</title><link>https://example.com/post</link><pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate><media:content url="https://example.com/image.png"/><description>A supported summary</description></item></channel></rss>'
+        items,_,_=parse_feed(xml,{'platform':'web'},self.start,self.end)
+        self.assertEqual(items[0]['text'],'A supported summary')
+        self.assertEqual(items[0]['material_scope'],'partial_text')
+    def test_empty_article_content_falls_back_and_updated_keeps_its_meaning(self):
+        xml='<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Post</title><link href="https://example.com/post"/><updated>2026-10-02T00:00:00Z</updated><content/><summary>Useful summary</summary></entry></feed>'
+        items,_,_=parse_feed(xml,{'platform':'web'},self.start,self.end)
+        self.assertEqual(items[0]['text'],'Useful summary')
+        self.assertEqual(items[0]['material_scope'],'partial_text')
+        self.assertEqual(items[0]['date_kind'],'updated')
     def test_shared_rsshub_provider_and_native_override(self):
         self.assertEqual(feed_address({'rsshub_route':'/cursor/changelog'},{'rsshub_base_url':'https://rss.example.com/'}),'https://rss.example.com/cursor/changelog')
         self.assertEqual(feed_address({'feed_url':'https://native.example.com/rss','rsshub_route':'/unused'},{}),'https://native.example.com/rss')

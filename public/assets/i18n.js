@@ -84,6 +84,7 @@ export const messages = {
   unconfirmed: ['尚未完整确认', 'Not fully confirmed'],
   rss: ['RSS 订阅', 'RSS feed'],
   rssPending: ['RSS 待配置', 'RSS not configured'],
+  offlineRSS: ['按需离线 RSS', 'On-demand offline RSS'],
   noSources: ['没有匹配的信息源。', 'No sources match your search.'],
   verifiedCount: ['{count} 个已核实入口', '{count} verified accounts'],
   accountsPending: ['账号待登记 / 核实', 'Accounts not registered / verified'],
@@ -150,6 +151,8 @@ const coverageNotes = {
   '尚未采集': 'Not collected yet.',
   '账号或来源身份待核实': 'Account or source identity awaits verification.',
   '订阅地址已变更，待重新检查': 'Feed URL changed; a new check is required.',
+  '离线转换待运行': 'On-demand offline conversion has not run yet.',
+  '离线 RSS 已导入，在线覆盖未确认': 'Offline RSS imported; online coverage remains unconfirmed.',
 };
 export function coverageNote(info, language) {
   if (!info.note) return translate(language, 'notCollected');

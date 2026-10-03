@@ -11,7 +11,7 @@ from pathlib import Path
 
 UTC = dt.timezone.utc
 RULES_VERSION = '1'
-PARSER_VERSION = '2'
+PARSER_VERSION = '3'
 
 def now_iso():
     return dt.datetime.now(UTC).isoformat(timespec='seconds')
@@ -74,7 +74,7 @@ class Store:
     def save_material(self, source, record):
         text = record.pop('text', '')
         material_id = digest(source['id'] + '\n' + record['content_id'])[:24]
-        fingerprint = digest(json.dumps({k:record.get(k) for k in ('title','published_at','url','material_scope','prerelease')},sort_keys=True,ensure_ascii=False) + '\n' + text)
+        fingerprint = digest(json.dumps({k:record.get(k) for k in ('title','published_at','date_kind','date_label','url','material_scope','prerelease')},sort_keys=True,ensure_ascii=False) + '\n' + text)
         material = {**record, 'id': material_id, 'source_id': source['id'],
                     'entity_ids': source['entity_ids'], 'platform': source['platform'],
                     'fingerprint': fingerprint, 'parser_version': PARSER_VERSION,

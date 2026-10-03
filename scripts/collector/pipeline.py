@@ -4,7 +4,7 @@ import datetime as dt
 import json
 import xml.etree.ElementTree as ET
 from collections import defaultdict
-from .adapters import ADAPTERS, HTTP, SourceError, in_window, feed_address
+from .adapters import ADAPTERS, HTTP, SourceError, in_window, feed_address, parse_feed
 from .storage import Store, RULES_VERSION, digest, now_iso, parse_time, read_json, write_json
 from .validation import ValidationError, require, validate_events
 
@@ -62,6 +62,9 @@ class Pipeline:
             if source.get('verification') != 'verified':
                 return source, [], {**result, 'status':'not_attempted','note':'账号或来源身份待核实','uncovered_from':old.get('uncovered_from',since.isoformat())}, 0
             if not address:
+                if source.get('feed_provider')=='offline':
+                    return source,[],{**old,'source_id':source['id'],'status':old.get('status','not_attempted'),
+                                     'note':old.get('note','离线转换待运行'),'uncovered_from':old.get('uncovered_from',since.isoformat())},0
                 return source,[],{**result,'status':'not_attempted','note':'RSS 订阅待配置','uncovered_from':old.get('uncovered_from',since.isoformat())},0
             http = HTTP(self.store.work/'cache', self.config.get('request_timeout_seconds',18))
             try:
@@ -98,7 +101,7 @@ class Pipeline:
             return report
 
     def ingest(self, records):
-        """Import browser/connector evidence, not invented summaries. Never advances full account coverage."""
+        """Store parsed offline RSS evidence. Never advances online coverage."""
         with self.store.lock():
             materials=self.store.materials()
             source_map={s['id']:s for s in self.sources}
@@ -121,6 +124,71 @@ class Pipeline:
             write_json(self.store.work/'materials.json',materials)
             self.store.save_pending(self.rules_version)
             return {'imported':ids,'coverage':'离线订阅导入未推进在线订阅完整覆盖进度'}
+
+    def import_feed(self,source_id,body,since,until,reconcile=False):
+        source=next((s for s in self.sources if s['id']==source_id),None)
+        require(source is not None,'订阅来源不存在')
+        root=ET.fromstring(body)
+        if source.get('feed_provider')=='offline':
+            require(root.findtext('channel/{urn:ai-daohang:offline-feed}source_id')==source_id,'转换 RSS 来源标识不匹配')
+            require(root.findtext('channel/link')==source['url'],'转换 RSS 原始入口不匹配')
+        records,_,note=parse_feed(body,source,since,until,feed_address(source,self.config))
+        if reconcile:
+            existing={m['content_id'] for m in self.store.pending(rules_version=self.rules_version) if m['source_id']==source_id}
+            all_records,_,_=parse_feed(body,source,dt.datetime.min.replace(tzinfo=dt.timezone.utc),until,feed_address(source,self.config))
+            merged={r['content_id']:r for r in records}
+            merged.update({r['content_id']:r for r in all_records if r['content_id'] in existing})
+            records=list(merged.values())
+        result=self.ingest([{**r,'source_id':source_id} for r in records])
+        if source.get('feed_provider')=='offline':
+            with self.store.lock():
+                state=self.store.state();old=state['sources'].get(source_id,{})
+                state['sources'][source_id]={**old,'subscription_fingerprint':digest('unconfigured'),
+                    'status':'partial','last_attempt_at':now_iso(),'offline_import_at':now_iso(),
+                    'fetched_through':None,'reviewed_through':None,'uncovered_from':old.get('uncovered_from') or since.isoformat(),
+                    'note':'离线 RSS 已导入，在线覆盖未确认','note_en':'Offline RSS imported; online coverage remains unconfirmed.'}
+                write_json(self.store.work/'state.json',state)
+        result['note']='本地订阅导入；'+note
+        return result
+
+    def import_converted(self,manifest):
+        results=[];prepared=[]
+        for entry in manifest['sources']:
+            source=next((s for s in self.sources if s['id']==entry['source_id']),None)
+            require(source is not None and source['url']==entry['source_url'],'转换清单来源不匹配')
+            require(source.get('verification')=='verified','转换来源身份未核实')
+            since,until=parse_time(entry['since']),parse_time(entry['until'])
+            require(since is not None and until is not None and since<=until,'转换时间窗无效')
+            if entry.get('file'):
+                path=(self.root/entry['file']).resolve()
+                require(path.is_relative_to(self.store.work.resolve()),'转换文件必须位于本地采集目录')
+                # Hash the emitted bytes before XML's newline normalization.
+                body=path.read_bytes().decode('utf-8');require(digest(body)==entry['sha256'],'转换 RSS 已变化，请重新生成清单')
+                parsed=ET.fromstring(body)
+                require(parsed.findtext('channel/{urn:ai-daohang:offline-feed}source_id')==source['id'],'转换 RSS 来源标识不匹配')
+                require(parsed.findtext('channel/link')==source['url'],'转换 RSS 原始入口不匹配')
+                parse_feed(body,source,since,until)
+                prepared.append((source,entry,body,since,until))
+            else:
+                require(entry.get('status') in ('failed','blocked'),'转换失败状态无效')
+                require(parse_time(entry.get('generated_at')) is not None and bool(entry.get('note')) and bool(entry.get('note_en')),'转换失败记录缺少时间或双语说明')
+                prepared.append((source,entry,None,None,None))
+        # Validate the whole manifest before importing any source.
+        for source,entry,body,since,until in prepared:
+            if body is not None:
+                result=self.import_feed(source['id'],body,since,until,True)
+                results.append({'source_id':source['id'],'imported':len(result['imported'])})
+            elif source.get('feed_provider')=='offline':
+                with self.store.lock():
+                    state=self.store.state();old=state['sources'].get(source['id'],{})
+                    state['sources'][source['id']]={**old,'subscription_fingerprint':digest('unconfigured'),
+                        'status':entry['status'],'last_attempt_at':entry['generated_at'],
+                        'fetched_through':None,'reviewed_through':None,'uncovered_from':old.get('uncovered_from') or entry['since'],
+                        'note':entry['note'],'note_en':entry['note_en']}
+                    write_json(self.store.work/'state.json',state)
+                results.append({'source_id':source['id'],'status':entry['status'],'note':entry['note']})
+        self.refresh()
+        return {'sources':results,'coverage':'离线转换不推进在线完整覆盖'}
 
     def make_snapshot(self, events, decisions=None, state=None):
         catalog=self.catalog()
@@ -155,12 +223,14 @@ class Pipeline:
         for source in self.sources:
             old=state['sources'].get(source['id'],{})
             if old.get('subscription_fingerprint')!=digest(feed_address(source,self.config) or 'unconfigured'):
-                old={**old,'status':'not_attempted','note':'订阅地址已变更，待重新检查' if feed_address(source,self.config) else 'RSS 订阅待配置','fetched_through':None,'reviewed_through':None}
+                old={**old,'status':'not_attempted','note':'离线转换待运行' if source.get('feed_provider')=='offline' else '订阅地址已变更，待重新检查' if feed_address(source,self.config) else 'RSS 订阅待配置','fetched_through':None,'reviewed_through':None}
             pending=[m for m in materials.values() if m['source_id']==source['id'] and not self.decision_current(m,decisions.get(m['id']))]
             summary={'source_id':source['id'],'status':old.get('status','not_attempted'),'verification':source.get('verification','pending'),
                      'last_attempt_at':old.get('last_attempt_at'),'fetched_through':old.get('fetched_through'),
                      'reviewed_through':old.get('reviewed_through'),'uncovered_from':old.get('uncovered_from'),'pending_count':len(pending),'note':old.get('note','尚未采集')}
             coverage.append(summary)
+            if old.get('note_en'):summary['note_en']=old['note_en']
+            if old.get('offline_import_at'):summary['offline_import_at']=old['offline_import_at']
         files['coverage.json']={**common,'sources':coverage}
         files['index.json']={**common,'generated_at':stamp,'months':month_index,'event_locations':locations,'total_events':len(events)}
         return files

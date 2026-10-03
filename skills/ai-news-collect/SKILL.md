@@ -17,7 +17,7 @@ description: 为 ai-daohang 静态 AI 信息站按需采集官方及已核实负
 
 1. 执行 `python3 scripts/collect.py fetch`。可用 `--entities codex trae zcode minimax-code` 限定对象。默认首次回溯 72 小时；后续逐来源增量、重叠查询并补采失败断档。`--since ISO时间` 仅用于用户明确指定回溯起点；不要每轮重置起点或删除 `.collector/`。
 2. 执行 `queue` 查看简短候选清单；按需 `read 材料ID`，长材料可用 `--offset`、`--characters` 分段。分页和摘录是阅读组织方式，最终处理全部既定范围内候选。判断已缓存且原文未变的材料无需重复加工。
-3. 订阅材料不足时，按 [RSS 订阅管理](references/subscriptions.md) 配置提供全文／字幕的订阅；受限时可导入从同一订阅地址取得的 RSS/Atom XML。未知发布时间先核实；不能用抓取时间或版本顺序代替发布时间。
+3. 对 `offline_conversion: true` 的来源，执行独立的 `python3 scripts/convert_feeds.py`，再 `python3 scripts/collect.py import-converted .collector/converted/manifest.json`；转换有失败项时退出码为 1，仍可导入清单中的成功项。只重放缓存使用 `--offline`，实际流程见 [离线 RSS](../../docs/OFFLINE-RSS.md)。转换器不调用模型、不推进在线覆盖。订阅材料不足时，按 [RSS 订阅管理](references/subscriptions.md) 配置提供全文／字幕的订阅；受限时可导入从同一订阅地址取得的 RSS/Atom XML。月份日期保留原始标签，不能补造日；只有 Atom 更新时间时保留 `date_kind: updated`，不能推断首次发表日期。未知发布时间先核实；不能用抓取时间或版本顺序代替发布时间。
 4. 对照现有 `public/data/index.json` 与相关月份事件，用实际发布对象、版本和阶段归并事件。生成 [处置包](references/packet.md)，执行 `apply 文件.json` 和 `validate`。即使全被过滤也提交判断，再 `refresh` 更新覆盖快照。
 5. 检查 `queue` 的剩余候选及 `.collector/state.json` 的覆盖缺口。因材料不足可 `defer` 并明确缺少什么，读取失败或运行中断保持待处理，不写“没有重要更新”。
 
@@ -35,6 +35,6 @@ description: 为 ai-daohang 静态 AI 信息站按需采集官方及已核实负
 
 `fetched_through` 是已完整获取的时间窗，`reviewed_through` 是已完成判断的时间窗。来源失败与部分列表不能推进完整覆盖。链接导入不会推进账号覆盖。订阅只含标题／简介时不能扩写正文。视频简介、字幕、画面是不同证据范围，标记 `metadata_only`／`partial_text`／`full_text` 并保留时间戳；没有字幕不声称总结完整视频。
 
-采集只改本地 JSON 和内部记录。不创建远程仓库、不推送、不部署、不创建定时任务。原文缓存和 `.collector/` 不进入公开仓库；账号凭据不写到配置和 JSON。采集流程不直接抓官网、GitHub API、社交账号页面或下载视频；没有可用 RSS 就保留订阅待配置／失败状态。订阅转换服务与静态网站分开，默认不自建常驻服务。
+采集只改本地 JSON 和内部记录。不创建远程仓库、不推送、不部署、不创建定时任务。原文缓存和 `.collector/` 不进入公开仓库；账号凭据不写到配置和 JSON。采集流程不直接抓官网、GitHub API、社交账号页面或下载视频；没有可用 RSS 可按用户确认范围运行独立转换器；公开页不提供列表时保留失败／受限状态。订阅转换服务与静态网站分开，默认不自建常驻服务。
 
 最终汇报查询区间、关注范围、入选／更正／过滤数量、待处理数量、失败与未覆盖区间、缓存复用、中英文完整性和校验结果，给出数据文件路径。只有可靠计量才能报告实际 token 用量。

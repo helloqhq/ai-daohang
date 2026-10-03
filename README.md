@@ -31,37 +31,38 @@ npm run build
 | `config/platforms.json` | YouTube、TikTok、X、Threads、微信公众号等媒体分类；登记平台不等于已订阅具体账号 |
 | `config/collection.json` | 首次回溯、增量重叠、超时、并发、缓存、RSSHub 实例、解析与编辑规则版本 |
 
-所有来源使用 `adapter: rss`，RSS 与 Atom 共用采集器。`url` 是原始官网／账号入口，`feed_url` 是实际订阅地址，两者用途不同。官网、GitHub API、社交页面和视频下载不作为采集入口。
+所有来源使用 `adapter: rss`，RSS 与 Atom 共用采集器。`url` 是原始官网／账号入口，`feed_url` 是实际订阅地址，两者用途不同。采集器只读 RSS/Atom；无原生订阅的官网和社交页面由独立的按需转换脚本生成本地 RSS，视频不下载。
 
 订阅方式按以下顺序选择：
 
 1. **官方原生 RSS / Atom**：填写 `feed_provider: native` 和 `feed_url`。GitHub Releases 统一订阅对应仓库的 `releases.atom`。
 2. **RSSHub 转换订阅**：填写 `feed_provider: rsshub`、`rsshub_route` 和路由核实依据；完整地址由 `config/collection.json` 中的 `rsshub_base_url` 拼接。当前实例为 `https://rsshub.app`。若同时填写 `feed_url`，脚本优先使用该直接地址。
 3. **其他转换服务**：填写服务实际提供的 `feed_url`，记录 `feed_provider`、原始入口与核实依据；采集器只读取其 RSS / Atom 输出。
-4. **暂无可用订阅**：保留 `feed_url: null`、`feed_provider: pending` 和 `subscription_note`，等待核实后接入。
+4. **按需离线转换**：配置 `feed_provider: offline`、`feed_url: null` 和 `offline_conversion: true`，运行独立转换器后导入本地 RSS，见 [离线 RSS 操作说明](docs/OFFLINE-RSS.md)。Google 原生订阅可同时用转换器补足正文。
+5. **暂无可用订阅**：保留 `feed_url: null`、`feed_provider: pending` 和 `subscription_note`，等待核实后接入。
 
 ### 当前各数据源
 
-以下清单对应 2026-10-03 的配置：38 个来源，30 个已填写订阅地址或路由，8 个待配置。**已配置不代表可读取或已完成判断**；实时配置看 `config/sources.json`，每轮采集结果看 `public/data/coverage.json` 和网站来源页。RSSHub 公共实例存在访问受限或路由不可用的情况。
+以下清单对应 2026-10-03 的配置：38 个来源，18 个保留在线订阅，20 个使用按需离线转换。转换器覆盖 21 个目标（包括 Google 正文补充），本轮 19 个成功生成 RSS，TikTok 和 Threads 仍受限。**已配置不代表可读取或已完成判断**；实时配置看 `config/sources.json`，每轮采集结果看 `public/data/coverage.json` 和网站来源页。RSSHub 公共实例存在访问受限或路由不可用的情况。
 
 #### 模型厂商、品牌与服务平台
 
-RSSHub 行中的路径相对于上述实例地址。待配置行列出原始入口，不能直接将入口网页当作 RSS。
+离线行列出转换用的原始入口；生成的 RSS 位于 `.collector/converted/`，不发布到网站、不写入 OPML。
 
 | 关注对象 | 来源 ID | 订阅地址／接入方式 |
 | --- | --- | --- |
 | OpenAI | `openai-official` | 原生：`https://openai.com/news/rss.xml` |
-| Anthropic | `anthropic-official` | RSSHub：`/anthropic/news` |
+| Anthropic | `anthropic-official` | 按需离线转换：[Anthropic 官方新闻](https://www.anthropic.com/news) |
 | Google DeepMind | `google-official` | 原生：`https://deepmind.google/blog/rss.xml` |
-| DeepSeek | `deepseek-official` | RSSHub：`/deepseek/news` |
-| Qwen | `qwen-official` | RSSHub：`/qwen/blog` |
-| 智谱 | `zhipu-official` | 待配置：[模型发布入口](https://docs.z.ai/release-notes/new-released) |
-| 月之暗面 | `moonshot-official` | 待配置：[Kimi 博客](https://www.kimi.com/en/blog/) |
-| MiniMax | `minimax-official` | 待配置：[官方博客](https://www.minimax.io/blog) |
-| 腾讯 | `tencent-official` | 待配置：[混元官网](https://hunyuan.tencent.com/) |
-| 美团 | `meituan-official` | 原生：`https://tech.meituan.com/rss.xml` |
-| Grok | `grok-official` | 待配置：[xAI 新闻](https://x.ai/news)；[第三方候选](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_xainews.xml) 最新条目停留于 2026-05-21，暂不接入 |
-| Meta | `meta-official` | RSSHub：`/meta/ai/blog` |
+| DeepSeek | `deepseek-official` | 按需离线转换：[DeepSeek API 更新](https://api-docs.deepseek.com/updates) |
+| Qwen | `qwen-official` | 按需离线转换：[Qwen 官方博客](https://qwen.ai/blog) |
+| 智谱 | `zhipu-official` | 按需离线转换：[智谱模型发布](https://docs.z.ai/release-notes/new-released) |
+| 月之暗面 | `moonshot-official` | 按需离线转换：[Kimi 研究博客](https://www.kimi.com/en/blog/) |
+| MiniMax | `minimax-official` | 按需离线转换：[MiniMax 官方博客](https://www.minimax.io/blog) |
+| 腾讯 | `tencent-official` | 按需离线转换：[腾讯混元](https://hunyuan.tencent.com/) |
+| 美团 | `meituan-official` | 原生：`https://tech.meituan.com/atom.xml` |
+| Grok | `grok-official` | 按需离线转换：[Grok 官方新闻](https://x.ai/news) |
+| Meta | `meta-official` | 按需离线转换：[Meta AI 博客](https://ai.meta.com/blog/) |
 | OpenRouter（模型服务平台） | `openrouter-official` | 原生：`https://openrouter.ai/blog/feed.xml`；[官方博客订阅入口](https://openrouter.ai/blog/all/) |
 
 OpenRouter 关注平台功能、API、价格及可用性的重要变化，普通教程与宣传按编辑规则过滤。它按 `category: model` 进入模型筛选，`kind: api_platform` 区分其平台身份；博客订阅不代表完整监测所有上架模型及价格。
@@ -78,10 +79,10 @@ OpenRouter 关注平台功能、API、价格及可用性的重要变化，普通
 | Hermes | `hermes-releases` | `https://github.com/NousResearch/hermes-agent/releases.atom` |
 | OpenCode | `opencode-releases` | `https://github.com/anomalyco/opencode/releases.atom` |
 | Copilot | `copilot-releases` | `https://github.com/github/copilot-cli/releases.atom`（当前覆盖 CLI） |
-| Qoder | `qoder-official` | 待配置：[更新入口](https://docs.qoder.com/release-notes/qoder) |
+| Qoder | `qoder-official` | 按需离线转换：[Qoder 更新](https://docs.qoder.com/release-notes/qoder) |
 | Pi | `pi-releases` | `https://github.com/earendil-works/pi/releases.atom` |
-| TRAE | `trae-official` | 待配置：[中文版更新入口](https://docs.trae.cn/ide_changelog) |
-| ZCode | `zcode-official` | 待配置：[更新入口](https://zcode.z.ai/en/changelog) |
+| TRAE | `trae-official` | 按需离线转换：[TRAE 中文版更新](https://docs.trae.cn/ide_changelog) |
+| ZCode | `zcode-official` | 按需离线转换：[ZCode 更新](https://zcode.z.ai/en/changelog) |
 | MiniMax Code | `minimax-code-releases` | `https://github.com/MiniMax-AI/minimax-code/releases.atom` |
 | DeepTutor | `deeptutor-releases` | `https://github.com/HKUDS/DeepTutor/releases.atom`；[官方项目](https://github.com/HKUDS/DeepTutor) |
 
@@ -92,20 +93,20 @@ OpenRouter 关注平台功能、API、价格及可用性的重要变化，普通
 | 负责人／账号 | 平台 | 来源 ID | 当前订阅 |
 | --- | --- | --- | --- |
 | Sam Altman 博客 | 网站／博客 | `sam-altman-blog` | 原生：`https://blog.samaltman.com/posts.atom`；关联 `person_id: sam-altman` |
-| Dario Amodei 博客 | 网站／博客 | `dario-blog` | 第三方：`https://ivryb--01a055e0b1fb7668a7f2de979a8284f4.web.val.run/`；[转换服务依据](https://www.val.town/x/ivryb/dario-amodei-rss)；仅标题和链接、无发布时间；关联 `person_id: dario-amodei` |
-| 马斯克 Elon Musk | X | `elon-musk-x` | [@elonmusk](https://x.com/elonmusk)；RSSHub：`/twitter/user/elonmusk`；关联 `person_id: elon-musk` |
-| 扎克伯格 Mark Zuckerberg | Threads | `mark-zuckerberg-threads` | [@zuck](https://www.threads.net/@zuck)；RSSHub：`/threads/zuck`；关联 `person_id: mark-zuckerberg` |
+| Dario Amodei 博客 | 网站／博客 | `dario-blog` | 按需离线转换：[Dario Amodei 个人博客](https://www.darioamodei.com/)；只标月份，不补造日期 |
+| 马斯克 Elon Musk | X | `elon-musk-x` | 按需离线转换：[马斯克 Elon Musk · X](https://x.com/elonmusk)；公开列表有限，不代表完整覆盖 |
+| 扎克伯格 Mark Zuckerberg | Threads | `mark-zuckerberg-threads` | 按需离线转换：[扎克伯格 Mark Zuckerberg · Threads](https://www.threads.net/@zuck)；匿名页未提供帖子列表，仍受限 |
 | 黄仁勋 Jensen Huang | 网站／博客 | `jensen-huang-blog` | 原生：`https://blogs.nvidia.com/blog/author/jen-hsun-huang/feed/`；仅本人署名文章；关联 `person_id: jensen-huang` |
-| Demis Hassabis | X | `demis-hassabis-x` | [@demishassabis](https://x.com/demishassabis)；RSSHub：`/twitter/user/demishassabis`；关联 `person_id: demis-hassabis` |
-| Jeff Dean | X | `jeff-dean-x` | [@JeffDean](https://x.com/JeffDean)；RSSHub：`/twitter/user/JeffDean`；关联 `person_id: jeff-dean` |
+| Demis Hassabis | X | `demis-hassabis-x` | 按需离线转换：[Demis Hassabis · X](https://x.com/demishassabis)；公开列表有限，不代表完整覆盖 |
+| Jeff Dean | X | `jeff-dean-x` | 按需离线转换：[Jeff Dean · X](https://x.com/JeffDean)；公开列表有限，不代表完整覆盖 |
 | OpenAI 官方频道 | YouTube | `openai-youtube` | 原生：`https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A` |
-| OpenAI 官方账号 | X | `openai-x` | RSSHub：`/twitter/user/OpenAI` |
-| ZCode 官方账号 | X | `zcode-x` | RSSHub：`/twitter/user/zcode_ai` |
-| OpenAI 官方账号 | TikTok | `openai-tiktok` | RSSHub：`/tiktok/user/@openai` |
+| OpenAI 官方账号 | X | `openai-x` | 按需离线转换：[OpenAI X](https://x.com/OpenAI)；公开列表有限，不代表完整覆盖 |
+| ZCode 官方账号 | X | `zcode-x` | 按需离线转换：[ZCode X](https://x.com/zcode_ai)；公开列表有限，不代表完整覆盖 |
+| OpenAI 官方账号 | TikTok | `openai-tiktok` | 按需离线转换：[OpenAI TikTok](https://www.tiktok.com/@openai)；匿名页未提供帖子列表，仍受限 |
 
-新增人物于 2026-10-03 按官方资料核实身份与账号，依据见 [来源登记](docs/SOURCE-REGISTRY.md)。只筛选 AI 相关的重要更新与观点。NVIDIA 与 Discovery Loop 作为关联关注对象加入筛选；当前分别只订阅黄仁勋署名文章与 Jeff Dean 账号，不代表公司全部渠道。黄仁勋 RSS 已通过现有解析器读取 10 篇文章（9 篇含正文、1 篇仅元数据，均有发布时间）；另外 4 个账号已核实 RSSHub 路由，但本次连通检查未取回 RSS，列表与正文能力暂记为未确认。新增来源保持尚未采集，不推进审阅覆盖。
+新增人物于 2026-10-03 按官方资料核实身份与账号，依据见 [来源登记](docs/SOURCE-REGISTRY.md)。只筛选 AI 相关的重要更新与观点。NVIDIA 与 Discovery Loop 当前分别只订阅黄仁勋署名文章与 Jeff Dean 账号，不代表公司全部渠道。
 
-2026-10-03 补查结果：Dario 的订阅已验证为 RSS XML，6 篇文章链接对应原始官网，但缺少正文与发布时间；填入地址不会推进采集或审阅覆盖。Grok 的[第三方候选服务](https://github.com/Olshansk/rss-feeds)有 39 条记录，最新条目停留于 2026-05-21，落后于官网，暂不接入。其余 7 个来源的候选订阅返回 HTML、404 或 HTTP 400，RSSHub 和 RSS-Bridge 的公开路由清单未找到对应专用路由，因此继续保留待配置；逐项核查说明见 `config/sources.json` 的 `subscription_note`。
+2026-10-03 已按确认方案接入离线转换。混元使用公开文章接口，X 读取公开页面中的帖子数据，TikTok 与 Threads 已尝试但匿名页无帖子列表。Dario 的 6 篇文章已补齐全文，原文仅标月份；美团改用有 `updated` 时间的官方 Atom，不能把更新时间当成首次发表时间。Google 解析器忽略 MRSS 附件，并通过离线 RSS 补足文章正文。第三方过期 feed 和受限公共 RSSHub 不再作为这些来源的当前接入方式。离线导入保留未覆盖起点，不推进在线完整获取或审阅时间；操作与限制见 [离线 RSS 说明](docs/OFFLINE-RSS.md)。
 
 #### 媒体平台接入方法
 

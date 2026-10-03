@@ -1,5 +1,7 @@
 # 可扩展的关注对象与来源配置
 
+当前接入方式与受限说明见 [离线 RSS](OFFLINE-RSS.md)，身份核实依据保留如下。
+
 状态：实际配置在 config/entities.json 与 config/sources.json。获取方式已统一 RSS/Atom；下方官方入口调查保留作身份依据，不代表直接抓取已接入。实际可用订阅及覆盖见 config 和 public/data/coverage.json。
 
 ## 对象与来源分别维护

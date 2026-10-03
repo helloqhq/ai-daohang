@@ -15,6 +15,7 @@
 | `public/data/events/YYYY-MM.json` | 相应月份的事件内容 |
 | `public/data/coverage.json` | 经过整理的来源采集覆盖状态 |
 | `.collector/state.json` | 各来源成功区间、未完成区间和去重状态，不进入发布目录 |
+| `.collector/converted/`、`.collector/conversion-cache/` | 私有离线 RSS、导入清单与原始转换缓存，不进入发布目录 |
 | `.collector/cache/` | 有保留期限的RSS/Atom 原始 XML 缓存，不进入发布目录 |
 | `.collector/pending.jsonl` | 已发现／已取回但尚未完成语义加工的候选材料，不进入发布目录 |
 | `.collector/runs/` | 必要的本地运行结果与修订核查记录，不进入发布目录 |
@@ -40,6 +41,10 @@
 信息源记录：`id`、`name`、`entity_ids`、可选 `person_id`、`url`、来源格式、`platform`、可选账号／频道标识、`adapter`、`capabilities`、`enabled`、核实状态及依据。配置状态与实际采集成功／失败分开记录。
 
 `platform` 支持官网、GitHub、YouTube、TikTok、X、微信公众号及后续扩展；`adapter` 统一为 rss；`feed_url` 是 RSS/Atom 订阅，`url` 是原始来源入口，`rsshub_route` 可配合全局转换服务地址。`capabilities` 分别描述能否发现列表、读取正文或字幕，以及当前访问要求。账号凭据、会话或 access token 不写入公开配置。
+
+`feed_provider: offline` 表示使用独立按需转换器，`feed_url: null`，不加入公开 OPML；`offline_conversion: true` 也可用于原生 RSS 的正文补充。`offline_import_at` 只表示本地导入时间，不证明在线完整覆盖。
+
+内部材料的 `date_kind` 区分 `published`、`updated` 和 `unknown`。只有 Atom `updated` 时保留该语义，不据此推断首次发表日期；月份标签保存为 `date_label`，`published_at` 仍为 null。转换 RSS 的审计命名空间为 `urn:ai-daohang:offline-feed`，记录来源 ID、原始入口、日期语义和版本内容标识。同一更新页的多个版本可用带版本的稳定 `content_id` 共用真实原文 URL。导入清单校验文件 SHA-256 与来源对应关系；先验证全部文件再导入。
 
 展示名称同时维护 `name`（默认中文／品牌名）与 `name_en`；来源订阅说明同时维护 `subscription_note` / `subscription_note_en`，刷新目录时保留这些字段。
 

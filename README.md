@@ -1,78 +1,301 @@
 # 知更 · AI 信息聚合
 
-正式域名：`go2-ai.com`（GitHub Pages 与 DNS 已配置，HTTPS 证书待签发） · [项目仓库](https://github.com/helloqhq/ai-daohang)
+正式域名：`go2-ai.com` · [项目仓库](https://github.com/helloqhq/ai-daohang)
 
-纯静态中文 AI 信息站。统一通过 RSS / Atom 订阅官方与已核实负责人信息，由用户已有 AI agent 调用采集 skill，筛选、翻译和归纳后产出 JSON。网站本身不抓取上游、不调用模型。
+纯静态中文 AI 信息站。统一通过 RSS / Atom 订阅官方与已核实负责人信息，由用户已有 AI agent 调用采集 skill，筛选、翻译和归纳后产出 JSON。网站本身不抓取上游、不调用模型。采集按需执行，首版没有定时任务。
 
-## 使用
+完整流程：**登记订阅 → 拉取 RSS → agent 判断与中文编辑 → 校验 JSON → 本地预览 → 推送仓库 → GitHub Actions 发布 → 检查线上快照**。
 
-要求 Python 3.11+；本地预览与构建只用标准库。Node.js 20+ 用于前端行为测试及 npm 便捷命令，无需 npm install。
+## 本地使用
+
+要求 Python 3.11+；采集、预览与构建只用标准库。Node.js 20+ 用于前端行为测试及 npm 便捷命令，无需 `npm install`。以下命令均在项目根目录执行。
 
 ```sh
 npm run dev
-# 打开 http://localhost:4173
+# 浏览器打开 http://localhost:4173
 npm test
 npm run validate
 npm run build
 ```
 
-直接运行 Python 也可：`python3 -m http.server 4173 --directory public`。构建输出 `dist/`，仅复制公开页面及校验通过的 JSON。
+不用 npm 也可预览：`python3 -m http.server 4173 --directory public`。构建输出 `dist/`，仅复制公开页面和校验通过的数据；线上发布以此目录为准。
 
-## 按需更新信息
+## 订阅配置与管理
 
-在 AI agent 中调用 `$ai-news-collect`，指定本项目。skill 源文件在 `skills/ai-news-collect/SKILL.md`；本机安装位置为 `~/.codex/skills/ai-news-collect`。脚本不自动调用模型，中文编辑由正在运行的 agent 完成。
+### 配置文件分工
+
+| 文件 | 管理内容 |
+| --- | --- |
+| `config/entities.json` | 模型厂商与 Agent 关注对象：稳定 ID、名称、分类、别名、启用状态 |
+| `config/sources.json` | 每个订阅的原始入口、RSS 地址或 RSSHub 路由、关联对象、身份核实依据；`people` 登记负责人 |
+| `config/platforms.json` | YouTube、TikTok、X、微信公众号等媒体分类；登记平台不等于已订阅具体账号 |
+| `config/collection.json` | 首次回溯、增量重叠、超时、并发、缓存、RSSHub 实例、解析与编辑规则版本 |
+
+所有来源使用 `adapter: rss`，RSS 与 Atom 共用采集器。`url` 是原始官网／账号入口，`feed_url` 是实际订阅地址，两者用途不同。官网、GitHub API、社交页面和视频下载不作为采集入口。
+
+订阅方式按以下顺序选择：
+
+1. **官方原生 RSS / Atom**：填写 `feed_provider: native` 和 `feed_url`。GitHub Releases 统一订阅对应仓库的 `releases.atom`。
+2. **RSSHub 转换订阅**：填写 `feed_provider: rsshub`、`rsshub_route` 和路由核实依据；完整地址由 `config/collection.json` 中的 `rsshub_base_url` 拼接。当前实例为 `https://rsshub.app`。若同时填写 `feed_url`，脚本优先使用该直接地址。
+3. **其他转换服务**：填写服务实际提供的 `feed_url`，记录 `feed_provider`、原始入口与核实依据；采集器只读取其 RSS / Atom 输出。
+4. **暂无可用订阅**：保留 `feed_url: null`、`feed_provider: pending` 和 `subscription_note`，等待核实后接入。
+
+### 当前各数据源
+
+以下清单对应 2026-10-03 的配置：31 个来源，22 个已填写订阅地址或路由，9 个待配置。**已配置不代表可读取或已完成判断**；实时配置看 `config/sources.json`，每轮采集结果看 `public/data/coverage.json` 和网站来源页。RSSHub 公共实例存在访问受限或路由不可用的情况。
+
+#### 模型厂商
+
+RSSHub 行中的路径相对于上述实例地址。待配置行列出原始入口，不能直接将入口网页当作 RSS。
+
+| 关注对象 | 来源 ID | 订阅地址／接入方式 |
+| --- | --- | --- |
+| OpenAI | `openai-official` | 原生：`https://openai.com/news/rss.xml` |
+| Anthropic | `anthropic-official` | RSSHub：`/anthropic/news` |
+| Google DeepMind | `google-official` | 原生：`https://deepmind.google/blog/rss.xml` |
+| DeepSeek | `deepseek-official` | RSSHub：`/deepseek/news` |
+| Qwen | `qwen-official` | RSSHub：`/qwen/blog` |
+| 智谱 | `zhipu-official` | 待配置：[模型发布入口](https://docs.z.ai/release-notes/new-released) |
+| 月之暗面 | `moonshot-official` | 待配置：[Kimi 博客](https://www.kimi.com/en/blog/) |
+| MiniMax | `minimax-official` | 待配置：[官方博客](https://www.minimax.io/blog) |
+| 腾讯 | `tencent-official` | 待配置：[混元官网](https://hunyuan.tencent.com/) |
+| 美团 | `meituan-official` | 原生：`https://tech.meituan.com/rss.xml` |
+| Grok | `grok-official` | 待配置：[xAI 新闻](https://x.ai/news) |
+| Meta | `meta-official` | RSSHub：`/meta/ai/blog` |
+
+#### Agent 应用
+
+| 关注对象 | 来源 ID | 订阅地址／接入方式 |
+| --- | --- | --- |
+| Codex | `codex-releases` | `https://github.com/openai/codex/releases.atom` |
+| Claude Code | `claude-code-changelog` | `https://github.com/anthropics/claude-code/releases.atom` |
+| Cursor | `cursor-official` | `https://cursor.com/changelog/rss.xml` |
+| Gemini CLI | `gemini-cli-releases` | `https://github.com/google-gemini/gemini-cli/releases.atom` |
+| DeepSeek Harness | `deepseek-harness-releases` | `https://github.com/deepseek-ai/deepseek-harness/releases.atom` |
+| Hermes | `hermes-releases` | `https://github.com/NousResearch/hermes-agent/releases.atom` |
+| OpenCode | `opencode-releases` | `https://github.com/anomalyco/opencode/releases.atom` |
+| Copilot | `copilot-releases` | `https://github.com/github/copilot-cli/releases.atom`（当前覆盖 CLI） |
+| Qoder | `qoder-official` | 待配置：[更新入口](https://docs.qoder.com/release-notes/qoder) |
+| Pi | `pi-releases` | `https://github.com/earendil-works/pi/releases.atom` |
+| TRAE | `trae-official` | 待配置：[中文版更新入口](https://docs.trae.cn/ide_changelog) |
+| ZCode | `zcode-official` | 待配置：[更新入口](https://zcode.z.ai/en/changelog) |
+| MiniMax Code | `minimax-code-releases` | `https://github.com/MiniMax-AI/minimax-code/releases.atom` |
+
+#### 负责人及媒体账号
+
+| 来源 | 来源 ID | 当前订阅与扩展方法 |
+| --- | --- | --- |
+| Sam Altman 博客 | `sam-altman-blog` | 原生：`https://blog.samaltman.com/posts.atom`；关联 `person_id: sam-altman` |
+| Dario Amodei 博客 | `dario-blog` | 待配置：[个人博客](https://www.darioamodei.com/)；关联 `person_id: dario-amodei` |
+| OpenAI YouTube | `openai-youtube` | 原生：`https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A`；其他频道先核实身份与 channel ID，再登记独立来源 |
+| OpenAI X | `openai-x` | RSSHub：`/twitter/user/OpenAI` |
+| ZCode X | `zcode-x` | RSSHub：`/twitter/user/zcode_ai` |
+| OpenAI TikTok | `openai-tiktok` | RSSHub：`/tiktok/user/@openai` |
+| 微信公众号 | 尚未登记具体来源 | 已预留 `wechat` 平台；核实公众号身份及转换服务 RSS 地址后新增来源，不凭名称猜账号或订阅地址 |
+
+增加负责人时，先在 `people` 登记身份与关联对象，再为每个博客／媒体账号分别登记来源。通过官网反链、官方团队介绍或官方项目依据核实身份与账号后，才能设置 `verification: verified`。新增 X、TikTok、微信公众号等账号时，需核实转换服务对该账号实际可用；参考已有来源的 `feed_route_verification_url`，不只复制路由格式。
+
+YouTube 和 TikTok 的标题、简介属于视频元数据。只有订阅实际提供正文或字幕时，才能据其内容总结；记录 `metadata_only`、`partial_text` 或 `full_text`，没有字幕不声称已经总结完整视频。
+
+### 新增、修改、停用订阅
+
+先在 `entities.json` 登记新关注对象（已有对象无需重复添加），再将来源加入 `sources.json` 的 `sources` 数组。以下为字段模板，替换示例后使用：
+
+```json
+{
+  "id": "example-releases",
+  "name": "示例应用发布",
+  "entity_ids": ["已登记对象ID"],
+  "url": "https://github.com/owner/repo/releases",
+  "adapter": "rss",
+  "platform": "github",
+  "feed_provider": "native",
+  "feed_url": "https://github.com/owner/repo/releases.atom",
+  "enabled": true,
+  "verification": "verified",
+  "verification_url": "https://官方身份与账号核实依据",
+  "capabilities": {
+    "list": true,
+    "text": true,
+    "captions": false,
+    "complete_window": false
+  }
+}
+```
+
+`capabilities` 按实际材料填写，不能因地址存在就宣称完整覆盖。修改订阅地址后，旧地址的覆盖进度会失效，下一轮重新检查并保留断档；同一来源保留原 ID。临时停用设 `enabled: false`，保留来源登记和已发布历史；停用整个对象则修改 `entities.json` 中对应开关。
 
 ```sh
+# 检查配置是否可解析、列出实际拼接后的订阅地址；此命令不测试网络可达性
 python3 scripts/collect.py feeds
-python3 scripts/collect.py fetch
-python3 scripts/collect.py queue
-python3 scripts/collect.py read 材料ID
-python3 scripts/collect.py apply .collector/decisions-packet.json
+# 配置变更后重新生成公开目录、覆盖状态和 OPML；此命令不采集
+python3 scripts/collect.py refresh
 python3 scripts/collect.py validate
+# 导出本地订阅清单，可导入支持 OPML 的 RSS 阅读器
+python3 scripts/collect.py feeds --opml /tmp/ai-news-subscriptions.opml
 ```
 
-首次回溯 72 小时；后续按订阅增量、重叠复核、自动补采失败断档。判断缓存会在材料或规则变化时失效。分批读取节省上下文，没有 token 预算、候选总量限制或因 token 使用量停止的条件。
+公开 OPML 在 `public/data/subscriptions.opml`，网站来源页也可下载。OPML 只包含启用且已配置地址的来源，不证明这些地址可用。配置属于构建输入，网站读取的是公开 `catalog.json`；只修改配置而未 `apply` 或 `refresh`，页面不会得到新的订阅目录。
 
-`apply` 合并历史，保留事件 ID、首次采集时间和关联；实质修改需要更正记录。校验失败不会覆盖有效快照。`.collector/` 保存缓存、队列、指纹与进度，不提交公开仓库，也不进入部署产物。
+## 按需采集、翻译与更新
 
-## 管理订阅
+### 通过 skill 完成一次更新
 
-关注对象在 `config/entities.json`，信息订阅在 `config/sources.json`。所有来源的 adapter 都是 rss，平台只用于来源分类。
+采集 skill 位于 [skills/ai-news-collect/SKILL.md](skills/ai-news-collect/SKILL.md)，本机已安装在 `~/.codex/skills/ai-news-collect`。在 AI agent 中调用：
 
-- 官方原生订阅填写 `feed_url`，`feed_provider: native`。
-- RSSHub 来源填写 `rsshub_route`，`feed_provider: rsshub`，全局实例地址在 `config/collection.json` 的 `rsshub_base_url`。
-- 其他 RSS 转换服务直接填写 `feed_url`，保留原始入口、账号核实依据与平台分类。
-- 没有核实的 RSS 地址保留 null 和 pending，页面显示订阅待配置。
-
-```sh
-python3 scripts/collect.py feeds --opml /本地/订阅.opml
-python3 scripts/collect.py import-feed 来源ID /本地/feed.xml --since 2026-09-30T00:00:00Z --until 2026-10-03T00:00:00Z
+```text
+$ai-news-collect
+更新 /Users/qhq/Downloads/code/ai-daohang 的全部启用来源。
+按默认增量规则采集，补采失败断档；筛选重要事件并翻译归纳成中文，
+生成并校验本地 JSON，报告剩余待核查材料和来源覆盖情况。
 ```
 
-网站来源页也可下载 OPML。离线 XML 导入不会推进在线订阅覆盖。采集器不直接抓原始官网、GitHub API、X、TikTok 或公众号文章；没有原生 RSS 的渠道通过订阅服务接入，首版不自建常驻转换服务。
-
-RSSHub 路由参考其 [官方源码](https://github.com/DIYgod/RSSHub/tree/master/lib/routes)。公共实例可能限制访问或依赖账号配置，不能把“已填写路由”当作“已经成功接入”。微信公众号目前保留平台支持，具体账号订阅仍待核实。
-
-## 页面与数据
-
-首页默认最近 7 天，支持模型／Agent、关注对象、类型、关键词及自定义日期筛选。长期历史按月份按需加载；事件详情保留原文、多来源、关联与更正。每份 JSON 使用相同 snapshot_id，版本不一致时提示刷新。
-
-首批数据来自真实官方材料，最终统一 RSS 配置后保留既有有效历史，并通过发布订阅补充 Claude Code 等更新。没有重要更新不填假新闻；仅标题、无日期、无变更说明的材料保留待核查。来源页分别显示完整检查、部分覆盖、读取受限和订阅待配置，生成时间不能代表全部来源已完成。
-
-## 免费发布
-
-`.github/workflows/pages.yml` 在 main 分支推送或手动触发时测试、构建并部署到 GitHub Pages。它不运行采集、不创建定时任务。采集与发布分开。
-
-本项目使用公开仓库与 GitHub Pages，正式独立域名为 `go2-ai.com`，从域名根目录访问。Pages 的 Custom domain 设置为 `go2-ai.com`；DNS 与 HTTPS 上线步骤见 [独立域名配置](docs/DEPLOYMENT.md)。所有资源及 JSON 使用相对路径，兼容域名根目录和项目子路径。
-
-GitHub Actions 发布模式下，域名绑定由仓库 Settings → Pages 管理，构建不生成 CNAME 文件。参考 [GitHub 自定义域名说明](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)。
+在新机器上，可让 agent 读取项目内的 `SKILL.md` 并按其流程执行；也可在 Codex 技能目录尚无同名项时，从项目根目录安装符号链接，再重新加载技能：
 
 ```sh
-git add public config schemas scripts tests skills docs GLOSSARY.md README.md package.json .gitignore .github
+mkdir -p ~/.codex/skills
+ln -s "$PWD/skills/ai-news-collect" ~/.codex/skills/ai-news-collect
+```
+
+skill 只负责本地采集与 JSON 更新，不推送、不部署。Python 脚本负责获取、解析、缓存和校验；**重要性判断、英文转中文与归纳由正在运行的 agent 完成**，单独执行 `fetch` 不会自动生成中文新闻。
+
+### 脚本流程与手动操作
+
+1. 拉取启用且身份已核实的 RSS / Atom，查看各来源结果。
+
+   ```sh
+   python3 scripts/collect.py fetch
+   # 可选：只更新指定关注对象（参数是 entity ID，不是 source ID）
+   python3 scripts/collect.py fetch --entities codex trae zcode minimax-code
+   ```
+
+   每个来源首次回溯最近 **3 天**；后续从其完整获取进度向前重叠 **48 小时**，遇到断档自动向前补采。参数在 `config/collection.json`。公共订阅可能只保留最近若干条，补采会重试，但不能保证恢复上游已删除的历史。
+
+2. 查看候选，按材料 ID 读取证据；长文可分段。
+
+   ```sh
+   python3 scripts/collect.py queue --offset 0 --count 20
+   python3 scripts/collect.py read 材料ID --offset 0 --characters 6000
+   ```
+
+   `queue`、`read` 返回 `next_offset`；只读翻页时依此继续。每批 `apply` 后队列会缩小，应重新从 `offset 0` 查看，避免跳过材料。已经明确 `defer` 的材料会继续出现，可记录其 ID 后继续检查其他候选，避免反复处理同一待核查项。分页和分段用于节省上下文，没有 token 预算或候选总量限制。
+
+3. agent 对照 `public/data/index.json` 与相关月份历史，按发布对象、版本和阶段去重，生成本地 `.collector/decisions-packet.json`。格式见 [处置包说明](skills/ai-news-collect/references/packet.md) 和 [事件 schema](schemas/event.schema.json)。
+
+   | 判断 | 用法 |
+   | --- | --- |
+   | `keep` | 重要、有日期且证据充分；引用原始材料并关联事件 ID，填写中文标题、摘要、关键点、入选理由及原文链接 |
+   | `reject` | 宣传、重复、小调整等不入选内容；记录中文理由，供后续复用 |
+   | `defer` | 发布时间、正文、变更说明或其他证据不足；写清缺少什么，下轮仍待核查 |
+
+   保留模型发布、显著能力／API／价格／可用性变化、Agent 重要功能与兼容性变化、关键修复。厂商宣称保留归属和限制条件；预览及一手预告标 `preview`，负责人观点标 `opinion`。不凭版本号猜重要性，不用采集时间替代发布时间，不依据标题扩写正文。
+
+4. 应用判断并校验公开快照。
+
+   ```sh
+   python3 scripts/collect.py apply .collector/decisions-packet.json
+   python3 scripts/collect.py refresh
+   python3 scripts/collect.py validate
+   python3 scripts/collect.py queue
+   ```
+
+   `apply` 合并既有历史并生成快照；其后 `refresh` 可统一刷新目录和覆盖信息，无新增事件时也可单独执行。全部候选都被过滤时仍提交 `decisions`，`events` 可为空。`refresh` 不代替判断。校验失败不会覆盖有效快照，按错误修正处置包后重新应用。
+
+同次发布的多来源归并为一条事件，不同版本、预告和正式发布分别保留并可关联。事件 ID、`first_collected_at` 保持稳定；实质更正更新 `updated_at` 并追加带原因、依据链接的 `corrections`，避免重复创建或覆盖更正历史。具体字段见 [数据契约](docs/DATA-CONTRACT.md)。
+
+### 失败补采、离线导入与进度判断
+
+日常更新直接再次执行 `fetch`，它自动利用上次进度和 `uncovered_from` 重试。若只修复某个对象的来源，可用 `--entities` 限定范围；目前没有按 source ID 拉取的参数。修改 RSSHub 实例地址、修复路由或填写新的 RSS 地址后，再执行正常流程。
+
+确需指定更早回溯起点时使用带时区的时间，例如：
+
+```sh
+python3 scripts/collect.py fetch --entities openai --since 2026-09-30T00:00:00Z
+```
+
+不要每轮重置 `--since` 或删除 `.collector/`。该目录保存增量进度、材料、判断指纹、网络缓存和运行报告；迁移采集机器时需通过私下方式保留它，避免丢失补采断档。已有判断在材料、解析版本或编辑规则变化时重新进入处理范围；变更编辑标准时递增 `rules_version`，变更解析逻辑时同步调整 `parser_version`。
+
+当本地无法联网，但已从**同一订阅地址**取得真实 RSS / Atom XML 时，可以导入文件，再执行 `queue → read → apply → validate`：
+
+```sh
+python3 scripts/collect.py import-feed openai-official /tmp/openai-feed.xml \
+  --since 2026-09-30T00:00:00Z --until 2026-10-03T00:00:00Z
+```
+
+离线导入不会推进在线来源的完整覆盖进度。订阅只含摘要或视频简介时，应接入提供正文／字幕的可核实订阅；首版不自建常驻转换服务。转换服务所需账号凭据由其私有环境管理，不写入公开配置、订阅 URL 或 JSON。
+
+| 状态／字段 | 含义与处理方法 |
+| --- | --- |
+| `success` | RSS 条目满足采集器的查询时间窗检查；仍需查看待判断数量，不表示全部内容已编辑或涵盖整个官网／账号 |
+| `partial` | 历史条目有限或日期未知，完整时间窗未确认；保留断档，补充可核实订阅材料 |
+| `blocked` | HTTP 401／403／429 等访问受限；检查订阅服务权限、限流或更换可用实例 |
+| `failed` | 超时、404、无效 XML 等读取失败；查看 `note`，修复地址或服务后重试 |
+| `not_attempted` | 身份待核实、订阅待配置或尚未检查；先补配置和核实依据 |
+| `fetched_through` | 该订阅已完整获取的时间窗终点；失败或部分读取不推进它 |
+| `reviewed_through` | 已完成判断的时间窗终点；仍有待核查材料时不推进 |
+| `uncovered_from` | 未覆盖区间的起点，下一轮自动据此补采 |
+| `pending_count` | 尚未完成有效 `keep`／`reject` 判断的材料数量，包含 `defer` |
+
+内部详细状态在 `.collector/state.json`，每轮报告在 `.collector/runs/`；公开状态需通过 `apply` 或 `refresh` 更新到 `public/data/coverage.json`。JSON 的生成时间只说明快照生成，不能当作所有来源均已完成更新的证明。失败或待核查时如实保留缺口，不写成“没有重要更新”。
+
+## 页面与公开数据
+
+首页默认最近 7 天，支持模型／Agent、关注对象、类型、关键词及自定义日期筛选。重要历史永久保留，按月份按需加载；详情展示原文、多来源、关联与更正。只发布有真实材料支持的内容。
+
+| 公开文件 | 用途 |
+| --- | --- |
+| `public/data/index.json` | 总事件数、月份索引、事件位置、生成时间和快照版本 |
+| `public/data/events/YYYY-MM.json` | 每月中文事件与来源依据 |
+| `public/data/catalog.json` | 关注对象、来源、负责人及平台目录 |
+| `public/data/coverage.json` | 来源获取与判断进度、待处理数量、失败和断档说明 |
+| `public/data/subscriptions.opml` | 启用且已配置的订阅清单 |
+
+所有 JSON 使用相同 `snapshot_id`，网页发现版本不一致会提示刷新。通过 `apply`／`refresh` 统一生成并发布整套 `public/data/`，不要只替换某个月文件。`.collector/`、原文缓存、账号凭据和处置包不提交公开仓库，也不进入部署产物。
+
+## 免费发布与上线检查
+
+### 每次更新后发布
+
+采集完成只更新本地文件；发布另行执行。当前公开仓库使用免费 GitHub Pages，`.github/workflows/pages.yml` 在 `main` 分支推送或手动触发时依次 **运行测试 → 校验并构建 → 上传 `dist/` → 部署**。工作流不运行采集、不调用模型、不创建定时任务。
+
+先预览首页、历史和来源页，确认中文内容、原文链接、待配置与失败提示正确，再检查并提交本次变更：
+
+```sh
+python3 scripts/collect.py validate
+npm test
+npm run build
+git status --short
+git diff --stat
+git diff -- public/data config
+# 普通数据更新提交整个公开数据快照
+git add public/data
+# 本轮确有订阅或采集参数变更时，再加入配置
+git add config
+git diff --cached --stat
+git diff --cached
 git commit -m "Update AI news snapshot"
 git push origin main
 ```
 
-## 设计文档
+代码、skill 或文档有修改时，另行加入对应文件并检查暂存内容；`dist/` 由 Actions 生成，不提交。`.collector/` 已在 `.gitignore` 中排除，不使用强制添加将内部缓存公开。
 
-[计划](docs/PLAN.md) · [数据契约](docs/DATA-CONTRACT.md) · [来源登记](docs/SOURCE-REGISTRY.md) · [采集 skill](docs/SKILL-SPEC.md) · [采集流程](docs/COLLECTION-PIPELINE.md) · [统一 RSS 决策](docs/adr/0003-rss-only-ingestion.md)
+在仓库 **Actions → Publish static website** 查看本次提交的 `build`、`deploy` 是否成功。需重新部署已提交内容时，点击 **Run workflow** 并选择 `main`；手动运行不会采集新信息，也不会发布本地尚未提交的文件。失败时先检查对应步骤日志，修复后重新推送或重跑。
+
+### 独立域名与验收
+
+正式域名为 `go2-ai.com`，从域名根目录访问。仓库 **Settings → Pages → Source** 使用 GitHub Actions，**Custom domain** 设置 `go2-ai.com`。Actions 模式由 Pages 设置保存域名，构建不生成 `CNAME` 文件。资源和 JSON 使用相对路径，兼容根目录与项目子路径。
+
+域名由阿里云管理，已配置四条根域 GitHub Pages A 记录和 `www → helloqhq.github.io`；DNS、邮件记录保留及 HTTPS 设置详情见 [独立域名部署记录](docs/DEPLOYMENT.md)。截至 2026-10-03 最近一次检查，DNS 已配置，HTTPS 证书仍待签发；证书可用后在 Pages 启用 **Enforce HTTPS**。日常发布新闻无需修改 DNS。
+
+部署成功后检查：
+
+1. 打开 `https://go2-ai.com/`，确认域名证书正常、页面和静态资源可加载；HTTPS 尚未签发时不能将 HTTPS 上线标为完成。
+2. 查看 `https://go2-ai.com/data/index.json`，将其 `snapshot_id` 与本地 `public/data/index.json` 比较，确认发布的是本次快照。
+3. 检查 `data/catalog.json`、`data/coverage.json` 与索引列出的月份 JSON，确认 `snapshot_id` 一致；检查 `data/subscriptions.opml` 可下载。
+4. 在页面核对新增／更正事件、日期筛选、历史月份和来源状态；若加载到旧数据，刷新后再检查 Actions 运行对应的提交。
+
+数据出错时先修正材料或处置包并重新发布。需回退版本时通过 Git 恢复已知有效版本的**整套数据及对应配置**，校验后正常提交、推送，避免手动拼接不同快照。
+
+## 进一步说明
+
+[计划](docs/PLAN.md) · [数据契约](docs/DATA-CONTRACT.md) · [来源登记](docs/SOURCE-REGISTRY.md) · [采集 skill 设计](docs/SKILL-SPEC.md) · [采集流程](docs/COLLECTION-PIPELINE.md) · [RSS 订阅操作](skills/ai-news-collect/references/subscriptions.md) · [统一 RSS 决策](docs/adr/0003-rss-only-ingestion.md) · [部署与域名](docs/DEPLOYMENT.md)

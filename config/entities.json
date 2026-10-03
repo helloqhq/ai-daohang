@@ -146,6 +146,18 @@
       "color": "#4866aa"
     },
     {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "aliases": [
+        "openrouter",
+        "open router"
+      ],
+      "category": "model",
+      "kind": "api_platform",
+      "enabled": true,
+      "color": "#476c91"
+    },
+    {
       "id": "codex",
       "name": "Codex",
       "aliases": [
@@ -300,6 +312,19 @@
       "kind": "application",
       "enabled": true,
       "color": "#175f4a"
+    },
+    {
+      "id": "deeptutor",
+      "name": "DeepTutor",
+      "aliases": [
+        "deeptutor",
+        "deep tutor",
+        "HKUDS/DeepTutor"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#527d69"
     }
   ]
 }

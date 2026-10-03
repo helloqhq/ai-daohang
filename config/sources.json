@@ -677,6 +677,51 @@
       "feed_provider": "rsshub",
       "rsshub_route": "/tiktok/user/@openai",
       "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/tiktok"
+    },
+    {
+      "id": "openrouter-official",
+      "name": "OpenRouter 官方博客",
+      "entity_ids": [
+        "openrouter"
+      ],
+      "url": "https://openrouter.ai/blog/all/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://openrouter.ai/blog/all/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://openrouter.ai/blog/feed.xml",
+      "feed_provider": "native",
+      "feed_verified_at": "2026-10-03",
+      "subscription_note": "官方博客 RSS；关注平台功能、API、价格和可用性变化，普通教程和宣传按编辑规则过滤。"
+    },
+    {
+      "id": "deeptutor-releases",
+      "name": "DeepTutor Releases",
+      "entity_ids": [
+        "deeptutor"
+      ],
+      "url": "https://github.com/HKUDS/DeepTutor/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/HKUDS/DeepTutor",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/HKUDS/DeepTutor/releases.atom",
+      "feed_provider": "native",
+      "feed_verified_at": "2026-10-03"
     }
   ],
   "people": [

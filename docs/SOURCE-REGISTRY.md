@@ -26,9 +26,9 @@
 
 ## 首版名单
 
-模型关注对象：OpenAI、Anthropic、Google、DeepSeek、Qwen、智谱、月之暗面、MiniMax、腾讯、美团、Grok、Meta。
+模型及服务平台关注对象：OpenAI、Anthropic、Google、DeepSeek、Qwen、智谱、月之暗面、MiniMax、腾讯、美团、Grok、Meta、OpenRouter（模型服务平台）。
 
-Agent 应用／运行工具：Codex、Claude Code、Cursor、Gemini CLI、DeepSeek Harness、Nous Research Hermes Agent、OpenCode、GitHub Copilot、Qoder、Pi Agent Harness、TRAE、ZCode、MiniMax Code。
+Agent 应用／运行工具：Codex、Claude Code、Cursor、Gemini CLI、DeepSeek Harness、Nous Research Hermes Agent、OpenCode、GitHub Copilot、Qoder、Pi Agent Harness、TRAE、ZCode、MiniMax Code、DeepTutor。
 
 负责人名单采用身份与账号可核实的明确名单，逐步扩展。
 
@@ -90,6 +90,8 @@ grok 是用户希望关注的模型品牌，不能直接记作厂商。xAI 可�
 
 YouTube、TikTok、X、微信公众号加入来源平台范围。默认接入已确认关注对象的官方账号和已核实负责人账号，具体账号在实施中登记；平台存在不等于所有对象都拥有该平台账号。
 
+微信公众号与 YouTube 等同属平台层；具体公众号才登记为来源。尚未核实具体公众号时只保留 `wechat` 平台，不创建名为“微信公众号”的来源或关注对象。
+
 | 平台 | 采集对象与材料 | 复用与降级设计 |
 | --- | --- | --- |
 | YouTube | 指定频道的视频索引、标题、简介、发布时间、可取得的字幕／文字稿 | 统一频道适配器，正文与字幕能力分别登记；没有字幕时仅按实际文本总结，保留视频链接 |
@@ -119,6 +121,8 @@ YouTube、TikTok、X、微信公众号加入来源平台范围。默认接入已
 上游统一通过 RSS/Atom 取得，再转换为本站 JSON。无可用 RSS 时待配置，不改用网页或 API 直接抓取。无法访问的入口记录为失败或受限，仍未核实的入口记录为待核实；只有实际完成查询才能记录对应的覆盖范围。
 
 ## 实际 RSS 配置
+
+2026-10-03 新增 OpenRouter 官方博客与 DeepTutor Releases。OpenRouter 的 [官方博客入口](https://openrouter.ai/blog/all/)提供 [原生 RSS](https://openrouter.ai/blog/feed.xml)，用于平台功能、API、价格与可用性的重要变化；它不等同于全部模型上架或价格变化监控。DeepTutor 身份依据为用户指定的 [HKUDS/DeepTutor 项目](https://github.com/HKUDS/DeepTutor)，使用 [Releases Atom](https://github.com/HKUDS/DeepTutor/releases.atom)。本轮两个订阅均返回 HTTP 200，并通过现有 RSS/Atom 解析器读取；这次接入检查不推进正式采集与审阅进度，公开状态保持尚未采集。
 
 2026-10-03 已登记全部关注对象。GitHub 发布记录使用官方 releases.atom，Claude Code 也改用发布订阅；OpenAI、Google DeepMind、Cursor、美团、Sam Altman 和 OpenAI YouTube 配置原生订阅。Anthropic、DeepSeek、Qwen、Meta、X 与 TikTok 配置 RSSHub 官方路由，默认公共实例存在 403/404 访问限制。智谱、Kimi、MiniMax、腾讯、Grok、Qoder、TRAE、ZCode 和 Dario 的有效 RSS 仍待登记。微信公众号具体账号订阅仍待核实。
 

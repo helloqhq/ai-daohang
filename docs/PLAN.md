@@ -14,8 +14,8 @@
 
 | 分类 | 已确认对象 |
 | --- | --- |
-| 模型关注对象 | OpenAI、Anthropic、Google、DeepSeek、Qwen、智谱、月之暗面、MiniMax、腾讯、美团、Grok、Meta |
-| Agent 应用／运行工具 | Codex、Claude Code、Cursor、Gemini CLI、DeepSeek Harness、Nous Research Hermes Agent、OpenCode、GitHub Copilot、Qoder、Pi Agent Harness、TRAE、ZCode、MiniMax Code |
+| 模型及服务平台关注对象 | OpenAI、Anthropic、Google、DeepSeek、Qwen、智谱、月之暗面、MiniMax、腾讯、美团、Grok、Meta、OpenRouter |
+| Agent 应用／运行工具 | Codex、Claude Code、Cursor、Gemini CLI、DeepSeek Harness、Nous Research Hermes Agent、OpenCode、GitHub Copilot、Qoder、Pi Agent Harness、TRAE、ZCode、MiniMax Code、DeepTutor |
 | 负责人 | 采用能够核实身份与账号的明确名单，逐步扩展 |
 
 Google、腾讯、美团、Meta 等按厂商范围关联模型系列与多个官方渠道，不锁死为一个模型或仓库。Grok 是模型品牌，厂商单独登记。GitHub Copilot 聚焦 CLI、IDE Agent 等任务执行能力及其相关重要变化。
@@ -126,7 +126,7 @@ RSS 取得的长视频文字稿保留章节和时间戳，按需取相关段落�
 
 ## 首版验收标准
 
-- 全部 12 个模型关注对象、13 个 Agent 对象进入配置；每个来源有明确核实与接入状态，负责人采用已核实名单。
+- 全部 13 个模型及服务平台关注对象、14 个 Agent 对象进入配置；OpenRouter 作为模型服务平台、DeepTutor 作为 Agent 应用登记。每个来源有明确核实与接入状态，负责人采用已核实名单。
 - 新增一个使用既有来源格式的对象只需改配置，不需要修改页面或 skill 的核心规则。
 - YouTube、TikTok、X、微信公众号来源可以按账号配置登记，统一通过 RSS/Atom 获取；每个入口明确实际可取得的是列表、正文、字幕还是仅元数据。
 - 内容未变化的再次调用不重复翻译或摘要，也不重新生成采集脚本；默认工具输出不包含整页 HTML 或整段长字幕。

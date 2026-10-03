@@ -42,9 +42,9 @@ npm run build
 
 ### 当前各数据源
 
-以下清单对应 2026-10-03 的配置：31 个来源，22 个已填写订阅地址或路由，9 个待配置。**已配置不代表可读取或已完成判断**；实时配置看 `config/sources.json`，每轮采集结果看 `public/data/coverage.json` 和网站来源页。RSSHub 公共实例存在访问受限或路由不可用的情况。
+以下清单对应 2026-10-03 的配置：33 个来源，24 个已填写订阅地址或路由，9 个待配置。**已配置不代表可读取或已完成判断**；实时配置看 `config/sources.json`，每轮采集结果看 `public/data/coverage.json` 和网站来源页。RSSHub 公共实例存在访问受限或路由不可用的情况。
 
-#### 模型厂商
+#### 模型厂商、品牌与服务平台
 
 RSSHub 行中的路径相对于上述实例地址。待配置行列出原始入口，不能直接将入口网页当作 RSS。
 
@@ -62,6 +62,9 @@ RSSHub 行中的路径相对于上述实例地址。待配置行列出原始入�
 | 美团 | `meituan-official` | 原生：`https://tech.meituan.com/rss.xml` |
 | Grok | `grok-official` | 待配置：[xAI 新闻](https://x.ai/news) |
 | Meta | `meta-official` | RSSHub：`/meta/ai/blog` |
+| OpenRouter（模型服务平台） | `openrouter-official` | 原生：`https://openrouter.ai/blog/feed.xml`；[官方博客订阅入口](https://openrouter.ai/blog/all/) |
+
+OpenRouter 关注平台功能、API、价格及可用性的重要变化，普通教程与宣传按编辑规则过滤。它按 `category: model` 进入模型筛选，`kind: api_platform` 区分其平台身份；博客订阅不代表完整监测所有上架模型及价格。
 
 #### Agent 应用
 
@@ -80,18 +83,31 @@ RSSHub 行中的路径相对于上述实例地址。待配置行列出原始入�
 | TRAE | `trae-official` | 待配置：[中文版更新入口](https://docs.trae.cn/ide_changelog) |
 | ZCode | `zcode-official` | 待配置：[更新入口](https://zcode.z.ai/en/changelog) |
 | MiniMax Code | `minimax-code-releases` | `https://github.com/MiniMax-AI/minimax-code/releases.atom` |
+| DeepTutor | `deeptutor-releases` | `https://github.com/HKUDS/DeepTutor/releases.atom`；[官方项目](https://github.com/HKUDS/DeepTutor) |
 
 #### 负责人及媒体账号
 
-| 来源 | 来源 ID | 当前订阅与扩展方法 |
+此表只列具体博客、频道或账号；媒体平台的接入方法见下一节。
+
+| 负责人／账号 | 平台 | 来源 ID | 当前订阅 |
+| --- | --- | --- | --- |
+| Sam Altman 博客 | 网站／博客 | `sam-altman-blog` | 原生：`https://blog.samaltman.com/posts.atom`；关联 `person_id: sam-altman` |
+| Dario Amodei 博客 | 网站／博客 | `dario-blog` | 待配置：[个人博客](https://www.darioamodei.com/)；关联 `person_id: dario-amodei` |
+| OpenAI 官方频道 | YouTube | `openai-youtube` | 原生：`https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A` |
+| OpenAI 官方账号 | X | `openai-x` | RSSHub：`/twitter/user/OpenAI` |
+| ZCode 官方账号 | X | `zcode-x` | RSSHub：`/twitter/user/zcode_ai` |
+| OpenAI 官方账号 | TikTok | `openai-tiktok` | RSSHub：`/tiktok/user/@openai` |
+
+#### 媒体平台接入方法
+
+YouTube、TikTok、X、微信公众号都是媒体平台，在 `config/platforms.json` 中登记。`sources.json` 的每个来源对应具体频道、账号或公众号，不为平台本身创建独立信息源。一个关注对象可在多个平台分别订阅。
+
+| 平台 | 平台 ID | 新增订阅的方法 |
 | --- | --- | --- |
-| Sam Altman 博客 | `sam-altman-blog` | 原生：`https://blog.samaltman.com/posts.atom`；关联 `person_id: sam-altman` |
-| Dario Amodei 博客 | `dario-blog` | 待配置：[个人博客](https://www.darioamodei.com/)；关联 `person_id: dario-amodei` |
-| OpenAI YouTube | `openai-youtube` | 原生：`https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A`；其他频道先核实身份与 channel ID，再登记独立来源 |
-| OpenAI X | `openai-x` | RSSHub：`/twitter/user/OpenAI` |
-| ZCode X | `zcode-x` | RSSHub：`/twitter/user/zcode_ai` |
-| OpenAI TikTok | `openai-tiktok` | RSSHub：`/tiktok/user/@openai` |
-| 微信公众号 | 尚未登记具体来源 | 已预留 `wechat` 平台；核实公众号身份及转换服务 RSS 地址后新增来源，不凭名称猜账号或订阅地址 |
+| YouTube | `youtube` | 核实具体频道的官方身份与 channel ID，配置该频道原生 RSS |
+| TikTok | `tiktok` | 核实具体账号，配置实际可用的 RSSHub 路由或转换服务订阅 |
+| X | `x` | 核实具体账号，配置实际可用的 RSSHub 路由或转换服务订阅 |
+| 微信公众号 | `wechat` | 核实具体公众号身份及转换服务 RSS 地址，以公众号名称登记来源；目前尚无已登记的具体公众号订阅 |
 
 增加负责人时，先在 `people` 登记身份与关联对象，再为每个博客／媒体账号分别登记来源。通过官网反链、官方团队介绍或官方项目依据核实身份与账号后，才能设置 `verification: verified`。新增 X、TikTok、微信公众号等账号时，需核实转换服务对该账号实际可用；参考已有来源的 `feed_route_verification_url`，不只复制路由格式。
 

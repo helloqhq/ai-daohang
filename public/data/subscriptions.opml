@@ -26,5 +26,7 @@
     <outline text="OpenAI X" title="OpenAI X" type="rss" xmlUrl="https://rsshub.app/twitter/user/OpenAI" htmlUrl="https://x.com/OpenAI" category="x" />
     <outline text="ZCode X" title="ZCode X" type="rss" xmlUrl="https://rsshub.app/twitter/user/zcode_ai" htmlUrl="https://x.com/zcode_ai" category="x" />
     <outline text="OpenAI TikTok" title="OpenAI TikTok" type="rss" xmlUrl="https://rsshub.app/tiktok/user/@openai" htmlUrl="https://www.tiktok.com/@openai" category="tiktok" />
+    <outline text="OpenRouter 官方博客" title="OpenRouter 官方博客" type="rss" xmlUrl="https://openrouter.ai/blog/feed.xml" htmlUrl="https://openrouter.ai/blog/all/" category="web" />
+    <outline text="DeepTutor Releases" title="DeepTutor Releases" type="rss" xmlUrl="https://github.com/HKUDS/DeepTutor/releases.atom" htmlUrl="https://github.com/HKUDS/DeepTutor/releases" category="github" />
   </body>
 </opml>

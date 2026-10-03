@@ -67,6 +67,18 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(self.p.store.pending()),1)
         with self.assertRaises(ValidationError):self.p.apply(packet)
         self.assertEqual(self.p.validate()['events'],1)
+    def test_default_queue_reopens_decisions_after_configured_rule_change(self):
+        m=self.candidate();self.p.apply(self.packet(m))
+        self.assertEqual(self.p.store.pending(),[])
+        config=read_json(self.root/'config/collection.json')
+        previous_version=config['rules_version']
+        config['rules_version']='next-revision'
+        write_json(self.root/'config/collection.json',config)
+        self.assertEqual([item['id'] for item in self.p.store.pending()],[m['id']])
+        self.assertEqual(self.p.store.pending(rules_version=previous_version),[])
+        self.p.store.save_pending()
+        saved=[json.loads(line) for line in (self.p.store.work/'pending.jsonl').read_text().splitlines()]
+        self.assertEqual([item['id'] for item in saved],[m['id']])
     def test_unknown_time_preview_and_invalid_json_preserve_snapshot(self):
         m=self.candidate();packet=self.packet(m);self.p.apply(packet)
         old=(self.root/'public/data/index.json').read_bytes()

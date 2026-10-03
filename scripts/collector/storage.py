@@ -82,7 +82,9 @@ class Store:
         (self.root / material['text_path']).write_text(text, encoding='utf-8')
         return material
 
-    def pending(self, entity_ids=None, rules_version=RULES_VERSION):
+    def pending(self, entity_ids=None, rules_version=None):
+        if rules_version is None:
+            rules_version = str(read_json(self.root / 'config/collection.json', {}).get('rules_version', RULES_VERSION))
         decisions = self.decisions()
         result = []
         for material in self.materials().values():
@@ -97,7 +99,7 @@ class Store:
             result.append(material)
         return sorted(result, key=lambda x: x.get('published_at') or '', reverse=True)
 
-    def save_pending(self, rules_version=RULES_VERSION):
+    def save_pending(self, rules_version=None):
         text = '\n'.join(json.dumps(m, ensure_ascii=False) for m in self.pending(rules_version=rules_version))
         path = self.work / 'pending.jsonl'
         path.write_text(text + ('\n' if text else ''), encoding='utf-8')

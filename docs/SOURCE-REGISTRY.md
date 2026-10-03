@@ -26,7 +26,7 @@
 
 ## 首版名单
 
-模型及服务平台关注对象：OpenAI、Anthropic、Google、DeepSeek、Qwen、智谱、月之暗面、MiniMax、腾讯、美团、Grok、Meta、OpenRouter（模型服务平台）。
+模型及服务平台关注对象：OpenAI、Anthropic、Google、DeepSeek、Qwen、智谱、月之暗面、MiniMax、腾讯、美团、Grok、Meta、OpenRouter（模型服务平台）、NVIDIA、Discovery Loop。后两项用于关联新增负责人来源，目前不覆盖公司全部渠道。
 
 Agent 应用／运行工具：Codex、Claude Code、Cursor、Gemini CLI、DeepSeek Harness、Nous Research Hermes Agent、OpenCode、GitHub Copilot、Qoder、Pi Agent Harness、TRAE、ZCode、MiniMax Code、DeepTutor。
 
@@ -59,7 +59,21 @@ Agent 应用／运行工具：Codex、Claude Code、Cursor、Gemini CLI、DeepSe
 | Cursor | [Changelog](https://cursor.com/changelog)列表可读取 |
 | Gemini CLI | [官方 Releases](https://github.com/google-gemini/gemini-cli/releases)列表可读取 |
 
-负责人初始可核实入口：Sam Altman 的 [OpenAI 身份依据](https://openai.com/our-structure/)与 [个人博客](https://blog.samaltman.com/)；Dario Amodei 的 [Anthropic 身份依据](https://www.anthropic.com/company/leadership)与 [个人博客](https://www.darioamodei.com/)。Demis Hassabis 的 [DeepMind 身份依据](https://deepmind.google/about/)可核实，但本轮尚未确认其个人账号入口。博客不是全部社交动态的覆盖保证。
+负责人初始可核实入口：Sam Altman 的 [OpenAI 身份依据](https://openai.com/our-structure/)与 [个人博客](https://blog.samaltman.com/)；Dario Amodei 的 [Anthropic 身份依据](https://www.anthropic.com/company/leadership)与 [个人博客](https://www.darioamodei.com/)。博客不是全部社交动态的覆盖保证。
+
+### 新增 AI 领军人物
+
+2026-10-03 新增以下 5 位人物。账号身份与订阅可读性分别记录；筛选 AI 相关的重要更新和观点，其他话题按编辑规则过滤。
+
+| 人物与当前身份 | 已核实入口 | 官方核实依据 |
+| --- | --- | --- |
+| 马斯克 Elon Musk，Tesla 联合创始人、CEO | [X @elonmusk](https://x.com/elonmusk)，关联 Grok | [Tesla 人物介绍](https://www.tesla.com/elon-musk)、[Tesla 投资者文件中的账号](https://ir.tesla.com/_flysystem/s3/sec/000110465924070994/tm2413800d27_defa14a-gen.pdf) |
+| 扎克伯格 Mark Zuckerberg，Meta 创始人、CEO | [Threads @zuck](https://www.threads.net/@zuck)，关联 Meta | [Meta 领导层公告](https://about.fb.com/news/2026/01/dina-powell-mccormick-joins-meta-as-president-and-vice-chairman/)、[Meta Threads 发布文章反链](https://about.fb.com/news/2023/07/introducing-threads-new-app-text-sharing/) |
+| 黄仁勋 Jensen Huang，NVIDIA 创始人、总裁兼 CEO | [NVIDIA 本人署名文章](https://blogs.nvidia.com/blog/author/jen-hsun-huang/)，关联 NVIDIA | 作者页含身份介绍；[官方作者 RSS](https://blogs.nvidia.com/blog/author/jen-hsun-huang/feed/)的 10 篇条目均署名 Jensen Huang |
+| Demis Hassabis，Google DeepMind 主席、Alphabet 首席科学家 | [X @demishassabis](https://x.com/demishassabis)，关联 Google | [Google 最新任职公告及账号反链](https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/)、[Google 作者介绍](https://blog.google/authors/demis-hassabis/) |
+| Jeff Dean，Discovery Loop 联合创始人、前 Google 首席科学家 | [X @JeffDean](https://x.com/JeffDean)，关联 Discovery Loop | [Discovery Loop 创始团队](https://www.discoveryloop.com/)、[Google 离任公告](https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/)、[本人署名 Google Research 文章中的账号](https://research.google/blog/the-google-brain-team-looking-back-on-2017-part-2-of-2/) |
+
+黄仁勋的原生 RSS 已通过现有解析器读取，9 篇含正文、1 篇仅元数据，均有发布时间，只覆盖本人署名文章。其余账号使用 RSSHub 官方 [X 用户路由](https://github.com/DIYgod/RSSHub/blob/master/lib/routes/twitter/user.ts)与 [Threads 路由](https://github.com/DIYgod/RSSHub/blob/master/lib/routes/threads/index.ts)；Threads 路由直接提供 `/threads/zuck` 示例。本次连通检查未取回这 4 个账号的 RSS，列表与正文能力保持未确认，实例可能需要登录配置。身份已核实不等于订阅可读，检查与配置不会推进采集或审阅覆盖。
 
 ### 新增对象的官方入口候选
 
@@ -88,7 +102,7 @@ grok 是用户希望关注的模型品牌，不能直接记作厂商。xAI 可�
 
 ## 新增媒体平台
 
-YouTube、TikTok、X、微信公众号加入来源平台范围。默认接入已确认关注对象的官方账号和已核实负责人账号，具体账号在实施中登记；平台存在不等于所有对象都拥有该平台账号。
+YouTube、TikTok、X、Threads、微信公众号加入来源平台范围。默认接入已确认关注对象的官方账号和已核实负责人账号，具体账号在实施中登记；平台存在不等于所有对象都拥有该平台账号。
 
 微信公众号与 YouTube 等同属平台层；具体公众号才登记为来源。尚未核实具体公众号时只保留 `wechat` 平台，不创建名为“微信公众号”的来源或关注对象。
 
@@ -97,6 +111,7 @@ YouTube、TikTok、X、微信公众号加入来源平台范围。默认接入已
 | YouTube | 指定频道的视频索引、标题、简介、发布时间、可取得的字幕／文字稿 | 统一频道适配器，正文与字幕能力分别登记；没有字幕时仅按实际文本总结，保留视频链接 |
 | TikTok | 指定账号的视频文案、发布时间、可取得的文字材料 | 统一账号适配器，根据实际可用公开页面或已授权接口读取；受限时保留缺口，允许原文链接导入 |
 | X | 指定账号的原创帖文、线程及有价值的引用，附媒体文本证据 | 统一账号适配器，按可读页面或已有可用访问方式接入；不以付费 API 为默认依赖，读取能力不足时标记受限 |
+| Threads | 指定账号的帖文与可取得的文字材料 | 使用已核实的 RSSHub 用户路由，受限时保留缺口，不把路由存在视为已读取 |
 | 微信公众号 | 指定公众号的已发现文章、正文、发布时间和账号信息 | 统一文章解析，账号发现能力另行验证；公开文章和本账号授权素材库分别登记，只有个别文章链接时不声称完整覆盖历史 |
 
 账号核实依据可采用官网反链、官方项目说明或可验证的账号认证信息与其他官方依据，不仅凭相同昵称。频道／账号稳定标识与可变昵称分别保存；无法取得稳定标识时保留待核实状态和入口链接。
@@ -124,6 +139,6 @@ YouTube、TikTok、X、微信公众号加入来源平台范围。默认接入已
 
 2026-10-03 新增 OpenRouter 官方博客与 DeepTutor Releases。OpenRouter 的 [官方博客入口](https://openrouter.ai/blog/all/)提供 [原生 RSS](https://openrouter.ai/blog/feed.xml)，用于平台功能、API、价格与可用性的重要变化；它不等同于全部模型上架或价格变化监控。DeepTutor 身份依据为用户指定的 [HKUDS/DeepTutor 项目](https://github.com/HKUDS/DeepTutor)，使用 [Releases Atom](https://github.com/HKUDS/DeepTutor/releases.atom)。本轮两个订阅均返回 HTTP 200，并通过现有 RSS/Atom 解析器读取；这次接入检查不推进正式采集与审阅进度，公开状态保持尚未采集。
 
-2026-10-03 已登记全部关注对象。GitHub 发布记录使用官方 releases.atom，Claude Code 也改用发布订阅；OpenAI、Google DeepMind、Cursor、美团、Sam Altman 和 OpenAI YouTube 配置原生订阅。Anthropic、DeepSeek、Qwen、Meta、X 与 TikTok 配置 RSSHub 官方路由，默认公共实例存在 403/404 访问限制。智谱、Kimi、MiniMax、腾讯、Grok、Qoder、TRAE、ZCode 和 Dario 的有效 RSS 仍待登记。微信公众号具体账号订阅仍待核实。
+2026-10-03 已登记全部关注对象。GitHub 发布记录使用官方 releases.atom，Claude Code 也改用发布订阅；OpenAI、Google DeepMind、Cursor、美团、Sam Altman 和 OpenAI YouTube 配置原生订阅。Anthropic、DeepSeek、Qwen、Meta、X 与 TikTok 配置 RSSHub 官方路由，默认公共实例存在 403/404 访问限制。Dario 已补入第三方 RSS，仅提供标题和链接、无发布时间与正文。智谱、Kimi、MiniMax、腾讯、Grok、Qoder、TRAE、ZCode 的有效 RSS 仍待登记。微信公众号具体账号订阅仍待核实。
 
 下载网站的 public/data/subscriptions.opml 或运行 scripts/collect.py feeds --opml 文件名，管理兼容 RSS 阅读器中的订阅。统一 RSS 决策优先于上方早期多格式采集调查。

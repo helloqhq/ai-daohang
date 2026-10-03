@@ -28,7 +28,7 @@ npm run build
 | --- | --- |
 | `config/entities.json` | 模型厂商与 Agent 关注对象：稳定 ID、名称、分类、别名、启用状态 |
 | `config/sources.json` | 每个订阅的原始入口、RSS 地址或 RSSHub 路由、关联对象、身份核实依据；`people` 登记负责人 |
-| `config/platforms.json` | YouTube、TikTok、X、微信公众号等媒体分类；登记平台不等于已订阅具体账号 |
+| `config/platforms.json` | YouTube、TikTok、X、Threads、微信公众号等媒体分类；登记平台不等于已订阅具体账号 |
 | `config/collection.json` | 首次回溯、增量重叠、超时、并发、缓存、RSSHub 实例、解析与编辑规则版本 |
 
 所有来源使用 `adapter: rss`，RSS 与 Atom 共用采集器。`url` 是原始官网／账号入口，`feed_url` 是实际订阅地址，两者用途不同。官网、GitHub API、社交页面和视频下载不作为采集入口。
@@ -42,7 +42,7 @@ npm run build
 
 ### 当前各数据源
 
-以下清单对应 2026-10-03 的配置：33 个来源，24 个已填写订阅地址或路由，9 个待配置。**已配置不代表可读取或已完成判断**；实时配置看 `config/sources.json`，每轮采集结果看 `public/data/coverage.json` 和网站来源页。RSSHub 公共实例存在访问受限或路由不可用的情况。
+以下清单对应 2026-10-03 的配置：38 个来源，30 个已填写订阅地址或路由，8 个待配置。**已配置不代表可读取或已完成判断**；实时配置看 `config/sources.json`，每轮采集结果看 `public/data/coverage.json` 和网站来源页。RSSHub 公共实例存在访问受限或路由不可用的情况。
 
 #### 模型厂商、品牌与服务平台
 
@@ -60,7 +60,7 @@ RSSHub 行中的路径相对于上述实例地址。待配置行列出原始入�
 | MiniMax | `minimax-official` | 待配置：[官方博客](https://www.minimax.io/blog) |
 | 腾讯 | `tencent-official` | 待配置：[混元官网](https://hunyuan.tencent.com/) |
 | 美团 | `meituan-official` | 原生：`https://tech.meituan.com/rss.xml` |
-| Grok | `grok-official` | 待配置：[xAI 新闻](https://x.ai/news) |
+| Grok | `grok-official` | 待配置：[xAI 新闻](https://x.ai/news)；[第三方候选](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_xainews.xml) 最新条目停留于 2026-05-21，暂不接入 |
 | Meta | `meta-official` | RSSHub：`/meta/ai/blog` |
 | OpenRouter（模型服务平台） | `openrouter-official` | 原生：`https://openrouter.ai/blog/feed.xml`；[官方博客订阅入口](https://openrouter.ai/blog/all/) |
 
@@ -92,24 +92,34 @@ OpenRouter 关注平台功能、API、价格及可用性的重要变化，普通
 | 负责人／账号 | 平台 | 来源 ID | 当前订阅 |
 | --- | --- | --- | --- |
 | Sam Altman 博客 | 网站／博客 | `sam-altman-blog` | 原生：`https://blog.samaltman.com/posts.atom`；关联 `person_id: sam-altman` |
-| Dario Amodei 博客 | 网站／博客 | `dario-blog` | 待配置：[个人博客](https://www.darioamodei.com/)；关联 `person_id: dario-amodei` |
+| Dario Amodei 博客 | 网站／博客 | `dario-blog` | 第三方：`https://ivryb--01a055e0b1fb7668a7f2de979a8284f4.web.val.run/`；[转换服务依据](https://www.val.town/x/ivryb/dario-amodei-rss)；仅标题和链接、无发布时间；关联 `person_id: dario-amodei` |
+| 马斯克 Elon Musk | X | `elon-musk-x` | [@elonmusk](https://x.com/elonmusk)；RSSHub：`/twitter/user/elonmusk`；关联 `person_id: elon-musk` |
+| 扎克伯格 Mark Zuckerberg | Threads | `mark-zuckerberg-threads` | [@zuck](https://www.threads.net/@zuck)；RSSHub：`/threads/zuck`；关联 `person_id: mark-zuckerberg` |
+| 黄仁勋 Jensen Huang | 网站／博客 | `jensen-huang-blog` | 原生：`https://blogs.nvidia.com/blog/author/jen-hsun-huang/feed/`；仅本人署名文章；关联 `person_id: jensen-huang` |
+| Demis Hassabis | X | `demis-hassabis-x` | [@demishassabis](https://x.com/demishassabis)；RSSHub：`/twitter/user/demishassabis`；关联 `person_id: demis-hassabis` |
+| Jeff Dean | X | `jeff-dean-x` | [@JeffDean](https://x.com/JeffDean)；RSSHub：`/twitter/user/JeffDean`；关联 `person_id: jeff-dean` |
 | OpenAI 官方频道 | YouTube | `openai-youtube` | 原生：`https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A` |
 | OpenAI 官方账号 | X | `openai-x` | RSSHub：`/twitter/user/OpenAI` |
 | ZCode 官方账号 | X | `zcode-x` | RSSHub：`/twitter/user/zcode_ai` |
 | OpenAI 官方账号 | TikTok | `openai-tiktok` | RSSHub：`/tiktok/user/@openai` |
 
+新增人物于 2026-10-03 按官方资料核实身份与账号，依据见 [来源登记](docs/SOURCE-REGISTRY.md)。只筛选 AI 相关的重要更新与观点。NVIDIA 与 Discovery Loop 作为关联关注对象加入筛选；当前分别只订阅黄仁勋署名文章与 Jeff Dean 账号，不代表公司全部渠道。黄仁勋 RSS 已通过现有解析器读取 10 篇文章（9 篇含正文、1 篇仅元数据，均有发布时间）；另外 4 个账号已核实 RSSHub 路由，但本次连通检查未取回 RSS，列表与正文能力暂记为未确认。新增来源保持尚未采集，不推进审阅覆盖。
+
+2026-10-03 补查结果：Dario 的订阅已验证为 RSS XML，6 篇文章链接对应原始官网，但缺少正文与发布时间；填入地址不会推进采集或审阅覆盖。Grok 的[第三方候选服务](https://github.com/Olshansk/rss-feeds)有 39 条记录，最新条目停留于 2026-05-21，落后于官网，暂不接入。其余 7 个来源的候选订阅返回 HTML、404 或 HTTP 400，RSSHub 和 RSS-Bridge 的公开路由清单未找到对应专用路由，因此继续保留待配置；逐项核查说明见 `config/sources.json` 的 `subscription_note`。
+
 #### 媒体平台接入方法
 
-YouTube、TikTok、X、微信公众号都是媒体平台，在 `config/platforms.json` 中登记。`sources.json` 的每个来源对应具体频道、账号或公众号，不为平台本身创建独立信息源。一个关注对象可在多个平台分别订阅。
+YouTube、TikTok、X、Threads、微信公众号都是媒体平台，在 `config/platforms.json` 中登记。`sources.json` 的每个来源对应具体频道、账号或公众号，不为平台本身创建独立信息源。一个关注对象可在多个平台分别订阅。
 
 | 平台 | 平台 ID | 新增订阅的方法 |
 | --- | --- | --- |
 | YouTube | `youtube` | 核实具体频道的官方身份与 channel ID，配置该频道原生 RSS |
 | TikTok | `tiktok` | 核实具体账号，配置实际可用的 RSSHub 路由或转换服务订阅 |
 | X | `x` | 核实具体账号，配置实际可用的 RSSHub 路由或转换服务订阅 |
+| Threads | `threads` | 核实具体账号；RSSHub 路由 `/threads/用户名`，需检查实例可读性 |
 | 微信公众号 | `wechat` | 核实具体公众号身份及转换服务 RSS 地址，以公众号名称登记来源；目前尚无已登记的具体公众号订阅 |
 
-增加负责人时，先在 `people` 登记身份与关联对象，再为每个博客／媒体账号分别登记来源。通过官网反链、官方团队介绍或官方项目依据核实身份与账号后，才能设置 `verification: verified`。新增 X、TikTok、微信公众号等账号时，需核实转换服务对该账号实际可用；参考已有来源的 `feed_route_verification_url`，不只复制路由格式。
+增加负责人时，先在 `people` 登记身份与关联对象，再为每个博客／媒体账号分别登记来源。通过官网反链、官方团队介绍或官方项目依据核实身份与账号后，才能设置 `verification: verified`。新增媒体账号时，参考 `feed_route_verification_url` 核实转换服务路由，并检查实际可读性；尚未取回 RSS 时保留检查说明，不能仅凭路由存在宣称列表、正文或覆盖已可用。
 
 YouTube 和 TikTok 的标题、简介属于视频元数据。只有订阅实际提供正文或字幕时，才能据其内容总结；记录 `metadata_only`、`partial_text` 或 `full_text`，没有字幕不声称已经总结完整视频。
 

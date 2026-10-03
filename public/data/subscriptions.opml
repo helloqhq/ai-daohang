@@ -22,11 +22,17 @@
     <outline text="MiniMax Code CLI Releases" title="MiniMax Code CLI Releases" type="rss" xmlUrl="https://github.com/MiniMax-AI/minimax-code/releases.atom" htmlUrl="https://github.com/MiniMax-AI/minimax-code/releases" category="github" />
     <outline text="Claude Code 发布订阅" title="Claude Code 发布订阅" type="rss" xmlUrl="https://github.com/anthropics/claude-code/releases.atom" htmlUrl="https://github.com/anthropics/claude-code/releases" category="web" />
     <outline text="Sam Altman 个人博客" title="Sam Altman 个人博客" type="rss" xmlUrl="https://blog.samaltman.com/posts.atom" htmlUrl="https://blog.samaltman.com/posts.atom" category="web" />
+    <outline text="Dario Amodei 个人博客" title="Dario Amodei 个人博客" type="rss" xmlUrl="https://ivryb--01a055e0b1fb7668a7f2de979a8284f4.web.val.run/" htmlUrl="https://www.darioamodei.com/" category="web" />
     <outline text="OpenAI YouTube" title="OpenAI YouTube" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A" htmlUrl="https://www.youtube.com/OpenAI" category="youtube" />
     <outline text="OpenAI X" title="OpenAI X" type="rss" xmlUrl="https://rsshub.app/twitter/user/OpenAI" htmlUrl="https://x.com/OpenAI" category="x" />
     <outline text="ZCode X" title="ZCode X" type="rss" xmlUrl="https://rsshub.app/twitter/user/zcode_ai" htmlUrl="https://x.com/zcode_ai" category="x" />
     <outline text="OpenAI TikTok" title="OpenAI TikTok" type="rss" xmlUrl="https://rsshub.app/tiktok/user/@openai" htmlUrl="https://www.tiktok.com/@openai" category="tiktok" />
     <outline text="OpenRouter 官方博客" title="OpenRouter 官方博客" type="rss" xmlUrl="https://openrouter.ai/blog/feed.xml" htmlUrl="https://openrouter.ai/blog/all/" category="web" />
     <outline text="DeepTutor Releases" title="DeepTutor Releases" type="rss" xmlUrl="https://github.com/HKUDS/DeepTutor/releases.atom" htmlUrl="https://github.com/HKUDS/DeepTutor/releases" category="github" />
+    <outline text="马斯克 Elon Musk · X" title="马斯克 Elon Musk · X" type="rss" xmlUrl="https://rsshub.app/twitter/user/elonmusk" htmlUrl="https://x.com/elonmusk" category="x" />
+    <outline text="扎克伯格 Mark Zuckerberg · Threads" title="扎克伯格 Mark Zuckerberg · Threads" type="rss" xmlUrl="https://rsshub.app/threads/zuck" htmlUrl="https://www.threads.net/@zuck" category="threads" />
+    <outline text="Demis Hassabis · X" title="Demis Hassabis · X" type="rss" xmlUrl="https://rsshub.app/twitter/user/demishassabis" htmlUrl="https://x.com/demishassabis" category="x" />
+    <outline text="Jeff Dean · X" title="Jeff Dean · X" type="rss" xmlUrl="https://rsshub.app/twitter/user/JeffDean" htmlUrl="https://x.com/JeffDean" category="x" />
+    <outline text="黄仁勋 Jensen Huang · NVIDIA 署名文章" title="黄仁勋 Jensen Huang · NVIDIA 署名文章" type="rss" xmlUrl="https://blogs.nvidia.com/blog/author/jen-hsun-huang/feed/" htmlUrl="https://blogs.nvidia.com/blog/author/jen-hsun-huang/" category="web" />
   </body>
 </opml>

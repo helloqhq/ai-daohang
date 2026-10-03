@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "snapshot_id": "7c21cb9b2147cf60",
+  "snapshot_id": "839f80a866877be8",
   "entities": [
     {
       "id": "openai",
@@ -157,6 +157,30 @@
       "kind": "api_platform",
       "enabled": true,
       "color": "#476c91"
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "aliases": [
+        "nvidia",
+        "英伟达"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#527d32"
+    },
+    {
+      "id": "discovery-loop",
+      "name": "Discovery Loop",
+      "aliases": [
+        "discovery loop",
+        "discoveryloop"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#527d69"
     },
     {
       "id": "codex",
@@ -460,7 +484,8 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "subscription_note": "2026-10-03 核查：文档站的 /rss.xml、/feed.xml 和发布页订阅路径均返回 404；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需可用转换订阅。",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "moonshot-official",
@@ -482,7 +507,8 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "subscription_note": "2026-10-03 核查：官网及博客的候选 RSS 地址返回 HTML 页面；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需博客转换订阅。",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "minimax-official",
@@ -504,7 +530,8 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "subscription_note": "2026-10-03 核查：官网候选 RSS 地址返回 HTML，博客 /rss.xml 与 /feed.xml 返回 404；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需博客转换订阅。",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "tencent-official",
@@ -526,7 +553,8 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "subscription_note": "2026-10-03 核查：官网候选 RSS 地址返回 HTML 页面；RSSHub 与 RSS-Bridge 未找到混元官网的专用路由，仍需可用转换订阅。",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "meituan-official",
@@ -569,7 +597,8 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "subscription_note": "2026-10-03 核查：第三方候选 https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_xainews.xml 可解析 39 条，但最新条目停留于 2026-05-21，早于官网最新新闻；暂不接入停更候选，仍需持续更新的新闻订阅。",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "meta-official",
@@ -636,7 +665,8 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "subscription_note": "2026-10-03 核查：文档站和发布页候选 RSS 地址返回 404，qoder.com/releases/feed.xml 也返回 404；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需更新页转换订阅。",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "trae-official",
@@ -658,7 +688,8 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "subscription_note": "2026-10-03 核查：中文版文档入口及候选 RSS 地址返回 HTTP 400，尚无法确认订阅；RSSHub 与 RSS-Bridge 未找到对应专用路由，保留中文版入口。",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "zcode-official",
@@ -680,7 +711,8 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "subscription_note": "2026-10-03 核查：官网候选 RSS 地址返回 HTML，更新页 /rss.xml 返回 404；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需更新页转换订阅。",
+      "feed_checked_at": "2026-10-03"
     },
     {
       "id": "codex-releases",
@@ -905,16 +937,18 @@
       "verification": "verified",
       "verification_url": "https://www.anthropic.com/company/leadership",
       "capabilities": {
-        "list": false,
+        "list": true,
         "text": true,
         "captions": false,
         "complete_window": false
       },
       "person_id": "dario-amodei",
       "adapter": "rss",
-      "feed_url": null,
-      "feed_provider": "pending",
-      "subscription_note": "尚未核实可用 RSS；待登记官方订阅或转换服务提供的地址。"
+      "feed_url": "https://ivryb--01a055e0b1fb7668a7f2de979a8284f4.web.val.run/",
+      "feed_provider": "third_party",
+      "subscription_note": "第三方转换 RSS，原文链接指向 Dario 官网。2026-10-03 核实可解析 6 篇文章链接；仅提供标题与链接，无正文和发布时间，不能用于确认完整时间窗。",
+      "feed_verification_url": "https://www.val.town/x/ivryb/dario-amodei-rss",
+      "feed_verified_at": "2026-10-03"
     },
     {
       "id": "openai-youtube",
@@ -1050,6 +1084,138 @@
       "feed_url": "https://github.com/HKUDS/DeepTutor/releases.atom",
       "feed_provider": "native",
       "feed_verified_at": "2026-10-03"
+    },
+    {
+      "id": "elon-musk-x",
+      "name": "马斯克 Elon Musk · X",
+      "entity_ids": [
+        "grok"
+      ],
+      "url": "https://x.com/elonmusk",
+      "platform": "x",
+      "person_id": "elon-musk",
+      "account_handle": "elonmusk",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://ir.tesla.com/_flysystem/s3/sec/000110465924070994/tm2413800d27_defa14a-gen.pdf",
+      "capabilities": {
+        "list": false,
+        "text": false,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/twitter/user/elonmusk",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/twitter/user/elonmusk",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/twitter/user.ts",
+      "feed_checked_at": "2026-10-03",
+      "subscription_note": "Tesla 联合创始人、CEO；关注 Grok、AI 与机器人相关动态，其他话题按编辑规则过滤。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。"
+    },
+    {
+      "id": "mark-zuckerberg-threads",
+      "name": "扎克伯格 Mark Zuckerberg · Threads",
+      "entity_ids": [
+        "meta"
+      ],
+      "url": "https://www.threads.net/@zuck",
+      "platform": "threads",
+      "person_id": "mark-zuckerberg",
+      "account_handle": "zuck",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://about.fb.com/news/2023/07/introducing-threads-new-app-text-sharing/",
+      "capabilities": {
+        "list": false,
+        "text": false,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/threads/zuck",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/threads/zuck",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/threads/index.ts",
+      "feed_checked_at": "2026-10-03",
+      "subscription_note": "Meta 创始人、CEO；关注 Meta AI、模型与相关产品动态。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。"
+    },
+    {
+      "id": "demis-hassabis-x",
+      "name": "Demis Hassabis · X",
+      "entity_ids": [
+        "google"
+      ],
+      "url": "https://x.com/demishassabis",
+      "platform": "x",
+      "person_id": "demis-hassabis",
+      "account_handle": "demishassabis",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+      "capabilities": {
+        "list": false,
+        "text": false,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/twitter/user/demishassabis",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/twitter/user/demishassabis",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/twitter/user.ts",
+      "feed_checked_at": "2026-10-03",
+      "subscription_note": "Google DeepMind 主席、Alphabet 首席科学家；关注模型、AGI 与 AI 科学研究动态。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。"
+    },
+    {
+      "id": "jeff-dean-x",
+      "name": "Jeff Dean · X",
+      "entity_ids": [
+        "discovery-loop"
+      ],
+      "url": "https://x.com/JeffDean",
+      "platform": "x",
+      "person_id": "jeff-dean",
+      "account_handle": "JeffDean",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://research.google/blog/the-google-brain-team-looking-back-on-2017-part-2-of-2/",
+      "capabilities": {
+        "list": false,
+        "text": false,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://rsshub.app/twitter/user/JeffDean",
+      "feed_provider": "rsshub",
+      "rsshub_route": "/twitter/user/JeffDean",
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/twitter/user.ts",
+      "feed_checked_at": "2026-10-03",
+      "subscription_note": "Discovery Loop 联合创始人、前 Google 首席科学家；关注机器学习、AI 研究与工程动态。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。"
+    },
+    {
+      "id": "jensen-huang-blog",
+      "name": "黄仁勋 Jensen Huang · NVIDIA 署名文章",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/",
+      "platform": "web",
+      "person_id": "jensen-huang",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/feed/",
+      "feed_provider": "native",
+      "feed_verified_at": "2026-10-03",
+      "subscription_note": "NVIDIA 创始人、总裁兼 CEO；官方本人署名文章 RSS，已解析 10 篇文章（9 篇含正文、1 篇仅元数据），均有发布时间；仅覆盖该作者博客，不代表全部个人动态。"
     }
   ],
   "people": [
@@ -1068,6 +1234,51 @@
         "anthropic"
       ],
       "verification_url": "https://www.anthropic.com/company/leadership"
+    },
+    {
+      "id": "elon-musk",
+      "name": "马斯克 Elon Musk",
+      "entity_ids": [
+        "grok"
+      ],
+      "role": "Tesla 联合创始人、CEO",
+      "verification_url": "https://www.tesla.com/elon-musk"
+    },
+    {
+      "id": "mark-zuckerberg",
+      "name": "扎克伯格 Mark Zuckerberg",
+      "entity_ids": [
+        "meta"
+      ],
+      "role": "Meta 创始人、CEO",
+      "verification_url": "https://about.fb.com/news/2026/01/dina-powell-mccormick-joins-meta-as-president-and-vice-chairman/"
+    },
+    {
+      "id": "jensen-huang",
+      "name": "黄仁勋 Jensen Huang",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "role": "NVIDIA 创始人、总裁兼 CEO",
+      "verification_url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/"
+    },
+    {
+      "id": "demis-hassabis",
+      "name": "Demis Hassabis",
+      "entity_ids": [
+        "google"
+      ],
+      "role": "Google DeepMind 主席、Alphabet 首席科学家",
+      "verification_url": "https://blog.google/authors/demis-hassabis/"
+    },
+    {
+      "id": "jeff-dean",
+      "name": "Jeff Dean",
+      "entity_ids": [
+        "discovery-loop"
+      ],
+      "role": "Discovery Loop 联合创始人；前 Google 首席科学家",
+      "verification_url": "https://www.discoveryloop.com/"
     }
   ],
   "platforms": [
@@ -1086,6 +1297,12 @@
     {
       "id": "x",
       "name": "X",
+      "adapter": "rss",
+      "requires_account_configuration": true
+    },
+    {
+      "id": "threads",
+      "name": "Threads",
       "adapter": "rss",
       "requires_account_configuration": true
     },

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "snapshot_id": "7c21cb9b2147cf60",
+  "snapshot_id": "839f80a866877be8",
   "sources": [
     {
       "source_id": "openai-official",
@@ -297,7 +297,7 @@
       "reviewed_through": null,
       "uncovered_from": "2026-09-30T03:22:33.222816+00:00",
       "pending_count": 0,
-      "note": "RSS 订阅待配置"
+      "note": "订阅地址已变更，待重新检查"
     },
     {
       "source_id": "openai-youtube",
@@ -356,6 +356,61 @@
     },
     {
       "source_id": "deeptutor-releases",
+      "status": "not_attempted",
+      "verification": "verified",
+      "last_attempt_at": null,
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": null,
+      "pending_count": 0,
+      "note": "订阅地址已变更，待重新检查"
+    },
+    {
+      "source_id": "elon-musk-x",
+      "status": "not_attempted",
+      "verification": "verified",
+      "last_attempt_at": null,
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": null,
+      "pending_count": 0,
+      "note": "订阅地址已变更，待重新检查"
+    },
+    {
+      "source_id": "mark-zuckerberg-threads",
+      "status": "not_attempted",
+      "verification": "verified",
+      "last_attempt_at": null,
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": null,
+      "pending_count": 0,
+      "note": "订阅地址已变更，待重新检查"
+    },
+    {
+      "source_id": "demis-hassabis-x",
+      "status": "not_attempted",
+      "verification": "verified",
+      "last_attempt_at": null,
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": null,
+      "pending_count": 0,
+      "note": "订阅地址已变更，待重新检查"
+    },
+    {
+      "source_id": "jeff-dean-x",
+      "status": "not_attempted",
+      "verification": "verified",
+      "last_attempt_at": null,
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": null,
+      "pending_count": 0,
+      "note": "订阅地址已变更，待重新检查"
+    },
+    {
+      "source_id": "jensen-huang-blog",
       "status": "not_attempted",
       "verification": "verified",
       "last_attempt_at": null,

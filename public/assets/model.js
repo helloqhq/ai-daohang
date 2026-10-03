@@ -1,6 +1,6 @@
 export const KIND_LABELS = { update: '正式更新', preview: '预览 / 预告', opinion: '负责人观点' };
 export const TOPIC_LABELS = {model_release:'模型发布',capability:'能力变化',api:'API',pricing:'价格变化',availability:'可用性',feature:'新功能',compatibility:'兼容性',critical_fix:'关键修复'};
-export const PLATFORM_LABELS = {web:'官网 / 博客',github:'GitHub',youtube:'YouTube',tiktok:'TikTok',x:'X',wechat:'微信公众号'};
+export const PLATFORM_LABELS = {web:'官网 / 博客',github:'GitHub',youtube:'YouTube',tiktok:'TikTok',x:'X',threads:'Threads',wechat:'微信公众号'};
 export function dateKey(value) {
   if (!value) return '';
   if (value.length === 10) return value;

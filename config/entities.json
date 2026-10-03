@@ -158,6 +158,30 @@
       "color": "#476c91"
     },
     {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "aliases": [
+        "nvidia",
+        "英伟达"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#527d32"
+    },
+    {
+      "id": "discovery-loop",
+      "name": "Discovery Loop",
+      "aliases": [
+        "discovery loop",
+        "discoveryloop"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#527d69"
+    },
+    {
       "id": "codex",
       "name": "Codex",
       "aliases": [

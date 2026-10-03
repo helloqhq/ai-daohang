@@ -1,5 +1,5 @@
 {
-  "rules_version": "1",
+  "rules_version": "2",
   "first_lookback_days": 3,
   "overlap_hours": 48,
   "request_timeout_seconds": 18,

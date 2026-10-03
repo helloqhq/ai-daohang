@@ -1,7 +1,45 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "27550bfe85c85489",
+  "snapshot_id": "3bf479d156e0acf1",
   "events": [
+    {
+      "id": "elon-musk-x-2106293251233738928",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "preview",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "马斯克称 Terafab 的目标是每年生产 1 TW 算力",
+      "summary_zh": "马斯克表示，TSMC 对 Terafab 的任何贡献都只是补充；Terafab 的目标是每年生产 1 TW 算力，并称这约为全球当前 AI 算力产出的 50 倍。这是他的规模目标与比较，原帖没有给出达成时间。",
+      "key_points_zh": [
+        "马斯克称 Terafab 的目标为每年生产 1 TW 算力，TSMC 的贡献将是补充。",
+        "他称目标约为当前全球 AI 算力产出的 50 倍；帖子没有提供达成时间或已实现产能。"
+      ],
+      "importance_reason_zh": "保留负责人关于 AI 算力生产规模的一手目标表述，便于后续跟踪。",
+      "title_en": "Musk says Terafab targets 1 TW of compute production per year",
+      "summary_en": "Musk says any TSMC contribution to Terafab would be supplemental. He describes a goal of 1 TW of compute production per year, around 50 times current global AI compute output. These are his target and comparison; the post gives no date for achieving them.",
+      "key_points_en": [
+        "Musk describes a Terafab target of 1 TW of compute production per year, with TSMC’s contribution being supplemental.",
+        "He says the target is around 50 times current global AI compute output; the post gives neither an achievement date nor achieved capacity."
+      ],
+      "importance_reason_en": "Preserves a firsthand AI compute-production scale target from a verified leader for subsequent follow-up.",
+      "published_at": "2026-10-03T08:00:18+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T13:30:39+00:00",
+      "updated_at": "2026-10-03T13:50:02.893475+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2106293251233738928",
+          "url": "https://x.com/elonmusk/status/2106293251233738928",
+          "collected_at": "2026-10-03T13:30:39+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-03T08:00:18+00:00"
+        }
+      ]
+    },
     {
       "id": "deepseek-harness-v021-alpha1",
       "entity_ids": [
@@ -49,6 +87,162 @@
       "importance_reason_en": "Affects automation mode availability, cross-ecosystem plugin experiments and existing extension compatibility. Users of old plugin diagnostics or statistics extensions need to review migration requirements."
     },
     {
+      "id": "tibo-x-2106252868307271752",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "preview",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Tibo：未来模型会更擅长删除和简化代码",
+      "summary_zh": "Tibo 表示，未来模型会更擅长代码删除与简化，并称这会来得正是时候。原帖未给出模型名称或上线时间。",
+      "key_points_zh": [
+        "这是一则关于未来模型代码能力的一手预告。",
+        "原帖未说明具体模型、提升幅度或可用日期。"
+      ],
+      "importance_reason_zh": "保留 Codex 负责人对未来代码能力方向的一手预告，便于跟踪后续进展。",
+      "title_en": "Tibo: future models will be better at deleting and simplifying code",
+      "summary_en": "Tibo says future models will be much better at code deletion and simplification, adding that this will come just in time. The post does not name a model or give a launch date.",
+      "key_points_en": [
+        "This is a firsthand preview of future models’ coding capabilities.",
+        "The post does not specify a model, the size of the improvement or an availability date."
+      ],
+      "importance_reason_en": "Preserves a firsthand preview from the Codex lead about future coding capabilities for follow-up.",
+      "published_at": "2026-10-03T05:19:50+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T13:30:39+00:00",
+      "updated_at": "2026-10-03T13:50:02.893475+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106252868307271752",
+          "url": "https://x.com/thsottiaux/status/2106252868307271752",
+          "collected_at": "2026-10-03T13:30:39+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-03T05:19:50+00:00"
+        }
+      ]
+    },
+    {
+      "id": "tibo-x-2106239435461579088",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Tibo 表示问题已修复，并提到 Pro 500 用户",
+      "summary_zh": "Tibo 发帖称“All fixed”，并表示这里的 Pro 500 用户数量出乎意料。该短帖未说明具体修复对象或受影响范围。",
+      "key_points_zh": [
+        "Tibo 的状态通报原文为“All fixed”。",
+        "他同时提到 Pro 500 用户；原帖没有展开故障原因或修复范围。"
+      ],
+      "importance_reason_zh": "保留负责人本人发布的修复状态，供读者追踪服务进展。",
+      "title_en": "Tibo says “All fixed” and comments on Pro 500 users",
+      "summary_en": "Tibo posts “All fixed” and says there are a surprising number of Pro 500 users here. The short post does not specify what was fixed or the affected scope.",
+      "key_points_en": [
+        "Tibo’s status update reads “All fixed”.",
+        "He also mentions Pro 500 users; the post does not explain the cause or scope of the fix."
+      ],
+      "importance_reason_en": "Preserves the lead’s firsthand repair-status update so readers can follow service developments.",
+      "published_at": "2026-10-03T04:26:28+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T13:30:39+00:00",
+      "updated_at": "2026-10-03T13:50:02.893475+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106239435461579088",
+          "url": "https://x.com/thsottiaux/status/2106239435461579088",
+          "collected_at": "2026-10-03T13:30:39+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-03T04:26:28+00:00"
+        }
+      ]
+    },
+    {
+      "id": "tibo-x-2106233145163141249",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Tibo：正调查 Pro 500 未按预期重置的反馈",
+      "summary_zh": "Tibo 表示，收到了一些 Pro 500 未按此前预期获得重置的报告，正在调查，并将作出补偿。原帖未列出具体重置规则或补偿方案。",
+      "key_points_zh": [
+        "部分用户报告 Pro 500 没有获得预期重置，Tibo 表示正在调查。",
+        "Tibo 表示会作出补偿，但帖子未说明具体措施或完成时间。"
+      ],
+      "importance_reason_zh": "保留直接影响用户预期的负责人调查与补偿表态。",
+      "title_en": "Tibo investigates reports that Pro 500 did not receive the expected reset",
+      "summary_en": "Tibo says he has seen reports that Pro 500 did not receive the expected reset earlier, is investigating and will make up for it. The post does not detail the reset rules or a compensation plan.",
+      "key_points_en": [
+        "Some users report that Pro 500 did not receive the expected reset; Tibo says he is investigating.",
+        "Tibo says he will make up for it, without specifying the measures or completion time."
+      ],
+      "importance_reason_en": "Preserves a firsthand investigation and compensation statement that affects user expectations.",
+      "published_at": "2026-10-03T04:01:28+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T13:30:39+00:00",
+      "updated_at": "2026-10-03T13:50:02.893475+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106233145163141249",
+          "url": "https://x.com/thsottiaux/status/2106233145163141249",
+          "collected_at": "2026-10-03T13:30:39+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-03T04:01:28+00:00"
+        }
+      ]
+    },
+    {
+      "id": "tibo-x-2106226725428572371",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Tibo 谈 dots：持续改进，并从用户反馈中学习",
+      "summary_zh": "Tibo 认为，这个“小世界”里的 dots 数量已经超过 bots。他表示团队每天都在改进它们，它们直接从用户反馈中学习；原帖没有解释具体实现机制。",
+      "key_points_zh": [
+        "Tibo 认为 dots 的数量已超过 bots，这是他的个人判断。",
+        "他称团队每天改进它们，它们直接从用户反馈中学习；帖子未说明“学习”的技术实现。"
+      ],
+      "importance_reason_zh": "保留负责人对 dots 使用情况与改进方向的一手观察。",
+      "title_en": "Tibo on dots: daily improvements and learning from user feedback",
+      "summary_en": "Tibo says he is pretty sure there are already more dots than bots in this “little world”. He says the team improves them every day and they learn directly from user feedback, without explaining the mechanism.",
+      "key_points_en": [
+        "Tibo believes dots already outnumber bots; this is his personal assessment.",
+        "He says the team improves them every day and they learn directly from user feedback; the post does not explain how that learning works."
+      ],
+      "importance_reason_en": "Preserves the lead’s firsthand observations about dots usage and the direction of improvements.",
+      "published_at": "2026-10-03T03:35:57+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T13:30:39+00:00",
+      "updated_at": "2026-10-03T13:50:02.893475+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106226725428572371",
+          "url": "https://x.com/thsottiaux/status/2106226725428572371",
+          "collected_at": "2026-10-03T13:30:39+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-03T03:35:57+00:00"
+        }
+      ]
+    },
+    {
       "id": "copilot-cli-1092-pre3",
       "entity_ids": [
         "copilot"
@@ -88,6 +282,45 @@
         "Subagents can continue after authentication replacement; fixes input ordering behavior."
       ],
       "importance_reason_en": "Adds a choice of task execution environment, but remains a preview release."
+    },
+    {
+      "id": "tibo-x-2106131810921136451",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Tibo：重置已全部生效",
+      "summary_zh": "Tibo 发帖称“Reset all propagated. Enjoy.”，表示重置已经全部传递生效。该短帖没有交代重置对象或额度规则。",
+      "key_points_zh": [
+        "Tibo 表示重置已全部传递生效。",
+        "原帖未说明涉及的产品、账户范围或额度规则。"
+      ],
+      "importance_reason_zh": "保留负责人简短的重置状态通报，便于跟踪实际使用相关动态。",
+      "title_en": "Tibo says the reset has fully propagated",
+      "summary_en": "Tibo posts “Reset all propagated. Enjoy.”, saying that the reset has fully propagated. The short post does not identify what was reset or the quota rules.",
+      "key_points_en": [
+        "Tibo says the reset has fully propagated.",
+        "The post does not specify the product, account scope or quota rules."
+      ],
+      "importance_reason_en": "Preserves the lead’s brief reset-status update for following developments relevant to usage.",
+      "published_at": "2026-10-02T21:18:48+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T13:30:39+00:00",
+      "updated_at": "2026-10-03T13:50:02.893475+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106131810921136451",
+          "url": "https://x.com/thsottiaux/status/2106131810921136451",
+          "collected_at": "2026-10-03T13:30:39+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-02T21:18:48+00:00"
+        }
+      ]
     },
     {
       "id": "claude-code-v21288",
@@ -345,6 +578,44 @@
       "importance_reason_en": "Adds plugin capabilities and fixes concrete permission-control gaps."
     },
     {
+      "id": "elon-musk-x-2105718806769512812",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "preview",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "马斯克：Star Mind 超级智能航天器将拥有超过 250 kW 太阳能功率",
+      "summary_zh": "马斯克称，每艘 SpaceX Star Mind 超级智能航天器将拥有超过 250 kW 的太阳能功率，约比国际空间站高 20%。这是他对未来配置的表述，原帖没有提供部署时间。",
+      "key_points_zh": [
+        "马斯克给出的目标是每艘 Star Mind 航天器超过 250 kW 太阳能功率。",
+        "他称这一功率约比国际空间站高 20%；帖子未说明部署时间。"
+      ],
+      "importance_reason_zh": "保留已核实负责人对 AI 基础设施的一手预告，规模比较保留本人归属。",
+      "title_en": "Musk: Star Mind superintelligence spacecraft will have over 250 kW of solar power",
+      "summary_en": "Musk says each SpaceX Star Mind superintelligence spacecraft will have over 250 kW of solar power, about 20% more than the International Space Station. This describes a future configuration; the post gives no deployment date.",
+      "key_points_en": [
+        "Musk describes a target of over 250 kW of solar power for each Star Mind spacecraft.",
+        "He says this is about 20% more than the International Space Station; the post gives no deployment date."
+      ],
+      "importance_reason_en": "Preserves a verified leader’s firsthand AI infrastructure preview, with the scale comparison attributed to him.",
+      "published_at": "2026-10-01T17:57:40+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-03T13:30:39+00:00",
+      "updated_at": "2026-10-03T13:50:02.893475+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2105718806769512812",
+          "url": "https://x.com/elonmusk/status/2105718806769512812",
+          "collected_at": "2026-10-03T13:30:39+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-01T17:57:40+00:00"
+        }
+      ]
+    },
+    {
       "id": "copilot-cli-1091",
       "entity_ids": [
         "copilot"
@@ -357,7 +628,7 @@
       "title_zh": "Copilot CLI 1.0.91：完善 Windows 沙箱与证书管理",
       "summary_zh": "正式版本为沙箱 CA 增加检查、创建、信任、轮换与移除能力，同时调整 Windows 环境兼容性及执行证据审查。",
       "key_points_zh": [
-        "/sandboxca install 执行创建及信任操作；改进 Windows 无人值守设置。",
+        "新增 copilot sandbox ca 命令，可检查、创建、信任、轮换和移除代理 CA 信任，并支持 Windows 无人值守设置；/sandbox ca install 改为 create 和 trust。",
         "可静态分析的完整只读命令管道进入执行证据审查；不完整的分析仍要求明确批准。",
         "改善 node/npm 的 EACCES 网络绕行处理及沙箱行为。"
       ],
@@ -365,7 +636,7 @@
       "published_at": "2026-10-01T17:25:02Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T11:06:49+00:00",
+      "updated_at": "2026-10-03T13:33:44.379717+00:00",
       "sources": [
         {
           "source_id": "copilot-releases",
@@ -382,11 +653,19 @@
       "title_en": "Copilot CLI 1.0.91: Windows sandbox and certificate management improvements",
       "summary_en": "This stable release adds sandbox CA inspection, creation, trust, rotation and removal, while improving Windows compatibility and execution evidence review.",
       "key_points_en": [
-        "/sandboxca install creates and trusts the CA; improves unattended Windows setup.",
+        "Adds copilot sandbox ca commands to check, create, trust, rotate and remove proxy CA trust, including unattended Windows setup; /sandbox ca install becomes create and trust.",
         "Complete read-only command pipelines that can be statically analyzed enter execution evidence review; incomplete analysis still requires explicit approval.",
         "Improves network bypass handling for node/npm EACCES errors and sandbox behavior."
       ],
-      "importance_reason_en": "Directly affects Windows usage, networked tools and permission decisions."
+      "importance_reason_en": "Directly affects Windows usage, networked tools and permission decisions.",
+      "corrections": [
+        {
+          "at": "2026-10-03T13:33:44.379717+00:00",
+          "reason_zh": "对照当前官方 RSS 原文，更正旧摘要中误写的 /sandboxca install，并补齐 /sandbox ca install 改为 create 和 trust 的命令迁移说明。",
+          "reason_en": "Checked against the current official RSS text, corrected the misspelled /sandboxca install in the previous summary and clarified that /sandbox ca install becomes create and trust.",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.91"
+        }
+      ]
     },
     {
       "id": "gemini-cli-nightly-20261001",

@@ -9,11 +9,11 @@
 - Custom domain 指定 go2-ai.com；与其他仓库的域名设置独立。
 - 页面和 JSON 均使用相对路径，域名切换无需修改信息流或数据契约。
 
-## DNS 待配置
+## DNS 已配置
 
-2026-10-03 查到域名使用 ns1.dns-parking.com 和 ns2.dns-parking.com。当前根域 A 记录为 77.37.48.234、179.61.189.0，AAAA 为 Hostinger 地址；www CNAME 指向 Hostinger CDN，尚未指向 GitHub Pages。
+2026-10-03 已在用户现有、已登录的 Chrome 中完成阿里云配置。域名注册商为阿里云，DNS 服务器已从 Hostinger 的 ns1.dns-parking.com / ns2.dns-parking.com 切换为 dns1.hichina.com / dns2.hichina.com。
 
-在该域名的 DNS 管理面板，将以下记录配置为：
+网站使用以下默认线路解析，TTL 为 600 秒：
 
 | 类型 | 主机名 | 值 |
 | --- | --- | --- |
@@ -23,15 +23,20 @@
 | A | @ | 185.199.111.153 |
 | CNAME | www | helloqhq.github.io |
 
-替换现有根域 A；移除原先根域 AAAA，以免 IPv6 仍访问旧服务器。若需要 IPv6，可配置 GitHub 官方列出的 AAAA 地址。www CNAME 替换现有 CDN 指向。邮件 MX、TXT 及其他无关子域记录保留。
+通过增量导入新增网站记录，阿里云中的六条旧根域 / www 网站记录已暂停，保留以便恢复；没有清空现有配置。新 DNS 区域不发布旧 Hostinger AAAA。两条既有 _acme-challenge TXT 保留。
+
+迁移前读取并增量保留了九条当前生效的 Hostinger 邮件记录：两条 MX、SPF、DMARC、三条 DKIM CNAME、autodiscover 与 autoconfig。MX 仍为 mx1.hostinger.com（优先级 5）和 mx2.hostinger.com（优先级 10）。
+
+已验证两台阿里云权威服务器上的 11 项网站及邮件解析均正确；Google 与 Cloudflare 的公开 DNS 查询也返回新 NS、四条 GitHub Pages A 地址，且根域 AAAA 为空。部分本地解析缓存可能暂时保留旧结果。
 
 CNAME 值仅包含 helloqhq.github.io，不包含仓库名或路径。具体规则及 IP 以 [GitHub 官方说明](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) 为准。
 
-## DNS 生效后
+## HTTPS 待完成
 
-1. 检查根域 A、AAAA 和 www CNAME 的解析是否与上方一致。
-2. 在仓库 Settings → Pages 查看 DNS 检查及证书状态。证书可用后启用 Enforce HTTPS。
-3. 验证根路径、assets/app.js、data/index.json、各月份 JSON 和 data/subscriptions.opml。
-4. 检查 JSON snapshot_id 一致、筛选和原文链接有效，再把域名作为正式在线入口。
+已在正确的 GitHub Pages IP 上使用 go2-ai.com Host 验证根页面、assets/app.js、data/index.json、catalog.json、coverage.json、两个月份 JSON 及 subscriptions.opml，全部返回 HTTP 200；JSON 与本地发布文件逐字节一致，snapshot_id 为 01be142a3cdc3eeb。
 
-DNS 传播及 HTTPS 证书可能需要等待。在验证完成前，文档只标记待上线，不声称独立域名已经可用。Actions 发布模式由 Pages 设置保存域名，不依赖构建中的 CNAME 文件。
+GitHub Pages 的域名绑定已重新保存以触发检查。目前 https_certificate 仍为空，直接 TLS 校验显示 GitHub 证书尚未包含 go2-ai.com。没有跳过证书校验或启用尚不可用的 HTTPS 强制跳转。
+
+证书签发后需启用 Enforce HTTPS，并使用 https://go2-ai.com/ 再验证上述页面、资源与数据。正式 HTTPS 入口通过验证前，不标记为全部上线完成。[GitHub HTTPS 说明](https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https) 说明证书会在 DNS 检查通过后自动申请。
+
+Actions 发布模式由 Pages 设置保存域名，不依赖构建中的 CNAME 文件。

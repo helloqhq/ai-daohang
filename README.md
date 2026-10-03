@@ -1,6 +1,6 @@
 # 知更 · AI 信息聚合
 
-正式域名：`go2-ai.com`（GitHub Pages 已绑定，DNS / HTTPS 待完成） · [项目仓库](https://github.com/helloqhq/ai-daohang)
+正式域名：`go2-ai.com`（GitHub Pages 与 DNS 已配置，HTTPS 证书待签发） · [项目仓库](https://github.com/helloqhq/ai-daohang)
 
 纯静态中文 AI 信息站。统一通过 RSS / Atom 订阅官方与已核实负责人信息，由用户已有 AI agent 调用采集 skill，筛选、翻译和归纳后产出 JSON。网站本身不抓取上游、不调用模型。
 

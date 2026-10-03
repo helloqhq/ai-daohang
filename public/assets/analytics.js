@@ -9,12 +9,12 @@ export function syncAnalytics(allowed) {
   if(!allowed) {
     if(enabled) {
       window.gtag('consent','update',{analytics_storage:'denied'});
-      for(const cookie of document.cookie.split(';')) {
-        const name=cookie.trim().split('=')[0];
-        if(!/^_ga(?:_|$)/.test(name)) continue;
-        for(const domain of ['', '; domain=go2-ai.com', '; domain=www.go2-ai.com']) {
-          document.cookie=`${name}=; Max-Age=0; path=/${domain}; Secure; SameSite=Lax`;
-        }
+    }
+    for(const cookie of document.cookie.split(';')) {
+      const name=cookie.trim().split('=')[0];
+      if(!/^_ga(?:_|$)/.test(name)) continue;
+      for(const domain of ['', '; domain=go2-ai.com', '; domain=www.go2-ai.com']) {
+        document.cookie=`${name}=; Max-Age=0; path=/${domain}; Secure; SameSite=Lax`;
       }
     }
     enabled=false;

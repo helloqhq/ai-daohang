@@ -1,6 +1,6 @@
 # 知更 · AI 信息聚合
 
-[在线访问](https://utool.top/ai-daohang/) · [项目仓库](https://github.com/helloqhq/ai-daohang)
+正式域名：`go2-ai.com`（GitHub Pages 已绑定，DNS / HTTPS 待完成） · [项目仓库](https://github.com/helloqhq/ai-daohang)
 
 纯静态中文 AI 信息站。统一通过 RSS / Atom 订阅官方与已核实负责人信息，由用户已有 AI agent 调用采集 skill，筛选、翻译和归纳后产出 JSON。网站本身不抓取上游、不调用模型。
 
@@ -63,7 +63,9 @@ RSSHub 路由参考其 [官方源码](https://github.com/DIYgod/RSSHub/tree/mast
 
 `.github/workflows/pages.yml` 在 main 分支推送或手动触发时测试、构建并部署到 GitHub Pages。它不运行采集、不创建定时任务。采集与发布分开。
 
-新建公开 GitHub 仓库，将本项目推送到 main，在仓库 Settings → Pages → Source 选择 GitHub Actions。流程按 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) 配置。本项目已部署；`https://helloqhq.github.io/ai-daohang/` 会沿用账号现有域名设置跳转到 `https://utool.top/ai-daohang/`。新账号默认地址为 `https://用户名.github.io/仓库名/`；所有资源及 JSON 使用相对路径，支持项目子路径。
+本项目使用公开仓库与 GitHub Pages，正式独立域名为 `go2-ai.com`，从域名根目录访问。Pages 的 Custom domain 设置为 `go2-ai.com`；DNS 与 HTTPS 上线步骤见 [独立域名配置](docs/DEPLOYMENT.md)。所有资源及 JSON 使用相对路径，兼容域名根目录和项目子路径。
+
+GitHub Actions 发布模式下，域名绑定由仓库 Settings → Pages 管理，构建不生成 CNAME 文件。参考 [GitHub 自定义域名说明](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)。
 
 ```sh
 git add public config schemas scripts tests skills docs GLOSSARY.md README.md package.json .gitignore .github

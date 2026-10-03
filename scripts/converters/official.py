@@ -16,7 +16,7 @@ SOURCES=('anthropic-official','deepseek-official','qwen-official','meta-official
          'zhipu-official','moonshot-official','minimax-official','tencent-official',
          'grok-official','qoder-official','trae-official','zcode-official','dario-blog',
          'google-official','openai-x','zcode-x','elon-musk-x','demis-hassabis-x',
-         'jeff-dean-x','openai-tiktok','mark-zuckerberg-threads')
+         'jeff-dean-x','tibo-x','openai-tiktok','mark-zuckerberg-threads')
 
 
 def date_text(text):

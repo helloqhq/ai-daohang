@@ -43,7 +43,7 @@ npm run build
 
 ### 当前各数据源
 
-以下清单对应 2026-10-03 的配置：38 个来源，18 个保留在线订阅，20 个使用按需离线转换。转换器覆盖 21 个目标（包括 Google 正文补充），本轮 19 个成功生成 RSS，TikTok 和 Threads 仍受限。**已配置不代表可读取或已完成判断**；实时配置看 `config/sources.json`，每轮采集结果看 `public/data/coverage.json` 和网站来源页。RSSHub 公共实例存在访问受限或路由不可用的情况。
+以下清单对应 2026-10-03 的配置：39 个来源，18 个保留在线订阅，21 个使用按需离线转换。转换器覆盖 22 个目标（包括 Google 正文补充）；新增 Tibo 的 X 已检查并成功生成 RSS，TikTok 和 Threads 仍受限。**已配置不代表可读取或已完成判断**；实时配置看 `config/sources.json`，每轮采集结果看 `public/data/coverage.json` 和网站来源页。RSSHub 公共实例存在访问受限或路由不可用的情况。
 
 #### 模型厂商、品牌与服务平台
 
@@ -93,6 +93,7 @@ OpenRouter 关注平台功能、API、价格及可用性的重要变化，普通
 | 负责人／账号 | 平台 | 来源 ID | 当前订阅 |
 | --- | --- | --- | --- |
 | Sam Altman 博客 | 网站／博客 | `sam-altman-blog` | 原生：`https://blog.samaltman.com/posts.atom`；关联 `person_id: sam-altman` |
+| Tibo（Thibault Sottiaux） | X | `tibo-x` | 按需离线转换：[X @thsottiaux](https://x.com/thsottiaux)；关联 OpenAI 与 Codex，公开列表有限，不代表完整覆盖 |
 | Dario Amodei 博客 | 网站／博客 | `dario-blog` | 按需离线转换：[Dario Amodei 个人博客](https://www.darioamodei.com/)；只标月份，不补造日期 |
 | 马斯克 Elon Musk | X | `elon-musk-x` | 按需离线转换：[马斯克 Elon Musk · X](https://x.com/elonmusk)；公开列表有限，不代表完整覆盖 |
 | 扎克伯格 Mark Zuckerberg | Threads | `mark-zuckerberg-threads` | 按需离线转换：[扎克伯格 Mark Zuckerberg · Threads](https://www.threads.net/@zuck)；匿名页未提供帖子列表，仍受限 |

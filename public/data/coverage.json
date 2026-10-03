@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "b1f77bb0bfdd915e",
+  "snapshot_id": "27550bfe85c85489",
   "sources": [
     {
       "source_id": "openai-official",
@@ -457,6 +457,19 @@
       "uncovered_from": null,
       "pending_count": 0,
       "note": "订阅条目覆盖查询起点，已读取该订阅时间窗"
+    },
+    {
+      "source_id": "tibo-x",
+      "status": "partial",
+      "verification": "verified",
+      "last_attempt_at": "2026-10-03T12:29:46+00:00",
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": "2026-09-30T12:28:54.736786+00:00",
+      "pending_count": 5,
+      "note": "离线 RSS 已导入，在线覆盖未确认",
+      "note_en": "Offline RSS imported; online coverage remains unconfirmed.",
+      "offline_import_at": "2026-10-03T12:29:46+00:00"
     }
   ]
 }

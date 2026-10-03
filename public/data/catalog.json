@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "b1f77bb0bfdd915e",
+  "snapshot_id": "27550bfe85c85489",
   "entities": [
     {
       "id": "openai",
@@ -1319,6 +1319,36 @@
       "subscription_note": "NVIDIA 创始人、总裁兼 CEO；官方本人署名文章 RSS，已解析 10 篇文章（9 篇含正文、1 篇仅元数据），均有发布时间；仅覆盖该作者博客，不代表全部个人动态。",
       "name_en": "Jensen Huang · NVIDIA Articles",
       "subscription_note_en": "NVIDIA founder, president and CEO. Official RSS for articles under his byline. Ten articles were parsed: nine with body text and one with metadata only, all with publication dates. Covers this author’s blog only, not all of his public activity."
+    },
+    {
+      "id": "tibo-x",
+      "name": "Tibo（Thibault Sottiaux）· X",
+      "name_en": "Tibo (Thibault Sottiaux) · X",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "url": "https://x.com/thsottiaux",
+      "platform": "x",
+      "person_id": "thibault-sottiaux",
+      "account_handle": "thsottiaux",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://forum.openai.com/public/events/codex-is-for-everyone-why-codex-matters-beyond-code-fa40puy7wi",
+      "account_verification_url": "https://community.openai.com/t/how-should-developers-plan-around-codex-resets/1395030/3",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "offline_conversion": true,
+      "subscription_note": "按需读取本人 X 公开帖子并转换为本地 RSS；2026-10-03 检查取得 5 条带日期帖子，按部分正文保存，不代表完整账号时间窗或定时推送。",
+      "subscription_note_en": "The account’s own public X posts are converted on demand to local RSS. The October 3, 2026 check retrieved five dated posts, stored as partial text; a complete account time window or scheduled notifications are not confirmed.",
+      "feed_checked_at": "2026-10-03"
     }
   ],
   "people": [
@@ -1389,6 +1419,23 @@
       "role": "Discovery Loop 联合创始人；前 Google 首席科学家",
       "verification_url": "https://www.discoveryloop.com/",
       "name_en": "Jeff Dean"
+    },
+    {
+      "id": "thibault-sottiaux",
+      "name": "Thibault “Tibo” Sottiaux",
+      "name_en": "Thibault “Tibo” Sottiaux",
+      "aliases": [
+        "Tibo",
+        "Thibault Sottiaux",
+        "thsottiaux"
+      ],
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "role": "OpenAI 技术团队成员，负责 Codex",
+      "role_en": "Member of Technical Staff at OpenAI, leading Codex",
+      "verification_url": "https://forum.openai.com/public/events/codex-is-for-everyone-why-codex-matters-beyond-code-fa40puy7wi"
     }
   ],
   "platforms": [

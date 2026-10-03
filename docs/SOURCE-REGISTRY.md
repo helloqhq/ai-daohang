@@ -34,6 +34,8 @@ Agent 应用／运行工具：Codex、Claude Code、Cursor、Gemini CLI、DeepSe
 
 负责人名单采用身份与账号可核实的明确名单，逐步扩展。
 
+2026-10-03 新增 Thibault “Tibo” Sottiaux，关联 OpenAI 与 Codex，订阅 [X @thsottiaux](https://x.com/thsottiaux)（来源 `tibo-x`，人物 `thibault-sottiaux`）。[OpenAI Forum 官方活动介绍](https://forum.openai.com/public/events/codex-is-for-everyone-why-codex-matters-beyond-code-fa40puy7wi)确认其姓名、昵称及负责 Codex 的身份；[OpenAI 开发者社区账号引用](https://community.openai.com/t/how-should-developers-plan-around-codex-resets/1395030/3)与本人 X 简介交叉核对账号。社区帖子是账号辅助依据，不作为官方产品公告。沿用现有 X 离线转换器，首次检查取得 5 条本人帖子及原始发布时间；仅保存部分正文，不保证完整时间窗，也不代表已启用定时推送。
+
 已按用户确认的推荐映射统一展示名，原始名称作为别名保留。Google 关联多条官方模型渠道；Grok 登记为模型品牌，厂商另行登记。Copilot 限定 GitHub Copilot 的 CLI、IDE Agent 等任务执行能力。后续新增歧义对象时先核实再确认，不凭同名搜索结果自动选择。
 
 ### 已确认的 Agent 身份

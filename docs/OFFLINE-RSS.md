@@ -27,7 +27,7 @@ python3 scripts/convert_feeds.py --offline
 
 `--offline` 只读此前缓存，缺少页面会记录失败。默认时间窗沿用各来源的未覆盖起点，其次用已获取进度，首次回溯 72 小时；显式回溯可用 `--since`、`--until`。转换同时补读已有待审阅材料的正文，以便核对历史队列。转换器不会自动判断重要性或生成新闻。
 
-原始缓存、RSS、清单和处置包均留在已忽略的 `.collector/`。20 个离线来源无公开订阅地址，不进入 OPML。Google 保留原生 RSS，离线转换仅补充正文。美团直接使用官方 `https://tech.meituan.com/atom.xml`；如需核对已有待审阅材料：
+原始缓存、RSS、清单和处置包均留在已忽略的 `.collector/`。21 个离线来源无公开订阅地址，不进入 OPML。Google 保留原生 RSS，离线转换仅补充正文。美团直接使用官方 `https://tech.meituan.com/atom.xml`；如需核对已有待审阅材料：
 
 ```sh
 python3 scripts/collect.py import-feed meituan-official /本地/atom.xml --since 查询起点 --until 查询终点 --reconcile-existing
@@ -41,7 +41,7 @@ python3 scripts/collect.py import-feed meituan-official /本地/atom.xml --since
 | 智谱、DeepSeek、Qoder、TRAE、ZCode | 官方更新页分段；同页版本使用独立内容标识，保留真实链接 |
 | Qwen | 公开文章检索接口的日期与正文 |
 | 腾讯混元 | 官网公开文章接口；采用页面显示日期，保留日期精度 |
-| OpenAI、ZCode、Elon Musk、Demis Hassabis、Jeff Dean 的 X | 匿名页面提供的本人帖子、日期与文本；列表有限，文本按 partial_text 保存 |
+| OpenAI、ZCode、Elon Musk、Demis Hassabis、Jeff Dean、Tibo 的 X | 匿名页面提供的本人帖子、日期与文本；列表有限，文本按 partial_text 保存 |
 | OpenAI TikTok、Zuckerberg Threads | 本轮匿名页面无帖子列表，记录 blocked；需可读取的登录态或订阅服务后才能继续 |
 | Dario | 6 篇官方文章全文；只标月份，保留 date_label，发布时间仍未知 |
 | Google DeepMind | 原生 RSS 发现条目，官方文章正文补充；MRSS 附件不会遮蔽 description |

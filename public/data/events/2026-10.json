@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "snapshot_id": "401134a7a4e79d82",
+  "schema_version": "1.1",
+  "snapshot_id": "8518f887b07d3f70",
   "events": [
     {
       "id": "deepseek-harness-v021-alpha1",
@@ -26,7 +26,7 @@
       "published_at": "2026-10-03T06:42:19Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T10:47:33+00:00",
-      "updated_at": "2026-10-03T10:50:21+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "deepseek-harness-releases",
@@ -36,7 +36,17 @@
           "material_scope": "full_text",
           "published_at": "2026-10-03T06:42:19Z"
         }
-      ]
+      ],
+      "title_en": "DeepSeek Harness 0.2.1-alpha.1: experimental Claude Code Mods compatibility and automation changes",
+      "summary_en": "DeepSeek Harness releases the 0.2.1-alpha.1 preview with an experimental Claude Code Mods compatibility layer. It currently tests API capability mappings and does not provide complete, practical compatibility. Automation becomes built into the Web interface, with breaking changes to plugin and extension interfaces. The release also fixes messages stuck in the queue after repeated task stops and Windows desktop startup failures caused by reserved ports.",
+      "key_points_en": [
+        "The experimental Claude Code Mods layer mainly tests whether its API capabilities roughly form a subset of Harness plugin capabilities; it does not establish full compatibility.",
+        "Automation becomes built into the Web interface. Reminder tools are available in standard, creative and PTC modes, but not in minimal mode or subagents. Old experimental bundle selections are cleared; existing tasks are retained.",
+        "Web adds --public-url to display, open and provide the external URL to the model, including reverse-proxy URLs with path prefixes.",
+        "Removes the runtime invariant plugin and ./invariant exports from packages. Extensions and custom profiles using these diagnostics must be updated. Subpath plugins no longer read a separate package.json. Input statistics extensions split into activity and usage; plugins overriding the old stats row need updated registration IDs.",
+        "Fixes new messages remaining queued after a target task is stopped, resumed and stopped again. Desktop uses a system-assigned port by default to avoid Windows reserved-port startup failures. Fixes missing bundle dependencies and mappings left after disabling bundles; replacing an installed bundle version still requires a restart."
+      ],
+      "importance_reason_en": "Affects automation mode availability, cross-ecosystem plugin experiments and existing extension compatibility. Users of old plugin diagnostics or statistics extensions need to review migration requirements."
     },
     {
       "id": "copilot-cli-1092-pre3",
@@ -59,7 +69,7 @@
       "published_at": "2026-10-02T22:06:14Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "copilot-releases",
@@ -69,7 +79,15 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-10-02T22:06:14Z"
         }
-      ]
+      ],
+      "title_en": "Copilot CLI 1.0.92-3 preview: choose a local or cloud environment before chatting",
+      "summary_en": "This preview adds a Ctrl+E environment picker to switch between local and cloud execution before starting a conversation, and improves sandbox networking and subagent authentication continuity.",
+      "key_points_en": [
+        "Ctrl+E selects the local or cloud environment before a conversation starts.",
+        "Shows sandbox network bypass hints when a proxy intercepts network traffic.",
+        "Subagents can continue after authentication replacement; fixes input ordering behavior."
+      ],
+      "importance_reason_en": "Adds a choice of task execution environment, but remains a preview release."
     },
     {
       "id": "claude-code-v21288",
@@ -92,7 +110,7 @@
       "published_at": "2026-10-02T20:19:57Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T03:22:34+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "claude-code-changelog",
@@ -105,7 +123,15 @@
       ],
       "related_event_ids": [
         "claude-code-v21287"
-      ]
+      ],
+      "title_en": "Claude Code 2.1.288: better long-session recovery and MCP authorization",
+      "summary_en": "This stable release fixes context loss during timeouts, automatic compaction and session recovery, and allows MCP tools to request additional OAuth permissions when called.",
+      "key_points_en": [
+        "Non-interactive sessions and subagents can continue from partial responses before a timeout; fixes automatic compaction being skipped when token usage is zero.",
+        "Session recovery preserves files and context just restored from compaction, and fixes truncated transcript loading.",
+        "MCP can reauthenticate when additional scopes are requested; permission checks prompt before BASHPID arithmetic assignments."
+      ],
+      "importance_reason_en": "Directly affects continuity in long tasks and validation of tool permissions."
     },
     {
       "id": "copilot-cli-1092-pre1",
@@ -128,7 +154,7 @@
       "published_at": "2026-10-02T16:09:17Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "copilot-releases",
@@ -138,7 +164,15 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-10-02T16:09:17Z"
         }
-      ]
+      ],
+      "title_en": "Copilot CLI 1.0.92-1 preview: MCP reconnection and context continuity",
+      "summary_en": "This preview addresses expired remote MCP HTTP connections, steering background tasks and retaining requests after context rollover.",
+      "key_points_en": [
+        "Reconnects remote MCP connections after they expire.",
+        "Messages sent to a running background task steer its current work.",
+        "Retains recent requests after context rollover; fixes incorrect reports that subagents are configured."
+      ],
+      "importance_reason_en": "Affects tool connections and request continuity in long tasks; stability still needs validation through use."
     },
     {
       "id": "gemini-cli-nightly-20261002",
@@ -160,7 +194,7 @@
       "published_at": "2026-10-02T01:33:21Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "gemini-cli-releases",
@@ -170,7 +204,15 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-10-02T01:33:21Z"
         }
-      ]
+      ],
+      "title_en": "Gemini CLI October 2 nightly: atomic storage and corruption recovery",
+      "summary_en": "This Gemini CLI nightly preview improves conversation recording, state backup recovery and interruption handling.",
+      "key_points_en": [
+        "ChatRecordingService switches to append-only incremental patches and a bounded history window.",
+        "State persistence uses atomic writes and can recover corrupted state from backups.",
+        "Ctrl+C emergency abort reaches the handler during active operations; fixes input and scrolling issues."
+      ],
+      "importance_reason_en": "Addresses record corruption recovery and emergency-stop reliability, but is not yet a stable release."
     },
     {
       "id": "codex-01600",
@@ -194,7 +236,7 @@
       "published_at": "2026-10-01T20:19:13Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:50:32+00:00",
-      "updated_at": "2026-10-03T03:13:04+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "codex-releases",
@@ -204,7 +246,15 @@
           "collected_at": "2026-10-03T02:50:32+00:00",
           "published_at": "2026-10-01T20:19:13Z"
         }
-      ]
+      ],
+      "title_en": "Codex 0.160.0: sessions outside projects, permission recovery and Windows fixes",
+      "summary_en": "This stable update improves session recovery, Windows sandboxing and subagent environment preparation, and adds opt-in Guardian review context.",
+      "key_points_en": [
+        "When policy allows, sessions can start outside projects using workspace defaults; resuming a session restores saved permissions.",
+        "Fixes Windows PowerShell fallback, long-path permission repair and background console window issues.",
+        "Continues sending unsent queued messages after reconnection without duplicate delivery; subagents retain environments that are still starting up."
+      ],
+      "importance_reason_en": "Affects session continuity and the stability of Windows development environments."
     },
     {
       "id": "pi-v100",
@@ -227,7 +277,7 @@
       "published_at": "2026-10-01T19:20:55Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "pi-releases",
@@ -240,7 +290,15 @@
       ],
       "related_event_ids": [
         "pi-v0992"
-      ]
+      ],
+      "title_en": "Pi 1.0.0: a full-screen interface by default and stricter MCP OAuth checks",
+      "summary_en": "Pi’s stable 1.0 release enables a full-screen terminal interface by default and adds image generation in scripts, Radius login and stricter MCP OAuth verification.",
+      "key_points_en": [
+        "The full-screen TUI becomes the default; the regular interface remains available.",
+        "Adds models.generateImages and support for Radius login and MCP.",
+        "MCP OAuth checks the issuer identifier defined in RFC 9207 and handles credentials and scopes according to server steps."
+      ],
+      "importance_reason_en": "Changes the default interaction experience and strengthens authorization checks for third-party tools."
     },
     {
       "id": "claude-code-v21287",
@@ -263,7 +321,7 @@
       "published_at": "2026-10-01T18:43:19Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T03:22:34+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "claude-code-changelog",
@@ -276,7 +334,15 @@
       ],
       "related_event_ids": [
         "claude-code-v21286"
-      ]
+      ],
+      "title_en": "Claude Code 2.1.287: Claude Mods and permission protection fixes",
+      "summary_en": "Plugins can now modify deeper behavior, with an optional observer mod, alongside fixes for protections around dangerous delete commands and MCP tool permission ceilings.",
+      "key_points_en": [
+        "Introduces Claude Mods. The built-in You should know mod uses a side agent to point out omissions, limited to first-party sessions with telemetry enabled.",
+        "Supports URL elicitation in MCP protocol 2025-11-25; some servers may need bareElicitationCapability compatibility configuration.",
+        "Fixes redirected paths bypassing always-ask protection for dangerous rm commands, and MCP tools named __proto__ losing organization permission ceilings."
+      ],
+      "importance_reason_en": "Adds plugin capabilities and fixes concrete permission-control gaps."
     },
     {
       "id": "copilot-cli-1091",
@@ -299,7 +365,7 @@
       "published_at": "2026-10-01T17:25:02Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "copilot-releases",
@@ -312,7 +378,15 @@
       ],
       "related_event_ids": [
         "copilot-cli-1090"
-      ]
+      ],
+      "title_en": "Copilot CLI 1.0.91: Windows sandbox and certificate management improvements",
+      "summary_en": "This stable release adds sandbox CA inspection, creation, trust, rotation and removal, while improving Windows compatibility and execution evidence review.",
+      "key_points_en": [
+        "/sandboxca install creates and trusts the CA; improves unattended Windows setup.",
+        "Complete read-only command pipelines that can be statically analyzed enter execution evidence review; incomplete analysis still requires explicit approval.",
+        "Improves network bypass handling for node/npm EACCES errors and sandbox behavior."
+      ],
+      "importance_reason_en": "Directly affects Windows usage, networked tools and permission decisions."
     },
     {
       "id": "gemini-cli-nightly-20261001",
@@ -333,7 +407,7 @@
       "published_at": "2026-10-01T01:34:16Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "gemini-cli-releases",
@@ -343,7 +417,14 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-10-01T01:34:16Z"
         }
-      ]
+      ],
+      "title_en": "Gemini CLI October 1 nightly: fixes for @code stalls and competing file writes",
+      "summary_en": "This nightly preview focuses on fixes for problems that can stall tasks or cause file tools to interfere with one another.",
+      "key_points_en": [
+        "Prevents CPU hangs in @code scenarios.",
+        "Serializes file-tool operations and uses atomic writes."
+      ],
+      "importance_reason_en": "Fixes issues that can prevent tasks from finishing; the release remains in preview."
     }
   ]
 }

@@ -11,7 +11,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#175f4a"
+      "color": "#175f4a",
+      "name_en": "OpenAI"
     },
     {
       "id": "anthropic",
@@ -23,7 +24,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#bc6037"
+      "color": "#bc6037",
+      "name_en": "Anthropic"
     },
     {
       "id": "google",
@@ -35,7 +37,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#336eab"
+      "color": "#336eab",
+      "name_en": "Google"
     },
     {
       "id": "deepseek",
@@ -47,7 +50,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#4b62ba"
+      "color": "#4b62ba",
+      "name_en": "DeepSeek"
     },
     {
       "id": "qwen",
@@ -59,7 +63,8 @@
       "category": "model",
       "kind": "model_brand",
       "enabled": true,
-      "color": "#6a5a95"
+      "color": "#6a5a95",
+      "name_en": "Qwen"
     },
     {
       "id": "zhipu",
@@ -71,7 +76,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#317d73"
+      "color": "#317d73",
+      "name_en": "Zhipu"
     },
     {
       "id": "moonshot",
@@ -83,7 +89,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#946b35"
+      "color": "#946b35",
+      "name_en": "Moonshot AI"
     },
     {
       "id": "minimax",
@@ -95,7 +102,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#c45043"
+      "color": "#c45043",
+      "name_en": "MiniMax"
     },
     {
       "id": "tencent",
@@ -107,7 +115,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#3478a3"
+      "color": "#3478a3",
+      "name_en": "Tencent"
     },
     {
       "id": "meituan",
@@ -119,7 +128,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#bc872b"
+      "color": "#bc872b",
+      "name_en": "Meituan"
     },
     {
       "id": "grok",
@@ -131,7 +141,8 @@
       "category": "model",
       "kind": "model_brand",
       "enabled": true,
-      "color": "#404044"
+      "color": "#404044",
+      "name_en": "Grok"
     },
     {
       "id": "meta",
@@ -143,7 +154,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#4866aa"
+      "color": "#4866aa",
+      "name_en": "Meta"
     },
     {
       "id": "openrouter",
@@ -155,7 +167,8 @@
       "category": "model",
       "kind": "api_platform",
       "enabled": true,
-      "color": "#476c91"
+      "color": "#476c91",
+      "name_en": "OpenRouter"
     },
     {
       "id": "nvidia",
@@ -167,7 +180,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#527d32"
+      "color": "#527d32",
+      "name_en": "NVIDIA"
     },
     {
       "id": "discovery-loop",
@@ -179,7 +193,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#527d69"
+      "color": "#527d69",
+      "name_en": "Discovery Loop"
     },
     {
       "id": "codex",
@@ -191,7 +206,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#175f4a"
+      "color": "#175f4a",
+      "name_en": "Codex"
     },
     {
       "id": "claude-code",
@@ -203,7 +219,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#bc6037"
+      "color": "#bc6037",
+      "name_en": "Claude Code"
     },
     {
       "id": "cursor",
@@ -215,7 +232,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#336eab"
+      "color": "#336eab",
+      "name_en": "Cursor"
     },
     {
       "id": "gemini-cli",
@@ -227,7 +245,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#4b62ba"
+      "color": "#4b62ba",
+      "name_en": "Gemini CLI"
     },
     {
       "id": "deepseek-harness",
@@ -239,7 +258,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#6a5a95"
+      "color": "#6a5a95",
+      "name_en": "DeepSeek Harness"
     },
     {
       "id": "hermes",
@@ -251,7 +271,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#317d73"
+      "color": "#317d73",
+      "name_en": "Hermes Agent"
     },
     {
       "id": "opencode",
@@ -263,7 +284,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#946b35"
+      "color": "#946b35",
+      "name_en": "OpenCode"
     },
     {
       "id": "copilot",
@@ -275,7 +297,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#c45043"
+      "color": "#c45043",
+      "name_en": "GitHub Copilot"
     },
     {
       "id": "qoder",
@@ -287,7 +310,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#3478a3"
+      "color": "#3478a3",
+      "name_en": "Qoder"
     },
     {
       "id": "pi",
@@ -299,7 +323,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#bc872b"
+      "color": "#bc872b",
+      "name_en": "Pi Agent Harness"
     },
     {
       "id": "trae",
@@ -311,7 +336,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#404044"
+      "color": "#404044",
+      "name_en": "TRAE"
     },
     {
       "id": "zcode",
@@ -323,7 +349,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#4866aa"
+      "color": "#4866aa",
+      "name_en": "ZCode"
     },
     {
       "id": "minimax-code",
@@ -335,7 +362,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#175f4a"
+      "color": "#175f4a",
+      "name_en": "MiniMax Code"
     },
     {
       "id": "deeptutor",
@@ -348,7 +376,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#527d69"
+      "color": "#527d69",
+      "name_en": "DeepTutor"
     }
   ]
 }

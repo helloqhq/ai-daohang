@@ -31,6 +31,7 @@ class PipelineTests(unittest.TestCase):
         return next(m for m in self.p.store.materials().values() if m['content_id']==self.record['content_id'])
     def packet(self,m):
         event={'id':'pi-v1','entity_ids':['pi'],'kind':'update','topics':['feature'],'title_zh':'新增重要功能','summary_zh':'变更影响实际使用。','key_points_zh':['保留限制条件'],'importance_reason_zh':'影响工作流程','published_at':m['published_at'],'date_precision':'datetime','first_collected_at':m['collected_at'],'updated_at':m['collected_at'],'sources':[{k:m[k] for k in ('source_id','url','content_id','material_scope','collected_at')}]}
+        event.update(title_en='Important new feature',summary_en='A change that affects everyday use.',key_points_en=['Preserves limitations'],importance_reason_en='Affects the workflow')
         return {'events':[event],'decisions':[{'material_id':m['id'],'fingerprint':m['fingerprint'],'action':'keep','event_id':event['id'],'reason_zh':'重要功能'}]}
     def test_first_window_failure_gap_and_recovery(self):
         windows=[]
@@ -80,10 +81,34 @@ class PipelineTests(unittest.TestCase):
         m=self.candidate();packet=self.packet(m);self.p.apply(packet)
         event=copy.deepcopy(packet['events'][0]);event['published_at']='2026-11-01T00:00:00Z';event['title_zh']='更正标题'
         with self.assertRaises(ValidationError):self.p.apply({'events':[event]})
-        event['corrections']=[{'at':'2026-11-02T00:00:00Z','reason_zh':'更正来源日期','url':m['url']}]
+        event['corrections']=[{'at':'2026-11-02T00:00:00Z','reason_zh':'更正来源日期','reason_en':'Correct the source date','url':m['url']}]
         self.p.apply({'events':[event]});self.p.apply({'events':[],'decisions':[]})
         self.assertEqual(self.p.validate()['events'],1)
         self.assertEqual(self.p.store.snapshot()[1]['event_locations']['pi-v1'],'2026-10')
+    def test_bilingual_content_is_required_and_invalid_updates_preserve_snapshot(self):
+        m=self.candidate();packet=self.packet(m);self.p.apply(packet)
+        original=(self.root/'public/data/index.json').read_bytes()
+        for mutate in (
+            lambda e:e.pop('title_en'),
+            lambda e:e.update(summary_en='  '),
+            lambda e:e.update(key_points_en=['One','Two']),
+            lambda e:e.update(key_points_en=['  ']),
+            lambda e:e.update(translation_zh='只有中文译文'),
+            lambda e:e.update(corrections=[{'at':'2026-10-03T00:00:00Z','reason_zh':'更正','url':m['url']}]),
+        ):
+            invalid=copy.deepcopy(packet);mutate(invalid['events'][0])
+            with self.assertRaises(ValidationError):self.p.apply(invalid)
+            self.assertEqual((self.root/'public/data/index.json').read_bytes(),original)
+    def test_english_corrections_require_evidence_and_refresh_preserves_both_languages(self):
+        m=self.candidate();packet=self.packet(m);self.p.apply(packet)
+        event=copy.deepcopy(packet['events'][0]);event['summary_en']='Corrected English summary.'
+        with self.assertRaises(ValidationError):self.p.apply({'events':[event]})
+        event['corrections']=[{'at':'2026-10-03T00:00:00Z','reason_zh':'更正英文摘要','reason_en':'Correct the English summary','url':m['url']}]
+        self.p.apply({'events':[event]});self.p.refresh()
+        snapshot=self.p.store.snapshot()
+        self.assertEqual(snapshot[3][0]['summary_en'],'Corrected English summary.')
+        self.assertEqual(snapshot[3][0]['summary_zh'],event['summary_zh'])
+        self.assertEqual(snapshot[0]['sources'][0]['name_en'],self.source['name_en'])
     def test_no_false_source_progress_from_link_import_or_partial(self):
         self.candidate();self.assertEqual(self.p.store.state()['sources'],{})
         with patch.dict('collector.pipeline.ADAPTERS',{'rss':lambda *args:([self.record.copy()],False,'partial')}):self.p.collect(now='2026-10-03T00:00:00Z')

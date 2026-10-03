@@ -1,6 +1,4 @@
-export const KIND_LABELS = { update: '正式更新', preview: '预览 / 预告', opinion: '负责人观点' };
-export const TOPIC_LABELS = {model_release:'模型发布',capability:'能力变化',api:'API',pricing:'价格变化',availability:'可用性',feature:'新功能',compatibility:'兼容性',critical_fix:'关键修复'};
-export const PLATFORM_LABELS = {web:'官网 / 博客',github:'GitHub',youtube:'YouTube',tiktok:'TikTok',x:'X',threads:'Threads',wechat:'微信公众号'};
+import {LABELS} from './i18n.js';
 export function dateKey(value) {
   if (!value) return '';
   if (value.length === 10) return value;
@@ -22,9 +20,9 @@ export function filterEvents(events, catalog, filters) {
     if (filters.entity && !event.entity_ids.includes(filters.entity)) return false;
     if (filters.kind && event.kind !== filters.kind) return false;
     if (query) {
-      const haystack = [event.title_zh,event.summary_zh,...event.key_points_zh,...event.entity_ids.flatMap(id => {
-        const e = entities.get(id);return e ? [e.name,...e.aliases] : [];
-      }),...event.topics.map(t => TOPIC_LABELS[t] || t)].join(' ').normalize('NFKC').toLocaleLowerCase();
+      const haystack = [event.title_zh,event.summary_zh,...event.key_points_zh,event.title_en,event.summary_en,...(event.key_points_en || []),...event.entity_ids.flatMap(id => {
+        const e = entities.get(id);return e ? [e.name,e.name_en,...e.aliases] : [];
+      }),...event.topics.flatMap(t => [LABELS.zh.topic[t] || t,LABELS.en.topic[t] || t])].join(' ').normalize('NFKC').toLocaleLowerCase();
       if (!haystack.includes(query)) return false;
     }
     return true;

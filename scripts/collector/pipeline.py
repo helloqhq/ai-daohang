@@ -130,7 +130,7 @@ class Pipeline:
         materials=self.store.materials()
         stamp=now_iso()
         snapshot_id=digest(json.dumps(events,sort_keys=True,ensure_ascii=False)+stamp)[:16]
-        common={'schema_version':'1.0','snapshot_id':snapshot_id}
+        common={'schema_version':'1.1','snapshot_id':snapshot_id}
         months=defaultdict(list)
         locations={}
         old_locations=self.store.snapshot()[1].get('event_locations',{})
@@ -186,7 +186,8 @@ class Pipeline:
                     require(event['first_collected_at']==events[event_id]['first_collected_at'],'修订不能改变首次采集时间')
                 if event_id in events:
                     old=events[event_id]
-                    changed=any(event.get(k)!=old.get(k) for k in ('title_zh','summary_zh','key_points_zh','published_at','kind'))
+                    changed=any(event.get(k)!=old.get(k) for k in ('title_zh','summary_zh','key_points_zh','importance_reason_zh','translation_zh','published_at','kind'))
+                    changed=changed or any(old.get(k) is not None and event.get(k)!=old.get(k) for k in ('title_en','summary_en','key_points_en','importance_reason_en','translation_en'))
                     if changed:
                         require(len(event.get('corrections',[]))>len(old.get('corrections',[])),'实质更正必须记录原因与依据')
                 for evidence in event['sources']:

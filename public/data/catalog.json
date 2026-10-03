@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "snapshot_id": "401134a7a4e79d82",
+  "schema_version": "1.1",
+  "snapshot_id": "8518f887b07d3f70",
   "entities": [
     {
       "id": "openai",
@@ -12,7 +12,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#175f4a"
+      "color": "#175f4a",
+      "name_en": "OpenAI"
     },
     {
       "id": "anthropic",
@@ -24,7 +25,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#bc6037"
+      "color": "#bc6037",
+      "name_en": "Anthropic"
     },
     {
       "id": "google",
@@ -36,7 +38,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#336eab"
+      "color": "#336eab",
+      "name_en": "Google"
     },
     {
       "id": "deepseek",
@@ -48,7 +51,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#4b62ba"
+      "color": "#4b62ba",
+      "name_en": "DeepSeek"
     },
     {
       "id": "qwen",
@@ -60,7 +64,8 @@
       "category": "model",
       "kind": "model_brand",
       "enabled": true,
-      "color": "#6a5a95"
+      "color": "#6a5a95",
+      "name_en": "Qwen"
     },
     {
       "id": "zhipu",
@@ -72,7 +77,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#317d73"
+      "color": "#317d73",
+      "name_en": "Zhipu"
     },
     {
       "id": "moonshot",
@@ -84,7 +90,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#946b35"
+      "color": "#946b35",
+      "name_en": "Moonshot AI"
     },
     {
       "id": "minimax",
@@ -96,7 +103,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#c45043"
+      "color": "#c45043",
+      "name_en": "MiniMax"
     },
     {
       "id": "tencent",
@@ -108,7 +116,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#3478a3"
+      "color": "#3478a3",
+      "name_en": "Tencent"
     },
     {
       "id": "meituan",
@@ -120,7 +129,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#bc872b"
+      "color": "#bc872b",
+      "name_en": "Meituan"
     },
     {
       "id": "grok",
@@ -132,7 +142,8 @@
       "category": "model",
       "kind": "model_brand",
       "enabled": true,
-      "color": "#404044"
+      "color": "#404044",
+      "name_en": "Grok"
     },
     {
       "id": "meta",
@@ -144,7 +155,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#4866aa"
+      "color": "#4866aa",
+      "name_en": "Meta"
     },
     {
       "id": "openrouter",
@@ -156,7 +168,8 @@
       "category": "model",
       "kind": "api_platform",
       "enabled": true,
-      "color": "#476c91"
+      "color": "#476c91",
+      "name_en": "OpenRouter"
     },
     {
       "id": "nvidia",
@@ -168,7 +181,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#527d32"
+      "color": "#527d32",
+      "name_en": "NVIDIA"
     },
     {
       "id": "discovery-loop",
@@ -180,7 +194,8 @@
       "category": "model",
       "kind": "vendor",
       "enabled": true,
-      "color": "#527d69"
+      "color": "#527d69",
+      "name_en": "Discovery Loop"
     },
     {
       "id": "codex",
@@ -192,7 +207,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#175f4a"
+      "color": "#175f4a",
+      "name_en": "Codex"
     },
     {
       "id": "claude-code",
@@ -204,7 +220,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#bc6037"
+      "color": "#bc6037",
+      "name_en": "Claude Code"
     },
     {
       "id": "cursor",
@@ -216,7 +233,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#336eab"
+      "color": "#336eab",
+      "name_en": "Cursor"
     },
     {
       "id": "gemini-cli",
@@ -228,7 +246,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#4b62ba"
+      "color": "#4b62ba",
+      "name_en": "Gemini CLI"
     },
     {
       "id": "deepseek-harness",
@@ -240,7 +259,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#6a5a95"
+      "color": "#6a5a95",
+      "name_en": "DeepSeek Harness"
     },
     {
       "id": "hermes",
@@ -252,7 +272,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#317d73"
+      "color": "#317d73",
+      "name_en": "Hermes Agent"
     },
     {
       "id": "opencode",
@@ -264,7 +285,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#946b35"
+      "color": "#946b35",
+      "name_en": "OpenCode"
     },
     {
       "id": "copilot",
@@ -276,7 +298,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#c45043"
+      "color": "#c45043",
+      "name_en": "GitHub Copilot"
     },
     {
       "id": "qoder",
@@ -288,7 +311,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#3478a3"
+      "color": "#3478a3",
+      "name_en": "Qoder"
     },
     {
       "id": "pi",
@@ -300,7 +324,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#bc872b"
+      "color": "#bc872b",
+      "name_en": "Pi Agent Harness"
     },
     {
       "id": "trae",
@@ -312,7 +337,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#404044"
+      "color": "#404044",
+      "name_en": "TRAE"
     },
     {
       "id": "zcode",
@@ -324,7 +350,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#4866aa"
+      "color": "#4866aa",
+      "name_en": "ZCode"
     },
     {
       "id": "minimax-code",
@@ -336,7 +363,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#175f4a"
+      "color": "#175f4a",
+      "name_en": "MiniMax Code"
     },
     {
       "id": "deeptutor",
@@ -349,7 +377,8 @@
       "category": "agent",
       "kind": "application",
       "enabled": true,
-      "color": "#527d69"
+      "color": "#527d69",
+      "name_en": "DeepTutor"
     }
   ],
   "sources": [
@@ -372,7 +401,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://openai.com/news/rss.xml",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "OpenAI News"
     },
     {
       "id": "anthropic-official",
@@ -395,7 +425,8 @@
       "feed_url": "https://rsshub.app/anthropic/news",
       "feed_provider": "rsshub",
       "rsshub_route": "/anthropic/news",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/anthropic"
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/anthropic",
+      "name_en": "Anthropic News"
     },
     {
       "id": "google-official",
@@ -416,7 +447,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://deepmind.google/blog/rss.xml",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Google DeepMind Blog"
     },
     {
       "id": "deepseek-official",
@@ -439,7 +471,8 @@
       "feed_url": "https://rsshub.app/deepseek/news",
       "feed_provider": "rsshub",
       "rsshub_route": "/deepseek/news",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/deepseek"
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/deepseek",
+      "name_en": "DeepSeek API Updates"
     },
     {
       "id": "qwen-official",
@@ -462,7 +495,8 @@
       "feed_url": "https://rsshub.app/qwen/blog",
       "feed_provider": "rsshub",
       "rsshub_route": "/qwen/blog",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/qwen"
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/qwen",
+      "name_en": "Qwen Blog"
     },
     {
       "id": "zhipu-official",
@@ -485,7 +519,9 @@
       "feed_url": null,
       "feed_provider": "pending",
       "subscription_note": "2026-10-03 核查：文档站的 /rss.xml、/feed.xml 和发布页订阅路径均返回 404；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需可用转换订阅。",
-      "feed_checked_at": "2026-10-03"
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Zhipu Model Releases",
+      "subscription_note_en": "Checked 2026-10-03: /rss.xml, /feed.xml and release-page feed paths return 404. No dedicated route was found in RSSHub or RSS-Bridge; a working converted feed is still needed."
     },
     {
       "id": "moonshot-official",
@@ -508,7 +544,9 @@
       "feed_url": null,
       "feed_provider": "pending",
       "subscription_note": "2026-10-03 核查：官网及博客的候选 RSS 地址返回 HTML 页面；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需博客转换订阅。",
-      "feed_checked_at": "2026-10-03"
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Kimi Research Blog",
+      "subscription_note_en": "Checked 2026-10-03: candidate RSS URLs on the website and blog return HTML. No dedicated RSSHub or RSS-Bridge route was found; a converted blog feed is still needed."
     },
     {
       "id": "minimax-official",
@@ -531,7 +569,9 @@
       "feed_url": null,
       "feed_provider": "pending",
       "subscription_note": "2026-10-03 核查：官网候选 RSS 地址返回 HTML，博客 /rss.xml 与 /feed.xml 返回 404；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需博客转换订阅。",
-      "feed_checked_at": "2026-10-03"
+      "feed_checked_at": "2026-10-03",
+      "name_en": "MiniMax Blog",
+      "subscription_note_en": "Checked 2026-10-03: candidate RSS URLs return HTML; blog /rss.xml and /feed.xml return 404. No dedicated RSSHub or RSS-Bridge route was found; a converted blog feed is still needed."
     },
     {
       "id": "tencent-official",
@@ -554,7 +594,9 @@
       "feed_url": null,
       "feed_provider": "pending",
       "subscription_note": "2026-10-03 核查：官网候选 RSS 地址返回 HTML 页面；RSSHub 与 RSS-Bridge 未找到混元官网的专用路由，仍需可用转换订阅。",
-      "feed_checked_at": "2026-10-03"
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Tencent Hunyuan",
+      "subscription_note_en": "Checked 2026-10-03: candidate RSS URLs return HTML. No dedicated route for the Hunyuan website was found in RSSHub or RSS-Bridge; a working converted feed is still needed."
     },
     {
       "id": "meituan-official",
@@ -575,7 +617,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://tech.meituan.com/rss.xml",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Meituan Tech Team"
     },
     {
       "id": "grok-official",
@@ -598,7 +641,9 @@
       "feed_url": null,
       "feed_provider": "pending",
       "subscription_note": "2026-10-03 核查：第三方候选 https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_xainews.xml 可解析 39 条，但最新条目停留于 2026-05-21，早于官网最新新闻；暂不接入停更候选，仍需持续更新的新闻订阅。",
-      "feed_checked_at": "2026-10-03"
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Grok News",
+      "subscription_note_en": "Checked 2026-10-03: the third-party candidate https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_xainews.xml contains 39 parseable entries, but its latest entry is dated 2026-05-21, older than the website’s latest news. This stale candidate is not connected; a regularly updated news feed is still needed."
     },
     {
       "id": "meta-official",
@@ -621,7 +666,8 @@
       "feed_url": "https://rsshub.app/meta/ai/blog",
       "feed_provider": "rsshub",
       "rsshub_route": "/meta/ai/blog",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/meta"
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/meta",
+      "name_en": "Meta AI Blog"
     },
     {
       "id": "cursor-official",
@@ -643,7 +689,8 @@
       "adapter": "rss",
       "feed_url": "https://cursor.com/changelog/rss.xml",
       "feed_provider": "native",
-      "feed_verified_at": "2026-10-03"
+      "feed_verified_at": "2026-10-03",
+      "name_en": "Cursor Changelog"
     },
     {
       "id": "qoder-official",
@@ -666,7 +713,9 @@
       "feed_url": null,
       "feed_provider": "pending",
       "subscription_note": "2026-10-03 核查：文档站和发布页候选 RSS 地址返回 404，qoder.com/releases/feed.xml 也返回 404；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需更新页转换订阅。",
-      "feed_checked_at": "2026-10-03"
+      "feed_checked_at": "2026-10-03",
+      "name_en": "Qoder Changelog",
+      "subscription_note_en": "Checked 2026-10-03: candidate feeds on the documentation and release pages return 404, as does qoder.com/releases/feed.xml. No dedicated RSSHub or RSS-Bridge route was found; a converted changelog feed is still needed."
     },
     {
       "id": "trae-official",
@@ -689,7 +738,9 @@
       "feed_url": null,
       "feed_provider": "pending",
       "subscription_note": "2026-10-03 核查：中文版文档入口及候选 RSS 地址返回 HTTP 400，尚无法确认订阅；RSSHub 与 RSS-Bridge 未找到对应专用路由，保留中文版入口。",
-      "feed_checked_at": "2026-10-03"
+      "feed_checked_at": "2026-10-03",
+      "name_en": "TRAE Chinese Edition Changelog",
+      "subscription_note_en": "Checked 2026-10-03: the Chinese documentation entry and candidate RSS URLs return HTTP 400, so a feed could not be confirmed. No dedicated RSSHub or RSS-Bridge route was found; the Chinese entry is retained."
     },
     {
       "id": "zcode-official",
@@ -712,7 +763,9 @@
       "feed_url": null,
       "feed_provider": "pending",
       "subscription_note": "2026-10-03 核查：官网候选 RSS 地址返回 HTML，更新页 /rss.xml 返回 404；RSSHub 与 RSS-Bridge 未找到对应专用路由，仍需更新页转换订阅。",
-      "feed_checked_at": "2026-10-03"
+      "feed_checked_at": "2026-10-03",
+      "name_en": "ZCode Changelog",
+      "subscription_note_en": "Checked 2026-10-03: candidate RSS URLs return HTML and the changelog /rss.xml returns 404. No dedicated RSSHub or RSS-Bridge route was found; a converted changelog feed is still needed."
     },
     {
       "id": "codex-releases",
@@ -733,7 +786,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/openai/codex/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Codex Releases"
     },
     {
       "id": "gemini-cli-releases",
@@ -754,7 +808,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/google-gemini/gemini-cli/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Gemini CLI Releases"
     },
     {
       "id": "deepseek-harness-releases",
@@ -775,7 +830,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/deepseek-ai/deepseek-harness/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "DeepSeek Harness Releases"
     },
     {
       "id": "hermes-releases",
@@ -796,7 +852,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Hermes Agent Releases"
     },
     {
       "id": "opencode-releases",
@@ -817,7 +874,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/anomalyco/opencode/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "OpenCode Releases"
     },
     {
       "id": "copilot-releases",
@@ -838,7 +896,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/github/copilot-cli/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Copilot CLI Releases"
     },
     {
       "id": "pi-releases",
@@ -859,7 +918,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/earendil-works/pi/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Pi Agent Harness Releases"
     },
     {
       "id": "minimax-code-releases",
@@ -880,7 +940,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/MiniMax-AI/minimax-code/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "MiniMax Code CLI Releases"
     },
     {
       "id": "claude-code-changelog",
@@ -901,7 +962,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://github.com/anthropics/claude-code/releases.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Claude Code Releases"
     },
     {
       "id": "sam-altman-blog",
@@ -923,7 +985,8 @@
       "person_id": "sam-altman",
       "adapter": "rss",
       "feed_url": "https://blog.samaltman.com/posts.atom",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "Sam Altman’s Blog"
     },
     {
       "id": "dario-blog",
@@ -948,7 +1011,9 @@
       "feed_provider": "third_party",
       "subscription_note": "第三方转换 RSS，原文链接指向 Dario 官网。2026-10-03 核实可解析 6 篇文章链接；仅提供标题与链接，无正文和发布时间，不能用于确认完整时间窗。",
       "feed_verification_url": "https://www.val.town/x/ivryb/dario-amodei-rss",
-      "feed_verified_at": "2026-10-03"
+      "feed_verified_at": "2026-10-03",
+      "name_en": "Dario Amodei’s Blog",
+      "subscription_note_en": "Third-party RSS conversion with original links pointing to Dario’s website. Six article links were verified as parseable on 2026-10-03. Only titles and links are provided, with no body text or publication dates; this cannot confirm coverage of a full time window."
     },
     {
       "id": "openai-youtube",
@@ -969,7 +1034,8 @@
       },
       "adapter": "rss",
       "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A",
-      "feed_provider": "native"
+      "feed_provider": "native",
+      "name_en": "OpenAI YouTube"
     },
     {
       "id": "openai-x",
@@ -992,7 +1058,8 @@
       "feed_url": "https://rsshub.app/twitter/user/OpenAI",
       "feed_provider": "rsshub",
       "rsshub_route": "/twitter/user/OpenAI",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/twitter"
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/twitter",
+      "name_en": "OpenAI X"
     },
     {
       "id": "zcode-x",
@@ -1015,7 +1082,8 @@
       "feed_url": "https://rsshub.app/twitter/user/zcode_ai",
       "feed_provider": "rsshub",
       "rsshub_route": "/twitter/user/zcode_ai",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/twitter"
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/twitter",
+      "name_en": "ZCode X"
     },
     {
       "id": "openai-tiktok",
@@ -1038,7 +1106,8 @@
       "feed_url": "https://rsshub.app/tiktok/user/@openai",
       "feed_provider": "rsshub",
       "rsshub_route": "/tiktok/user/@openai",
-      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/tiktok"
+      "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/tree/master/lib/routes/tiktok",
+      "name_en": "OpenAI TikTok"
     },
     {
       "id": "openrouter-official",
@@ -1061,7 +1130,9 @@
       "feed_url": "https://openrouter.ai/blog/feed.xml",
       "feed_provider": "native",
       "feed_verified_at": "2026-10-03",
-      "subscription_note": "官方博客 RSS；关注平台功能、API、价格和可用性变化，普通教程和宣传按编辑规则过滤。"
+      "subscription_note": "官方博客 RSS；关注平台功能、API、价格和可用性变化，普通教程和宣传按编辑规则过滤。",
+      "name_en": "OpenRouter Blog",
+      "subscription_note_en": "Official blog RSS. Tracks important changes to platform features, APIs, pricing and availability; ordinary tutorials and promotional posts are filtered under the editorial rules."
     },
     {
       "id": "deeptutor-releases",
@@ -1083,7 +1154,8 @@
       "adapter": "rss",
       "feed_url": "https://github.com/HKUDS/DeepTutor/releases.atom",
       "feed_provider": "native",
-      "feed_verified_at": "2026-10-03"
+      "feed_verified_at": "2026-10-03",
+      "name_en": "DeepTutor Releases"
     },
     {
       "id": "elon-musk-x",
@@ -1110,7 +1182,9 @@
       "rsshub_route": "/twitter/user/elonmusk",
       "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/twitter/user.ts",
       "feed_checked_at": "2026-10-03",
-      "subscription_note": "Tesla 联合创始人、CEO；关注 Grok、AI 与机器人相关动态，其他话题按编辑规则过滤。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。"
+      "subscription_note": "Tesla 联合创始人、CEO；关注 Grok、AI 与机器人相关动态，其他话题按编辑规则过滤。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。",
+      "name_en": "Elon Musk · X",
+      "subscription_note_en": "Tesla co-founder and CEO. Tracks Grok, AI and robotics updates; other topics are filtered under the editorial rules. The RSSHub route is verified, but the 2026-10-03 connectivity check did not retrieve RSS. Listing and body-text capabilities require confirmation through actual access; instance login configuration may be needed."
     },
     {
       "id": "mark-zuckerberg-threads",
@@ -1137,7 +1211,9 @@
       "rsshub_route": "/threads/zuck",
       "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/threads/index.ts",
       "feed_checked_at": "2026-10-03",
-      "subscription_note": "Meta 创始人、CEO；关注 Meta AI、模型与相关产品动态。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。"
+      "subscription_note": "Meta 创始人、CEO；关注 Meta AI、模型与相关产品动态。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。",
+      "name_en": "Mark Zuckerberg · Threads",
+      "subscription_note_en": "Meta founder and CEO. Tracks Meta AI, models and related products. The RSSHub route is verified, but the 2026-10-03 connectivity check did not retrieve RSS. Listing and body-text capabilities require confirmation through actual access; instance login configuration may be needed."
     },
     {
       "id": "demis-hassabis-x",
@@ -1164,7 +1240,9 @@
       "rsshub_route": "/twitter/user/demishassabis",
       "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/twitter/user.ts",
       "feed_checked_at": "2026-10-03",
-      "subscription_note": "Google DeepMind 主席、Alphabet 首席科学家；关注模型、AGI 与 AI 科学研究动态。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。"
+      "subscription_note": "Google DeepMind 主席、Alphabet 首席科学家；关注模型、AGI 与 AI 科学研究动态。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。",
+      "name_en": "Demis Hassabis · X",
+      "subscription_note_en": "Google DeepMind president and Alphabet chief scientist. Tracks models, AGI and AI science research. The RSSHub route is verified, but the 2026-10-03 connectivity check did not retrieve RSS. Listing and body-text capabilities require confirmation through actual access; instance login configuration may be needed."
     },
     {
       "id": "jeff-dean-x",
@@ -1191,7 +1269,9 @@
       "rsshub_route": "/twitter/user/JeffDean",
       "feed_route_verification_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/twitter/user.ts",
       "feed_checked_at": "2026-10-03",
-      "subscription_note": "Discovery Loop 联合创始人、前 Google 首席科学家；关注机器学习、AI 研究与工程动态。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。"
+      "subscription_note": "Discovery Loop 联合创始人、前 Google 首席科学家；关注机器学习、AI 研究与工程动态。 RSSHub 已核实路由；2026-10-03 连通检查未取回 RSS，列表与正文能力待实际读取确认，可能需要实例登录配置。",
+      "name_en": "Jeff Dean · X",
+      "subscription_note_en": "Discovery Loop co-founder and former Google chief scientist. Tracks machine learning, AI research and engineering. The RSSHub route is verified, but the 2026-10-03 connectivity check did not retrieve RSS. Listing and body-text capabilities require confirmation through actual access; instance login configuration may be needed."
     },
     {
       "id": "jensen-huang-blog",
@@ -1215,7 +1295,9 @@
       "feed_url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/feed/",
       "feed_provider": "native",
       "feed_verified_at": "2026-10-03",
-      "subscription_note": "NVIDIA 创始人、总裁兼 CEO；官方本人署名文章 RSS，已解析 10 篇文章（9 篇含正文、1 篇仅元数据），均有发布时间；仅覆盖该作者博客，不代表全部个人动态。"
+      "subscription_note": "NVIDIA 创始人、总裁兼 CEO；官方本人署名文章 RSS，已解析 10 篇文章（9 篇含正文、1 篇仅元数据），均有发布时间；仅覆盖该作者博客，不代表全部个人动态。",
+      "name_en": "Jensen Huang · NVIDIA Articles",
+      "subscription_note_en": "NVIDIA founder, president and CEO. Official RSS for articles under his byline. Ten articles were parsed: nine with body text and one with metadata only, all with publication dates. Covers this author’s blog only, not all of his public activity."
     }
   ],
   "people": [
@@ -1225,7 +1307,8 @@
       "entity_ids": [
         "openai"
       ],
-      "verification_url": "https://openai.com/our-structure/"
+      "verification_url": "https://openai.com/our-structure/",
+      "name_en": "Sam Altman"
     },
     {
       "id": "dario-amodei",
@@ -1233,7 +1316,8 @@
       "entity_ids": [
         "anthropic"
       ],
-      "verification_url": "https://www.anthropic.com/company/leadership"
+      "verification_url": "https://www.anthropic.com/company/leadership",
+      "name_en": "Dario Amodei"
     },
     {
       "id": "elon-musk",
@@ -1242,7 +1326,8 @@
         "grok"
       ],
       "role": "Tesla 联合创始人、CEO",
-      "verification_url": "https://www.tesla.com/elon-musk"
+      "verification_url": "https://www.tesla.com/elon-musk",
+      "name_en": "Elon Musk"
     },
     {
       "id": "mark-zuckerberg",
@@ -1251,7 +1336,8 @@
         "meta"
       ],
       "role": "Meta 创始人、CEO",
-      "verification_url": "https://about.fb.com/news/2026/01/dina-powell-mccormick-joins-meta-as-president-and-vice-chairman/"
+      "verification_url": "https://about.fb.com/news/2026/01/dina-powell-mccormick-joins-meta-as-president-and-vice-chairman/",
+      "name_en": "Mark Zuckerberg"
     },
     {
       "id": "jensen-huang",
@@ -1260,7 +1346,8 @@
         "nvidia"
       ],
       "role": "NVIDIA 创始人、总裁兼 CEO",
-      "verification_url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/"
+      "verification_url": "https://blogs.nvidia.com/blog/author/jen-hsun-huang/",
+      "name_en": "Jensen Huang"
     },
     {
       "id": "demis-hassabis",
@@ -1269,7 +1356,8 @@
         "google"
       ],
       "role": "Google DeepMind 主席、Alphabet 首席科学家",
-      "verification_url": "https://blog.google/authors/demis-hassabis/"
+      "verification_url": "https://blog.google/authors/demis-hassabis/",
+      "name_en": "Demis Hassabis"
     },
     {
       "id": "jeff-dean",
@@ -1278,7 +1366,8 @@
         "discovery-loop"
       ],
       "role": "Discovery Loop 联合创始人；前 Google 首席科学家",
-      "verification_url": "https://www.discoveryloop.com/"
+      "verification_url": "https://www.discoveryloop.com/",
+      "name_en": "Jeff Dean"
     }
   ],
   "platforms": [
@@ -1286,31 +1375,36 @@
       "id": "youtube",
       "name": "YouTube",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "YouTube"
     },
     {
       "id": "tiktok",
       "name": "TikTok",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "TikTok"
     },
     {
       "id": "x",
       "name": "X",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "X"
     },
     {
       "id": "threads",
       "name": "Threads",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "Threads"
     },
     {
       "id": "wechat",
       "name": "微信公众号",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "WeChat"
     }
   ]
 }

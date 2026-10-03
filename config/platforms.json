@@ -4,31 +4,36 @@
       "id": "youtube",
       "name": "YouTube",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "YouTube"
     },
     {
       "id": "tiktok",
       "name": "TikTok",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "TikTok"
     },
     {
       "id": "x",
       "name": "X",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "X"
     },
     {
       "id": "threads",
       "name": "Threads",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "Threads"
     },
     {
       "id": "wechat",
       "name": "微信公众号",
       "adapter": "rss",
-      "requires_account_configuration": true
+      "requires_account_configuration": true,
+      "name_en": "WeChat"
     }
   ]
 }

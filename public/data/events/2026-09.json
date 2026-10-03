@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "snapshot_id": "401134a7a4e79d82",
+  "schema_version": "1.1",
+  "snapshot_id": "8518f887b07d3f70",
   "events": [
     {
       "id": "opencode-v11834",
@@ -22,7 +22,7 @@
       "published_at": "2026-09-30T22:39:45Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:50:32+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "opencode-releases",
@@ -32,7 +32,14 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-09-30T22:39:45Z"
         }
-      ]
+      ],
+      "title_en": "OpenCode 1.18.34: fixes for macOS binary execution",
+      "summary_en": "OpenCode adjusts macOS binary signing to improve the reliability of locally compiled binaries on macOS 27 and later.",
+      "key_points_en": [
+        "Locally compiled macOS binaries are re-signed; official CLI releases use Developer ID signing.",
+        "Model requests include namespaced session and parent-session identity headers."
+      ],
+      "importance_reason_en": "Directly affects whether macOS users can run the CLI reliably."
     },
     {
       "id": "copilot-cli-1090",
@@ -55,7 +62,7 @@
       "published_at": "2026-09-30T21:38:30Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "copilot-releases",
@@ -65,7 +72,15 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-09-30T21:38:30Z"
         }
-      ]
+      ],
+      "title_en": "Copilot CLI 1.0.90: GPT-6.1 Sol support and GitHub MCP authentication",
+      "summary_en": "This stable Copilot CLI release adds GPT-6.1 Sol support and improves GitHub MCP authentication, session permissions and connection recovery.",
+      "key_points_en": [
+        "Adds support for the GPT-6.1 Sol model.",
+        "--mcp-github-auth allows GitHub account authentication for approved MCP sources.",
+        "Improves MCP discovery, recovery from transient failures and permission responses after resuming a session."
+      ],
+      "importance_reason_en": "Affects model selection, third-party tool integration and continuity in long sessions."
     },
     {
       "id": "pi-v0992",
@@ -88,7 +103,7 @@
       "published_at": "2026-09-30T19:30:47Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:35:51+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "pi-releases",
@@ -98,7 +113,15 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-09-30T19:30:47Z"
         }
-      ]
+      ],
+      "title_en": "Pi 0.99.2: lazy MCP loading no longer blocks the first prompt",
+      "summary_en": "Pi improves MCP tool loading in the default codemode and expands authentication and provider compatibility.",
+      "key_points_en": [
+        "MCP tools load lazily, so the first prompt does not have to wait for all tools to be ready.",
+        "Adds searchTools and describeNamespace for tool discovery.",
+        "Supports Anthropic workload identity federation configuration; improves MCP scopes and provider retries."
+      ],
+      "importance_reason_en": "Reduces startup delays in projects with many tools and improves enterprise authentication integration."
     },
     {
       "id": "claude-code-v21286",
@@ -120,7 +143,7 @@
       "published_at": "2026-09-30T19:10:13Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T03:22:34+00:00",
-      "updated_at": "2026-10-03T03:25:31+00:00",
+      "updated_at": "2026-10-03T11:06:49+00:00",
       "sources": [
         {
           "source_id": "claude-code-changelog",
@@ -130,7 +153,15 @@
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-09-30T19:10:13Z"
         }
-      ]
+      ],
+      "title_en": "Claude Code 2.1.286: session history recovery and credential redaction fixes",
+      "summary_en": "This release fixes the loss of subsequent turns when resuming sessions after parallel tool calls, and closes credential redaction gaps in logs and MCP errors.",
+      "key_points_en": [
+        "After a crash or termination, --resume and --continue no longer lose subsequent turns due to parallel tool calls.",
+        "Fixes credential masking gaps involving Bearer/Basic authentication, percent encoding and invisible characters.",
+        "Existing remote sessions disconnect with a notice when an organization disables Remote Control."
+      ],
+      "importance_reason_en": "Session history and credential protection both affect everyday use and deserve timely attention."
     }
   ]
 }

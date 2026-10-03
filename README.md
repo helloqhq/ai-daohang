@@ -2,9 +2,9 @@
 
 正式域名：`go2-ai.com` · [项目仓库](https://github.com/helloqhq/ai-daohang)
 
-纯静态中文 AI 信息站。统一通过 RSS / Atom 订阅官方与已核实负责人信息，由用户已有 AI agent 调用采集 skill，筛选、翻译和归纳后产出 JSON。网站本身不抓取上游、不调用模型。采集按需执行，首版没有定时任务。
+纯静态中英文 AI 信息站。统一通过 RSS / Atom 订阅官方与已核实负责人信息，由用户已有 AI agent 调用采集 skill，筛选并整理中英文两份内容后产出 JSON。网站本身不抓取上游、不调用模型。采集按需执行，首版没有定时任务。
 
-完整流程：**登记订阅 → 拉取 RSS → agent 判断与中文编辑 → 校验 JSON → 本地预览 → 推送仓库 → GitHub Actions 发布 → 检查线上快照**。
+完整流程：**登记订阅 → 拉取 RSS → agent 判断与双语编辑 → 校验 JSON → 本地预览 → 推送仓库 → GitHub Actions 发布 → 检查线上快照**。
 
 ## 本地使用
 
@@ -172,7 +172,7 @@ python3 scripts/collect.py feeds --opml /tmp/ai-news-subscriptions.opml
 ```text
 $ai-news-collect
 更新 /Users/qhq/Downloads/code/ai-daohang 的全部启用来源。
-按默认增量规则采集，补采失败断档；筛选重要事件并翻译归纳成中文，
+按默认增量规则采集，补采失败断档；筛选重要事件，在同一 JSON 中输出中英文标题、摘要、关键点和入选理由，
 生成并校验本地 JSON，报告剩余待核查材料和来源覆盖情况。
 ```
 
@@ -183,7 +183,7 @@ mkdir -p ~/.codex/skills
 ln -s "$PWD/skills/ai-news-collect" ~/.codex/skills/ai-news-collect
 ```
 
-skill 只负责本地采集与 JSON 更新，不推送、不部署。Python 脚本负责获取、解析、缓存和校验；**重要性判断、英文转中文与归纳由正在运行的 agent 完成**，单独执行 `fetch` 不会自动生成中文新闻。
+skill 只负责本地采集与 JSON 更新，不推送、不部署。Python 脚本负责获取、解析、缓存和校验；**重要性判断、双语整理与归纳由正在运行的 agent 完成**，单独执行 `fetch` 不会自动生成双语新闻。
 
 ### 脚本流程与手动操作
 
@@ -210,7 +210,7 @@ skill 只负责本地采集与 JSON 更新，不推送、不部署。Python 脚�
 
    | 判断 | 用法 |
    | --- | --- |
-   | `keep` | 重要、有日期且证据充分；引用原始材料并关联事件 ID，填写中文标题、摘要、关键点、入选理由及原文链接 |
+   | `keep` | 重要、有日期且证据充分；引用原始材料并关联事件 ID，同时填写中英文标题、摘要、关键点、入选理由及原文链接 |
    | `reject` | 宣传、重复、小调整等不入选内容；记录中文理由，供后续复用 |
    | `defer` | 发布时间、正文、变更说明或其他证据不足；写清缺少什么，下轮仍待核查 |
 
@@ -266,12 +266,16 @@ python3 scripts/collect.py import-feed openai-official /tmp/openai-feed.xml \
 
 ## 页面与公开数据
 
+页头支持中文 / EN 切换，首次访问默认中文，记住主动选择。可通过 `?lang=zh` / `?lang=en` 分享对应语言链接；URL 参数优先于已保存的偏好。界面、详情、来源说明与辅助阅读标签随语言切换，保留当前筛选。关键词同时检索两种语言，不依赖在线翻译服务。
+
+事件在同一 JSON 记录中保存必填 `title_zh/en`、`summary_zh/en`、`key_points_zh/en` 和 `importance_reason_zh/en`。来源目录的英文名称和订阅说明在配置中维护，采集 skill 必须产出双语文案；字段完整性由校验脚本检查。
+
 首页默认最近 7 天，支持模型／Agent、关注对象、类型、关键词及自定义日期筛选。重要历史永久保留，按月份按需加载；详情展示原文、多来源、关联与更正。只发布有真实材料支持的内容。
 
 | 公开文件 | 用途 |
 | --- | --- |
 | `public/data/index.json` | 总事件数、月份索引、事件位置、生成时间和快照版本 |
-| `public/data/events/YYYY-MM.json` | 每月中文事件与来源依据 |
+| `public/data/events/YYYY-MM.json` | 每月中英文事件与共用来源依据 |
 | `public/data/catalog.json` | 关注对象、来源、负责人及平台目录 |
 | `public/data/coverage.json` | 来源获取与判断进度、待处理数量、失败和断档说明 |
 | `public/data/subscriptions.opml` | 启用且已配置的订阅清单 |
@@ -284,7 +288,7 @@ python3 scripts/collect.py import-feed openai-official /tmp/openai-feed.xml \
 
 采集完成只更新本地文件；发布另行执行。当前公开仓库使用免费 GitHub Pages，`.github/workflows/pages.yml` 在 `main` 分支推送或手动触发时依次 **运行测试 → 校验并构建 → 上传 `dist/` → 部署**。工作流不运行采集、不调用模型、不创建定时任务。
 
-先预览首页、历史和来源页，确认中文内容、原文链接、待配置与失败提示正确，再检查并提交本次变更：
+先预览首页、历史和来源页，确认中英文内容、原文链接、待配置与失败提示正确，再检查并提交本次变更：
 
 ```sh
 python3 scripts/collect.py validate

@@ -1,8 +1,9 @@
 import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventTime,followingObjects,eventObjectIds} from './model.js';
-import {resolveLanguage,LANGUAGE_STORAGE_KEY,translate,LABELS,eventContent,coverageNote} from './i18n.js';
-let storedLanguage;
-try {storedLanguage=localStorage.getItem(LANGUAGE_STORAGE_KEY);} catch {}
-let language=resolveLanguage(location.search,storedLanguage);
+import {resolveLanguage,translate,LABELS,eventContent,coverageNote} from './i18n.js';
+import {createPrivacyPreferences,initCookieControls} from './privacy.js';
+const preferences=createPrivacyPreferences();
+let language=resolveLanguage(location.search,preferences.language());
+const cookieControls=initCookieControls(preferences,()=>language);
 const t=(key,values)=>translate(language,key,values);
 const name=record=>language==='en' ? record.name_en || record.name : record.name;
 const labels=()=>LABELS[language];
@@ -130,6 +131,7 @@ function applyLanguage() {
   document.querySelectorAll('[data-i18n-kind]').forEach(el=>el.textContent=labels().kind[el.dataset.i18nKind]);
   document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===language)));
   document.querySelectorAll('.brand-name').forEach(el=>el.textContent=language==='en'?'AI Brief':'AI 简报');
+  cookieControls.refresh();
   if(state.error && !$('error-box').hidden) error(state.error);
   if(state.unavailable){$('snapshot-time').textContent=t('unavailable');$('feed-list').textContent=t('retry');}
 }
@@ -146,7 +148,7 @@ function setLanguage(next) {
   if(next===language) return;
   const scrollY=window.scrollY,dialogScroll=$('event-dialog').scrollTop;
   language=next;
-  try {localStorage.setItem(LANGUAGE_STORAGE_KEY,language);} catch {}
+  preferences.rememberLanguage(language);
   const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url);
   applyLanguage();
   if(state.ready){fillEntities();renderSnapshot();renderFeed();if(state.view==='sources')renderSources();}
@@ -171,7 +173,7 @@ function bind() {
   document.addEventListener('click',e=>{const button=e.target.closest('[data-detail]');if(button) detail(button.dataset.detail);});
   $('dialog-close').addEventListener('click',()=>$('event-dialog').close());
   $('event-dialog').addEventListener('click',e=>{if(e.target===$('event-dialog')){const r=$('event-dialog').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('event-dialog').close();}});
-  document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();switchView('feed');$('search-input').focus();}});
+  document.addEventListener('keydown',e=>{if(e.key==='/'&&!document.querySelector('dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();switchView('feed');$('search-input').focus();}});
 }
 async function init() {
   bind();applyLanguage();$('date-from').value=state.filters.from;$('date-to').value=state.filters.to;

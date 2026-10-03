@@ -1,7 +1,8 @@
 import {LANGUAGE_STORAGE_KEY,translate} from './i18n.js';
+import {syncAnalytics} from './analytics.js';
 
 export const CONSENT_STORAGE_KEY='ai-brief-storage-consent';
-export const CONSENT_VERSION=1;
+export const CONSENT_VERSION=2;
 export const CONSENT_LIFETIME=180*24*60*60*1000;
 
 function browserStorage() {
@@ -15,7 +16,7 @@ export function createPrivacyPreferences(storage=browserStorage(),now=()=>Date.n
     consent=null;
     try {
       const value=JSON.parse(storage?.getItem(CONSENT_STORAGE_KEY) || 'null');
-      if(value?.version===CONSENT_VERSION && typeof value.preferences==='boolean' &&
+      if(value?.version===CONSENT_VERSION && typeof value.preferences==='boolean' && typeof value.analytics==='boolean' &&
         Number.isFinite(value.savedAt) && Number.isFinite(value.expiresAt) &&
         value.savedAt<=now() && value.expiresAt>now() && value.expiresAt-value.savedAt===CONSENT_LIFETIME) consent=value;
     } catch {}
@@ -40,9 +41,9 @@ export function createPrivacyPreferences(storage=browserStorage(),now=()=>Date.n
       if(!consent?.preferences) return;
       try {storage?.setItem(LANGUAGE_STORAGE_KEY,language);} catch {}
     },
-    choose(preferences) {
+    choose(preferences,analytics=false) {
       const savedAt=now();
-      consent={version:CONSENT_VERSION,preferences,savedAt,expiresAt:savedAt+CONSENT_LIFETIME};
+      consent={version:CONSENT_VERSION,preferences,analytics,savedAt,expiresAt:savedAt+CONSENT_LIFETIME};
       if(!preferences) {
         try {storage?.removeItem(LANGUAGE_STORAGE_KEY);} catch {}
       }
@@ -82,6 +83,9 @@ export function initCookieControls(preferences,getLanguage) {
       <label class="cookie-option"><span><strong data-i18n="cookiePreferences"></strong><small data-i18n="cookiePreferencesCopy"></small></span>
         <input type="checkbox" id="cookie-preferences" data-i18n-aria-label="cookiePreferences">
       </label>
+      <label class="cookie-option"><span><strong data-i18n="cookieAnalytics"></strong><small data-i18n="cookieAnalyticsCopy"></small></span>
+        <input type="checkbox" id="cookie-analytics" data-i18n-aria-label="cookieAnalytics">
+      </label>
       <p class="cookie-tracking" data-i18n="cookieTracking"></p>
       <a class="cookie-policy" href="./privacy.html#browser-storage" data-legal-link data-i18n="cookiePolicy"></a>
       <div class="cookie-dialog-actions">
@@ -94,8 +98,11 @@ export function initCookieControls(preferences,getLanguage) {
   const banner=document.getElementById('cookie-banner');
   const dialog=document.getElementById('cookie-dialog');
   const checkbox=document.getElementById('cookie-preferences');
+  const analyticsCheckbox=document.getElementById('cookie-analytics');
   const status=document.getElementById('cookie-status');
   function refresh() {
+    if(preferences.consent?.expiresAt<=Date.now()) preferences.reload();
+    syncAnalytics(Boolean(preferences.consent?.analytics));
     const language=getLanguage();
     container.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=translate(language,el.dataset.i18n));
     container.querySelectorAll('[data-i18n-aria-label]').forEach(el=>el.setAttribute('aria-label',translate(language,el.dataset.i18nAriaLabel)));
@@ -106,9 +113,9 @@ export function initCookieControls(preferences,getLanguage) {
     document.body.style.setProperty('--cookie-space',banner.hidden?'0px':`${banner.offsetHeight}px`);
   }
   new ResizeObserver(()=>document.body.style.setProperty('--cookie-space',banner.hidden?'0px':`${banner.offsetHeight}px`)).observe(banner);
-  function choose(allowed) {
+  function choose(allowed,analytics=false) {
     const bannerHadFocus=banner.contains(document.activeElement);
-    const saved=preferences.choose(allowed);
+    const saved=preferences.choose(allowed,analytics);
     preferences.rememberLanguage(getLanguage());
     if(dialog.open) dialog.close();
     refresh();
@@ -120,15 +127,19 @@ export function initCookieControls(preferences,getLanguage) {
     button.hidden=false;
     button.addEventListener('click',()=>{
       checkbox.checked=Boolean(preferences.consent?.preferences);
+      analyticsCheckbox.checked=Boolean(preferences.consent?.analytics);
       refresh();dialog.showModal();
     });
   });
   container.querySelectorAll('[data-consent]').forEach(button=>button.addEventListener('click',()=>choose(button.dataset.consent==='preferences')));
-  container.querySelector('[data-cookie-save]').addEventListener('click',()=>choose(checkbox.checked));
+  container.querySelector('[data-cookie-save]').addEventListener('click',()=>choose(checkbox.checked,analyticsCheckbox.checked));
   container.querySelector('[data-cookie-close]').addEventListener('click',()=>dialog.close());
   window.addEventListener('storage',event=>{
     if(event.key===CONSENT_STORAGE_KEY || event.key===null) {preferences.reload();refresh();}
   });
   refresh();
+  window.setInterval(()=>{
+    if(preferences.consent?.expiresAt<=Date.now()) {preferences.reload();refresh();}
+  },60000);
   return {refresh};
 }

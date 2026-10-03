@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#101216">
   <meta name="description" content="了解 AI 简报如何处理浏览器存储、访问数据与联系邮件。">
   <title>隐私协议 · AI 简报</title>
+  <link rel="canonical" href="https://go2-ai.com/privacy.html">
   <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/style.css">
   <script type="module" src="./assets/legal.js"></script>
@@ -27,16 +28,18 @@
     <nav class="legal-tabs" data-i18n-aria-label="legalNavigation" aria-label="法律与联系"><a href="./privacy.html" data-legal-link aria-current="page" data-i18n="privacy">隐私协议</a><a href="./disclaimer.html" data-legal-link data-i18n="disclaimer">免责声明</a><a href="./contact.html" data-legal-link data-i18n="contact">联系我们</a></nav>
     <section class="legal-section">
       <h2 data-i18n="privacyDataTitle">01 / 浏览时处理哪些信息</h2>
-      <p data-i18n="privacyDataCopy">本站没有注册、登录或在线联系表单，不要求提供姓名、电话号码等资料。搜索词、筛选条件与阅读展开状态仅在当前页面内处理，本站前端不会上传这些内容，也不会建立访客画像。页面从同一站点读取公开的静态信息文件。</p>
+      <p data-i18n="privacyDataCopy">本站没有注册、登录或在线联系表单，不要求提供姓名、电话号码等资料。搜索词、筛选条件与阅读展开状态在当前页面内处理。仅在你单独允许访问统计后，本站加载 Google Analytics，向 Google 发送页面访问及互动、浏览器与设备、来源等统计数据；网络请求也会向 Google 传送 IP 地址。</p>
     </section>
     <section class="legal-section" id="browser-storage">
       <h2 data-i18n="privacyStorageTitle">02 / Cookie 与本地存储</h2>
-      <p data-i18n="privacyStorageCopy">当前前端不主动设置 HTTP Cookie，使用 localStorage 保存以下两项。本地存储留在此浏览器，不会随本站的页面请求自动发送给服务器。可选的语言偏好仅在你允许后读取和保存。</p>
+      <p data-i18n="privacyStorageCopy">本站使用 localStorage 保存下列选择与语言偏好。本地存储留在此浏览器，不会随本站页面请求自动发送。Google Analytics 仅在你单独允许访问统计后加载，并可能设置 _ga、_ga_* Cookie，用于区分访问与会话；本站将其有效期设置为 180 天，后续访问可能续期。</p>
       <div class="storage-table-wrap" tabindex="0" role="region" aria-label="Cookie 与本地存储" data-i18n-aria-label="privacyStorageTitle"><table class="storage-table"><caption class="sr-only" data-i18n="privacyStorageTitle">02 / Cookie 与本地存储</caption><thead><tr><th data-i18n="storageItem" scope="col">存储项</th><th data-i18n="storagePurpose" scope="col">用途与选择</th><th data-i18n="storageDuration" scope="col">保留期限</th></tr></thead><tbody>
-        <tr><th scope="row"><code>ai-brief-storage-consent</code></th><td data-i18n="storageConsentCopy">必要：保存是否允许偏好存储、规则版本及有效期；无唯一用户标识。</td><td data-i18n="storageConsentDuration">180 天；到期后再次询问</td></tr>
+        <tr><th scope="row"><code>ai-brief-storage-consent</code></th><td data-i18n="storageConsentCopy">必要：保存偏好存储与访问统计的独立选择、规则版本及有效期；无唯一用户标识。</td><td data-i18n="storageConsentDuration">180 天；到期后再次询问</td></tr>
         <tr><th scope="row"><code>ai-signal-language</code></th><td data-i18n="storageLanguageCopy">可选：保存 zh / en 语言选择；默认关闭。</td><td data-i18n="storageLanguageDuration">撤回时删除；到期后下次访问删除</td></tr>
       </tbody></table></div>
-      <p data-i18n="privacyChoiceCopy">你可选择“仅必要存储”、允许偏好存储或自定义。页脚的“Cookie 设置”可随时撤回偏好存储；撤回不影响浏览。清除浏览器站点数据也会删除这些记录。若浏览器禁止存储，选择仅对本次页面有效。本站目前不使用广告、行为追踪或访问统计脚本；将来如增加其他可选用途，会更新本协议并重新征求相应选择。</p>
+      <p data-i18n="privacyChoiceCopy">你可选择“仅必要存储”、允许语言偏好，或在自定义设置中单独允许访问统计。允许偏好不会同时允许统计。页脚“Cookie 设置”可随时撤回；撤回统计后停止收集并删除本站 _ga Cookie，不会自动删除此前发送给 Google 的数据。清除浏览器站点数据也会删除本地记录。若浏览器禁止存储，选择仅对本次页面有效。</p>
+      <p data-i18n="privacyAnalyticsCopy">统计服务由 Google 提供，可能涉及境外处理，处理位置和保留规则以 Google 说明及媒体资源设置为准。本站关闭 Google 信号与广告个性化，不向 Google 提供姓名或邮箱等直接身份信息。有关 Google 的数据处理，请查阅其隐私政策。</p>
+      <p><a class="legal-inline-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" data-i18n="googlePrivacy">查阅 Google 隐私政策</a> ↗</p>
       <button type="button" class="consent-button" data-cookie-settings hidden data-i18n="cookieSettings">Cookie 设置</button>
     </section>
     <section class="legal-section">

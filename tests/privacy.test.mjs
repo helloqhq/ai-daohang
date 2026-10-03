@@ -41,7 +41,7 @@ test('allowing preferences persists language; withdrawing removes it immediately
   assert.equal(createPrivacyPreferences(storage,()=>start+2).consent.preferences,false);
 });
 test('expired, malformed and older-version choices require a new choice and remove optional data',()=>{
-  const valid={version:CONSENT_VERSION,preferences:true,savedAt:start,expiresAt:start+CONSENT_LIFETIME};
+  const valid={version:CONSENT_VERSION,preferences:true,analytics:false,savedAt:start,expiresAt:start+CONSENT_LIFETIME};
   for(const [value,time] of [
     [JSON.stringify(valid),start+CONSENT_LIFETIME],
     ['not json',start],['null',start],
@@ -94,4 +94,21 @@ test('another tab withdrawing preferences revokes optional writes in this tab',(
   first.reload();first.rememberLanguage('en');
   assert.equal(first.consent.preferences,false);
   assert.equal(storage.getItem(LANGUAGE_STORAGE_KEY),null);
+});
+
+test('analytics requires a separate choice and is never granted by language preferences',()=>{
+  const storage=memoryStorage();
+  const preferences=createPrivacyPreferences(storage,()=>start);
+  preferences.choose(true);
+  assert.equal(preferences.consent.analytics,false);
+  preferences.choose(false,true);
+  assert.equal(createPrivacyPreferences(storage,()=>start+1).consent.analytics,true);
+  assert.equal(preferences.language(),null);
+  preferences.choose(false);
+  assert.equal(preferences.consent.analytics,false);
+});
+test('legacy language-only consent never authorizes analytics',()=>{
+  const old={version:1,preferences:true,savedAt:start,expiresAt:start+CONSENT_LIFETIME};
+  const preferences=createPrivacyPreferences(memoryStorage([[CONSENT_STORAGE_KEY,JSON.stringify(old)]]),()=>start);
+  assert.equal(preferences.consent,null);
 });

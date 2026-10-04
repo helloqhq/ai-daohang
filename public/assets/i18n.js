@@ -132,7 +132,7 @@ export const messages = {
   noMatchesTitle: ['暂无匹配动态', 'No matching updates'],
   noUpdatesTitle: ['暂无动态', 'No updates'],
   noMatchesCopy: ['可以调整筛选、搜索词或日期范围。', 'Try different filters, search terms or dates.'],
-  noUpdatesCopy: ['可调整日期范围或查看信息源。', 'Try other dates or check sources.'],
+  noUpdatesCopy: ['可调整日期范围。', 'Try other dates.'],
   reset: ['重置筛选', 'Reset filters'],
   unverified: ['待核实账号', 'Account unverified'],
   restricted: ['读取受限', 'Access restricted'],

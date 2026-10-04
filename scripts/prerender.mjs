@@ -14,7 +14,7 @@ export function renderInitialFeed(events,catalog,now=new Date()) {
     if(date!==lastDate){html+=`<div class="date-heading">${escape(date.replaceAll('-','.'))}</div>`;lastDate=date;}
     html+=renderer.card(event);
   }
-  return html || `<div class="empty-state"><div class="empty-mark" aria-hidden="true">∅</div><h3>${translate('zh','noUpdatesTitle')}</h3><p>${translate('zh','noUpdatesCopy')}</p><button id="empty-reset">${translate('zh','coverageLink')} ↗</button></div>`;
+  return html || `<div class="empty-state"><div class="empty-mark" aria-hidden="true">∅</div><h3>${translate('zh','noUpdatesTitle')}</h3><p>${translate('zh','noUpdatesCopy')}</p></div>`;
 }
 
 if(process.argv[1] && resolve(process.argv[1])===fileURLToPath(import.meta.url)) {

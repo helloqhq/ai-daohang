@@ -3,6 +3,7 @@ import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventT
 import {resolveLanguage,translate,LABELS,eventContent,coverageNote} from './i18n.js';
 import {createPrivacyPreferences,initCookieControls} from './privacy.js';
 const preferences=createPrivacyPreferences();
+const showSources=new URLSearchParams(location.search).get('showSources')==='1';
 let language=resolveLanguage(location.search,preferences.language());
 const cookieControls=initCookieControls(preferences,()=>language);
 const t=(key,values)=>translate(language,key,values);
@@ -51,7 +52,7 @@ function renderFeed() {
   }
   if(!out){
     const filtered=state.filters.query || state.filters.entity || state.filters.kind || state.filters.category!=='all';
-    out=`<div class="empty-state"><div class="empty-mark" aria-hidden="true">∅</div><h3>${t(filtered?'noMatchesTitle':'noUpdatesTitle')}</h3><p>${t(filtered?'noMatchesCopy':'noUpdatesCopy')}</p><button id="empty-reset">${t(filtered?'reset':'coverageLink')} ↗</button></div>`;
+    out=`<div class="empty-state"><div class="empty-mark" aria-hidden="true">∅</div><h3>${t(filtered?'noMatchesTitle':'noUpdatesTitle')}</h3><p>${t(filtered?'noMatchesCopy':'noUpdatesCopy')}</p>${filtered||showSources?`<button id="empty-reset">${t(filtered?'reset':'coverageLink')} ↗</button>`:''}</div>`;
   }
   $('feed-list').innerHTML=out;$('feed-list').setAttribute('aria-busy','false');
   $('more-button').hidden=events.length<=state.visible;
@@ -78,6 +79,7 @@ function resetFilters() {
   fillEntities();state.visible=18;refreshFeed();
 }
 function switchView(view) {
+  if(view==='sources'&&!showSources) return;
   state.view=view;$('feed-view').hidden=view!=='feed';$('sources-view').hidden=view!=='sources';
   for(const [id,name] of [['feed-nav','feed'],['sources-nav','sources']]){$(id).classList.toggle('selected',view===name);if(view===name)$(id).setAttribute('aria-current','page');else $(id).removeAttribute('aria-current');}
   if(view==='sources') renderSources();
@@ -151,6 +153,7 @@ function setLanguage(next) {
   window.scrollTo(0,scrollY);
 }
 function bind() {
+  $('sources-nav').hidden=!showSources;
   document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.language)));
   $('event-dialog').addEventListener('close',()=>{state.detailId=null;});
   $('feed-nav').addEventListener('click',()=>switchView('feed'));$('sources-nav').addEventListener('click',()=>switchView('sources'));

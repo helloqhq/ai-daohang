@@ -24,3 +24,17 @@
 `npm test` 通过：30 个 Python 测试和 20 个 JavaScript 测试；`npm run build` 成功。代码已推送 main，提交 `0ee8f97`、`760e7f9` 的 GitHub Pages 工作流均成功。正式域名的页面、统计脚本、共享隐私脚本和文案已核对与本地一致。
 
 配置与提交方式依据 [Google Analytics 官方安装说明](https://support.google.com/analytics/answer/9304153) 和 [Google 重新抓取说明](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)。
+
+## 2026-10-04 SEO 更新
+
+- 发布提交 `3ef1fc0`，GitHub Pages 工作流 [37172540296](https://github.com/helloqhq/ai-daohang/actions/runs/37172540296) 成功。
+- 首页增加中英文搜索标题与摘要、Open Graph、WebSite 站点名称结构化数据和沿用 `sr-only` 样式的 H1。品牌文案和可见布局不变；语言切换同步更新搜索元信息。
+- 构建调用 `scripts/prerender.mjs`，与前端共用 `public/assets/render.js` 的原有卡片渲染逻辑，把当前北京时间近七天的前 18 条动态及摘要、关键点和原始来源写入发布首页。浏览器仍按当前日期加载 JSON，继续提供搜索、筛选、翻译、分页与详情；不生成筛选参数页或事件新页面。
+- 当前首页 HTTP 200，含 18 条预渲染动态，与本地构建完全一致；三个法律／联系页面 HTTP 200 且 canonical 正确。robots 和两个 XML 地址 HTTP 200，XML 可解析，Googlebot 用户代理请求的站点地图与本地一致；不存在的地址返回真正的 404。
+- 30 个 Python 测试和 23 个 JavaScript 测试通过，构建成功。固定同尺寸、同数据的修改前后首页截图 SHA-256 完全相同；搜索、中英文切换、键盘展开详情和 39 个信息源视图已验证。
+- Search Console 首页检查已显示最近抓取时间为 `2026年10月4日 00:11:26`，Googlebot 智能手机版抓取成功、允许抓取及索引；用户和 Google 选择的规范网址一致。该抓取发生在本次 SEO 发布前。总览报告仍停留在 `2026/9/21`，其中已索引 1 页、未索引 408 页为旧站历史状态，不能据此判断新站覆盖情况。
+- 本次重新提交 `/sitemap_index.xml` 后，后台已经识别为“站点地图索引”，上次读取时间 `2026年10月4日`，状态“成功”。重新提交 `/sitemap.xml` 获得成功提交回执，但列表暂时仍为“无法抓取”；索引已发现网页数暂为 0，继续以处理后的读取状态和网页数为准。
+
+- 本次发布后于北京时间 11:00 运行首页“测试实际网址”，Google 明确返回“网址可编入 Google 索引”。随后请求重新索引，后台回执为“已请求编入索引”，并确认加入优先抓取队列。这是针对已发布 SEO 版本的新请求，未重复提交同一版本。
+
+预渲染与站点名称依据 [Google JavaScript SEO 说明](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) 和 [Google 站点名称说明](https://developers.google.com/search/docs/appearance/site-names)。Google 决定最终抓取、索引和搜索展示时间，提交回执与实时检测通过不代表新内容已经完成索引更新。

@@ -10,7 +10,7 @@ from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from collector.pipeline import Pipeline
 from collector.storage import read_json, write_json
-from collector.adapters import SourceError, parse_feed, feed_address
+from collector.adapters import SourceError, parse_feed, feed_address, rss
 from collector.validation import ValidationError
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -50,11 +50,14 @@ class PipelineTests(unittest.TestCase):
         windows=[]
         def scan(source,http,start,end):windows.append(start);return [],True,'checked'
         with patch.dict('collector.pipeline.ADAPTERS',{'rss':scan}):self.p.collect(now='2026-10-03T00:00:00Z')
+        state=self.p.store.state();state['sources'][self.source['id']]['note_en']='Stale explanation for the old feed.';write_json(self.p.store.work/'state.json',state)
         self.p.sources[0]['feed_url']='https://example.com/replacement.xml'
         self.p.refresh()
         self.assertEqual(self.p.store.snapshot()[2]['sources'][0]['status'],'not_attempted')
+        self.assertNotIn('note_en',self.p.store.snapshot()[2]['sources'][0])
         with patch.dict('collector.pipeline.ADAPTERS',{'rss':scan}):self.p.collect(now='2026-10-10T00:00:00Z')
         self.assertEqual(windows[-1].isoformat(),'2026-10-01T00:00:00+00:00')
+        self.assertNotIn('note_en',self.p.store.state()['sources'][self.source['id']])
     def test_opml_is_part_of_every_valid_snapshot(self):
         self.p.refresh()
         import xml.etree.ElementTree as ET
@@ -171,6 +174,46 @@ class ExtractionTests(unittest.TestCase):
         self.assertEqual(items[0]['text'],'Useful summary')
         self.assertEqual(items[0]['material_scope'],'partial_text')
         self.assertEqual(items[0]['date_kind'],'updated')
+    def test_github_atom_paginates_after_tag_and_keeps_all_pages(self):
+        def feed(rows):
+            return '<feed xmlns="http://www.w3.org/2005/Atom">'+''.join('<entry><title>'+tag+'</title><link href="https://github.com/a/b/releases/tag/'+tag+'"/><updated>'+date+'</updated><content>Change '+tag+'</content></entry>' for tag,date in rows)+'</feed>'
+        first=feed([('v3','2026-10-03T00:00:00Z'),('v2','2026-10-02T00:00:00Z')])
+        second=feed([('v1','2026-10-01T00:00:00Z'),('v0','2026-09-29T00:00:00Z')])
+        from unittest.mock import Mock
+        http=Mock();http.get.side_effect=[(first,{}),(second,{})]
+        items,complete,_=rss({'platform':'github','feed_address':'https://github.com/a/b/releases.atom'},http,self.start,self.end)
+        self.assertTrue(complete);self.assertEqual({r['content_id'] for r in items},{'https://github.com/a/b/releases/tag/v1','https://github.com/a/b/releases/tag/v2','https://github.com/a/b/releases/tag/v3'})
+        self.assertEqual(http.get.call_args_list[1].args[0],'https://github.com/a/b/releases.atom?after=v2')
+        for response in [(first,{}),SourceError('HTTP 503')]:
+            http=Mock();http.get.side_effect=[(first,{}),response]
+            items,complete,_=rss({'platform':'github','feed_address':'https://github.com/a/b/releases.atom'},http,self.start,self.end)
+            self.assertFalse(complete);self.assertEqual(len(items),2);self.assertEqual(http.get.call_count,2)
+        # An unknown date on the first page must not be concealed by older dated pages.
+        http=Mock();http.get.side_effect=[(first.replace('2026-10-03T00:00:00Z','unknown'),{}),(second,{}),SourceError('end')]
+        _,complete,_=rss({'platform':'github','feed_address':'https://github.com/a/b/releases.atom'},http,self.start,self.end)
+        self.assertFalse(complete)
+
+    def test_social_lists_and_invalid_links_do_not_claim_complete_windows(self):
+        xml='<rss><channel><item><title>Old post</title><link>https://example.com/post</link><pubDate>2026-09-28</pubDate></item></channel></rss>'
+        for platform in ('x','threads','tiktok'):
+            _,complete,_=parse_feed(xml,{'platform':platform},self.start,self.end)
+            self.assertFalse(complete)
+        _,complete,_=parse_feed(xml.replace('https://example.com/post','javascript:invalid'),{'platform':'web'},self.start,self.end)
+        self.assertFalse(complete)
+
+    def test_converted_day_dates_do_not_invent_midnight_publication_times(self):
+        xml='<rss><channel><item><title>Post</title><link>https://example.com/post</link><pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate><description>Summary</description></item></channel></rss>'
+        rows,_,_=parse_feed(xml,{'platform':'web','feed_date_precision':'date'},self.start,self.end)
+        self.assertEqual(rows[0]['published_at'],'2026-10-01');self.assertEqual(rows[0]['date_precision'],'date')
+
+    def test_stale_community_feed_cannot_claim_coverage_from_old_entries(self):
+        xml='<rss><channel>{build}<item><title>Old</title><link>https://example.com/post</link><pubDate>2026-09-28</pubDate></item></channel></rss>'
+        for built,expected in [('Fri, 02 Oct 2026 23:00:00 +0000',True),('Thu, 01 Oct 2026 00:00:00 +0000',False),('invalid',False),(None,False),('Sun, 04 Oct 2026 00:00:00 +0000',False)]:
+            with self.subTest(build=built):
+                body=xml.format(build='<lastBuildDate>'+built+'</lastBuildDate>' if built else '')
+                _,complete,_=parse_feed(body,{'platform':'web','feed_provider':'community'},self.start,self.end)
+                self.assertEqual(complete,expected)
+
     def test_shared_rsshub_provider_and_native_override(self):
         self.assertEqual(feed_address({'rsshub_route':'/cursor/changelog'},{'rsshub_base_url':'https://rss.example.com/'}),'https://rss.example.com/cursor/changelog')
         self.assertEqual(feed_address({'feed_url':'https://native.example.com/rss','rsshub_route':'/unused'},{}),'https://native.example.com/rss')

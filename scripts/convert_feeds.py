@@ -48,6 +48,7 @@ def main():
     results=[]
     for source in sources:
         if not source.get('enabled') or source['id'] not in (args.sources or SOURCES):continue
+        if not args.sources and not source.get('offline_conversion'):continue
         old=state['sources'].get(source['id'],{})
         since=parse_time(args.since) if args.since else parse_time(old.get('uncovered_from')) or parse_time(old.get('fetched_through')) or until-dt.timedelta(days=config.get('first_lookback_days',3))
         if not since or since>until:parser.error('--since 时间无效')

@@ -66,6 +66,7 @@ class Pipeline:
                     return source,[],{**old,'source_id':source['id'],'status':old.get('status','not_attempted'),
                                      'note':old.get('note','离线转换待运行'),'uncovered_from':old.get('uncovered_from',since.isoformat())},0
                 return source,[],{**result,'status':'not_attempted','note':'RSS 订阅待配置','uncovered_from':old.get('uncovered_from',since.isoformat())},0
+            result.pop('note_en',None)
             http = HTTP(self.store.work/'cache', self.config.get('request_timeout_seconds',18))
             try:
                 records, complete, note = ADAPTERS['rss']({**source,'feed_address':address},http,since,until)
@@ -223,7 +224,7 @@ class Pipeline:
         for source in self.sources:
             old=state['sources'].get(source['id'],{})
             if old.get('subscription_fingerprint')!=digest(feed_address(source,self.config) or 'unconfigured'):
-                old={**old,'status':'not_attempted','note':'离线转换待运行' if source.get('feed_provider')=='offline' else '订阅地址已变更，待重新检查' if feed_address(source,self.config) else 'RSS 订阅待配置','fetched_through':None,'reviewed_through':None}
+                old={**old,'status':'not_attempted','note':'离线转换待运行' if source.get('feed_provider')=='offline' else '订阅地址已变更，待重新检查' if feed_address(source,self.config) else 'RSS 订阅待配置','note_en':None,'fetched_through':None,'reviewed_through':None}
             pending=[m for m in materials.values() if m['source_id']==source['id'] and not self.decision_current(m,decisions.get(m['id']))]
             summary={'source_id':source['id'],'status':old.get('status','not_attempted'),'verification':source.get('verification','pending'),
                      'last_attempt_at':old.get('last_attempt_at'),'fetched_through':old.get('fetched_through'),

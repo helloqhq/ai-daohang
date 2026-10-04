@@ -1,42 +1,289 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "3bf479d156e0acf1",
+  "snapshot_id": "c3937f1f5c8e5ae2",
   "events": [
+    {
+      "id": "elon-musk-x-2106556694683677059",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "马斯克称 Tesla FSD 感觉像魔法",
+      "title_en": "Musk says Tesla FSD feels like magic",
+      "summary_zh": "马斯克表示，Tesla FSD 的体验感觉像魔法。这是其简短的主观评价，未提供独立性能或安全性数据。",
+      "summary_en": "Musk says Tesla FSD feels like magic. This is a brief subjective assessment and provides no independent performance or safety data.",
+      "key_points_zh": [
+        "本人原文仅表达对 FSD 体验的评价。"
+      ],
+      "key_points_en": [
+        "His own text expresses only an assessment of the FSD experience."
+      ],
+      "importance_reason_zh": "保留已核实负责人的 AI 产品使用评价。",
+      "importance_reason_en": "Preserves the verified leader’s firsthand assessment of an AI product.",
+      "published_at": "2026-10-04T01:27:08+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-04T03:42:32+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2106556694683677059",
+          "url": "https://x.com/elonmusk/status/2106556694683677059",
+          "collected_at": "2026-10-04T03:42:32+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-04T01:27:08+00:00"
+        }
+      ]
+    },
+    {
+      "id": "pi-v102",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Pi 1.0.2：按思考等级配置采样参数",
+      "title_en": "Pi 1.0.2 adds sampling parameters by thinking level",
+      "summary_zh": "Pi 新增 models.json 中的 samplingParamsByThinkingLevel，允许在 OpenAI 兼容 API 上按思考等级覆盖 temperature、top_p 等采样参数。",
+      "summary_en": "Pi adds samplingParamsByThinkingLevel in models.json, allowing sampling parameters such as temperature and top_p to be overridden by thinking level for OpenAI-compatible APIs.",
+      "key_points_zh": [
+        "按思考等级分别设置采样参数。",
+        "该功能适用于 OpenAI 兼容 API。"
+      ],
+      "key_points_en": [
+        "Set sampling parameters separately for each thinking level.",
+        "The feature applies to OpenAI-compatible APIs."
+      ],
+      "importance_reason_zh": "影响模型推理配置与调用行为。",
+      "importance_reason_en": "Changes model inference configuration and request behavior.",
+      "published_at": "2026-10-04T00:56:36Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-04T03:39:25+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.0.2",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.0.2",
+          "collected_at": "2026-10-04T03:39:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-04T00:56:36Z"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21289",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "feature"
+      ],
+      "title_zh": "Claude Code 2.1.289：修复权限规则绕过与插件会话崩溃",
+      "title_en": "Claude Code 2.1.289 fixes permission-rule bypasses and plugin session crashes",
+      "summary_zh": "Claude Code 修复受管机器上 mod 审批覆盖复合命令中的 deny/ask 规则、IDE 通过符号链接引用文件绕过 Read deny 规则，以及沙箱自动放行时 Bash 规则遗漏变量前缀命令等问题。也修复插件改写组织管理的 MCP 登录工具描述和多类插件界面导致会话终止的问题。",
+      "summary_en": "Claude Code fixes mod approvals overriding deny/ask rules within compound commands on managed machines, Read deny rules being bypassed by IDE file references through symlinks, and Bash rules missing variable-prefixed commands under sandbox auto-allow. It also fixes plugins rewriting organization-managed MCP sign-in tool descriptions and several plugin UI failures that terminated sessions.",
+      "key_points_zh": [
+        "修复复合 shell 命令、变量前缀与符号链接场景中的权限规则。",
+        "阻止用户插件改写组织管理的 MCP 登录工具描述。",
+        "新增队友 agent.spawn，并修复插件渲染异常导致会话终止。"
+      ],
+      "key_points_en": [
+        "Fixes permission rules for compound shell commands, variable prefixes, and symlinks.",
+        "Prevents user plugins from rewriting organization-managed MCP sign-in tool descriptions.",
+        "Adds agent.spawn for teammates and fixes sessions ending on plugin-rendering failures."
+      ],
+      "importance_reason_zh": "修复权限边界和会话中断问题。",
+      "importance_reason_en": "Repairs permission enforcement and session interruptions.",
+      "published_at": "2026-10-03T23:19:55+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-04T03:39:28+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-289",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-289",
+          "collected_at": "2026-10-04T03:39:28+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-03T23:19:55+00:00"
+        },
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://github.com/anthropics/claude-code/releases/tag/v2.1.289",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.289",
+          "collected_at": "2026-10-04T03:32:18+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-03T23:07:17Z"
+        }
+      ]
+    },
+    {
+      "id": "tibo-x-2106501204285239560",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Tibo 询问新增侧栏应放哪些内容",
+      "title_en": "Tibo asks what an additional sidebar should contain",
+      "summary_zh": "Tibo 问用户，如果再增加一个侧栏，里面应该放什么。该帖子是界面需求调查，没有确认将新增侧栏。",
+      "summary_en": "Tibo asks users what another sidebar should contain if one were added. The post is a UI-feedback request and does not confirm a new sidebar.",
+      "key_points_zh": [
+        "就假设新增侧栏的内容征求意见。"
+      ],
+      "key_points_en": [
+        "Asks for suggestions about the contents of a hypothetical additional sidebar."
+      ],
+      "importance_reason_zh": "保留负责人对界面需求的一手反馈征集。",
+      "importance_reason_en": "Preserves a firsthand UI-feedback request from the verified leader.",
+      "published_at": "2026-10-03T21:46:38+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-04T03:42:32+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106501204285239560",
+          "url": "https://x.com/thsottiaux/status/2106501204285239560",
+          "collected_at": "2026-10-04T03:42:32+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-03T21:46:38+00:00"
+        }
+      ]
+    },
+    {
+      "id": "tibo-x-2106439068557144179",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Tibo 征集 Codex 缺失功能的反馈",
+      "title_en": "Tibo asks which missing Codex feature users want",
+      "summary_zh": "Tibo 询问用户希望 Codex 补充哪一项目前缺失的功能。原帖是反馈征集，没有宣布具体功能或上线时间。",
+      "summary_en": "Tibo asks users which currently missing feature they wish Codex had. The post requests feedback and announces no specific feature or release date.",
+      "key_points_zh": [
+        "向用户征集 Codex 缺失功能。"
+      ],
+      "key_points_en": [
+        "Requests feedback on missing Codex features."
+      ],
+      "importance_reason_zh": "保留负责人对产品需求的一手调查。",
+      "importance_reason_en": "Preserves a firsthand product-feedback request from the verified leader.",
+      "published_at": "2026-10-03T17:39:44+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-04T03:42:32+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106439068557144179",
+          "url": "https://x.com/thsottiaux/status/2106439068557144179",
+          "collected_at": "2026-10-04T03:42:32+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-03T17:39:44+00:00"
+        }
+      ]
+    },
+    {
+      "id": "pi-v101",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Pi 1.0.1：项目级 MCP 覆盖与 OAuth 注册，修复运行稳定性",
+      "title_en": "Pi 1.0.1 adds project MCP overrides and OAuth registration support",
+      "summary_zh": "Pi 支持通过 .pi/mcp.json 和 /mcp 在项目内调整用户级 MCP 服务器，并增加 CIMD OAuth 客户端注册与 Nix 安装。该版本还修复模型容量错误结束会话、codemode 输出循环耗尽内存及部分提供商调用失败。",
+      "summary_en": "Pi adds project overrides for user-level MCP servers through .pi/mcp.json and /mcp, CIMD OAuth client registration, and Nix installation. It also fixes turns ending on model-capacity errors, codemode output loops exhausting memory, and failures with several providers.",
+      "key_points_zh": [
+        "项目可覆盖 MCP 服务器的启用状态与工具暴露；CIMD 可按客户端文档 URL 识别客户端。",
+        "新增 Nix 安装方式和自定义工具渲染器。",
+        "修复容量错误重试、codemode 输出内存耗尽及 Bedrock Claude 签名错误。"
+      ],
+      "key_points_en": [
+        "Projects can override MCP server enablement and tool exposure; CIMD identifies clients by their metadata document URL.",
+        "Adds Nix installation and custom tool renderers.",
+        "Fixes capacity-error retries, codemode output memory exhaustion, and Bedrock Claude signature failures."
+      ],
+      "importance_reason_zh": "改进项目隔离、MCP 授权及 Agent 会话稳定性。",
+      "importance_reason_en": "Improves project configuration, MCP authorization, and agent-session reliability.",
+      "published_at": "2026-10-03T16:14:00Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-04T03:39:25+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.0.1",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.0.1",
+          "collected_at": "2026-10-04T03:39:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-03T16:14:00Z"
+        }
+      ]
+    },
     {
       "id": "elon-musk-x-2106293251233738928",
       "entity_ids": [
         "grok"
       ],
-      "kind": "preview",
+      "kind": "opinion",
       "topics": [
         "capability"
       ],
-      "title_zh": "马斯克称 Terafab 的目标是每年生产 1 TW 算力",
-      "summary_zh": "马斯克表示，TSMC 对 Terafab 的任何贡献都只是补充；Terafab 的目标是每年生产 1 TW 算力，并称这约为全球当前 AI 算力产出的 50 倍。这是他的规模目标与比较，原帖没有给出达成时间。",
+      "title_zh": "马斯克用单细胞与人体作比，讨论数量与性质的关系",
+      "summary_zh": "马斯克表示，数量足够大时本身就是一种性质，并以单细胞细菌与约 35 万亿细胞的人体作比。该简短评论没有本人提出的 Terafab 产能目标。",
       "key_points_zh": [
-        "马斯克称 Terafab 的目标为每年生产 1 TW 算力，TSMC 的贡献将是补充。",
-        "他称目标约为当前全球 AI 算力产出的 50 倍；帖子没有提供达成时间或已实现产能。"
+        "数量足够大时本身会成为一种性质，是其个人评论。",
+        "用单细胞细菌与约 35 万亿细胞的人体作比。"
       ],
-      "importance_reason_zh": "保留负责人关于 AI 算力生产规模的一手目标表述，便于后续跟踪。",
-      "title_en": "Musk says Terafab targets 1 TW of compute production per year",
-      "summary_en": "Musk says any TSMC contribution to Terafab would be supplemental. He describes a goal of 1 TW of compute production per year, around 50 times current global AI compute output. These are his target and comparison; the post gives no date for achieving them.",
+      "importance_reason_zh": "保留本人实际评论并纠正引用帖内容归属。",
+      "title_en": "Musk uses single cells and the human body to discuss quantity and quality",
+      "summary_en": "Musk says a sufficiently large quantity is a quality of its own, comparing single-cell bacteria with a human body containing about 35 trillion cells. His brief comment does not itself state a Terafab production target.",
       "key_points_en": [
-        "Musk describes a Terafab target of 1 TW of compute production per year, with TSMC’s contribution being supplemental.",
-        "He says the target is around 50 times current global AI compute output; the post gives neither an achievement date nor achieved capacity."
+        "He comments that a sufficiently large quantity is a quality of its own.",
+        "He compares single-cell bacteria with a human body of about 35 trillion cells."
       ],
-      "importance_reason_en": "Preserves a firsthand AI compute-production scale target from a verified leader for subsequent follow-up.",
+      "importance_reason_en": "Preserves his actual comment and corrects the attribution of quoted-post content.",
       "published_at": "2026-10-03T08:00:18+00:00",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T13:30:39+00:00",
-      "updated_at": "2026-10-03T13:50:02.893475+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
       "sources": [
         {
           "source_id": "elon-musk-x",
           "content_id": "https://x.com/elonmusk/status/2106293251233738928",
           "url": "https://x.com/elonmusk/status/2106293251233738928",
-          "collected_at": "2026-10-03T13:30:39+00:00",
+          "collected_at": "2026-10-04T03:44:18+00:00",
           "material_scope": "partial_text",
           "published_at": "2026-10-03T08:00:18+00:00"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-10-04T03:46:37+00:00",
+          "reason_zh": "旧 X 转换器误取了引用帖的长文，将其中 Terafab 产能目标归给马斯克；重新核对本人帖文，仅保留其数量与性质的评论，并从预告改为观点。",
+          "reason_en": "The previous X converter selected a quoted post’s long text and attributed its Terafab production target to Musk. His own post was rechecked; the record now contains only his quantity-and-quality comment and is classified as an opinion instead of a preview.",
+          "url": "https://x.com/elonmusk/status/2106293251233738928"
         }
       ]
     },
@@ -343,7 +590,7 @@
       "published_at": "2026-10-02T20:19:57Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T03:22:34+00:00",
-      "updated_at": "2026-10-03T11:06:49+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
       "sources": [
         {
           "source_id": "claude-code-changelog",
@@ -352,6 +599,14 @@
           "material_scope": "full_text",
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-10-02T20:19:57Z"
+        },
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-288",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-288",
+          "collected_at": "2026-10-04T03:39:28+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-02T20:34:13+00:00"
         }
       ],
       "related_event_ids": [
@@ -469,7 +724,7 @@
       "published_at": "2026-10-01T20:19:13Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T02:50:32+00:00",
-      "updated_at": "2026-10-03T11:06:49+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
       "sources": [
         {
           "source_id": "codex-releases",
@@ -478,6 +733,14 @@
           "material_scope": "full_text",
           "collected_at": "2026-10-03T02:50:32+00:00",
           "published_at": "2026-10-01T20:19:13Z"
+        },
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.160.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.0",
+          "collected_at": "2026-10-04T03:39:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-01T20:21:40Z"
         }
       ],
       "title_en": "Codex 0.160.0: sessions outside projects, permission recovery and Windows fixes",
@@ -554,7 +817,7 @@
       "published_at": "2026-10-01T18:43:19Z",
       "date_precision": "datetime",
       "first_collected_at": "2026-10-03T03:22:34+00:00",
-      "updated_at": "2026-10-03T11:06:49+00:00",
+      "updated_at": "2026-10-04T03:46:37+00:00",
       "sources": [
         {
           "source_id": "claude-code-changelog",
@@ -563,6 +826,14 @@
           "material_scope": "full_text",
           "collected_at": "2026-10-03T03:22:34+00:00",
           "published_at": "2026-10-01T18:43:19Z"
+        },
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-287",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-287",
+          "collected_at": "2026-10-04T03:39:28+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-01T18:14:41+00:00"
         }
       ],
       "related_event_ids": [

@@ -41,13 +41,15 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": null,
-      "feed_provider": "offline",
+      "feed_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml",
+      "feed_provider": "community",
       "name_en": "Anthropic News",
       "offline_conversion": true,
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
-      "feed_checked_at": "2026-10-03"
+      "subscription_note": "订阅由 Olshansk/rss-feeds 转换官方新闻，提供日期和摘要；官网正文仍按需补充。已核对近期条目，不代表覆盖 Anthropic 全部渠道。",
+      "subscription_note_en": "Olshansk/rss-feeds converts the official newsroom into a dated summary feed. Official article text is supplemented on demand. Recent entries were cross-checked; this does not cover every Anthropic channel.",
+      "feed_checked_at": "2026-10-04",
+      "feed_date_precision": "date",
+      "feed_verified_at": "2026-10-04"
     },
     {
       "id": "google-official",
@@ -94,9 +96,9 @@
       "feed_provider": "offline",
       "name_en": "DeepSeek API Updates",
       "offline_conversion": true,
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
-      "feed_checked_at": "2026-10-03"
+      "subscription_note": "官方更新页已可按需转为含日期与正文的本地 RSS；尚无本轮验证可用的在线订阅，保留完整时间窗缺口。",
+      "subscription_note_en": "The official changelog can be converted on demand to local RSS with dates and text. No online feed was verified as usable in this check; the full-window gap remains.",
+      "feed_checked_at": "2026-10-04"
     },
     {
       "id": "qwen-official",
@@ -120,9 +122,9 @@
       "feed_provider": "offline",
       "name_en": "Qwen Blog",
       "offline_conversion": true,
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
-      "feed_checked_at": "2026-10-03"
+      "subscription_note": "官方文章接口可按需转换为本地 RSS；现行 RSSHub 路由为 /qwen/blog/zh，本轮公共实例返回 403/503，未接入。",
+      "subscription_note_en": "The official article API can be converted on demand to local RSS. The current RSSHub route is /qwen/blog/zh; public instances returned 403/503 in this check, so it is not connected.",
+      "feed_checked_at": "2026-10-04"
     },
     {
       "id": "zhipu-official",
@@ -144,10 +146,10 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "feed_checked_at": "2026-10-03",
+      "subscription_note": "官方更新页已可按需转为含日期与正文的本地 RSS；尚无本轮验证可用的在线订阅，保留完整时间窗缺口。",
+      "feed_checked_at": "2026-10-04",
       "name_en": "Zhipu Model Releases",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "subscription_note_en": "The official changelog can be converted on demand to local RSS with dates and text. No online feed was verified as usable in this check; the full-window gap remains.",
       "offline_conversion": true
     },
     {
@@ -171,7 +173,7 @@
       "feed_url": null,
       "feed_provider": "offline",
       "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "feed_checked_at": "2026-10-03",
+      "feed_checked_at": "2026-10-04",
       "name_en": "Kimi Research Blog",
       "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
       "offline_conversion": true
@@ -197,7 +199,7 @@
       "feed_url": null,
       "feed_provider": "offline",
       "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "feed_checked_at": "2026-10-03",
+      "feed_checked_at": "2026-10-04",
       "name_en": "MiniMax Blog",
       "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
       "offline_conversion": true
@@ -223,7 +225,7 @@
       "feed_url": null,
       "feed_provider": "offline",
       "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "feed_checked_at": "2026-10-03",
+      "feed_checked_at": "2026-10-04",
       "name_en": "Tencent Hunyuan",
       "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
       "offline_conversion": true
@@ -272,10 +274,10 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "feed_checked_at": "2026-10-03",
+      "subscription_note": "官方新闻可按需转换；候选社区 RSS 停在 2026 年 5 月，遗漏官网后续内容，未采用。完整在线覆盖仍待接入。",
+      "feed_checked_at": "2026-10-04",
       "name_en": "Grok News",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "subscription_note_en": "Official news can be converted on demand. A candidate community feed stopped in May 2026 and missed later official content, so it was not adopted. Complete online coverage remains unconfirmed.",
       "offline_conversion": true
     },
     {
@@ -296,13 +298,15 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": null,
-      "feed_provider": "offline",
+      "feed_url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_meta_ai.xml",
+      "feed_provider": "community",
       "name_en": "Meta AI Blog",
       "offline_conversion": true,
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
-      "feed_checked_at": "2026-10-03"
+      "subscription_note": "由 Olshansk/rss-feeds 转换官方 AI 博客；本轮 88 条有日期的摘要，最近文章与官网一致，正文仍按需补充。只覆盖该博客。",
+      "subscription_note_en": "Olshansk/rss-feeds converts the official AI blog. This check returned 88 dated summaries; the latest article matched the official index. Full article text is supplemented on demand. Coverage is limited to this blog.",
+      "feed_checked_at": "2026-10-04",
+      "feed_date_precision": "date",
+      "feed_verified_at": "2026-10-04"
     },
     {
       "id": "cursor-official",
@@ -347,10 +351,10 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "feed_checked_at": "2026-10-03",
+      "subscription_note": "官方更新页已可按需转为含日期与正文的本地 RSS；尚无本轮验证可用的在线订阅，保留完整时间窗缺口。",
+      "feed_checked_at": "2026-10-04",
       "name_en": "Qoder Changelog",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "subscription_note_en": "The official changelog can be converted on demand to local RSS with dates and text. No online feed was verified as usable in this check; the full-window gap remains.",
       "offline_conversion": true
     },
     {
@@ -373,10 +377,10 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "feed_checked_at": "2026-10-03",
+      "subscription_note": "官方更新页已可按需转为含日期与正文的本地 RSS；尚无本轮验证可用的在线订阅，保留完整时间窗缺口。",
+      "feed_checked_at": "2026-10-04",
       "name_en": "TRAE Chinese Edition Changelog",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "subscription_note_en": "The official changelog can be converted on demand to local RSS with dates and text. No online feed was verified as usable in this check; the full-window gap remains.",
       "offline_conversion": true
     },
     {
@@ -399,10 +403,10 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "feed_checked_at": "2026-10-03",
+      "subscription_note": "官方更新页已可按需转为含日期与正文的本地 RSS；尚无本轮验证可用的在线订阅，保留完整时间窗缺口。",
+      "feed_checked_at": "2026-10-04",
       "name_en": "ZCode Changelog",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
+      "subscription_note_en": "The official changelog can be converted on demand to local RSS with dates and text. No online feed was verified as usable in this check; the full-window gap remains.",
       "offline_conversion": true
     },
     {
@@ -587,11 +591,11 @@
       "entity_ids": [
         "claude-code"
       ],
-      "url": "https://github.com/anthropics/claude-code/releases",
+      "url": "https://code.claude.com/docs/en/changelog",
       "platform": "web",
       "enabled": true,
       "verification": "verified",
-      "verification_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+      "verification_url": "https://code.claude.com/docs/en/changelog",
       "capabilities": {
         "list": true,
         "text": true,
@@ -599,9 +603,12 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://github.com/anthropics/claude-code/releases.atom",
+      "feed_url": "https://code.claude.com/docs/en/changelog/rss.xml",
       "feed_provider": "native",
-      "name_en": "Claude Code Releases"
+      "name_en": "Claude Code Releases",
+      "feed_verified_at": "2026-10-04",
+      "subscription_note": "官方文档已公布原生 RSS，提供完整更新说明；GitHub Releases 的既有历史依据保留。",
+      "subscription_note_en": "The official documentation advertises a native RSS feed with complete release notes. Existing historical GitHub Releases evidence is retained."
     },
     {
       "id": "sam-altman-blog",
@@ -647,11 +654,11 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "subscription_note": "按需离线 RSS 已取得官网全文；原文仅标月份，保留月份说明，不编造具体发布日期。",
+      "subscription_note": "6 篇本人文章可读取全文，但官网只标月份；RSS 候选返回 404，不能补造发布日期或确认完整时间窗。",
       "name_en": "Dario Amodei’s Blog",
-      "subscription_note_en": "On-demand offline RSS retrieves official full text. The original pages show months only; month labels are preserved without inventing publication days.",
+      "subscription_note_en": "Full text is available for six articles, but the official site supplies only month labels. Candidate RSS URLs returned 404; publication dates and a complete window cannot be inferred.",
       "offline_conversion": true,
-      "feed_checked_at": "2026-10-03"
+      "feed_checked_at": "2026-10-04"
     },
     {
       "id": "openai-youtube",
@@ -697,9 +704,9 @@
       "feed_provider": "offline",
       "name_en": "OpenAI X",
       "offline_conversion": true,
-      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
-      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
-      "feed_checked_at": "2026-10-03"
+      "subscription_note": "匿名公开页可转换最近 5 条本人帖子；不是完整时间线。测试的 RSSHub 在线订阅未取得有效 XML，保留离线补采和覆盖缺口。",
+      "subscription_note_en": "The anonymous public page can convert five recent posts by this account, not a complete timeline. Tested RSSHub online feeds did not return valid XML. Offline imports and the coverage gap are retained.",
+      "feed_checked_at": "2026-10-04"
     },
     {
       "id": "zcode-x",
@@ -723,9 +730,9 @@
       "feed_provider": "offline",
       "name_en": "ZCode X",
       "offline_conversion": true,
-      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
-      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
-      "feed_checked_at": "2026-10-03"
+      "subscription_note": "匿名公开页可转换最近 5 条本人帖子；不是完整时间线。测试的 RSSHub 在线订阅未取得有效 XML，保留离线补采和覆盖缺口。",
+      "subscription_note_en": "The anonymous public page can convert five recent posts by this account, not a complete timeline. Tested RSSHub online feeds did not return valid XML. Offline imports and the coverage gap are retained.",
+      "feed_checked_at": "2026-10-04"
     },
     {
       "id": "openai-tiktok",
@@ -749,9 +756,9 @@
       "feed_provider": "offline",
       "name_en": "OpenAI TikTok",
       "offline_conversion": true,
-      "subscription_note": "已纳入本轮按需离线转换，但匿名页面未提供帖子列表；仍受限，需要可读取的登录态或订阅服务，在线覆盖未确认。",
-      "subscription_note_en": "Included in this on-demand conversion run, but the anonymous page provides no post list. Access remains blocked and requires a readable authenticated session or feed service; online coverage is unconfirmed.",
-      "feed_checked_at": "2026-10-03"
+      "subscription_note": "本轮匿名页取得账号资料但视频列表为空；RSSHub 主实例 403、替代实例 503。需要能返回本人视频及日期的订阅入口。",
+      "subscription_note_en": "The anonymous page returned account metadata but an empty video list. The main RSSHub instance returned 403 and an alternative returned 503. A feed providing this account’s videos and dates is still needed.",
+      "feed_checked_at": "2026-10-04"
     },
     {
       "id": "openrouter-official",
@@ -823,10 +830,10 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "feed_checked_at": "2026-10-03",
-      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
+      "feed_checked_at": "2026-10-04",
+      "subscription_note": "匿名公开页可转换最近 5 条本人帖子；不是完整时间线。测试的 RSSHub 在线订阅未取得有效 XML，保留离线补采和覆盖缺口。",
       "name_en": "Elon Musk · X",
-      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
+      "subscription_note_en": "The anonymous public page can convert five recent posts by this account, not a complete timeline. Tested RSSHub online feeds did not return valid XML. Offline imports and the coverage gap are retained.",
       "offline_conversion": true
     },
     {
@@ -835,7 +842,7 @@
       "entity_ids": [
         "meta"
       ],
-      "url": "https://www.threads.net/@zuck",
+      "url": "https://www.threads.com/@zuck",
       "platform": "threads",
       "person_id": "mark-zuckerberg",
       "account_handle": "zuck",
@@ -843,19 +850,20 @@
       "verification": "verified",
       "verification_url": "https://about.fb.com/news/2023/07/introducing-threads-new-app-text-sharing/",
       "capabilities": {
-        "list": false,
-        "text": false,
+        "list": true,
+        "text": true,
         "captions": false,
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": null,
-      "feed_provider": "offline",
-      "feed_checked_at": "2026-10-03",
-      "subscription_note": "已纳入本轮按需离线转换，但匿名页面未提供帖子列表；仍受限，需要可读取的登录态或订阅服务，在线覆盖未确认。",
+      "feed_url": "https://rsshub.rssforever.com/threads/zuck",
+      "feed_provider": "rsshub",
+      "feed_checked_at": "2026-10-04",
+      "subscription_note": "公开 RSSHub 实例已取得 4 条本人帖子及日期；列表有限，不保证完整账号时间窗。主实例本轮返回 HTTP 403。",
       "name_en": "Mark Zuckerberg · Threads",
-      "subscription_note_en": "Included in this on-demand conversion run, but the anonymous page provides no post list. Access remains blocked and requires a readable authenticated session or feed service; online coverage is unconfirmed.",
-      "offline_conversion": true
+      "subscription_note_en": "A public RSSHub instance returned four posts by this account with dates. The list is limited and does not establish a complete account window. The main instance returned HTTP 403 during this check.",
+      "offline_conversion": false,
+      "feed_verified_at": "2026-10-04"
     },
     {
       "id": "demis-hassabis-x",
@@ -879,10 +887,10 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "feed_checked_at": "2026-10-03",
-      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
+      "feed_checked_at": "2026-10-04",
+      "subscription_note": "匿名公开页可转换最近 5 条本人帖子；不是完整时间线。测试的 RSSHub 在线订阅未取得有效 XML，保留离线补采和覆盖缺口。",
       "name_en": "Demis Hassabis · X",
-      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
+      "subscription_note_en": "The anonymous public page can convert five recent posts by this account, not a complete timeline. Tested RSSHub online feeds did not return valid XML. Offline imports and the coverage gap are retained.",
       "offline_conversion": true
     },
     {
@@ -907,10 +915,10 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "feed_checked_at": "2026-10-03",
-      "subscription_note": "按需读取公开页中的本人帖子数据并转为本地 RSS；本轮各账号仅有 5 条公开帖子，按部分正文保存，不代表完整时间窗。",
+      "feed_checked_at": "2026-10-04",
+      "subscription_note": "匿名公开页可转换最近 5 条本人帖子；不是完整时间线。测试的 RSSHub 在线订阅未取得有效 XML，保留离线补采和覆盖缺口。",
       "name_en": "Jeff Dean · X",
-      "subscription_note_en": "The account’s own public post data is converted on demand to local RSS. This run exposes only five posts per account, stored as partial text; a complete time window is not confirmed.",
+      "subscription_note_en": "The anonymous public page can convert five recent posts by this account, not a complete timeline. Tested RSSHub online feeds did not return valid XML. Offline imports and the coverage gap are retained.",
       "offline_conversion": true
     },
     {
@@ -965,9 +973,9 @@
       "feed_url": null,
       "feed_provider": "offline",
       "offline_conversion": true,
-      "subscription_note": "按需读取本人 X 公开帖子并转换为本地 RSS；2026-10-03 检查取得 5 条带日期帖子，按部分正文保存，不代表完整账号时间窗或定时推送。",
-      "subscription_note_en": "The account’s own public X posts are converted on demand to local RSS. The October 3, 2026 check retrieved five dated posts, stored as partial text; a complete account time window or scheduled notifications are not confirmed.",
-      "feed_checked_at": "2026-10-03"
+      "subscription_note": "匿名公开页可转换最近 5 条本人帖子；不是完整时间线。测试的 RSSHub 在线订阅未取得有效 XML，保留离线补采和覆盖缺口。",
+      "subscription_note_en": "The anonymous public page can convert five recent posts by this account, not a complete timeline. Tested RSSHub online feeds did not return valid XML. Offline imports and the coverage gap are retained.",
+      "feed_checked_at": "2026-10-04"
     }
   ],
   "people": [

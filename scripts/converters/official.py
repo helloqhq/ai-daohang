@@ -154,6 +154,25 @@ def js_string(text,key):
     return json.loads(m.group(1)) if m else None
 
 
+def js_object(text,key):
+    """Read only a direct object property, excluding quoted/retweeted descendants."""
+    depth=0;quoted=False;escape=False
+    for i,c in enumerate(text):
+        if quoted:
+            if escape:escape=False
+            elif c=='\\':escape=True
+            elif c=='"':quoted=False
+            continue
+        if c=='"':quoted=True;continue
+        if depth==1 and text.startswith(key+':',i) and text[:i].rstrip()[-1:] in ('{',','):
+            match=re.match(re.escape(key)+r':(?:\$R\[\d+\]=)?',text[i:])
+            start=i+match.end()
+            return balanced(text,start) if text[start:start+1]=='{' else None
+        if c in '{[':depth+=1
+        elif c in '}]':depth-=1
+    return None
+
+
 def x_posts(tree,source):
     username=urllib.parse.urlparse(source['url']).path.strip('/');out=[]
     for script in tree.nodes('script'):
@@ -162,15 +181,15 @@ def x_posts(tree,source):
             start=m.end()
             if text[start:start+1]!='{':continue
             tweet=balanced(text,start)
-            if (js_string(tweet,'screen_name') or '').lower()!=username.lower():continue
-            details=re.search(r'details:\$R\[\d+\]=',tweet)
-            if not details:continue
-            payload=balanced(tweet,details.end());date=re.search(r'created_at_ms:(\d+)',payload);body=js_string(payload,'full_text')
+            core=js_object(tweet,'core')
+            if not core or (js_string(core,'screen_name') or '').lower()!=username.lower():continue
+            payload=js_object(tweet,'details')
+            if not payload:continue
+            date=re.search(r'created_at_ms:(\d+)',payload);body=js_string(payload,'full_text')
             if not date or not body:continue
             # Long-form posts have their own text; do not substitute a quoted post's text.
-            note=re.search(r'note_tweet_results:\$R\[\d+\]=',tweet)
-            if note:
-                note_body=balanced(tweet,note.end());body=js_string(note_body,'text') or body
+            note=js_object(tweet,'note_tweet') or js_object(tweet,'note_tweet_results')
+            if note:body=js_string(note,'text') or body
             timestamp=dt.datetime.fromtimestamp(int(date.group(1))/1000,dt.timezone.utc).isoformat()
             out.append(item(username+' · '+body.splitlines()[0][:110],f'https://x.com/{username}/status/{m.group(1)}',body,timestamp,False))
     if not out:raise SourceError('X 公开页未提供可核实正文和日期的帖子','blocked')

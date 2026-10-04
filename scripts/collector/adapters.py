@@ -85,6 +85,7 @@ def parse_feed(body,source,since,until,feed_url=None):
     if local(root.tag) not in ('rss','RDF','feed'):
         raise SourceError('返回页面不是 RSS/Atom 订阅')
     records,dates=[],[]
+    valid_links=0
     entries=[e for e in root.iter() if local(e.tag) in ('item','entry')]
     for entry in entries:
         def field(*names):return next((c for c in entry if local(c.tag) in names),None)
@@ -99,6 +100,8 @@ def parse_feed(body,source,since,until,feed_url=None):
         if published and not parse_time(published):
             try:published=email.utils.parsedate_to_datetime(published).isoformat()
             except (ValueError,TypeError):published=None
+        if published and source.get('feed_date_precision')=='date':
+            published=parse_time(published).date().isoformat()
         if published and parse_time(published):dates.append(parse_time(published))
         else:published=None
         links=[c for c in entry if local(c.tag)=='link']
@@ -109,6 +112,7 @@ def parse_feed(body,source,since,until,feed_url=None):
             if video:url='https://www.youtube.com/watch?v='+video
         if urllib.parse.urlparse(url).scheme not in ('http','https'):
             continue
+        valid_links+=1
         if not in_window(published,since,until):continue
         # Media RSS content describes an attachment, not article text.
         body_tags=('{http://purl.org/rss/1.0/modules/content/}encoded',
@@ -136,14 +140,52 @@ def parse_feed(body,source,since,until,feed_url=None):
         label=entry.findtext('{urn:ai-daohang:offline-feed}date_label')
         if label:records[-1]['date_label']=label
     # Empty feed or undated entries cannot establish historical coverage.
-    complete=bool(dates and min(dates)<=since and len(dates)==len(entries))
-    if not entries:note='订阅没有条目，无法确认历史时间窗'
+    complete=bool(dates and min(dates)<=since and len(dates)==len(entries) and valid_links==len(entries))
+    if source.get('platform') in ('x','threads','tiktok'):
+        complete=False
+        note='账号订阅仅提供有限帖子列表，完整时间窗尚未确认'
+    elif not entries:note='订阅没有条目，无法确认历史时间窗'
     elif complete:note='订阅条目覆盖查询起点，已读取该订阅时间窗'
     else:note='订阅历史有限或存在未知日期，完整时间窗尚未确认'
+    if source.get('feed_provider')=='community':
+        built=root.findtext('channel/lastBuildDate')
+        try:generated=parse_time(built) or parse_time(email.utils.parsedate_to_datetime(built).isoformat())
+        except (ValueError,TypeError):generated=None
+        if not generated or not until-dt.timedelta(days=1)<=generated<=until+dt.timedelta(minutes=5):
+            complete=False;note='社区订阅生成时间缺失或过旧，完整时间窗尚未确认'
     return records,complete,note
 
 def rss(source,http,since,until):
     body,_=http.get(source['feed_address'])
-    return parse_feed(body,source,since,until,source['feed_address'])
+    records,complete,note=parse_feed(body,source,since,until,source['feed_address'])
+    address=urllib.parse.urlparse(source['feed_address'])
+    # GitHub ignores page= on Atom feeds; after= the last tag supplies older entries.
+    if address.hostname!='github.com' or not address.path.endswith('/releases.atom'):
+        return records,complete,note
+    history=ET.fromstring(body)
+    seen=set();merged={r['content_id']:r for r in records}
+    while not complete:
+        root=ET.fromstring(body)
+        entries=[e for e in root if local(e.tag)=='entry']
+        if not entries:break
+        links=[c for c in entries[-1] if local(c.tag)=='link' and c.attrib.get('rel','alternate')=='alternate']
+        last=urllib.parse.urlparse(links[0].attrib.get('href','')) if links else None
+        prefix=address.path.removesuffix('.atom')+'/tag/'
+        if not last or last.hostname!=address.hostname or not last.path.startswith(prefix):break
+        tag=urllib.parse.unquote(last.path[len(prefix):])
+        if not tag or tag in seen:
+            note='订阅历史分页重复，完整时间窗尚未确认';break
+        seen.add(tag)
+        query=dict(urllib.parse.parse_qsl(address.query));query.pop('page',None);query['after']=tag
+        next_url=urllib.parse.urlunparse(address._replace(query=urllib.parse.urlencode(query)))
+        try:
+            body,_=http.get(next_url)
+            page=ET.fromstring(body)
+            history.extend(e for e in page if local(e.tag)=='entry')
+            older,complete,note=parse_feed(ET.tostring(history,encoding='unicode'),source,since,until,source['feed_address'])
+        except (SourceError,ET.ParseError):
+            note='订阅历史分页读取失败，已保留取得的条目';break
+        merged.update({r['content_id']:r for r in older})
+    return list(merged.values()),complete,note
 
 ADAPTERS={'rss':rss}

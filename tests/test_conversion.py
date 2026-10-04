@@ -40,6 +40,14 @@ class ConversionTests(unittest.TestCase):
         source=self.source('openai-x','https://x.com/OpenAI','x');rows=convert(source,lambda *a:body,START,END)
         self.assertEqual(len(rows),1);self.assertEqual(rows[0]['text'],'Our post');self.assertTrue(rows[0]['url'].endswith('/123'))
         with self.assertRaises(SourceError):convert(source,lambda *a:body.replace('screen_name:"OpenAI"','screen_name:"someone"'),START,END)
+    def test_x_quoted_long_note_never_replaces_authors_short_comment(self):
+        body='<script>tweet_results:$R[1]={id:"x",rest_id:"123",result:$R[2]={core:{screen_name:"elonmusk"},details:$R[3]={created_at_ms:1790881200000,full_text:"Exactly"},quote:{core:{screen_name:"other"},note_tweet:{note_tweet_results:$R[4]={result:{text:"Someone else long essay"}}}}}};</script>'
+        source=self.source('elon-musk-x','https://x.com/elonmusk','x')
+        rows=convert(source,lambda *a:body,START,END)
+        self.assertEqual(rows[0]['text'],'Exactly')
+        own=body.replace('quote:{core:', 'note_tweet:{note_tweet_results:$R[8]={result:{text:"Own long post"}}},quote:{core:')
+        self.assertEqual(convert(source,lambda *a:own,START,END)[0]['text'],'Own long post')
+
     def test_login_shell_and_empty_tiktok_do_not_become_successful_feeds(self):
         for sid,platform in [('openai-tiktok','tiktok'),('mark-zuckerberg-threads','threads')]:
             with self.assertRaises(SourceError) as error:convert(self.source(sid,platform=platform),lambda *a:'<html>Log in<script type="application/json">{"itemList":[]}</script></html>',START,END)

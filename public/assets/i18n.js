@@ -208,6 +208,10 @@ export function eventContent(event, language) {
 const coverageNotes = {
   '订阅条目覆盖查询起点，已读取该订阅时间窗': 'Feed entries cover the query start; this feed window has been read.',
   '订阅历史有限或存在未知日期，完整时间窗尚未确认': 'Feed history is limited or dates are unknown; the full window is not confirmed.',
+  '账号订阅仅提供有限帖子列表，完整时间窗尚未确认': 'The account feed provides a limited list of posts; the full window is not confirmed.',
+  '订阅历史分页重复，完整时间窗尚未确认': 'Feed history pagination repeated; the full window is not confirmed.',
+  '订阅历史分页读取失败，已保留取得的条目': 'Feed history pagination failed; retrieved entries have been retained.',
+  '社区订阅生成时间缺失或过旧，完整时间窗尚未确认': 'The community feed build time is missing or stale; the full window is not confirmed.',
   'RSS 订阅待配置': 'RSS feed not configured.',
   '尚未采集': 'Not collected yet.',
   '账号或来源身份待核实': 'Account or source identity awaits verification.',

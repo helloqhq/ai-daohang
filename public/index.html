@@ -4,9 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101216">
-  <meta name="description" content="模型、Agent、平台与名人的 AI 动态。">
-  <title>AI 简报</title>
+  <meta name="description" content="AI 简报整理 AI 模型、编程 Agent、API 平台与负责人一手动态，提供中英文摘要、关键变化与原始来源。按对象、日期和内容类型筛选，跟踪 Claude Code、Codex、Gemini CLI 等工具的正式更新、预览与观点。">
+  <title>AI 简报｜AI 模型、编程 Agent 与平台最新动态</title>
   <link rel="canonical" href="https://go2-ai.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AI 简报">
+  <meta property="og:title" content="AI 简报｜AI 模型、编程 Agent 与平台最新动态">
+  <meta property="og:description" content="AI 简报整理 AI 模型、编程 Agent、API 平台与负责人一手动态，提供中英文摘要、关键变化与原始来源。按对象、日期和内容类型筛选，跟踪 Claude Code、Codex、Gemini CLI 等工具的正式更新、预览与观点。">
+  <meta property="og:url" content="https://go2-ai.com/">
+  <meta property="og:locale" content="zh_CN">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AI 简报","alternateName":["AI Brief","go2-ai.com"],"url":"https://go2-ai.com/","inLanguage":["zh-CN","en"]}</script>
   <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/style.css">
   <script type="module" src="./assets/app.js"></script>
@@ -19,6 +26,7 @@
     <div class="header-actions"><div class="language-switch" role="group" data-i18n-aria-label="language" aria-label="选择语言"><button type="button" data-language="zh" lang="zh-CN" aria-pressed="true">中文</button><button type="button" data-language="en" lang="en" aria-pressed="false">EN</button></div></div>
   </header>
   <main id="content">
+    <h1 class="sr-only" data-i18n="seoTitle">AI 简报｜AI 模型、编程 Agent 与平台最新动态</h1>
     <div class="snapshot-bar"><span id="snapshot-time" data-i18n="reading">正在读取数据…</span><span data-i18n="timezone">北京时间 UTC+8</span></div>
     <div id="error-box" class="error-box" role="alert" hidden></div>
     <section id="feed-view" class="workspace">
@@ -37,7 +45,7 @@
         <div class="feed-toolbar"><h2><span data-i18n="journal">最新动态</span> <span id="result-count"></span></h2><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.7" cy="10.7" r="6.2"/><path d="m15.3 15.3 4.8 4.8"/></svg><input id="search-input" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="搜索变化、模型或工具" data-i18n-aria-label="searchLabel" aria-label="搜索当前日期范围的动态"><kbd>/</kbd></label></div>
         <div class="date-toolbar"><div class="date-presets" role="group" data-i18n-aria-label="dateRange" aria-label="日期范围"><button data-days="3"><span data-i18n="days3">近 3 天</span></button><button data-days="7" class="selected"><span data-i18n="days7">近 7 天</span></button><button data-days="30"><span data-i18n="days30">近 30 天</span></button><button data-days="all"><span data-i18n="allHistory">全部历史</span></button></div><label class="kind-filter"><span class="sr-only" data-i18n="contentType">内容类型</span><select id="kind-filter" data-i18n-aria-label="contentType" aria-label="内容类型"><option value="" data-i18n="allTypes">全部类型</option><option value="update" data-i18n-kind="update">正式更新</option><option value="preview" data-i18n-kind="preview">预览 / 预告</option><option value="opinion" data-i18n-kind="opinion">负责人观点</option></select></label><button class="text-button" id="custom-date" aria-expanded="false"><span data-i18n="customDate">自定日期</span> <span aria-hidden="true">⌄</span></button></div>
         <div class="custom-range" id="custom-range" hidden><label><span data-i18n="startDate">开始日期</span> <input id="date-from" type="date"></label><span data-i18n="to">至</span><label><span data-i18n="endDate">结束日期</span> <input id="date-to" type="date"></label><button id="date-apply" class="small-button"><span data-i18n="apply">应用</span></button></div>
-        <div id="feed-list" aria-live="polite" aria-busy="true"><div class="loading-state"><span data-i18n="loadingFeed">正在整理动态…</span></div></div>
+        <div id="feed-list" aria-live="polite" aria-busy="true"><!-- feed:start --><div class="loading-state"><span data-i18n="loadingFeed">正在整理动态…</span></div><!-- feed:end --></div>
         <button id="more-button" class="more-button" hidden><span data-i18n="more">继续阅读</span></button>
       </section>
     </section>
@@ -45,6 +53,6 @@
   </main>
   <footer><b class="brand-name">AI 简报</b><nav class="footer-links" data-i18n-aria-label="legalNavigation" aria-label="法律与联系"><a href="./privacy.html" data-legal-link data-i18n="privacy">隐私协议</a><a href="./disclaimer.html" data-legal-link data-i18n="disclaimer">免责声明</a><a href="./contact.html" data-legal-link data-i18n="contact">联系我们</a><button type="button" data-cookie-settings hidden data-i18n="cookieSettings">Cookie 设置</button></nav><a href="#content"><span data-i18n="top">回到顶部</span> ↑</a></footer>
   <dialog id="event-dialog" aria-labelledby="dialog-title"><button id="dialog-close" class="dialog-close" data-i18n-aria-label="close" aria-label="关闭详情">×</button><div id="dialog-content"></div></dialog>
-  <noscript><p class="error-box">请启用 JavaScript 以读取静态 JSON 信息流。 / Enable JavaScript to read the updates.</p></noscript>
+  <noscript><p class="error-box">以下为构建时的动态快照；启用 JavaScript 可使用实时日期筛选、搜索与语言切换。 / This is a build-time snapshot. Enable JavaScript for date filters, search and language switching.</p></noscript>
 </body>
 </html>

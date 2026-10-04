@@ -1,4 +1,5 @@
-import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventTime,followingObjects,eventObjectIds} from './model.js';
+import {createEventRenderer,escape,safeURL} from './render.js';
+import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventTime,followingObjects} from './model.js';
 import {resolveLanguage,translate,LABELS,eventContent,coverageNote} from './i18n.js';
 import {createPrivacyPreferences,initCookieControls} from './privacy.js';
 const preferences=createPrivacyPreferences();
@@ -9,8 +10,6 @@ const name=record=>language==='en' ? record.name_en || record.name : record.name
 const labels=()=>LABELS[language];
 const failure=(key,values)=>Object.assign(new Error(key),{key,values});
 const $ = id => document.getElementById(id);
-const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const safeURL = value => {try {const u = new URL(value);return ['http:','https:'].includes(u.protocol) ? u.href : '#';} catch {return '#';}};
 const formatDate = value => {const d = dateKey(value);return d ? d.replaceAll('-','.') : t('dateUnknown');};
 const eventTime = event => formatEventTime(event.published_at,event.date_precision,language);
 const state = {expanded:new Set(),catalog:null,index:null,coverage:null,events:new Map(),loaded:new Set(),filters:{category:'all',entity:'',kind:'',query:'',from:daysAgo(6),to:daysAgo(0)},visible:18,request:0,view:'feed',detailId:null,error:null,ready:false,unavailable:false};
@@ -21,16 +20,9 @@ async function json(path, suffix='') {
 }
 function checkSnapshot(value) {if (value.snapshot_id !== state.index.snapshot_id) throw failure('snapshotError');}
 function error(value) {state.error=value;$('error-box').hidden=false;$('error-box').textContent=t(value.key || 'loadError',value.values);}
-function tags(event) {const objects=followingObjects(state.catalog);return eventObjectIds(event,state.catalog).map(id=>{const e=objects.find(x=>x.id===id);return e ? `<span class="entity-tag">${escape(name(e))}</span>`:'';}).join('');}
-function sourceName(sourceId) {const source=state.catalog.sources.find(s=>s.id===sourceId);return source ? name(source) : sourceId;}
-function eventDetails(event) {
-  const content=eventContent(event,language);
-  return `${language==='en'&&content.lang==='zh'?`<span class="translation-notice">${t('chineseOnly')}</span>`:''}<p class="event-summary" lang="${content.lang}">${escape(content.summary)}</p><ul class="key-points" lang="${content.lang}">${content.key_points.map(p=>`<li>${escape(p)}</li>`).join('')}</ul>${content.translation?`<h3>${translate(content.lang,'translation')}</h3><p class="event-summary" lang="${content.lang}">${escape(content.translation)}</p>`:''}${(event.corrections||[]).map(c=>`<div class="correction">${escape(formatEventTime(c.at,'datetime',language))} ${t('correction')}: <span lang="${language==='en'&&c.reason_en?'en':'zh'}">${escape(language==='en'?c.reason_en || c.reason_zh:c.reason_zh)}</span> <a href="${escape(safeURL(c.url))}" target="_blank" rel="noopener noreferrer">${t('evidence')} ↗</a></div>`).join('')}<div class="topics">${event.topics.map(topic=>`<span class="topic">${escape(labels().topic[topic] || topic)}</span>`).join('')}</div><div class="related-links">${(event.related_event_ids||[]).map(related=>`<button data-detail="${escape(related)}">${t('related')} ↗</button>`).join('')}</div><div class="event-sources"><h4>${t('sourceEvidence')} · ${escape(eventTime(event))}</h4>${event.sources.map(source=>`<a href="${escape(safeURL(source.url))}" target="_blank" rel="noopener noreferrer">${escape(sourceName(source.source_id))} ↗<small>${t(source.material_scope==='metadata_only'?'metadata':source.material_scope==='partial_text'?'partialText':'fullText')}${source.evidence_locator?.start_seconds!=null?' · '+t('seconds',{seconds:escape(source.evidence_locator.start_seconds)}):''}</small></a>`).join('')}</div>`;
-}
-function card(event) {
-  const content=eventContent(event,language);
-  return `<article data-event-id="${escape(event.id)}"><details class="event-card" data-event-id="${escape(event.id)}"${state.expanded.has(event.id)?' open':''}><summary><span class="expand-icon" aria-hidden="true">›</span><h3 class="event-title" lang="${content.lang}">${escape(content.title)}</h3><div class="card-meta">${tags(event)}<span class="kind-tag ${escape(event.kind)}">${labels().kind[event.kind]}</span>${event.corrections?.length?`<span class="corrected-tag">${t('corrected')}</span>`:''}</div><time class="card-time"${event.published_at?` datetime="${escape(event.published_at)}"`:''}>${escape(eventTime(event))}</time></summary><div class="event-body">${eventDetails(event)}</div></details></article>`;
-}
+function tags(event) {return createEventRenderer(state.catalog,language).tags(event);}
+function eventDetails(event) {return createEventRenderer(state.catalog,language).eventDetails(event);}
+function card(event) {return createEventRenderer(state.catalog,language,state.expanded).card(event);}
 async function loadMonths(from,to) {
   const requested=relevantMonths(state.index,from,to);
   for (const month of requested) {
@@ -124,8 +116,11 @@ async function detail(id) {
 }
 function applyLanguage() {
   document.documentElement.lang=language==='zh'?'zh-CN':'en';
-  document.title=t('title');
+  document.title=t('seoTitle');
   document.querySelector('meta[name="description"]').content=t('description');
+  document.querySelector('meta[property="og:title"]').content=t('seoTitle');
+  document.querySelector('meta[property="og:description"]').content=t('description');
+  document.querySelector('meta[property="og:locale"]').content=language==='zh'?'zh_CN':'en_US';
   document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));
   for(const attribute of ['aria-label','placeholder']) document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(el=>el.setAttribute(attribute,t(el.getAttribute(`data-i18n-${attribute}`))));
   document.querySelectorAll('[data-i18n-kind]').forEach(el=>el.textContent=labels().kind[el.dataset.i18nKind]);

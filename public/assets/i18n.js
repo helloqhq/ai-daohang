@@ -8,7 +8,8 @@ export function resolveLanguage(search, stored) {
 // Each entry keeps the Chinese and English copy together.
 export const messages = {
   title: ['AI 简报', 'AI Brief'],
-  description: ['模型、Agent、平台与名人的 AI 动态。', 'AI updates from models, agents, platforms and people.'],
+  seoTitle: ['AI 简报｜AI 模型、编程 Agent 与平台最新动态', 'AI Brief | AI Model, Coding Agent & Platform Updates'],
+  description: ['AI 简报整理 AI 模型、编程 Agent、API 平台与负责人一手动态，提供中英文摘要、关键变化与原始来源。按对象、日期和内容类型筛选，跟踪 Claude Code、Codex、Gemini CLI 等工具的正式更新、预览与观点。', 'Follow AI models, coding agents and API platforms with bilingual summaries, key changes and original sources. Filter Claude Code, Codex and Gemini CLI updates by date and topic.'],
   skip: ['跳到动态内容', 'Skip to updates'],
   home: ['AI 简报首页', 'AI Brief home'],
   navigation: ['主导航', 'Main navigation'],

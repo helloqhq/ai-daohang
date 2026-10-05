@@ -87,3 +87,26 @@ test('RSS GUIDs stay stable on rechecks and key reordering, and change with comm
   assert.notEqual(pricingGUID({...subscription,models_note_en:'Changed entitlement'}),pricingGUID(subscription));
   assert.ok(rss.includes('Supported models:'));assert.ok(rss.includes('Kimi K2.8 Preview'));assert.ok(rss.includes(subscription.models_source_urls[0]));
 });
+test('free agent clients keep model costs separate from subscription prices in HTML and RSS',()=>{
+  const pi=snapshot.plans.find(p=>p.id==='pi-free');
+  assert.equal(pi.billing,'free');assert.equal(pi.price.amount,0);
+  const english=renderPricing([pi],'en',now),chinese=renderPricing([pi],'zh',now);
+  assert.ok(english.includes('No subscription fee'));assert.ok(!english.includes('/ month'));
+  assert.ok(chinese.includes('无订阅费'));assert.ok(!chinese.includes('/ 月'));
+  assert.ok(english.includes('bill separately'));
+  const rss=renderPricingRSS({...snapshot,plans:[pi]});
+  assert.ok(rss.includes('$0 · 无订阅费 / No subscription fee'));assert.ok(!rss.includes('$0/月'));
+  for(const change of [p=>p.price.amount=10,p=>p.price.amount=null,p=>p.category='token-plan']) {
+    const invalid=structuredClone(snapshot);const record=invalid.plans.find(p=>p.id===pi.id);change(record);
+    assert.throws(()=>validatePricing(invalid));
+  }
+});
+test('expanded agent catalog retains requested products, tiers and the Windsurf successor',()=>{
+  for(const product_id of ['opencode','opencode-go','pi','devin','gemini-cli','cline','aider','kilo-code','kilo-pass','kiro']) {
+    assert.ok(filterPlans(snapshot.plans,{category:'agent'}).some(p=>p.product_id===product_id));
+  }
+  assert.deepEqual(filterPlans(snapshot.plans,{category:'agent',query:'Windsurf'}).map(p=>p.id),['devin-free','devin-pro','devin-max','devin-teams']);
+  assert.deepEqual(filterPlans(snapshot.plans,{query:'opencode go'}).filter(p=>p.product_id==='opencode-go').map(p=>p.price.amount),[10,40]);
+  assert.equal(snapshot.plans.find(p=>p.id==='devin-teams').price.amount,120);
+  assert.ok(!snapshot.plans.find(p=>p.id==='kiro-free').supported_models.includes('Claude Opus 5.5'));
+});

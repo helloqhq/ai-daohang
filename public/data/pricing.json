@@ -1333,6 +1333,906 @@
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models"
       ],
       "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "opencode-free",
+      "category": "agent",
+      "provider": "OpenCode",
+      "name": "OpenCode Open source / BYOK",
+      "currency": "USD",
+      "billing": "free",
+      "status": "verified",
+      "price": {
+        "amount": 0
+      },
+      "scope_zh": "客户端免费；自带 Key、已有订阅或免费模型",
+      "scope_en": "Free client; own keys, existing subscriptions or free models",
+      "note_zh": "Go 订阅可选，Zen 按量付费；第三方 API 或已有订阅按原厂商规则计费。",
+      "note_en": "Go is optional; Zen bills by usage. External APIs and existing subscriptions follow provider terms.",
+      "source_url": "https://opencode.ai/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "opencode",
+      "product_name": "OpenCode",
+      "tier_name": "Open source / BYOK",
+      "supported_models": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Ollama / local models"
+      ],
+      "models_note_zh": "列出可连接的模型系列，不代表客户端赠送这些模型的付费额度。",
+      "models_note_en": "Model families you can connect; paid inference is not bundled with the client.",
+      "models_source_urls": [
+        "https://opencode.ai/docs/providers/",
+        "https://opencode.ai/docs/zen/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "opencode-go",
+      "category": "agent",
+      "provider": "OpenCode",
+      "name": "OpenCode Go Go",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 10
+      },
+      "scope_zh": "各模型月额度 $15–$60；5 小时 20%，每周 50%",
+      "scope_en": "Per-model monthly allowances $15–$60; 20% per 5 hours, 50% weekly",
+      "note_zh": "额度随模型变化，不可相加为通用余额；启用 Use balance 后超额扣 Zen 余额。",
+      "note_en": "Allowances vary by model and are not an additive wallet; Use balance charges Zen for overages.",
+      "source_url": "https://opencode.ai/docs/go/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "opencode-go",
+      "product_name": "OpenCode Go",
+      "tier_name": "Go",
+      "supported_models": [
+        "GLM-5.3-Flash",
+        "GLM-5.3",
+        "GLM-5.2",
+        "Kimi K3",
+        "Kimi K2.7 Code",
+        "Kimi K2.6",
+        "MiniMax M3",
+        "MiniMax M2.7",
+        "Grok 4.7",
+        "Grok 4.6",
+        "GPT 6 Luna",
+        "GPT 5.6 Luna",
+        "LongCat-2.0",
+        "LongCat 2.5 Preview Free",
+        "MiMo-V2.6-Flash",
+        "MiMo-V2.6-Pro",
+        "MiMo-V2.5",
+        "MiMo-V2.5-Pro",
+        "Muse Spark 1.3 Contributor",
+        "Muse Spark 1.2 Contributor",
+        "Qwen3.8 Max",
+        "Qwen3.8 Flash",
+        "Qwen3.7 Plus",
+        "DeepSeek V4.1 Flash",
+        "DeepSeek V4 Pro",
+        "DeepSeek V4 Flash",
+        "DeepSeek V4 Flash Vision Exp",
+        "Hy4 preview",
+        "Hy3",
+        "Space Bunny Free"
+      ],
+      "models_note_zh": "两档模型相同，限额不同；部分免费模型限时，Muse Spark 有地域限制。",
+      "models_note_en": "Same models, different limits; some free models are temporary and Muse Spark is region-restricted.",
+      "models_source_urls": [
+        "https://opencode.ai/docs/go/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "opencode-go-plus",
+      "category": "agent",
+      "provider": "OpenCode",
+      "name": "OpenCode Go Go Plus",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 40
+      },
+      "scope_zh": "各模型月额度 $60–$240；5 小时 20%，每周 50%",
+      "scope_en": "Per-model monthly allowances $60–$240; 20% per 5 hours, 50% weekly",
+      "note_zh": "额度随模型变化，不可相加为通用余额；启用 Use balance 后超额扣 Zen 余额。",
+      "note_en": "Allowances vary by model and are not an additive wallet; Use balance charges Zen for overages.",
+      "source_url": "https://opencode.ai/docs/go/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "opencode-go",
+      "product_name": "OpenCode Go",
+      "tier_name": "Go Plus",
+      "supported_models": [
+        "GLM-5.3-Flash",
+        "GLM-5.3",
+        "GLM-5.2",
+        "Kimi K3",
+        "Kimi K2.7 Code",
+        "Kimi K2.6",
+        "MiniMax M3",
+        "MiniMax M2.7",
+        "Grok 4.7",
+        "Grok 4.6",
+        "GPT 6 Luna",
+        "GPT 5.6 Luna",
+        "LongCat-2.0",
+        "LongCat 2.5 Preview Free",
+        "MiMo-V2.6-Flash",
+        "MiMo-V2.6-Pro",
+        "MiMo-V2.5",
+        "MiMo-V2.5-Pro",
+        "Muse Spark 1.3 Contributor",
+        "Muse Spark 1.2 Contributor",
+        "Qwen3.8 Max",
+        "Qwen3.8 Flash",
+        "Qwen3.7 Plus",
+        "DeepSeek V4.1 Flash",
+        "DeepSeek V4 Pro",
+        "DeepSeek V4 Flash",
+        "DeepSeek V4 Flash Vision Exp",
+        "Hy4 preview",
+        "Hy3",
+        "Space Bunny Free"
+      ],
+      "models_note_zh": "两档模型相同，限额不同；部分免费模型限时，Muse Spark 有地域限制。",
+      "models_note_en": "Same models, different limits; some free models are temporary and Muse Spark is region-restricted.",
+      "models_source_urls": [
+        "https://opencode.ai/docs/go/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "pi-free",
+      "category": "agent",
+      "provider": "Pi",
+      "name": "Pi Open source / BYOK",
+      "currency": "USD",
+      "billing": "free",
+      "status": "verified",
+      "price": {
+        "amount": 0
+      },
+      "scope_zh": "MIT 开源客户端；自带 Key 或 OAuth 登录",
+      "scope_en": "MIT client; own API keys or OAuth login",
+      "note_zh": "Pi 本体无订阅费；接入的 API、模型网关或付费账号另按其规则收费。",
+      "note_en": "Pi has no client subscription; connected APIs, gateways or paid accounts bill separately.",
+      "source_url": "https://pi.dev/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "pi",
+      "product_name": "Pi",
+      "tier_name": "Open source / BYOK",
+      "supported_models": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "DeepSeek",
+        "Kimi",
+        "MiniMax",
+        "Ollama / local models"
+      ],
+      "models_note_zh": "仅表示可接入的模型系列；OAuth 与 API Key 的可用范围以对应提供商和账号为准。",
+      "models_note_en": "Supported families only; OAuth and API access depend on the provider and account.",
+      "models_source_urls": [
+        "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/providers.md"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "devin-free",
+      "category": "agent",
+      "provider": "Cognition",
+      "name": "Devin / Windsurf Free",
+      "currency": "USD",
+      "billing": "free",
+      "status": "verified",
+      "price": {
+        "amount": 0
+      },
+      "scope_zh": "少量 Agent 额度；无限 Tab 补全与行内编辑",
+      "scope_en": "Light agent allowance; unlimited Tab and inline edits",
+      "note_zh": "Windsurf 已升级为 Devin Desktop。免费档不含完整模型目录。",
+      "note_en": "Windsurf became Devin Desktop. Free has limited models.",
+      "source_url": "https://devin.ai/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "devin",
+      "product_name": "Devin / Windsurf",
+      "tier_name": "Free",
+      "supported_models": [
+        "Devin built-in models"
+      ],
+      "models_note_zh": "免费档具体型号以客户端为准。",
+      "models_note_en": "Free model IDs follow the client.",
+      "models_source_urls": [
+        "https://docs.devin.ai/desktop/models",
+        "https://cognition.com/blog/introducing-devin-desktop"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "devin-pro",
+      "category": "agent",
+      "provider": "Cognition",
+      "name": "Devin / Windsurf Pro",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 20
+      },
+      "scope_zh": "日 / 周额度刷新；含 Devin Cloud",
+      "scope_en": "Daily / weekly allowances; Devin Cloud included",
+      "note_zh": "Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。",
+      "note_en": "Windsurf became Devin Desktop. Extra usage is purchased at API rates.",
+      "source_url": "https://devin.ai/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "devin",
+      "product_name": "Devin / Windsurf",
+      "tier_name": "Pro",
+      "supported_models": [
+        "SWE-2",
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Grok"
+      ],
+      "models_note_zh": "按官方模型系列收录，具体型号与额度以客户端为准；SWE-2 免费活动有截止日期。",
+      "models_note_en": "Families shown; model IDs and allowances follow the client. Free SWE-2 access is temporary.",
+      "models_source_urls": [
+        "https://docs.devin.ai/desktop/models",
+        "https://cognition.com/blog/introducing-devin-desktop"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "devin-max",
+      "category": "agent",
+      "provider": "Cognition",
+      "name": "Devin / Windsurf Max",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 200
+      },
+      "scope_zh": "Pro 权益及更高日 / 周额度",
+      "scope_en": "Pro access with higher daily / weekly allowances",
+      "note_zh": "Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。",
+      "note_en": "Windsurf became Devin Desktop. Extra usage is purchased at API rates.",
+      "source_url": "https://devin.ai/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "devin",
+      "product_name": "Devin / Windsurf",
+      "tier_name": "Max",
+      "supported_models": [
+        "SWE-2",
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Grok"
+      ],
+      "models_note_zh": "按官方模型系列收录，具体型号与额度以客户端为准；SWE-2 免费活动有截止日期。",
+      "models_note_en": "Families shown; model IDs and allowances follow the client. Free SWE-2 access is temporary.",
+      "models_source_urls": [
+        "https://docs.devin.ai/desktop/models",
+        "https://cognition.com/blog/introducing-devin-desktop"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "devin-teams",
+      "category": "agent",
+      "provider": "Cognition",
+      "name": "Devin / Windsurf Teams",
+      "currency": "USD",
+      "billing": "monthly-from",
+      "status": "verified",
+      "price": {
+        "amount": 120
+      },
+      "scope_zh": "团队基础费 $80/月 + $40/完整开发席位/月",
+      "scope_en": "Team base $80/month + $40/full developer seat/month",
+      "note_zh": "Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。此处起价含 1 个完整开发席位。",
+      "note_en": "Windsurf became Devin Desktop. Extra usage is purchased at API rates. Starting price includes one full developer seat.",
+      "source_url": "https://devin.ai/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "devin",
+      "product_name": "Devin / Windsurf",
+      "tier_name": "Teams",
+      "supported_models": [
+        "SWE-2",
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Grok"
+      ],
+      "models_note_zh": "按官方模型系列收录，具体型号与额度以客户端为准；SWE-2 免费活动有截止日期。",
+      "models_note_en": "Families shown; model IDs and allowances follow the client. Free SWE-2 access is temporary.",
+      "models_source_urls": [
+        "https://docs.devin.ai/desktop/models",
+        "https://cognition.com/blog/introducing-devin-desktop"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "gemini-cli-free",
+      "category": "agent",
+      "provider": "Google",
+      "name": "Gemini CLI Free (Google account)",
+      "currency": "USD",
+      "billing": "free",
+      "status": "verified",
+      "price": {
+        "amount": 0
+      },
+      "scope_zh": "Google 账号登录：1,000 次模型请求 / 用户 / 天",
+      "scope_en": "Google login: 1,000 model requests/user/day",
+      "note_zh": "个人 Google 账号入口；付费档展示美国美元常规价。API Key / Vertex AI 按各自规则另计费。",
+      "note_en": "Personal Google account access; paid price is the US list price. API-key / Vertex AI billing is separate.",
+      "source_url": "https://geminicli.com/docs/resources/quota-and-pricing/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "gemini-cli",
+      "product_name": "Gemini CLI",
+      "tier_name": "Free (Google account)",
+      "supported_models": [
+        "Gemini"
+      ],
+      "models_note_zh": "CLI 自动路由 Gemini 系列；一次任务可消耗多次请求，订阅不包含 API 余额。",
+      "models_note_en": "CLI routes Gemini models; a task may use multiple requests. Subscriptions do not include API credit.",
+      "models_source_urls": [
+        "https://geminicli.com/docs/resources/quota-and-pricing/",
+        "https://geminicli.com/plans/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "gemini-cli-pro",
+      "category": "agent",
+      "provider": "Google",
+      "name": "Gemini CLI Google AI Pro",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 19.99
+      },
+      "scope_zh": "1,500 次模型请求 / 用户 / 天",
+      "scope_en": "1,500 model requests/user/day",
+      "note_zh": "个人 Google 账号入口；付费档展示美国美元常规价。API Key / Vertex AI 按各自规则另计费。",
+      "note_en": "Personal Google account access; paid price is the US list price. API-key / Vertex AI billing is separate.",
+      "source_url": "https://gemini.google/subscriptions/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "gemini-cli",
+      "product_name": "Gemini CLI",
+      "tier_name": "Google AI Pro",
+      "supported_models": [
+        "Gemini"
+      ],
+      "models_note_zh": "CLI 自动路由 Gemini 系列；一次任务可消耗多次请求，订阅不包含 API 余额。",
+      "models_note_en": "CLI routes Gemini models; a task may use multiple requests. Subscriptions do not include API credit.",
+      "models_source_urls": [
+        "https://geminicli.com/docs/resources/quota-and-pricing/",
+        "https://geminicli.com/plans/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "gemini-cli-ultra",
+      "category": "agent",
+      "provider": "Google",
+      "name": "Gemini CLI Google AI Ultra",
+      "currency": "USD",
+      "billing": "monthly-from",
+      "status": "verified",
+      "price": {
+        "amount": 99.99
+      },
+      "scope_zh": "文档列 Ultra 2,000 次模型请求 / 用户 / 天",
+      "scope_en": "Docs list Ultra at 2,000 model requests/user/day",
+      "note_zh": "美国美元常规价；Ultra 另有 $199.99/月档，CLI 文档未区分两档额度，以账号为准。API Key / Vertex AI 按各自规则另计费。",
+      "note_en": "US list price; Ultra also offers $199.99/month. CLI docs do not split its quotas by price; check your account. API-key / Vertex AI billing is separate.",
+      "source_url": "https://gemini.google/subscriptions/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "gemini-cli",
+      "product_name": "Gemini CLI",
+      "tier_name": "Google AI Ultra",
+      "supported_models": [
+        "Gemini"
+      ],
+      "models_note_zh": "CLI 自动路由 Gemini 系列；一次任务可消耗多次请求，订阅不包含 API 余额。",
+      "models_note_en": "CLI routes Gemini models; a task may use multiple requests. Subscriptions do not include API credit.",
+      "models_source_urls": [
+        "https://geminicli.com/docs/resources/quota-and-pricing/",
+        "https://geminicli.com/plans/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "cline-free",
+      "category": "agent",
+      "provider": "Cline",
+      "name": "Cline Open source / BYOK",
+      "currency": "USD",
+      "billing": "free",
+      "status": "verified",
+      "price": {
+        "amount": 0
+      },
+      "scope_zh": "个人客户端免费；按模型推理用量付费",
+      "scope_en": "Free individual client; pay for model inference",
+      "note_zh": "可自带 Key 或使用 Cline provider；免费客户端不含付费模型额度。",
+      "note_en": "Use own keys or the Cline provider; paid model usage is not included.",
+      "source_url": "https://cline.bot/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "cline",
+      "product_name": "Cline",
+      "tier_name": "Open source / BYOK",
+      "supported_models": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "DeepSeek"
+      ],
+      "models_note_zh": "可接入的模型系列，具体型号由提供商决定。",
+      "models_note_en": "Connectable model families; providers determine model IDs.",
+      "models_source_urls": [
+        "https://cline.bot/pricing"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "aider-free",
+      "category": "agent",
+      "provider": "Aider",
+      "name": "Aider Open source / BYOK",
+      "currency": "USD",
+      "billing": "free",
+      "status": "verified",
+      "price": {
+        "amount": 0
+      },
+      "scope_zh": "开源终端工具；自带 API Key 或本地模型",
+      "scope_en": "Open-source terminal tool; own API keys or local models",
+      "note_zh": "软件无订阅费，远程模型推理按提供商计费；本地模型使用自己的算力。",
+      "note_en": "No software subscription; remote inference bills through providers, local models use your hardware.",
+      "source_url": "https://github.com/Aider-AI/aider",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "aider",
+      "product_name": "Aider",
+      "tier_name": "Open source / BYOK",
+      "supported_models": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "DeepSeek",
+        "Ollama / local models"
+      ],
+      "models_note_zh": "列出连接能力，不保证所有型号的代码编辑效果；不包含模型额度。",
+      "models_note_en": "Connectivity does not guarantee editing quality for every model; no model allowance included.",
+      "models_source_urls": [
+        "https://aider.chat/docs/llms.html"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kilo-free",
+      "category": "agent",
+      "provider": "Kilo",
+      "name": "Kilo Code Free / BYOK",
+      "currency": "USD",
+      "billing": "free",
+      "status": "verified",
+      "price": {
+        "amount": 0
+      },
+      "scope_zh": "免费客户端；自带 Key、免费或本地模型",
+      "scope_en": "Free client; own keys, free or local models",
+      "note_zh": "平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。",
+      "note_en": "Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional.",
+      "source_url": "https://kilo.ai/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kilo-code",
+      "product_name": "Kilo Code",
+      "tier_name": "Free / BYOK",
+      "supported_models": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Ollama / local models"
+      ],
+      "models_note_zh": "可接入模型系列；平台费不包含推理额度。",
+      "models_note_en": "Connectable model families; platform fees do not include inference credits.",
+      "models_source_urls": [
+        "https://kilo.ai/pricing"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kilo-teams",
+      "category": "agent",
+      "provider": "Kilo",
+      "name": "Kilo Code Teams",
+      "currency": "USD",
+      "billing": "seat-monthly",
+      "status": "verified",
+      "price": {
+        "amount": 15
+      },
+      "scope_zh": "团队管理、共享 BYOK 和集中计费；推理另计",
+      "scope_en": "Team management, shared BYOK and billing; inference extra",
+      "note_zh": "平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。",
+      "note_en": "Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional.",
+      "source_url": "https://kilo.ai/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kilo-code",
+      "product_name": "Kilo Code",
+      "tier_name": "Teams",
+      "supported_models": [
+        "Claude",
+        "GPT",
+        "Gemini",
+        "Ollama / local models"
+      ],
+      "models_note_zh": "可接入模型系列；平台费不包含推理额度。",
+      "models_note_en": "Connectable model families; platform fees do not include inference credits.",
+      "models_source_urls": [
+        "https://kilo.ai/pricing"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kilo-pass-starter",
+      "category": "agent",
+      "provider": "Kilo",
+      "name": "Kilo Pass Starter",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 19
+      },
+      "scope_zh": "每月 $19 基础模型 credits，奖励另按规则发放",
+      "scope_en": "$19 base model credits/month; bonuses follow program rules",
+      "note_zh": "此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。",
+      "note_en": "Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra.",
+      "source_url": "https://kilo.ai/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kilo-pass",
+      "product_name": "Kilo Pass",
+      "tier_name": "Starter",
+      "supported_models": [
+        "Kilo Gateway models"
+      ],
+      "models_note_zh": "按 Gateway 模型费率扣 credits，型号与免费模型可用性会变化。",
+      "models_note_en": "Credits follow Gateway model rates; catalog and free-model availability can change.",
+      "models_source_urls": [
+        "https://kilo.ai/pricing"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kilo-pass-pro",
+      "category": "agent",
+      "provider": "Kilo",
+      "name": "Kilo Pass Pro",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 49
+      },
+      "scope_zh": "每月 $49 基础模型 credits，奖励另按规则发放",
+      "scope_en": "$49 base model credits/month; bonuses follow program rules",
+      "note_zh": "此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。",
+      "note_en": "Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra.",
+      "source_url": "https://kilo.ai/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kilo-pass",
+      "product_name": "Kilo Pass",
+      "tier_name": "Pro",
+      "supported_models": [
+        "Kilo Gateway models"
+      ],
+      "models_note_zh": "按 Gateway 模型费率扣 credits，型号与免费模型可用性会变化。",
+      "models_note_en": "Credits follow Gateway model rates; catalog and free-model availability can change.",
+      "models_source_urls": [
+        "https://kilo.ai/pricing"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kilo-pass-expert",
+      "category": "agent",
+      "provider": "Kilo",
+      "name": "Kilo Pass Expert",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 199
+      },
+      "scope_zh": "每月 $199 基础模型 credits，奖励另按规则发放",
+      "scope_en": "$199 base model credits/month; bonuses follow program rules",
+      "note_zh": "此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。",
+      "note_en": "Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra.",
+      "source_url": "https://kilo.ai/pricing",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kilo-pass",
+      "product_name": "Kilo Pass",
+      "tier_name": "Expert",
+      "supported_models": [
+        "Kilo Gateway models"
+      ],
+      "models_note_zh": "按 Gateway 模型费率扣 credits，型号与免费模型可用性会变化。",
+      "models_note_en": "Credits follow Gateway model rates; catalog and free-model availability can change.",
+      "models_source_urls": [
+        "https://kilo.ai/pricing"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kiro-free",
+      "category": "agent",
+      "provider": "AWS",
+      "name": "Kiro Free",
+      "currency": "USD",
+      "billing": "free",
+      "status": "verified",
+      "price": {
+        "amount": 0
+      },
+      "scope_zh": "50 credits / 月；IDE 与 CLI 共用",
+      "scope_en": "50 credits/month shared across IDE and CLI",
+      "note_zh": "月额度不结转；免费档有访问限制。",
+      "note_en": "Monthly credits expire; free access is limited.",
+      "source_url": "https://kiro.dev/pricing/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kiro",
+      "product_name": "Kiro",
+      "tier_name": "Free",
+      "supported_models": [
+        "Auto",
+        "Claude Sonnet 4.5",
+        "Claude Sonnet 4.0",
+        "DeepSeek 3.2",
+        "MiniMax M2.5",
+        "GLM-5",
+        "MiniMax M2.1",
+        "Qwen3 Coder Next"
+      ],
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.",
+      "models_source_urls": [
+        "https://kiro.dev/docs/models/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kiro-pro",
+      "category": "agent",
+      "provider": "AWS",
+      "name": "Kiro Pro",
+      "currency": "USD",
+      "billing": "seat-monthly",
+      "status": "verified",
+      "price": {
+        "amount": 20
+      },
+      "scope_zh": "1,000 credits / 月；IDE 与 CLI 共用",
+      "scope_en": "1,000 credits/month shared across IDE and CLI",
+      "note_zh": "月额度不结转；额外 credits $0.04/个；商业区域税前价。",
+      "note_en": "Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.",
+      "source_url": "https://kiro.dev/pricing/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kiro",
+      "product_name": "Kiro",
+      "tier_name": "Pro",
+      "supported_models": [
+        "GPT-5.6 Sol",
+        "GPT-5.6 Terra",
+        "GPT-5.6 Luna",
+        "Claude Opus 5.5",
+        "Claude Sonnet 5.5",
+        "Claude Opus 5",
+        "Claude Opus 4.8",
+        "Claude Opus 4.7",
+        "Claude Opus 4.6",
+        "Claude Opus 4.5",
+        "Claude Sonnet 5",
+        "Claude Sonnet 4.6",
+        "Claude Haiku 4.5",
+        "Auto",
+        "Claude Sonnet 4.5",
+        "Claude Sonnet 4.0",
+        "DeepSeek 3.2",
+        "MiniMax M2.5",
+        "GLM-5",
+        "MiniMax M2.1",
+        "Qwen3 Coder Next"
+      ],
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.",
+      "models_source_urls": [
+        "https://kiro.dev/docs/models/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kiro-proplus",
+      "category": "agent",
+      "provider": "AWS",
+      "name": "Kiro Pro+",
+      "currency": "USD",
+      "billing": "seat-monthly",
+      "status": "verified",
+      "price": {
+        "amount": 40
+      },
+      "scope_zh": "2,000 credits / 月；IDE 与 CLI 共用",
+      "scope_en": "2,000 credits/month shared across IDE and CLI",
+      "note_zh": "月额度不结转；额外 credits $0.04/个；商业区域税前价。",
+      "note_en": "Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.",
+      "source_url": "https://kiro.dev/pricing/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kiro",
+      "product_name": "Kiro",
+      "tier_name": "Pro+",
+      "supported_models": [
+        "GPT-5.6 Sol",
+        "GPT-5.6 Terra",
+        "GPT-5.6 Luna",
+        "Claude Opus 5.5",
+        "Claude Sonnet 5.5",
+        "Claude Opus 5",
+        "Claude Opus 4.8",
+        "Claude Opus 4.7",
+        "Claude Opus 4.6",
+        "Claude Opus 4.5",
+        "Claude Sonnet 5",
+        "Claude Sonnet 4.6",
+        "Claude Haiku 4.5",
+        "Auto",
+        "Claude Sonnet 4.5",
+        "Claude Sonnet 4.0",
+        "DeepSeek 3.2",
+        "MiniMax M2.5",
+        "GLM-5",
+        "MiniMax M2.1",
+        "Qwen3 Coder Next"
+      ],
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.",
+      "models_source_urls": [
+        "https://kiro.dev/docs/models/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kiro-pro-max",
+      "category": "agent",
+      "provider": "AWS",
+      "name": "Kiro Pro Max",
+      "currency": "USD",
+      "billing": "seat-monthly",
+      "status": "verified",
+      "price": {
+        "amount": 100
+      },
+      "scope_zh": "5,000 credits / 月；IDE 与 CLI 共用",
+      "scope_en": "5,000 credits/month shared across IDE and CLI",
+      "note_zh": "月额度不结转；额外 credits $0.04/个；商业区域税前价。",
+      "note_en": "Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.",
+      "source_url": "https://kiro.dev/pricing/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kiro",
+      "product_name": "Kiro",
+      "tier_name": "Pro Max",
+      "supported_models": [
+        "GPT-5.6 Sol",
+        "GPT-5.6 Terra",
+        "GPT-5.6 Luna",
+        "Claude Opus 5.5",
+        "Claude Sonnet 5.5",
+        "Claude Opus 5",
+        "Claude Opus 4.8",
+        "Claude Opus 4.7",
+        "Claude Opus 4.6",
+        "Claude Opus 4.5",
+        "Claude Sonnet 5",
+        "Claude Sonnet 4.6",
+        "Claude Haiku 4.5",
+        "Auto",
+        "Claude Sonnet 4.5",
+        "Claude Sonnet 4.0",
+        "DeepSeek 3.2",
+        "MiniMax M2.5",
+        "GLM-5",
+        "MiniMax M2.1",
+        "Qwen3 Coder Next"
+      ],
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.",
+      "models_source_urls": [
+        "https://kiro.dev/docs/models/"
+      ],
+      "models_checked_at": "2026-10-05"
+    },
+    {
+      "id": "kiro-power",
+      "category": "agent",
+      "provider": "AWS",
+      "name": "Kiro Power",
+      "currency": "USD",
+      "billing": "seat-monthly",
+      "status": "verified",
+      "price": {
+        "amount": 200
+      },
+      "scope_zh": "10,000 credits / 月；IDE 与 CLI 共用",
+      "scope_en": "10,000 credits/month shared across IDE and CLI",
+      "note_zh": "月额度不结转；额外 credits $0.04/个；商业区域税前价。",
+      "note_en": "Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.",
+      "source_url": "https://kiro.dev/pricing/",
+      "checked_at": "2026-10-05",
+      "updated_at": "2026-10-05",
+      "product_id": "kiro",
+      "product_name": "Kiro",
+      "tier_name": "Power",
+      "supported_models": [
+        "GPT-5.6 Sol",
+        "GPT-5.6 Terra",
+        "GPT-5.6 Luna",
+        "Claude Opus 5.5",
+        "Claude Sonnet 5.5",
+        "Claude Opus 5",
+        "Claude Opus 4.8",
+        "Claude Opus 4.7",
+        "Claude Opus 4.6",
+        "Claude Opus 4.5",
+        "Claude Sonnet 5",
+        "Claude Sonnet 4.6",
+        "Claude Haiku 4.5",
+        "Auto",
+        "Claude Sonnet 4.5",
+        "Claude Sonnet 4.0",
+        "DeepSeek 3.2",
+        "MiniMax M2.5",
+        "GLM-5",
+        "MiniMax M2.1",
+        "Qwen3 Coder Next"
+      ],
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.",
+      "models_source_urls": [
+        "https://kiro.dev/docs/models/"
+      ],
+      "models_checked_at": "2026-10-05"
     }
   ]
 }

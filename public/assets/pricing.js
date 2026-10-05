@@ -9,6 +9,9 @@ const amount=value=>new Intl.NumberFormat('en-US',{maximumFractionDigits:4}).for
 export function priceLabel(value,currency) {
   return value===null || value===undefined ? '—' : `${currency==='CNY'?'¥':'$'}${amount(value)}`;
 }
+export function billingLabel(billing,language='zh') {
+  return translate(language,{'monthly-from':'pricingFrom','seat-monthly':'pricingPerSeat',free:'pricingNoSubscription'}[billing]||'pricingPerMonth');
+}
 export function pricingStatus(plan,now=new Date()) {
   const today=dateKey(now);
   if(plan.valid_until && today>plan.valid_until) return 'expired';
@@ -39,7 +42,8 @@ export function validatePricing(data) {
     if(!/^[a-z0-9-]+$/.test(plan.id)||ids.has(plan.id)) throw new Error('Invalid or duplicate plan ID');
     ids.add(plan.id);
     if(!PRICING_CATEGORIES.includes(plan.category)||!['USD','CNY'].includes(plan.currency)||!['verified','pending','paused'].includes(plan.status)) throw new Error(`Invalid category, currency or status: ${plan.id}`);
-    if(!['token','monthly','monthly-from','seat-monthly'].includes(plan.billing)||(plan.category==='api')!==(plan.billing==='token')) throw new Error(`Invalid billing unit: ${plan.id}`);
+    if(!['token','monthly','monthly-from','seat-monthly','free'].includes(plan.billing)||(plan.category==='api')!==(plan.billing==='token')) throw new Error(`Invalid billing unit: ${plan.id}`);
+    if(plan.billing==='free'&&(plan.category!=='agent'||plan.price?.amount!==0)) throw new Error(`Invalid free agent price: ${plan.id}`);
     for(const key of ['provider','name','scope_zh','scope_en','note_zh','note_en']) if(typeof plan[key]!=='string'||!plan[key].trim()) throw new Error(`Missing ${key}: ${plan.id}`);
     if(!validDate(plan.checked_at)||!validDate(plan.updated_at)||plan.updated_at>plan.checked_at||plan.checked_at>data.checked_at||plan.valid_until&&!validDate(plan.valid_until)) throw new Error(`Invalid dates: ${plan.id}`);
     if(!plan.price||safeURL(plan.source_url)==='#'||new URL(plan.source_url).protocol!=='https:') throw new Error(`Missing price or HTTPS source: ${plan.id}`);
@@ -75,7 +79,7 @@ export function renderPricing(plans,language='zh',now=new Date()) {
       const statusHTML=status==='verified'?'':`<span class="pricing-status ${status}">${t(`pricingStatus_${status}`)}</span>`;
       const source=`<a href="${escape(safeURL(plan.source_url))}" target="_blank" rel="noopener noreferrer">${t('pricingOfficial')} ↗<span class="sr-only"> · ${escape(plan.name)}</span></a><span class="pricing-checked">${t('pricingChecked')} <time datetime="${plan.checked_at}">${plan.checked_at}</time></span>`;
       const terms=`<details class="pricing-details"><summary>${t('pricingDetails')}</summary><p>${escape(text(plan,'note',language))}</p>${api?`<p>${t('pricingCacheWrite')}: ${priceLabel(plan.price.cache_write,plan.currency)} ${t('pricingPerMillion')}</p>`:''}</details>${source}`;
-      const price=api?['input','output','cached'].map(key=>`<td class="pricing-number">${priceLabel(plan.price[key],plan.currency)}</td>`).join(''):`<td class="pricing-number">${plan.price.amount===null?`<span class="pricing-unknown">${t('pricingCheckout')}</span>`:priceLabel(plan.price.amount,plan.currency)}<small>${t(plan.billing==='monthly-from'?'pricingFrom':plan.billing==='seat-monthly'?'pricingPerSeat':'pricingPerMonth')}</small></td>`;
+      const price=api?['input','output','cached'].map(key=>`<td class="pricing-number">${priceLabel(plan.price[key],plan.currency)}</td>`).join(''):`<td class="pricing-number">${plan.price.amount===null?`<span class="pricing-unknown">${t('pricingCheckout')}</span>`:priceLabel(plan.price.amount,plan.currency)}<small>${billingLabel(plan.billing,language)}</small></td>`;
       let models='';
       if(!api) {
         const list=items=>`<ul class="pricing-model-list">${items.map(model=>`<li>${escape(model)}</li>`).join('')}</ul>`;

@@ -157,4 +157,119 @@ Pricing snapshot, not a live quote. $200 / month AI credits (includes flex). Inc
 可用模型 / Supported models: GPT-6.1 Sol, GPT-6 Astra, GPT-6 Luna, Claude Fable 5.1, Claude Opus 5.5, Claude Sonnet 5.5, Gemini 3.8 Flash, Kimi K3, Grok 4.7, MAI-Code-1.1-Flash, Claude Haiku 4.5, Claude Opus 4.8, Claude Opus 4.8 (fast mode) (preview), Claude Opus 5, Claude Fable 5, Claude Sonnet 5, Gemini 3.7 Flash, GPT-5 mini, GPT-5.3-Codex, GPT-5.4, GPT-5.4 mini, GPT-5.5, GPT-5.6 Luna, GPT-5.6 Sol, GPT-5.6 Terra, GPT-6 Sol, Grok 4.5, Grok 4.6。按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 官方 nano 表格与注释有冲突，按“Pro+ 扩展专用”注释暂不列入。
 Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. The nano table conflicts with its Pro+-only footnote; omitted here pending clarification.
 模型权益核验 / Model access checked: 2026-10-05。https://docs.github.com/en/copilot/reference/ai-models/supported-models</description></item>
+<item><title>OpenCode Open source / BYOK · $0 · 无订阅费 / No subscription fee</title><link>https://opencode.ai/</link><guid isPermaLink="false">ai-brief-pricing:opencode-free:08b65546c83ec325</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$0 · 无订阅费 / No subscription fee。客户端免费；自带 Key、已有订阅或免费模型。Go 订阅可选，Zen 按量付费；第三方 API 或已有订阅按原厂商规则计费。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Free client; own keys, existing subscriptions or free models. Go is optional; Zen bills by usage. External APIs and existing subscriptions follow provider terms.
+可用模型 / Supported models: Claude, GPT, Gemini, Ollama / local models。列出可连接的模型系列，不代表客户端赠送这些模型的付费额度。
+Model families you can connect; paid inference is not bundled with the client.
+模型权益核验 / Model access checked: 2026-10-05。https://opencode.ai/docs/providers/ https://opencode.ai/docs/zen/</description></item>
+<item><title>OpenCode Go Go · $10/月</title><link>https://opencode.ai/docs/go/</link><guid isPermaLink="false">ai-brief-pricing:opencode-go:6af189f8a35274b7</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$10/月。各模型月额度 $15–$60；5 小时 20%，每周 50%。额度随模型变化，不可相加为通用余额；启用 Use balance 后超额扣 Zen 余额。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Per-model monthly allowances $15–$60; 20% per 5 hours, 50% weekly. Allowances vary by model and are not an additive wallet; Use balance charges Zen for overages.
+可用模型 / Supported models: GLM-5.3-Flash, GLM-5.3, GLM-5.2, Kimi K3, Kimi K2.7 Code, Kimi K2.6, MiniMax M3, MiniMax M2.7, Grok 4.7, Grok 4.6, GPT 6 Luna, GPT 5.6 Luna, LongCat-2.0, LongCat 2.5 Preview Free, MiMo-V2.6-Flash, MiMo-V2.6-Pro, MiMo-V2.5, MiMo-V2.5-Pro, Muse Spark 1.3 Contributor, Muse Spark 1.2 Contributor, Qwen3.8 Max, Qwen3.8 Flash, Qwen3.7 Plus, DeepSeek V4.1 Flash, DeepSeek V4 Pro, DeepSeek V4 Flash, DeepSeek V4 Flash Vision Exp, Hy4 preview, Hy3, Space Bunny Free。两档模型相同，限额不同；部分免费模型限时，Muse Spark 有地域限制。
+Same models, different limits; some free models are temporary and Muse Spark is region-restricted.
+模型权益核验 / Model access checked: 2026-10-05。https://opencode.ai/docs/go/</description></item>
+<item><title>OpenCode Go Go Plus · $40/月</title><link>https://opencode.ai/docs/go/</link><guid isPermaLink="false">ai-brief-pricing:opencode-go-plus:ed6f9e5dbb5505c6</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$40/月。各模型月额度 $60–$240；5 小时 20%，每周 50%。额度随模型变化，不可相加为通用余额；启用 Use balance 后超额扣 Zen 余额。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Per-model monthly allowances $60–$240; 20% per 5 hours, 50% weekly. Allowances vary by model and are not an additive wallet; Use balance charges Zen for overages.
+可用模型 / Supported models: GLM-5.3-Flash, GLM-5.3, GLM-5.2, Kimi K3, Kimi K2.7 Code, Kimi K2.6, MiniMax M3, MiniMax M2.7, Grok 4.7, Grok 4.6, GPT 6 Luna, GPT 5.6 Luna, LongCat-2.0, LongCat 2.5 Preview Free, MiMo-V2.6-Flash, MiMo-V2.6-Pro, MiMo-V2.5, MiMo-V2.5-Pro, Muse Spark 1.3 Contributor, Muse Spark 1.2 Contributor, Qwen3.8 Max, Qwen3.8 Flash, Qwen3.7 Plus, DeepSeek V4.1 Flash, DeepSeek V4 Pro, DeepSeek V4 Flash, DeepSeek V4 Flash Vision Exp, Hy4 preview, Hy3, Space Bunny Free。两档模型相同，限额不同；部分免费模型限时，Muse Spark 有地域限制。
+Same models, different limits; some free models are temporary and Muse Spark is region-restricted.
+模型权益核验 / Model access checked: 2026-10-05。https://opencode.ai/docs/go/</description></item>
+<item><title>Pi Open source / BYOK · $0 · 无订阅费 / No subscription fee</title><link>https://pi.dev/</link><guid isPermaLink="false">ai-brief-pricing:pi-free:83197ade0a3008e2</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$0 · 无订阅费 / No subscription fee。MIT 开源客户端；自带 Key 或 OAuth 登录。Pi 本体无订阅费；接入的 API、模型网关或付费账号另按其规则收费。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. MIT client; own API keys or OAuth login. Pi has no client subscription; connected APIs, gateways or paid accounts bill separately.
+可用模型 / Supported models: Claude, GPT, Gemini, DeepSeek, Kimi, MiniMax, Ollama / local models。仅表示可接入的模型系列；OAuth 与 API Key 的可用范围以对应提供商和账号为准。
+Supported families only; OAuth and API access depend on the provider and account.
+模型权益核验 / Model access checked: 2026-10-05。https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/providers.md</description></item>
+<item><title>Devin / Windsurf Free · $0 · 无订阅费 / No subscription fee</title><link>https://devin.ai/pricing</link><guid isPermaLink="false">ai-brief-pricing:devin-free:6adcb6fbfd09ff98</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$0 · 无订阅费 / No subscription fee。少量 Agent 额度；无限 Tab 补全与行内编辑。Windsurf 已升级为 Devin Desktop。免费档不含完整模型目录。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Light agent allowance; unlimited Tab and inline edits. Windsurf became Devin Desktop. Free has limited models.
+可用模型 / Supported models: Devin built-in models。免费档具体型号以客户端为准。
+Free model IDs follow the client.
+模型权益核验 / Model access checked: 2026-10-05。https://docs.devin.ai/desktop/models https://cognition.com/blog/introducing-devin-desktop</description></item>
+<item><title>Devin / Windsurf Pro · $20/月</title><link>https://devin.ai/pricing</link><guid isPermaLink="false">ai-brief-pricing:devin-pro:0af6c075ed990cf9</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$20/月。日 / 周额度刷新；含 Devin Cloud。Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Daily / weekly allowances; Devin Cloud included. Windsurf became Devin Desktop. Extra usage is purchased at API rates.
+可用模型 / Supported models: SWE-2, Claude, GPT, Gemini, Grok。按官方模型系列收录，具体型号与额度以客户端为准；SWE-2 免费活动有截止日期。
+Families shown; model IDs and allowances follow the client. Free SWE-2 access is temporary.
+模型权益核验 / Model access checked: 2026-10-05。https://docs.devin.ai/desktop/models https://cognition.com/blog/introducing-devin-desktop</description></item>
+<item><title>Devin / Windsurf Max · $200/月</title><link>https://devin.ai/pricing</link><guid isPermaLink="false">ai-brief-pricing:devin-max:6f9c3eb913c384bf</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$200/月。Pro 权益及更高日 / 周额度。Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Pro access with higher daily / weekly allowances. Windsurf became Devin Desktop. Extra usage is purchased at API rates.
+可用模型 / Supported models: SWE-2, Claude, GPT, Gemini, Grok。按官方模型系列收录，具体型号与额度以客户端为准；SWE-2 免费活动有截止日期。
+Families shown; model IDs and allowances follow the client. Free SWE-2 access is temporary.
+模型权益核验 / Model access checked: 2026-10-05。https://docs.devin.ai/desktop/models https://cognition.com/blog/introducing-devin-desktop</description></item>
+<item><title>Devin / Windsurf Teams · $120/月起</title><link>https://devin.ai/pricing</link><guid isPermaLink="false">ai-brief-pricing:devin-teams:faf8caad4bcf6b0d</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$120/月起。团队基础费 $80/月 + $40/完整开发席位/月。Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。此处起价含 1 个完整开发席位。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Team base $80/month + $40/full developer seat/month. Windsurf became Devin Desktop. Extra usage is purchased at API rates. Starting price includes one full developer seat.
+可用模型 / Supported models: SWE-2, Claude, GPT, Gemini, Grok。按官方模型系列收录，具体型号与额度以客户端为准；SWE-2 免费活动有截止日期。
+Families shown; model IDs and allowances follow the client. Free SWE-2 access is temporary.
+模型权益核验 / Model access checked: 2026-10-05。https://docs.devin.ai/desktop/models https://cognition.com/blog/introducing-devin-desktop</description></item>
+<item><title>Gemini CLI Free (Google account) · $0 · 无订阅费 / No subscription fee</title><link>https://geminicli.com/docs/resources/quota-and-pricing/</link><guid isPermaLink="false">ai-brief-pricing:gemini-cli-free:a0c19f4dcd6fb412</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$0 · 无订阅费 / No subscription fee。Google 账号登录：1,000 次模型请求 / 用户 / 天。个人 Google 账号入口；付费档展示美国美元常规价。API Key / Vertex AI 按各自规则另计费。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Google login: 1,000 model requests/user/day. Personal Google account access; paid price is the US list price. API-key / Vertex AI billing is separate.
+可用模型 / Supported models: Gemini。CLI 自动路由 Gemini 系列；一次任务可消耗多次请求，订阅不包含 API 余额。
+CLI routes Gemini models; a task may use multiple requests. Subscriptions do not include API credit.
+模型权益核验 / Model access checked: 2026-10-05。https://geminicli.com/docs/resources/quota-and-pricing/ https://geminicli.com/plans/</description></item>
+<item><title>Gemini CLI Google AI Pro · $19.99/月</title><link>https://gemini.google/subscriptions/</link><guid isPermaLink="false">ai-brief-pricing:gemini-cli-pro:aeecd663f8936c0b</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$19.99/月。1,500 次模型请求 / 用户 / 天。个人 Google 账号入口；付费档展示美国美元常规价。API Key / Vertex AI 按各自规则另计费。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. 1,500 model requests/user/day. Personal Google account access; paid price is the US list price. API-key / Vertex AI billing is separate.
+可用模型 / Supported models: Gemini。CLI 自动路由 Gemini 系列；一次任务可消耗多次请求，订阅不包含 API 余额。
+CLI routes Gemini models; a task may use multiple requests. Subscriptions do not include API credit.
+模型权益核验 / Model access checked: 2026-10-05。https://geminicli.com/docs/resources/quota-and-pricing/ https://geminicli.com/plans/</description></item>
+<item><title>Gemini CLI Google AI Ultra · $99.99/月起</title><link>https://gemini.google/subscriptions/</link><guid isPermaLink="false">ai-brief-pricing:gemini-cli-ultra:33a43f420cdd87e6</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$99.99/月起。文档列 Ultra 2,000 次模型请求 / 用户 / 天。美国美元常规价；Ultra 另有 $199.99/月档，CLI 文档未区分两档额度，以账号为准。API Key / Vertex AI 按各自规则另计费。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Docs list Ultra at 2,000 model requests/user/day. US list price; Ultra also offers $199.99/month. CLI docs do not split its quotas by price; check your account. API-key / Vertex AI billing is separate.
+可用模型 / Supported models: Gemini。CLI 自动路由 Gemini 系列；一次任务可消耗多次请求，订阅不包含 API 余额。
+CLI routes Gemini models; a task may use multiple requests. Subscriptions do not include API credit.
+模型权益核验 / Model access checked: 2026-10-05。https://geminicli.com/docs/resources/quota-and-pricing/ https://geminicli.com/plans/</description></item>
+<item><title>Cline Open source / BYOK · $0 · 无订阅费 / No subscription fee</title><link>https://cline.bot/pricing</link><guid isPermaLink="false">ai-brief-pricing:cline-free:07e9029e02a64d45</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$0 · 无订阅费 / No subscription fee。个人客户端免费；按模型推理用量付费。可自带 Key 或使用 Cline provider；免费客户端不含付费模型额度。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Free individual client; pay for model inference. Use own keys or the Cline provider; paid model usage is not included.
+可用模型 / Supported models: Claude, GPT, Gemini, DeepSeek。可接入的模型系列，具体型号由提供商决定。
+Connectable model families; providers determine model IDs.
+模型权益核验 / Model access checked: 2026-10-05。https://cline.bot/pricing</description></item>
+<item><title>Aider Open source / BYOK · $0 · 无订阅费 / No subscription fee</title><link>https://github.com/Aider-AI/aider</link><guid isPermaLink="false">ai-brief-pricing:aider-free:2060ed6c87b86e83</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$0 · 无订阅费 / No subscription fee。开源终端工具；自带 API Key 或本地模型。软件无订阅费，远程模型推理按提供商计费；本地模型使用自己的算力。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Open-source terminal tool; own API keys or local models. No software subscription; remote inference bills through providers, local models use your hardware.
+可用模型 / Supported models: Claude, GPT, Gemini, DeepSeek, Ollama / local models。列出连接能力，不保证所有型号的代码编辑效果；不包含模型额度。
+Connectivity does not guarantee editing quality for every model; no model allowance included.
+模型权益核验 / Model access checked: 2026-10-05。https://aider.chat/docs/llms.html</description></item>
+<item><title>Kilo Code Free / BYOK · $0 · 无订阅费 / No subscription fee</title><link>https://kilo.ai/pricing</link><guid isPermaLink="false">ai-brief-pricing:kilo-free:65d394b15718ea71</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$0 · 无订阅费 / No subscription fee。免费客户端；自带 Key、免费或本地模型。平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Free client; own keys, free or local models. Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional.
+可用模型 / Supported models: Claude, GPT, Gemini, Ollama / local models。可接入模型系列；平台费不包含推理额度。
+Connectable model families; platform fees do not include inference credits.
+模型权益核验 / Model access checked: 2026-10-05。https://kilo.ai/pricing</description></item>
+<item><title>Kilo Code Teams · $15/席位/月</title><link>https://kilo.ai/pricing</link><guid isPermaLink="false">ai-brief-pricing:kilo-teams:f625af66b6cd6b3f</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$15/席位/月。团队管理、共享 BYOK 和集中计费；推理另计。平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. Team management, shared BYOK and billing; inference extra. Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional.
+可用模型 / Supported models: Claude, GPT, Gemini, Ollama / local models。可接入模型系列；平台费不包含推理额度。
+Connectable model families; platform fees do not include inference credits.
+模型权益核验 / Model access checked: 2026-10-05。https://kilo.ai/pricing</description></item>
+<item><title>Kilo Pass Starter · $19/月</title><link>https://kilo.ai/pricing</link><guid isPermaLink="false">ai-brief-pricing:kilo-pass-starter:a7429c172059399a</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$19/月。每月 $19 基础模型 credits，奖励另按规则发放。此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. $19 base model credits/month; bonuses follow program rules. Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra.
+可用模型 / Supported models: Kilo Gateway models。按 Gateway 模型费率扣 credits，型号与免费模型可用性会变化。
+Credits follow Gateway model rates; catalog and free-model availability can change.
+模型权益核验 / Model access checked: 2026-10-05。https://kilo.ai/pricing</description></item>
+<item><title>Kilo Pass Pro · $49/月</title><link>https://kilo.ai/pricing</link><guid isPermaLink="false">ai-brief-pricing:kilo-pass-pro:efcd21417bcc502e</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$49/月。每月 $49 基础模型 credits，奖励另按规则发放。此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. $49 base model credits/month; bonuses follow program rules. Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra.
+可用模型 / Supported models: Kilo Gateway models。按 Gateway 模型费率扣 credits，型号与免费模型可用性会变化。
+Credits follow Gateway model rates; catalog and free-model availability can change.
+模型权益核验 / Model access checked: 2026-10-05。https://kilo.ai/pricing</description></item>
+<item><title>Kilo Pass Expert · $199/月</title><link>https://kilo.ai/pricing</link><guid isPermaLink="false">ai-brief-pricing:kilo-pass-expert:0cac78c4fa9bbd24</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$199/月。每月 $199 基础模型 credits，奖励另按规则发放。此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. $199 base model credits/month; bonuses follow program rules. Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra.
+可用模型 / Supported models: Kilo Gateway models。按 Gateway 模型费率扣 credits，型号与免费模型可用性会变化。
+Credits follow Gateway model rates; catalog and free-model availability can change.
+模型权益核验 / Model access checked: 2026-10-05。https://kilo.ai/pricing</description></item>
+<item><title>Kiro Free · $0 · 无订阅费 / No subscription fee</title><link>https://kiro.dev/pricing/</link><guid isPermaLink="false">ai-brief-pricing:kiro-free:42691f02bf426996</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$0 · 无订阅费 / No subscription fee。50 credits / 月；IDE 与 CLI 共用。月额度不结转；免费档有访问限制。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. 50 credits/month shared across IDE and CLI. Monthly credits expire; free access is limited.
+可用模型 / Supported models: Auto, Claude Sonnet 4.5, Claude Sonnet 4.0, DeepSeek 3.2, MiniMax M2.5, GLM-5, MiniMax M2.1, Qwen3 Coder Next。按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。
+Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.
+模型权益核验 / Model access checked: 2026-10-05。https://kiro.dev/docs/models/</description></item>
+<item><title>Kiro Pro · $20/席位/月</title><link>https://kiro.dev/pricing/</link><guid isPermaLink="false">ai-brief-pricing:kiro-pro:9b4a4a405600ae49</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$20/席位/月。1,000 credits / 月；IDE 与 CLI 共用。月额度不结转；额外 credits $0.04/个；商业区域税前价。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. 1,000 credits/month shared across IDE and CLI. Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.
+可用模型 / Supported models: GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, Claude Opus 5.5, Claude Sonnet 5.5, Claude Opus 5, Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Haiku 4.5, Auto, Claude Sonnet 4.5, Claude Sonnet 4.0, DeepSeek 3.2, MiniMax M2.5, GLM-5, MiniMax M2.1, Qwen3 Coder Next。按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。
+Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.
+模型权益核验 / Model access checked: 2026-10-05。https://kiro.dev/docs/models/</description></item>
+<item><title>Kiro Pro+ · $40/席位/月</title><link>https://kiro.dev/pricing/</link><guid isPermaLink="false">ai-brief-pricing:kiro-proplus:7f395e5405c8bbe3</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$40/席位/月。2,000 credits / 月；IDE 与 CLI 共用。月额度不结转；额外 credits $0.04/个；商业区域税前价。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. 2,000 credits/month shared across IDE and CLI. Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.
+可用模型 / Supported models: GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, Claude Opus 5.5, Claude Sonnet 5.5, Claude Opus 5, Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Haiku 4.5, Auto, Claude Sonnet 4.5, Claude Sonnet 4.0, DeepSeek 3.2, MiniMax M2.5, GLM-5, MiniMax M2.1, Qwen3 Coder Next。按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。
+Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.
+模型权益核验 / Model access checked: 2026-10-05。https://kiro.dev/docs/models/</description></item>
+<item><title>Kiro Pro Max · $100/席位/月</title><link>https://kiro.dev/pricing/</link><guid isPermaLink="false">ai-brief-pricing:kiro-pro-max:2b44f408434002c1</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$100/席位/月。5,000 credits / 月；IDE 与 CLI 共用。月额度不结转；额外 credits $0.04/个；商业区域税前价。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. 5,000 credits/month shared across IDE and CLI. Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.
+可用模型 / Supported models: GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, Claude Opus 5.5, Claude Sonnet 5.5, Claude Opus 5, Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Haiku 4.5, Auto, Claude Sonnet 4.5, Claude Sonnet 4.0, DeepSeek 3.2, MiniMax M2.5, GLM-5, MiniMax M2.1, Qwen3 Coder Next。按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。
+Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.
+模型权益核验 / Model access checked: 2026-10-05。https://kiro.dev/docs/models/</description></item>
+<item><title>Kiro Power · $200/席位/月</title><link>https://kiro.dev/pricing/</link><guid isPermaLink="false">ai-brief-pricing:kiro-power:a86751ce4c4b2ff4</guid><pubDate>Sun, 04 Oct 2026 16:00:00 GMT</pubDate><category>agent</category><description>计费快照，非实时价格。$200/席位/月。10,000 credits / 月；IDE 与 CLI 共用。月额度不结转；额外 credits $0.04/个；商业区域税前价。 核验日期：2026-10-05。
+Pricing snapshot, not a live quote. 10,000 credits/month shared across IDE and CLI. Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.
+可用模型 / Supported models: GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, Claude Opus 5.5, Claude Sonnet 5.5, Claude Opus 5, Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Haiku 4.5, Auto, Claude Sonnet 4.5, Claude Sonnet 4.0, DeepSeek 3.2, MiniMax M2.5, GLM-5, MiniMax M2.1, Qwen3 Coder Next。按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。
+Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.
+模型权益核验 / Model access checked: 2026-10-05。https://kiro.dev/docs/models/</description></item>
 </channel></rss>

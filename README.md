@@ -274,6 +274,42 @@ python3 scripts/collect.py import-feed openai-official /tmp/openai-feed.xml \
 
 内部详细状态在 `.collector/state.json`，每轮报告在 `.collector/runs/`；公开状态需通过 `apply` 或 `refresh` 更新到 `public/data/coverage.json`。JSON 的生成时间只说明快照生成，不能当作所有来源均已完成更新的证明。失败或待核查时如实保留缺口，不写成“没有重要更新”。
 
+## 计费方案数据更新
+
+计费页 `/#pricing` 使用 [public/data/pricing.json](public/data/pricing.json) 中的人工核验快照，按厂商、产品和套餐档位聚合展示模型 API、Token Plan 与 Agent 套餐。该目录独立于新闻 RSS 采集；目前没有自动抓取价格或定时更新任务，运行新闻采集不会更新计费数据。
+
+### 核验与编辑
+
+1. 查看每项的 `source_url`（官方定价来源）和订阅项的 `models_source_urls`（官方模型权益来源），核实价格、币种、计费周期、额度、可用模型及适用限制。
+2. 编辑 JSON 中的对应记录：API 更新 `price.input`、`price.output`、`price.cached`、`price.cache_write`，单位均为每百万 tokens；订阅更新 `price.amount`、`billing`、`scope_zh/en` 和 `note_zh/en`。保留原币种与官方额度口径，不把 credits、请求数换算成 tokens。
+3. Token Plan / Agent 套餐还需更新 `supported_models`、`models_note_zh/en` 及模型权益来源。注明档位门槛、上下文限制和额外付费条件；兼容某个 Agent 工具不代表包含该工具厂商的模型。新增档位保留所属产品的 `product_id` / `product_name`，使用独立的方案 `id` 和 `tier_name`。
+4. 按实际核验与修改情况更新日期，格式为 `YYYY-MM-DD`：
+
+| 字段 | 更新规则 |
+| --- | --- |
+| 每项 `checked_at` | 实际核验定价后更新 |
+| 每项 `models_checked_at` | 实际核验模型权益后更新，非 API 项必填 |
+| 每项 `updated_at` | 价格、额度、条件、状态或模型权益等内容实际变化时更新；仅重新核验不修改 |
+| 顶层 `checked_at` | 取目录中最近的核验日期 |
+
+无法确认的价格保持 `null` / `pending` 并写明原因，`null` 不等于免费。定价或模型权益超过 30 天未核验会显示「需重新核验」；带 `valid_until` 的活动超过北京时间截止日期后显示「活动已到期」。这些提示不会自动修改数据，也不能仅更新日期来消除提示。
+
+### 校验、预览与发布
+
+在项目根目录执行：
+
+```sh
+npm run pricing:build
+npm test
+npm run build
+```
+
+`pricing:build` 校验数据并重新生成 `public/data/pricing.xml`；正式构建再次校验，在 `dist/` 生成页面、预渲染计费表格及 RSS。RSS 包含模型权益，纯核验日期变化不会产生新 GUID，价格或模型权益变化会产生新 GUID。页面中的 RSS 订阅入口已隐藏，订阅文件仍随构建生成。
+
+通过 `npm run dev` 打开 `http://localhost:4173/#pricing`，检查厂商 / 产品分组、各档位的模型和额度、中英文切换、模型搜索、官方链接及手机表格。确认后将 `public/data/pricing.json` 与重新生成的 `public/data/pricing.xml` 一并提交，按[每次更新后发布](#每次更新后发布)推送并检查 GitHub Actions；`dist/` 不提交。部署成功后，在正式网站的 `/#pricing` 与 `/data/pricing.json` 核对本次更新，线上数据不会因本地编辑而自动变化。
+
+字段和已核实限制详见[计费方案说明](docs/PRICING.md)。
+
 ## 页面与公开数据
 
 页头支持中文 / EN 切换，首次访问默认中文，记住主动选择。可通过 `?lang=zh` / `?lang=en` 分享对应语言链接；URL 参数优先于已保存的偏好。界面、详情、来源说明与辅助阅读标签随语言切换，保留当前筛选。关键词同时检索两种语言，不依赖在线翻译服务。
@@ -290,7 +326,7 @@ python3 scripts/collect.py import-feed openai-official /tmp/openai-feed.xml \
 | `public/data/coverage.json` | 来源获取与判断进度、待处理数量、失败和断档说明 |
 | `public/data/subscriptions.opml` | 启用且已配置的订阅清单 |
 
-所有 JSON 使用相同 `snapshot_id`，网页发现版本不一致会提示刷新。通过 `apply`／`refresh` 统一生成并发布整套 `public/data/`，不要只替换某个月文件。`.collector/`、原文缓存、账号凭据和处置包不提交公开仓库，也不进入部署产物。
+新闻快照中的 JSON 使用相同 `snapshot_id`，网页发现版本不一致会提示刷新。通过 `apply`／`refresh` 统一生成并发布新闻快照，不要只替换某个月文件；计费目录按上节独立维护。`.collector/`、原文缓存、账号凭据和处置包不提交公开仓库，也不进入部署产物。
 
 ## 免费发布与上线检查
 

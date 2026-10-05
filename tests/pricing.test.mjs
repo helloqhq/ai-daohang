@@ -60,7 +60,8 @@ test('pricing status flags stale quotes, paused sales and expired offers in Shan
 });
 test('rendering preserves units, pending prices, English copy and safe links',()=>{
   const english=renderPricing(snapshot.plans,'en',now);
-  assert.ok(english.includes('million tokens'));assert.ok(english.includes('Price pending'));assert.ok(english.includes('New sign-ups paused'));assert.ok(english.includes('starting at'));assert.ok(english.includes('Cache write'));
+  assert.ok(english.includes('million tokens'));assert.ok(english.includes('Price pending'));assert.ok(english.includes('starting at'));assert.ok(english.includes('Cache write'));
+  assert.ok(renderPricing([{...snapshot.plans[0],status:'paused'}],'en',now).includes('New sign-ups paused'));
   assert.ok(!english.includes('undefined'));assert.ok(!english.includes('计费条件'));
   const malicious={...snapshot.plans[0],name:'<script>alert(1)</script>',source_url:'javascript:alert(1)'};
   const html=renderPricing([malicious],'zh',now);

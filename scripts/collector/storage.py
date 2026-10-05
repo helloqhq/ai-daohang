@@ -125,6 +125,10 @@ class Store:
         moved = False
         installed = False
         try:
+            # Pricing is maintained independently of the news snapshot.
+            for name in ('pricing.json', 'pricing.xml'):
+                if name not in files and (data / name).is_file():
+                    shutil.copy2(data / name, stage / name)
             for name, value in files.items():
                 if isinstance(value,str):
                     target=stage/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(value,encoding='utf-8')

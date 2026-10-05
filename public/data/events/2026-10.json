@@ -1,7 +1,282 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "c3937f1f5c8e5ae2",
+  "snapshot_id": "08eb3db5eb0767dc",
   "events": [
+    {
+      "id": "elon-musk-x-2106906678293606496",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "published_at": "2026-10-05T00:37:51+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-05T05:18:54+00:00",
+      "updated_at": "2026-10-05T05:24:06+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2106906678293606496",
+          "url": "https://x.com/elonmusk/status/2106906678293606496",
+          "collected_at": "2026-10-05T05:18:54+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "title_zh": "马斯克：把超级智能传播到星际是一种成功条件",
+      "summary_zh": "马斯克在 X 表示，把超级智能传播到星际，是他所称“生物引导程序”的一种理想成功条件。原帖表达个人观点，未宣布具体产品或实施时间。",
+      "key_points_zh": [
+        "将超级智能向星际传播描述为成功条件；原帖没有具体产品安排。"
+      ],
+      "importance_reason_zh": "已核实负责人关于超级智能发展方向的一手观点。",
+      "title_en": "Elon Musk describes spreading superintelligence to the stars as a success condition",
+      "summary_en": "Musk said on X that spreading superintelligence to the stars is a desirable success condition for what he calls a biological bootloader. The post states a personal view without announcing a product or timeline.",
+      "key_points_en": [
+        "Describes spreading superintelligence to the stars as a success condition, without a specific product plan."
+      ],
+      "importance_reason_en": "A verified leader’s first-hand view on the direction of superintelligence."
+    },
+    {
+      "id": "demis-hassabis-x-2106850913474482566",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "published_at": "2026-10-04T20:56:15+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-05T05:18:54+00:00",
+      "updated_at": "2026-10-05T05:24:06+00:00",
+      "sources": [
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2106850913474482566",
+          "url": "https://x.com/demishassabis/status/2106850913474482566",
+          "collected_at": "2026-10-05T05:18:54+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "title_zh": "Demis Hassabis 谈 AI 加速科学与医学的社会影响",
+      "summary_zh": "Demis Hassabis 在 X 表示，他为团队利用 AI 加速科学和医学、造福社会的工作影响感到自豪。取得的原帖文字没有列出具体项目或新的研究结果。",
+      "key_points_zh": [
+        "本人评价 AI 用于科学和医学的社会影响，未在原帖文字中说明具体项目。"
+      ],
+      "importance_reason_zh": "已核实负责人对 AI 科学与医学应用的一手观点。",
+      "title_en": "Demis Hassabis reflects on AI’s impact in science and medicine",
+      "summary_en": "Hassabis said on X that he was proud of his team’s impact using AI to accelerate science and medicine for society. The retrieved post text does not identify specific projects or new research results.",
+      "key_points_en": [
+        "Offers his assessment of AI’s societal impact in science and medicine without naming a project in the retrieved text."
+      ],
+      "importance_reason_en": "A verified leader’s first-hand view on AI applications in science and medicine."
+    },
+    {
+      "id": "tibo-x-2106845241357824205",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "published_at": "2026-10-04T20:33:43+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-05T05:18:54+00:00",
+      "updated_at": "2026-10-05T05:24:06+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106845241357824205",
+          "url": "https://x.com/thsottiaux/status/2106845241357824205",
+          "collected_at": "2026-10-05T05:18:54+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "title_zh": "Tibo 预告未来 28 天：每天改进 Codex / Work 或进行完整重置",
+      "summary_zh": "Tibo 表示，未来 28 天每天将推出一项对多数 Codex / Work 用户有明显帮助的改进，或进行一次完整重置。原帖没有列出改进清单、重置对象或额度规则。",
+      "key_points_zh": [
+        "计划持续 28 天，每天提供明确改进或完整重置。",
+        "未说明重置范围和具体执行条件；该表述属于负责人预告。"
+      ],
+      "importance_reason_zh": "已核实负责人的产品改进与重置计划预告。",
+      "title_en": "Tibo previews 28 days of Codex / Work improvements or full resets",
+      "summary_en": "Tibo said that for the next 28 days, each day would bring a clear improvement relevant to most Codex / Work users or a full reset. The post does not list the improvements or specify what resets cover or their quota rules.",
+      "key_points_en": [
+        "Plans a clear improvement or full reset each day for 28 days.",
+        "Reset scope and implementation conditions are unspecified; this is a leader’s preview."
+      ],
+      "importance_reason_en": "A verified leader’s first-hand preview of product improvements and resets."
+    },
+    {
+      "id": "copilot-cli-1092-4",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "published_at": "2026-10-04T19:32:32Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-05T05:17:32+00:00",
+      "updated_at": "2026-10-05T05:24:06+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-4",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-4",
+          "collected_at": "2026-10-05T05:17:32+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "title_zh": "Copilot CLI 1.0.92-4：新增配置命令，强化沙箱凭据隔离与长会话恢复",
+      "summary_zh": "该版本新增 copilot config 子命令，并修复 MCP 连接、上下文压缩和沙箱执行问题。沙箱 shell 默认不再接收环境中的 GITHUB_TOKEN，除非显式配置。",
+      "key_points_zh": [
+        "copilot config 可列出、读取、设置和删除配置；Canvas 动作可向模型返回图像。",
+        "旧 HTTP+SSE MCP 消息确认受服务器配置的超时限制，避免无限挂起；服务器指令变化后工具可在同一轮恢复。",
+        "超出上下文限额的压缩保留最新提示；过大的 Anthropic 请求缩小图像或移除附件后重试。",
+        "修复单步写入大文件后会话长时间变慢，并使 shell 的标准输出与错误输出可靠地实时显示。"
+      ],
+      "importance_reason_zh": "包含沙箱凭据隔离、MCP 挂起和长会话稳定性的重要修复。",
+      "title_en": "Copilot CLI 1.0.92-4 adds config commands and improves sandbox isolation and long-session recovery",
+      "summary_en": "The release adds copilot config subcommands and fixes MCP connections, compaction and sandbox execution. Sandboxed shells now withhold ambient GITHUB_TOKEN unless explicitly configured.",
+      "key_points_en": [
+        "copilot config lists, reads, sets and removes settings; Canvas actions can return images to the model.",
+        "Legacy HTTP+SSE MCP acknowledgements use the server-configured timeout to avoid indefinite hangs; tools recover in the same turn after server instructions change.",
+        "Compaction preserves the latest prompt when context limits are exceeded; oversized Anthropic requests retry with smaller images or removed attachments.",
+        "Fixes prolonged session slowdowns after a large single-step file write and reliably streams shell stdout and stderr."
+      ],
+      "importance_reason_en": "Important fixes for sandbox credential isolation, MCP hangs and long-session reliability."
+    },
+    {
+      "id": "deeptutor-v1613",
+      "entity_ids": [
+        "deeptutor"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "published_at": "2026-10-04T13:35:37Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-05T05:17:35+00:00",
+      "updated_at": "2026-10-05T05:24:06+00:00",
+      "sources": [
+        {
+          "source_id": "deeptutor-releases",
+          "content_id": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.6.13",
+          "url": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.6.13",
+          "collected_at": "2026-10-05T05:17:35+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "title_zh": "DeepTutor 1.6.13：扩展沉浸阅读与题库练习，改进文档检索和语音配置",
+      "summary_zh": "DeepTutor 1.6.13 增加自然朗读、带时间戳的观看笔记和题库练习入口。文档图像可使用独立视觉模型，聊天附件改存至所选工作区，并保留已有上传与链接。",
+      "key_points_zh": [
+        "支持从题库直接开始练习，选择多道已保存题目进行聊天；引导学习打乱选择题选项并避免泄露正确答案。",
+        "文档图像描述按工作区缓存；MinerU 云解析支持大 PDF 分片和恢复已完成部分，新增 deeptutor kb eval 本地检索评估。",
+        "语音合成超时可设为 5–600 秒，默认 60 秒；预览区分认证、权限、额度和网络等错误。",
+        "新增波兰语、Requesty、API Route、FutureInfra，以及 MiniMax 原生语音和 Xiaomi MiMo v2.5 预设语音支持。"
+      ],
+      "importance_reason_zh": "学习流程、文档检索、工作区附件和语音兼容性均有实质更新。",
+      "title_en": "DeepTutor 1.6.13 expands reading and question-bank practice, document retrieval and speech configuration",
+      "summary_en": "DeepTutor 1.6.13 adds natural read-aloud audio, timestamped watching notes and question-bank practice. Document images can use a separate vision model, while chat attachments move into the selected workspace with existing uploads and URLs preserved.",
+      "key_points_en": [
+        "Start practice directly from the question bank or select multiple saved questions for a chat; guided learning shuffles options and avoids revealing correct answers.",
+        "Workspace-cached image descriptions, resumable oversized-PDF slices in MinerU cloud parsing, and local retrieval evaluation with deeptutor kb eval.",
+        "Speech synthesis timeout supports 5–600 seconds, with a 60-second default; previews distinguish authentication, permissions, quota and network failures.",
+        "Adds Polish, Requesty, API Route and FutureInfra, plus native MiniMax speech and Xiaomi MiMo v2.5 preset speech support."
+      ],
+      "importance_reason_en": "Substantial changes to learning workflows, retrieval, workspace attachments and speech compatibility."
+    },
+    {
+      "id": "tibo-x-2106610099720720811",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "model_release"
+      ],
+      "published_at": "2026-10-04T04:59:21+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-05T05:18:54+00:00",
+      "updated_at": "2026-10-05T05:24:06+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106610099720720811",
+          "url": "https://x.com/thsottiaux/status/2106610099720720811",
+          "collected_at": "2026-10-05T05:18:54+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "title_zh": "Tibo：聚焦简化、提高用量效率、突破性功能和新模型",
+      "summary_zh": "Tibo 表示，当前工作聚焦简化、提高效率以支持更多用量、突破性功能或新模型；他称用户反馈明确希望产品更简单，团队正在跟进。原帖没有公布具体上线内容或时间。",
+      "key_points_zh": [
+        "列出简化、用量效率、突破性功能和新模型四个工作方向。",
+        "表示正响应用户对简化的反馈，未宣布具体发布。"
+      ],
+      "importance_reason_zh": "已核实负责人对产品工作重点和用户反馈的一手通报。",
+      "title_en": "Tibo says work is focused on simplification, usage efficiency, major features and new models",
+      "summary_en": "Tibo said current work focuses on simplification, efficiency for more usage, groundbreaking features or new models. He said feedback clearly calls for simpler products and the team is acting on it, without announcing a specific release or date.",
+      "key_points_en": [
+        "Names simplification, usage efficiency, groundbreaking features and new models as the focus.",
+        "Says the team is responding to requests for simpler products; no specific release is announced."
+      ],
+      "importance_reason_en": "A verified leader’s first-hand update on product priorities and user feedback."
+    },
+    {
+      "id": "tibo-x-2106602729875685780",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "feature"
+      ],
+      "published_at": "2026-10-04T04:30:04+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-05T05:18:54+00:00",
+      "updated_at": "2026-10-05T05:24:06+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2106602729875685780",
+          "url": "https://x.com/thsottiaux/status/2106602729875685780",
+          "collected_at": "2026-10-05T05:18:54+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "title_zh": "Tibo 分享 dots 清空收件箱的使用体验",
+      "summary_zh": "Tibo 表示，此前从未做到收件箱清零，这次把它设为 dot 的主动目标后达成了。他同时表示还要观察这一状态能维持多久；这是个人使用反馈。",
+      "key_points_zh": [
+        "称将收件箱清零设为 dot 的主动目标后首次达成，持续效果仍待观察。"
+      ],
+      "importance_reason_zh": "已核实负责人对 dots 主动目标功能的一手使用反馈。",
+      "title_en": "Tibo shares his experience reaching inbox zero with a dot",
+      "summary_en": "Tibo said he had never reached inbox zero until making it an active goal for his dot. He added that he would see how long it lasts; this is a personal usage report.",
+      "key_points_en": [
+        "Reports first reaching inbox zero after setting it as his dot’s active goal, with durability still to be seen."
+      ],
+      "importance_reason_en": "A verified leader’s first-hand feedback on dots’ active-goal workflow."
+    },
     {
       "id": "elon-musk-x-2106556694683677059",
       "entity_ids": [
@@ -661,6 +936,43 @@
         "Retains recent requests after context rollover; fixes incorrect reports that subagents are configured."
       ],
       "importance_reason_en": "Affects tool connections and request continuity in long tasks; stability still needs validation through use."
+    },
+    {
+      "id": "tibo-x-2105862010521219406",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "published_at": "2026-10-02T03:26:42+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-05T05:18:54+00:00",
+      "updated_at": "2026-10-05T05:24:06+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2105862010521219406",
+          "url": "https://x.com/thsottiaux/status/2105862010521219406",
+          "collected_at": "2026-10-05T05:18:54+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "title_zh": "Tibo：可让 dot 创建宠物并设为头像",
+      "summary_zh": "Tibo 表示，用户可以让 dot“创建宠物并设为头像”，素材可以来自想法或图像等。原帖未交代各订阅档位的可用性和限制。",
+      "key_points_zh": [
+        "本人介绍通过 dot 从想法或图像创建宠物并设为头像的用法。"
+      ],
+      "importance_reason_zh": "已核实负责人对 dots 宠物与头像功能的一手说明。",
+      "title_en": "Tibo says a dot can create a pet and set it as an avatar",
+      "summary_en": "Tibo said users can ask a dot to create a pet and set it as an avatar, based on an idea, an image or other inspiration. The post does not specify availability or restrictions by subscription tier.",
+      "key_points_en": [
+        "Describes asking a dot to create a pet from an idea or image and use it as an avatar."
+      ],
+      "importance_reason_en": "A verified leader’s first-hand explanation of dots’ pet and avatar workflow."
     },
     {
       "id": "gemini-cli-nightly-20261002",

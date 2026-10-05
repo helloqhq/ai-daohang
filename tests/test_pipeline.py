@@ -63,6 +63,16 @@ class PipelineTests(unittest.TestCase):
         import xml.etree.ElementTree as ET
         opml=ET.parse(self.root/'public/data/subscriptions.opml')
         self.assertEqual(opml.getroot().find('body/outline').attrib['xmlUrl'],self.source['feed_url'])
+    def test_news_updates_preserve_independent_pricing_files(self):
+        self.p.refresh()
+        data=self.root/'public/data'
+        pricing={'pricing.json':b'{"plans": []}\n','pricing.xml':b'<rss/>\n'}
+        for name,body in pricing.items():(data/name).write_bytes(body)
+        m=self.candidate()  # Imports also replace the news snapshot.
+        self.p.apply(self.packet(m))
+        self.p.refresh()
+        for name,body in pricing.items():self.assertEqual((data/name).read_bytes(),body)
+        self.assertEqual(self.p.validate()['events'],1)
     def test_unchanged_reuses_decision_changed_content_reopens(self):
         m=self.candidate();packet=self.packet(m);self.p.apply(packet)
         self.candidate();self.assertEqual(self.p.store.pending(),[])

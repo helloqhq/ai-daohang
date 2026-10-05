@@ -6,7 +6,7 @@
 
 ## 数据与核验
 
-`public/data/pricing.json` 是独立于新闻采集快照的人工核验目录。首批于 2026-10-05 核验官方定价页 / 文档，共 39 项方案；覆盖 OpenAI、Anthropic、Google、DeepSeek、Alibaba Cloud、Z.AI、MiniMax、Kimi、Cursor、GitHub。
+`public/data/pricing.json` 是独立于新闻采集快照的人工核验目录。2026-10-05 复核官方定价页 / 文档，当前共 44 项方案；覆盖 OpenAI、Anthropic、Google、DeepSeek、Alibaba Cloud、Z.AI、MiniMax、Kimi、Cursor、GitHub。本轮新增 Gemini 3.8 Flash、GLM-5.3-FlashX、Codex Pro $500、Cursor Pro+ 和 Ultra，修订 Pro 订阅额度说明。新闻采集替换快照时保留独立的 `pricing.json` 与 `pricing.xml`。
 
 每项保留原币种、计费周期、适用地域 / 上下文 / 用量条件、双语说明、官方 HTTPS 来源和核验日期。API 的输入、输出、缓存读取、缓存写入采用每百万 tokens 的同一单位；缓存写入 TTL 等条件写在说明中。订阅额度维持官方口径，credits、请求数和 tokens 不互相换算，人民币和美元不按假定汇率合并。年付价格在明确核实的方案说明中保留。
 
@@ -14,7 +14,7 @@
 
 Kimi 按档位区分 K3、1M 上下文和高速模型；Claude Pro 的 Fable 模型需要另购 usage credits，Max 也有 Fable 周额度上限。MiniMax 官方按模型类别描述图像 / 语音覆盖，说明保留该范围及排除项，不猜具体型号。Copilot 按月付权益核验，已退役且仅旧年付用户保留的 Sonnet 4.6 不列入；GPT-5.4 nano 的表格与脚注存在冲突，依脚注只在 Pro+ 中收录，并注明仅限 Codex VS Code 扩展。
 
-`null` 表示价格未收录，不等于免费。GLM Coding Plan 额度已核验，公开促销价的结算周期条件不完整，订阅价格保持 `null` / `pending`；Codex Pro $200 标记 `paused`。同一模型的地域、上下文、优先级、时段价格可能不同，表格展示的基准条件在模型下方，其他已核实阶梯在「计费条件」中；它不是所有型号及价格维度的穷举。
+`null` 表示价格未收录，不等于免费。GLM Coding Plan 额度已核验，完整档位结算价仍待核验，订阅价格保持 `null` / `pending`；2026-09-25 至 10-07 全天按非高峰半价扣 credits。Codex Pro $200 已恢复新订阅，采用较低的新额度；符合官方资格窗口的旧用户可在订阅有效期间沿用旧额度至 2026-10-29。Pro $500 包含 Astra Ultrafast，各档位用量以官方面板为准，不沿用旧的固定 Plus 倍数。同一模型的地域、上下文、优先级、时段价格可能不同，表格展示的基准条件在模型下方，其他已核实阶梯在「计费条件」中；它不是所有型号及价格维度的穷举。
 
 `checked_at` 是定价核验日期；`updated_at` 是本站录入或实际修改该项内容的日期，不冒充厂商发布时间。定价或模型权益超过 30 天未核验标「需重新核验」。带 `valid_until` 的活动超过北京时间截止日期后标「活动已到期」，价格划线；重新核实后再修改数据，不能把旧活动价继续当成当前价格。
 

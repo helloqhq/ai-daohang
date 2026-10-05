@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "python3 -m http.server 4173 --directory public",
     "build": "python3 scripts/build.py",
+    "pricing:build": "node scripts/build-pricing.mjs public",
     "test": "python3 -m unittest discover -s tests -v && node --test tests/*.test.mjs",
     "validate": "python3 scripts/collect.py validate"
   }

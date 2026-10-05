@@ -16,13 +16,14 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AI 简报","alternateName":["AI Brief","go2-ai.com"],"url":"https://go2-ai.com/","inLanguage":["zh-CN","en"]}</script>
   <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="alternate" type="application/rss+xml" title="AI 简报 · 计费快照" href="./data/pricing.xml">
   <script type="module" src="./assets/app.js"></script>
 </head>
 <body>
   <a class="skip" href="#content"><span data-i18n="skip">跳到动态内容</span></a>
   <header class="site-header">
     <a class="brand" href="./" data-i18n-aria-label="home" aria-label="AI 简报首页"><img src="./assets/mark.svg" width="34" height="34" alt=""><span><span class="brand-name">AI 简报</span><span class="brand-en">AI BRIEF</span></span></a>
-    <nav data-i18n-aria-label="navigation" aria-label="主导航"><button class="nav-button selected" id="feed-nav" aria-current="page"><span data-i18n="feed">动态</span></button><button class="nav-button" id="sources-nav" hidden><span data-i18n="sources">信息源</span> <span id="source-count"></span></button></nav>
+    <nav data-i18n-aria-label="navigation" aria-label="主导航"><button class="nav-button selected" id="feed-nav" aria-current="page"><span data-i18n="feed">动态</span></button><button class="nav-button" id="pricing-nav"><span data-i18n="pricing">计费方案</span></button><button class="nav-button" id="sources-nav" hidden><span data-i18n="sources">信息源</span> <span id="source-count"></span></button></nav>
     <div class="header-actions"><div class="language-switch" role="group" data-i18n-aria-label="language" aria-label="选择语言"><button type="button" data-language="zh" lang="zh-CN" aria-pressed="true">中文</button><button type="button" data-language="en" lang="en" aria-pressed="false">EN</button></div></div>
   </header>
   <main id="content">
@@ -48,6 +49,15 @@
         <div id="feed-list" aria-live="polite" aria-busy="true"><!-- feed:start --><div class="loading-state"><span data-i18n="loadingFeed">正在整理动态…</span></div><!-- feed:end --></div>
         <button id="more-button" class="more-button" hidden><span data-i18n="more">继续阅读</span></button>
       </section>
+    </section>
+    <section id="pricing-view" hidden aria-labelledby="pricing-title">
+      <div class="pricing-hero"><div><p class="pricing-eyebrow" data-i18n="pricingEyebrow">计费方案 / PRICING INDEX</p><h2 id="pricing-title" data-i18n="pricingTitle">把价格与用量，一起看清。</h2><p class="pricing-intro" data-i18n="pricingIntro">聚合模型 API、Token Plan 与 Agent 套餐，对照单价、额度及适用条件。</p><p id="pricing-snapshot" class="pricing-snapshot"></p></div><div class="pricing-subscribe"><a href="./data/pricing.xml"><span aria-hidden="true">◔</span> <span data-i18n="pricingRSS">订阅计费快照 RSS</span> ↗</a><small data-i18n="pricingRSSCopy">本站核验并发布数据后更新订阅。</small></div></div>
+      <p class="pricing-notice" data-i18n="pricingNotice">API 按百万 tokens 展示；订阅保留原币种与计费周期，不换算额度。价格为人工核验快照，税费、地区、活动及最终结算以官方为准。</p>
+      <section class="pricing-filters" data-i18n-aria-label="pricingFilters" aria-label="计费方案筛选">
+        <div class="category-buttons" role="group" data-i18n-aria-label="pricingFilters" aria-label="计费方案筛选"><button type="button" class="category selected" data-pricing-category="all" aria-pressed="true"><span data-i18n="pricingAll">全部方案</span><span data-pricing-count>—</span></button><button type="button" class="category" data-pricing-category="api" aria-pressed="false"><span data-i18n="pricingAPI">模型 API</span><span data-pricing-count>—</span></button><button type="button" class="category" data-pricing-category="token-plan" aria-pressed="false"><span data-i18n="pricingTokenPlan">Token Plan</span><span data-pricing-count>—</span></button><button type="button" class="category" data-pricing-category="agent" aria-pressed="false"><span data-i18n="pricingAgent">Agent 套餐</span><span data-pricing-count>—</span></button></div>
+        <div class="pricing-controls"><label class="search"><input id="pricing-search" type="search" data-i18n-placeholder="pricingSearch" data-i18n-aria-label="pricingSearch" placeholder="搜索模型、套餐或额度条件" aria-label="搜索模型、套餐或额度条件"></label><label><span class="sr-only" data-i18n="pricingProvider">厂商</span><select id="pricing-provider" data-i18n-aria-label="pricingProvider" aria-label="厂商"><option value="" data-i18n="pricingAllProviders">全部厂商</option></select></label><label><span class="sr-only" data-i18n="pricingCurrency">币种</span><select id="pricing-currency" data-i18n-aria-label="pricingCurrency" aria-label="币种"><option value="" data-i18n="pricingAllCurrencies">全部币种</option><option value="USD">USD · $</option><option value="CNY">CNY · ¥</option></select></label><button type="button" id="pricing-reset" class="text-button" data-i18n="reset">重置筛选</button><span id="pricing-result-count" aria-live="polite"></span></div>
+      </section>
+      <div id="pricing-list" aria-busy="false"><!-- pricing:start --><div class="loading-state" data-i18n="pricingLoading">正在读取计费方案…</div><!-- pricing:end --></div>
     </section>
     <section id="sources-view" hidden aria-labelledby="sources-title"><div class="sources-heading"><div><h2 id="sources-title"><span data-i18n="sourcesTitle">信息源</span></h2><p class="coverage-summary"><strong id="coverage-status" data-i18n="loading">正在加载</strong><span id="coverage-description"></span></p></div><label class="search"><input id="source-search" type="search" data-i18n-placeholder="sourceSearchPlaceholder" placeholder="搜索对象或信息源" data-i18n-aria-label="sourceSearchLabel" aria-label="搜索信息源"></label></div><p><a href="./data/subscriptions.opml" download class="text-button"><span data-i18n="download">下载全部订阅 OPML</span> ↗</a></p><div id="platform-notes" class="platform-notes"></div><div id="source-list" class="source-grid"></div></section>
   </main>

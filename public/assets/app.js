@@ -2,6 +2,7 @@ import {createEventRenderer,escape,safeURL} from './render.js';
 import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventTime,followingObjects} from './model.js';
 import {resolveLanguage,translate,LABELS,eventContent,coverageNote} from './i18n.js';
 import {createPrivacyPreferences,initCookieControls} from './privacy.js';
+import {createPricingView} from './pricing.js';
 const preferences=createPrivacyPreferences();
 const showSources=new URLSearchParams(location.search).get('showSources')==='1';
 let language=resolveLanguage(location.search,preferences.language());
@@ -11,6 +12,7 @@ const name=record=>language==='en' ? record.name_en || record.name : record.name
 const labels=()=>LABELS[language];
 const failure=(key,values)=>Object.assign(new Error(key),{key,values});
 const $ = id => document.getElementById(id);
+const pricingView=createPricingView(()=>language);
 const formatDate = value => {const d = dateKey(value);return d ? d.replaceAll('-','.') : t('dateUnknown');};
 const eventTime = event => formatEventTime(event.published_at,event.date_precision,language);
 const state = {expanded:new Set(),catalog:null,index:null,coverage:null,events:new Map(),loaded:new Set(),filters:{category:'all',entity:'',kind:'',query:'',from:daysAgo(6),to:daysAgo(0)},visible:18,request:0,view:'feed',detailId:null,error:null,ready:false,unavailable:false};
@@ -80,8 +82,10 @@ function resetFilters() {
 }
 function switchView(view) {
   if(view==='sources'&&!showSources) return;
-  state.view=view;$('feed-view').hidden=view!=='feed';$('sources-view').hidden=view!=='sources';
-  for(const [id,name] of [['feed-nav','feed'],['sources-nav','sources']]){$(id).classList.toggle('selected',view===name);if(view===name)$(id).setAttribute('aria-current','page');else $(id).removeAttribute('aria-current');}
+  state.view=view;$('feed-view').hidden=view!=='feed';$('sources-view').hidden=view!=='sources';$('pricing-view').hidden=view!=='pricing';
+  const url=new URL(location.href);url.hash=view==='pricing'?'pricing':view==='sources'?'sources':'';history.replaceState(null,'',url);
+  for(const [id,name] of [['feed-nav','feed'],['pricing-nav','pricing'],['sources-nav','sources']]){$(id).classList.toggle('selected',view===name);if(view===name)$(id).setAttribute('aria-current','page');else $(id).removeAttribute('aria-current');}
+  if(view==='pricing') pricingView.load();
   if(view==='sources') renderSources();
 }
 function sourceStatus(info) {
@@ -129,6 +133,7 @@ function applyLanguage() {
   document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===language)));
   document.querySelectorAll('.brand-name').forEach(el=>el.textContent=language==='en'?'AI Brief':'AI 简报');
   cookieControls.refresh();
+  if(state.view==='pricing') pricingView.render();
   if(state.error && !$('error-box').hidden) error(state.error);
   if(state.unavailable){$('snapshot-time').textContent=t('unavailable');$('feed-list').textContent=t('retry');}
 }
@@ -157,6 +162,8 @@ function bind() {
   document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.language)));
   $('event-dialog').addEventListener('close',()=>{state.detailId=null;});
   $('feed-nav').addEventListener('click',()=>switchView('feed'));$('sources-nav').addEventListener('click',()=>switchView('sources'));
+  $('pricing-nav').addEventListener('click',()=>switchView('pricing'));
+  window.addEventListener('hashchange',()=>switchView(location.hash==='#pricing'?'pricing':location.hash==='#sources'&&showSources&&state.ready?'sources':'feed'));
   $('filter-reset').addEventListener('click',resetFilters);
   document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{state.filters.category=button.dataset.category;state.filters.entity='';document.querySelectorAll('[data-category]').forEach(b=>{b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button));});fillEntities();state.visible=18;refreshFeed();}));
   $('entity-filter').addEventListener('click',e=>{const button=e.target.closest('[data-entity]');if(!button)return;state.filters.entity=button.dataset.entity;$('entity-filter').querySelectorAll('[data-entity]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));state.visible=18;refreshFeed();});
@@ -171,10 +178,11 @@ function bind() {
   document.addEventListener('click',e=>{const button=e.target.closest('[data-detail]');if(button) detail(button.dataset.detail);});
   $('dialog-close').addEventListener('click',()=>$('event-dialog').close());
   $('event-dialog').addEventListener('click',e=>{if(e.target===$('event-dialog')){const r=$('event-dialog').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('event-dialog').close();}});
-  document.addEventListener('keydown',e=>{if(e.key==='/'&&!document.querySelector('dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();switchView('feed');$('search-input').focus();}});
+  document.addEventListener('keydown',e=>{if(e.key==='/'&&!document.querySelector('dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();if(state.view==='pricing')$('pricing-search').focus();else{switchView('feed');$('search-input').focus();}}});
 }
 async function init() {
   bind();applyLanguage();$('date-from').value=state.filters.from;$('date-to').value=state.filters.to;
+  if(location.hash==='#pricing') switchView('pricing');
   for(let attempt=0;attempt<2;attempt++){
     try {
       const suffix=attempt?`?refresh=${Date.now()}`:'';

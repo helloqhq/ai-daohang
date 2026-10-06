@@ -107,7 +107,6 @@ export function createPricingView(getLanguage) {
     const plans=filterPlans(data.plans,filters);
     $('pricing-list').innerHTML=renderPricing(plans,getLanguage());
     $('pricing-result-count').textContent=t('pricingResults',{count:plans.length});
-    $('pricing-snapshot').textContent=t('pricingSnapshot',{date:data.checked_at,providers:new Set(data.plans.map(plan=>plan.provider)).size,count:data.plans.length});
     for(const button of document.querySelectorAll('[data-pricing-category]')) {
       const selected=button.dataset.pricingCategory===filters.category;
       button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));

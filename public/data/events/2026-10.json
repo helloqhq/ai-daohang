@@ -1,7 +1,515 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "08eb3db5eb0767dc",
+  "snapshot_id": "653a86b5e1dfd946",
   "events": [
+    {
+      "id": "tibo-x-2107368734981517634",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Tibo：使用 ChatGPT 账号登录的用户可免费使用 Auto-review",
+      "title_en": "Tibo says Auto-review is free for users signed in with ChatGPT",
+      "summary_zh": "Tibo 表示，Auto-review 已向所有通过 ChatGPT 账号登录的用户免费开放，且不消耗套餐用量。该功能可在设置的权限选项中开启，由第二个 agent 审查主 agent 的操作，以拦截高风险或偏离用户意图的行为。",
+      "summary_en": "Tibo says Auto-review is now free for all users signed in through a ChatGPT account and does not consume plan usage. It can be enabled in permission settings; a second agent reviews the primary agent’s actions to prevent high-risk actions or actions that diverge from user intent.",
+      "key_points_zh": [
+        "设置入口为 settings > permissions > auto-review。",
+        "据 Tibo 说明，审查功能免费且不占用套餐额度；这不意味着主任务的模型用量免费。"
+      ],
+      "key_points_en": [
+        "Enable it under settings > permissions > auto-review.",
+        "According to Tibo, the review feature is free and does not draw from plan usage; this does not make the primary task’s model usage free."
+      ],
+      "importance_reason_zh": "影响长任务的权限审查方式及审查功能的用量成本。",
+      "importance_reason_en": "Changes permission review for long tasks and the usage cost of the review feature.",
+      "published_at": "2026-10-06T07:13:54+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:43:43+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2107368734981517634",
+          "url": "https://x.com/thsottiaux/status/2107368734981517634",
+          "collected_at": "2026-10-06T13:43:43+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-06T07:13:54+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21291",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.291：修复云会话权限答复丢失与退出时消息丢失",
+      "title_en": "Claude Code 2.1.291 fixes lost permission answers and session messages",
+      "summary_zh": "Claude Code 2.1.291 修复两项回归：2.1.290 的云会话可能丢弃权限提示答复，以及 2.1.288 中退出时会话最后的消息可能丢失。",
+      "summary_en": "Claude Code 2.1.291 fixes two regressions: cloud sessions could drop permission-prompt answers in 2.1.290, and the last session messages could be lost on quitting in 2.1.288.",
+      "key_points_zh": [
+        "恢复云会话中权限提示答复的可靠传递。",
+        "修复退出时最后消息的保存问题。"
+      ],
+      "key_points_en": [
+        "Restores reliable delivery of permission-prompt answers in cloud sessions.",
+        "Fixes preservation of the final messages when quitting."
+      ],
+      "importance_reason_zh": "两项回归会影响授权流程和会话内容保存。",
+      "importance_reason_en": "Both regressions affect authorization and preservation of session content.",
+      "published_at": "2026-10-06T04:05:26+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:42:35+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-291",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-291",
+          "collected_at": "2026-10-06T13:42:35+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-06T04:05:26+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21290",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.290：强化权限检查，修复后台任务与长会话恢复",
+      "title_en": "Claude Code 2.1.290 strengthens permission checks and background-task recovery",
+      "summary_zh": "Claude Code 2.1.290 扩展 Mods 与插件 hook 信息，并修复多项权限规则、读取边界和组织插件检查问题。后台定时任务、长会话及代理网关兼容性也有修复；WebFetch 对超过 100,000 字符的正文会提示未读取部分并支持 offset 续读。",
+      "summary_en": "Claude Code 2.1.290 expands information available to Mods and plugin hooks and fixes multiple permission-rule, read-boundary and organization-plugin checks. It also repairs background scheduling, long-session recovery and proxy/gateway compatibility; WebFetch reports unread text beyond 100,000 characters and supports continuing with an offset.",
+      "key_points_zh": [
+        "修复符号链接、图片读取和 PreToolUse 改写输入后部分权限检查未生效的问题。",
+        "修复定时任务在压缩或后台切换后未恢复，以及恢复、重启或 fork 时额外执行的问题；压缩恢复修复适用于本版起创建的压缩。",
+        "tool.check 增加 agentId，Mods hook 可读取组织要求的审批 ceiling；turn.step 提供 serverToolUses。"
+      ],
+      "key_points_en": [
+        "Fixes missed permission checks involving symlinks, image reads and inputs rewritten by PreToolUse.",
+        "Fixes scheduled tasks failing to recover after compaction or background handoff and extra runs on resume, respawn or fork; the compaction recovery fix covers compactions made from this version onward.",
+        "tool.check adds agentId, Mods hooks expose the organization’s approval ceiling, and turn.step exposes serverToolUses."
+      ],
+      "importance_reason_zh": "涉及权限边界、后台任务可靠性和插件兼容性的重要更新。",
+      "importance_reason_en": "Affects permission boundaries, background-task reliability and plugin compatibility.",
+      "published_at": "2026-10-05T23:53:37+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:42:35+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-290",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-290",
+          "collected_at": "2026-10-06T13:42:35+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-05T23:53:37+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "pi-v104",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Pi 1.0.4：工具通配符与单次禁用 MCP，修复图像与 OAuth 支持",
+      "title_en": "Pi 1.0.4 adds tool patterns and per-run MCP disabling, fixes images and OAuth",
+      "summary_zh": "Pi 1.0.4 让 --tools 与 --exclude-tools 支持 * 通配符，新增 --no-mcp 单次关闭 MCP，并修复 --tools 意外移除 MCP 工具的问题。Codemode 可通过 tools.read() 获取图像块；采用 OpenID Connect 客户端注册的 MCP 服务也有 OAuth 兼容修复。",
+      "summary_en": "Pi 1.0.4 adds * patterns to --tools and --exclude-tools and --no-mcp to disable MCP for one run, while fixing --tools unexpectedly removing MCP tools. Codemode can obtain image blocks with tools.read(), and MCP OAuth compatibility is fixed for servers using OpenID Connect client registration.",
+      "key_points_zh": [
+        "--tools 默认保留 MCP 工具，除非某个筛选项以 mcp__ 开头。",
+        "读取图片会返回可由 image() 展示的图像块。",
+        "MCP OAuth 注册改为原生客户端；修复连接尚未完成时退出导致 transport 残留的问题。"
+      ],
+      "key_points_en": [
+        "--tools retains MCP tools unless an entry starts with mcp__.",
+        "Reading an image returns an image block that image() can display.",
+        "MCP OAuth registers as a native client; shutdown fixes prevent transports remaining open while connection is still pending."
+      ],
+      "importance_reason_zh": "改善工具权限选择、图像处理和 MCP 身份认证兼容性。",
+      "importance_reason_en": "Improves tool selection, image handling and MCP authentication compatibility.",
+      "published_at": "2026-10-05T22:03:50Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:42:30+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.0.4",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.0.4",
+          "collected_at": "2026-10-06T13:42:30+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-05T22:03:50Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "tibo-x-2107200530477101461",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Tibo 谈 ChatGPT 协作 Space：正在每天快速改进",
+      "title_en": "Tibo says collaborative Space in ChatGPT is improving rapidly each day",
+      "summary_zh": "Tibo 表示 Sergio 正在改进 ChatGPT 中的协作 Space，并称其每天都在大幅进步。原帖没有列出具体功能、上线时间或套餐范围。",
+      "summary_en": "Tibo says Sergio is improving collaborative Space inside ChatGPT and describes rapid progress each day. The post does not identify specific features, release timing or plan availability.",
+      "key_points_zh": [
+        "这是负责人对产品进展的直接表述。",
+        "原帖未提供可单独确认的新功能清单。"
+      ],
+      "key_points_en": [
+        "This is a product lead’s direct statement about product progress.",
+        "The post does not provide a list of independently confirmable new features."
+      ],
+      "importance_reason_zh": "保留已核实负责人对关注产品的一手进展说明。",
+      "importance_reason_en": "Preserves first-hand product-progress commentary from a verified lead.",
+      "published_at": "2026-10-05T20:05:31+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:43:43+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2107200530477101461",
+          "url": "https://x.com/thsottiaux/status/2107200530477101461",
+          "collected_at": "2026-10-06T13:43:43+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-05T20:05:31+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1092",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.92：整合配置与环境选择，改善沙箱及长会话",
+      "title_en": "Copilot CLI 1.0.92 brings configuration and environment selection, improves sandboxing",
+      "summary_zh": "Copilot CLI 1.0.92 的稳定版说明整合配置子命令、对话前本地／云环境选择及一系列沙箱、MCP 和长会话修复。后台 agent 可在运行中接收消息调整当前任务，Canvas action 也可向模型返回图像。",
+      "summary_en": "Copilot CLI 1.0.92’s stable release notes combine configuration subcommands, local/cloud environment selection before a conversation, and sandbox, MCP and long-session fixes. Messages can steer a running background agent’s active turn, and Canvas actions can return images to the model.",
+      "key_points_zh": [
+        "新增 copilot config 的列出、读取、设置与删除操作，以及对话前 Ctrl+E 环境选择器。",
+        "沙箱 shell 默认不传递环境中的 GITHUB_TOKEN，除非显式配置；长上下文恢复保留最新请求。",
+        "修复 Entra MCP 静默续期、OAuth 重新认证后工具继续使用和远程会话恢复认证。"
+      ],
+      "key_points_en": [
+        "Adds copilot config operations to list, read, set and remove settings, plus a pre-conversation Ctrl+E environment picker.",
+        "Sandboxed shells withhold ambient GITHUB_TOKEN unless explicitly configured; context recovery retains the latest requests.",
+        "Fixes silent renewal for Entra MCP, continued tool use after OAuth reauthentication and authentication on remote-session resume."
+      ],
+      "importance_reason_zh": "稳定版确认重要权限、工作流与会话可靠性变化。",
+      "importance_reason_en": "The stable release confirms significant permission, workflow and session-reliability changes.",
+      "published_at": "2026-10-05T19:42:08Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:42:30+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.92",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.92",
+          "collected_at": "2026-10-06T13:42:30+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-05T19:42:08Z",
+          "date_kind": "updated"
+        }
+      ],
+      "related_event_ids": [
+        "copilot-cli-1092-4",
+        "copilot-cli-1092-pre3"
+      ]
+    },
+    {
+      "id": "codex-01601",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Codex 0.160.1：保留远程 Windows MCP 执行环境变量",
+      "title_en": "Codex 0.160.1 preserves remote Windows MCP environment variables",
+      "summary_zh": "Codex 0.160.1 修复 Unix 主机启动远程 stdio MCP 服务时的环境变量传递：即使显式配置远程环境变量，也会保留 Windows 执行器需要的 SYSTEMROOT、TEMP 和 TMP。",
+      "summary_en": "Codex 0.160.1 fixes environment forwarding when Unix hosts launch remote stdio MCP servers: SYSTEMROOT, TEMP and TMP needed by the Windows executor are preserved even when remote environment variables are explicitly configured.",
+      "key_points_zh": [
+        "修复针对 Unix 主机与 Windows 远程执行器组合。",
+        "该变更回移植到 0.160 系列。"
+      ],
+      "key_points_en": [
+        "The fix targets Unix hosts paired with Windows remote executors.",
+        "The change is backported to the 0.160 series."
+      ],
+      "importance_reason_zh": "修复跨系统远程 MCP 启动所需的环境兼容性。",
+      "importance_reason_en": "Fixes environment compatibility required for cross-platform remote MCP startup.",
+      "published_at": "2026-10-05T18:31:33Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:42:29+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
+          "collected_at": "2026-10-06T13:42:29+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-05T18:31:33Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "tibo-x-2107158998495748264",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Tibo：ChatGPT 订阅中的 Astra 与 GPT-6.1 Sol 默认速度提高约 50%",
+      "title_en": "Tibo says Astra and GPT-6.1 Sol default speed increased about 50% on subscriptions",
+      "summary_zh": "Tibo 表示，GPT-6 Astra 与 GPT-6.1 Sol 通过订阅使用时的默认速度已优化约 50%，覆盖 OpenAI 产品及使用 Sign in with ChatGPT 的合作产品，如 OpenCode、Pi、Amp 和 Devin。用户无需更改设置；他在原帖中预计两小时内可感受到变化。",
+      "summary_en": "Tibo says default speed for GPT-6 Astra and GPT-6.1 Sol on subscriptions has been optimized by about 50%, across OpenAI products and partners using Sign in with ChatGPT, including OpenCode, Pi, Amp and Devin. Users need no setting changes; he expected the improvement to be felt within two hours of the post.",
+      "key_points_zh": [
+        "该表述针对订阅及 Sign in with ChatGPT 接入，没有说明 API Key 调用也获得相同提速。",
+        "约 50% 是 Tibo 的表述，原帖没有提供基准测试方法。"
+      ],
+      "key_points_en": [
+        "The statement covers subscription and Sign in with ChatGPT access, without confirming the same speedup for API-key calls.",
+        "About 50% is Tibo’s claim; the post provides no benchmark methodology."
+      ],
+      "importance_reason_zh": "负责人对实际模型服务速度和合作产品范围的一手说明。",
+      "importance_reason_en": "First-hand information from a product lead about serving speed and partner coverage.",
+      "published_at": "2026-10-05T17:20:29+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:43:43+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2107158998495748264",
+          "url": "https://x.com/thsottiaux/status/2107158998495748264",
+          "collected_at": "2026-10-06T13:43:43+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-05T17:20:29+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "openai-eu-text-provenance-20261005",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "availability",
+        "feature"
+      ],
+      "title_zh": "OpenAI 扩展文本水印：API 可选开启，欧盟 ChatGPT 与 Codex 将逐步应用",
+      "title_en": "OpenAI expands text watermarking: API opt-in now, EU ChatGPT and Codex to follow",
+      "summary_zh": "OpenAI 表示将内容溯源扩展到文本。全球 API 客户可为部分模型开启文本水印；欧盟 ChatGPT 与 Codex 的适用文本将在未来几周逐步应用水印，以响应欧盟监管要求。官方同时强调当前文本水印技术存在明显局限。",
+      "summary_en": "OpenAI says it is expanding content provenance to text. API customers worldwide can opt into text watermarking for select models today; eligible text in ChatGPT and Codex in the EU will start receiving watermarks over the coming weeks in response to EU regulatory requirements. OpenAI also acknowledges significant limitations of current text-watermarking technology.",
+      "key_points_zh": [
+        "API 为部分模型提供可选水印；不表示所有模型或所有文本均支持。",
+        "欧盟 ChatGPT 与 Codex 的应用仍是未来几周的计划，不能视为已全部上线。",
+        "依据为官方 RSS 摘要与 X 公告，没有把水印描述为可靠识别所有 AI 文本的方法。"
+      ],
+      "key_points_en": [
+        "API watermarking is opt-in for select models, rather than covering every model or text.",
+        "EU ChatGPT and Codex deployment is planned for the coming weeks and is not described as fully live.",
+        "Evidence consists of the official RSS summary and X announcement; watermarking is not presented as reliable detection of all AI text."
+      ],
+      "importance_reason_zh": "涉及 API 选项及 ChatGPT、Codex 输出溯源的重要可用性变化。",
+      "importance_reason_en": "A significant availability change for API options and output provenance in ChatGPT and Codex.",
+      "published_at": "2026-10-05T15:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:42:28+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/eu-text-provenance",
+          "url": "https://openai.com/index/eu-text-provenance",
+          "collected_at": "2026-10-06T13:42:28+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-05T15:00:00+00:00",
+          "date_kind": "published"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2107164650249101695",
+          "url": "https://x.com/OpenAI/status/2107164650249101695",
+          "collected_at": "2026-10-06T13:43:42+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-05T17:42:56+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1092-5",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.92-5：完善 Entra 账号选择、退出与 MCP 续期",
+      "title_en": "Copilot CLI 1.0.92-5 improves Entra account selection, sign-out and MCP renewal",
+      "summary_zh": "Copilot CLI 1.0.92-5 改进 Microsoft Entra 登录后的账号选择，使 /logout 能退出相应 OAuth 会话，并修复仅持有 access token 的 Entra MCP 凭据静默续期。",
+      "summary_en": "Copilot CLI 1.0.92-5 improves account selection after Microsoft Entra sign-in, lets /logout sign out those OAuth sessions, and fixes silent renewal of access-token-only credentials for Entra-protected MCP servers.",
+      "key_points_zh": [
+        "登录后可选择使用的 Microsoft Entra 账号。",
+        "/logout 覆盖对应 OAuth 会话；access-token-only MCP 凭据可静默续期。"
+      ],
+      "key_points_en": [
+        "Choose the Microsoft Entra account after sign-in.",
+        "/logout covers the corresponding OAuth sessions, and access-token-only MCP credentials can renew silently."
+      ],
+      "importance_reason_zh": "影响企业身份认证和 MCP 连接连续性。",
+      "importance_reason_en": "Affects enterprise authentication and continuity of MCP connections.",
+      "published_at": "2026-10-05T14:04:54Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:42:30+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-5",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-5",
+          "collected_at": "2026-10-06T13:42:30+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-05T14:04:54Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "openai-chatgpt-ads-format-20261005",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "OpenAI 公告 ChatGPT 新视觉广告格式及测量工具扩展",
+      "title_en": "OpenAI announces a new visual ad format and expanded measurement for ChatGPT",
+      "summary_zh": "OpenAI 官方 RSS 摘要宣布 ChatGPT 的新视觉广告格式，并提到测量工具、归因合作和广告主品牌适配能力的扩展。当前取得的是摘要，未提供具体投放地域、价格或适用套餐。",
+      "summary_en": "OpenAI’s official RSS summary announces a new visual ad format in ChatGPT and expanded measurement tools, attribution partnerships and brand suitability for advertisers. The available summary does not specify rollout regions, pricing or eligible plans.",
+      "key_points_zh": [
+        "新格式面向 ChatGPT 广告。",
+        "测量、归因合作与品牌适配是官方摘要明确列出的扩展方向。"
+      ],
+      "key_points_en": [
+        "The new format is for ads in ChatGPT.",
+        "Measurement, attribution partnerships and brand suitability are the expansion areas explicitly listed in the official summary."
+      ],
+      "importance_reason_zh": "涉及 ChatGPT 平台广告格式与广告工具能力的变化。",
+      "importance_reason_en": "A change to ChatGPT’s advertising format and advertising-tool capabilities.",
+      "published_at": "2026-10-05T10:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:42:28+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+          "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+          "collected_at": "2026-10-06T13:42:28+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-05T10:00:00+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "pi-v103",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Pi 1.0.3：接入 Azure Foundry Chat Completions，Azure 配置需迁移",
+      "title_en": "Pi 1.0.3 adds Azure Foundry Chat Completions and requires Azure config migration",
+      "summary_zh": "Pi 1.0.3 的 Azure provider 新增 Foundry Chat Completions 部署支持，首个模型为 azure/deepseek-v4-pro。provider 从 azure-openai-responses 更名为 azure，现有登录与模型配置需迁移；此外修复 OAuth 刷新期间取消请求导致订阅登录失效的问题。",
+      "summary_en": "Pi 1.0.3 adds Foundry Chat Completions deployments to its Azure provider, starting with azure/deepseek-v4-pro. The provider is renamed from azure-openai-responses to azure, requiring migration of authentication and model settings. It also fixes subscription logins failing when a request is cancelled during OAuth refresh.",
+      "key_points_zh": [
+        "更新 auth.json、models.json 和 settings.json 中的 provider 名称，或重新执行 /login；AZURE_OPENAI_* 环境变量不变。",
+        "使用旧 provider 的会话恢复时会退回其他模型，且不会复用原 prompt cache。",
+        "Codemode image() 同时把图像写入临时文件并返回路径，生成文件仅当前用户可读。"
+      ],
+      "key_points_en": [
+        "Rename the provider in auth.json, models.json and settings.json, or run /login again; AZURE_OPENAI_* environment variables are unchanged.",
+        "Resumed sessions using the old provider fall back to another model without reusing their previous prompt cache.",
+        "Codemode image() also writes images to temporary files and returns their paths; generated output files are readable only by the user."
+      ],
+      "importance_reason_zh": "包含需要用户迁移配置的破坏性变更和新的模型部署接入。",
+      "importance_reason_en": "Includes a breaking configuration migration and a new deployment integration.",
+      "published_at": "2026-10-05T08:38:23Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T13:42:30+00:00",
+      "updated_at": "2026-10-06T13:49:11+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.0.3",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.0.3",
+          "collected_at": "2026-10-06T13:42:30+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-05T08:38:23Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
     {
       "id": "elon-musk-x-2106906678293606496",
       "entity_ids": [

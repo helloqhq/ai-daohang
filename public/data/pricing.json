@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-05",
+  "checked_at": "2026-10-06",
   "plans": [
     {
       "id": "gpt-6-astra",
@@ -18,11 +18,11 @@
       },
       "scope_zh": "Standard · 短上下文",
       "scope_en": "Standard · short context",
-      "note_zh": "展示官方短上下文标准价。长上下文、Fast、地域处理与工具调用另有费率，详见官方表格。",
-      "note_en": "Standard short-context rates. Long context, Fast, regional processing and tools have separate rates; see the official table.",
+      "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $20、输出 $75、缓存读取 $2、写入 $25。Batch / Flex 为 Standard 的 50%，Fast 为 2 倍；适用地域处理端点加价 10%，工具另计。 Astra Ultrafast 为对应 Standard 的 6 倍；短上下文输入 $60、输出 $300、缓存读取 $6、写入 $75。",
+      "note_en": "Standard short-context rates. Long context per million tokens: input $20, output $75, cache reads $2, writes $25. Batch / Flex costs 50% of Standard and Fast costs 2×. Eligible regional-processing endpoints add 10%; tools bill separately. Astra Ultrafast costs 6× the applicable Standard rate: short-context input $60, output $300, cache reads $6 and writes $75.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05"
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06"
     },
     {
       "id": "gpt-6-1-sol",
@@ -40,11 +40,11 @@
       },
       "scope_zh": "Standard · 短上下文",
       "scope_en": "Standard · short context",
-      "note_zh": "展示官方短上下文标准价。长上下文、Fast、地域处理与工具调用另有费率，详见官方表格。",
-      "note_en": "Standard short-context rates. Long context, Fast, regional processing and tools have separate rates; see the official table.",
+      "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $4、输出 $15、缓存读取 $0.20、写入 $5。Batch / Flex 为 Standard 的 50%，Fast 为 2 倍；适用地域处理端点加价 10%，工具另计。",
+      "note_en": "Standard short-context rates. Long context per million tokens: input $4, output $15, cache reads $0.20, writes $5. Batch / Flex costs 50% of Standard and Fast costs 2×. Eligible regional-processing endpoints add 10%; tools bill separately.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05"
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06"
     },
     {
       "id": "gpt-6-luna",
@@ -62,11 +62,11 @@
       },
       "scope_zh": "Standard · 短上下文",
       "scope_en": "Standard · short context",
-      "note_zh": "展示官方短上下文标准价。长上下文、Fast、地域处理与工具调用另有费率，详见官方表格。",
-      "note_en": "Standard short-context rates. Long context, Fast, regional processing and tools have separate rates; see the official table.",
+      "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $0.20、输出 $0.75、缓存读取 $0.02、写入 $0.25。Batch / Flex 为 Standard 的 50%，Fast 为 2 倍；适用地域处理端点加价 10%，工具另计。",
+      "note_en": "Standard short-context rates. Long context per million tokens: input $0.20, output $0.75, cache reads $0.02, writes $0.25. Batch / Flex costs 50% of Standard and Fast costs 2×. Eligible regional-processing endpoints add 10%; tools bill separately.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05"
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06"
     },
     {
       "id": "claude-fable-5-1",
@@ -87,7 +87,7 @@
       "note_zh": "缓存写入列为 5 分钟 TTL；1 小时写入、Batch 与工具费用请查官方说明。",
       "note_en": "Cache writes use a 5-minute TTL. See the source for 1-hour writes, Batch and tool charges.",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -109,7 +109,7 @@
       "note_zh": "缓存写入列为 5 分钟 TTL；1 小时写入、Batch 与工具费用请查官方说明。",
       "note_en": "Cache writes use a 5-minute TTL. See the source for 1-hour writes, Batch and tool charges.",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -131,7 +131,7 @@
       "note_zh": "缓存写入列为 5 分钟 TTL；1 小时写入、Batch 与工具费用请查官方说明。",
       "note_en": "Cache writes use a 5-minute TTL. See the source for 1-hour writes, Batch and tool charges.",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -153,7 +153,7 @@
       "note_zh": "缓存写入列为 5 分钟 TTL；1 小时写入、Batch 与工具费用请查官方说明。",
       "note_en": "Cache writes use a 5-minute TTL. See the source for 1-hour writes, Batch and tool charges.",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -175,7 +175,7 @@
       "note_zh": "活动截至 2026-12-31；之后输入 $1.50、输出 $7.50、缓存读取 $0.15 / 百万 tokens。输出含思考 tokens；缓存存储和搜索另计。",
       "note_en": "Until Dec 31, 2026; then input $1.50, output $7.50, cache reads $0.15 / million tokens. Output includes thinking; cache storage and search cost extra.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "valid_until": "2026-12-31"
     },
@@ -198,7 +198,7 @@
       "note_zh": "活动截至 2026-12-31；之后输入 $1.50、输出 $7.50、缓存读取 $0.15 / 百万 tokens。输出含思考 tokens；缓存存储和搜索另计。",
       "note_en": "Until Dec 31, 2026; then input $1.50, output $7.50, cache reads $0.15 / million tokens. Output includes thinking; cache storage and search cost extra.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "valid_until": "2026-12-31"
     },
@@ -221,7 +221,7 @@
       "note_zh": "输出含思考 tokens；缓存存储和搜索费用另计。",
       "note_en": "Output includes thinking tokens. Cache storage and search are billed separately.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -243,7 +243,7 @@
       "note_zh": "输出含思考 tokens；缓存存储和搜索费用另计。",
       "note_en": "Output includes thinking tokens. Cache storage and search are billed separately.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -262,11 +262,11 @@
       },
       "scope_zh": "高峰价 · deepseek-flash",
       "scope_en": "Peak rates · deepseek-flash",
-      "note_zh": "非高峰价为一半：输入 $0.15、输出 $0.60、缓存命中 $0.003 / 百万 tokens。时段及中国节假日规则以官方定价页为准。",
-      "note_en": "Off-peak rates are half: input $0.15, output $0.60, cache hits $0.003 / million tokens. See the source for peak hours and Chinese holiday rules.",
+      "note_zh": "非高峰每百万 tokens：输入 $0.15、输出 $0.60、缓存命中 $0.003。高峰为周一至周五北京时间 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间按非高峰计费。",
+      "note_en": "Off-peak per million tokens: input $0.15, output $0.60, cache hits $0.003. Peak hours are Monday–Friday, 09:00–12:00 and 14:00–18:00 Beijing time, excluding Chinese public holidays; all other hours are off-peak.",
       "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05"
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06"
     },
     {
       "id": "deepseek-v4-pro",
@@ -284,11 +284,11 @@
       },
       "scope_zh": "高峰价 · deepseek-v4-pro",
       "scope_en": "Peak rates · deepseek-v4-pro",
-      "note_zh": "非高峰价为一半。官方更新日志确认 V4 Pro 继续服务；不要把旧别名误记为新型号。",
-      "note_en": "Off-peak rates are half. The official changelog confirms V4 Pro remains available; legacy aliases are not new models.",
+      "note_zh": "对应 DeepSeek-V4-Pro-0813；非高峰每百万 tokens：输入 $0.66、输出 $1.98、缓存命中 $0.022。高峰为周一至周五北京时间 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间按非高峰计费。",
+      "note_en": "Serves DeepSeek-V4-Pro-0813. Off-peak per million tokens: input $0.66, output $1.98, cache hits $0.022. Peak hours are Monday–Friday, 09:00–12:00 and 14:00–18:00 Beijing time, excluding Chinese public holidays; all other hours are off-peak.",
       "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05"
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06"
     },
     {
       "id": "qwen-3-7-plus",
@@ -309,7 +309,7 @@
       "note_zh": "采用固定版本 qwen3.7-plus-2026-05-26 标价；超过 256K 为输入 $1.20、输出 $4.80。其他地域和滚动别名活动价请查官方。",
       "note_en": "Pinned qwen3.7-plus-2026-05-26 list rates. Above 256K: input $1.20, output $4.80. Other regions and rolling-alias promotions differ.",
       "source_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -331,7 +331,7 @@
       "note_zh": "国际站美元定价；缓存存储当前限时免费，国内智谱站和 Coding Plan 单独计费。",
       "note_en": "International USD rates. Cache storage is temporarily free; the mainland platform and Coding Plan use separate billing.",
       "source_url": "https://docs.z.ai/guides/overview/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -353,7 +353,7 @@
       "note_zh": "国际站美元定价；缓存存储当前限时免费，国内智谱站和 Coding Plan 单独计费。",
       "note_en": "International USD rates. Cache storage is temporarily free; the mainland platform and Coding Plan use separate billing.",
       "source_url": "https://docs.z.ai/guides/overview/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -375,7 +375,7 @@
       "note_zh": "国际站美元定价；缓存存储当前限时免费，国内智谱站和 Coding Plan 单独计费。",
       "note_en": "International USD rates. Cache storage is temporarily free; the mainland platform and Coding Plan use separate billing.",
       "source_url": "https://docs.z.ai/guides/overview/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -397,7 +397,7 @@
       "note_zh": "官方标为永久五折后的价格；输入超过 512K 时输入 $0.60、输出 $2.40、缓存读取 $0.12。Priority 为标准价的 1.5 倍。",
       "note_en": "Official permanent 50%-discount rates. Above 512K: input $0.60, output $2.40, cache reads $0.12. Priority costs 1.5× Standard.",
       "source_url": "https://platform.minimax.io/docs/pricing/overview",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -419,7 +419,7 @@
       "note_zh": "highspeed 版本输入 $0.60、输出 $2.40；缓存读取和写入同标准版本。",
       "note_en": "The highspeed variant charges $0.60 input and $2.40 output; cache read and write rates are unchanged.",
       "source_url": "https://platform.minimax.io/docs/pricing/overview",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -441,7 +441,7 @@
       "note_zh": "开放平台按量计费，与 Kimi 会员 / Kimi Code 订阅额度分开。",
       "note_en": "Open Platform pay-as-you-go billing is separate from Kimi membership and Kimi Code quotas.",
       "source_url": "https://platform.kimi.ai/",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -463,7 +463,7 @@
       "note_zh": "开放平台编程模型；会员 API Key 和开放平台 API Key 使用不同计费入口。",
       "note_en": "Open Platform coding model. Membership API keys and Open Platform API keys use different billing endpoints.",
       "source_url": "https://platform.kimi.ai/",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05"
     },
     {
@@ -482,7 +482,7 @@
       "note_zh": "订阅用量条按资源费率扣减；涵盖符合条件的文本、图像与语音模型，特殊模型有排除项。",
       "note_en": "Usage bar draws down at resource rates; includes eligible text, image and speech models, with exclusions for special models.",
       "source_url": "https://platform.minimax.io/docs/token-plan/intro",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
@@ -496,7 +496,7 @@
       "models_source_urls": [
         "https://platform.minimax.io/docs/token-plan/intro"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "minimax-plan-max",
@@ -514,7 +514,7 @@
       "note_zh": "订阅用量条按资源费率扣减；涵盖符合条件的文本、图像与语音模型，特殊模型有排除项。",
       "note_en": "Usage bar draws down at resource rates; includes eligible text, image and speech models, with exclusions for special models.",
       "source_url": "https://platform.minimax.io/docs/token-plan/intro",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
@@ -528,7 +528,7 @@
       "models_source_urls": [
         "https://platform.minimax.io/docs/token-plan/intro"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "minimax-plan-ultra",
@@ -546,7 +546,7 @@
       "note_zh": "订阅用量条按资源费率扣减；涵盖符合条件的文本、图像与语音模型，特殊模型有排除项。",
       "note_en": "Usage bar draws down at resource rates; includes eligible text, image and speech models, with exclusions for special models.",
       "source_url": "https://platform.minimax.io/docs/token-plan/intro",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
@@ -560,7 +560,7 @@
       "models_source_urls": [
         "https://platform.minimax.io/docs/token-plan/intro"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "glm-plan-lite",
@@ -578,7 +578,7 @@
       "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits；2026-09-25 至 10-07 全天按半价扣除。",
       "note_en": "Official credits retained; full tier checkout prices remain unconfirmed. Credits are not tokens. Off-peak usage consumes half the standard credits; Sep 25–Oct 7, 2026 applies this all day.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
@@ -592,7 +592,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "glm-plan-pro",
@@ -610,7 +610,7 @@
       "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits；2026-09-25 至 10-07 全天按半价扣除。",
       "note_en": "Official credits retained; full tier checkout prices remain unconfirmed. Credits are not tokens. Off-peak usage consumes half the standard credits; Sep 25–Oct 7, 2026 applies this all day.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
@@ -624,7 +624,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "glm-plan-max",
@@ -642,7 +642,7 @@
       "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits；2026-09-25 至 10-07 全天按半价扣除。",
       "note_en": "Official credits retained; full tier checkout prices remain unconfirmed. Credits are not tokens. Off-peak usage consumes half the standard credits; Sep 25–Oct 7, 2026 applies this all day.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
@@ -656,7 +656,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kimi-plan-andante",
@@ -674,7 +674,7 @@
       "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。",
       "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -687,7 +687,7 @@
       "models_source_urls": [
         "https://www.kimi.com/code/docs/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kimi-plan-moderato",
@@ -705,7 +705,7 @@
       "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。",
       "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -719,7 +719,7 @@
       "models_source_urls": [
         "https://www.kimi.com/code/docs/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kimi-plan-allegretto",
@@ -737,7 +737,7 @@
       "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。",
       "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -753,7 +753,7 @@
       "models_source_urls": [
         "https://www.kimi.com/code/docs/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kimi-plan-allegro",
@@ -771,7 +771,7 @@
       "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。",
       "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -787,7 +787,7 @@
       "models_source_urls": [
         "https://www.kimi.com/code/docs/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "codex-plus",
@@ -805,7 +805,7 @@
       "note_zh": "订阅额度随模型和任务消耗；使用 API Key 时按 API 单独计费。",
       "note_en": "Subscription quota depends on model and task. API-key usage is billed separately at API rates.",
       "source_url": "https://learn.chatgpt.com/docs/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "codex",
       "product_name": "Codex",
@@ -821,7 +821,7 @@
       "models_source_urls": [
         "https://learn.chatgpt.com/docs/pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "codex-pro-100",
@@ -836,11 +836,11 @@
       },
       "scope_zh": "Pro 用量 · 无 5 小时限额",
       "scope_en": "Pro usage · no five-hour limit",
-      "note_zh": "Pro 当前无 5 小时限额，仍受用量和模型额度限制；以用量面板为准。API 另计费。",
-      "note_en": "Pro currently has no five-hour limit; usage and model allowances still apply. Check the usage dashboard. API usage bills separately.",
+      "note_zh": "Pro 当前无 5 小时限额，仍受用量和模型额度限制；以用量面板为准。API 另计费。 官方当前说明 Pro 无五小时限制，但仍有模型额度和重置时间，以用量面板为准。",
+      "note_en": "Pro currently has no five-hour limit; usage and model allowances still apply. Check the usage dashboard. API usage bills separately. Current official docs state that Pro has no five-hour limit; model allowances and reset times still apply, as shown in the usage dashboard.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "codex",
       "product_name": "Codex",
       "tier_name": "Pro $100",
@@ -855,7 +855,7 @@
       "models_source_urls": [
         "https://learn.chatgpt.com/docs/pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "codex-pro-200",
@@ -870,11 +870,11 @@
       },
       "scope_zh": "高于 Pro $100 用量 · 可新订阅",
       "scope_en": "More usage than Pro $100 · sign-ups open",
-      "note_zh": "新订阅已恢复，采用较低的新额度。2026-09-22 至 09-29 太平洋时间上午 10 点曾有有效 Pro $200 的用户，在订阅有效期间可沿用旧额度至 2026-10-29，之后转为新额度。",
-      "note_en": "Sign-ups reopened with a lower allowance. Users active Sep 22–Sep 29, 2026 at 10 a.m. Pacific retain the previous allowance through Oct 29 while subscribed, then move to the new allowance.",
+      "note_zh": "新订阅已恢复，采用较低的新额度。2026-09-22 至 09-29 太平洋时间上午 10 点曾有有效 Pro $200 的用户，在订阅有效期间可沿用旧额度至 2026-10-29，之后转为新额度。 官方当前说明 Pro 无五小时限制，但仍有模型额度和重置时间，以用量面板为准。",
+      "note_en": "Sign-ups reopened with a lower allowance. Users active Sep 22–Sep 29, 2026 at 10 a.m. Pacific retain the previous allowance through Oct 29 while subscribed, then move to the new allowance. Current official docs state that Pro has no five-hour limit; model allowances and reset times still apply, as shown in the usage dashboard.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "codex",
       "product_name": "Codex",
       "tier_name": "Pro $200",
@@ -889,7 +889,7 @@
       "models_source_urls": [
         "https://learn.chatgpt.com/docs/pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "codex-pro-500",
@@ -904,11 +904,11 @@
       },
       "scope_zh": "最高 Pro 用量 · Astra Ultrafast",
       "scope_en": "Highest Pro usage · Astra Ultrafast",
-      "note_zh": "Pro 档位中仅 $500 包含 Astra Ultrafast；先用订阅额度，再扣 credits。API 另计费。",
-      "note_en": "Only Pro $500 includes Astra Ultrafast among Pro tiers; included usage is consumed before credits. API usage bills separately.",
+      "note_zh": "Pro 档位中仅 $500 包含 Astra Ultrafast；先用订阅额度，再扣 credits。API 另计费。 官方当前说明 Pro 无五小时限制，但仍有模型额度和重置时间，以用量面板为准。",
+      "note_en": "Only Pro $500 includes Astra Ultrafast among Pro tiers; included usage is consumed before credits. API usage bills separately. Current official docs state that Pro has no five-hour limit; model allowances and reset times still apply, as shown in the usage dashboard.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "codex",
       "product_name": "Codex",
       "tier_name": "Pro $500",
@@ -924,7 +924,7 @@
         "https://learn.chatgpt.com/docs/pricing",
         "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "claude-code-pro",
@@ -942,7 +942,7 @@
       "note_zh": "月付 $20；年付 $200。使用限额适用，API 消耗独立计费。",
       "note_en": "Monthly $20; annual $200. Usage limits apply; API usage is billed separately.",
       "source_url": "https://claude.com/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "claude-code",
       "product_name": "Claude Code",
@@ -960,7 +960,7 @@
         "https://code.claude.com/docs/en/model-config",
         "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "claude-code-max",
@@ -978,7 +978,7 @@
       "note_zh": "官方起价 $100/月；两个用量档位，具体结算价及用量规则以官网为准。",
       "note_en": "Official starting price $100/month, with two usage tiers. Check the source for checkout rates and limits.",
       "source_url": "https://claude.com/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "claude-code",
       "product_name": "Claude Code",
@@ -996,7 +996,7 @@
         "https://code.claude.com/docs/en/model-config",
         "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "cursor-pro",
@@ -1014,7 +1014,7 @@
       "note_zh": "含 Cursor Models 与 Other Models 两个用量池；第三方模型按 API 费率扣用量，超额可选按量付费。",
       "note_en": "Includes Cursor Models and Other Models pools; third-party usage is charged at API rates, with optional on-demand billing after limits.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "cursor",
       "product_name": "Cursor",
@@ -1039,7 +1039,7 @@
       "models_source_urls": [
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "cursor-proplus",
@@ -1057,7 +1057,7 @@
       "note_zh": "含 Cursor Models 与 Other Models 两个用量池；第三方模型按 API 费率扣用量，超额可选按量付费。",
       "note_en": "Includes Cursor Models and Other Models pools; third-party usage is charged at API rates, with optional on-demand billing after limits.",
       "source_url": "https://cursor.com/docs/models-and-pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "cursor",
       "product_name": "Cursor",
@@ -1082,7 +1082,7 @@
       "models_source_urls": [
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "cursor-ultra",
@@ -1100,7 +1100,7 @@
       "note_zh": "含 Cursor Models 与 Other Models 两个用量池；第三方模型按 API 费率扣用量，超额可选按量付费。",
       "note_en": "Includes Cursor Models and Other Models pools; third-party usage is charged at API rates, with optional on-demand billing after limits.",
       "source_url": "https://cursor.com/docs/models-and-pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "cursor",
       "product_name": "Cursor",
@@ -1125,7 +1125,7 @@
       "models_source_urls": [
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "cursor-teams",
@@ -1143,7 +1143,7 @@
       "note_zh": "每用户每月；含团队管理、用量分析与隐私模式。",
       "note_en": "Per user per month; includes team administration, usage analytics and privacy mode.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "cursor",
       "product_name": "Cursor",
@@ -1168,7 +1168,7 @@
       "models_source_urls": [
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "copilot-pro",
@@ -1186,7 +1186,7 @@
       "note_zh": "含 CLI、Agent 与代码审查；浮动额度可能变化，用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review; flex allowance can change. Additional paid usage can be budgeted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
@@ -1215,7 +1215,7 @@
       "models_source_urls": [
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "copilot-proplus",
@@ -1233,7 +1233,7 @@
       "note_zh": "含 CLI、Agent 与代码审查；浮动额度可能变化，用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review; flex allowance can change. Additional paid usage can be budgeted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
@@ -1274,7 +1274,7 @@
       "models_source_urls": [
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "copilot-max",
@@ -1292,7 +1292,7 @@
       "note_zh": "含 CLI、Agent 与代码审查；浮动额度可能变化，用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review; flex allowance can change. Additional paid usage can be budgeted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
@@ -1332,7 +1332,7 @@
       "models_source_urls": [
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "opencode-free",
@@ -1350,7 +1350,7 @@
       "note_zh": "Go 订阅可选，Zen 按量付费；第三方 API 或已有订阅按原厂商规则计费。",
       "note_en": "Go is optional; Zen bills by usage. External APIs and existing subscriptions follow provider terms.",
       "source_url": "https://opencode.ai/",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "opencode",
       "product_name": "OpenCode",
@@ -1367,7 +1367,7 @@
         "https://opencode.ai/docs/providers/",
         "https://opencode.ai/docs/zen/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "opencode-go",
@@ -1382,11 +1382,11 @@
       },
       "scope_zh": "各模型月额度 $15–$60；5 小时 20%，每周 50%",
       "scope_en": "Per-model monthly allowances $15–$60; 20% per 5 hours, 50% weekly",
-      "note_zh": "额度随模型变化，不可相加为通用余额；启用 Use balance 后超额扣 Zen 余额。",
-      "note_en": "Allowances vary by model and are not an additive wallet; Use balance charges Zen for overages.",
+      "note_zh": "各模型有独立的美元用量上限，五小时为月上限的 20%、每周为 50%。启用 Use balance 后超额转用 Zen 余额；请求数为官方估算，不能视为固定额度。 GLM-5.3-Flash 月用量上限 $60。 Kimi K3 月用量上限 $15。 MiniMax M3 月用量上限 $60。",
+      "note_en": "Each model has its own dollar-denominated allowance: 20% of its monthly limit per five hours and 50% per week. Enable Use balance to fall back to Zen credits; published request counts are estimates, not fixed quotas. GLM-5.3-Flash monthly allowance: $60. Kimi K3 monthly allowance: $15. MiniMax M3 monthly allowance: $60.",
       "source_url": "https://opencode.ai/docs/go/",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "opencode-go",
       "product_name": "OpenCode Go",
       "tier_name": "Go",
@@ -1420,14 +1420,14 @@
         "DeepSeek V4 Flash Vision Exp",
         "Hy4 preview",
         "Hy3",
-        "Space Bunny Free"
+        "Space Bunny"
       ],
-      "models_note_zh": "两档模型相同，限额不同；部分免费模型限时，Muse Spark 有地域限制。",
-      "models_note_en": "Same models, different limits; some free models are temporary and Muse Spark is region-restricted.",
+      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。Go 的 Space Bunny 与 Zen 的 Space Bunny Free 是不同入口。",
+      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. Go’s Space Bunny and Zen’s Space Bunny Free are distinct offerings.",
       "models_source_urls": [
         "https://opencode.ai/docs/go/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "opencode-go-plus",
@@ -1442,11 +1442,11 @@
       },
       "scope_zh": "各模型月额度 $60–$240；5 小时 20%，每周 50%",
       "scope_en": "Per-model monthly allowances $60–$240; 20% per 5 hours, 50% weekly",
-      "note_zh": "额度随模型变化，不可相加为通用余额；启用 Use balance 后超额扣 Zen 余额。",
-      "note_en": "Allowances vary by model and are not an additive wallet; Use balance charges Zen for overages.",
+      "note_zh": "各模型有独立的美元用量上限，五小时为月上限的 20%、每周为 50%。启用 Use balance 后超额转用 Zen 余额；请求数为官方估算，不能视为固定额度。 GLM-5.3-Flash 月用量上限 $180。 Kimi K3 月用量上限 $60。 MiniMax M3 月用量上限 $180。",
+      "note_en": "Each model has its own dollar-denominated allowance: 20% of its monthly limit per five hours and 50% per week. Enable Use balance to fall back to Zen credits; published request counts are estimates, not fixed quotas. GLM-5.3-Flash monthly allowance: $180. Kimi K3 monthly allowance: $60. MiniMax M3 monthly allowance: $180.",
       "source_url": "https://opencode.ai/docs/go/",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "opencode-go",
       "product_name": "OpenCode Go",
       "tier_name": "Go Plus",
@@ -1480,14 +1480,14 @@
         "DeepSeek V4 Flash Vision Exp",
         "Hy4 preview",
         "Hy3",
-        "Space Bunny Free"
+        "Space Bunny"
       ],
-      "models_note_zh": "两档模型相同，限额不同；部分免费模型限时，Muse Spark 有地域限制。",
-      "models_note_en": "Same models, different limits; some free models are temporary and Muse Spark is region-restricted.",
+      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。Go 的 Space Bunny 与 Zen 的 Space Bunny Free 是不同入口。",
+      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. Go’s Space Bunny and Zen’s Space Bunny Free are distinct offerings.",
       "models_source_urls": [
         "https://opencode.ai/docs/go/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "pi-free",
@@ -1505,7 +1505,7 @@
       "note_zh": "Pi 本体无订阅费；接入的 API、模型网关或付费账号另按其规则收费。",
       "note_en": "Pi has no client subscription; connected APIs, gateways or paid accounts bill separately.",
       "source_url": "https://pi.dev/",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "pi",
       "product_name": "Pi",
@@ -1524,7 +1524,7 @@
       "models_source_urls": [
         "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/providers.md"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "devin-free",
@@ -1542,7 +1542,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。免费档不含完整模型目录。",
       "note_en": "Windsurf became Devin Desktop. Free has limited models.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -1556,7 +1556,7 @@
         "https://docs.devin.ai/desktop/models",
         "https://cognition.com/blog/introducing-devin-desktop"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "devin-pro",
@@ -1574,7 +1574,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。",
       "note_en": "Windsurf became Devin Desktop. Extra usage is purchased at API rates.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -1592,7 +1592,7 @@
         "https://docs.devin.ai/desktop/models",
         "https://cognition.com/blog/introducing-devin-desktop"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "devin-max",
@@ -1610,7 +1610,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。",
       "note_en": "Windsurf became Devin Desktop. Extra usage is purchased at API rates.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -1628,7 +1628,7 @@
         "https://docs.devin.ai/desktop/models",
         "https://cognition.com/blog/introducing-devin-desktop"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "devin-teams",
@@ -1646,7 +1646,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。此处起价含 1 个完整开发席位。",
       "note_en": "Windsurf became Devin Desktop. Extra usage is purchased at API rates. Starting price includes one full developer seat.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -1664,7 +1664,7 @@
         "https://docs.devin.ai/desktop/models",
         "https://cognition.com/blog/introducing-devin-desktop"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "gemini-cli-free",
@@ -1673,30 +1673,30 @@
       "name": "Gemini CLI Free (Google account)",
       "currency": "USD",
       "billing": "free",
-      "status": "verified",
+      "status": "paused",
       "price": {
         "amount": 0
       },
-      "scope_zh": "Google 账号登录：1,000 次模型请求 / 用户 / 天",
-      "scope_en": "Google login: 1,000 model requests/user/day",
-      "note_zh": "个人 Google 账号入口；付费档展示美国美元常规价。API Key / Vertex AI 按各自规则另计费。",
-      "note_en": "Personal Google account access; paid price is the US list price. API-key / Vertex AI billing is separate.",
-      "source_url": "https://geminicli.com/docs/resources/quota-and-pricing/",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "scope_zh": "Google 个人账号登录权益已停止服务",
+      "scope_en": "Consumer Google-account login entitlement discontinued",
+      "note_zh": "Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
+      "note_en": "Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
+      "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "gemini-cli",
       "product_name": "Gemini CLI",
       "tier_name": "Free (Google account)",
       "supported_models": [
         "Gemini"
       ],
-      "models_note_zh": "CLI 自动路由 Gemini 系列；一次任务可消耗多次请求，订阅不包含 API 余额。",
-      "models_note_en": "CLI routes Gemini models; a task may use multiple requests. Subscriptions do not include API credit.",
+      "models_note_zh": "Gemini 为原 Google 个人登录入口的模型系列，非当前可用权益；不据旧额度表推荐购买 Pro / Ultra 来使用 Gemini CLI。",
+      "models_note_en": "Gemini is the model family of the former consumer Google-login access, not a current entitlement. The old quota table does not justify buying Pro / Ultra for Gemini CLI.",
       "models_source_urls": [
-        "https://geminicli.com/docs/resources/quota-and-pricing/",
-        "https://geminicli.com/plans/"
+        "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+        "https://geminicli.com/docs/resources/quota-and-pricing/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "gemini-cli-pro",
@@ -1705,30 +1705,30 @@
       "name": "Gemini CLI Google AI Pro",
       "currency": "USD",
       "billing": "monthly",
-      "status": "verified",
+      "status": "paused",
       "price": {
         "amount": 19.99
       },
-      "scope_zh": "1,500 次模型请求 / 用户 / 天",
-      "scope_en": "1,500 model requests/user/day",
-      "note_zh": "个人 Google 账号入口；付费档展示美国美元常规价。API Key / Vertex AI 按各自规则另计费。",
-      "note_en": "Personal Google account access; paid price is the US list price. API-key / Vertex AI billing is separate.",
+      "scope_zh": "Google 个人账号登录权益已停止服务",
+      "scope_en": "Consumer Google-account login entitlement discontinued",
+      "note_zh": "展示 Google AI 订阅本身的美国月费，已不包含此 Gemini CLI 入口。Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
+      "note_en": "The displayed amount is the US monthly price of the Google AI subscription itself, which no longer includes this Gemini CLI access. Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
       "source_url": "https://gemini.google/subscriptions/",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "gemini-cli",
       "product_name": "Gemini CLI",
       "tier_name": "Google AI Pro",
       "supported_models": [
         "Gemini"
       ],
-      "models_note_zh": "CLI 自动路由 Gemini 系列；一次任务可消耗多次请求，订阅不包含 API 余额。",
-      "models_note_en": "CLI routes Gemini models; a task may use multiple requests. Subscriptions do not include API credit.",
+      "models_note_zh": "Gemini 为原 Google 个人登录入口的模型系列，非当前可用权益；不据旧额度表推荐购买 Pro / Ultra 来使用 Gemini CLI。",
+      "models_note_en": "Gemini is the model family of the former consumer Google-login access, not a current entitlement. The old quota table does not justify buying Pro / Ultra for Gemini CLI.",
       "models_source_urls": [
-        "https://geminicli.com/docs/resources/quota-and-pricing/",
-        "https://geminicli.com/plans/"
+        "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+        "https://geminicli.com/docs/resources/quota-and-pricing/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "gemini-cli-ultra",
@@ -1737,30 +1737,30 @@
       "name": "Gemini CLI Google AI Ultra",
       "currency": "USD",
       "billing": "monthly-from",
-      "status": "verified",
+      "status": "paused",
       "price": {
         "amount": 99.99
       },
-      "scope_zh": "文档列 Ultra 2,000 次模型请求 / 用户 / 天",
-      "scope_en": "Docs list Ultra at 2,000 model requests/user/day",
-      "note_zh": "美国美元常规价；Ultra 另有 $199.99/月档，CLI 文档未区分两档额度，以账号为准。API Key / Vertex AI 按各自规则另计费。",
-      "note_en": "US list price; Ultra also offers $199.99/month. CLI docs do not split its quotas by price; check your account. API-key / Vertex AI billing is separate.",
+      "scope_zh": "Google 个人账号登录权益已停止服务",
+      "scope_en": "Consumer Google-account login entitlement discontinued",
+      "note_zh": "展示 Google AI 订阅本身的美国月费，已不包含此 Gemini CLI 入口。Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
+      "note_en": "The displayed amount is the US monthly price of the Google AI subscription itself, which no longer includes this Gemini CLI access. Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
       "source_url": "https://gemini.google/subscriptions/",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "gemini-cli",
       "product_name": "Gemini CLI",
       "tier_name": "Google AI Ultra",
       "supported_models": [
         "Gemini"
       ],
-      "models_note_zh": "CLI 自动路由 Gemini 系列；一次任务可消耗多次请求，订阅不包含 API 余额。",
-      "models_note_en": "CLI routes Gemini models; a task may use multiple requests. Subscriptions do not include API credit.",
+      "models_note_zh": "Gemini 为原 Google 个人登录入口的模型系列，非当前可用权益；不据旧额度表推荐购买 Pro / Ultra 来使用 Gemini CLI。",
+      "models_note_en": "Gemini is the model family of the former consumer Google-login access, not a current entitlement. The old quota table does not justify buying Pro / Ultra for Gemini CLI.",
       "models_source_urls": [
-        "https://geminicli.com/docs/resources/quota-and-pricing/",
-        "https://geminicli.com/plans/"
+        "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+        "https://geminicli.com/docs/resources/quota-and-pricing/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "cline-free",
@@ -1778,7 +1778,7 @@
       "note_zh": "可自带 Key 或使用 Cline provider；免费客户端不含付费模型额度。",
       "note_en": "Use own keys or the Cline provider; paid model usage is not included.",
       "source_url": "https://cline.bot/pricing",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "cline",
       "product_name": "Cline",
@@ -1794,7 +1794,7 @@
       "models_source_urls": [
         "https://cline.bot/pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "aider-free",
@@ -1812,7 +1812,7 @@
       "note_zh": "软件无订阅费，远程模型推理按提供商计费；本地模型使用自己的算力。",
       "note_en": "No software subscription; remote inference bills through providers, local models use your hardware.",
       "source_url": "https://github.com/Aider-AI/aider",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "aider",
       "product_name": "Aider",
@@ -1829,7 +1829,7 @@
       "models_source_urls": [
         "https://aider.chat/docs/llms.html"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kilo-free",
@@ -1844,11 +1844,11 @@
       },
       "scope_zh": "免费客户端；自带 Key、免费或本地模型",
       "scope_en": "Free client; own keys, free or local models",
-      "note_zh": "平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。",
-      "note_en": "Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional.",
+      "note_zh": "平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。 购买 credits 另有 5% 处理费。",
+      "note_en": "Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional. Credit purchases carry a separate 5% processing fee.",
       "source_url": "https://kilo.ai/pricing",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "kilo-code",
       "product_name": "Kilo Code",
       "tier_name": "Free / BYOK",
@@ -1863,7 +1863,7 @@
       "models_source_urls": [
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kilo-teams",
@@ -1878,11 +1878,11 @@
       },
       "scope_zh": "团队管理、共享 BYOK 和集中计费；推理另计",
       "scope_en": "Team management, shared BYOK and billing; inference extra",
-      "note_zh": "平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。",
-      "note_en": "Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional.",
+      "note_zh": "平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。 购买 credits 另有 5% 处理费。",
+      "note_en": "Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional. Credit purchases carry a separate 5% processing fee.",
       "source_url": "https://kilo.ai/pricing",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "kilo-code",
       "product_name": "Kilo Code",
       "tier_name": "Teams",
@@ -1897,7 +1897,7 @@
       "models_source_urls": [
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kilo-pass-starter",
@@ -1912,11 +1912,11 @@
       },
       "scope_zh": "每月 $19 基础模型 credits，奖励另按规则发放",
       "scope_en": "$19 base model credits/month; bonuses follow program rules",
-      "note_zh": "此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。",
-      "note_en": "Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra.",
+      "note_zh": "此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。 购买 credits 另有 5% 处理费。",
+      "note_en": "Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra. Credit purchases carry a separate 5% processing fee.",
       "source_url": "https://kilo.ai/pricing",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "kilo-pass",
       "product_name": "Kilo Pass",
       "tier_name": "Starter",
@@ -1928,7 +1928,7 @@
       "models_source_urls": [
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kilo-pass-pro",
@@ -1943,11 +1943,11 @@
       },
       "scope_zh": "每月 $49 基础模型 credits，奖励另按规则发放",
       "scope_en": "$49 base model credits/month; bonuses follow program rules",
-      "note_zh": "此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。",
-      "note_en": "Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra.",
+      "note_zh": "此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。 购买 credits 另有 5% 处理费。",
+      "note_en": "Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra. Credit purchases carry a separate 5% processing fee.",
       "source_url": "https://kilo.ai/pricing",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "kilo-pass",
       "product_name": "Kilo Pass",
       "tier_name": "Pro",
@@ -1959,7 +1959,7 @@
       "models_source_urls": [
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kilo-pass-expert",
@@ -1974,11 +1974,11 @@
       },
       "scope_zh": "每月 $199 基础模型 credits，奖励另按规则发放",
       "scope_en": "$199 base model credits/month; bonuses follow program rules",
-      "note_zh": "此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。",
-      "note_en": "Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra.",
+      "note_zh": "此处月付价；奖励比例依账期与连续订阅变化，云计算另收费。 购买 credits 另有 5% 处理费。",
+      "note_en": "Monthly price; bonuses depend on billing term and subscription streak. Cloud compute is extra. Credit purchases carry a separate 5% processing fee.",
       "source_url": "https://kilo.ai/pricing",
-      "checked_at": "2026-10-05",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-06",
+      "updated_at": "2026-10-06",
       "product_id": "kilo-pass",
       "product_name": "Kilo Pass",
       "tier_name": "Expert",
@@ -1990,7 +1990,7 @@
       "models_source_urls": [
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kiro-free",
@@ -2008,7 +2008,7 @@
       "note_zh": "月额度不结转；免费档有访问限制。",
       "note_en": "Monthly credits expire; free access is limited.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "kiro",
       "product_name": "Kiro",
@@ -2028,7 +2028,7 @@
       "models_source_urls": [
         "https://kiro.dev/docs/models/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kiro-pro",
@@ -2046,7 +2046,7 @@
       "note_zh": "月额度不结转；额外 credits $0.04/个；商业区域税前价。",
       "note_en": "Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "kiro",
       "product_name": "Kiro",
@@ -2079,7 +2079,7 @@
       "models_source_urls": [
         "https://kiro.dev/docs/models/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kiro-proplus",
@@ -2097,7 +2097,7 @@
       "note_zh": "月额度不结转；额外 credits $0.04/个；商业区域税前价。",
       "note_en": "Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "kiro",
       "product_name": "Kiro",
@@ -2130,7 +2130,7 @@
       "models_source_urls": [
         "https://kiro.dev/docs/models/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kiro-pro-max",
@@ -2148,7 +2148,7 @@
       "note_zh": "月额度不结转；额外 credits $0.04/个；商业区域税前价。",
       "note_en": "Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "kiro",
       "product_name": "Kiro",
@@ -2181,7 +2181,7 @@
       "models_source_urls": [
         "https://kiro.dev/docs/models/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     },
     {
       "id": "kiro-power",
@@ -2199,7 +2199,7 @@
       "note_zh": "月额度不结转；额外 credits $0.04/个；商业区域税前价。",
       "note_en": "Monthly credits expire; extra credits $0.04 each; commercial-region price before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-05",
+      "checked_at": "2026-10-06",
       "updated_at": "2026-10-05",
       "product_id": "kiro",
       "product_name": "Kiro",
@@ -2232,7 +2232,7 @@
       "models_source_urls": [
         "https://kiro.dev/docs/models/"
       ],
-      "models_checked_at": "2026-10-05"
+      "models_checked_at": "2026-10-06"
     }
   ]
 }

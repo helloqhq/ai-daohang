@@ -13,7 +13,7 @@ test('the published snapshot has bilingual, dated prices with explicit units and
     const invalid=structuredClone(snapshot);change(invalid.plans[0]);assert.throws(()=>validatePricing(invalid));
   }
   const duplicate=structuredClone(snapshot);duplicate.plans.push(duplicate.plans[0]);assert.throws(()=>validatePricing(duplicate));
-  const invalid=structuredClone(snapshot);invalid.plans[0].updated_at='2026-10-06';assert.throws(()=>validatePricing(invalid));
+  const invalid=structuredClone(snapshot);invalid.plans[0].updated_at='9999-01-01';assert.throws(()=>validatePricing(invalid));
 });
 test('combined filters search both languages and keep original currency and category',()=>{
   const filters={category:'token-plan',currency:'CNY',provider:'Kimi',query:'code 共享'};
@@ -39,7 +39,7 @@ test('provider and product aggregation keeps all tiers without merging distinct 
 });
 test('model access is validated, searchable and tier-specific',()=>{
   const index=snapshot.plans.findIndex(p=>p.id==='kimi-plan-andante');
-  for(const change of [p=>p.supported_models=[],p=>p.supported_models=['K3','K3'],p=>p.supported_models=[null],p=>p.product_id='Bad ID',p=>p.tier_name='',p=>p.models_note_en='',p=>p.models_source_urls=[],p=>p.models_source_urls=['javascript:alert(1)'],p=>p.models_checked_at='2026-10-06']) {
+  for(const change of [p=>p.supported_models=[],p=>p.supported_models=['K3','K3'],p=>p.supported_models=[null],p=>p.product_id='Bad ID',p=>p.tier_name='',p=>p.models_note_en='',p=>p.models_source_urls=[],p=>p.models_source_urls=['javascript:alert(1)'],p=>p.models_checked_at='9999-01-01']) {
     const invalid=structuredClone(snapshot);change(invalid.plans[index]);assert.throws(()=>validatePricing(invalid));
   }
   const inconsistent=structuredClone(snapshot);inconsistent.plans[index+1].product_name='Different';assert.throws(()=>validatePricing(inconsistent));

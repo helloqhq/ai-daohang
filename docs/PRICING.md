@@ -6,7 +6,7 @@
 
 ## 数据与核验
 
-`public/data/pricing.json` 是独立于新闻采集快照的人工核验目录。2026-10-05 复核官方定价页 / 文档，当前共 67 项方案，其中 Agent 36 项；覆盖 OpenAI、Anthropic、Google、DeepSeek、Alibaba Cloud、Z.AI、MiniMax、Kimi、Cursor、GitHub、OpenCode、Pi、Cognition、Cline、Aider、Kilo、AWS。Agent 目录新增 23 项，包含 OpenCode 客户端与 Go / Go Plus、Pi、Devin / Windsurf、Gemini CLI、Cline、Aider、Kilo Code / Pass 和 Kiro。新闻采集替换快照时保留独立的 `pricing.json` 与 `pricing.xml`。
+`public/data/pricing.json` 是独立于新闻采集快照的人工核验目录。2026-10-06 复核全部 67 项方案的官方定价页 / 文档，其中 Agent 36 项；覆盖 OpenAI、Anthropic、Google、DeepSeek、Alibaba Cloud、Z.AI、MiniMax、Kimi、Cursor、GitHub、OpenCode、Pi、Cognition、Cline、Aider、Kilo、AWS。本轮 18 项补充或修正计费条件与权益，其余仅更新核验日期。Gemini CLI 的三个 Google 个人登录档位保留稳定 ID，标为 `paused` 并注明入口已停止服务；GLM Coding Plan 三档完整价格仍为 `pending`。新闻采集替换快照时保留独立的 `pricing.json` 与 `pricing.xml`。
 
 每项保留原币种、计费周期、适用地域 / 上下文 / 用量条件、双语说明、官方 HTTPS 来源和核验日期。API 的输入、输出、缓存读取、缓存写入采用每百万 tokens 的同一单位；缓存写入 TTL 等条件写在说明中。订阅额度维持官方口径，credits、请求数和 tokens 不互相换算，人民币和美元不按假定汇率合并。年付价格在明确核实的方案说明中保留。
 
@@ -21,15 +21,17 @@
 | OpenCode Go | [Go 文档](https://opencode.ai/docs/go/) | Go $10/月、Go Plus $40/月；模型额度不同，5 小时 / 周窗口及超额 Zen 余额另见说明 |
 | Pi | [官网](https://pi.dev/)及[提供商文档](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/providers.md) | MIT 客户端免费，推理另计 |
 | Devin / Windsurf | [套餐](https://devin.ai/pricing)及[Devin Desktop 公告](https://cognition.com/blog/introducing-devin-desktop) | Windsurf 已升级为 Devin Desktop，共用产品表并保留 Windsurf 搜索；Teams 按 $80 基础费 + $40/完整开发席位，展示含 1 个完整席位的 $120/月起价 |
-| Gemini CLI | [额度](https://geminicli.com/docs/resources/quota-and-pricing/)及[Google AI 定价](https://gemini.google/subscriptions/) | 免费 Google 登录、AI Pro、AI Ultra；美元为美国常规价，Ultra 文档未按 $99.99 / $199.99 两档区分 CLI 额度，需核对账号；API Key 与 Vertex AI 另计费 |
+| Gemini CLI | [官方迁移公告](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/)及[Google AI 定价](https://gemini.google/subscriptions/) | 免费个人登录、AI Pro、AI Ultra 入口自 2026-06-18 停止服务，迁移至 Antigravity CLI；旧额度表不再作为当前权益。美元仅表示 Google AI 订阅本身的美国月费，企业 Code Assist 许可和付费 API Key 接入仍受支持 |
 | Cline | [定价](https://cline.bot/pricing) | 个人开源客户端免费，模型推理另计；不从导航中的 ClinePass 名称推测未核实套餐 |
 | Aider | [官方仓库](https://github.com/Aider-AI/aider)及[模型连接文档](https://aider.chat/docs/llms.html) | 开源终端工具免费，远程模型与本地算力自备 |
-| Kilo Code / Pass | [定价](https://kilo.ai/pricing) | 平台、模型推理和云计算分开；Code Free / Teams 与 Pass 三档分别分组，月付奖励依账期与连续订阅规则变化 |
+| Kilo Code / Pass | [定价](https://kilo.ai/pricing) | 平台、模型推理和云计算分开；Code Free / Teams 与 Pass 三档分别分组，月付奖励依账期与连续订阅规则变化；购买 credits 有 5% 处理费 |
 | Kiro | [定价](https://kiro.dev/pricing/)及[模型表](https://kiro.dev/docs/models/) | 免费和四个付费档；按档位模型表核验，不把仅企业预览可用的 Fable 放入个人套餐 |
 
 Kimi 按档位区分 K3、1M 上下文和高速模型；Claude Pro 的 Fable 模型需要另购 usage credits，Max 也有 Fable 周额度上限。MiniMax 官方按模型类别描述图像 / 语音覆盖，说明保留该范围及排除项，不猜具体型号。Copilot 按月付权益核验，已退役且仅旧年付用户保留的 Sonnet 4.6 不列入；GPT-5.4 nano 的表格与脚注存在冲突，依脚注只在 Pro+ 中收录，并注明仅限 Codex VS Code 扩展。
 
 `null` 表示价格未收录，不等于免费。GLM Coding Plan 额度已核验，完整档位结算价仍待核验，订阅价格保持 `null` / `pending`；2026-09-25 至 10-07 全天按非高峰半价扣 credits。Codex Pro $200 已恢复新订阅，采用较低的新额度；符合官方资格窗口的旧用户可在订阅有效期间沿用旧额度至 2026-10-29。Pro $500 包含 Astra Ultrafast，各档位用量以官方面板为准，不沿用旧的固定 Plus 倍数。同一模型的地域、上下文、优先级、时段价格可能不同，表格展示的基准条件在模型下方，其他已核实阶梯在「计费条件」中；它不是所有型号及价格维度的穷举。
+
+本轮补齐 OpenAI API 长上下文、Batch / Flex / Fast 和 Astra Ultrafast 费率；API 的 Ultrafast 为对应 Standard 的 6 倍，Codex 订阅额度消耗为 8 倍、追加 credits 为 6 倍，不能混用。官方当前说明 Pro 无五小时限制，模型额度仍按面板重置。DeepSeek 高峰为周一至周五北京时间 09:00–12:00、14:00–18:00，中国法定节假日除外。OpenCode Go 逐模型以美元用量计额度，五小时为月上限的 20%、每周为 50%，请求数仅为估算；Go 的 Space Bunny 与 Zen 的 Space Bunny Free 分别记录。
 
 `checked_at` 是定价核验日期；`updated_at` 是本站录入或实际修改该项内容的日期，不冒充厂商发布时间。定价或模型权益超过 30 天未核验标「需重新核验」。带 `valid_until` 的活动超过北京时间截止日期后标「活动已到期」，价格划线；重新核实后再修改数据，不能把旧活动价继续当成当前价格。
 

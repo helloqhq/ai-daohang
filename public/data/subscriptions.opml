@@ -25,5 +25,14 @@
     <outline text="DeepTutor Releases" title="DeepTutor Releases" type="rss" xmlUrl="https://github.com/HKUDS/DeepTutor/releases.atom" htmlUrl="https://github.com/HKUDS/DeepTutor/releases" category="github" />
     <outline text="扎克伯格 Mark Zuckerberg · Threads" title="扎克伯格 Mark Zuckerberg · Threads" type="rss" xmlUrl="https://rsshub.rssforever.com/threads/zuck" htmlUrl="https://www.threads.com/@zuck" category="threads" />
     <outline text="黄仁勋 Jensen Huang · NVIDIA 署名文章" title="黄仁勋 Jensen Huang · NVIDIA 署名文章" type="rss" xmlUrl="https://blogs.nvidia.com/blog/author/jen-hsun-huang/feed/" htmlUrl="https://blogs.nvidia.com/blog/author/jen-hsun-huang/" category="web" />
+    <outline text="Cline 发布" title="Cline 发布" type="rss" xmlUrl="https://github.com/cline/cline/releases.atom" htmlUrl="https://github.com/cline/cline/releases" category="github" />
+    <outline text="Aider 发布" title="Aider 发布" type="rss" xmlUrl="https://github.com/Aider-AI/aider/releases.atom" htmlUrl="https://github.com/Aider-AI/aider/releases" category="github" />
+    <outline text="Kilo Code 发布" title="Kilo Code 发布" type="rss" xmlUrl="https://github.com/Kilo-Org/kilocode/releases.atom" htmlUrl="https://github.com/Kilo-Org/kilocode/releases" category="github" />
+    <outline text="Kilo 官方博客" title="Kilo 官方博客" type="rss" xmlUrl="https://blog.kilo.ai/feed" htmlUrl="https://blog.kilo.ai/" category="web" />
+    <outline text="Kiro 更新" title="Kiro 更新" type="rss" xmlUrl="https://kiro.dev/changelog/feed.rss" htmlUrl="https://kiro.dev/changelog/" category="web" />
+    <outline text="Kimi Code 发布" title="Kimi Code 发布" type="rss" xmlUrl="https://github.com/MoonshotAI/kimi-code/releases.atom" htmlUrl="https://github.com/MoonshotAI/kimi-code/releases" category="github" />
+    <outline text="Google 开发者博客" title="Google 开发者博客" type="rss" xmlUrl="https://developers.googleblog.com/feeds/posts/default" htmlUrl="https://developers.googleblog.com/" category="web" />
+    <outline text="GitHub Copilot 产品更新" title="GitHub Copilot 产品更新" type="rss" xmlUrl="https://github.blog/changelog/label/copilot/feed/" htmlUrl="https://github.blog/changelog/label/copilot/" category="web" />
+    <outline text="小米 MiMo 官方发布" title="小米 MiMo 官方发布" type="rss" xmlUrl="https://github.com/XiaomiMiMo/MiMo-Code/releases.atom" htmlUrl="https://github.com/XiaomiMiMo/MiMo-Code/releases" category="github" />
   </body>
 </opml>

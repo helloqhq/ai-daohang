@@ -31,6 +31,36 @@ class ConversionTests(unittest.TestCase):
         rows=convert(self.source('trae-official'),lambda *a:body,START,END)
         self.assertEqual(rows[0]['published_at'],'2026-10-01');self.assertNotIn('Version 2',rows[0]['text'])
         self.assertIsNone(date_text('January 2026'))
+    def test_devin_uses_section_publication_date_and_keeps_sections_separate(self):
+        body='<div class="update-container" id="october-1-2026"><h3>Review controls</h3><p>Fix sessions</p></div><div class="update-container" id="september-29-2026"><h3>Earlier release</h3><p>Old changes</p></div>'
+        rows=convert(self.source('devin-changelog'),lambda *a:body,START,END)
+        self.assertEqual(rows[0]['published_at'],'2026-10-01')
+        self.assertNotIn('Old changes',rows[0]['text'])
+
+    def test_plan_notices_never_use_campaign_dates_as_publication_dates(self):
+        source=self.source('glm-coding-notices','https://docs.z.ai/devpack/overview')
+        index='<a href="/devpack/notice/new-plan">Plan notice</a>'
+        notice='<h1>Plan notice</h1><div id="content"><p>From September 25, 2026 to October 7, 2026: off-peak rates.</p></div>'
+        rows=convert(source,lambda url:index if url==source['url'] else notice,START,END)
+        self.assertIsNone(rows[0]['published_at'])
+        dated=notice.replace('<p>From','<p>Publication date: October 1, 2026</p><p>From')
+        rows=convert(source,lambda url:index if url==source['url'] else dated,START,END)
+        self.assertEqual(rows[0]['published_at'],'2026-10-01')
+
+    def test_cognition_card_dates_do_not_mix_articles(self):
+        body='<ul><li><a href="/blog/first"><h3>First</h3></a><span>10.01.26</span><p>Summary</p></li><li><a href="/blog/second"><h3>Second</h3></a><span>09.29.26</span><p>Older</p></li></ul>'
+        rows=convert(self.source('cognition-blog','https://cognition.com/blog'),lambda url:body if url.endswith('/blog') else '<article>First full text</article>',START,END)
+        self.assertEqual(rows[0]['published_at'],'2026-10-01')
+        self.assertEqual(rows[0]['text'],'First full text')
+        self.assertEqual(rows[1]['published_at'],'2026-09-29')
+
+    def test_google_blog_missing_feed_dates_are_supplemented_from_article(self):
+        source={**self.source('google-developers-blog','https://developers.googleblog.com/'),'feed_url':'https://developers.googleblog.com/feeds/posts/default'}
+        xml='<rss><channel><item><title>New model</title><link>https://developers.googleblog.com/new-model/</link><description>Short summary</description></item></channel></rss>'
+        article='<div class="published-date">OCT. 1, 2026</div><div class="inner-block-content"><p>Model details</p></div>'
+        rows=convert(source,lambda url:xml if url==source['feed_url'] else article,START,END)
+        self.assertEqual(rows[0]['published_at'],'2026-10-01')
+        self.assertEqual(rows[0]['text'],'Model details');self.assertTrue(rows[0]['full'])
     def test_kimi_overlay_links_beat_navigation_and_deduplicate(self):
         body='<nav><a href="/en/blog/post">Nav title</a></nav><div><a href="/en/blog/post"></a><p>Research title</p><p>2026-09-15</p></div><div><a href="/en/blog/post"></a><p>Research title</p><p>2026-09-15</p></div>'
         rows=convert(self.source('moonshot-official','https://example.com/en/blog/'),lambda *a:body,START,END)

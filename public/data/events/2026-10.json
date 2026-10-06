@@ -1,7 +1,50 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "653a86b5e1dfd946",
+  "snapshot_id": "aeb81cd59ab3ac78",
   "events": [
+    {
+      "id": "kilo-desktop-20261006",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "availability"
+      ],
+      "title_zh": "Kilo 推出 Desktop：整合多模型、Notebook 和本地模型工作流",
+      "title_en": "Kilo launches Desktop with multiple models, notebooks, and local-model workflows",
+      "summary_zh": "Kilo 宣布 Desktop 已可下载，将代码开发和数据分析放进同一应用。官方称支持超过 500 个模型，并提供跨文件夹工作区、直接编辑 Notebook、Conda 环境管理及本地模型服务；用户也可接入自己的提供商和 API Key。",
+      "summary_en": "Kilo announced that Desktop is available to download, bringing coding and data analysis into one app. The company says it supports more than 500 models, with multi-folder workspaces, direct notebook editing, conda environment management, and a local model server. Users can also connect their own providers and API keys.",
+      "key_points_zh": [
+        "工作区可组合多个本地文件夹，让 Agent 跨项目读取上下文。",
+        "提供 Code、Plan、Ask、Debug 四种 Agent；批准计划后，Code 可通过子 Agent 并行执行子任务。",
+        "支持直接编辑 Notebook、管理 Conda 环境以及连接本地或自备 API Key 的模型。",
+        "团队管理员可限制模型、提供商、地域、Agent 权限和可安装的技能。"
+      ],
+      "key_points_en": [
+        "Workspaces group multiple local folders so agents can read context across projects.",
+        "Four agents are included: Code, Plan, Ask, and Debug. After a plan is approved, Code can run subtasks in parallel through subagents.",
+        "Supports direct notebook editing, conda environment management, and local or bring-your-own-key models.",
+        "Team administrators can restrict models, providers, geographies, agent permissions, and installable skills."
+      ],
+      "importance_reason_zh": "扩展 Kilo 的桌面开发和数据分析入口，并提供多模型及本地推理的统一工作流。",
+      "importance_reason_en": "Adds a desktop entry point for Kilo coding and data analysis with unified workflows for multiple models and local inference.",
+      "published_at": "2026-10-06T13:25:21+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-06T14:27:57+00:00",
+      "updated_at": "2026-10-06T14:33:56.151188+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/desktop",
+          "url": "https://blog.kilo.ai/p/desktop",
+          "collected_at": "2026-10-06T14:27:57+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "tibo-x-2107368734981517634",
       "entity_ids": [
@@ -545,6 +588,97 @@
         "Describes spreading superintelligence to the stars as a success condition, without a specific product plan."
       ],
       "importance_reason_en": "A verified leader’s first-hand view on the direction of superintelligence."
+    },
+    {
+      "id": "kiro-ide-1237",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "feature"
+      ],
+      "title_zh": "Kiro IDE 1.2.37 收紧本地状态访问，改善中断后的工作保留",
+      "title_en": "Kiro IDE 1.2.37 tightens local-state access and preserves completed work during interruptions",
+      "summary_zh": "Kiro 官方更新摘要称，IDE 1.2.37 收紧 macOS 和 Linux 上的本地状态访问，在中断期间保留已完成的工作，并将模型搜索与推理努力程度控制整合在一起。",
+      "summary_en": "Kiro’s official changelog summary says IDE 1.2.37 tightens access to local state on macOS and Linux, preserves completed work during interruptions, and combines model search with effort controls.",
+      "key_points_zh": [
+        "macOS 和 Linux 的本地状态访问控制得到加强。",
+        "中断期间保留已完成的工作。",
+        "模型搜索与努力程度控制整合；订阅摘要未说明更细的实现条件。"
+      ],
+      "key_points_en": [
+        "Strengthens local-state access controls on macOS and Linux.",
+        "Preserves completed work during interruptions.",
+        "Combines model search with effort controls; the feed summary does not describe detailed implementation conditions."
+      ],
+      "importance_reason_zh": "涉及本地状态访问和中断恢复，对开发工作可靠性有直接影响。",
+      "importance_reason_en": "Local-state access and interruption recovery directly affect the reliability of development work.",
+      "published_at": "2026-10-05",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-06T14:27:57+00:00",
+      "updated_at": "2026-10-06T14:36:49+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-2#patch-1-2-37",
+          "url": "https://kiro.dev/changelog/ide/1-2#patch-1-2-37",
+          "collected_at": "2026-10-06T14:27:57+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-10-06T14:36:49+00:00",
+          "reason_zh": "按官方更新页的日期标签保留日期精度，去除 RSS 中用于表示日期的午夜时刻。",
+          "reason_en": "Preserves the date-only precision of the official release label, removing the RSS midnight timestamp used to represent that date.",
+          "url": "https://kiro.dev/changelog/ide/1-2#patch-1-2-37"
+        }
+      ]
+    },
+    {
+      "id": "devin-workspace-review-20261005",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "api",
+        "compatibility"
+      ],
+      "title_zh": "Devin 工作区新增 Terminal 标签，并开放 Review 努力程度控制",
+      "title_en": "Devin adds a workspace Terminal tab and Review effort controls",
+      "summary_zh": "Devin 10 月 5 日更新在会话工作区新增 Terminal 标签，用于在 Devin 的机器上运行命令；Files 可在会话休眠时打开，打开 Files 或 Terminal 会唤醒 Devin。更新还允许触发动作设置 Review 努力程度，并新增读取单个代码扫描结果的 API/MCP 能力。",
+      "summary_en": "Devin’s October 5 update adds a Terminal tab to the session workspace for running commands on Devin’s machine. Files can be opened while a session is asleep; opening Files or Terminal wakes Devin. Trigger actions can also set Review effort levels, and API/MCP users can fetch individual code scans.",
+      "key_points_zh": [
+        "工作区 Terminal 可运行命令，Files 和 Terminal 均可唤醒休眠会话。",
+        "Review 触发动作可指定努力程度，企业管理员可设置企业 Review 的默认值。",
+        "有仓库访问权但无 Review 执行权限的用户，可查看 PR、差异和已有发现，AI Review 动作对其隐藏。",
+        "GET /v3/organizations/{org_id}/code-scans/{scan_id} 可读取单个扫描及附件链接；MCP 对应提供 get_scan 动作。"
+      ],
+      "key_points_en": [
+        "The workspace Terminal runs commands; both Files and Terminal can wake sleeping sessions.",
+        "Review trigger actions can specify effort levels, and enterprise administrators can set an enterprise default.",
+        "Users with repository access but no permission to run Review can inspect PRs, diffs, and existing findings; AI Review actions are hidden.",
+        "GET /v3/organizations/{org_id}/code-scans/{scan_id} retrieves an individual scan and attachment URLs; MCP provides a corresponding get_scan action."
+      ],
+      "importance_reason_zh": "扩展会话内操作入口、审阅权限控制及代码扫描集成能力。",
+      "importance_reason_en": "Expands in-session controls, review permissions, and code-scan integration.",
+      "published_at": "2026-10-05",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-06T14:31:42+00:00",
+      "updated_at": "2026-10-06T14:33:56.151188+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#october-5-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#october-5-2026",
+          "collected_at": "2026-10-06T14:31:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
     },
     {
       "id": "demis-hassabis-x-2106850913474482566",

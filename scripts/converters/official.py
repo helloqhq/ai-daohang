@@ -16,7 +16,9 @@ SOURCES=('anthropic-official','deepseek-official','qwen-official','meta-official
          'zhipu-official','moonshot-official','minimax-official','tencent-official',
          'grok-official','qoder-official','trae-official','zcode-official','dario-blog',
          'google-official','openai-x','zcode-x','elon-musk-x','demis-hassabis-x',
-         'jeff-dean-x','tibo-x','openai-tiktok','mark-zuckerberg-threads')
+         'jeff-dean-x','tibo-x','openai-tiktok','mark-zuckerberg-threads',
+         'devin-changelog','cognition-blog','glm-coding-notices','minimax-plan-notices',
+         'google-developers-blog')
 
 
 def date_text(text):
@@ -57,10 +59,15 @@ def nearby(link,base):
 
 def sections(tree,source):
     sid=source['id'];base=source['url'];out=[]
-    if sid in ('zhipu-official','qoder-official'):
+    if sid in ('zhipu-official','qoder-official','devin-changelog'):
         for n in tree.nodes('div'):
             if 'update-container' not in n.attrs.get('class','').split():continue
             text=n.text().replace('\u200b','');date=date_text(n.attrs.get('id','').replace('-',' ')) or date_text(n.attrs.get('id','')) or date_text(text)
+            if sid=='devin-changelog':
+                label=n.attrs.get('id','').replace('-',' ').title()
+                for fmt in ('%B %d %Y','%b %d %Y'):
+                    try:date=dt.datetime.strptime(label,fmt).date().isoformat();break
+                    except ValueError:pass
             # Duplicate date anchors on Mintlify need the version to distinguish releases.
             title=next((h.text() for tag in ('h3','h4') for h in n.nodes(tag) if h.text()),None)
             if not title:
@@ -68,8 +75,9 @@ def sections(tree,source):
             version=re.search(r'\b\d+\.\d+\.\d+\b',text)
             anchor=n.attrs.get('id')
             if not anchor:raise SourceError('更新段落缺少原文锚点')
+            if sid=='devin-changelog':title=source['name']+' · '+(date or anchor)
             out.append(item(title,base+'#'+anchor,text,date,True))
-            if version:out[-1]['content_id']=base+'#'+anchor+'::'+version.group()
+            if version and sid!='devin-changelog':out[-1]['content_id']=base+'#'+anchor+'::'+version.group()
     elif sid in ('trae-official','deepseek-official'):
         heads=[h for h in tree.nodes('h2') if date_text(h.text())]
         for h in heads:
@@ -92,6 +100,7 @@ def article_text(tree,sid):
     # Only known article containers. A layout change must not import navigation as full text.
     markers={'anthropic-official':('rich-text','Body-module'),
              'google-official':('rich-text','article__body','article-body','blog-detail__body'),
+             'google-developers-blog':('inner-block-content',),
              'dario-blog':('rich-text','w-richtext','essay-content'),
              'grok-official':('prose',), 'moonshot-official':('prose','blog-content'),
              'minimax-official':('prose','blog-content'), 'meta-official':('article-body',)}
@@ -233,13 +242,44 @@ def convert(source,fetch,since,until,reconcile=()):
             if not rows:raise SourceError('混元文章列表分页不完整')
             page+=1
     tree=parse_html(fetch(base))
+    if sid in ('glm-coding-notices','minimax-plan-notices'):
+        paths=('/devpack/notice/','/devpack/transition') if sid=='glm-coding-notices' else ('/docs/m-plan/',)
+        links={absolute(base,a.attrs['href']) for a in tree.nodes('a') if a.attrs.get('href') and any(p in a.attrs['href'] for p in paths)}
+        if sid=='minimax-plan-notices':
+            links={u for u in links if any(p in u for p in ('notice','discount'))}
+        out=[]
+        for url in sorted(links):
+            detail=parse_html(fetch(url));body=next((n.text() for n in detail.nodes() if n.attrs.get('id')=='content'),None)
+            if not body:raise SourceError('官方通知缺少正文容器')
+            # Campaign windows and migration deadlines are not publication dates.
+            label=re.search(r'Publication date:\s*([^\n]+)',body,re.I)
+            date=page_date(detail) or (date_text(label.group(1)) if label else None)
+            heading=detail.first('h1')
+            out.append(item(heading.text() if heading else source['name'],url,body,date,True))
+        if not out:raise SourceError('未找到官方套餐通知链接')
+        return out
+    if sid=='cognition-blog':
+        out=[]
+        for card in tree.nodes('li'):
+            link=next((a for a in card.nodes('a') if a.attrs.get('href','').startswith('/blog/')),None)
+            label=next((match for n in card.nodes() if (match:=re.fullmatch(r'(\d{2})\.(\d{2})\.(\d{2})',n.text()))),None)
+            if not link or not label:continue
+            month,day,year=map(int,label.groups());date=dt.date(2000+year,month,day).isoformat();url=absolute(base,link.attrs['href'])
+            title=next((h.text() for tag in ('h2','h3') for h in card.nodes(tag)),None) or link.text().splitlines()[0]
+            row=item(title,url,card.text(),date)
+            if in_window(date,since,until) or url in reconcile:
+                detail=parse_html(fetch(url));body=article_text(detail,sid)
+                if body:row.update(text=body,full=True)
+            out.append(row)
+        if not out:raise SourceError('未找到带日期的 Cognition 官方文章列表')
+        return out
     if source['platform']=='x':return x_posts(tree,source)
     if sid in ('openai-tiktok','mark-zuckerberg-threads'):return social_json(tree,source)
     out=sections(tree,source)
-    if sid in ('zhipu-official','qoder-official','trae-official','deepseek-official','zcode-official'):
+    if sid in ('zhipu-official','qoder-official','trae-official','deepseek-official','zcode-official','devin-changelog'):
         if not out:raise SourceError('未找到带日期的官方更新段落，转换规则需要复核')
         return out
-    if sid=='google-official':
+    if sid in ('google-official','google-developers-blog'):
         xml=ET.fromstring(fetch(source['feed_url']))
         from collector.adapters import parse_feed
         all_records,_,_=parse_feed(ET.tostring(xml,encoding='unicode'),source,dt.datetime.min.replace(tzinfo=dt.timezone.utc),until)
@@ -268,6 +308,9 @@ def convert(source,fetch,since,until,reconcile=()):
         seen.add(url)
         if in_window(row['published_at'],since,until) or url in reconcile:
             detail=parse_html(fetch(url));body=article_text(detail,sid);date=page_date(detail)
+            if sid=='google-developers-blog':
+                label=next((n.text() for n in detail.nodes() if 'published-date' in n.attrs.get('class','').split()),None)
+                if label:date=date_text(label.title().replace('Sept.','Sep').replace('.',''))
             if body:row.update(text=body,full=True)
             if sid=='anthropic-official' and detail.first('h1'):
                 row['title']=detail.first('h1').text()

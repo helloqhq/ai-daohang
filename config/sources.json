@@ -976,6 +976,335 @@
       "subscription_note": "匿名公开页可转换最近 5 条本人帖子；不是完整时间线。测试的 RSSHub 在线订阅未取得有效 XML，保留离线补采和覆盖缺口。",
       "subscription_note_en": "The anonymous public page can convert five recent posts by this account, not a complete timeline. Tested RSSHub online feeds did not return valid XML. Offline imports and the coverage gap are retained.",
       "feed_checked_at": "2026-10-04"
+    },
+    {
+      "id": "cline-releases",
+      "name": "Cline 发布",
+      "name_en": "Cline Releases",
+      "entity_ids": [
+        "cline"
+      ],
+      "url": "https://github.com/cline/cline/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://cline.bot/blog/cline-3-10-local-chrome-integration-yolo-mode-drag-drop-and-more-workflow-enhancements",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/cline/cline/releases.atom",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-06",
+      "feed_verified_at": "2026-10-06"
+    },
+    {
+      "id": "aider-releases",
+      "name": "Aider 发布",
+      "name_en": "Aider Releases",
+      "entity_ids": [
+        "aider"
+      ],
+      "url": "https://github.com/Aider-AI/aider/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://aider.chat/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/Aider-AI/aider/releases.atom",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-06",
+      "feed_verified_at": "2026-10-06"
+    },
+    {
+      "id": "kilo-releases",
+      "name": "Kilo Code 发布",
+      "name_en": "Kilo Code Releases",
+      "entity_ids": [
+        "kilo"
+      ],
+      "url": "https://github.com/Kilo-Org/kilocode/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://kilo.ai/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/Kilo-Org/kilocode/releases.atom",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-06",
+      "feed_verified_at": "2026-10-06"
+    },
+    {
+      "id": "kilo-blog",
+      "name": "Kilo 官方博客",
+      "name_en": "Kilo Blog",
+      "entity_ids": [
+        "kilo"
+      ],
+      "url": "https://blog.kilo.ai/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://kilo.ai/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://blog.kilo.ai/feed",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-06",
+      "feed_verified_at": "2026-10-06"
+    },
+    {
+      "id": "kiro-changelog",
+      "name": "Kiro 更新",
+      "name_en": "Kiro Changelog",
+      "entity_ids": [
+        "kiro"
+      ],
+      "url": "https://kiro.dev/changelog/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://kiro.dev/changelog/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://kiro.dev/changelog/feed.rss",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-06",
+      "feed_verified_at": "2026-10-06",
+      "feed_date_precision": "date"
+    },
+    {
+      "id": "kimi-code-releases",
+      "name": "Kimi Code 发布",
+      "name_en": "Kimi Code Releases",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "url": "https://github.com/MoonshotAI/kimi-code/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/MoonshotAI/kimi-cli",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/MoonshotAI/kimi-code/releases.atom",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-06",
+      "feed_verified_at": "2026-10-06",
+      "subscription_note": "跟踪当前 Kimi Code CLI；旧 kimi-cli 仓库已归档。客户端发布不代表套餐价格或权益已变更。",
+      "subscription_note_en": "Tracks the current Kimi Code CLI; the old kimi-cli repository is archived. Client releases do not establish changes to subscription prices or benefits."
+    },
+    {
+      "id": "devin-changelog",
+      "name": "Devin / Windsurf 更新",
+      "name_en": "Devin / Windsurf Updates",
+      "entity_ids": [
+        "devin"
+      ],
+      "url": "https://docs.devin.ai/release-notes/overview",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://docs.devin.ai/release-notes/overview",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "feed_checked_at": "2026-10-06",
+      "offline_conversion": true,
+      "subscription_note": "原生 RSS 的 pubDate 与官方发布标签不一致，按需转换页面并使用更新段落的原始日期；完整在线覆盖未确认。",
+      "subscription_note_en": "Native RSS pubDate values differ from official release labels. On-demand conversion uses the original dates on update sections; complete online coverage remains unconfirmed."
+    },
+    {
+      "id": "cognition-blog",
+      "name": "Cognition 官方博客",
+      "name_en": "Cognition Blog",
+      "entity_ids": [
+        "devin"
+      ],
+      "url": "https://cognition.com/blog",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://devin.ai/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "feed_checked_at": "2026-10-06",
+      "offline_conversion": true,
+      "subscription_note": "按需转换官方更新／通知为本地 RSS；仅使用原文发布日期，未知日期留待核查，完整在线覆盖未确认。",
+      "subscription_note_en": "Official updates or notices are converted on demand to local RSS. Only source publication dates are used; undated notices await review, and complete online coverage remains unconfirmed."
+    },
+    {
+      "id": "glm-coding-notices",
+      "name": "GLM Coding Plan 通知",
+      "name_en": "GLM Coding Plan Notices",
+      "entity_ids": [
+        "zhipu"
+      ],
+      "url": "https://docs.z.ai/devpack/overview",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://docs.z.ai/llms.txt",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "feed_checked_at": "2026-10-06",
+      "offline_conversion": true,
+      "subscription_note": "按需转换官方更新／通知为本地 RSS；仅使用原文发布日期，未知日期留待核查，完整在线覆盖未确认。",
+      "subscription_note_en": "Official updates or notices are converted on demand to local RSS. Only source publication dates are used; undated notices await review, and complete online coverage remains unconfirmed."
+    },
+    {
+      "id": "minimax-plan-notices",
+      "name": "MiniMax Token / M Plan 通知",
+      "name_en": "MiniMax Token / M Plan Notices",
+      "entity_ids": [
+        "minimax"
+      ],
+      "url": "https://platform.minimax.io/docs/m-plan/intro",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://platform.minimax.io/docs/llms.txt",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "feed_checked_at": "2026-10-06",
+      "offline_conversion": true,
+      "subscription_note": "按需转换官方更新／通知为本地 RSS；仅使用原文发布日期，未知日期留待核查，完整在线覆盖未确认。",
+      "subscription_note_en": "Official updates or notices are converted on demand to local RSS. Only source publication dates are used; undated notices await review, and complete online coverage remains unconfirmed."
+    },
+    {
+      "id": "google-developers-blog",
+      "name": "Google 开发者博客",
+      "name_en": "Google Developers Blog",
+      "entity_ids": [
+        "google",
+        "gemini-cli"
+      ],
+      "url": "https://developers.googleblog.com/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://developers.googleblog.com/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://developers.googleblog.com/feeds/posts/default",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-06",
+      "feed_verified_at": "2026-10-06",
+      "offline_conversion": true,
+      "subscription_note": "官方 RSS 未提供条目日期，按需转换官方文章补充发布日期和正文；日期核实前不进入动态，完整时间窗未确认。",
+      "subscription_note_en": "The official RSS omits entry dates. On-demand conversion supplements publication dates and text from official articles. Undated items stay out of the news snapshot; the full window remains unconfirmed."
+    },
+    {
+      "id": "copilot-changelog",
+      "name": "GitHub Copilot 产品更新",
+      "name_en": "GitHub Copilot Changelog",
+      "entity_ids": [
+        "copilot"
+      ],
+      "url": "https://github.blog/changelog/label/copilot/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.blog/changelog/label/copilot/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.blog/changelog/label/copilot/feed/",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-06",
+      "feed_verified_at": "2026-10-06"
+    },
+    {
+      "id": "mimo-releases",
+      "name": "小米 MiMo 官方发布",
+      "name_en": "Xiaomi MiMo Releases",
+      "entity_ids": [
+        "mimo"
+      ],
+      "url": "https://github.com/XiaomiMiMo/MiMo-Code/releases",
+      "platform": "github",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://github.com/XiaomiMiMo/MiMo-V2-Flash",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://github.com/XiaomiMiMo/MiMo-Code/releases.atom",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-06",
+      "subscription_note": "订阅官方 MiMo Code 仓库的发布说明，包括其中正式公布的 MiMo 模型更新；不采纳用户 Issue 作为官方公告，不代表覆盖全部 API 计费变化。",
+      "subscription_note_en": "Tracks official MiMo Code release notes, including MiMo model updates announced there. User issues are not official announcements, and this does not cover all API pricing changes."
     }
   ],
   "people": [

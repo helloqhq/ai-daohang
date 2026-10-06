@@ -12,7 +12,8 @@
       "kind": "vendor",
       "enabled": true,
       "color": "#175f4a",
-      "name_en": "OpenAI"
+      "name_en": "OpenAI",
+      "pricing_provider": "OpenAI"
     },
     {
       "id": "anthropic",
@@ -25,7 +26,8 @@
       "kind": "vendor",
       "enabled": true,
       "color": "#bc6037",
-      "name_en": "Anthropic"
+      "name_en": "Anthropic",
+      "pricing_provider": "Anthropic"
     },
     {
       "id": "google",
@@ -38,7 +40,8 @@
       "kind": "vendor",
       "enabled": true,
       "color": "#336eab",
-      "name_en": "Google"
+      "name_en": "Google",
+      "pricing_provider": "Google"
     },
     {
       "id": "deepseek",
@@ -51,7 +54,8 @@
       "kind": "vendor",
       "enabled": true,
       "color": "#4b62ba",
-      "name_en": "DeepSeek"
+      "name_en": "DeepSeek",
+      "pricing_provider": "DeepSeek"
     },
     {
       "id": "qwen",
@@ -64,46 +68,67 @@
       "kind": "model_brand",
       "enabled": true,
       "color": "#6a5a95",
-      "name_en": "Qwen"
+      "name_en": "Qwen",
+      "pricing_provider": "Alibaba Cloud"
     },
     {
       "id": "zhipu",
       "name": "智谱",
       "aliases": [
         "智谱",
-        "zhipu"
+        "zhipu",
+        "Z.AI",
+        "GLM",
+        "GLM Coding Plan"
       ],
       "category": "model",
       "kind": "vendor",
       "enabled": true,
       "color": "#317d73",
-      "name_en": "Zhipu"
+      "name_en": "Zhipu",
+      "pricing_provider": "Z.AI",
+      "pricing_product_ids": [
+        "glm-coding-plan"
+      ]
     },
     {
       "id": "moonshot",
       "name": "月之暗面",
       "aliases": [
         "月之暗面",
-        "moonshot"
+        "moonshot",
+        "Kimi",
+        "Kimi Code"
       ],
       "category": "model",
       "kind": "vendor",
       "enabled": true,
       "color": "#946b35",
-      "name_en": "Moonshot AI"
+      "name_en": "Moonshot AI",
+      "pricing_provider": "Kimi",
+      "pricing_product_ids": [
+        "kimi-code"
+      ]
     },
     {
       "id": "minimax",
       "name": "MiniMax",
       "aliases": [
         "minimax",
-        "minimax"
+        "minimax",
+        "MiniMax Token Plan",
+        "MiniMax Coding Plan",
+        "M Plan"
       ],
       "category": "model",
       "kind": "vendor",
       "enabled": true,
       "color": "#c45043",
-      "name_en": "MiniMax"
+      "name_en": "MiniMax",
+      "pricing_provider": "MiniMax",
+      "pricing_product_ids": [
+        "minimax-token-plan"
+      ]
     },
     {
       "id": "tencent",
@@ -207,7 +232,10 @@
       "kind": "application",
       "enabled": true,
       "color": "#175f4a",
-      "name_en": "Codex"
+      "name_en": "Codex",
+      "pricing_product_ids": [
+        "codex"
+      ]
     },
     {
       "id": "claude-code",
@@ -220,7 +248,10 @@
       "kind": "application",
       "enabled": true,
       "color": "#bc6037",
-      "name_en": "Claude Code"
+      "name_en": "Claude Code",
+      "pricing_product_ids": [
+        "claude-code"
+      ]
     },
     {
       "id": "cursor",
@@ -233,7 +264,10 @@
       "kind": "application",
       "enabled": true,
       "color": "#336eab",
-      "name_en": "Cursor"
+      "name_en": "Cursor",
+      "pricing_product_ids": [
+        "cursor"
+      ]
     },
     {
       "id": "gemini-cli",
@@ -246,7 +280,10 @@
       "kind": "application",
       "enabled": true,
       "color": "#4b62ba",
-      "name_en": "Gemini CLI"
+      "name_en": "Gemini CLI",
+      "pricing_product_ids": [
+        "gemini-cli"
+      ]
     },
     {
       "id": "deepseek-harness",
@@ -285,7 +322,11 @@
       "kind": "application",
       "enabled": true,
       "color": "#946b35",
-      "name_en": "OpenCode"
+      "name_en": "OpenCode",
+      "pricing_product_ids": [
+        "opencode",
+        "opencode-go"
+      ]
     },
     {
       "id": "copilot",
@@ -298,7 +339,10 @@
       "kind": "application",
       "enabled": true,
       "color": "#c45043",
-      "name_en": "GitHub Copilot"
+      "name_en": "GitHub Copilot",
+      "pricing_product_ids": [
+        "github-copilot"
+      ]
     },
     {
       "id": "qoder",
@@ -324,7 +368,10 @@
       "kind": "application",
       "enabled": true,
       "color": "#bc872b",
-      "name_en": "Pi Agent Harness"
+      "name_en": "Pi Agent Harness",
+      "pricing_product_ids": [
+        "pi"
+      ]
     },
     {
       "id": "trae",
@@ -378,6 +425,122 @@
       "enabled": true,
       "color": "#527d69",
       "name_en": "DeepTutor"
+    },
+    {
+      "id": "devin",
+      "name": "Devin / Windsurf",
+      "name_en": "Devin / Windsurf",
+      "aliases": [
+        "Devin",
+        "Windsurf",
+        "Devin Desktop",
+        "Cognition"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#946b35",
+      "pricing_product_ids": [
+        "devin"
+      ]
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "name_en": "Cline",
+      "aliases": [
+        "Cline"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#bc6037",
+      "pricing_product_ids": [
+        "cline"
+      ]
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "name_en": "Aider",
+      "aliases": [
+        "Aider"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#317d73",
+      "pricing_product_ids": [
+        "aider"
+      ]
+    },
+    {
+      "id": "kilo",
+      "name": "Kilo Code",
+      "name_en": "Kilo Code",
+      "aliases": [
+        "Kilo",
+        "Kilo Code",
+        "Kilo Pass",
+        "kilocode"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#c45043",
+      "pricing_product_ids": [
+        "kilo-code",
+        "kilo-pass"
+      ]
+    },
+    {
+      "id": "kiro",
+      "name": "Kiro",
+      "name_en": "Kiro",
+      "aliases": [
+        "Kiro",
+        "Kiro CLI",
+        "Kiro IDE",
+        "AWS Kiro"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#6a5a95",
+      "pricing_product_ids": [
+        "kiro"
+      ]
+    },
+    {
+      "id": "kimi-code",
+      "name": "Kimi Code",
+      "name_en": "Kimi Code",
+      "aliases": [
+        "Kimi Code",
+        "Kimi CLI",
+        "kimi-code",
+        "kimi-cli"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#946b35"
+    },
+    {
+      "id": "mimo",
+      "name": "小米 MiMo",
+      "name_en": "Xiaomi MiMo",
+      "aliases": [
+        "MiMo",
+        "Xiaomi MiMo",
+        "小米",
+        "MiMo-V2.6",
+        "MiMo-V2.5"
+      ],
+      "category": "model",
+      "kind": "model_brand",
+      "enabled": true,
+      "color": "#bc6037"
     }
   ]
 }

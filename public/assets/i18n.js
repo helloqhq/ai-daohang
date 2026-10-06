@@ -156,7 +156,7 @@ export const messages = {
   disclaimerDescription: ['AI 简报的信息来源、使用范围、版权与纠错说明。', 'AI Brief sources, scope of use, copyright and corrections.'],
   disclaimerIntro: ['AI 简报整理公开的 AI 行业动态，并提供原始来源链接，供你了解和核实信息。使用本站时，请结合来源时间、覆盖状态与原文自行判断。', 'AI Brief summarizes public AI industry updates and links to original sources for context and verification. Consider source dates, coverage status and original material when assessing information.'],
   disclaimerAccuracyTitle: ['01 / 信息范围与准确性', '01 / Scope and accuracy'],
-  disclaimerAccuracyCopy: ['本站内容可能经过自动化或 AI 辅助整理、翻译及人工筛选，可能存在遗漏、翻译偏差或更新延迟。部分摘要仅依据标题、简介或已取得的正文片段；预览、预告和负责人观点不代表功能已正式上线。本站不保证涵盖全部事件，价格、能力、发布日期与服务条款请以提供方最新的官方说明为准。发现错误后，我们会核查并按情况更正。', 'Content may involve automated or AI-assisted summarization and translation, with human selection, and may contain omissions, translation errors or delays. Some summaries rely only on titles, descriptions or available excerpts. Previews, announcements and personal opinions do not mean a feature is released. We do not guarantee complete coverage. Check providers’ latest official information for prices, capabilities, release dates and service terms. Reported errors will be reviewed and corrected where appropriate.'],
+  disclaimerAccuracyCopy: ['本站内容可能经过自动化或 AI 辅助整理、翻译及人工筛选，可能存在遗漏、翻译偏差或更新延迟。部分摘要仅依据标题、简介或已取得的正文片段；预览、预告和名人观点不代表功能已正式上线。本站不保证涵盖全部事件，价格、能力、发布日期与服务条款请以提供方最新的官方说明为准。发现错误后，我们会核查并按情况更正。', 'Content may involve automated or AI-assisted summarization and translation, with human selection, and may contain omissions, translation errors or delays. Some summaries rely only on titles, descriptions or available excerpts. Previews, announcements and personal opinions do not mean a feature is released. We do not guarantee complete coverage. Check providers’ latest official information for prices, capabilities, release dates and service terms. Reported errors will be reviewed and corrected where appropriate.'],
   disclaimerAdviceTitle: ['02 / 使用与决策', '02 / Use and decisions'],
   disclaimerAdviceCopy: ['本站内容用于一般信息参考，不构成投资、法律、医疗或其他专业意见，也不构成对产品安全、收益或适用性的保证。涉及采购、投资、数据安全等重要决策时，请核实原始资料并按需要咨询专业人士。', 'Content is provided for general information and is not investment, legal, medical or other professional advice, nor a guarantee of product safety, returns or suitability. Verify original materials and seek professional advice as appropriate for decisions involving purchases, investments or data security.'],
   disclaimerThirdPartyTitle: ['03 / 第三方链接与独立性', '03 / Third-party links and independence'],
@@ -233,7 +233,7 @@ export function translate(language, key, values = {}) {
 
 export const LABELS = {
   zh: {
-    kind: {update:'正式更新',preview:'预览 / 预告',opinion:'负责人观点'},
+    kind: {update:'正式更新',preview:'预览 / 预告',opinion:'名人观点'},
     topic: {model_release:'模型发布',capability:'能力变化',api:'API',pricing:'价格变化',availability:'可用性',feature:'新功能',compatibility:'兼容性',critical_fix:'关键修复'},
     platform: {web:'官网 / 博客',github:'GitHub',youtube:'YouTube',tiktok:'TikTok',x:'X',threads:'Threads',wechat:'微信公众号'},
   },

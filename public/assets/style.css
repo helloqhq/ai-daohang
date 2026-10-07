@@ -235,3 +235,22 @@ dialog::backdrop{background:#05070acc}
 @media(max-width:560px){.site-header,main,footer{width:calc(100% - 32px)}.site-header{height:66px;gap:22px}.brand-name{font-size:18px}.brand img{width:28px;height:28px}.brand-en{display:none}.site-header nav{gap:17px}.nav-button{font-size:12px}.language-switch button{padding:5px 7px;font-size:10px}#source-count{display:none}.snapshot-bar{font-size:9px;padding:14px 0 20px;gap:8px}.filter-panel{padding-bottom:18px}.category-buttons{gap:5px}.category{justify-content:center;flex:1;gap:6px;padding:8px 5px;font-size:12px}.category>span:last-child{font-size:9px}.entity-buttons{gap:4px}.entity-buttons button{font-size:11px;padding:6px 8px}.feed-column{padding-top:20px}.feed-toolbar{gap:12px;margin-bottom:14px}.feed-toolbar h2{font-size:15px;white-space:nowrap}#result-count{font-size:10px;margin-left:4px}.search{width:55%;padding:8px;gap:6px}.search kbd{display:none}.search input{font-size:11px}.date-toolbar{gap:10px;flex-wrap:wrap;padding-bottom:14px}.date-presets{gap:0}.date-presets button{font-size:10px;padding:5px 6px}.kind-filter{margin-left:auto}select{padding:5px;font-size:10px}.date-toolbar>.text-button{margin-left:auto;font-size:10px}.event-card summary{grid-template-columns:12px minmax(0,1fr);gap:7px 9px;padding:14px 0}.expand-icon{grid-row:1;align-self:start;margin-top:2px;font-size:22px}.event-title{font-size:14px}.card-meta{grid-column:2;grid-row:2;gap:6px;font-size:9px}.card-time{grid-column:2;grid-row:3;padding:0;font-size:10px}.event-body{margin-left:21px;padding:14px}.event-summary,.key-points{font-size:12px}.date-heading{padding-top:20px;font-size:10px}.sources-heading{flex-direction:column;align-items:stretch;gap:16px}.sources-heading .search{width:100%}.source-grid{grid-template-columns:1fr}dialog{padding:30px 20px}.dialog-title{font-size:18px}}
 @media(max-width:370px){.site-header{gap:14px}.site-header nav{gap:12px}.brand{gap:7px}.brand-name{font-size:16px}.brand img{width:25px;height:25px}.language-switch button{padding:5px 6px}.category{gap:4px;font-size:11px}.search svg{display:none}.feed-toolbar .search{width:51%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.friend-card{display:block;padding:24px;background:var(--card);border:1px solid var(--line);border-left:2px solid var(--accent);border-radius:4px}
+.friend-card:hover{border-color:var(--accent)}
+.friend-card h3{display:flex;justify-content:space-between;margin:12px 0;font-size:23px;font-weight:550}
+.friend-card h3>span:last-child,.friend-domain{color:var(--accent)}
+.friend-domain{font:11px var(--mono)}
+.friend-contact{display:block;margin-top:12px;font-size:12px}
+.friend-info{margin:20px 0 24px;font-size:13px}
+.friend-info>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:20px;padding:12px 0;border-bottom:1px solid var(--line)}
+.friend-info dt{color:var(--muted)}
+.friend-info dd{margin:0;overflow-wrap:anywhere}
+.friend-info .brand-name{font-size:13px;font-weight:400;letter-spacing:0}
+.friend-info a{color:var(--accent)}
+.friend-code{padding:18px;background:var(--card);border:1px solid var(--line);border-radius:4px;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.8 var(--mono)}
+.friend-code .brand-name{font:inherit;letter-spacing:0}
+@media(max-width:560px){.friend-card{padding:20px}.friend-info>div{grid-template-columns:80px minmax(0,1fr);gap:12px}.friend-code{padding:14px;font-size:11px}}
+
+.friend-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:560px){.friend-grid{grid-template-columns:1fr}}

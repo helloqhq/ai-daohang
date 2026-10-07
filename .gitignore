@@ -7,3 +7,9 @@ dist/
 node_modules/
 .env
 .env.*
+
+# Local artifacts from the go2-ai.com Chinese promo video task.
+/videos/go2ai-promo-zh/
+/docs/VIDEO-PROMO-NARRATION.json
+/docs/VIDEO-PROMO-RESEARCH.md
+/docs/VIDEO-PROMO-SCRIPT.md

@@ -4,6 +4,7 @@ import shutil
 import subprocess
 from pathlib import Path
 from collector.pipeline import Pipeline
+from build_seo import build_sitemaps
 
 root=Path(__file__).resolve().parents[1]
 result=Pipeline(root).validate()
@@ -13,5 +14,6 @@ if destination.exists():
 shutil.copytree(root/'public',destination)
 subprocess.run(['node',str(root/'scripts/build-pricing.mjs'),str(destination)],check=True)
 subprocess.run(['node',str(root/'scripts/prerender.mjs'),str(destination)],check=True)
+build_sitemaps(root,destination)
 (destination/'.nojekyll').touch()
 print(f"构建完成：{result['events']} 条事件 → dist/（仅公开文件）")

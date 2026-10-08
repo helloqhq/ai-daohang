@@ -35,3 +35,27 @@ test('an empty current range renders the existing empty state without stale news
   assert.ok(!html.includes('<article'));
   assert.ok(!html.includes('loading-state'));
 });
+
+test('article semantics describe the rendered language, source date and citations without invented claims',()=>{
+  const html=createEventRenderer(catalog,'en').card(event);
+  assert.ok(html.includes('itemscope itemtype="https://schema.org/NewsArticle"'));
+  assert.ok(html.includes('itemprop="headline" lang="en">Update'));
+  assert.ok(html.includes('itemprop="description" lang="en">Summary'));
+  assert.ok(html.includes('itemprop="inLanguage" content="en"'));
+  assert.ok(html.includes('itemprop="datePublished" datetime="2026-10-03T08:00:00Z"'));
+  assert.ok(html.includes('itemprop="citation" href="https://example.com/update"'));
+  assert.ok(!html.includes('itemprop="author"'));
+  assert.ok(!html.includes('itemprop="dateModified"'));
+  const fallback=createEventRenderer(catalog,'en').card({...event,key_points_en:[]});
+  assert.ok(fallback.includes('itemprop="inLanguage" content="zh-CN"'));
+  assert.ok(fallback.includes('itemprop="headline" lang="zh">更新 &lt;script&gt;'));
+});
+
+test('unknown dates and unsafe source URLs do not become structured date or citation claims',()=>{
+  const html=createEventRenderer(catalog,'zh').card({...event,published_at:null,date_precision:'unknown',sources:[{...event.sources[0],url:'javascript:alert(1)'}]});
+  assert.ok(!html.includes('itemprop="datePublished"'));
+  assert.ok(!html.includes('itemprop="citation"'));
+  assert.ok(html.includes('href="#"'));
+  const dateOnly=createEventRenderer(catalog,'zh').card({...event,published_at:'2026-10-03',date_precision:'date'});
+  assert.ok(dateOnly.includes('itemprop="datePublished" datetime="2026-10-03"'));
+});

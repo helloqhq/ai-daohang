@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "aeb81cd59ab3ac78",
-  "generated_at": "2026-10-06T14:36:49+00:00",
+  "snapshot_id": "1dc3f43823b19b5f",
+  "generated_at": "2026-10-08T03:51:32+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 46,
+      "count": 88,
       "min_date": "2026-10-01T01:34:16Z",
-      "max_date": "2026-10-06T13:25:21+00:00"
+      "max_date": "2026-10-08T03:35:21Z"
     },
     {
       "month": "2026-09",
@@ -19,9 +19,49 @@
     }
   ],
   "event_locations": {
+    "deeptutor-v1614": "2026-10",
+    "elon-musk-x-2108038296572137792": "2026-10",
+    "elon-musk-x-2108036583861485812": "2026-10",
+    "gemini-cli-nightly-20261008": "2026-10",
+    "kilo-jetbrains-719": "2026-10",
+    "pi-v110": "2026-10",
+    "kilo-jetbrains-719-rc2": "2026-10",
+    "copilot-haiku55-20261007": "2026-10",
+    "tibo-x-2107913674593644711": "2026-10",
+    "copilot-cli-1094-0": "2026-10",
+    "claude-code-v21293": "2026-10",
+    "codex-01610": "2026-10",
+    "demis-hassabis-x-2107861788301607261": "2026-10",
+    "copilot-local-sandbox-ga-20261007": "2026-10",
+    "copilot-local-model-discovery-20261007": "2026-10",
+    "copilot-cli-1093": "2026-10",
+    "openai-teens-college-planner-20261007": "2026-10",
+    "kilo-v788": "2026-10",
+    "cline-v4123": "2026-10",
+    "cline-desktop-0044": "2026-10",
+    "elon-musk-x-2107724314451878104": "2026-10",
+    "cline-cli-3069": "2026-10",
+    "cline-sdk-0091": "2026-10",
+    "tibo-x-2107676072871600470": "2026-10",
+    "gemini-cli-nightly-20261007": "2026-10",
+    "kilo-v787-preview": "2026-10",
+    "openai-gpt6-intelligent-ui-20261007": "2026-10",
+    "openrouter-elevenlabs-20261007": "2026-10",
+    "google-developer-knowledge-tooling-20261007": "2026-10",
+    "devin-notifications-security-20261007": "2026-10",
+    "tibo-x-2107578625419866469": "2026-10",
+    "gemini-cli-v0630": "2026-10",
+    "gemini-cli-v0640-preview0": "2026-10",
+    "opencode-v11835": "2026-10",
+    "google-embeddinggemma2-20261006": "2026-10",
+    "claude-code-v21292": "2026-10",
     "kilo-desktop-20261006": "2026-10",
+    "openai-math-results-20261006": "2026-10",
     "tibo-x-2107368734981517634": "2026-10",
     "claude-code-v21291": "2026-10",
+    "cursor-local-remote-control-20261006": "2026-10",
+    "anthropic-cvp-expansion-20261006": "2026-10",
+    "google-ai-edge-foresight-20261006": "2026-10",
     "claude-code-v21290": "2026-10",
     "pi-v104": "2026-10",
     "tibo-x-2107200530477101461": "2026-10",
@@ -70,7 +110,9 @@
     "google-gemini4-argon-preview": "2026-09",
     "pi-v0992": "2026-09",
     "claude-code-v21286": "2026-09",
-    "google-synthid-bio": "2026-09"
+    "google-synthid-bio": "2026-09",
+    "copilot-usage-metrics-fix-20261006": "2026-10",
+    "kiro-cli-2280": "2026-10"
   },
-  "total_events": 52
+  "total_events": 94
 }

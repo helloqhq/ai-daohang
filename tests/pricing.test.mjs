@@ -50,7 +50,7 @@ test('model access is validated, searchable and tier-specific',()=>{
   assert.equal(pricingStatus(oldRights,now),'stale');
 });
 test('pricing status flags stale quotes, paused sales and expired offers in Shanghai time',()=>{
-  const verified=snapshot.plans[0];
+  const verified={...snapshot.plans[0],checked_at:'2026-10-05'};
   assert.equal(pricingStatus(verified,now),'verified');
   assert.equal(pricingStatus(verified,new Date('2026-11-06T00:00:00Z')),'stale');
   const promo={...verified,valid_until:'2026-12-31'};
@@ -70,7 +70,8 @@ test('rendering preserves units, pending prices, English copy and safe links',()
   const subscription={...snapshot.plans.find(p=>p.id==='cursor-pro'),product_name:'<script>Product</script>',tier_name:'<script>Tier</script>',supported_models:['<img src=x onerror=alert(1)>'],models_source_urls:['javascript:alert(1)']};
   const modelHTML=renderPricing([subscription],'en',now);
   assert.ok(!modelHTML.includes('<script>'));assert.ok(!modelHTML.includes('<img'));assert.ok(!modelHTML.includes('javascript:'));assert.ok(modelHTML.includes('&lt;img'));
-  assert.ok(english.includes('Show 7 more models'));assert.ok(english.includes('Official model access'));
+  const cursor=snapshot.plans.find(p=>p.id==='cursor-pro');
+  assert.ok(english.includes(`Show ${cursor.supported_models.length-6} more models`));assert.ok(english.includes('Official model access'));
 });
 test('RSS GUIDs stay stable on rechecks and key reordering, and change with commercial terms',()=>{
   const plan=snapshot.plans[0],guid=pricingGUID(plan);

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "1dc3f43823b19b5f",
+  "snapshot_id": "2c58b3efd10a470f",
   "entities": [
     {
       "id": "openai",
@@ -128,7 +128,8 @@
       "name_en": "MiniMax",
       "pricing_provider": "MiniMax",
       "pricing_product_ids": [
-        "minimax-token-plan"
+        "minimax-token-plan",
+        "minimax-m-plan"
       ]
     },
     {

@@ -6,7 +6,7 @@
 
 ## 数据与核验
 
-`public/data/pricing.json` 是独立于新闻采集快照的人工核验目录。2026-10-08 复核原有 67 项方案的官方定价页 / 文档，新增 Claude Haiku 5.5 API 后共 68 项（API 22、Token Plan 10、Agent 36）；覆盖 OpenAI、Anthropic、Google、DeepSeek、Alibaba Cloud、Z.AI、MiniMax、Kimi、Cursor、GitHub、OpenCode、Pi、Cognition、Cline、Aider、Kilo、AWS。本轮 22 项原有记录补充或修正计费条件与权益，其余仅更新核验日期。Gemini CLI 的三个 Google 个人登录档位保留稳定 ID，标为 `paused` 并注明入口已停止服务；GLM Coding Plan 三档完整价格仍为 `pending`。新闻采集替换快照时保留独立的 `pricing.json` 与 `pricing.xml`。本轮细节见 [2026-10-08 更新记录](DATA-UPDATE-2026-10-08.md)。
+`public/data/pricing.json` 是独立于新闻采集快照的人工核验目录。2026-10-09 复核原有 68 项并新增 7 个档位，当前共 75 项（API 22、Token Plan 16、Agent 37）：63 项已核验、9 项价格待核验、3 项 Gemini CLI 个人登录入口已停止服务。新增 MiniMax M Plan Go / Explore / Build、Kimi 新套餐 Plus / Pro / Max 和 Cursor Teams Premium；原有 23 项更新条件、状态、权益或核验来源，其余 45 项仅更新核验日期。旧 Token Plan 价格本轮无法从当前官方入口重新确认，保留历史价格说明，数值置为 `null` / `pending`；Kimi 新档位价格与 GLM 三档也保留待核验。详见 [2026-10-09 更新记录](DATA-UPDATE-2026-10-09.md)。新闻快照更新继续保留独立的 `pricing.json` 与 `pricing.xml`。
 
 每项保留原币种、计费周期、适用地域 / 上下文 / 用量条件、双语说明、官方 HTTPS 来源和核验日期。API 的输入、输出、缓存读取、缓存写入采用每百万 tokens 的同一单位；缓存写入 TTL 等条件写在说明中。订阅额度维持官方口径，credits、请求数和 tokens 不互相换算，人民币和美元不按假定汇率合并。年付价格在明确核实的方案说明中保留。
 
@@ -14,7 +14,7 @@
 
 免费 Agent 使用 `billing: free` 且 `price.amount: 0`，页面和 RSS 显示「无订阅费」。OpenCode、Pi、Cline、Aider、Kilo Code 的客户端免费，自带 API Key（BYOK）、模型网关、已有订阅或云计算仍可能收费；模型系列在这些条目中表示连接能力，额度和具体型号由接入的提供商决定。Gemini CLI、Devin 和 Kiro 的免费档则有各自包含的用量上限，不能当作无限推理。
 
-新增产品的核验入口与特殊口径：
+2026-10-08 及以前收录产品的核验入口与特殊口径（当前状态以 JSON 和最新更新记录为准）：
 
 | 产品 | 官方来源 | 收录口径 |
 | --- | --- | --- |
@@ -34,6 +34,14 @@ Kimi 按档位区分 K3、1M 上下文和高速模型；Claude Pro 的 Fable 模
 本轮补齐 OpenAI API 长上下文、Batch / Flex / Fast 和 Astra Ultrafast 费率；API 的 Ultrafast 为对应 Standard 的 6 倍，Codex 订阅额度消耗为 8 倍、追加 credits 为 6 倍，不能混用。官方当前说明 Pro 无五小时限制，模型额度仍按面板重置。DeepSeek 高峰为周一至周五北京时间 09:00–12:00、14:00–18:00，中国法定节假日除外。OpenCode Go 逐模型以美元用量计额度，五小时为月上限的 20%、每周为 50%，请求数仅为估算；Go 的 Space Bunny 与 Zen 的 Space Bunny Free 分别记录。
 
 `checked_at` 是定价核验日期；`updated_at` 是本站录入或实际修改该项内容的日期，不冒充厂商发布时间。定价或模型权益超过 30 天未核验标「需重新核验」。带 `valid_until` 的活动超过北京时间截止日期后标「活动已到期」，价格划线；重新核实后再修改数据，不能把旧活动价继续当成当前价格。
+
+### 2026-10-09 权益复核
+
+MiniMax Token Plan 已停止新购，旧账号可保留自动续订及历史优惠；关闭自动续费不可重新开启。旧订阅与 M Plan 均明确使用 M3.1 Flash Preview；M Plan Explore / Build 另含 H3 视频。M Plan 标准月费为 $22 / $55 / $132，年付按 10 个月价格；首月半价活动原页写至“10 月 14 日”，未注明年份，展示标准月费并在说明中保留活动条件。视频仅受周窗口限制，其他模型同时受 5 小时和周窗口限制；Music 系列自 2026-08-20 起不包含。升级后不可返回旧 Token Plan，历史特殊优惠不再适用。
+
+Kimi 旧 Andante / Moderato / Allegretto / Allegro 保留 ID 并标明 legacy，仍受周额度和 5 小时窗口限制；新 Plus / Pro / Max 取消周限额，保留共享月总额度与 5 小时窗口。新 Go 不含 Kimi Code，因此未作为编程订阅收录。公开购买页未显示各新档位结算价，不根据“定价不变”推算名称对应关系。K3 1M 与高速模型需要新 Pro 或以上。
+
+Pro $500 同时包含 GPT-6 Astra 和 GPT-6.1 Sol Ultrafast；API Sol Ultrafast 为对应 Standard 的 6 倍，订阅额度消耗为 8 倍、追加 credits 为 6 倍。Cursor Teams Standard $40/席位/月，Premium $120，Agent 用量为 Standard 的 5 倍；第三方模型另加 $0.25 / 百万 tokens，包含用量、超额与 BYOK 均适用，自有 Grok / Composer 豁免。OpenCode Go 两档补入限时免费的 Step 5 Preview Free。Kiro 付费档补充 GPT-5.6 超过 272K tokens 后倍率翻倍及个人 US 端点条件。Kilo Pass 补齐首月、连续订阅、年付奖励与奖励过期规则。
 
 ## 更新与 RSS
 

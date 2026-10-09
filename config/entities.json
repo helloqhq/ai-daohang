@@ -127,7 +127,8 @@
       "name_en": "MiniMax",
       "pricing_provider": "MiniMax",
       "pricing_product_ids": [
-        "minimax-token-plan"
+        "minimax-token-plan",
+        "minimax-m-plan"
       ]
     },
     {

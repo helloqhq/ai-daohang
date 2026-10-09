@@ -17,7 +17,7 @@ test('the published snapshot has bilingual, dated prices with explicit units and
 });
 test('combined filters search both languages and keep original currency and category',()=>{
   const filters={category:'token-plan',currency:'CNY',provider:'Kimi',query:'code 共享'};
-  assert.equal(filterPlans(snapshot.plans,filters).length,4);
+  assert.equal(filterPlans(snapshot.plans,filters).length,7);
   assert.equal(filterPlans(snapshot.plans,{...filters,currency:'USD'}).length,0);
   assert.equal(filterPlans(snapshot.plans,{query:'No such product'}).length,0);
   assert.equal(filterPlans(snapshot.plans,{query:'  gPt-6.1   Standard '})[0].id,'gpt-6-1-sol');
@@ -27,7 +27,7 @@ test('provider and product aggregation keeps all tiers without merging distinct 
   const vendors=groupPricing(snapshot.plans);
   assert.equal(vendors.length,new Set(snapshot.plans.map(plan=>plan.provider)).size);
   assert.deepEqual(vendors.find(v=>v.provider==='OpenAI').groups.map(group=>group.category),['api','agent']);
-  assert.equal(vendors.find(v=>v.provider==='Kimi').groups.find(group=>group.product_id==='kimi-code').plans.length,4);
+  assert.equal(vendors.find(v=>v.provider==='Kimi').groups.find(group=>group.product_id==='kimi-code').plans.length,7);
   const plan=snapshot.plans.find(p=>p.id==='kimi-plan-andante');
   const distinct=[plan,{...plan,id:'other',product_id:'other'},{...plan,id:'other-vendor',provider:'Other'},{...plan,id:'other-category',category:'agent'}];
   const groups=groupPricing(distinct);
@@ -43,8 +43,8 @@ test('model access is validated, searchable and tier-specific',()=>{
     const invalid=structuredClone(snapshot);change(invalid.plans[index]);assert.throws(()=>validatePricing(invalid));
   }
   const inconsistent=structuredClone(snapshot);inconsistent.plans[index+1].product_name='Different';assert.throws(()=>validatePricing(inconsistent));
-  assert.deepEqual(filterPlans(snapshot.plans,{provider:'Kimi',category:'token-plan',query:'K3'}).map(p=>p.tier_name),['Moderato','Allegretto','Allegro']);
-  assert.deepEqual(filterPlans(snapshot.plans,{provider:'Kimi',category:'token-plan',query:'Highspeed'}).filter(p=>p.supported_models.includes('Kimi K2.7 Code Highspeed')).map(p=>p.tier_name),['Allegretto','Allegro']);
+  assert.deepEqual(filterPlans(snapshot.plans,{provider:'Kimi',category:'token-plan',query:'K3'}).map(p=>p.tier_name),['Moderato (legacy)','Allegretto (legacy)','Allegro (legacy)','Plus','Pro','Max']);
+  assert.deepEqual(filterPlans(snapshot.plans,{provider:'Kimi',category:'token-plan',query:'Highspeed'}).filter(p=>p.supported_models.includes('Kimi K2.7 Code Highspeed')).map(p=>p.tier_name),['Allegretto (legacy)','Allegro (legacy)','Pro','Max']);
   assert.deepEqual(filterPlans(snapshot.plans,{provider:'GitHub',category:'agent',query:'GPT-6.1 Sol'}).map(p=>p.tier_name),['Pro+','Max']);
   const oldRights={...snapshot.plans[index],models_checked_at:'2026-08-01'};
   assert.equal(pricingStatus(oldRights,now),'stale');

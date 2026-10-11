@@ -6,6 +6,8 @@
 
 ## 数据与核验
 
+2026-10-11 复核原有目录并新增 B.AI Claude Haiku 5.5，现有 104 项（API 49、Token Plan 18、Agent 37）。修正 Kilo Pass 首月 / 第二月奖励，补齐 Kiro 追加 credits 与 B.AI 赠送 Credits 有效期；9 项结算价仍待核验，3 项 Gemini CLI 个人入口仍停服。Google 当前 API 价格页未列出的 Gemini 3.7 Flash / 3.5 Flash 保留原核验日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-11.md)。
+
 2026-10-10 新增硅基流动、B.AI、WorldRouter 共 26 个 API 模型及 B.AI 两个订阅档位；目录现有 103 项（API 48、Token Plan 18、Agent 37）。WorldRouter 保留 Credits 原价，页面、筛选与 RSS 支持积分单位，未核实美元兑换比例时不换算。各平台同名模型独立分组，分时价格、长上下文和活动条件分别保留。详见 [平台来源与计费更新](PLATFORM-SOURCES-2026-10-10.md)。
 
 `public/data/pricing.json` 是独立于新闻采集快照的人工核验目录。2026-10-09 复核原有 68 项并新增 7 个档位，当轮共 75 项（API 22、Token Plan 16、Agent 37）：63 项已核验、9 项价格待核验、3 项 Gemini CLI 个人登录入口已停止服务。新增 MiniMax M Plan Go / Explore / Build、Kimi 新套餐 Plus / Pro / Max 和 Cursor Teams Premium；原有 23 项更新条件、状态、权益或核验来源，其余 45 项仅更新核验日期。旧 Token Plan 价格本轮无法从当前官方入口重新确认，保留历史价格说明，数值置为 `null` / `pending`；Kimi 新档位价格与 GLM 三档也保留待核验。详见 [2026-10-09 更新记录](DATA-UPDATE-2026-10-09.md)。新闻快照更新继续保留独立的 `pricing.json` 与 `pricing.xml`。

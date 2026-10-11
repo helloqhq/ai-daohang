@@ -7,7 +7,7 @@ const categoryKey={'api':'pricingAPI','token-plan':'pricingTokenPlan','agent':'p
 const text=(plan,key,language)=>plan[`${key}_${language}`];
 const amount=value=>new Intl.NumberFormat('en-US',{maximumFractionDigits:4}).format(value);
 export function priceLabel(value,currency) {
-  return value===null || value===undefined ? '—' : `${currency==='CNY'?'¥':'$'}${amount(value)}`;
+  return value===null || value===undefined ? '—' : currency==='CREDITS' ? `${amount(value)} Credits` : `${currency==='CNY'?'¥':'$'}${amount(value)}`;
 }
 export function billingLabel(billing,language='zh') {
   return translate(language,{'monthly-from':'pricingFrom','seat-monthly':'pricingPerSeat',free:'pricingNoSubscription'}[billing]||'pricingPerMonth');
@@ -41,7 +41,7 @@ export function validatePricing(data) {
   for(const plan of data.plans) {
     if(!/^[a-z0-9-]+$/.test(plan.id)||ids.has(plan.id)) throw new Error('Invalid or duplicate plan ID');
     ids.add(plan.id);
-    if(!PRICING_CATEGORIES.includes(plan.category)||!['USD','CNY'].includes(plan.currency)||!['verified','pending','paused'].includes(plan.status)) throw new Error(`Invalid category, currency or status: ${plan.id}`);
+    if(!PRICING_CATEGORIES.includes(plan.category)||!['USD','CNY','CREDITS'].includes(plan.currency)||!['verified','pending','paused'].includes(plan.status)) throw new Error(`Invalid category, currency or status: ${plan.id}`);
     if(!['token','monthly','monthly-from','seat-monthly','free'].includes(plan.billing)||(plan.category==='api')!==(plan.billing==='token')) throw new Error(`Invalid billing unit: ${plan.id}`);
     if(plan.billing==='free'&&(plan.category!=='agent'||plan.price?.amount!==0)) throw new Error(`Invalid free agent price: ${plan.id}`);
     for(const key of ['provider','name','scope_zh','scope_en','note_zh','note_en']) if(typeof plan[key]!=='string'||!plan[key].trim()) throw new Error(`Missing ${key}: ${plan.id}`);

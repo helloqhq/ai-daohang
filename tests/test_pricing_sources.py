@@ -1,9 +1,12 @@
 """Every priced provider/product must have a registered dynamic source."""
 import json
 import unittest
+import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'scripts'))
+from converters.official import SOURCES
 
 class PricingSourceTests(unittest.TestCase):
     def test_priced_products_and_api_providers_have_enabled_verified_sources(self):
@@ -18,5 +21,11 @@ class PricingSourceTests(unittest.TestCase):
             with self.subTest(plan=plan['id']):
                 if plan['category']=='api':self.assertIn(plan['provider'],providers)
                 else:self.assertIn(plan['product_id'],products)
+
+    def test_offline_conversion_flags_have_executable_converters(self):
+        sources=json.loads((ROOT/'config/sources.json').read_text())['sources']
+        for source in sources:
+            if source['enabled'] and source.get('offline_conversion'):
+                with self.subTest(source=source['id']):self.assertIn(source['id'],SOURCES)
 
 if __name__=='__main__':unittest.main()

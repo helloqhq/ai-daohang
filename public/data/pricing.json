@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-09",
+  "checked_at": "2026-10-10",
   "plans": [
     {
       "id": "gpt-6-astra",
@@ -2530,6 +2530,640 @@
         "https://cursor.com/docs/models-and-pricing"
       ],
       "models_checked_at": "2026-10-09"
+    },
+    {
+      "id": "siliconflow-deepseek-v4-flash",
+      "category": "api",
+      "provider": "硅基流动 SiliconFlow",
+      "name": "DeepSeek-V4-Flash",
+      "currency": "CNY",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 3,
+        "output": 9,
+        "cached": 0.3,
+        "cache_write": null
+      },
+      "scope_zh": "北京时间 00–02 / 08–24 时 · deepseek-ai/DeepSeek-V4-Flash",
+      "scope_en": "UTC+8 00:00–02:00 / 08:00–24:00 · deepseek-ai/DeepSeek-V4-Flash",
+      "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。 展示每日常规时段价；北京时间每日 02:00–08:00 每百万 tokens 输入 ¥1.5、输出 ¥4.5、缓存读取 ¥0.15。该时段与 DeepSeek 原厂及其他平台不同。",
+      "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices. Regular-window rates are shown. Daily 02:00–08:00 UTC+8 costs CNY 1.5 input, 4.5 output and 0.15 cache read per million tokens. This schedule differs from the originator and other platforms.",
+      "source_url": "https://siliconflow.cn/pricing",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "siliconflow-deepseek-v4-pro",
+      "category": "api",
+      "provider": "硅基流动 SiliconFlow",
+      "name": "DeepSeek-V4-Pro",
+      "currency": "CNY",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 12,
+        "output": 24,
+        "cached": 1,
+        "cache_write": null
+      },
+      "scope_zh": "国内 API · deepseek-ai/DeepSeek-V4-Pro",
+      "scope_en": "Domestic API · deepseek-ai/DeepSeek-V4-Pro",
+      "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
+      "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
+      "source_url": "https://siliconflow.cn/pricing",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "siliconflow-glm-5-3",
+      "category": "api",
+      "provider": "硅基流动 SiliconFlow",
+      "name": "GLM-5.3",
+      "currency": "CNY",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 8,
+        "output": 28,
+        "cached": 2,
+        "cache_write": null
+      },
+      "scope_zh": "国内 API · zai-org/GLM-5.3",
+      "scope_en": "Domestic API · zai-org/GLM-5.3",
+      "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
+      "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
+      "source_url": "https://siliconflow.cn/pricing",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "siliconflow-glm-5-3-flash",
+      "category": "api",
+      "provider": "硅基流动 SiliconFlow",
+      "name": "GLM-5.3-Flash",
+      "currency": "CNY",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 0.8,
+        "output": 2.8,
+        "cached": 0.23,
+        "cache_write": null
+      },
+      "scope_zh": "国内 API · zai-org/GLM-5.3-Flash",
+      "scope_en": "Domestic API · zai-org/GLM-5.3-Flash",
+      "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
+      "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
+      "source_url": "https://siliconflow.cn/pricing",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "siliconflow-kimi-k2-7-code",
+      "category": "api",
+      "provider": "硅基流动 SiliconFlow",
+      "name": "Kimi-K2.7-Code",
+      "currency": "CNY",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 6.5,
+        "output": 27,
+        "cached": 1.3,
+        "cache_write": null
+      },
+      "scope_zh": "国内 API · moonshotai/Kimi-K2.7-Code",
+      "scope_en": "Domestic API · moonshotai/Kimi-K2.7-Code",
+      "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
+      "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
+      "source_url": "https://siliconflow.cn/pricing",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "siliconflow-qwen3-8-27b",
+      "category": "api",
+      "provider": "硅基流动 SiliconFlow",
+      "name": "Qwen3.8-27B",
+      "currency": "CNY",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 3,
+        "output": 12,
+        "cached": null,
+        "cache_write": null
+      },
+      "scope_zh": "国内 API · Qwen/Qwen3.8-27B",
+      "scope_en": "Domestic API · Qwen/Qwen3.8-27B",
+      "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
+      "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
+      "source_url": "https://siliconflow.cn/pricing",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "siliconflow-hy4-preview",
+      "category": "api",
+      "provider": "硅基流动 SiliconFlow",
+      "name": "Hy4 preview",
+      "currency": "CNY",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 6,
+        "output": 18,
+        "cached": 0.3,
+        "cache_write": null
+      },
+      "scope_zh": "国内 API · tencent/Hy4-preview",
+      "scope_en": "Domestic API · tencent/Hy4-preview",
+      "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
+      "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
+      "source_url": "https://siliconflow.cn/pricing",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "siliconflow-longcat-2-0",
+      "category": "api",
+      "provider": "硅基流动 SiliconFlow",
+      "name": "LongCat-2.0",
+      "currency": "CNY",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 5,
+        "output": 20,
+        "cached": 0.1,
+        "cache_write": null
+      },
+      "scope_zh": "国内 API · meituan-longcat/LongCat-2.0",
+      "scope_en": "Domestic API · meituan-longcat/LongCat-2.0",
+      "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
+      "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
+      "source_url": "https://siliconflow.cn/pricing",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-gpt-6-1-sol",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "GPT-6.1 Sol",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 2,
+        "output": 10,
+        "cached": 0.1,
+        "cache_write": 2.5
+      },
+      "scope_zh": "B.AI · 输入 ≤272K",
+      "scope_en": "B.AI · Input ≤272K",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 输入超过 272K 后整次请求每百万 tokens 输入 $4、输出 $15、缓存读取 $0.20、写入 $5。缓存写入替代该部分普通输入收费，TTL 30 分钟；推理 tokens 按输出计费，网页搜索另收 $0.01/次。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Above 272K input tokens, the entire request costs $4 input, $15 output, $0.20 cache read and $5 cache write per million tokens. Writes replace the ordinary input charge for those tokens; TTL is 30 minutes. Reasoning tokens bill as output and web search costs $0.01/use.",
+      "source_url": "https://docs.b.ai/llmservice/models/gpt-6-1-sol/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-claude-opus-5-5",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "Claude Opus 5.5",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 4,
+        "output": 20,
+        "cached": 0.2,
+        "cache_write": 5
+      },
+      "scope_zh": "B.AI · 5 分钟缓存写入",
+      "scope_en": "B.AI · 5-minute cache writes",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 无长上下文加价；1 小时缓存写入 $8/百万 tokens，缓存至少 512 tokens。网页搜索另收 $0.01/次。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. No long-context premium. One-hour cache writes cost $8/million tokens; eligible prompts need at least 512 tokens. Web search costs $0.01/use.",
+      "source_url": "https://docs.b.ai/llmservice/models/claude-opus-5.5/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-gemini-3-8-flash",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "Gemini 3.8 Flash",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 0.75,
+        "output": 3.75,
+        "cached": 0.075,
+        "cache_write": 0.75
+      },
+      "scope_zh": "B.AI · 标准文本输出",
+      "scope_en": "B.AI · Standard text output",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 网页搜索另收 $0.014/次；显式缓存存储至 2026-12-31 为 $0.50/百万 tokens/小时，自 2027-01-01 起为 $1。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Web search costs $0.014/use. Explicit cache storage costs $0.50/million tokens/hour through 2026-12-31 and $1 from 2027-01-01.",
+      "source_url": "https://docs.b.ai/llmservice/models/gemini-3-8-flash/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-deepseek-v4-1-flash",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "DeepSeek-V4.1-Flash",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cached": 0.006,
+        "cache_write": 0.3
+      },
+      "scope_zh": "B.AI · 标准高峰 API",
+      "scope_en": "B.AI · Standard peak API",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 高峰为北京时间周一至周五 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间每百万 tokens 输入 $0.15、输出 $0.60、缓存读取 $0.003、写入 $0.15。Chat 按非高峰价。2026-10-04 10:00 UTC+8 起符合条件的活动用量按对应标准价 60% 结算，结束时间未公开，以平台为准。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Peak is Monday–Friday 09:00–12:00 and 14:00–18:00 UTC+8, excluding Chinese public holidays. Off-peak input/output/cache read/write rates are $0.15/$0.60/$0.003/$0.15 per million tokens. Chat uses off-peak rates. Eligible promotional usage costs 60% of the applicable standard rate from 2026-10-04 10:00 UTC+8; no end date is published and platform terms prevail.",
+      "source_url": "https://docs.b.ai/llmservice/models/deepseek-v4-1-flash/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-kimi-k3",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "Kimi K3",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 3,
+        "output": 15,
+        "cached": 0.3,
+        "cache_write": 3
+      },
+      "scope_zh": "B.AI · 标准参考价",
+      "scope_en": "B.AI · Standard reference",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 缓存写入与输入同价；保留平台实际用量计费口径。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Cache writes use the input rate; platform usage records determine billing.",
+      "source_url": "https://docs.b.ai/llmservice/models/kimi-k3/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-glm-5-3",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "GLM-5.3",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 1.4,
+        "output": 4.4,
+        "cached": 0.28,
+        "cache_write": 1.4
+      },
+      "scope_zh": "B.AI · 标准参考价",
+      "scope_en": "B.AI · Standard reference",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 表格不将临时活动价作为永久价格；实际活动资格和结算以平台为准。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Temporary promotional rates are not treated as permanent prices; platform eligibility and settlement prevail.",
+      "source_url": "https://docs.b.ai/llmservice/models/glm-5-3/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-minimax-m3",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "MiniMax M3",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 0.3,
+        "output": 1.2,
+        "cached": 0.06,
+        "cache_write": 0.3
+      },
+      "scope_zh": "B.AI · 标准参考价",
+      "scope_en": "B.AI · Standard reference",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 缓存写入与输入同价。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Cache writes use the input rate.",
+      "source_url": "https://docs.b.ai/llmservice/models/minimax-m3/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-mimo-v2-6-flash",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "MiMo-V2.6-Flash",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 0.14,
+        "output": 0.28,
+        "cached": 0.0028,
+        "cache_write": 0.14
+      },
+      "scope_zh": "B.AI · 标准参考价 · 非活动价",
+      "scope_en": "B.AI · Standard reference · before promotion",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 2026-09-25 15:00 UTC+8 起符合条件用量按标准参考价 10% 结算；结束时间未公开，活动资格和结算以平台为准。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Eligible usage costs 10% of standard rates from 2026-09-25 15:00 UTC+8. No end date is published; platform eligibility and settlement prevail.",
+      "source_url": "https://docs.b.ai/llmservice/models/mimo-v2.6-flash/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-qwen3-8-max",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "Qwen3.8-Max",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 2,
+        "output": 6,
+        "cached": 0.25,
+        "cache_write": 2
+      },
+      "scope_zh": "B.AI · 标准参考价",
+      "scope_en": "B.AI · Standard reference",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 缓存读取采用隐式缓存价格。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Cache reads use the implicit-cache rate.",
+      "source_url": "https://docs.b.ai/llmservice/models/qwen3.8-max/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "worldrouter-gpt-6-astra",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "GPT-6 Astra",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 700,
+        "output": 3500,
+        "cached": 70,
+        "cache_write": 875
+      },
+      "scope_zh": "WorldRouter · 输入 0–272K",
+      "scope_en": "WorldRouter · Input 0–272K",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 272K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 1400/5250/140/1750 Credits。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 272K–1M input, input/output/cache read/write rates are 1400/5250/140/1750 Credits per million tokens.",
+      "source_url": "https://router.worldclaw.ai/models/gpt-6-astra",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "worldrouter-claude-opus-5-5",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "Claude Opus 5.5",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 280,
+        "output": 1400,
+        "cached": 14,
+        "cache_write": 350
+      },
+      "scope_zh": "WorldRouter · 平台文本 API",
+      "scope_en": "WorldRouter · Platform text API",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails.",
+      "source_url": "https://router.worldclaw.ai/models/claude-opus-5-5",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "worldrouter-gemini-3-1-pro-preview",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "Gemini 3.1 Pro Preview",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 140,
+        "output": 840,
+        "cached": 14,
+        "cache_write": 140
+      },
+      "scope_zh": "WorldRouter · 输入 0–200K",
+      "scope_en": "WorldRouter · Input 0–200K",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 200K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 280/1260/28/280 Credits。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 200K–1M input, input/output/cache read/write rates are 280/1260/28/280 Credits per million tokens.",
+      "source_url": "https://router.worldclaw.ai/models/gemini-3.1-pro-preview",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "worldrouter-deepseek-v4-flash",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "DeepSeek V4 Flash",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 30.8,
+        "output": 92.4,
+        "cached": 0.98,
+        "cache_write": 30.8
+      },
+      "scope_zh": "WorldRouter · UTC 高峰时段",
+      "scope_en": "WorldRouter · UTC peak window",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 官方高峰时段为 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 15.4/46.2/0.49/15.4 Credits。页面未明确周末和节假日例外，不沿用其他平台日历。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. The published peak windows are UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 15.4/46.2/0.49/15.4 Credits for input/output/cache read/write. No weekend or holiday exception is specified; other platforms’ calendars are not assumed.",
+      "source_url": "https://router.worldclaw.ai/models/deepseek-v4-flash",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "worldrouter-deepseek-v4-pro",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "DeepSeek V4 Pro",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 92.4,
+        "output": 277.2,
+        "cached": 3.08,
+        "cache_write": 92.4
+      },
+      "scope_zh": "WorldRouter · UTC 高峰时段",
+      "scope_en": "WorldRouter · UTC peak window",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 官方高峰时段为 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 46.2/138.6/1.54/46.2 Credits。页面未明确周末和节假日例外。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. The published peak windows are UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 46.2/138.6/1.54/46.2 Credits for input/output/cache read/write. No weekend or holiday exception is specified.",
+      "source_url": "https://router.worldclaw.ai/models/deepseek-v4-pro",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "worldrouter-kimi-k3",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "Kimi K3",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 210,
+        "output": 1050,
+        "cached": 21,
+        "cache_write": 210
+      },
+      "scope_zh": "WorldRouter · 平台文本 API",
+      "scope_en": "WorldRouter · Platform text API",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails.",
+      "source_url": "https://router.worldclaw.ai/models/kimi-k3",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "worldrouter-glm-5-3",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "GLM-5.3",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 98,
+        "output": 308,
+        "cached": 18.2,
+        "cache_write": 98
+      },
+      "scope_zh": "WorldRouter · 平台文本 API",
+      "scope_en": "WorldRouter · Platform text API",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails.",
+      "source_url": "https://router.worldclaw.ai/models/glm-5.3",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "worldrouter-minimax-m3",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "MiniMax M3",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 30,
+        "output": 120,
+        "cached": 6,
+        "cache_write": null
+      },
+      "scope_zh": "WorldRouter · 输入 0–512K",
+      "scope_en": "WorldRouter · Input 0–512K",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 512K–1M 的每百万 tokens 输入/输出/缓存读取为 60/240/12 Credits；缓存写入标为 N/A，不视为免费。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 512K–1M input, input/output/cache read rates are 60/240/12 Credits per million tokens. Cache writes are listed as N/A and are not assumed free.",
+      "source_url": "https://router.worldclaw.ai/models/MiniMax-M3",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "worldrouter-mimo-v2-5",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "MiMo V2.5",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 40,
+        "output": 200,
+        "cached": 8,
+        "cache_write": 40
+      },
+      "scope_zh": "WorldRouter · 输入 0–256K",
+      "scope_en": "WorldRouter · Input 0–256K",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 256K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 80/400/16/80 Credits。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 256K–1M input, input/output/cache read/write rates are 80/400/16/80 Credits per million tokens.",
+      "source_url": "https://router.worldclaw.ai/models/mimo-v2.5",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-plan-pro",
+      "category": "token-plan",
+      "provider": "B.AI",
+      "name": "B.AI Plan Pro",
+      "product_id": "b-ai-plan",
+      "product_name": "B.AI Plan",
+      "tier_name": "Pro",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 200
+      },
+      "scope_zh": "约 50–500 条消息 / 滚动 12 小时",
+      "scope_en": "Approx. 50–500 messages / rolling 12 hours",
+      "note_zh": "官方消息数是约值，受系统负载影响；额度随滚动窗口逐步释放。额度耗尽后自动消耗充值 Credits，二者均不足时功能停用；不视为无限用量。 Pro 购买需有效邀请码，可升级 Max。",
+      "note_en": "Message counts are approximate and depend on system load. Capacity releases gradually within a rolling window. Exhausted subscription capacity falls back to top-up Credits; features stop if both run out. This is not unlimited usage. Pro requires a valid invite code and can be upgraded to Max.",
+      "supported_models": [
+        "B.AI full-series models (IDs not enumerated)"
+      ],
+      "models_note_zh": "官方仅声明全系列模型接入。 未逐档列出型号、API 覆盖或各模型扣量规则，以上 API 选集不代表套餐逐项权益；具体以平台为准。含官方精选 BAIclaw skills。",
+      "models_note_en": "The documentation describes full-series model access. It does not enumerate tier-specific models, API coverage or per-model allowance consumption. The selected API catalog is not a tier-by-tier entitlement list; platform terms prevail. Curated BAIclaw skills are included.",
+      "models_source_urls": [
+        "https://docs.b.ai/llmservice/pricing-and-usage/"
+      ],
+      "models_checked_at": "2026-10-10",
+      "source_url": "https://docs.b.ai/llmservice/pricing-and-usage/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
+    },
+    {
+      "id": "b-ai-plan-max",
+      "category": "token-plan",
+      "provider": "B.AI",
+      "name": "B.AI Plan Max",
+      "product_id": "b-ai-plan",
+      "product_name": "B.AI Plan",
+      "tier_name": "Max",
+      "currency": "USD",
+      "billing": "monthly",
+      "status": "verified",
+      "price": {
+        "amount": 2000
+      },
+      "scope_zh": "约 500–5,000 条消息 / 滚动 12 小时",
+      "scope_en": "Approx. 500–5,000 messages / rolling 12 hours",
+      "note_zh": "官方消息数是约值，受系统负载影响；额度随滚动窗口逐步释放。额度耗尽后自动消耗充值 Credits，二者均不足时功能停用；不视为无限用量。 Max 提供更高额度、优先体验 beta 模型和专属支持。",
+      "note_en": "Message counts are approximate and depend on system load. Capacity releases gradually within a rolling window. Exhausted subscription capacity falls back to top-up Credits; features stop if both run out. This is not unlimited usage. Max includes a higher allowance, priority beta-model access and dedicated support.",
+      "supported_models": [
+        "Beta models (priority access; IDs not enumerated)"
+      ],
+      "models_note_zh": "官方声明 beta 模型优先体验，未提供完整模型清单。 未逐档列出型号、API 覆盖或各模型扣量规则，以上 API 选集不代表套餐逐项权益；具体以平台为准。含官方精选 BAIclaw skills。",
+      "models_note_en": "The documentation describes priority beta-model access without a complete model list. It does not enumerate tier-specific models, API coverage or per-model allowance consumption. The selected API catalog is not a tier-by-tier entitlement list; platform terms prevail. Curated BAIclaw skills are included.",
+      "models_source_urls": [
+        "https://docs.b.ai/llmservice/pricing-and-usage/"
+      ],
+      "models_checked_at": "2026-10-10",
+      "source_url": "https://docs.b.ai/llmservice/pricing-and-usage/",
+      "checked_at": "2026-10-10",
+      "updated_at": "2026-10-10"
     }
   ]
 }

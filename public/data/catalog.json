@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "2c58b3efd10a470f",
+  "snapshot_id": "e90310b850671f3f",
   "entities": [
     {
       "id": "openai",
@@ -196,6 +196,55 @@
       "enabled": true,
       "color": "#476c91",
       "name_en": "OpenRouter"
+    },
+    {
+      "id": "siliconflow",
+      "name": "硅基流动",
+      "name_en": "SiliconFlow",
+      "aliases": [
+        "硅基流动",
+        "SiliconFlow",
+        "SiliconCloud"
+      ],
+      "category": "model",
+      "kind": "api_platform",
+      "enabled": true,
+      "color": "#7157a6",
+      "pricing_provider": "硅基流动 SiliconFlow"
+    },
+    {
+      "id": "b-ai",
+      "name": "B.AI",
+      "name_en": "B.AI",
+      "aliases": [
+        "b.ai",
+        "B.AI",
+        "Bank of AI",
+        "bankofai"
+      ],
+      "category": "model",
+      "kind": "api_platform",
+      "enabled": true,
+      "color": "#297966",
+      "pricing_provider": "B.AI",
+      "pricing_product_ids": [
+        "b-ai-plan"
+      ]
+    },
+    {
+      "id": "worldrouter",
+      "name": "WorldRouter",
+      "name_en": "WorldRouter",
+      "aliases": [
+        "WorldRouter",
+        "world router",
+        "WorldClaw Router"
+      ],
+      "category": "model",
+      "kind": "api_platform",
+      "enabled": true,
+      "color": "#b56a30",
+      "pricing_provider": "WorldRouter"
     },
     {
       "id": "nvidia",
@@ -1850,6 +1899,112 @@
       "feed_checked_at": "2026-10-06",
       "subscription_note": "订阅官方 MiMo Code 仓库的发布说明，包括其中正式公布的 MiMo 模型更新；不采纳用户 Issue 作为官方公告，不代表覆盖全部 API 计费变化。",
       "subscription_note_en": "Tracks official MiMo Code release notes, including MiMo model updates announced there. User issues are not official announcements, and this does not cover all API pricing changes."
+    },
+    {
+      "id": "siliconflow-updates",
+      "name": "硅基流动更新公告",
+      "name_en": "SiliconFlow Updates",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "url": "https://docs.siliconflow.cn/docs/release-notes/overview",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://siliconflow.cn/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "offline_conversion": true,
+      "feed_checked_at": "2026-10-09",
+      "subscription_note": "按需转换官方日期标签对应的公告段落；公告日期与模型下线、价格生效日期分别保留。尚未执行正式采集，完整时间窗未确认。",
+      "subscription_note_en": "Converts announcement sections using their official date labels on demand. Announcement dates are kept separate from model retirement and price-effective dates. Formal collection has not run; complete-window coverage remains unconfirmed."
+    },
+    {
+      "id": "siliconflow-news",
+      "name": "硅基流动官方资讯",
+      "name_en": "SiliconFlow News",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "url": "https://siliconflow.cn/news",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://siliconflow.cn/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "offline_conversion": true,
+      "feed_checked_at": "2026-10-09",
+      "subscription_note": "按需转换官方资讯首屏与查询窗内文章，保留卡片发表日期；首屏含置顶文章，不代表全部历史。尚未执行正式采集。",
+      "subscription_note_en": "Converts the first page of official news and in-window article text on demand, retaining card publication dates. Pinned articles are included; the first page is not the full archive. Formal collection has not run."
+    },
+    {
+      "id": "b-ai-x",
+      "name": "B.AI · X",
+      "name_en": "B.AI · X",
+      "entity_ids": [
+        "b-ai"
+      ],
+      "url": "https://x.com/BAI_AGI",
+      "platform": "x",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://b.ai/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "offline_conversion": true,
+      "feed_checked_at": "2026-10-09",
+      "subscription_note": "官网反链核实账号；匿名公开页本轮解析到5 条本人帖子及日期，仅取得部分文字材料，不保证完整时间线。尚未执行正式采集。",
+      "subscription_note_en": "The official website links to this account. This check parsed five posts by the account with dates and partial text; it does not establish a complete timeline. Formal collection has not run.",
+      "account_handle": "BAI_AGI"
+    },
+    {
+      "id": "worldrouter-x",
+      "name": "WorldRouter / WorldClaw · X",
+      "name_en": "WorldRouter / WorldClaw · X",
+      "entity_ids": [
+        "worldrouter"
+      ],
+      "url": "https://x.com/WorldClawAI",
+      "platform": "x",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://router.worldclaw.ai/",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "offline_conversion": true,
+      "feed_checked_at": "2026-10-09",
+      "subscription_note": "WorldRouter 官网反链至 WorldClaw 官方账号；关注 Router 模型接入、价格和服务变化，其他产品内容按相关性筛选。匿名页本轮解析5 条本人帖子及日期，不保证完整时间线。尚未执行正式采集。",
+      "subscription_note_en": "WorldRouter links to the official WorldClaw account. Router model access, pricing and service changes are followed; other products are filtered for relevance. This check parsed five posts with dates, not a complete timeline. Formal collection has not run.",
+      "account_handle": "WorldClawAI"
     }
   ],
   "people": [

@@ -18,7 +18,8 @@ SOURCES=('anthropic-official','deepseek-official','qwen-official','meta-official
          'google-official','openai-x','zcode-x','elon-musk-x','demis-hassabis-x',
          'jeff-dean-x','tibo-x','openai-tiktok','mark-zuckerberg-threads',
          'devin-changelog','cognition-blog','glm-coding-notices','minimax-plan-notices',
-         'google-developers-blog')
+         'google-developers-blog','siliconflow-updates','siliconflow-news',
+         'b-ai-x','worldrouter-x')
 
 
 def date_text(text):
@@ -59,7 +60,17 @@ def nearby(link,base):
 
 def sections(tree,source):
     sid=source['id'];base=source['url'];out=[]
-    if sid in ('zhipu-official','qoder-official','devin-changelog'):
+    if sid=='siliconflow-updates':
+        for n in tree.nodes('div'):
+            if not {'flex','gap-4'} <= set(n.attrs.get('class','').split()):continue
+            children=[c for c in n.children if isinstance(c,Node)]
+            if len(children)!=2:continue
+            label,body=children;heading=body.first('h3')
+            if not heading or not re.fullmatch(r'20\d{2}\.\d{2}\.\d{2}',label.text()):continue
+            date=date_text(label.text().replace('.','-'));anchor=heading.attrs.get('id')
+            if not date or not anchor:raise SourceError('硅基流动公告日期或锚点无效')
+            out.append(item(heading.text(),base+'#'+anchor,body.text(),date,True))
+    elif sid in ('zhipu-official','qoder-official','devin-changelog'):
         for n in tree.nodes('div'):
             if 'update-container' not in n.attrs.get('class','').split():continue
             text=n.text().replace('\u200b','');date=date_text(n.attrs.get('id','').replace('-',' ')) or date_text(n.attrs.get('id','')) or date_text(text)
@@ -103,11 +114,13 @@ def article_text(tree,sid):
              'google-developers-blog':('inner-block-content',),
              'dario-blog':('rich-text','w-richtext','essay-content'),
              'grok-official':('prose',), 'moonshot-official':('prose','blog-content'),
-             'minimax-official':('prose','blog-content'), 'meta-official':('article-body',)}
+             'minimax-official':('prose','blog-content'), 'meta-official':('article-body',),
+             'siliconflow-news':('sf_f_md_style',)}
     candidates=[n for n in tree.nodes() if n.tag in ('div','section','article') and any(m in n.attrs.get('class','') for m in markers.get(sid,())) and n.text()]
     # Outer containers include all rich-text blocks; exclude nested duplicates.
     selected=[n for n in candidates if not any(n is child for p in candidates if p is not n for child in p.nodes())]
     if selected:return '\n\n'.join(n.text() for n in selected)
+    if sid=='siliconflow-news':return ''
     article=tree.first('article')
     return article.text() if article else ''
 
@@ -242,6 +255,29 @@ def convert(source,fetch,since,until,reconcile=()):
             if not rows:raise SourceError('混元文章列表分页不完整')
             page+=1
     tree=parse_html(fetch(base))
+    if sid=='siliconflow-news':
+        out=[];seen=set()
+        for link in tree.nodes('a'):
+            href=link.attrs.get('href','')
+            if not re.fullmatch(r'/news/[a-z0-9]+',href):continue
+            # Both the pinned card and article rows have one article and their own date label.
+            card=link.parent
+            while card and card.tag not in ('main','body'):
+                heading=card.first('h3')
+                labels=[n.text() for n in card.nodes('div') if re.fullmatch(r'20\d{2}-\d{2}-\d{2}',n.text())]
+                urls={a.attrs.get('href') for a in card.nodes('a') if re.fullmatch(r'/news/[a-z0-9]+',a.attrs.get('href',''))}
+                if heading and len(labels)==1 and urls=={href}:break
+                card=card.parent
+            if not card or card.tag in ('main','body'):continue
+            url=absolute(base,href)
+            if url in seen:continue
+            seen.add(url);date=date_text(labels[0]);row=item(heading.text(),url,card.text(),date)
+            if in_window(date,since,until) or url in reconcile:
+                body=article_text(parse_html(fetch(url)),sid)
+                if body:row.update(text=body,full=True)
+            out.append(row)
+        if not out:raise SourceError('未找到带发表日期的硅基流动资讯卡片')
+        return out
     if sid in ('glm-coding-notices','minimax-plan-notices'):
         paths=('/devpack/notice/','/devpack/transition') if sid=='glm-coding-notices' else ('/docs/m-plan/',)
         links={absolute(base,a.attrs['href']) for a in tree.nodes('a') if a.attrs.get('href') and any(p in a.attrs['href'] for p in paths)}
@@ -276,7 +312,7 @@ def convert(source,fetch,since,until,reconcile=()):
     if source['platform']=='x':return x_posts(tree,source)
     if sid in ('openai-tiktok','mark-zuckerberg-threads'):return social_json(tree,source)
     out=sections(tree,source)
-    if sid in ('zhipu-official','qoder-official','trae-official','deepseek-official','zcode-official','devin-changelog'):
+    if sid in ('zhipu-official','qoder-official','trae-official','deepseek-official','zcode-official','devin-changelog','siliconflow-updates'):
         if not out:raise SourceError('未找到带日期的官方更新段落，转换规则需要复核')
         return out
     if sid in ('google-official','google-developers-blog'):

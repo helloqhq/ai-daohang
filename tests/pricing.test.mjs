@@ -37,6 +37,20 @@ test('provider and product aggregation keeps all tiers without merging distinct 
   assert.equal((html.match(/data-pricing-plan=/g)||[]).length,snapshot.plans.length);
   assert.equal((html.match(/data-pricing-product="kimi-code"/g)||[]).length,1);
 });
+test('platform credits preserve their native unit in filters, HTML and RSS',()=>{
+  const plan={...snapshot.plans[0],id:'worldrouter-unit-check',provider:'WorldRouter',currency:'CREDITS',note_zh:'按平台积分结算，兑换比例未核实。',note_en:'Billed in platform credits; conversion rate unverified.',price:{input:30,output:120,cached:null,cache_write:null}};
+  const data={...snapshot,plans:[plan]};
+  assert.equal(validatePricing(data),data);
+  assert.equal(priceLabel(30,'CREDITS'),'30 Credits');
+  assert.equal(priceLabel(0,'CREDITS'),'0 Credits');
+  assert.equal(priceLabel(null,'CREDITS'),'—');
+  assert.equal(filterPlans(data.plans,{currency:'USD'}).length,0);
+  assert.equal(filterPlans(data.plans,{currency:'CREDITS'}).length,1);
+  for(const output of [renderPricing(data.plans,'zh',now),renderPricing(data.plans,'en',now),renderPricingRSS(data)]) {
+    assert.ok(output.includes('30 Credits'));assert.ok(output.includes('120 Credits'));
+    assert.ok(!output.includes('$30'));assert.ok(!output.includes('$120'));
+  }
+});
 test('model access is validated, searchable and tier-specific',()=>{
   const index=snapshot.plans.findIndex(p=>p.id==='kimi-plan-andante');
   for(const change of [p=>p.supported_models=[],p=>p.supported_models=['K3','K3'],p=>p.supported_models=[null],p=>p.product_id='Bad ID',p=>p.tier_name='',p=>p.models_note_en='',p=>p.models_source_urls=[],p=>p.models_source_urls=['javascript:alert(1)'],p=>p.models_checked_at='9999-01-01']) {

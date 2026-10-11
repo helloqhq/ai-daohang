@@ -148,3 +148,9 @@ YouTube、TikTok、X、Threads、微信公众号加入来源平台范围。默�
 2026-10-03 已登记全部关注对象。GitHub 发布记录使用官方 releases.atom，Claude Code 也改用发布订阅；OpenAI、Google DeepMind、Cursor、美团、Sam Altman 和 OpenAI YouTube 配置原生订阅。Anthropic、DeepSeek、Qwen、Meta、X 与 TikTok 配置 RSSHub 官方路由，默认公共实例存在 403/404 访问限制。Dario 已补入第三方 RSS，仅提供标题和链接、无发布时间与正文。智谱、Kimi、MiniMax、腾讯、Grok、Qoder、TRAE、ZCode 的有效 RSS 仍待登记。微信公众号具体账号订阅仍待核实。
 
 下载网站的 public/data/subscriptions.opml 或运行 scripts/collect.py feeds --opml 文件名，管理兼容 RSS 阅读器中的订阅。统一 RSS 决策优先于上方早期多格式采集调查。
+
+## 2026-10-10 新增 API 平台
+
+硅基流动、B.AI、WorldRouter 按用户确认新增为 API 平台，实际动态分类为「平台」，不将转售模型当作平台自研模型。官方动态入口与定价入口分开登记；硅基流动更新公告和资讯、B.AI 官方 X、WorldRouter 官网反链的 WorldClaw X 共四个渠道使用已验证的按需 RSS 转换。未取得可用原生订阅，保留有限列表与完整时间窗缺口，本次未导入历史动态。
+
+WorldRouter 采用 [router.worldclaw.ai](https://router.worldclaw.ai/) 官方入口；不混同 `worldrouter.cc` 自托管网关。官网账号覆盖 WorldClaw 其他产品，采集时只筛选 Router 相关的重要变化。详见 [本轮身份依据、渠道范围与计费口径](PLATFORM-SOURCES-2026-10-10.md)。

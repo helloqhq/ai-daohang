@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "2c58b3efd10a470f",
+  "snapshot_id": "e90310b850671f3f",
   "sources": [
     {
       "source_id": "openai-official",
@@ -618,6 +618,50 @@
       "uncovered_from": null,
       "pending_count": 0,
       "note": "订阅条目覆盖查询起点，已读取该订阅时间窗"
+    },
+    {
+      "source_id": "siliconflow-updates",
+      "status": "not_attempted",
+      "verification": "verified",
+      "last_attempt_at": null,
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": null,
+      "pending_count": 0,
+      "note": "离线转换待运行"
+    },
+    {
+      "source_id": "siliconflow-news",
+      "status": "not_attempted",
+      "verification": "verified",
+      "last_attempt_at": null,
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": null,
+      "pending_count": 0,
+      "note": "离线转换待运行"
+    },
+    {
+      "source_id": "b-ai-x",
+      "status": "not_attempted",
+      "verification": "verified",
+      "last_attempt_at": null,
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": null,
+      "pending_count": 0,
+      "note": "离线转换待运行"
+    },
+    {
+      "source_id": "worldrouter-x",
+      "status": "not_attempted",
+      "verification": "verified",
+      "last_attempt_at": null,
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": null,
+      "pending_count": 0,
+      "note": "离线转换待运行"
     }
   ]
 }

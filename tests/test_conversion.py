@@ -37,6 +37,30 @@ class ConversionTests(unittest.TestCase):
         self.assertEqual(rows[0]['published_at'],'2026-10-01')
         self.assertNotIn('Old changes',rows[0]['text'])
 
+    def test_siliconflow_announcements_use_labels_not_effective_dates(self):
+        body='<div class="prose"><div class="flex gap-4"><div>2026.10.01</div><div><h3 id="price">Price change</h3><p>Effective 2026-10-07</p></div></div><div class="flex gap-4"><div>2026.10.01</div><div><h3 id="model">Model retirement</h3><p>Stops 2026-10-09</p></div></div></div>'
+        source=self.source('siliconflow-updates');rows=convert(source,lambda *a:body,START,END)
+        parsed,_,_=parse_feed(rss_xml(source,rows),source,START,END)
+        self.assertEqual(len(parsed),2)
+        self.assertTrue(all(row['published_at']=='2026-10-01' for row in parsed))
+        self.assertNotEqual(parsed[0]['content_id'],parsed[1]['content_id'])
+        self.assertNotIn('retirement',rows[0]['text'])
+        with self.assertRaises(SourceError):convert(source,lambda *a:body.replace('2026.10.01','undated'),START,END)
+
+    def test_siliconflow_pinned_news_keeps_card_dates_and_reads_only_article_body(self):
+        source=self.source('siliconflow-news','https://siliconflow.cn/news')
+        index='<main><div><a href="/news/pinned"></a><h3>Pinned</h3><div>2026-09-01</div></div><article><a href="/news/latest"></a><h3>Latest</h3><p>Campaign starts 2026-10-08</p><div>2026-10-01</div></article><article><a href="/news/older"></a><h3>Older</h3><div>2026-09-29</div></article></main>'
+        detail='<article><h1>Latest</h1><div>2026-10-01 Return</div><div class="sf_f_md_style"><p>Actual details</p></div></article>'
+        requested=[]
+        def fetch(url):
+            requested.append(url);return index if url==source['url'] else detail
+        rows=convert(source,fetch,START,END)
+        self.assertEqual([r['published_at'] for r in rows],['2026-09-01','2026-10-01','2026-09-29'])
+        self.assertEqual(rows[1]['text'],'Actual details');self.assertTrue(rows[1]['full'])
+        self.assertEqual(requested,[source['url'],'https://siliconflow.cn/news/latest'])
+        changed=convert(source,lambda url:index if url==source['url'] else detail.replace('sf_f_md_style','unknown-layout'),START,END)
+        self.assertFalse(changed[1]['full']);self.assertNotIn('Return',changed[1]['text'])
+
     def test_plan_notices_never_use_campaign_dates_as_publication_dates(self):
         source=self.source('glm-coding-notices','https://docs.z.ai/devpack/overview')
         index='<a href="/devpack/notice/new-plan">Plan notice</a>'
@@ -70,6 +94,13 @@ class ConversionTests(unittest.TestCase):
         source=self.source('openai-x','https://x.com/OpenAI','x');rows=convert(source,lambda *a:body,START,END)
         self.assertEqual(len(rows),1);self.assertEqual(rows[0]['text'],'Our post');self.assertTrue(rows[0]['url'].endswith('/123'))
         with self.assertRaises(SourceError):convert(source,lambda *a:body.replace('screen_name:"OpenAI"','screen_name:"someone"'),START,END)
+    def test_platform_x_sources_match_their_official_account_not_quoted_posts(self):
+        for sid,handle in [('b-ai-x','BAI_AGI'),('worldrouter-x','WorldClawAI')]:
+            body='<script>tweet_results:$R[1]={id:"x",rest_id:"123",result:$R[2]={core:{screen_name:"'+handle+'"},details:$R[3]={created_at_ms:1790881200000,full_text:"Platform update"},quote:{screen_name:"other",full_text:"Not platform news"}}};</script>'
+            source=self.source(sid,'https://x.com/'+handle,'x');rows=convert(source,lambda *a:body,START,END)
+            self.assertEqual(rows[0]['text'],'Platform update')
+            self.assertEqual(rows[0]['url'],'https://x.com/'+handle+'/status/123')
+            with self.assertRaises(SourceError):convert(source,lambda *a:'<html>Log in</html>',START,END)
     def test_x_quoted_long_note_never_replaces_authors_short_comment(self):
         body='<script>tweet_results:$R[1]={id:"x",rest_id:"123",result:$R[2]={core:{screen_name:"elonmusk"},details:$R[3]={created_at_ms:1790881200000,full_text:"Exactly"},quote:{core:{screen_name:"other"},note_tweet:{note_tweet_results:$R[4]={result:{text:"Someone else long essay"}}}}}};</script>'
         source=self.source('elon-musk-x','https://x.com/elonmusk','x')

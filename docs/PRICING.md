@@ -6,7 +6,9 @@
 
 ## 数据与核验
 
-`public/data/pricing.json` 是独立于新闻采集快照的人工核验目录。2026-10-09 复核原有 68 项并新增 7 个档位，当前共 75 项（API 22、Token Plan 16、Agent 37）：63 项已核验、9 项价格待核验、3 项 Gemini CLI 个人登录入口已停止服务。新增 MiniMax M Plan Go / Explore / Build、Kimi 新套餐 Plus / Pro / Max 和 Cursor Teams Premium；原有 23 项更新条件、状态、权益或核验来源，其余 45 项仅更新核验日期。旧 Token Plan 价格本轮无法从当前官方入口重新确认，保留历史价格说明，数值置为 `null` / `pending`；Kimi 新档位价格与 GLM 三档也保留待核验。详见 [2026-10-09 更新记录](DATA-UPDATE-2026-10-09.md)。新闻快照更新继续保留独立的 `pricing.json` 与 `pricing.xml`。
+2026-10-10 新增硅基流动、B.AI、WorldRouter 共 26 个 API 模型及 B.AI 两个订阅档位；目录现有 103 项（API 48、Token Plan 18、Agent 37）。WorldRouter 保留 Credits 原价，页面、筛选与 RSS 支持积分单位，未核实美元兑换比例时不换算。各平台同名模型独立分组，分时价格、长上下文和活动条件分别保留。详见 [平台来源与计费更新](PLATFORM-SOURCES-2026-10-10.md)。
+
+`public/data/pricing.json` 是独立于新闻采集快照的人工核验目录。2026-10-09 复核原有 68 项并新增 7 个档位，当轮共 75 项（API 22、Token Plan 16、Agent 37）：63 项已核验、9 项价格待核验、3 项 Gemini CLI 个人登录入口已停止服务。新增 MiniMax M Plan Go / Explore / Build、Kimi 新套餐 Plus / Pro / Max 和 Cursor Teams Premium；原有 23 项更新条件、状态、权益或核验来源，其余 45 项仅更新核验日期。旧 Token Plan 价格本轮无法从当前官方入口重新确认，保留历史价格说明，数值置为 `null` / `pending`；Kimi 新档位价格与 GLM 三档也保留待核验。详见 [2026-10-09 更新记录](DATA-UPDATE-2026-10-09.md)。新闻快照更新继续保留独立的 `pricing.json` 与 `pricing.xml`。
 
 每项保留原币种、计费周期、适用地域 / 上下文 / 用量条件、双语说明、官方 HTTPS 来源和核验日期。API 的输入、输出、缓存读取、缓存写入采用每百万 tokens 的同一单位；缓存写入 TTL 等条件写在说明中。订阅额度维持官方口径，credits、请求数和 tokens 不互相换算，人民币和美元不按假定汇率合并。年付价格在明确核实的方案说明中保留。
 

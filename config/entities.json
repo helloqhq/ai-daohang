@@ -197,6 +197,55 @@
       "name_en": "OpenRouter"
     },
     {
+      "id": "siliconflow",
+      "name": "硅基流动",
+      "name_en": "SiliconFlow",
+      "aliases": [
+        "硅基流动",
+        "SiliconFlow",
+        "SiliconCloud"
+      ],
+      "category": "model",
+      "kind": "api_platform",
+      "enabled": true,
+      "color": "#7157a6",
+      "pricing_provider": "硅基流动 SiliconFlow"
+    },
+    {
+      "id": "b-ai",
+      "name": "B.AI",
+      "name_en": "B.AI",
+      "aliases": [
+        "b.ai",
+        "B.AI",
+        "Bank of AI",
+        "bankofai"
+      ],
+      "category": "model",
+      "kind": "api_platform",
+      "enabled": true,
+      "color": "#297966",
+      "pricing_provider": "B.AI",
+      "pricing_product_ids": [
+        "b-ai-plan"
+      ]
+    },
+    {
+      "id": "worldrouter",
+      "name": "WorldRouter",
+      "name_en": "WorldRouter",
+      "aliases": [
+        "WorldRouter",
+        "world router",
+        "WorldClaw Router"
+      ],
+      "category": "model",
+      "kind": "api_platform",
+      "enabled": true,
+      "color": "#b56a30",
+      "pricing_provider": "WorldRouter"
+    },
+    {
       "id": "nvidia",
       "name": "NVIDIA",
       "aliases": [

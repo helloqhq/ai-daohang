@@ -104,6 +104,16 @@ class SEOTests(unittest.TestCase):
         shutil.rmtree(self.root / '.git')
         self.assertEqual(set(self.sitemap().values()), {'2026-10-03'})
 
+    def test_google_verification_file_is_not_submitted_as_a_content_page(self):
+        verification = self.root / 'public/googleea1ae096c73c02af.html'
+        verification.write_text(f'google-site-verification: {verification.name}')
+        self.assertEqual(set(self.sitemap()),
+                         {'https://go2-ai.com/', 'https://go2-ai.com/contact.html'})
+        self.assertEqual(set(payload(self.root)['urlList']), set(page_inputs(self.root)))
+        verification.write_text('<html>accidental content page</html>')
+        with self.assertRaisesRegex(ValueError, 'Missing canonical'):
+            page_inputs(self.root)
+
     def test_unpublished_key_retries_without_notifying_search_engines(self):
         with patch('indexnow.urlopen', side_effect=URLError('not published yet')) as network:
             with patch('indexnow.time.sleep') as sleep:

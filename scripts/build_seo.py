@@ -14,7 +14,11 @@ def page_inputs(root):
               ('style.css', 'i18n.js', 'privacy.js', 'analytics.js', 'mark.svg')]
     pages = {}
     for page in sorted((root / 'public').glob('*.html')):
-        canonical = re.search(r'<link rel="canonical" href="([^"]+)"', page.read_text())
+        content = page.read_text()
+        if (re.fullmatch(r'google[0-9a-f]+\.html', page.name)
+                and content.strip() == f'google-site-verification: {page.name}'):
+            continue
+        canonical = re.search(r'<link rel="canonical" href="([^"]+)"', content)
         if not canonical:
             raise ValueError(f'Missing canonical: {page.name}')
         inputs = [page.relative_to(root).as_posix(), *shared]

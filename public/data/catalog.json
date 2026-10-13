@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "df0ef1ecccdb4bb3",
+  "snapshot_id": "2a39f71f4aa5c55b",
   "entities": [
     {
       "id": "openai",
@@ -317,7 +317,8 @@
       "color": "#336eab",
       "name_en": "Cursor",
       "pricing_product_ids": [
-        "cursor"
+        "cursor",
+        "cursor-x-subscription"
       ]
     },
     {

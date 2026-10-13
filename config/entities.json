@@ -316,7 +316,8 @@
       "color": "#336eab",
       "name_en": "Cursor",
       "pricing_product_ids": [
-        "cursor"
+        "cursor",
+        "cursor-x-subscription"
       ]
     },
     {

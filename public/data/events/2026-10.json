@@ -1,7 +1,1019 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "df0ef1ecccdb4bb3",
+  "snapshot_id": "2a39f71f4aa5c55b",
   "events": [
+    {
+      "id": "kilo-jetbrains-7110-rc3",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix",
+        "feature"
+      ],
+      "title_zh": "Kilo JetBrains 7.1.10-rc.3：Windows 后台进程与停止确认修复",
+      "title_en": "Kilo JetBrains 7.1.10-rc.3: Windows background-process and stop fixes",
+      "summary_zh": "Kilo JetBrains 候选版改用 Windows job object 跟踪后台进程，避免收养无关进程，并在可信进程检查确认退出前保留停止请求。",
+      "summary_en": "The Kilo JetBrains release candidate tracks Windows background processes with a job object, avoids adopting unrelated processes, and retains stop requests until a trustworthy process walk confirms exit.",
+      "key_points_zh": [
+        "glob 工具支持用户选择的忽略路径允许列表。",
+        "退出确认期间保持停止响应，无法确认停止时报告仍存活的主进程。"
+      ],
+      "key_points_en": [
+        "The glob tool supports an opt-in allowlist of ignored paths.",
+        "Stopping remains responsive during exit confirmation and reports a surviving leader when exit is unconfirmed."
+      ],
+      "importance_reason_zh": "预览版修复后台进程控制可靠性。",
+      "importance_reason_en": "The preview improves background-process control reliability.",
+      "published_at": "2026-10-13T11:45:58Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.10-rc.3",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.10-rc.3",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-13T11:45:58Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "musk-grok-bot-employee-20261013",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "马斯克将 Grok Bot 比作聪明的员工",
+      "title_en": "Musk compares Grok Bot to a smart employee",
+      "summary_zh": "马斯克发帖将 Grok Bot 比作聘请一位非常聪明的员工；原帖未列出功能、测试结果或价格。",
+      "summary_en": "Musk compares Grok Bot to hiring a very smart employee without listing features, test results or prices.",
+      "key_points_zh": [
+        "作为本人产品使用观点保留，不作为性能验证。"
+      ],
+      "key_points_en": [
+        "Retained as his product view rather than verified performance."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-13T10:31:46+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2109955246923641259",
+          "url": "https://x.com/elonmusk/status/2109955246923641259",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T10:31:46+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "cline-cli-3071-sdk-0093",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Cline CLI 3.0.71 / SDK 0.0.93：进程内插件与定时任务修复",
+      "title_en": "Cline CLI 3.0.71 / SDK 0.0.93: in-process plugins and scheduled-run fixes",
+      "summary_zh": "Cline 默认在 hub 进程内加载插件，不再要求 PATH 中有 Node 或 Bun；插件错误可见，并修复 ACP 思考设置、图像 token 估计和定时任务停滞。",
+      "summary_en": "Cline loads plugins inside the hub by default without requiring Node or Bun on PATH, exposes plugin failures, and fixes ACP reasoning settings, image-token estimates and stalled scheduled runs.",
+      "key_points_zh": [
+        "CLINE_PLUGIN_MODE=sandbox 可保留旧子进程行为；cline hub plugins 可查看状态和重载插件。",
+        "--thinking 在 ACP 模式生效；关闭思考按各提供商能力处理。",
+        "排队任务可正常启动，模型失败记为失败，停机后的错过任务只运行最新一次；发现 .claude/skills。"
+      ],
+      "key_points_en": [
+        "CLINE_PLUGIN_MODE=sandbox retains subprocess behavior; cline hub plugins inspects status and reloads plugins.",
+        "--thinking works in ACP mode; disabling reasoning respects each provider’s capabilities.",
+        "Queued runs start, model errors mark runs failed, and only the latest missed occurrence runs after downtime; .claude/skills is discovered."
+      ],
+      "importance_reason_zh": "影响插件部署、模型兼容性和定时任务可靠性。",
+      "importance_reason_en": "Affects plugin deployment, model compatibility and scheduled-run reliability.",
+      "published_at": "2026-10-13T08:56:25Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/cli-v3.0.71",
+          "url": "https://github.com/cline/cline/releases/tag/cli-v3.0.71",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-13T08:56:25Z",
+          "date_kind": "updated"
+        },
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.0.93",
+          "url": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.0.93",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-13T08:26:52Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "tibo-more-usage-plan-20261013",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "preview",
+      "topics": [
+        "pricing"
+      ],
+      "title_zh": "Tibo 预告希望让所有人获得更多用量",
+      "title_en": "Tibo previews a plan for more usage for everyone",
+      "summary_zh": "Tibo 称已有一个应能显著增加所有人用量的计划，希望很快完成；原帖未公布具体套餐、倍数或上线时间。",
+      "summary_en": "Tibo says he has a plan intended to significantly increase usage for everyone and hopes to finish it soon; no specific tiers, multipliers or rollout date are given.",
+      "key_points_zh": [
+        "这是负责人预告，不作为已生效的套餐政策。"
+      ],
+      "key_points_en": [
+        "This is a leader’s preview rather than an effective plan policy."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-13T06:21:26+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2109892247580000595",
+          "url": "https://x.com/thsottiaux/status/2109892247580000595",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T06:21:26+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "musk-try-grok-bot-20261013",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "马斯克邀请用户尝试 Grok Bot",
+      "title_en": "Musk invites users to try Grok Bot",
+      "summary_zh": "马斯克发帖“Try Grok @Bot”，邀请尝试该 AI 产品；未说明开放地域、账号资格或费用。",
+      "summary_en": "Musk posts “Try Grok @Bot,” inviting people to try the AI product without specifying regions, account eligibility or fees.",
+      "key_points_zh": [
+        "按负责人一手产品动态保留原帖范围。"
+      ],
+      "key_points_en": [
+        "Preserves the scope of a leader’s first-hand product post."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-13T05:37:13+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2109881121047781430",
+          "url": "https://x.com/elonmusk/status/2109881121047781430",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T05:37:13+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "tibo-reset-done-20261013",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Tibo 发布重置已完成的状态短帖",
+      "title_en": "Tibo posts that a reset is done",
+      "summary_zh": "Tibo 在重置相关短帖中写道“It’s done”；原帖没有说明重置产品、额度或覆盖范围。",
+      "summary_en": "Tibo writes “It’s done” in a reset-related short post without identifying the product, allowance or scope.",
+      "key_points_zh": [
+        "不据短帖补造重置原因或具体权益。"
+      ],
+      "key_points_en": [
+        "The post does not establish a cause or specific entitlements."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-13T05:06:06+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2109873287853707513",
+          "url": "https://x.com/thsottiaux/status/2109873287853707513",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T05:06:06+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "musk-grok-memory-transfer-20261013",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "马斯克发布 Grok Bot“记忆转移”短帖",
+      "title_en": "Musk posts about Grok Bot “memory transfer”",
+      "summary_zh": "马斯克发帖提及“Grok @Bot memory transfer”，没有说明来源、迁移方式或可用范围。",
+      "summary_en": "Musk posts “Grok @Bot memory transfer” without describing the source, transfer method or availability.",
+      "key_points_zh": [
+        "仅记录本人提及记忆转移，不补造具体能力。"
+      ],
+      "key_points_en": [
+        "Records his mention of memory transfer without adding specific capabilities."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-13T04:43:10+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2109867516646637579",
+          "url": "https://x.com/elonmusk/status/2109867516646637579",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T04:43:10+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "b-ai-mimo25-migration-20261013",
+      "entity_ids": [
+        "b-ai"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "compatibility",
+        "pricing"
+      ],
+      "title_zh": "B.AI：MiMo-V2.5 系列将转发至 V2.6，10 月 21 日停用旧 ID",
+      "title_en": "B.AI: MiMo-V2.5 redirects to V2.6 before old IDs retire October 21",
+      "summary_zh": "B.AI 官方公告称，10 月 14 日 18:00 SGT 起旧 MiMo-V2.5 系列 ID 转发至新版并按新版价格计费；10 月 21 日 10:00 SGT 起旧 ID 返回错误。",
+      "summary_en": "B.AI announces that old MiMo-V2.5 series IDs redirect to newer models at their rates from October 14, 18:00 SGT; the old IDs return errors from October 21, 10:00 SGT.",
+      "key_points_zh": [
+        "MiMo-V2.5-Pro → MiMo-V2.6-Pro；MiMo-V2.5 → MiMo-V2.6-Flash。",
+        "SGT 与北京时间均为 UTC+8；需提前更换 ID 并核对新版参数和费率。"
+      ],
+      "key_points_en": [
+        "MiMo-V2.5-Pro → MiMo-V2.6-Pro; MiMo-V2.5 → MiMo-V2.6-Flash.",
+        "SGT and Beijing time are both UTC+8; update IDs and check the new parameters and rates beforehand."
+      ],
+      "importance_reason_zh": "涉及模型兼容性、停用时点和计费迁移。",
+      "importance_reason_en": "Affects model compatibility, retirement timing and billing migration.",
+      "published_at": "2026-10-13T03:24:27+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:26+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "b-ai-x",
+          "content_id": "https://x.com/BAI_AGI/status/2109847708660035936",
+          "url": "https://x.com/BAI_AGI/status/2109847708660035936",
+          "collected_at": "2026-10-13T14:48:26+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T03:24:27+00:00",
+          "date_kind": "published"
+        },
+        {
+          "source_id": "b-ai-x",
+          "content_id": "https://x.com/BAI_AGI/status/2109847688846213545",
+          "url": "https://x.com/BAI_AGI/status/2109847688846213545",
+          "collected_at": "2026-10-13T14:48:26+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T03:24:22+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "jeff-dean-ai-research-events-20261013",
+      "entity_ids": [
+        "discovery-loop"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Jeff Dean 谈支持非洲与南美 AI 研究活动",
+      "title_en": "Jeff Dean discusses supporting African and South American AI events",
+      "summary_zh": "Jeff Dean 称其家庭基金会支持 Khipu AI 与 Deep Indaba，也曾鼓励 Google 支持；Discovery Loop 很高兴参与支持。",
+      "summary_en": "Jeff Dean says his family foundation supports Khipu AI and Deep Indaba, that he has encouraged Google to support them, and that Discovery Loop is pleased to help.",
+      "key_points_zh": [
+        "原帖描述非洲与南美 AI 研究活动，未披露资助金额。"
+      ],
+      "key_points_en": [
+        "The post describes AI research events in Africa and South America without disclosing funding amounts."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-13T02:59:24+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "jeff-dean-x",
+          "content_id": "https://x.com/JeffDean/status/2109841404239417415",
+          "url": "https://x.com/JeffDean/status/2109841404239417415",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T02:59:24+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1097-2",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.97-2：修复大型仓库自定义代理发现",
+      "title_en": "Copilot CLI 1.0.97-2: fixes custom-agent discovery in large repositories",
+      "summary_zh": "Copilot CLI 修复仓库定义超过 100 个自定义代理或代理文件嵌套较深时发现不全的问题。",
+      "summary_en": "Copilot CLI fixes incomplete discovery when repositories define more than 100 custom agents or nest their files deeply.",
+      "key_points_zh": [
+        "超过 100 个定义和深层目录中的代理都可被发现。"
+      ],
+      "key_points_en": [
+        "Agents beyond 100 definitions and in deeply nested directories are discovered."
+      ],
+      "importance_reason_zh": "解除影响大型代理目录使用的发现限制。",
+      "importance_reason_en": "Removes a discovery limitation affecting large agent catalogs.",
+      "published_at": "2026-10-13T01:09:14Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:00+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.97-2",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.97-2",
+          "collected_at": "2026-10-13T14:46:00+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-13T01:09:14Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "tibo-day8-reset-20261013",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Tibo 发布“Day 8/ Reset”短帖",
+      "title_en": "Tibo posts “Day 8/ Reset”",
+      "summary_zh": "Tibo 发布“Day 8/ Reset”一手状态短帖，未交代重置对象或用量规则。",
+      "summary_en": "Tibo posts the first-hand status note “Day 8/ Reset” without identifying the reset target or usage rules.",
+      "key_points_zh": [
+        "保留原帖范围，不推断传播完成或套餐变化。"
+      ],
+      "key_points_en": [
+        "Preserves the post’s scope without inferring completed propagation or plan changes."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-13T01:03:25+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2109812216212099456",
+          "url": "https://x.com/thsottiaux/status/2109812216212099456",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T01:03:25+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "kilo-789-preview",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix",
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "Kilo 7.8.9 预发布：修复权限卡住、MCP 泄漏和模型兼容",
+      "title_en": "Kilo 7.8.9 preview: fixes stuck permissions, MCP leaks and model compatibility",
+      "summary_zh": "Kilo 7.8.9 预发布修复子代理权限提示卡住、取消期间启动的 MCP 服务器堆积，以及 Bedrock GPT-6 / GPT-5.6 图像工具结果兼容性。",
+      "summary_en": "Kilo 7.8.9 is labeled a pre-release and fixes stuck subagent permission prompts, MCP servers accumulating during canceled startup, and Bedrock GPT-6 / GPT-5.6 image tool-result compatibility.",
+      "key_points_zh": [
+        "JetBrains 遵循全局和项目 permission.edit 配置；TUI 切换会话后恢复待回答权限提示。",
+        "压缩遇到空摘要或不可恢复上下文溢出时报告错误并保留历史。",
+        "Agent Manager 支持项目拖动排序并保存顺序。"
+      ],
+      "key_points_en": [
+        "JetBrains respects global and project permission.edit settings; TUI session switches restore pending permission prompts.",
+        "Compaction reports empty summaries or unrecoverable overflow and preserves history.",
+        "Agent Manager supports persistent drag-and-drop project ordering."
+      ],
+      "importance_reason_zh": "涉及权限处理、长会话和工具进程可靠性。",
+      "importance_reason_en": "Affects permissions, long sessions and tool-process reliability.",
+      "published_at": "2026-10-13T00:21:23Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.9",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.9",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-13T00:21:23Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "zcode-3153",
+      "entity_ids": [
+        "zcode"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "ZCode 3.15.3：修复更新无法退出、登录与并行任务失败",
+      "title_en": "ZCode 3.15.3: fixes stalled updates, sign-in and parallel tasks",
+      "summary_zh": "ZCode 3.15.3 修复更新期间无法正常退出、连接套餐登录失败，以及多个代理并行或快速调用模型时请求失败的问题。",
+      "summary_en": "ZCode 3.15.3 fixes failure to exit during updates, plan-connection sign-in failures and failed requests during parallel agents or rapid model calls.",
+      "key_points_zh": [
+        "从 3.15.1 升级仍可能因旧版问题卡住，官方建议下载完整安装包；强制退出会中断任务。",
+        "修复反复展示引导和慢网络下启动检查卡住。"
+      ],
+      "key_points_en": [
+        "Upgrading from 3.15.1 can still stall due to the old version; the provider recommends the full installer, and force quitting interrupts tasks.",
+        "Fixes repeated onboarding and stalled startup checks on slow networks."
+      ],
+      "importance_reason_zh": "修复升级、认证及并行任务可靠性。",
+      "importance_reason_en": "Improves update, authentication and parallel-task reliability.",
+      "published_at": "2026-10-13",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "zcode-official",
+          "content_id": "https://zcode.z.ai/en/changelog::3.15.3",
+          "url": "https://zcode.z.ai/en/changelog",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-13",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "pi-v120",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Pi 1.2.0：按 Key 获取 OpenRouter 模型，调整扩展运行接口",
+      "title_en": "Pi 1.2.0: per-key OpenRouter catalogs and extension-run changes",
+      "summary_zh": "Pi 1.2.0 按 OpenRouter Key 的权限、地域与限制加载模型目录，并发布配置 schema；扩展触发的运行也会执行 before_agent_start，带来接口迁移要求。",
+      "summary_en": "Pi 1.2.0 loads OpenRouter catalogs according to key permissions, regions and limits, publishes configuration schemas, and runs before_agent_start for extension-triggered turns, requiring extension migration.",
+      "key_points_zh": [
+        "模型目录使用 /models/user，保留对应上下文、输出和价格，缓存可离线复用。",
+        "before_agent_start 按 messageType 区分 user / custom；主题 schema 移至 pi.dev/schemas/theme.schema.json。",
+        "修复 MCP OAuth 刷新后仍发送已取消调用、issuer 无法校验却接受登录，以及长生成中断。"
+      ],
+      "key_points_en": [
+        "Catalogs use /models/user with key-specific context, output and pricing; saved lists work offline.",
+        "before_agent_start distinguishes user / custom messageType; the theme schema moves to pi.dev/schemas/theme.schema.json.",
+        "Fixes canceled MCP calls being sent after OAuth refresh, accepting unverifiable issuers, and interruptions during long generation."
+      ],
+      "importance_reason_zh": "扩展接口有破坏性变更，并改进模型权限与认证可靠性。",
+      "importance_reason_en": "Includes breaking extension changes and improves model permissions and authentication reliability.",
+      "published_at": "2026-10-12T23:03:53Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:00+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.2.0",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.2.0",
+          "collected_at": "2026-10-13T14:46:00+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-12T23:03:53Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "copilot-telemetry-controls-20261012",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Copilot 企业遥测：身份归属与五类内容独立控制",
+      "title_en": "Copilot enterprise telemetry: identity attribution and separate capture classes",
+      "summary_zh": "管理员可在 Copilot CLI、桌面应用和使用 Agent Host 的 VS Code 会话中独立控制遥测身份及五类内容采集；所有类别默认关闭。",
+      "summary_en": "Administrators can separately control telemetry identity and five content capture classes in Copilot CLI, the desktop app and VS Code Agent Host sessions; all classes are off by default.",
+      "key_points_zh": [
+        "telemetry.capture.identity 添加 Copilot 登录名、系统账户名和主机名。",
+        "prompts、responses、toolArguments、toolOutput、policyDetail 可独立设置；托管设置优先于本地、SDK 和环境变量。",
+        "旧 captureContent 简写只控制五类内容，不启用身份采集。"
+      ],
+      "key_points_en": [
+        "telemetry.capture.identity adds the Copilot login, OS account name and host name.",
+        "prompts, responses, toolArguments, toolOutput and policyDetail are independent; managed values override local, SDK and environment settings.",
+        "Legacy captureContent controls the five content classes without enabling identity capture."
+      ],
+      "importance_reason_zh": "改变企业审计和内容采集的治理粒度。",
+      "importance_reason_en": "Changes the granularity of enterprise audit and content-capture governance.",
+      "published_at": "2026-10-12T22:38:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture",
+          "url": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-12T22:38:00+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1097-0",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.97-0：代理 Hook 与无人值守权限修复",
+      "title_en": "Copilot CLI 1.0.97-0: agent hooks and unattended-permission fixes",
+      "summary_zh": "Copilot CLI 新增自定义代理的声明式 Hook，并修复 Autopilot 遇到 ask 决定时停在无人处理的权限对话框，以及恢复会话重放已取消写入等问题。",
+      "summary_en": "Copilot CLI adds agent-scoped declarative hooks and fixes Autopilot stopping at unattended ask dialogs and resumed sessions replaying canceled writes.",
+      "key_points_zh": [
+        "Autopilot 对 preToolUse Hook 的 ask 决定执行拒绝。",
+        "/usage 显示按 token 计费会话的 AI Credits，恢复后仍可查看；JSON 输出安全脱敏。",
+        "受支持终端默认显示内联图片；修复插件目录技能和代理发现及恢复 Hook 列表。"
+      ],
+      "key_points_en": [
+        "Autopilot denies a preToolUse hook’s ask decision.",
+        "/usage shows billed AI Credits for token-billed sessions, including after resume; JSON output masks secrets safely.",
+        "Supported terminals show inline images by default; fixes plugin-directory skill and agent discovery and resumed hook lists."
+      ],
+      "importance_reason_zh": "影响无人值守安全、账单可见性与恢复会话可靠性。",
+      "importance_reason_en": "Affects unattended safety, billing visibility and resumed-session reliability.",
+      "published_at": "2026-10-12T20:45:05Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:00+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.97-0",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.97-0",
+          "collected_at": "2026-10-13T14:46:00+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-12T20:45:05Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1096",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.96：沙箱目录授权与权限来源正式更新",
+      "title_en": "Copilot CLI 1.0.96: sandbox-directory grants and permission attribution",
+      "summary_zh": "Copilot CLI 1.0.96 汇总交互式沙箱凭据设置、/add-dir 当前会话目录授权和权限决定来源显示；此前分别在带后缀版本中提供。",
+      "summary_en": "Copilot CLI 1.0.96 consolidates interactive sandbox credential setup, /add-dir grants for the current session and permission-decision attribution, previously provided in suffixed versions.",
+      "key_points_zh": [
+        "可在保存凭据前添加 masking hosts；时间线显示用户、Assisted Permissions、策略或无人值守回退。",
+        "模型 ID 不区分大小写并保存规范 ID；企业策略解析期间保留 /allow-all。"
+      ],
+      "key_points_en": [
+        "Masking hosts can be added before saving credentials; the timeline identifies user, Assisted Permissions, policy or unattended fallback decisions.",
+        "Model IDs are case-insensitive and saved canonically; /allow-all remains available during enterprise-policy resolution."
+      ],
+      "importance_reason_zh": "正式版本改善沙箱授权、凭据设置与权限可见性。",
+      "importance_reason_en": "The release improves sandbox grants, credential setup and permission visibility.",
+      "published_at": "2026-10-12T18:52:01Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:00+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.96",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.96",
+          "collected_at": "2026-10-13T14:46:00+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-12T18:52:01Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "zuckerberg-muse-wonder-20261012",
+      "entity_ids": [
+        "meta"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability"
+      ],
+      "title_zh": "扎克伯格介绍 Muse Wonder 前沿模型系列",
+      "title_en": "Zuckerberg introduces the Muse Wonder frontier-model family",
+      "summary_zh": "扎克伯格介绍 Muse Wonder，称其是面向个人和专业代理工作的前沿模型系列，具有领先性能；此为本人声明，未提供型号清单和测试细节。",
+      "summary_en": "Zuckerberg introduces Muse Wonder as a frontier-model family for personal and professional agentic work and claims state-of-the-art performance; the post provides no model list or test details.",
+      "key_points_zh": [
+        "性能保留负责人归属，不写成本站独立验证。"
+      ],
+      "key_points_en": [
+        "Performance remains attributed to the leader rather than independently verified."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-12T16:56:29+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "mark-zuckerberg-threads",
+          "content_id": "https://www.threads.com/t/DeZtp-TkQHh",
+          "url": "https://www.threads.com/t/DeZtp-TkQHh",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-12T16:56:29+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "zuckerberg-muse-watermelon-20261012",
+      "entity_ids": [
+        "meta"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "扎克伯格称 Muse 为他订购了西瓜",
+      "title_en": "Zuckerberg says Muse ordered watermelon for him",
+      "summary_zh": "扎克伯格发帖称“Muse ordered me”并配西瓜表情，评价其体贴；没有说明订单处理过程、付款方式或功能开放范围。",
+      "summary_en": "Zuckerberg says “Muse ordered me” with a watermelon emoji and calls it thoughtful, without explaining order processing, payment or feature availability.",
+      "key_points_zh": [
+        "作为负责人本人产品使用反馈保留。"
+      ],
+      "key_points_en": [
+        "Retained as the leader’s first-hand product feedback."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-12T15:01:17+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "mark-zuckerberg-threads",
+          "content_id": "https://www.threads.com/t/DeZgeQhm6RW",
+          "url": "https://www.threads.com/t/DeZgeQhm6RW",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-12T15:01:17+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "tibo-pro-2x-poll-20261012",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "pricing"
+      ],
+      "title_zh": "Tibo 谈 Pro 100 / 200 / 500 用量翻倍与五小时限制调查",
+      "title_en": "Tibo discusses the Pro 100 / 200 / 500 usage-doubling poll",
+      "summary_zh": "Tibo 称调查结果令其困惑，原本预计更多人支持以恢复五小时限制换取 Pro 100 / 200 / 500 用量翻倍，从而平滑需求。",
+      "summary_en": "Tibo says the poll results surprised him: he expected stronger support for doubling Pro 100 / 200 / 500 usage in exchange for restoring five-hour limits to smooth demand.",
+      "key_points_zh": [
+        "仅记录本人对调查的观点，未宣布限制或用量已改变。"
+      ],
+      "key_points_en": [
+        "Records his view of the poll without announcing changed limits or allowances."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-12T00:21:38+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2109439315570999598",
+          "url": "https://x.com/thsottiaux/status/2109439315570999598",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-12T00:21:38+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-v3-start-20261012",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Kiro CLI：启动时切换 V3，新增模型回退提示",
+      "title_en": "Kiro CLI: V3 startup migration and model-fallback notices",
+      "summary_zh": "Kiro CLI 在渐进发布中加入启动时切换至 V3 的邀请提示，并提供 V3 模型回退通知。订阅材料为简介。",
+      "summary_en": "Kiro CLI adds an invitation to switch to V3 at startup during a gradual rollout and V3 model-fallback notices. The feed provides an excerpt.",
+      "key_points_zh": [
+        "升级代理至 V3 时保留更多 V2 代理访问，修复屏幕阅读器、tmux 和知识搜索问题。"
+      ],
+      "key_points_en": [
+        "Preserves more V2 agent access during V3 upgrades and fixes screen-reader, tmux and knowledge-search issues."
+      ],
+      "importance_reason_zh": "影响 V3 迁移与模型回退可见性。",
+      "importance_reason_en": "Affects V3 migration and visibility into model fallbacks.",
+      "published_at": "2026-10-12",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/2-30",
+          "url": "https://kiro.dev/changelog/cli/2-30",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-12",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "kiro-fedramp-class-c-20261012",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Kiro 宣布纳入美国弗吉尼亚北部 FedRAMP Class C 范围",
+      "title_en": "Kiro announces FedRAMP Class C scope in Northern Virginia",
+      "summary_zh": "Kiro 官方订阅称，该产品已在 US East（N. Virginia）区域纳入 FedRAMP Class C 范围，面向受相应要求约束的机构开展 AI 辅助开发。",
+      "summary_en": "Kiro’s official feed says the product is in FedRAMP Class C scope in US East (N. Virginia) for organizations subject to those requirements.",
+      "key_points_zh": [
+        "公告列举美国政府机构、承包商及其他受该要求约束的组织；证据范围为简介。"
+      ],
+      "key_points_en": [
+        "The announcement names US agencies, contractors and other subject organizations; evidence is an excerpt."
+      ],
+      "importance_reason_zh": "扩大受监管机构的产品可用性。",
+      "importance_reason_en": "Expands product availability for regulated organizations.",
+      "published_at": "2026-10-12",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/general/kiro-is-now-in-scope-for-fedramp-class-c",
+          "url": "https://kiro.dev/changelog/general/kiro-is-now-in-scope-for-fedramp-class-c",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-12",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "zcode-3151",
+      "entity_ids": [
+        "zcode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "ZCode 3.15.1：工作流并发与模型控制，强化浏览器权限",
+      "title_en": "ZCode 3.15.1: workflow concurrency and model controls, plus browser permissions",
+      "summary_zh": "ZCode 增加工作流参数预调、运行中并发调整、回放和逐子代理模型设置，支持 MCP App 与飞书群聊协作，并修复浏览器权限默认允许问题。",
+      "summary_en": "ZCode adds workflow parameter tuning, live concurrency changes, replay and per-subagent models, supports MCP Apps and Feishu group collaboration, and fixes browser permissions being allowed by default.",
+      "key_points_zh": [
+        "Autonomous Mode 执行危险命令前要求确认；浏览器相机等站点权限提供确认提示。",
+        "推荐活动 10 月 12 日至 11 月 13 日，具体 Token Boost 资格与额度以 Rewards Center 为准。",
+        "修复飞书授权过期后任务不响应、Windows 链接启动安全问题。"
+      ],
+      "key_points_en": [
+        "Autonomous Mode requests confirmation for dangerous commands; the browser prompts for site permissions such as camera access.",
+        "The referral campaign runs October 12–November 13; Token Boost eligibility and allowances follow the Rewards Center.",
+        "Fixes unresponsive Feishu tasks after authorization expires and a Windows link-launch security issue."
+      ],
+      "importance_reason_zh": "扩展工作流和协作能力并修复权限安全问题。",
+      "importance_reason_en": "Expands workflow and collaboration capabilities and fixes permission-security issues.",
+      "published_at": "2026-10-12",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "zcode-official",
+          "content_id": "https://zcode.z.ai/en/changelog::3.15.1",
+          "url": "https://zcode.z.ai/en/changelog",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-12",
+          "date_kind": "published"
+        },
+        {
+          "source_id": "zcode-x",
+          "content_id": "https://x.com/zcode_ai/status/2109678026971861370",
+          "url": "https://x.com/zcode_ai/status/2109678026971861370",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-12T16:10:12+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "x-subscription-20261012",
+      "entity_ids": [
+        "grok",
+        "cursor"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "availability",
+        "feature"
+      ],
+      "title_zh": "The X Subscription 整合 Grok、Cursor 与 X，旧套餐可保留",
+      "title_en": "The X Subscription combines Grok, Cursor and X; existing plans can stay",
+      "summary_zh": "SpaceXAI 宣布 The X Subscription，整合 Grok、Grok Bot、Cursor 与 X。新购用户采用新套餐，旧订阅可保留现有价格和权益，也可按账号开放进度迁移。",
+      "summary_en": "SpaceXAI announces The X Subscription combining Grok, Grok Bot, Cursor and X. New customers use the new plans; existing subscribers can retain their prices and benefits or switch as account rollout permits.",
+      "key_points_zh": [
+        "月费 Free $0、Plus $8、Premium $30、Super $100、Ultra $200；付费档共享 Grok 用量，后面三档为 Plus 的 4×、15×、50×。",
+        "新套餐按周刷新；Premium 及以上可在 Cursor 额外按 API 标价购买第三方模型用量，不包含第三方模型额度。",
+        "Teams Premium / Super / Ultra 为每席位 $30 / $100 / $200；旧套餐停止新购但已有订阅不立即改变。"
+      ],
+      "key_points_en": [
+        "Monthly tiers are Free $0, Plus $8, Premium $30, Super $100 and Ultra $200; paid plans share Grok usage, with the top three at 4×, 15× and 50× Plus.",
+        "New allowances refresh weekly; Premium and higher can separately buy third-party Cursor usage at API list prices without included third-party allowances.",
+        "Teams Premium / Super / Ultra cost $30 / $100 / $200 per seat; older plans close to new sign-ups while existing subscriptions remain unchanged."
+      ],
+      "importance_reason_zh": "实质改变新购定价、共享额度和第三方模型计费边界。",
+      "importance_reason_en": "Materially changes new-purchase prices, shared usage and third-party-model billing.",
+      "published_at": "2026-10-12",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "grok-official",
+          "content_id": "https://x.ai/news/x-subscription",
+          "url": "https://x.ai/news/x-subscription",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-12",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "tibo-sol500k-context-20261011",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Tibo 称 Codex / Work 的 Sol 默认上下文已增至 500K",
+      "title_en": "Tibo says Codex / Work Sol default context rises to 500K",
+      "summary_zh": "Tibo 称 GPT-6.1 Sol 在 Codex 与 Work 的默认上下文从 272K 增至 500K，约增加 80%，以减少压缩并保留长期任务细节。",
+      "summary_en": "Tibo says GPT-6.1 Sol’s default context in Codex and Work rises from 272K to 500K, about 80%, to reduce compaction and preserve long-task detail.",
+      "key_points_zh": [
+        "其称用户仍可覆盖设置，最高上下文为 1M；记录负责人说法。"
+      ],
+      "key_points_en": [
+        "He says users can still override the setting up to 1M context; this records his statement."
+      ],
+      "importance_reason_zh": "按已核实负责人一手 AI 观点、产品进展或状态通报规则保留。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI opinion, product progress or status report.",
+      "published_at": "2026-10-11T23:45:59+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2109430343346581527",
+          "url": "https://x.com/thsottiaux/status/2109430343346581527",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-11T23:45:59+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
     {
       "id": "opencode-v1190",
       "entity_ids": [
@@ -78,6 +1090,47 @@
           "collected_at": "2026-10-11T03:51:17+00:00",
           "material_scope": "partial_text",
           "published_at": "2026-10-11T01:13:54+00:00"
+        }
+      ]
+    },
+    {
+      "id": "hermes-v0217",
+      "entity_ids": [
+        "hermes"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Hermes 0.21.7：默认跟随稳定标签，恢复会话保留思考",
+      "title_en": "Hermes 0.21.7: tagged-release updates and reasoning preservation",
+      "summary_zh": "Hermes 0.21.7 将官方源码安装的默认更新从 main 每次提交改为最新稳定标签，并修复恢复会话的签名思考重放与 Bedrock Converse 兼容性。发布说明标记日期为 10 月 11 日。",
+      "summary_en": "Hermes 0.21.7 changes official source-install updates from every main commit to the latest stable tag and fixes signed-thinking replay and Bedrock Converse compatibility on resume. The release notes label the date October 11.",
+      "key_points_zh": [
+        "hermes update --set-channel main 可继续逐提交更新；已有更高版本不会回退，fork / mirror 不变。",
+        "桌面源码安装可在 Settings > About > Updates 切换渠道；Store / MSIX / 捆绑安装不变。"
+      ],
+      "key_points_en": [
+        "hermes update --set-channel main retains every-commit updates; newer installs are not downgraded and forks / mirrors are unchanged.",
+        "Desktop source installs can change channels in Settings > About > Updates; Store / MSIX / bundled installs are unchanged."
+      ],
+      "importance_reason_zh": "改变默认升级渠道，修复恢复会话和受限网络更新。",
+      "importance_reason_en": "Changes the default update channel and fixes resume and restricted-network updates.",
+      "published_at": "2026-10-11",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:46:00+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.7",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.7",
+          "collected_at": "2026-10-13T14:46:00+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-12T05:53:41Z",
+          "date_kind": "updated"
         }
       ]
     },
@@ -347,6 +1400,45 @@
           "collected_at": "2026-10-11T03:48:32+00:00",
           "material_scope": "full_text",
           "published_at": "2026-10-10T00:12:22Z"
+        }
+      ]
+    },
+    {
+      "id": "qoder-044-fast-models",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Qoder 0.4.4：Fast models 与 BYOK 模型发现修复",
+      "title_en": "Qoder 0.4.4: Fast models and BYOK discovery fixes",
+      "summary_zh": "Qoder 0.4.4 增加 Fast models 以缩短响应等待，并修复启动后已配置 BYOK 模型迟迟无法出现和选择的问题。",
+      "summary_en": "Qoder 0.4.4 adds Fast models for quicker responses and fixes configured BYOK models taking too long to appear and become selectable after startup.",
+      "key_points_zh": [
+        "公告未列出 Fast models 的具体型号或额外价格。"
+      ],
+      "key_points_en": [
+        "The announcement does not list specific Fast model IDs or extra prices."
+      ],
+      "importance_reason_zh": "新增响应速度入口并改善自带模型使用。",
+      "importance_reason_en": "Adds a faster-response option and improves BYOK usage.",
+      "published_at": "2026-10-10",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#october-10-2026::0.4.4",
+          "url": "https://docs.qoder.com/release-notes/qoder#october-10-2026",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-10",
+          "date_kind": "published"
         }
       ]
     },
@@ -774,6 +1866,125 @@
           "collected_at": "2026-10-11T03:48:50+00:00",
           "material_scope": "partial_text",
           "published_at": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "id": "kiro-opus55-govcloud-20261009",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Kiro 在两个 AWS GovCloud 美国区域提供 Claude Opus 5.5",
+      "title_en": "Kiro adds Claude Opus 5.5 in both AWS GovCloud US regions",
+      "summary_zh": "Kiro 更新订阅宣布 Claude Opus 5.5 可在两个 AWS GovCloud（US）区域的 IDE 与 CLI 使用。",
+      "summary_en": "Kiro’s feed announces Claude Opus 5.5 in its IDE and CLI across both AWS GovCloud (US) regions.",
+      "key_points_zh": [
+        "不从区域公告推断个人套餐包含该区域入口。"
+      ],
+      "key_points_en": [
+        "The regional announcement does not establish access through personal plans."
+      ],
+      "importance_reason_zh": "新增政府云区域模型可用性。",
+      "importance_reason_en": "Adds model availability in government-cloud regions.",
+      "published_at": "2026-10-09",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/claude-opus-5-5-now-available-in-aws-govcloud-us",
+          "url": "https://kiro.dev/changelog/models/claude-opus-5-5-now-available-in-aws-govcloud-us",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "metadata_only",
+          "published_at": "2026-10-09",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "kiro-sonnet55-govcloud-20261009",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Kiro 在两个 AWS GovCloud 美国区域提供 Claude Sonnet 5.5",
+      "title_en": "Kiro adds Claude Sonnet 5.5 in both AWS GovCloud US regions",
+      "summary_zh": "Kiro 更新订阅宣布 Claude Sonnet 5.5 可在两个 AWS GovCloud（US）区域的 IDE 与 CLI 使用。",
+      "summary_en": "Kiro’s feed announces Claude Sonnet 5.5 in its IDE and CLI across both AWS GovCloud (US) regions.",
+      "key_points_zh": [
+        "不从区域公告推断个人套餐包含该区域入口。"
+      ],
+      "key_points_en": [
+        "The regional announcement does not establish access through personal plans."
+      ],
+      "importance_reason_zh": "新增政府云区域模型可用性。",
+      "importance_reason_en": "Adds model availability in government-cloud regions.",
+      "published_at": "2026-10-09",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:46:06+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/claude-sonnet-5-5-now-available-in-aws-govcloud-us",
+          "url": "https://kiro.dev/changelog/models/claude-sonnet-5-5-now-available-in-aws-govcloud-us",
+          "collected_at": "2026-10-13T14:46:06+00:00",
+          "material_scope": "metadata_only",
+          "published_at": "2026-10-09",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "devin-memory-20261009",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Devin：个人记忆与夜间整理，恢复会话窗口改为 14 天",
+      "title_en": "Devin: personal memory and nightly refinement, with 14-day resume windows",
+      "summary_zh": "Devin 新增跨会话个人记忆和夜间 dreaming 整理，记忆不与组织共享；睡眠会话恢复窗口由 30 天缩短为 14 天。",
+      "summary_en": "Devin adds personal cross-session memory and nightly dreaming refinement without sharing memory with the organization; the resume window for sleeping sessions falls from 30 to 14 days.",
+      "key_points_zh": [
+        "用户可查看记忆文件并开关；组织可控制，企业可强制开关。",
+        "14 天后历史仍可查看，新工作需新建会话；仓库 setup 自动加载根目录 AGENTS.md。",
+        "启用 Ultra 预览的零数据保留企业也可使用；新增扫描发现管理权限和按 1、3、9 次失败退避通知。"
+      ],
+      "key_points_en": [
+        "Users can inspect memory files and toggle memory; organizations can control it and enterprises can enforce it.",
+        "History remains available after 14 days but new work requires a new session; repository setup loads root AGENTS.md.",
+        "Enterprises with Ultra preview enabled can use it with zero data retention; adds scan-finding management permissions and failure notifications at 1, 3, 9 consecutive failures."
+      ],
+      "importance_reason_zh": "改变长期上下文、会话恢复和企业治理。",
+      "importance_reason_en": "Changes long-term context, session recovery and enterprise governance.",
+      "published_at": "2026-10-09",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-13T14:48:25+00:00",
+      "updated_at": "2026-10-13T14:53:47.525489+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#october-9-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#october-9-2026",
+          "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-09",
+          "date_kind": "published"
         }
       ]
     },

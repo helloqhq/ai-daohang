@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "df0ef1ecccdb4bb3",
-  "generated_at": "2026-10-11T03:59:12+00:00",
+  "snapshot_id": "2a39f71f4aa5c55b",
+  "generated_at": "2026-10-13T14:58:53+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 133,
+      "count": 163,
       "min_date": "2026-10-01T01:34:16Z",
-      "max_date": "2026-10-11T01:39:22Z"
+      "max_date": "2026-10-13T11:45:58Z"
     },
     {
       "month": "2026-09",
@@ -157,7 +157,37 @@
     "google-gemini4-argon-preview": "2026-09",
     "pi-v0992": "2026-09",
     "claude-code-v21286": "2026-09",
-    "google-synthid-bio": "2026-09"
+    "google-synthid-bio": "2026-09",
+    "cline-cli-3071-sdk-0093": "2026-10",
+    "kilo-jetbrains-7110-rc3": "2026-10",
+    "kilo-789-preview": "2026-10",
+    "pi-v120": "2026-10",
+    "copilot-cli-1097-0": "2026-10",
+    "copilot-cli-1097-2": "2026-10",
+    "copilot-cli-1096": "2026-10",
+    "copilot-telemetry-controls-20261012": "2026-10",
+    "hermes-v0217": "2026-10",
+    "kiro-cli-v3-start-20261012": "2026-10",
+    "kiro-fedramp-class-c-20261012": "2026-10",
+    "kiro-opus55-govcloud-20261009": "2026-10",
+    "kiro-sonnet55-govcloud-20261009": "2026-10",
+    "zcode-3153": "2026-10",
+    "zcode-3151": "2026-10",
+    "qoder-044-fast-models": "2026-10",
+    "devin-memory-20261009": "2026-10",
+    "x-subscription-20261012": "2026-10",
+    "b-ai-mimo25-migration-20261013": "2026-10",
+    "tibo-more-usage-plan-20261013": "2026-10",
+    "tibo-reset-done-20261013": "2026-10",
+    "tibo-day8-reset-20261013": "2026-10",
+    "tibo-pro-2x-poll-20261012": "2026-10",
+    "tibo-sol500k-context-20261011": "2026-10",
+    "musk-grok-bot-employee-20261013": "2026-10",
+    "musk-try-grok-bot-20261013": "2026-10",
+    "musk-grok-memory-transfer-20261013": "2026-10",
+    "jeff-dean-ai-research-events-20261013": "2026-10",
+    "zuckerberg-muse-wonder-20261012": "2026-10",
+    "zuckerberg-muse-watermelon-20261012": "2026-10"
   },
-  "total_events": 139
+  "total_events": 169
 }

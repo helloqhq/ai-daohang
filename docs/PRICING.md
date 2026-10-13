@@ -6,6 +6,8 @@
 
 ## 数据与核验
 
+2026-10-13 复核目录并新增 The X Subscription 八档、Codex Free / Go，共 114 项（API 49、Token Plan 18、Agent 47）。Kimi 新 Plus / Pro / Max 价格已确认，剩余 6 项价格待核验、3 项 Gemini CLI 入口停服。旧 Cursor 套餐保留原价与权益，标为 legacy，与新购方案分表；OpenCode Go 补齐额度上调及接入条件。9 项保留原价格核验日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-13.md)。
+
 2026-10-11 复核原有目录并新增 B.AI Claude Haiku 5.5，现有 104 项（API 49、Token Plan 18、Agent 37）。修正 Kilo Pass 首月 / 第二月奖励，补齐 Kiro 追加 credits 与 B.AI 赠送 Credits 有效期；9 项结算价仍待核验，3 项 Gemini CLI 个人入口仍停服。Google 当前 API 价格页未列出的 Gemini 3.7 Flash / 3.5 Flash 保留原核验日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-11.md)。
 
 2026-10-10 新增硅基流动、B.AI、WorldRouter 共 26 个 API 模型及 B.AI 两个订阅档位；目录现有 103 项（API 48、Token Plan 18、Agent 37）。WorldRouter 保留 Credits 原价，页面、筛选与 RSS 支持积分单位，未核实美元兑换比例时不换算。各平台同名模型独立分组，分时价格、长上下文和活动条件分别保留。详见 [平台来源与计费更新](PLATFORM-SOURCES-2026-10-10.md)。

@@ -361,7 +361,7 @@ git push origin main
 
 正式域名为 `go2-ai.com`，从域名根目录访问。仓库 **Settings → Pages → Source** 使用 GitHub Actions，**Custom domain** 设置 `go2-ai.com`。Actions 模式由 Pages 设置保存域名，构建不生成 `CNAME` 文件。资源和 JSON 使用相对路径，兼容根目录与项目子路径。
 
-域名由阿里云管理，已配置四条根域 GitHub Pages A 记录和 `www → helloqhq.github.io`；DNS、邮件记录保留及 HTTPS 设置详情见 [独立域名部署记录](docs/DEPLOYMENT.md)。截至 2026-10-03 最近一次检查，DNS 已配置，HTTPS 证书仍待签发；证书可用后在 Pages 启用 **Enforce HTTPS**。日常发布新闻无需修改 DNS。
+域名由阿里云管理，已配置四条根域 GitHub Pages A 记录和 `www → helloqhq.github.io`；DNS、邮件记录保留及 HTTPS 设置详情见 [独立域名部署记录](docs/DEPLOYMENT.md)。2026-10-03 已同步旧 Hostinger DNS 区域以解决迁移缓存造成的证书签发问题；HTTPS 证书已签发，Pages 已启用 **Enforce HTTPS**，首页及全部公开资源通过 HTTPS 验收。日常发布新闻无需修改 DNS。
 
 部署成功后检查：
 

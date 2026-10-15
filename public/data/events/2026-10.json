@@ -1,7 +1,1147 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "2a39f71f4aa5c55b",
+  "snapshot_id": "58f890ccea8e8a0f",
   "events": [
+    {
+      "id": "elon-grok-bot-docs-20261015",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "马斯克称 Grok Bot 适合审阅合同等文档",
+      "title_en": "Musk says Grok Bot is useful for reviewing contracts and other documents",
+      "summary_zh": "马斯克表示，用户可将合同或遗产规划等法律文档上传给 Grok Bot 审阅；原帖为本人使用评价。",
+      "summary_en": "Musk says users can upload legal documents such as contracts or estate-planning files for Grok Bot to review; the post is his own assessment.",
+      "key_points_zh": [
+        "原帖未提供准确率、适用法域或专业审查替代依据。"
+      ],
+      "key_points_en": [
+        "The post provides no accuracy figures, jurisdictional scope or evidence of replacing professional review."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-15T01:51:52+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T02:03:58+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2110549185867194609",
+          "url": "https://x.com/elonmusk/status/2110549185867194609",
+          "collected_at": "2026-10-15T02:03:58+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v1099-0",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.99-0：会话级沙箱与插件自动安装",
+      "title_en": "Copilot CLI 1.0.99-0 adds session sandbox controls and automatic plugin installation",
+      "summary_zh": "此版本支持只在当前会话启用沙箱，可信仓库插件会在聊天运行前自动安装与更新，并修复权限规则及 Windows 启动问题。",
+      "summary_en": "This version allows sandboxing for the current session, automatically installs and updates trusted repository plugins before chat runs, and fixes permission rules and Windows startup.",
+      "key_points_zh": [
+        "沙箱默认允许本地网络；启用开发工具访问后可写入包与构建缓存。",
+        "allowed-tools 保留参数内部逗号；存在歧义的无作用域规则改为询问。"
+      ],
+      "key_points_en": [
+        "The sandbox allows local-network access by default; developer-tool access permits package and build cache writes.",
+        "allowed-tools preserves commas inside arguments; ambiguous unscoped rules now prompt."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-15T01:00:01Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-0",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-0",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-jetbrains-7110rc4",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kilo JetBrains 7.1.10-rc.4：远程会话分支与 MCP 登录修复",
+      "title_en": "Kilo JetBrains 7.1.10-rc.4 adds remote session branching and MCP login fixes",
+      "summary_zh": "此预发布支持从指定消息分叉远程会话，修复 MCP 登录重置及搜索忽略规则问题，并捆绑 CLI 7.8.10。",
+      "summary_en": "This prerelease supports forking remote sessions at a specific message, fixes MCP login resets and search ignore handling, and bundles CLI 7.8.10.",
+      "key_points_zh": [
+        "修复 glob / grep include 模式绕过 .gitignore，以及非 UTF-8 匹配导致 grep 失败。",
+        "恢复撤回消息时的草稿和附件，处理卡在下一步思考的会话。"
+      ],
+      "key_points_en": [
+        "Fixes glob / grep include patterns bypassing .gitignore and grep failures on non-UTF-8 matches.",
+        "Restores drafts and attachments when reverting messages and recovers sessions stuck considering next steps."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T23:42:55Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:52+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.10-rc.4",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.10-rc.4",
+          "collected_at": "2026-10-15T01:59:52+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-v7810-preview",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kilo 7.8.10 预发布：忽略路径搜索设置与 OAuth 恢复修复",
+      "title_en": "Kilo 7.8.10 prerelease adds ignored-path search settings and OAuth recovery fixes",
+      "summary_zh": "Kilo 7.8.10 明确标为预发布，新增实验性 Search Ignored Paths 设置，并修复被忽略路径搜索、跨会话 MCP OAuth 和 Windows 后台任务问题。",
+      "summary_en": "Kilo 7.8.10 is explicitly a prerelease. It adds an experimental Search Ignored Paths setting and fixes ignored-path searches, cross-session MCP OAuth and Windows background jobs.",
+      "key_points_zh": [
+        "默认 glob 与 grep include 搜索继续排除 .gitignore 路径；显式实验设置可指定搜索路径。",
+        "移动端可从指定消息分叉到远程 CLI，仅恢复该点之前的记录和文件编辑。"
+      ],
+      "key_points_en": [
+        "Default glob and grep include searches keep excluding .gitignore paths; an explicit experimental setting can specify paths to search.",
+        "Mobile can fork onto a remote CLI at a message, restoring only preceding transcript and file edits."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T22:01:14Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:52+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.10",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.10",
+          "collected_at": "2026-10-15T01:59:52+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-hydrafusion-max-20261014",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot 更新 HydraFusion 并新增 Max 研究预览",
+      "title_en": "Copilot updates HydraFusion and introduces the Max research preview",
+      "summary_zh": "HydraFusion 模型池加入 Opus 5.5、GPT-6 Astra、GPT-6.1 Sol 与 GPT-6 Luna，并按工作阶段调整推理强度；新增面向复杂任务的 Max。",
+      "summary_en": "HydraFusion adds Opus 5.5, GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna to its model pool and tailors reasoning effort by stage, with a new Max option for demanding tasks.",
+      "key_points_zh": [
+        "Cascade 可加入判断与按需修复；Critique 使用工具检查工作区并支持并行评论模型。",
+        "两种选项仍为研究预览，在 VS Code、Copilot app 与 CLI 提供；Pro、Pro+、Business 和 Enterprise 需启用预览并受组织策略约束。"
+      ],
+      "key_points_en": [
+        "Cascade can add judging and repairs when needed; Critique uses tools to inspect the workspace and supports parallel critics.",
+        "Both remain research previews in VS Code, the Copilot app and CLI; Pro, Pro+, Business and Enterprise require preview features and remain subject to organization policies."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T20:01:35+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:52+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
+          "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
+          "collected_at": "2026-10-15T01:59:52+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v1098",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.98：支持 Gemini 4 Argon 与会话权限恢复修复",
+      "title_en": "Copilot CLI 1.0.98 supports Gemini 4 Argon and fixes resumed permissions",
+      "summary_zh": "稳定版 1.0.98 支持 Gemini 4 Argon，修复分屏切换后的 MCP 状态和已放弃权限请求的恢复处理。",
+      "summary_en": "Stable release 1.0.98 supports Gemini 4 Argon and fixes MCP state after split-view switches and recovery of abandoned permission requests.",
+      "key_points_zh": [
+        "子进程退出信号丢失时，命令 hooks 仍可可靠完成。",
+        "扩展 /ask 的展开、复制及重开上一条回答能力。"
+      ],
+      "key_points_en": [
+        "Command hooks complete reliably even when child-exit signals are lost.",
+        "Extends /ask controls for expanding, copying and reopening the previous answer."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T19:52:33Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.98",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.98",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21300",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.300：AWS advisor 与工作流 mod 控制更新",
+      "title_en": "Claude Code 2.1.300 adds AWS advisor support and workflow mod controls",
+      "summary_zh": "Claude Platform on AWS 新增 /advisor，需主动选择才运行；mod 的 agent.spawn hook 可改写工作流 agent 的提示和模型。",
+      "summary_en": "Claude Platform on AWS adds /advisor, which runs only after an explicit selection; a mod’s agent.spawn hook can rewrite a workflow agent’s prompt and model.",
+      "key_points_zh": [
+        "后台会话通过 Workflow 工具审批恢复；hook 返回的 updatedInput 采用与模型输入相同的验证。",
+        "遥测细分 5 分钟与 1 小时缓存写入；后台命令在退出请求后 1.5 秒仍未停止时强制结束。"
+      ],
+      "key_points_en": [
+        "Background sessions resume through Workflow tool approval; updatedInput from hooks receives the same validation as model input.",
+        "Telemetry splits five-minute and one-hour cache writes; background commands still running 1.5 seconds after an exit request are force-killed."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T18:57:14+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:43+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-300",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-300",
+          "collected_at": "2026-10-15T01:59:43+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-harness-v021alpha3",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "DeepSeek Harness 0.2.1-alpha.3：密钥脱敏、会话恢复与 SDK resume",
+      "title_en": "DeepSeek Harness 0.2.1-alpha.3 adds secret masking and SDK session resume",
+      "summary_zh": "此预发布默认脱敏已发送消息中的密钥，支持本机 HTTP Web 登录，并改善重启后会话恢复、插件更新及上下文压缩。",
+      "summary_en": "This prerelease masks secrets in sent messages by default, supports local HTTP Web sign-in, and improves session recovery after restart, plugin updates and context compaction.",
+      "key_points_zh": [
+        "TypeScript / Python SDK 支持沿用会话 ID 与目录恢复；PTC Node 环境可选内存模式复用变量。",
+        "Web / 桌面优先使用已存凭据，headless 默认只读环境变量与 .env；azure-openai-responses 配置需迁移为 azure。"
+      ],
+      "key_points_en": [
+        "TypeScript / Python SDKs resume sessions with the same IDs and directories; PTC Node offers in-memory variable reuse.",
+        "Web / Desktop prioritize saved credentials, while headless defaults to environment variables and .env; azure-openai-responses configurations must migrate to azure."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T16:13:35Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.3",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.3",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-v220",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kimi Code 2.2.0：进度通知实验与后台等待上限",
+      "title_en": "Kimi Code 2.2.0 adds experimental progress notifications and bounds background waits",
+      "summary_zh": "Kimi Code 2.2.0 新增默认关闭的 NotifyUser 进度通知实验，支持 kimi app [path] 新建桌面聊天，并将轮内后台任务等待限制为 90 秒。",
+      "summary_en": "Kimi Code 2.2.0 adds opt-in NotifyUser progress notifications, kimi app [path] for new desktop chats, and a 90-second limit on in-turn waits for background tasks.",
+      "key_points_zh": [
+        "Tower 模式支持确定性编排；运行中新消息会中断当前轮并作为独立轮运行。",
+        "修复分叉会话误触发原会话 cron、恢复后首次媒体读取及 UserPromptSubmit 导致回复错位。"
+      ],
+      "key_points_en": [
+        "Tower mode gains deterministic orchestration; a new message interrupts the active turn and runs as its own turn.",
+        "Fixes source-session cron firing in forks, first media reads after resume and misplaced replies caused by UserPromptSubmit."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T15:43:16Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:52+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.2.0",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.2.0",
+          "collected_at": "2026-10-15T01:59:52+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v1098-2",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.98-2：命令 hook 完成修复",
+      "title_en": "Copilot CLI 1.0.98-2 fixes command-hook completion",
+      "summary_zh": "此版本修复 Node 下子进程退出信号丢失导致命令 hook 不能完成的问题，并改进 /ask 回答操作。",
+      "summary_en": "This version fixes command hooks failing to complete when Node loses child-exit signals and improves /ask answer controls.",
+      "key_points_zh": [
+        "支持 Ctrl+E 展开与 Ctrl+Y 复制整个回答。"
+      ],
+      "key_points_en": [
+        "Supports Ctrl+E to expand and Ctrl+Y to copy the full answer."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T04:26:49Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.98-2",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.98-2",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21299",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.299：空闲压缩与 MCP 权限匹配收紧",
+      "title_en": "Claude Code 2.1.299 adds idle compaction and tightens MCP permission matching",
+      "summary_zh": "Claude Code 为至少 200K tokens、空闲约 54 分钟的终端对话增加压缩；插件拦截动作失败时改为拒绝，并收紧 MCP allow 规则匹配。",
+      "summary_en": "Claude Code adds compaction for terminal conversations of at least 200K tokens idle for about 54 minutes, denies actions when plugin blocking hooks fail, and tightens MCP allow-rule matching.",
+      "key_points_zh": [
+        "idleCompaction 可关闭，CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS 可改阈值，均需 2.1.290+。",
+        "恢复命令使用会话 ID；UserPromptSubmit 在技能展开前运行，允许阻止包含的命令。"
+      ],
+      "key_points_en": [
+        "idleCompaction disables the feature and CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS changes its threshold; both require 2.1.290+.",
+        "Resume commands use session IDs; UserPromptSubmit runs before skill expansion and can block embedded commands."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T03:09:30+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:43+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-299",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-299",
+          "collected_at": "2026-10-15T01:59:43+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "google-gemma-singapore-scam-detection-20261014",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "preview",
+      "topics": [
+        "model_release",
+        "capability"
+      ],
+      "title_zh": "Google 与新加坡合作微调端侧诈骗检测模型",
+      "title_en": "Google and Singapore fine-tune an on-device scam detection model",
+      "summary_zh": "Google DeepMind 与 GovTech Singapore 基于 Gemma 微调端侧诈骗检测模型，采用轻量分类器与上下文分析两阶段流程，计划分阶段集成到应用。",
+      "summary_en": "Google DeepMind and GovTech Singapore fine-tuned Gemma for on-device scam detection using a lightweight classifier followed by contextual analysis, with phased application deployment planned.",
+      "key_points_zh": [
+        "部署后需用户同意才访问本机对话；官方表示对话不上传给 Google 或政府。",
+        "训练排除私人及可识别个人信息，使用匿名诈骗报告与情报数据。"
+      ],
+      "key_points_en": [
+        "Access to on-device conversations will require user consent; the partners say conversations are not uploaded to Google or the government.",
+        "Training excluded private and personally identifiable information and used anonymized scam reports and intelligence."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T02:00:14+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T02:03:57+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+          "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+          "collected_at": "2026-10-15T02:03:57+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v1098-1",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.98-1：Gemini 4 Argon 接入与恢复修复",
+      "title_en": "Copilot CLI 1.0.98-1 adds Gemini 4 Argon and resume fixes",
+      "summary_zh": "此版本加入 Gemini 4 Argon，修复分屏后 MCP 状态及恢复已放弃权限请求的问题。",
+      "summary_en": "This version adds Gemini 4 Argon and fixes MCP state after split-view switches and recovery of abandoned permission requests.",
+      "key_points_zh": [
+        "恢复会话只继续仍有效的权限请求。",
+        "启动输入框加载时不再丢弃普通字符。"
+      ],
+      "key_points_en": [
+        "Resumed sessions continue only active permission requests.",
+        "Ordinary characters typed while the input box starts no longer disappear."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14T00:46:57Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.98-1",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.98-1",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "hermes-v0221",
+      "entity_ids": [
+        "hermes"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Hermes 0.22.1：MCP 超时、技能压缩与会话恢复修复",
+      "title_en": "Hermes 0.22.1 fixes MCP deadlines, skill compaction and session recovery",
+      "summary_zh": "Hermes 发布 0.22.1 补丁，修复 MCP 工具调用超时传递、压缩后的技能标记及桌面会话重连等问题。发布说明标注日期为 10 月 14 日。",
+      "summary_en": "Hermes released the 0.22.1 patch with fixes for MCP call deadline propagation, skill markers after compaction and desktop session reconnection. The release notes date it October 14.",
+      "key_points_zh": [
+        "保留服务器调用期限，修复小型和斜杠技能在压缩后丢失重载标记。",
+        "修复桌面会话切换、已接收输入保留及后台任务恢复中的多项问题。"
+      ],
+      "key_points_en": [
+        "Preserves server call deadlines and fixes lost reload markers for small and slash-invoked skills after compaction.",
+        "Fixes desktop session switching, preservation of accepted input and several background-work recovery issues."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.1",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.1",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-election-information-preview-20261014",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "Claude 预告接入官方投票信息与实时选举结果",
+      "title_en": "Claude previews official voting information and current election results",
+      "summary_zh": "Anthropic 表示本月稍后将为美国 Claude.ai 用户接入 Democracy Works 的州级投票信息，并在选举夜及之后显示最新官方计票结果。",
+      "summary_en": "Anthropic says US Claude.ai users will receive state-specific Democracy Works voting information later this month and current official vote counts on election night and afterward.",
+      "key_points_zh": [
+        "有关登记、投票地点与日期的 TurboVote 横幅继续保留。",
+        "新功能属于公告中的后续上线安排，不能视为已经全面提供。"
+      ],
+      "key_points_en": [
+        "TurboVote banners for registration, polling locations and election dates remain.",
+        "The new features are announced future rollouts and are not presented as already broadly available."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-15T02:03:57+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/2026-us-midterms",
+          "url": "https://www.anthropic.com/news/2026-us-midterms",
+          "collected_at": "2026-10-15T02:03:57+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "apigee-hybrid-mcp-20261014",
+      "entity_ids": [
+        "google",
+        "gemini-cli"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "compatibility"
+      ],
+      "title_zh": "Apigee hybrid 宣布集群内 MCP 数据平面支持",
+      "title_en": "Apigee hybrid announces in-cluster MCP data-plane support",
+      "summary_zh": "Google 10 月 14 日文章介绍 hybrid 1.17.0 的 MCP 支持；该版本此前于 9 月 14 日发布，可将 OpenAPI 3.0.x 操作转换为 agent 工具。",
+      "summary_en": "Google’s October 14 article describes MCP support in hybrid 1.17.0, released September 14, converting OpenAPI 3.0.x operations into agent tools.",
+      "key_points_zh": [
+        "MCP 请求在自有 Kubernetes 集群内处理；集群主动拉取控制平面生成的工具配置。",
+        "支持 Subscription 与 Evaluation 组织，包括已配置数据驻留的组织。"
+      ],
+      "key_points_en": [
+        "MCP requests run inside the customer’s Kubernetes cluster, which pulls tool configuration from the control plane.",
+        "Supports Subscription and Evaluation organizations, including organizations configured for data residency."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-15T02:03:58+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/",
+          "url": "https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/",
+          "collected_at": "2026-10-15T02:03:58+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "grok-voice-30",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "api",
+        "pricing"
+      ],
+      "title_zh": "Grok Voice 3.0 正式提供 API，价格维持每分钟 $0.08",
+      "title_en": "Grok Voice 3.0 launches in the API at the unchanged $0.08 per minute",
+      "summary_zh": "xAI 发布语音到语音模型 Grok Voice 3.0，Voice Agent API 维持每分钟 $0.08；grok-voice-latest 已自动切换，无需改动。",
+      "summary_en": "xAI launched the speech-to-speech Grok Voice 3.0 at the unchanged Voice Agent API price of $0.08 per minute; grok-voice-latest has switched automatically without changes.",
+      "key_points_zh": [
+        "官方称延迟低于一秒，并引用外部评测报告能力提升；这些结果未由本站独立验证。",
+        "模型也用于 Grok Bot 语音模式及 Tesla / SpaceX 场景。"
+      ],
+      "key_points_en": [
+        "xAI reports sub-second latency and cites external evaluations for capability gains; this site has not independently verified them.",
+        "The model also powers Grok Bot voice mode and Tesla / SpaceX use cases."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-15T02:03:57+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "grok-official",
+          "content_id": "https://x.ai/news/grok-voice-3",
+          "url": "https://x.ai/news/grok-voice-3",
+          "collected_at": "2026-10-15T02:03:57+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "qoder-v047",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Qoder 0.4.7：交互可视化、个人 Agent Teams 与 iPhone 控制",
+      "title_en": "Qoder 0.4.7 adds visualizations, personal Agent Teams and iPhone control",
+      "summary_zh": "Qoder 0.4.7 支持聊天内交互图表与原型、个人版 Agent Teams，以及 Apple silicon Mac 上配置插件后的 iPhone 控制。",
+      "summary_en": "Qoder 0.4.7 adds interactive charts and prototypes in chat, Agent Teams for personal accounts and iPhone control from Apple silicon Macs after plugin setup.",
+      "key_points_zh": [
+        "Locked use 为 Beta，需 macOS 14.4+ 及管理员授权；可导入 WorkBuddy 任务、记忆与可迁移配置。",
+        "远程控制可同步 SSH 工作区与会话；修复企业 HTTPS 证书未被 MCP 信任等问题。"
+      ],
+      "key_points_en": [
+        "Locked use is Beta and requires macOS 14.4+ and administrator authorization; WorkBuddy history, memory and transferable configuration can be imported.",
+        "Remote Control syncs SSH workspaces and sessions; fixes include MCP trust for enterprise HTTPS certificates."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-14",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-15T02:03:57+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#october-14-2026::0.4.7",
+          "url": "https://docs.qoder.com/release-notes/qoder#october-14-2026",
+          "collected_at": "2026-10-15T02:03:57+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-desktop-state-storage-20261013",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Tibo：ChatGPT 与 Codex 桌面状态存储优化已推出",
+      "title_en": "Tibo says desktop state-storage optimizations have rolled out",
+      "summary_zh": "Tibo 表示已向 ChatGPT 与 Codex 桌面应用推出磁盘状态存储优化，预计减少约 60% 存储占用，以回应重度用户磁盘空间不足的反馈。",
+      "summary_en": "Tibo says state-storage optimizations have rolled out for ChatGPT and Codex desktop apps and should reduce disk use by about 60%, responding to reports from heavy users running out of space.",
+      "key_points_zh": [
+        "60% 是负责人给出的预期幅度，原帖未说明测试条件或适用版本。"
+      ],
+      "key_points_en": [
+        "The 60% figure is the author’s expectation; the post does not specify test conditions or applicable versions."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T23:32:43+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T02:03:58+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2110151780478927344",
+          "url": "https://x.com/thsottiaux/status/2110151780478927344",
+          "collected_at": "2026-10-15T02:03:58+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-v0640",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Gemini CLI 0.64.0：原子写入与损坏状态恢复进入稳定版",
+      "title_en": "Gemini CLI 0.64.0 stabilizes atomic writes and corrupted-state recovery",
+      "summary_zh": "稳定版包含文件工具操作串行化与原子写入、状态备份恢复，以及无头模式目录信任状态传递修复。",
+      "summary_en": "The stable release includes serialized file-tool operations, atomic writes, state recovery from backups and resolved folder-trust propagation in headless mode.",
+      "key_points_zh": [
+        "修复 @ 代码引用造成 CPU 卡死，以及活动操作中 Ctrl+C 无法触达取消处理。",
+        "ACP 桥接 usage_update 通知，改善精确会话 ID 解析及失败后的监听器清理。"
+      ],
+      "key_points_en": [
+        "Fixes CPU hangs on @ references in code and Ctrl+C failing to reach cancellation during active work.",
+        "ACP bridges usage_update notifications and improves exact session-ID lookup and listener cleanup after failures."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T20:44:46Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-v0650-preview0",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Gemini CLI 0.65 预览：不可信目录只读设置与恢复历史保护",
+      "title_en": "Gemini CLI 0.65 preview enforces untrusted-folder settings and protects resumed history",
+      "summary_zh": "0.65.0-preview.0 在不可信目录强制工作区设置只读，并修复恢复会话时重复工具响应及快速退出删除历史的问题。",
+      "summary_en": "Version 0.65.0-preview.0 enforces read-only workspace settings in untrusted folders and fixes duplicate tool-response turns and history deletion on quick exit after resume.",
+      "key_points_zh": [
+        "修复快速 Ctrl+C 导致会话状态污染；OAuth callback iss 验证对齐 RFC 9207 元数据。",
+        "避免 @ 引用提前递归读取文件，单个扩展未通过 allowlist 不再阻止其他扩展加载。"
+      ],
+      "key_points_en": [
+        "Fixes session poisoning on rapid Ctrl+C; OAuth callback iss validation follows RFC 9207 metadata.",
+        "Avoids eager recursive reading for @ references; one extension failing its allowlist check no longer stops others loading."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T20:27:55Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0-preview.0",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0-preview.0",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-gemini4argon-20261013",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "GitHub Copilot 正式接入 Gemini 4 Argon",
+      "title_en": "GitHub Copilot makes Gemini 4 Argon generally available",
+      "summary_zh": "GitHub 宣布 Gemini 4 Argon 在 Copilot 正式可用，按提供商标价计量，面向 Pro+、Max、Business 与 Enterprise 渐进开放。",
+      "summary_en": "GitHub announced general availability of Gemini 4 Argon in Copilot at provider list pricing, rolling out gradually to Pro+, Max, Business and Enterprise.",
+      "key_points_zh": [
+        "支持 VS Code、Visual Studio、CLI、coding agent、Copilot app、JetBrains、Xcode 与 Eclipse。",
+        "组织管理员可按模型策略管理访问，基准表现属于 GitHub 的早期测试表述。"
+      ],
+      "key_points_en": [
+        "Supported in VS Code, Visual Studio, CLI, coding agent, the Copilot app, JetBrains, Xcode and Eclipse.",
+        "Administrators control access through model policies; benchmark statements reflect GitHub’s early testing."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T18:39:56+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:52+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+          "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+          "collected_at": "2026-10-15T01:59:52+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v1097",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.97：agent hooks 与恢复写入保护",
+      "title_en": "Copilot CLI 1.0.97 adds agent-scoped hooks and protects resumed writes",
+      "summary_zh": "稳定版加入自定义 agent 作用域的声明式 hooks，并修复恢复已中断调用、插件 hooks 与配置保留问题。",
+      "summary_en": "The stable release adds declarative hooks scoped to custom agents and fixes interrupted-call recovery, plugin hooks and settings preservation.",
+      "key_points_zh": [
+        "Autopilot 拒绝 preToolUse 的 ask，避免无人处理的权限窗口阻塞。",
+        "恢复会话不重放已取消写入；长会话紧急内存释放可绕过冷却时间以避免堆内存崩溃。"
+      ],
+      "key_points_en": [
+        "Autopilot denies preToolUse ask decisions to avoid unattended permission dialogs.",
+        "Resume avoids replaying cancelled writes; emergency memory relief can bypass its cooldown to avoid heap crashes."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T18:37:05Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.97",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.97",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v1097-3",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.97-3：插件认证重试与代理兼容修复",
+      "title_en": "Copilot CLI 1.0.97-3 fixes plugin authentication retries and proxy compatibility",
+      "summary_zh": "远程插件市场和插件 HTTPS 拉取认证失败后，可用当前 GitHub token 重试一次；同时修复拦截 TLS 代理下响应无法结束的问题。",
+      "summary_en": "Remote plugin marketplace and plugin fetches retry once with the signed-in GitHub token after HTTPS authentication failure, and streamed responses complete behind TLS-intercepting proxies.",
+      "key_points_zh": [
+        "修复 GitHub SCP 绝对路径 remote 的仓库所有者与名称解析。"
+      ],
+      "key_points_en": [
+        "Fixes repository owner and name resolution for absolute-path GitHub SCP remotes."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T16:25:48Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.97-3",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.97-3",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "demis-argon-build-feedback-20261013",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Demis 称 Gemini 4 Argon 擅长知识工作和编程",
+      "title_en": "Demis praises Gemini 4 Argon for knowledge work and coding",
+      "summary_zh": "Demis Hassabis 分享使用 Gemini 4 Argon 构建巫师棋游戏的反馈，称其物理理解与 3D 建模能力令人印象深刻，并转述当日开放范围。",
+      "summary_en": "Demis Hassabis shared feedback on building a wizard chess game with Gemini 4 Argon, praising its physics understanding and 3D modeling and describing the day’s rollout.",
+      "key_points_zh": [
+        "其称 Gemini app 与 Search 向 Ultra / Pro 开放，Antigravity 向 Ultra 开放；这是本人发布时的表述。"
+      ],
+      "key_points_en": [
+        "He says Gemini app and Search access is rolling out to Ultra / Pro, and Antigravity to Ultra; this reflects his statement at posting time."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T16:12:33+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T02:03:58+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2110041008100843835",
+          "url": "https://x.com/demishassabis/status/2110041008100843835",
+          "collected_at": "2026-10-15T02:03:58+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini4-argon-release",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "api",
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "Gemini 4 Argon 发布：复杂任务推理与 API 介绍价",
+      "title_en": "Gemini 4 Argon launches with complex-task reasoning and introductory API pricing",
+      "summary_zh": "Google 发布 Gemini 4 Argon，向开发者与企业开放 API；Gemini app / Search 面向 AI Pro 与 Ultra，Antigravity 面向 Ultra。API 介绍价为输入 $2、输出 $10 / 百万 tokens，缓存输入折扣 95%。",
+      "summary_en": "Google launched Gemini 4 Argon through its developer and enterprise APIs, with Gemini app / Search access for AI Pro and Ultra and Antigravity for Ultra. Introductory API rates are $2 input and $10 output per million tokens, with 95% off cached input.",
+      "key_points_zh": [
+        "Google 将其用于复杂编程、专业知识及科学任务；性能排名与优化幅度均保留厂商归属。",
+        "同次安全说明介绍实时输入检查、内部探测及输出保护，并扩展 Fairwind 防御者项目。"
+      ],
+      "key_points_en": [
+        "Google positions it for complex coding, professional knowledge and scientific tasks; rankings and optimization figures remain attributed to Google.",
+        "The accompanying safety report describes real-time input screening, internal probes and output protections, with expansion of the Fairwind defender program."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T16:01:52+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T02:03:57+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+          "collected_at": "2026-10-15T02:03:57+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+          "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+          "collected_at": "2026-10-15T02:03:57+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-managed-settings-freshness-20261013",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Copilot 企业策略可强制启动时刷新并要求最低客户端版本",
+      "title_en": "Copilot enterprise policies can require fresh startup settings and minimum client versions",
+      "summary_zh": "企业管理员可设置 forceRemoteSettingsRefresh 强制客户端启动时确认最新策略；未能确认时停止运行，并开始为 sandbox 策略执行最低版本要求。",
+      "summary_en": "Administrators can require current policies at startup through forceRemoteSettingsRefresh. Clients fail closed if freshness cannot be confirmed, with minimum-version enforcement starting for sandbox policy.",
+      "key_points_zh": [
+        "覆盖 CLI、VS Code 与 Copilot app；MDM / 文件配置可在首次登录前生效，服务器配置在客户端收到后生效。"
+      ],
+      "key_points_en": [
+        "Applies to CLI, VS Code and the Copilot app; MDM / file settings can apply before first sign-in, while server settings take effect after receipt."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T15:20:10+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:52+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates",
+          "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates",
+          "collected_at": "2026-10-15T01:59:52+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "cline-desktop-v0046",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Cline Desktop 0.0.46：定时任务、推理设置与自动压缩修复",
+      "title_en": "Cline Desktop 0.0.46 fixes scheduled routines, reasoning settings and compaction",
+      "summary_zh": "修复定时任务永久排队、模型调用失败未标失败及宕机后补跑全部历史任务的问题；改善推理关闭、模型目录及自动压缩。",
+      "summary_en": "Fixes routines stuck pending, failed model calls not marked failed and replay of every missed run after downtime, while improving reasoning controls, model catalogs and compaction.",
+      "key_points_zh": [
+        "停机后仅补跑最近一次遗漏；任务编辑器使用当前模型。",
+        "图片不再抬高 token 估计；自动压缩可使用所选模型上下文，支持 .claude/skills 与符号链接规则。"
+      ],
+      "key_points_en": [
+        "Only the latest missed run executes after downtime; the editor lists current models.",
+        "Images no longer inflate token estimates; compaction can use the selected context window, and .claude/skills and symlink rules are supported."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T15:04:07Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:52+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/desktop-v0.0.46",
+          "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.46",
+          "collected_at": "2026-10-15T01:59:52+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "cline-v4124",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Cline 4.1.24：推理控制、MCP 崩溃与模型目录更新",
+      "title_en": "Cline 4.1.24 fixes reasoning controls and MCP crashes and updates models",
+      "summary_zh": "Cline 更新模型目录与默认模型，修复关闭 GPT-6 / Claude 推理返回 400、Gemini thinking-budget 错误及 MCP / hook 提前退出导致扩展宿主崩溃。",
+      "summary_en": "Cline updates model catalogs and defaults, fixes 400 errors when disabling GPT-6 / Claude reasoning and Gemini thinking-budget errors, and prevents extension-host crashes after MCP / hook early exits.",
+      "key_points_zh": [
+        "Cline / OpenRouter 未指定模型时默认 Sonnet 5.5；新增 Haiku 5.5 与多个提供商，免费列表加入 Step 5 Preview。",
+        "修复图片估算过高触发提前压缩，以及恢复符号链接规则和 .claude/skills 发现。"
+      ],
+      "key_points_en": [
+        "Unpinned Cline / OpenRouter default to Sonnet 5.5; adds Haiku 5.5 and providers, with Step 5 Preview on the free list.",
+        "Fixes inflated image estimates causing early compaction and restores symlink rules and .claude/skills discovery."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T15:02:28Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:52+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/v4.1.24",
+          "url": "https://github.com/cline/cline/releases/tag/v4.1.24",
+          "collected_at": "2026-10-15T01:59:52+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-mcp-platform-20261013",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "api"
+      ],
+      "title_zh": "Kilo 发布远程 MCP：查询用量并管理云 agent",
+      "title_en": "Kilo launches remote MCP for usage queries and cloud-agent management",
+      "summary_zh": "Kilo 的远程 MCP 通过 OAuth 连接个人或组织账号，使用 search 与 call 两个工具查询平台 API，可读取用量、管理 agent 配置和云会话。",
+      "summary_en": "Kilo’s remote MCP connects personal or organization accounts through OAuth and exposes search and call tools for its platform API, including usage queries, agent profiles and cloud sessions.",
+      "key_points_zh": [
+        "端点为 https://mcp.kiloapps.io/mcp，可供兼容 MCP 的客户端使用。",
+        "连接代表当前用户，可跨已加入组织操作；具体组织需在请求中指明。"
+      ],
+      "key_points_en": [
+        "The endpoint is https://mcp.kiloapps.io/mcp and works with MCP-compatible clients.",
+        "The connection acts as the signed-in user across joined organizations; requests should identify the intended organization."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T14:54:47+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:52+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/mcp",
+          "url": "https://blog.kilo.ai/p/mcp",
+          "collected_at": "2026-10-15T01:59:52+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "kilo-jetbrains-7110-rc3",
       "entity_ids": [
@@ -488,6 +1628,44 @@
       ]
     },
     {
+      "id": "cursor-origin-marketplace-20261013",
+      "entity_ids": [
+        "cursor"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "api"
+      ],
+      "title_zh": "Cursor Origin 应用市场开放公开提交",
+      "title_en": "Cursor Origin opens its app marketplace to public submissions",
+      "summary_zh": "Origin 集成超过 20 个部署、CI、审查、安全与项目管理应用，并开放开发团队提交应用供审核上架。",
+      "summary_en": "Origin integrates over 20 deployment, CI, review, security and project-management apps and opens submissions for review and listing.",
+      "key_points_zh": [
+        "应用使用 JWT 与安装访问 token 认证，接收 webhook，并可写入检查、PR 评论和审查。",
+        "提交需 slug、标签与演示视频，审核通过后才公开列出。"
+      ],
+      "key_points_en": [
+        "Apps authenticate with JWTs and installation tokens, receive webhooks and write checks, PR comments and reviews.",
+        "Submissions require a slug, tags and a demo video; listing follows approval."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "cursor-official",
+          "content_id": "https://cursor.com/changelog/origin-app-marketplace",
+          "url": "https://cursor.com/changelog/origin-app-marketplace",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "zcode-3153",
       "entity_ids": [
         "zcode"
@@ -523,6 +1701,87 @@
           "material_scope": "full_text",
           "published_at": "2026-10-13",
           "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "hermes-v0220",
+      "entity_ids": [
+        "hermes"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Hermes 0.22：本地模型、应用连接器与签名桌面包",
+      "title_en": "Hermes 0.22 adds local models, app connectors and signed desktop packages",
+      "summary_zh": "Hermes 0.22 引入无 Key 首次设置试用、应用连接器与一键 llama.cpp 本地模型；稳定发布渠道、签名桌面包及统一包管理器共同调整安装与更新流程。说明标注 10 月 13 日发布。",
+      "summary_en": "Hermes 0.22 introduces keyless onboarding trials, app connectors and one-click llama.cpp local models. Stable release channels, signed desktop packages and a unified package manager reshape installation and updates. The notes date the release October 13.",
+      "key_points_zh": [
+        "官方称插件目录已达 600 项；增加浏览器密码管理器登录、可接管的 Bot Screen 与实时子 agent 控制。",
+        "托管安装使用 Python 3.14；Windows 桌面要求 Windows 11 22H2+，默认 macOS 包限 Apple Silicon；90 天未活动的已结束会话默认自动清理，可关闭。"
+      ],
+      "key_points_en": [
+        "The project reports 600 catalog plugins and adds browser password-manager sign-in, a take-over Bot Screen and live subagent controls.",
+        "Managed installs use Python 3.14; Windows Desktop requires Windows 11 22H2+, default macOS packages target Apple Silicon; ended sessions inactive for 90 days are pruned by default, with an opt-out."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-15T01:59:42+00:00",
+      "updated_at": "2026-10-15T02:03:42+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0",
+          "collected_at": "2026-10-15T01:59:42+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini4-argon-robotics-demo-20261013",
+      "entity_ids": [
+        "google",
+        "gemini-cli"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Google 展示 Gemini 4 Argon 机器人闭环控制",
+      "title_en": "Google demonstrates closed-loop robotics with Gemini 4 Argon",
+      "summary_zh": "Google 展示 Gemini 4 Argon 通过视觉反馈与代码控制机器人，包括手眼相机观察、抓取后复查及动作调整；演示不等于通用机器人产品上线。",
+      "summary_en": "Google demonstrated Gemini 4 Argon controlling robots through visual feedback and code, including wrist-camera observations, grasp checks and action corrections; the demonstrations do not establish a general robotics product launch.",
+      "key_points_zh": [
+        "还展示通过检查中间帧来迭代引导 Gemini Omni 世界模型。"
+      ],
+      "key_points_en": [
+        "Also demonstrates iterative steering of the Gemini Omni world model by inspecting intermediate frames."
+      ],
+      "importance_reason_zh": "涉及实际功能、兼容性或使用条件的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility or conditions of use.",
+      "published_at": "2026-10-13",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-15T02:03:58+00:00",
+      "updated_at": "2026-10-15T02:06:04+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+          "collected_at": "2026-10-15T02:03:58+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+          "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+          "collected_at": "2026-10-15T02:03:57+00:00",
+          "material_scope": "metadata_only"
         }
       ]
     },

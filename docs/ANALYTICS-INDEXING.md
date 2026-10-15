@@ -38,3 +38,14 @@
 - 本次发布后于北京时间 11:00 运行首页“测试实际网址”，Google 明确返回“网址可编入 Google 索引”。随后请求重新索引，后台回执为“已请求编入索引”，并确认加入优先抓取队列。这是针对已发布 SEO 版本的新请求，未重复提交同一版本。
 
 预渲染与站点名称依据 [Google JavaScript SEO 说明](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics) 和 [Google 站点名称说明](https://developers.google.com/search/docs/appearance/site-names)。Google 决定最终抓取、索引和搜索展示时间，提交回执与实时检测通过不代表新内容已经完成索引更新。
+
+## 2026-10-07 索引提交更新
+
+- 站点地图提交 `31bc7e2` 已发布；GitHub Pages 工作流 [37494787594](https://github.com/helloqhq/ai-daohang/actions/runs/37494787594) 完成且成功。正式域名的 `sitemap.xml` 与 `sitemap_index.xml` 已核对包含本次 `lastmod` 更新。
+- 测试通过：41 个 Python 测试、32 个 JavaScript 测试；构建成功。站点地图继续包含四个规范页面，计费方案 `#pricing` 使用首页网址。
+- Chrome 中 Google Search Console 的 `https://go2-ai.com/` 资源已登录。本轮重新提交 `sitemap.xml` 后，新的只读页面确认后台提交日期已更新为 `2026年10月7日`，状态为“成功”，已发现四个网页。上次读取时间仍显示 `2026年10月4日`，不能宣称本轮内容已重新读取。已有 `sitemap_index.xml` 继续显示“成功”并指向同一文件，未重复提交。
+- 本轮 Google 首页检查确认“网址已收录到 Google”，最近抓取时间为 `2026年10月4日 11:04:18`，抓取及索引均允许，用户与 Google 选择的规范网址一致。本轮请求重新编入索引已取得“已请求编入索引”回执，确认网址加入优先抓取队列；这不代表 10 月 6 日内容已完成重新抓取。
+- Chrome 中 Bing Webmaster Tools 已有 `go2-ai.com/` 资源。本轮新提交 `sitemap.xml`，并重新提交旧 `sitemap_index.xml`；列表已记录这两次提交，均显示“正在处理”。后台提交日期显示 `2026/10/6`，操作发生在北京时间 10 月 7 日；不将处理队列状态写成读取或索引更新完成。
+- Bing 首页检查显示“已成功编制索引”，最近尝试爬网时间为 `29 Sept 2026 在 04:21`，早于当前静态站更新。北京时间 10 月 7 日 `00:14` 的实时测试显示“该 URL 可以由必应编制索引”及“未找到 SEO/GEO 问题”。旧缓存中的多个 H1、图片 alt 等提示不代表实时测试结果。
+- 本轮 Bing 首页重新索引请求已完成，确认窗口中的网址为 `https://go2-ai.com/`；提交后页面明确显示“已请求编制索引。”。该回执不代表新内容已重新抓取或索引更新完成。
+- Chrome 扩展控制连接持续无响应，原生截图为空白；上述操作通过 Chrome 原生窗口完成。Google 原提交窗口长时间停在“正在提交站点地图”，通过新的只读页面确认后台已记录本轮成功提交，未重复发送请求；原窗口随后也明确返回“已成功提交站点地图”。后续以搜索引擎更新后的读取时间、抓取时间和索引报告为准。

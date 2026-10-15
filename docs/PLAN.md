@@ -1,6 +1,6 @@
 # AI 信息聚合静态网站计划
 
-状态：首版网站、采集 skill、统一 RSS 读取器、JSON 校验及独立 Pages 发布流程已实现；正式访问域名改为 go2-ai.com，GitHub Pages 绑定完成后等待 DNS 与 HTTPS 生效。2026-10-03 按用户最新要求改为统一 RSS/Atom 获取信息；未接通订阅明确记录缺口。
+状态：首版网站、采集 skill、统一 RSS 读取器、JSON 校验及独立 Pages 发布流程已实现；正式访问域名 go2-ai.com 的 DNS 与 HTTPS 已通过验收，并启用强制 HTTPS。2026-10-03 按用户最新要求改为统一 RSS/Atom 获取信息；未接通订阅明确记录缺口。
 
 ## 目标与首版范围
 

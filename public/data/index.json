@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "58f890ccea8e8a0f",
-  "generated_at": "2026-10-15T04:14:29+00:00",
+  "snapshot_id": "8bf60c8ef5d0174d",
+  "generated_at": "2026-10-16T01:30:01+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 196,
+      "count": 223,
       "min_date": "2026-10-01T01:34:16Z",
-      "max_date": "2026-10-15T01:51:52+00:00"
+      "max_date": "2026-10-16T00:49:13Z"
     },
     {
       "month": "2026-09",
@@ -19,8 +19,32 @@
     }
   ],
   "event_locations": {
+    "copilot-cli-v1099-2": "2026-10",
+    "musk-grok-bot-growth-20261015": "2026-10",
+    "musk-grok-bot-daily-improvements-20261015": "2026-10",
+    "musk-grok-bot-spam-lists-20261015": "2026-10",
+    "codex-01630": "2026-10",
+    "claude-code-v21301": "2026-10",
+    "copilot-model-retirement-preview-20261116": "2026-10",
+    "kilo-jetbrains-7110": "2026-10",
+    "opencode-v1191": "2026-10",
+    "pi-v130": "2026-10",
+    "openai-rosalind-academic-plan-20261015": "2026-10",
+    "openai-gpt-live11-20261015": "2026-10",
+    "copilot-cli-v1099-1": "2026-10",
+    "kilo-nemotron35-super-vl-20261015": "2026-10",
+    "tibo-capacity-improvements-day11-20261015": "2026-10",
+    "copilot-agentic-autofix-ga-20261015": "2026-10",
+    "deepseek-harness-v021alpha4": "2026-10",
+    "kilo-v7812": "2026-10",
+    "tibo-done-and-dusted-20261015": "2026-10",
+    "tibo-day10-reset-20261015": "2026-10",
     "elon-grok-bot-docs-20261015": "2026-10",
     "copilot-cli-v1099-0": "2026-10",
+    "hermes-v0222": "2026-10",
+    "kiro-kimi-k3-preview-20261015": "2026-10",
+    "kiro-ide-markdown-review-20261015": "2026-10",
+    "qoder-v048": "2026-10",
     "kilo-jetbrains-7110rc4": "2026-10",
     "kilo-v7810-preview": "2026-10",
     "copilot-hydrafusion-max-20261014": "2026-10",
@@ -32,11 +56,14 @@
     "claude-code-v21299": "2026-10",
     "google-gemma-singapore-scam-detection-20261014": "2026-10",
     "copilot-cli-v1098-1": "2026-10",
+    "openrouter-private-endpoints-20261014": "2026-10",
     "hermes-v0221": "2026-10",
     "claude-election-information-preview-20261014": "2026-10",
     "apigee-hybrid-mcp-20261014": "2026-10",
     "grok-voice-30": "2026-10",
     "qoder-v047": "2026-10",
+    "kiro-sonnet4-retired-20261014": "2026-10",
+    "devin-review-sarif-v3-20261014": "2026-10",
     "tibo-desktop-state-storage-20261013": "2026-10",
     "gemini-cli-v0640": "2026-10",
     "gemini-cli-v0650-preview0": "2026-10",
@@ -222,5 +249,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 202
+  "total_events": 229
 }

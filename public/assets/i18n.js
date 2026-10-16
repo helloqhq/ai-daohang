@@ -71,7 +71,7 @@ export const messages = {
   filters: ['动态筛选', 'Filter updates'],
   categories: ['信息分类', 'Categories'],
   allUpdates: ['全部', 'All'],
-  models: ['模型', 'Models'],
+  models: ['模型厂商', 'Model providers'],
   agents: ['Agent', 'Agents'],
   platforms: ['平台', 'Platforms'],
   people: ['名人', 'People'],

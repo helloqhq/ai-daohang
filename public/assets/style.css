@@ -34,6 +34,7 @@ button:hover,a:hover{color:var(--accent)}
 .category-buttons{display:flex;gap:8px;flex-wrap:wrap}
 .category{display:flex;align-items:center;gap:12px;padding:8px 17px;border:1px solid var(--line);border-radius:4px;font-size:13px;color:var(--muted)}
 .category>span:last-child{font:10px var(--mono);opacity:.75}
+.category[data-category="model"]>span:first-child{white-space:nowrap}
 .category.selected{border-color:var(--accent);background:var(--soft);color:var(--accent)}
 .entity-buttons{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
 .entity-buttons button{border:1px solid transparent;padding:5px 11px;border-radius:3px;color:var(--muted);font-size:12px}

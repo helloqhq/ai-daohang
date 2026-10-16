@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-15",
+  "checked_at": "2026-10-16",
   "plans": [
     {
       "id": "gpt-6-astra",
@@ -21,7 +21,7 @@
       "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $20、输出 $75、缓存读取 $2、写入 $25。Batch / Flex 为 Standard 的 50%，Fast 为 2 倍；适用地域处理端点加价 10%，工具另计。 Astra Ultrafast 为对应 Standard 的 6 倍；短上下文输入 $60、输出 $300、缓存读取 $6、写入 $75。",
       "note_en": "Standard short-context rates. Long context per million tokens: input $20, output $75, cache reads $2, writes $25. Batch / Flex costs 50% of Standard and Fast costs 2×. Eligible regional-processing endpoints add 10%; tools bill separately. Astra Ultrafast costs 6× the applicable Standard rate: short-context input $60, output $300, cache reads $6 and writes $75.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-06"
     },
     {
@@ -43,7 +43,7 @@
       "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $4、输出 $15、缓存读取 $0.20、写入 $5。Batch / Flex 为 Standard 的 50%，Fast 为 2 倍；适用地域处理端点加价 10%，工具另计。 Ultrafast 为 Standard 的 6 倍；短上下文输入 $12、输出 $60、缓存读取 $0.60、写入 $15，长上下文为 $24/$90/$1.20/$30。",
       "note_en": "Standard short-context rates. Long context per million tokens: input $4, output $15, cache reads $0.20, writes $5. Batch / Flex costs 50% of Standard and Fast costs 2×. Eligible regional-processing endpoints add 10%; tools bill separately. Ultrafast costs 6× Standard: short-context input/output/cache reads/writes $12/$60/$0.60/$15; long-context $24/$90/$1.20/$30.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-09"
     },
     {
@@ -65,7 +65,7 @@
       "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $0.20、输出 $0.75、缓存读取 $0.02、写入 $0.25。Batch / Flex 为 Standard 的 50%，Fast 为 2 倍；适用地域处理端点加价 10%，工具另计。",
       "note_en": "Standard short-context rates. Long context per million tokens: input $0.20, output $0.75, cache reads $0.02, writes $0.25. Batch / Flex costs 50% of Standard and Fast costs 2×. Eligible regional-processing endpoints add 10%; tools bill separately.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-06"
     },
     {
@@ -87,7 +87,7 @@
       "note_zh": "缓存写入列为 5 分钟 TTL；1 小时写入、Batch 与工具费用请查官方说明。",
       "note_en": "Cache writes use a 5-minute TTL. See the source for 1-hour writes, Batch and tool charges.",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -106,11 +106,11 @@
       },
       "scope_zh": "标准 API · 5 分钟缓存写入",
       "scope_en": "Standard API · 5-minute cache writes",
-      "note_zh": "缓存写入列为 5 分钟 TTL；1 小时写入、Batch 与工具费用请查官方说明。",
-      "note_en": "Cache writes use a 5-minute TTL. See the source for 1-hour writes, Batch and tool charges.",
+      "note_zh": "缓存写入列为 5 分钟 TTL；1 小时写入、Batch 与工具费用请查官方说明。 Fast 模式输入 $8、输出 $40 / 百万 tokens，覆盖完整上下文，已不标为研究预览；支持第一方 Claude API 及 Azure 托管的 Microsoft Foundry 部署，不支持 Claude Platform on AWS。",
+      "note_en": "Cache writes use a 5-minute TTL. See the source for 1-hour writes, Batch and tool charges. Fast mode costs $8 input and $40 output per million tokens across the full context window and is no longer labeled research preview. It supports the first-party Claude API and Azure-hosted Microsoft Foundry deployments, but not Claude Platform on AWS.",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-05"
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16"
     },
     {
       "id": "claude-sonnet-5-5",
@@ -131,7 +131,7 @@
       "note_zh": "缓存写入列为 5 分钟 TTL；1 小时写入、Batch 与工具费用请查官方说明。",
       "note_en": "Cache writes use a 5-minute TTL. See the source for 1-hour writes, Batch and tool charges.",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-08"
     },
     {
@@ -153,7 +153,7 @@
       "note_zh": "提示超过 100K 时，输入 $0.50、输出 $2.50、缓存读取 $0.05、5 分钟写入 $0.625 / 百万 tokens；1 小时写入短/长提示分别为 $0.20/$1。Batch 输入和输出半价。",
       "note_en": "For prompts over 100K, input/output/cache read/5-minute writes cost $0.50/$2.50/$0.05/$0.625 per million tokens. One-hour writes cost $0.20/$1 for short/long prompts. Batch input and output are half price.",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-08"
     },
     {
@@ -175,7 +175,7 @@
       "note_zh": "缓存写入列为 5 分钟 TTL；1 小时写入、Batch 与工具费用请查官方说明。",
       "note_en": "Cache writes use a 5-minute TTL. See the source for 1-hour writes, Batch and tool charges.",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -220,7 +220,7 @@
       "note_zh": "活动截至 2026-12-31；之后输入 $1.50、输出 $7.50、缓存读取 $0.15 / 百万 tokens。输出含思考 tokens；缓存存储和搜索另计。",
       "note_en": "Until Dec 31, 2026; then input $1.50, output $7.50, cache reads $0.15 / million tokens. Output includes thinking; cache storage and search cost extra.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05",
       "valid_until": "2026-12-31"
     },
@@ -265,7 +265,7 @@
       "note_zh": "输出含思考 tokens；缓存存储和搜索费用另计。",
       "note_en": "Output includes thinking tokens. Cache storage and search are billed separately.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -287,7 +287,7 @@
       "note_zh": "非高峰每百万 tokens：输入 $0.15、输出 $0.60、缓存命中 $0.003。高峰为周一至周五北京时间 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间按非高峰计费。",
       "note_en": "Off-peak per million tokens: input $0.15, output $0.60, cache hits $0.003. Peak hours are Monday–Friday, 09:00–12:00 and 14:00–18:00 Beijing time, excluding Chinese public holidays; all other hours are off-peak.",
       "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-06"
     },
     {
@@ -309,7 +309,7 @@
       "note_zh": "对应 DeepSeek-V4-Pro-0813；非高峰每百万 tokens：输入 $0.66、输出 $1.98、缓存命中 $0.022。高峰为周一至周五北京时间 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间按非高峰计费。",
       "note_en": "Serves DeepSeek-V4-Pro-0813. Off-peak per million tokens: input $0.66, output $1.98, cache hits $0.022. Peak hours are Monday–Friday, 09:00–12:00 and 14:00–18:00 Beijing time, excluding Chinese public holidays; all other hours are off-peak.",
       "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-06"
     },
     {
@@ -331,7 +331,7 @@
       "note_zh": "采用固定版本 qwen3.7-plus-2026-05-26 标价；超过 256K 为输入 $1.20、输出 $4.80。其他地域和滚动别名活动价请查官方。",
       "note_en": "Pinned qwen3.7-plus-2026-05-26 list rates. Above 256K: input $1.20, output $4.80. Other regions and rolling-alias promotions differ.",
       "source_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -353,7 +353,7 @@
       "note_zh": "国际站美元定价；缓存存储当前限时免费，国内智谱站和 Coding Plan 单独计费。",
       "note_en": "International USD rates. Cache storage is temporarily free; the mainland platform and Coding Plan use separate billing.",
       "source_url": "https://docs.z.ai/guides/overview/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -375,7 +375,7 @@
       "note_zh": "国际站美元定价；缓存存储当前限时免费，国内智谱站和 Coding Plan 单独计费。",
       "note_en": "International USD rates. Cache storage is temporarily free; the mainland platform and Coding Plan use separate billing.",
       "source_url": "https://docs.z.ai/guides/overview/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -397,7 +397,7 @@
       "note_zh": "国际站美元定价；缓存存储当前限时免费，国内智谱站和 Coding Plan 单独计费。",
       "note_en": "International USD rates. Cache storage is temporarily free; the mainland platform and Coding Plan use separate billing.",
       "source_url": "https://docs.z.ai/guides/overview/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -419,7 +419,7 @@
       "note_zh": "官方标为永久五折后的价格；输入超过 512K 时输入 $0.60、输出 $2.40、缓存读取 $0.12。Priority 为标准价的 1.5 倍。",
       "note_en": "Official permanent 50%-discount rates. Above 512K: input $0.60, output $2.40, cache reads $0.12. Priority costs 1.5× Standard.",
       "source_url": "https://platform.minimax.io/docs/pricing/overview",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -441,7 +441,7 @@
       "note_zh": "highspeed 版本输入 $0.60、输出 $2.40；缓存读取和写入同标准版本。",
       "note_en": "The highspeed variant charges $0.60 input and $2.40 output; cache read and write rates are unchanged.",
       "source_url": "https://platform.minimax.io/docs/pricing/overview",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -463,7 +463,7 @@
       "note_zh": "开放平台按量计费，与 Kimi 会员 / Kimi Code 订阅额度分开。",
       "note_en": "Open Platform pay-as-you-go billing is separate from Kimi membership and Kimi Code quotas.",
       "source_url": "https://platform.kimi.ai/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -485,7 +485,7 @@
       "note_zh": "开放平台编程模型；会员 API Key 和开放平台 API Key 使用不同计费入口。",
       "note_en": "Open Platform coding model. Membership API keys and Open Platform API keys use different billing endpoints.",
       "source_url": "https://platform.kimi.ai/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05"
     },
     {
@@ -504,7 +504,7 @@
       "note_zh": "此前记录的标准月费为 $22，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。",
       "note_en": "The previously recorded standard monthly fee was $22, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-09",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
@@ -518,7 +518,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "minimax-plan-max",
@@ -536,7 +536,7 @@
       "note_zh": "此前记录的标准月费为 $55，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。",
       "note_en": "The previously recorded standard monthly fee was $55, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-09",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
@@ -550,7 +550,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "minimax-plan-ultra",
@@ -568,7 +568,7 @@
       "note_zh": "此前记录的标准月费为 $132，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。",
       "note_en": "The previously recorded standard monthly fee was $132, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-09",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
@@ -582,7 +582,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "glm-plan-lite",
@@ -600,7 +600,7 @@
       "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。",
       "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-08",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
@@ -614,7 +614,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "glm-plan-pro",
@@ -632,7 +632,7 @@
       "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。",
       "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-08",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
@@ -646,7 +646,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "glm-plan-max",
@@ -664,7 +664,7 @@
       "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。",
       "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-08",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
@@ -678,7 +678,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kimi-plan-andante",
@@ -710,7 +710,7 @@
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kimi-plan-moderato",
@@ -743,7 +743,7 @@
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kimi-plan-allegretto",
@@ -778,7 +778,7 @@
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kimi-plan-allegro",
@@ -813,7 +813,7 @@
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "codex-plus",
@@ -831,7 +831,7 @@
       "note_zh": "订阅额度随模型和任务消耗；使用 API Key 时按 API 单独计费。",
       "note_en": "Subscription quota depends on model and task. API-key usage is billed separately at API rates.",
       "source_url": "https://learn.chatgpt.com/docs/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05",
       "product_id": "codex",
       "product_name": "Codex",
@@ -847,7 +847,7 @@
       "models_source_urls": [
         "https://learn.chatgpt.com/docs/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "codex-pro-100",
@@ -865,7 +865,7 @@
       "note_zh": "Pro 仍受用量和模型额度限制，以用量面板的重置时间为准；API 另计费。",
       "note_en": "Pro usage remains subject to usage and model allowances; follow the reset times in the usage dashboard. API usage is billed separately.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "codex",
       "product_name": "Codex",
@@ -881,7 +881,7 @@
       "models_source_urls": [
         "https://learn.chatgpt.com/docs/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "codex-pro-200",
@@ -899,7 +899,7 @@
       "note_zh": "新订阅已恢复，采用较低的新额度。2026-09-22 至 09-29 太平洋时间上午 10 点曾有有效 Pro $200 的用户，在订阅有效期间可沿用旧额度至 2026-10-29，之后转为新额度。 符合上述资格窗口的同账号用户即使曾结束后重订，在当前订阅有效期间仍可沿用旧额度至 10 月 29 日；保留旧额度不会获得 Ultrafast。",
       "note_en": "Sign-ups reopened with a lower allowance. Users with an active Pro $200 subscription at any time from Sep 22 through Sep 29, 2026 at 10 a.m. Pacific retain the previous allowance through Oct 29 while subscribed, then move to the new allowance. Model allowances and reset times follow the usage dashboard. An eligible user who resubscribes on the same account can retain the previous allowance through October 29 while subscribed; grandfathering does not unlock Ultrafast.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "codex",
       "product_name": "Codex",
@@ -915,7 +915,7 @@
       "models_source_urls": [
         "https://learn.chatgpt.com/docs/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "codex-pro-500",
@@ -933,7 +933,7 @@
       "note_zh": "Pro 档位中仅 $500 包含 GPT-6 Astra 与 GPT-6.1 Sol Ultrafast；先用订阅额度，再扣 credits。API 另计费；用量仍受模型额度与重置时间限制。",
       "note_en": "Among Pro tiers, only $500 includes GPT-6 Astra and GPT-6.1 Sol Ultrafast; included usage is consumed before credits. API usage is separate; model allowances and reset times still apply.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "codex",
       "product_name": "Codex",
@@ -950,7 +950,7 @@
         "https://learn.chatgpt.com/docs/pricing",
         "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "claude-code-pro",
@@ -968,7 +968,7 @@
       "note_zh": "月付 $20；年付 $200。使用限额适用，API 消耗独立计费。",
       "note_en": "Monthly $20; annual $200. Usage limits apply; API usage is billed separately.",
       "source_url": "https://claude.com/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-08",
       "product_id": "claude-code",
       "product_name": "Claude Code",
@@ -987,7 +987,7 @@
         "https://code.claude.com/docs/en/model-config",
         "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "claude-code-max",
@@ -1005,7 +1005,7 @@
       "note_zh": "官方起价 $100/月；两个用量档位，具体结算价及用量规则以官网为准。",
       "note_en": "Official starting price $100/month, with two usage tiers. Check the source for checkout rates and limits.",
       "source_url": "https://claude.com/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-08",
       "product_id": "claude-code",
       "product_name": "Claude Code",
@@ -1024,7 +1024,7 @@
         "https://code.claude.com/docs/en/model-config",
         "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-pro",
@@ -1042,8 +1042,8 @@
       "note_zh": "含 Cursor Models 与 Other Models 两个用量池；第三方模型按 API 费率扣用量，超额可选按量付费。 此为旧订阅，已停止新购；已有订阅可保留现有价格及权益，包括第三方模型用量池。迁移至 The X Subscription 后改用新套餐规则，迁移入口依账号逐步开放。",
       "note_en": "Includes Cursor Models and Other Models pools; third-party usage is charged at API rates, with optional on-demand billing after limits. Legacy subscription, closed to new sign-ups. Existing subscribers can keep current prices and benefits, including the third-party model pool. Switching to The X Subscription adopts new-tier rules as account migration rolls out.",
       "source_url": "https://cursor.com/docs/account/pricing/legacy-cursor-plans",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor",
       "product_name": "Cursor",
       "tier_name": "Pro (legacy)",
@@ -1061,17 +1061,17 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。",
-      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools.",
+      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/docs/models-and-pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-proplus",
@@ -1089,8 +1089,8 @@
       "note_zh": "含 Cursor Models 与 Other Models 两个用量池；第三方模型按 API 费率扣用量，超额可选按量付费。 此为旧订阅，已停止新购；已有订阅可保留现有价格及权益，包括第三方模型用量池。迁移至 The X Subscription 后改用新套餐规则，迁移入口依账号逐步开放。",
       "note_en": "Includes Cursor Models and Other Models pools; third-party usage is charged at API rates, with optional on-demand billing after limits. Legacy subscription, closed to new sign-ups. Existing subscribers can keep current prices and benefits, including the third-party model pool. Switching to The X Subscription adopts new-tier rules as account migration rolls out.",
       "source_url": "https://cursor.com/docs/account/pricing/legacy-cursor-plans",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor",
       "product_name": "Cursor",
       "tier_name": "Pro+ / Pro Plus (legacy)",
@@ -1108,17 +1108,17 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。",
-      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools.",
+      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/docs/models-and-pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-ultra",
@@ -1136,8 +1136,8 @@
       "note_zh": "含 Cursor Models 与 Other Models 两个用量池；第三方模型按 API 费率扣用量，超额可选按量付费。 此为旧订阅，已停止新购；已有订阅可保留现有价格及权益，包括第三方模型用量池。迁移至 The X Subscription 后改用新套餐规则，迁移入口依账号逐步开放。",
       "note_en": "Includes Cursor Models and Other Models pools; third-party usage is charged at API rates, with optional on-demand billing after limits. Legacy subscription, closed to new sign-ups. Existing subscribers can keep current prices and benefits, including the third-party model pool. Switching to The X Subscription adopts new-tier rules as account migration rolls out.",
       "source_url": "https://cursor.com/docs/account/pricing/legacy-cursor-plans",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor",
       "product_name": "Cursor",
       "tier_name": "Ultra (legacy)",
@@ -1155,17 +1155,17 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。",
-      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools.",
+      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/docs/models-and-pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-teams",
@@ -1183,8 +1183,8 @@
       "note_zh": "每用户每月 $40；含团队管理、用量分析与隐私模式。第三方模型请求在模型 API 价上加 $0.25 / 百万 tokens，适用于包含用量、超额及 BYOK；Grok / Composer 自有模型豁免。 此为旧订阅，已停止新购；已有订阅可保留现有价格及权益，包括第三方模型用量池。迁移至 The X Subscription 后改用新套餐规则，迁移入口依账号逐步开放。",
       "note_en": "$40 per user per month with team administration, usage analytics and privacy mode. Third-party model requests add $0.25 per million tokens on top of API rates for included usage, on-demand and BYOK; first-party Grok and Composer are exempt. Legacy subscription, closed to new sign-ups. Existing subscribers can keep current prices and benefits, including the third-party model pool. Switching to The X Subscription adopts new-tier rules as account migration rolls out.",
       "source_url": "https://cursor.com/docs/account/pricing/legacy-cursor-plans",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor",
       "product_name": "Cursor",
       "tier_name": "Standard (legacy)",
@@ -1202,17 +1202,17 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。",
-      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools.",
+      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/docs/models-and-pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "copilot-pro",
@@ -1230,8 +1230,8 @@
       "note_zh": "含 CLI、Agent 与代码审查；浮动额度可能变化，用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review; flex allowance can change. Additional paid usage can be budgeted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-08",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
       "tier_name": "Pro",
@@ -1255,13 +1255,14 @@
         "Grok 4.5",
         "Grok 4.6"
       ],
-      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。",
-      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access.",
+      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 GitHub 预告 2026-11-16 停用 GPT-5.6 Terra、Claude Opus 5 与 Opus 4.8；个人年付订阅的 Opus 4.8 除外。到期前仍按当前档位权益列出，建议迁移到 Opus 5.5、GPT-6.1 Sol 或 GPT-6 Luna，并检查组织策略。",
+      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. GitHub plans to retire GPT-5.6 Terra, Claude Opus 5 and Opus 4.8 on 2026-11-16, except Opus 4.8 for individual annual subscribers. Current tier access remains listed until then; migrate to Opus 5.5, GPT-6.1 Sol or GPT-6 Luna as applicable and check organization policy.",
       "models_source_urls": [
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
-        "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot"
+        "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
+        "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "copilot-proplus",
@@ -1279,8 +1280,8 @@
       "note_zh": "含 CLI、Agent 与代码审查；浮动额度可能变化，用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review; flex allowance can change. Additional paid usage can be budgeted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
       "tier_name": "Pro+",
@@ -1317,14 +1318,15 @@
         "Grok 4.6",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 GPT-5.4 nano 仅限 Codex VS Code 扩展，不在 Copilot Chat 中。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 Gemini 4 Argon 正式可用但逐步开放，按提供商标价计量；需相应客户端版本和组织模型策略许可。",
-      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. GPT-5.4 nano is limited to the Codex VS Code extension, not Copilot Chat. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. Gemini 4 Argon is generally available with a gradual rollout at provider list pricing, subject to client versions and organization model policy.",
+      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 GPT-5.4 nano 仅限 Codex VS Code 扩展，不在 Copilot Chat 中。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 Gemini 4 Argon 正式可用但逐步开放，按提供商标价计量；需相应客户端版本和组织模型策略许可。 GitHub 预告 2026-11-16 停用 GPT-5.6 Terra、Claude Opus 5 与 Opus 4.8；个人年付订阅的 Opus 4.8 除外。到期前仍按当前档位权益列出，建议迁移到 Opus 5.5、GPT-6.1 Sol 或 GPT-6 Luna，并检查组织策略。",
+      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. GPT-5.4 nano is limited to the Codex VS Code extension, not Copilot Chat. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. Gemini 4 Argon is generally available with a gradual rollout at provider list pricing, subject to client versions and organization model policy. GitHub plans to retire GPT-5.6 Terra, Claude Opus 5 and Opus 4.8 on 2026-11-16, except Opus 4.8 for individual annual subscribers. Current tier access remains listed until then; migrate to Opus 5.5, GPT-6.1 Sol or GPT-6 Luna as applicable and check organization policy.",
       "models_source_urls": [
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
         "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
-        "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot"
+        "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+        "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "copilot-max",
@@ -1342,8 +1344,8 @@
       "note_zh": "含 CLI、Agent 与代码审查；浮动额度可能变化，用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review; flex allowance can change. Additional paid usage can be budgeted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
       "tier_name": "Max",
@@ -1379,14 +1381,15 @@
         "Grok 4.6",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 官方 nano 表格与注释有冲突，按“Pro+ 扩展专用”注释暂不列入。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 Gemini 4 Argon 正式可用但逐步开放，按提供商标价计量；需相应客户端版本和组织模型策略许可。",
-      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. The nano table conflicts with its Pro+-only footnote; omitted here pending clarification. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. Gemini 4 Argon is generally available with a gradual rollout at provider list pricing, subject to client versions and organization model policy.",
+      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 官方 nano 表格与注释有冲突，按“Pro+ 扩展专用”注释暂不列入。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 Gemini 4 Argon 正式可用但逐步开放，按提供商标价计量；需相应客户端版本和组织模型策略许可。 GitHub 预告 2026-11-16 停用 GPT-5.6 Terra、Claude Opus 5 与 Opus 4.8；个人年付订阅的 Opus 4.8 除外。到期前仍按当前档位权益列出，建议迁移到 Opus 5.5、GPT-6.1 Sol 或 GPT-6 Luna，并检查组织策略。",
+      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. The nano table conflicts with its Pro+-only footnote; omitted here pending clarification. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. Gemini 4 Argon is generally available with a gradual rollout at provider list pricing, subject to client versions and organization model policy. GitHub plans to retire GPT-5.6 Terra, Claude Opus 5 and Opus 4.8 on 2026-11-16, except Opus 4.8 for individual annual subscribers. Current tier access remains listed until then; migrate to Opus 5.5, GPT-6.1 Sol or GPT-6 Luna as applicable and check organization policy.",
       "models_source_urls": [
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
         "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
-        "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot"
+        "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+        "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "opencode-free",
@@ -1404,8 +1407,8 @@
       "note_zh": "Go 订阅可选，Zen 按量付费；第三方 API 或已有订阅按原厂商规则计费。",
       "note_en": "Go is optional; Zen bills by usage. External APIs and existing subscriptions follow provider terms.",
       "source_url": "https://opencode.ai/",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "opencode",
       "product_name": "OpenCode",
       "tier_name": "Open source / BYOK",
@@ -1415,13 +1418,13 @@
         "Gemini",
         "Ollama / local models"
       ],
-      "models_note_zh": "列出可连接的模型系列，不代表客户端赠送这些模型的付费额度。 Zen 接入 Gemini 4 Argon，输入 $2、输出 $10、缓存读取 $0.10 / 百万 tokens 的折扣价至 2026-11-30，之后为 $4 / $20 / $0.20。Cat Jam Free 的地域限制含中国内地、香港、澳门，不用于训练但安全留存 30 天；免费客户端不代表这些推理均免费。",
-      "models_note_en": "Model families you can connect; paid inference is not bundled with the client. Zen adds Gemini 4 Argon at discounted rates of $2 input, $10 output and $0.10 cached reads per million tokens through 2026-11-30, then $4 / $20 / $0.20. Cat Jam Free excludes mainland China, Hong Kong and Macau, disallows training use and retains data for safety for 30 days; a free client does not make all inference free.",
+      "models_note_zh": "列出可连接的模型系列，不代表客户端赠送这些模型的付费额度。 Zen 接入 Gemini 4 Argon，输入 $2、输出 $10、缓存读取 $0.10 / 百万 tokens 的折扣价至 2026-11-30，之后为 $4 / $20 / $0.20。Cat Jam Free 的地域限制含中国内地、香港、澳门，不用于训练但安全留存 30 天；免费客户端不代表这些推理均免费。 Zen 新增限时免费的 DeepSeek V4.1 Flash Free（不训练、零留存）与 Nemotron 3.5 Super VL Free（NVIDIA 试用端点，会记录使用以改进产品，勿提交个人或机密数据）；当前免费表不再列出 Step 5 Preview Free。",
+      "models_note_en": "Model families you can connect; paid inference is not bundled with the client. Zen adds Gemini 4 Argon at discounted rates of $2 input, $10 output and $0.10 cached reads per million tokens through 2026-11-30, then $4 / $20 / $0.20. Cat Jam Free excludes mainland China, Hong Kong and Macau, disallows training use and retains data for safety for 30 days; a free client does not make all inference free. Zen adds temporarily free DeepSeek V4.1 Flash Free (no training, zero retention) and Nemotron 3.5 Super VL Free (NVIDIA trial endpoint with usage logging for product improvement; do not submit personal or confidential data). Step 5 Preview Free is no longer in the free catalog.",
       "models_source_urls": [
         "https://opencode.ai/docs/providers/",
         "https://opencode.ai/docs/zen/"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "opencode-go",
@@ -1436,11 +1439,11 @@
       },
       "scope_zh": "各模型月额度 $15–$80；5 小时 20%，每周 50%",
       "scope_en": "Per-model monthly allowances $15–$80; 20% per 5 hours, 50% weekly",
-      "note_zh": "各模型有独立的美元用量上限，五小时为月上限的 20%、每周为 50%。启用 Use balance 后超额转用 Console 按量余额；请求数为官方估算，不能视为固定额度。 GLM-5.3-Flash 月用量上限 $60。 Kimi K3 月用量上限 $15。 MiniMax M3 月用量上限 $60。 DeepSeek V4.1 Flash 月美元用量上限提高至 $80。Go 订阅仅适用于单成员 workspace，订阅后不可邀请成员；直接 API 端点已迁移至 https://opencode.ai/inference/go/v1。",
-      "note_en": "Each model has its own dollar-denominated allowance: 20% of its monthly limit per five hours and 50% per week. Enable Use balance to fall back to Console pay-as-you-go credits; published request counts are estimates, not fixed quotas. GLM-5.3-Flash monthly allowance: $60. Kimi K3 monthly allowance: $15. MiniMax M3 monthly allowance: $60. DeepSeek V4.1 Flash monthly dollar allowance increases to $80. Go subscriptions require a single-member workspace, which cannot invite members while subscribed. Direct API endpoints move to https://opencode.ai/inference/go/v1.",
+      "note_zh": "各模型有独立的美元用量上限，五小时为月上限的 20%、每周为 50%。启用 Use balance 后超额转用 Console 按量余额；请求数为官方估算，不能视为固定额度。 GLM-5.3-Flash 月用量上限 $60。 Kimi K3 月用量上限 $15。 MiniMax M3 月用量上限 $60。 DeepSeek V4.1 Flash 月美元用量上限提高至 $80。Go 订阅仅适用于单成员 workspace，订阅后不可邀请成员；直接 API 端点现按协议区分为 /inference/go/openai/v1、/inference/go/anthropic/v1 与 /inference/go/google/v1beta；具体模型与协议以官方端点表为准。",
+      "note_en": "Each model has its own dollar-denominated allowance: 20% of its monthly limit per five hours and 50% per week. Enable Use balance to fall back to Console pay-as-you-go credits; published request counts are estimates, not fixed quotas. GLM-5.3-Flash monthly allowance: $60. Kimi K3 monthly allowance: $15. MiniMax M3 monthly allowance: $60. DeepSeek V4.1 Flash monthly dollar allowance increases to $80. Go subscriptions require a single-member workspace, which cannot invite members while subscribed. Direct API endpoints now vary by protocol: /inference/go/openai/v1, /inference/go/anthropic/v1 and /inference/go/google/v1beta. Follow the official model/endpoint table.",
       "source_url": "https://opencode.ai/docs/go/",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "opencode-go",
       "product_name": "OpenCode Go",
       "tier_name": "Go",
@@ -1459,7 +1462,7 @@
         "GPT 5.6 Luna",
         "LongCat-2.0",
         "LongCat 2.5 Preview Free",
-        "Step 5 Preview Free",
+        "Step 5 Preview",
         "MiMo-V2.6-Flash",
         "MiMo-V2.6-Pro",
         "MiMo-V2.5",
@@ -1478,12 +1481,12 @@
         "Gemini 4 Argon Contributor",
         "Cat Jam Free"
       ],
-      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。Go 的 Space Bunny 与 Zen 的 Space Bunny Free 是不同入口。 Haiku 5.5 月用量上限 $15；超过 100K 提示使用更高费率。 Step 5 Preview Free 已进入两档模型表，限时免费且月额度不限；其他模型仍按各自美元上限计。 Gemini 4 Argon Contributor 限时双倍月美元上限 $60（常规 $30），输入 $4、输出 $20、缓存读取 $0.20 / 百万 tokens；提示与输出可用于训练 Google 模型。Cat Jam Free 限时免费、不用于训练，安全留存 30 天，受地域限制（含中国内地、香港、澳门）。当前 Go 目录不再列出 DeepSeek V4 Flash 与 Vision Exp。",
-      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. Go’s Space Bunny and Zen’s Space Bunny Free are distinct offerings. Haiku 5.5 has a $15 monthly usage limit; prompts over 100K use higher rates. Step 5 Preview Free appears in both tiers, temporarily free with no monthly cap; other models retain their individual dollar limits. Gemini 4 Argon Contributor has a temporary doubled monthly dollar limit of $60 (normally $30), at $4 input, $20 output and $0.20 cached reads per million tokens; prompts and completions may train Google models. Cat Jam Free is temporarily free, excludes training and retains data for safety for 30 days, with regional restrictions including mainland China, Hong Kong and Macau. The current Go catalog no longer lists DeepSeek V4 Flash or Vision Exp.",
+      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。Go 的 Space Bunny 与 Zen 的 Space Bunny Free 是不同入口。 Haiku 5.5 月用量上限 $15；超过 100K 提示使用更高费率。 Step 5 Preview 已转为计费模型，每百万 tokens 输入 $1、输出 $2.70、缓存读取 $0.10；月美元用量上限限时四倍为 $60（常规 $15），不再是免费不限额。 Gemini 4 Argon Contributor 限时双倍月美元上限 $60（常规 $30），输入 $4、输出 $20、缓存读取 $0.20 / 百万 tokens；提示与输出可用于训练 Google 模型。Cat Jam Free 限时免费、不用于训练，安全留存 30 天，受地域限制（含中国内地、香港、澳门）。当前 Go 目录不再列出 DeepSeek V4 Flash 与 Vision Exp。",
+      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. Go’s Space Bunny and Zen’s Space Bunny Free are distinct offerings. Haiku 5.5 has a $15 monthly usage limit; prompts over 100K use higher rates. Step 5 Preview is now metered at $1 input, $2.70 output and $0.10 cached reads per million tokens. Its monthly dollar limit is temporarily quadrupled to $60 (normally $15); it is no longer free and unlimited. Gemini 4 Argon Contributor has a temporary doubled monthly dollar limit of $60 (normally $30), at $4 input, $20 output and $0.20 cached reads per million tokens; prompts and completions may train Google models. Cat Jam Free is temporarily free, excludes training and retains data for safety for 30 days, with regional restrictions including mainland China, Hong Kong and Macau. The current Go catalog no longer lists DeepSeek V4 Flash or Vision Exp.",
       "models_source_urls": [
         "https://opencode.ai/docs/go/"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "opencode-go-plus",
@@ -1498,11 +1501,11 @@
       },
       "scope_zh": "各模型月额度 $60–$240；5 小时 20%，每周 50%",
       "scope_en": "Per-model monthly allowances $60–$240; 20% per 5 hours, 50% weekly",
-      "note_zh": "各模型有独立的美元用量上限，五小时为月上限的 20%、每周为 50%。启用 Use balance 后超额转用 Console 按量余额；请求数为官方估算，不能视为固定额度。 GLM-5.3-Flash 月用量上限 $180。 Kimi K3 月用量上限 $60。 MiniMax M3 月用量上限 $180。 DeepSeek V4.1 Flash 月美元用量上限提高至 $160。Go 订阅仅适用于单成员 workspace，订阅后不可邀请成员；直接 API 端点已迁移至 https://opencode.ai/inference/go/v1。",
-      "note_en": "Each model has its own dollar-denominated allowance: 20% of its monthly limit per five hours and 50% per week. Enable Use balance to fall back to Console pay-as-you-go credits; published request counts are estimates, not fixed quotas. GLM-5.3-Flash monthly allowance: $180. Kimi K3 monthly allowance: $60. MiniMax M3 monthly allowance: $180. DeepSeek V4.1 Flash monthly dollar allowance increases to $160. Go subscriptions require a single-member workspace, which cannot invite members while subscribed. Direct API endpoints move to https://opencode.ai/inference/go/v1.",
+      "note_zh": "各模型有独立的美元用量上限，五小时为月上限的 20%、每周为 50%。启用 Use balance 后超额转用 Console 按量余额；请求数为官方估算，不能视为固定额度。 GLM-5.3-Flash 月用量上限 $180。 Kimi K3 月用量上限 $60。 MiniMax M3 月用量上限 $180。 DeepSeek V4.1 Flash 月美元用量上限提高至 $160。Go 订阅仅适用于单成员 workspace，订阅后不可邀请成员；直接 API 端点现按协议区分为 /inference/go/openai/v1、/inference/go/anthropic/v1 与 /inference/go/google/v1beta；具体模型与协议以官方端点表为准。",
+      "note_en": "Each model has its own dollar-denominated allowance: 20% of its monthly limit per five hours and 50% per week. Enable Use balance to fall back to Console pay-as-you-go credits; published request counts are estimates, not fixed quotas. GLM-5.3-Flash monthly allowance: $180. Kimi K3 monthly allowance: $60. MiniMax M3 monthly allowance: $180. DeepSeek V4.1 Flash monthly dollar allowance increases to $160. Go subscriptions require a single-member workspace, which cannot invite members while subscribed. Direct API endpoints now vary by protocol: /inference/go/openai/v1, /inference/go/anthropic/v1 and /inference/go/google/v1beta. Follow the official model/endpoint table.",
       "source_url": "https://opencode.ai/docs/go/",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "opencode-go",
       "product_name": "OpenCode Go",
       "tier_name": "Go Plus",
@@ -1521,7 +1524,7 @@
         "GPT 5.6 Luna",
         "LongCat-2.0",
         "LongCat 2.5 Preview Free",
-        "Step 5 Preview Free",
+        "Step 5 Preview",
         "MiMo-V2.6-Flash",
         "MiMo-V2.6-Pro",
         "MiMo-V2.5",
@@ -1540,12 +1543,12 @@
         "Gemini 4 Argon Contributor",
         "Cat Jam Free"
       ],
-      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。Go 的 Space Bunny 与 Zen 的 Space Bunny Free 是不同入口。 Haiku 5.5 月用量上限 $60；超过 100K 提示使用更高费率。 Step 5 Preview Free 已进入两档模型表，限时免费且月额度不限；其他模型仍按各自美元上限计。 Gemini 4 Argon Contributor 限时双倍月美元上限 $240（常规 $120），输入 $4、输出 $20、缓存读取 $0.20 / 百万 tokens；提示与输出可用于训练 Google 模型。Cat Jam Free 限时免费、不用于训练，安全留存 30 天，受地域限制（含中国内地、香港、澳门）。当前 Go 目录不再列出 DeepSeek V4 Flash 与 Vision Exp。",
-      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. Go’s Space Bunny and Zen’s Space Bunny Free are distinct offerings. Haiku 5.5 has a $60 monthly usage limit; prompts over 100K use higher rates. Step 5 Preview Free appears in both tiers, temporarily free with no monthly cap; other models retain their individual dollar limits. Gemini 4 Argon Contributor has a temporary doubled monthly dollar limit of $240 (normally $120), at $4 input, $20 output and $0.20 cached reads per million tokens; prompts and completions may train Google models. Cat Jam Free is temporarily free, excludes training and retains data for safety for 30 days, with regional restrictions including mainland China, Hong Kong and Macau. The current Go catalog no longer lists DeepSeek V4 Flash or Vision Exp.",
+      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。Go 的 Space Bunny 与 Zen 的 Space Bunny Free 是不同入口。 Haiku 5.5 月用量上限 $60；超过 100K 提示使用更高费率。 Step 5 Preview 已转为计费模型，每百万 tokens 输入 $1、输出 $2.70、缓存读取 $0.10；月美元用量上限限时四倍为 $240（常规 $60），不再是免费不限额。 Gemini 4 Argon Contributor 限时双倍月美元上限 $240（常规 $120），输入 $4、输出 $20、缓存读取 $0.20 / 百万 tokens；提示与输出可用于训练 Google 模型。Cat Jam Free 限时免费、不用于训练，安全留存 30 天，受地域限制（含中国内地、香港、澳门）。当前 Go 目录不再列出 DeepSeek V4 Flash 与 Vision Exp。",
+      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. Go’s Space Bunny and Zen’s Space Bunny Free are distinct offerings. Haiku 5.5 has a $60 monthly usage limit; prompts over 100K use higher rates. Step 5 Preview is now metered at $1 input, $2.70 output and $0.10 cached reads per million tokens. Its monthly dollar limit is temporarily quadrupled to $240 (normally $60); it is no longer free and unlimited. Gemini 4 Argon Contributor has a temporary doubled monthly dollar limit of $240 (normally $120), at $4 input, $20 output and $0.20 cached reads per million tokens; prompts and completions may train Google models. Cat Jam Free is temporarily free, excludes training and retains data for safety for 30 days, with regional restrictions including mainland China, Hong Kong and Macau. The current Go catalog no longer lists DeepSeek V4 Flash or Vision Exp.",
       "models_source_urls": [
         "https://opencode.ai/docs/go/"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "pi-free",
@@ -1563,7 +1566,7 @@
       "note_zh": "Pi 本体无订阅费；接入的 API、模型网关或付费账号另按其规则收费。",
       "note_en": "Pi has no client subscription; connected APIs, gateways or paid accounts bill separately.",
       "source_url": "https://pi.dev/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-13",
       "product_id": "pi",
       "product_name": "Pi",
@@ -1582,7 +1585,7 @@
       "models_source_urls": [
         "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/providers.md"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "devin-free",
@@ -1600,7 +1603,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。免费档不含完整模型目录。",
       "note_en": "Windsurf became Devin Desktop. Free has limited models.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-08",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -1615,7 +1618,7 @@
         "https://cognition.com/blog/introducing-devin-desktop",
         "https://devin.ai/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "devin-pro",
@@ -1633,7 +1636,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。",
       "note_en": "Windsurf became Devin Desktop. Extra usage is purchased at API rates.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -1653,7 +1656,7 @@
         "https://cognition.com/blog/introducing-devin-desktop",
         "https://devin.ai/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "devin-max",
@@ -1671,7 +1674,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。",
       "note_en": "Windsurf became Devin Desktop. Extra usage is purchased at API rates.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -1691,7 +1694,7 @@
         "https://cognition.com/blog/introducing-devin-desktop",
         "https://devin.ai/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "devin-teams",
@@ -1709,7 +1712,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。额外用量按 API 价格购买。此处起价含 1 个完整开发席位。",
       "note_en": "Windsurf became Devin Desktop. Extra usage is purchased at API rates. Starting price includes one full developer seat.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -1729,7 +1732,7 @@
         "https://cognition.com/blog/introducing-devin-desktop",
         "https://devin.ai/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "gemini-cli-free",
@@ -1747,7 +1750,7 @@
       "note_zh": "Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
       "note_en": "Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
       "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-06",
       "product_id": "gemini-cli",
       "product_name": "Gemini CLI",
@@ -1761,7 +1764,7 @@
         "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
         "https://geminicli.com/docs/resources/quota-and-pricing/"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "gemini-cli-pro",
@@ -1779,7 +1782,7 @@
       "note_zh": "展示 Google AI 订阅本身的美国月费，已不包含此 Gemini CLI 入口。Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
       "note_en": "The displayed amount is the US monthly price of the Google AI subscription itself, which no longer includes this Gemini CLI access. Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
       "source_url": "https://gemini.google/us/subscriptions/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-09",
       "product_id": "gemini-cli",
       "product_name": "Gemini CLI",
@@ -1793,7 +1796,7 @@
         "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
         "https://geminicli.com/docs/resources/quota-and-pricing/"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "gemini-cli-ultra",
@@ -1811,7 +1814,7 @@
       "note_zh": "展示 Google AI 订阅本身的美国月费，已不包含此 Gemini CLI 入口。Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
       "note_en": "The displayed amount is the US monthly price of the Google AI subscription itself, which no longer includes this Gemini CLI access. Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
       "source_url": "https://gemini.google/us/subscriptions/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-09",
       "product_id": "gemini-cli",
       "product_name": "Gemini CLI",
@@ -1825,7 +1828,7 @@
         "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
         "https://geminicli.com/docs/resources/quota-and-pricing/"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cline-free",
@@ -1843,7 +1846,7 @@
       "note_zh": "可自带 Key 或使用 Cline provider；免费客户端不含付费模型额度。",
       "note_en": "Use own keys or the Cline provider; paid model usage is not included.",
       "source_url": "https://cline.bot/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05",
       "product_id": "cline",
       "product_name": "Cline",
@@ -1859,7 +1862,7 @@
       "models_source_urls": [
         "https://cline.bot/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "aider-free",
@@ -1877,7 +1880,7 @@
       "note_zh": "软件无订阅费，远程模型推理按提供商计费；本地模型使用自己的算力。",
       "note_en": "No software subscription; remote inference bills through providers, local models use your hardware.",
       "source_url": "https://github.com/Aider-AI/aider",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-05",
       "product_id": "aider",
       "product_name": "Aider",
@@ -1894,7 +1897,7 @@
       "models_source_urls": [
         "https://aider.chat/docs/llms.html"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kilo-free",
@@ -1912,7 +1915,7 @@
       "note_zh": "平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。 购买 credits 另有 5% 处理费。",
       "note_en": "Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional. Credit purchases carry a separate 5% processing fee.",
       "source_url": "https://kilo.ai/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-06",
       "product_id": "kilo-code",
       "product_name": "Kilo Code",
@@ -1928,7 +1931,7 @@
       "models_source_urls": [
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kilo-teams",
@@ -1946,7 +1949,7 @@
       "note_zh": "平台、模型推理、云计算分开收费；Gateway 按量付费，Pass 可选。 购买 credits 另有 5% 处理费。",
       "note_en": "Platform, inference and cloud compute bill separately; Gateway is metered and Pass optional. Credit purchases carry a separate 5% processing fee.",
       "source_url": "https://kilo.ai/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-06",
       "product_id": "kilo-code",
       "product_name": "Kilo Code",
@@ -1962,7 +1965,7 @@
       "models_source_urls": [
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kilo-pass-starter",
@@ -1980,7 +1983,7 @@
       "note_zh": "月付订阅金额按 1:1 转为付费 credits；首月奖励 10%，第二月欢迎奖励 50%，后续随连续订阅增长至最高 40%；年付每月奖励 50%。当月付费额度用尽后发放奖励，奖励在账期结束过期。云计算与购买 credits 的 5% 处理费另见平台定价。",
       "note_en": "Monthly payments convert 1:1 to paid credits. Monthly plans add a 10% bonus in month one, a 50% welcome bonus in month two, then up to 40% as the subscription streak grows. Annual plans add 50% each month. Bonuses arrive after paid credits are consumed and expire at the end of the billing cycle. Cloud compute and the 5% credit-purchase processing fee follow platform pricing.",
       "source_url": "https://kilo.ai/pricing/kilo-pass",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-11",
       "product_id": "kilo-pass",
       "product_name": "Kilo Pass",
@@ -1994,7 +1997,7 @@
         "https://kilo.ai/pricing/kilo-pass",
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kilo-pass-pro",
@@ -2012,7 +2015,7 @@
       "note_zh": "月付订阅金额按 1:1 转为付费 credits；首月奖励 10%，第二月欢迎奖励 50%，后续随连续订阅增长至最高 40%；年付每月奖励 50%。当月付费额度用尽后发放奖励，奖励在账期结束过期。云计算与购买 credits 的 5% 处理费另见平台定价。",
       "note_en": "Monthly payments convert 1:1 to paid credits. Monthly plans add a 10% bonus in month one, a 50% welcome bonus in month two, then up to 40% as the subscription streak grows. Annual plans add 50% each month. Bonuses arrive after paid credits are consumed and expire at the end of the billing cycle. Cloud compute and the 5% credit-purchase processing fee follow platform pricing.",
       "source_url": "https://kilo.ai/pricing/kilo-pass",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-11",
       "product_id": "kilo-pass",
       "product_name": "Kilo Pass",
@@ -2026,7 +2029,7 @@
         "https://kilo.ai/pricing/kilo-pass",
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kilo-pass-expert",
@@ -2044,7 +2047,7 @@
       "note_zh": "月付订阅金额按 1:1 转为付费 credits；首月奖励 10%，第二月欢迎奖励 50%，后续随连续订阅增长至最高 40%；年付每月奖励 50%。当月付费额度用尽后发放奖励，奖励在账期结束过期。云计算与购买 credits 的 5% 处理费另见平台定价。",
       "note_en": "Monthly payments convert 1:1 to paid credits. Monthly plans add a 10% bonus in month one, a 50% welcome bonus in month two, then up to 40% as the subscription streak grows. Annual plans add 50% each month. Bonuses arrive after paid credits are consumed and expire at the end of the billing cycle. Cloud compute and the 5% credit-purchase processing fee follow platform pricing.",
       "source_url": "https://kilo.ai/pricing/kilo-pass",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-11",
       "product_id": "kilo-pass",
       "product_name": "Kilo Pass",
@@ -2058,7 +2061,7 @@
         "https://kilo.ai/pricing/kilo-pass",
         "https://kilo.ai/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kiro-free",
@@ -2076,27 +2079,27 @@
       "note_zh": "月额度不结转；免费档有访问限制。",
       "note_en": "Monthly credits expire; free access is limited.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-05",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "kiro",
       "product_name": "Kiro",
       "tier_name": "Free",
       "supported_models": [
         "Auto",
         "Claude Sonnet 4.5",
-        "Claude Sonnet 4.0",
         "DeepSeek 3.2",
         "MiniMax M2.5",
         "GLM-5",
         "MiniMax M2.1",
         "Qwen3 Coder Next"
       ],
-      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。",
-      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted.",
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。 官方 10 月 14 日生命周期公告明确 Sonnet 4 已退役；模型总表仍保留旧行，本目录按退役公告移除，Sonnet 4.5 与其不同。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted. The October 14 lifecycle notice retires Sonnet 4. The overview table still has its old row; this catalog follows the retirement notice and removes it. Sonnet 4.5 is distinct.",
       "models_source_urls": [
-        "https://kiro.dev/docs/models/"
+        "https://kiro.dev/docs/models/",
+        "https://kiro.dev/changelog/models/claude-sonnet-4-end-of-life"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kiro-pro",
@@ -2114,8 +2117,8 @@
       "note_zh": "月额度不结转；个人社交登录 / AWS Builder ID 可购买追加 credits，$0.04/个，未用完可结转并在购买后 12 个月过期。企业超额用量须管理员启用，按 $0.04/个月底结算。展示商业区域税前价。",
       "note_en": "Monthly included credits do not roll over. Individual social-login / AWS Builder ID users can buy add-on credits at $0.04 each; unused add-ons roll over and expire 12 months after purchase. Enterprise overages require administrator enablement and are billed at $0.04 per credit at month-end. Commercial-region prices are before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-11",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "kiro",
       "product_name": "Kiro",
       "tier_name": "Pro",
@@ -2135,19 +2138,21 @@
         "Claude Haiku 4.5",
         "Auto",
         "Claude Sonnet 4.5",
-        "Claude Sonnet 4.0",
         "DeepSeek 3.2",
         "MiniMax M2.5",
         "GLM-5",
         "MiniMax M2.1",
-        "Qwen3 Coder Next"
+        "Qwen3 Coder Next",
+        "Kimi K3"
       ],
-      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。 GPT-5.6 请求超过 272K tokens 后扣费倍率翻倍：Sol 8.8×、Terra 4.4×、Luna 1.2×；个人订阅使用 US 推理端点。",
-      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted. GPT-5.6 requests over 272K tokens double the credit multiplier: Sol 8.8×, Terra 4.4× and Luna 1.2×; individual subscribers use the US inference endpoint.",
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。 GPT-5.6 请求超过 272K tokens 后扣费倍率翻倍：Sol 8.8×、Terra 4.4×、Luna 1.2×；个人订阅使用 US 推理端点。 官方 10 月 14 日生命周期公告明确 Sonnet 4 已退役；模型总表仍保留旧行，本目录按退役公告移除，Sonnet 4.5 与其不同。 Kimi K3 为实验支持，1M 上下文、文本与图像输入、2.4× credits，仅 Pro / Pro+ / Pro Max / Power 的 US geography；该 US 端点使用 Global 推理范围，不保证请求只在美国处理。IDE / CLI 需重启、Crew 需 kirocrew restart、Web 需刷新。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted. GPT-5.6 requests over 272K tokens double the credit multiplier: Sol 8.8×, Terra 4.4× and Luna 1.2×; individual subscribers use the US inference endpoint. The October 14 lifecycle notice retires Sonnet 4. The overview table still has its old row; this catalog follows the retirement notice and removes it. Sonnet 4.5 is distinct. Kimi K3 has experimental support with 1M context, text/image input and a 2.4× credit multiplier, limited to Pro / Pro+ / Pro Max / Power in the US geography. Its US endpoint has Global inference scope, so processing is not guaranteed to stay in the US. Restart IDE / CLI, run kirocrew restart for Crew, or refresh Web.",
       "models_source_urls": [
-        "https://kiro.dev/docs/models/"
+        "https://kiro.dev/docs/models/",
+        "https://kiro.dev/changelog/models/claude-sonnet-4-end-of-life",
+        "https://kiro.dev/changelog/models/kimi-k3-now-available-in-kiro"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kiro-proplus",
@@ -2165,8 +2170,8 @@
       "note_zh": "月额度不结转；个人社交登录 / AWS Builder ID 可购买追加 credits，$0.04/个，未用完可结转并在购买后 12 个月过期。企业超额用量须管理员启用，按 $0.04/个月底结算。展示商业区域税前价。",
       "note_en": "Monthly included credits do not roll over. Individual social-login / AWS Builder ID users can buy add-on credits at $0.04 each; unused add-ons roll over and expire 12 months after purchase. Enterprise overages require administrator enablement and are billed at $0.04 per credit at month-end. Commercial-region prices are before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-11",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "kiro",
       "product_name": "Kiro",
       "tier_name": "Pro+",
@@ -2186,19 +2191,21 @@
         "Claude Haiku 4.5",
         "Auto",
         "Claude Sonnet 4.5",
-        "Claude Sonnet 4.0",
         "DeepSeek 3.2",
         "MiniMax M2.5",
         "GLM-5",
         "MiniMax M2.1",
-        "Qwen3 Coder Next"
+        "Qwen3 Coder Next",
+        "Kimi K3"
       ],
-      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。 GPT-5.6 请求超过 272K tokens 后扣费倍率翻倍：Sol 8.8×、Terra 4.4×、Luna 1.2×；个人订阅使用 US 推理端点。",
-      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted. GPT-5.6 requests over 272K tokens double the credit multiplier: Sol 8.8×, Terra 4.4× and Luna 1.2×; individual subscribers use the US inference endpoint.",
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。 GPT-5.6 请求超过 272K tokens 后扣费倍率翻倍：Sol 8.8×、Terra 4.4×、Luna 1.2×；个人订阅使用 US 推理端点。 官方 10 月 14 日生命周期公告明确 Sonnet 4 已退役；模型总表仍保留旧行，本目录按退役公告移除，Sonnet 4.5 与其不同。 Kimi K3 为实验支持，1M 上下文、文本与图像输入、2.4× credits，仅 Pro / Pro+ / Pro Max / Power 的 US geography；该 US 端点使用 Global 推理范围，不保证请求只在美国处理。IDE / CLI 需重启、Crew 需 kirocrew restart、Web 需刷新。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted. GPT-5.6 requests over 272K tokens double the credit multiplier: Sol 8.8×, Terra 4.4× and Luna 1.2×; individual subscribers use the US inference endpoint. The October 14 lifecycle notice retires Sonnet 4. The overview table still has its old row; this catalog follows the retirement notice and removes it. Sonnet 4.5 is distinct. Kimi K3 has experimental support with 1M context, text/image input and a 2.4× credit multiplier, limited to Pro / Pro+ / Pro Max / Power in the US geography. Its US endpoint has Global inference scope, so processing is not guaranteed to stay in the US. Restart IDE / CLI, run kirocrew restart for Crew, or refresh Web.",
       "models_source_urls": [
-        "https://kiro.dev/docs/models/"
+        "https://kiro.dev/docs/models/",
+        "https://kiro.dev/changelog/models/claude-sonnet-4-end-of-life",
+        "https://kiro.dev/changelog/models/kimi-k3-now-available-in-kiro"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kiro-pro-max",
@@ -2216,8 +2223,8 @@
       "note_zh": "月额度不结转；个人社交登录 / AWS Builder ID 可购买追加 credits，$0.04/个，未用完可结转并在购买后 12 个月过期。企业超额用量须管理员启用，按 $0.04/个月底结算。展示商业区域税前价。",
       "note_en": "Monthly included credits do not roll over. Individual social-login / AWS Builder ID users can buy add-on credits at $0.04 each; unused add-ons roll over and expire 12 months after purchase. Enterprise overages require administrator enablement and are billed at $0.04 per credit at month-end. Commercial-region prices are before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-11",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "kiro",
       "product_name": "Kiro",
       "tier_name": "Pro Max",
@@ -2237,19 +2244,21 @@
         "Claude Haiku 4.5",
         "Auto",
         "Claude Sonnet 4.5",
-        "Claude Sonnet 4.0",
         "DeepSeek 3.2",
         "MiniMax M2.5",
         "GLM-5",
         "MiniMax M2.1",
-        "Qwen3 Coder Next"
+        "Qwen3 Coder Next",
+        "Kimi K3"
       ],
-      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。 GPT-5.6 请求超过 272K tokens 后扣费倍率翻倍：Sol 8.8×、Terra 4.4×、Luna 1.2×；个人订阅使用 US 推理端点。",
-      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted. GPT-5.6 requests over 272K tokens double the credit multiplier: Sol 8.8×, Terra 4.4× and Luna 1.2×; individual subscribers use the US inference endpoint.",
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。 GPT-5.6 请求超过 272K tokens 后扣费倍率翻倍：Sol 8.8×、Terra 4.4×、Luna 1.2×；个人订阅使用 US 推理端点。 官方 10 月 14 日生命周期公告明确 Sonnet 4 已退役；模型总表仍保留旧行，本目录按退役公告移除，Sonnet 4.5 与其不同。 Kimi K3 为实验支持，1M 上下文、文本与图像输入、2.4× credits，仅 Pro / Pro+ / Pro Max / Power 的 US geography；该 US 端点使用 Global 推理范围，不保证请求只在美国处理。IDE / CLI 需重启、Crew 需 kirocrew restart、Web 需刷新。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted. GPT-5.6 requests over 272K tokens double the credit multiplier: Sol 8.8×, Terra 4.4× and Luna 1.2×; individual subscribers use the US inference endpoint. The October 14 lifecycle notice retires Sonnet 4. The overview table still has its old row; this catalog follows the retirement notice and removes it. Sonnet 4.5 is distinct. Kimi K3 has experimental support with 1M context, text/image input and a 2.4× credit multiplier, limited to Pro / Pro+ / Pro Max / Power in the US geography. Its US endpoint has Global inference scope, so processing is not guaranteed to stay in the US. Restart IDE / CLI, run kirocrew restart for Crew, or refresh Web.",
       "models_source_urls": [
-        "https://kiro.dev/docs/models/"
+        "https://kiro.dev/docs/models/",
+        "https://kiro.dev/changelog/models/claude-sonnet-4-end-of-life",
+        "https://kiro.dev/changelog/models/kimi-k3-now-available-in-kiro"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kiro-power",
@@ -2267,8 +2276,8 @@
       "note_zh": "月额度不结转；个人社交登录 / AWS Builder ID 可购买追加 credits，$0.04/个，未用完可结转并在购买后 12 个月过期。企业超额用量须管理员启用，按 $0.04/个月底结算。展示商业区域税前价。",
       "note_en": "Monthly included credits do not roll over. Individual social-login / AWS Builder ID users can buy add-on credits at $0.04 each; unused add-ons roll over and expire 12 months after purchase. Enterprise overages require administrator enablement and are billed at $0.04 per credit at month-end. Commercial-region prices are before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-11",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "kiro",
       "product_name": "Kiro",
       "tier_name": "Power",
@@ -2288,19 +2297,21 @@
         "Claude Haiku 4.5",
         "Auto",
         "Claude Sonnet 4.5",
-        "Claude Sonnet 4.0",
         "DeepSeek 3.2",
         "MiniMax M2.5",
         "GLM-5",
         "MiniMax M2.1",
-        "Qwen3 Coder Next"
+        "Qwen3 Coder Next",
+        "Kimi K3"
       ],
-      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。 GPT-5.6 请求超过 272K tokens 后扣费倍率翻倍：Sol 8.8×、Terra 4.4×、Luna 1.2×；个人订阅使用 US 推理端点。",
-      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted. GPT-5.6 requests over 272K tokens double the credit multiplier: Sol 8.8×, Terra 4.4× and Luna 1.2×; individual subscribers use the US inference endpoint.",
+      "models_note_zh": "按模型表收录；不同模型扣费倍率不同，可用性受地域限制，Fable 企业预览不在此列。 GPT-5.6 请求超过 272K tokens 后扣费倍率翻倍：Sol 8.8×、Terra 4.4×、Luna 1.2×；个人订阅使用 US 推理端点。 官方 10 月 14 日生命周期公告明确 Sonnet 4 已退役；模型总表仍保留旧行，本目录按退役公告移除，Sonnet 4.5 与其不同。 Kimi K3 为实验支持，1M 上下文、文本与图像输入、2.4× credits，仅 Pro / Pro+ / Pro Max / Power 的 US geography；该 US 端点使用 Global 推理范围，不保证请求只在美国处理。IDE / CLI 需重启、Crew 需 kirocrew restart、Web 需刷新。",
+      "models_note_en": "Model table access; multipliers and regional restrictions apply. Enterprise Fable preview omitted. GPT-5.6 requests over 272K tokens double the credit multiplier: Sol 8.8×, Terra 4.4× and Luna 1.2×; individual subscribers use the US inference endpoint. The October 14 lifecycle notice retires Sonnet 4. The overview table still has its old row; this catalog follows the retirement notice and removes it. Sonnet 4.5 is distinct. Kimi K3 has experimental support with 1M context, text/image input and a 2.4× credit multiplier, limited to Pro / Pro+ / Pro Max / Power in the US geography. Its US endpoint has Global inference scope, so processing is not guaranteed to stay in the US. Restart IDE / CLI, run kirocrew restart for Crew, or refresh Web.",
       "models_source_urls": [
-        "https://kiro.dev/docs/models/"
+        "https://kiro.dev/docs/models/",
+        "https://kiro.dev/changelog/models/claude-sonnet-4-end-of-life",
+        "https://kiro.dev/changelog/models/kimi-k3-now-available-in-kiro"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "minimax-m-plan-go",
@@ -2318,7 +2329,7 @@
       "note_zh": "标准月费；官方首月半价公告仅标至“10 月 14 日”、未注明年份；本次已过当年该日期，故不作为当前优惠承诺，仍展示标准续订价。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
       "note_en": "Regular monthly fee. The first-month 50% notice ends on “October 14” without a year; this review is after that date in the current year, so it is not presented as a current offer. Regular renewal prices are shown. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
@@ -2333,7 +2344,7 @@
         "https://platform.minimax.io/docs/m-plan/faq",
         "https://www.minimax.io/m-plan"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "minimax-m-plan-explore",
@@ -2351,7 +2362,7 @@
       "note_zh": "标准月费；官方首月半价公告仅标至“10 月 14 日”、未注明年份；本次已过当年该日期，故不作为当前优惠承诺，仍展示标准续订价。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
       "note_en": "Regular monthly fee. The first-month 50% notice ends on “October 14” without a year; this review is after that date in the current year, so it is not presented as a current offer. Regular renewal prices are shown. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
@@ -2367,7 +2378,7 @@
         "https://platform.minimax.io/docs/m-plan/faq",
         "https://www.minimax.io/m-plan"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "minimax-m-plan-build",
@@ -2385,7 +2396,7 @@
       "note_zh": "标准月费；官方首月半价公告仅标至“10 月 14 日”、未注明年份；本次已过当年该日期，故不作为当前优惠承诺，仍展示标准续订价。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
       "note_en": "Regular monthly fee. The first-month 50% notice ends on “October 14” without a year; this review is after that date in the current year, so it is not presented as a current offer. Regular renewal prices are shown. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
@@ -2401,7 +2412,7 @@
         "https://platform.minimax.io/docs/m-plan/faq",
         "https://www.minimax.io/m-plan"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kimi-plan-plus",
@@ -2419,7 +2430,7 @@
       "note_zh": "标准月费 ¥99；年付总额 ¥948（折合 ¥79/月）。包含 Kimi Code，与其他会员功能共享月总额度；未用额度不结转。保留 5 小时滚动窗口，无周限额；月总额度用尽仍影响 Code，可另购 Extra Usage。旧套餐可续订，不强制迁移。",
       "note_en": "Regular monthly price ¥99; annual total ¥948 (equivalent to ¥79/month). Includes Kimi Code and shares the monthly pool with other membership features; unused credits do not roll over. Retains a rolling 5-hour limit with no weekly limit; exhausting monthly credits affects Code. Extra Usage is optional. Legacy plans can renew without mandatory migration.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-13",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -2434,7 +2445,7 @@
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kimi-plan-pro",
@@ -2452,7 +2463,7 @@
       "note_zh": "标准月费 ¥199；年付总额 ¥1,908（折合 ¥159/月）。包含 Kimi Code，与其他会员功能共享月总额度；未用额度不结转。保留 5 小时滚动窗口，无周限额；月总额度用尽仍影响 Code，可另购 Extra Usage。旧套餐可续订，不强制迁移。",
       "note_en": "Regular monthly price ¥199; annual total ¥1,908 (equivalent to ¥159/month). Includes Kimi Code and shares the monthly pool with other membership features; unused credits do not roll over. Retains a rolling 5-hour limit with no weekly limit; exhausting monthly credits affects Code. Extra Usage is optional. Legacy plans can renew without mandatory migration.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-13",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -2469,7 +2480,7 @@
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "kimi-plan-max",
@@ -2487,7 +2498,7 @@
       "note_zh": "标准月费 ¥699；年付总额 ¥6,708（折合 ¥559/月）。包含 Kimi Code，与其他会员功能共享月总额度；未用额度不结转。保留 5 小时滚动窗口，无周限额；月总额度用尽仍影响 Code，可另购 Extra Usage。旧套餐可续订，不强制迁移。",
       "note_en": "Regular monthly price ¥699; annual total ¥6,708 (equivalent to ¥559/month). Includes Kimi Code and shares the monthly pool with other membership features; unused credits do not roll over. Retains a rolling 5-hour limit with no weekly limit; exhausting monthly credits affects Code. Extra Usage is optional. Legacy plans can renew without mandatory migration.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-13",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -2504,7 +2515,7 @@
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-teams-premium",
@@ -2522,8 +2533,8 @@
       "note_zh": "每用户每月 $120；含团队管理、用量分析与隐私模式。第三方模型请求在模型 API 价上加 $0.25 / 百万 tokens，适用于包含用量、超额及 BYOK；Grok / Composer 自有模型豁免。 此为旧订阅，已停止新购；已有订阅可保留现有价格及权益，包括第三方模型用量池。迁移至 The X Subscription 后改用新套餐规则，迁移入口依账号逐步开放。",
       "note_en": "$120 per user per month with team administration, usage analytics and privacy mode. Third-party model requests add $0.25 per million tokens on top of API rates for included usage, on-demand and BYOK; first-party Grok and Composer are exempt. Legacy subscription, closed to new sign-ups. Existing subscribers can keep current prices and benefits, including the third-party model pool. Switching to The X Subscription adopts new-tier rules as account migration rolls out.",
       "source_url": "https://cursor.com/docs/account/pricing/legacy-cursor-plans",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor",
       "product_name": "Cursor",
       "tier_name": "Premium (legacy)",
@@ -2541,17 +2552,17 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。",
-      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools.",
+      "models_note_zh": "列出当前官方模型目录；Cursor 自有模型与第三方模型分用量池扣费，用量并非无限。团队可用性还受管理员策略限制。 Haiku 5.5 已列入官方目录；第三方模型费率与直连 API 可能不同，以 Cursor 表为准。 当前目录加入 Gemini 4 Argon；原订阅继续使用两个按月重置的用量池。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "Current official model catalog. Cursor and third-party models draw from separate usage pools; usage is limited. Team access also follows admin policies. Haiku 5.5 is in the official catalog; third-party model rates can differ from direct API rates, so use the Cursor pricing table. The current catalog adds Gemini 4 Argon; legacy subscriptions retain two monthly usage pools. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/docs/models-and-pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/account/pricing/legacy-cursor-plans"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "siliconflow-deepseek-v4-flash",
@@ -2572,7 +2583,7 @@
       "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。 展示每日常规时段价；北京时间每日 02:00–08:00 每百万 tokens 输入 ¥1.5、输出 ¥4.5、缓存读取 ¥0.15。该时段与 DeepSeek 原厂及其他平台不同。",
       "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices. Regular-window rates are shown. Daily 02:00–08:00 UTC+8 costs CNY 1.5 input, 4.5 output and 0.15 cache read per million tokens. This schedule differs from the originator and other platforms.",
       "source_url": "https://siliconflow.cn/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2594,7 +2605,7 @@
       "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
       "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
       "source_url": "https://siliconflow.cn/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2616,7 +2627,7 @@
       "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
       "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
       "source_url": "https://siliconflow.cn/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2638,7 +2649,7 @@
       "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
       "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
       "source_url": "https://siliconflow.cn/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2660,7 +2671,7 @@
       "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
       "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
       "source_url": "https://siliconflow.cn/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2682,7 +2693,7 @@
       "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
       "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
       "source_url": "https://siliconflow.cn/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2704,7 +2715,7 @@
       "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
       "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
       "source_url": "https://siliconflow.cn/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2726,7 +2737,7 @@
       "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。",
       "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices.",
       "source_url": "https://siliconflow.cn/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2748,7 +2759,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 输入超过 272K 后整次请求每百万 tokens 输入 $4、输出 $15、缓存读取 $0.20、写入 $5。缓存写入替代该部分普通输入收费，TTL 30 分钟；推理 tokens 按输出计费，网页搜索另收 $0.01/次。",
       "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Above 272K input tokens, the entire request costs $4 input, $15 output, $0.20 cache read and $5 cache write per million tokens. Writes replace the ordinary input charge for those tokens; TTL is 30 minutes. Reasoning tokens bill as output and web search costs $0.01/use.",
       "source_url": "https://docs.b.ai/llmservice/models/gpt-6-1-sol/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2770,7 +2781,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 无长上下文加价；1 小时缓存写入 $8/百万 tokens，缓存至少 512 tokens。网页搜索另收 $0.01/次。",
       "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. No long-context premium. One-hour cache writes cost $8/million tokens; eligible prompts need at least 512 tokens. Web search costs $0.01/use.",
       "source_url": "https://docs.b.ai/llmservice/models/claude-opus-5.5/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2792,7 +2803,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 网页搜索另收 $0.014/次；显式缓存存储至 2026-12-31 为 $0.50/百万 tokens/小时，自 2027-01-01 起为 $1。",
       "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Web search costs $0.014/use. Explicit cache storage costs $0.50/million tokens/hour through 2026-12-31 and $1 from 2027-01-01.",
       "source_url": "https://docs.b.ai/llmservice/models/gemini-3-8-flash/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2814,7 +2825,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 高峰为北京时间周一至周五 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间每百万 tokens 输入 $0.15、输出 $0.60、缓存读取 $0.003、写入 $0.15。Chat 按非高峰价。2026-10-04 10:00 UTC+8 起符合条件的活动用量按对应标准价 60% 结算，结束时间未公开，以平台为准。",
       "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Peak is Monday–Friday 09:00–12:00 and 14:00–18:00 UTC+8, excluding Chinese public holidays. Off-peak input/output/cache read/write rates are $0.15/$0.60/$0.003/$0.15 per million tokens. Chat uses off-peak rates. Eligible promotional usage costs 60% of the applicable standard rate from 2026-10-04 10:00 UTC+8; no end date is published and platform terms prevail.",
       "source_url": "https://docs.b.ai/llmservice/models/deepseek-v4-1-flash/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2836,7 +2847,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 缓存写入与输入同价；保留平台实际用量计费口径。",
       "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Cache writes use the input rate; platform usage records determine billing.",
       "source_url": "https://docs.b.ai/llmservice/models/kimi-k3/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2858,7 +2869,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 表格不将临时活动价作为永久价格；实际活动资格和结算以平台为准。",
       "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Temporary promotional rates are not treated as permanent prices; platform eligibility and settlement prevail.",
       "source_url": "https://docs.b.ai/llmservice/models/glm-5-3/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2880,7 +2891,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 缓存写入与输入同价。",
       "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Cache writes use the input rate.",
       "source_url": "https://docs.b.ai/llmservice/models/minimax-m3/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2902,7 +2913,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 2026-09-25 15:00 UTC+8 起符合条件用量按标准参考价 10% 结算；结束时间未公开，活动资格和结算以平台为准。 B.AI 通知：10 月 14 日 18:00 SGT（北京时间同刻）起 MiMo-V2.5 旧 ID 转发至本模型并按本模型费率计费，10 月 21 日 10:00 SGT 起旧 ID 返回错误、不再转发。",
       "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Eligible usage costs 10% of standard rates from 2026-09-25 15:00 UTC+8. No end date is published; platform eligibility and settlement prevail. B.AI notice: from October 14, 18:00 SGT (the same Beijing time), old MiMo-V2.5 IDs redirect to this model at its rates; from October 21, 10:00 SGT, the old IDs return errors without redirection.",
       "source_url": "https://docs.b.ai/llmservice/models/mimo-v2.6-flash/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-13"
     },
     {
@@ -2924,7 +2935,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 缓存读取采用隐式缓存价格。",
       "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Cache reads use the implicit-cache rate.",
       "source_url": "https://docs.b.ai/llmservice/models/qwen3.8-max/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2946,7 +2957,7 @@
       "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 272K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 1400/5250/140/1750 Credits。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 272K–1M input, input/output/cache read/write rates are 1400/5250/140/1750 Credits per million tokens.",
       "source_url": "https://router.worldclaw.ai/models/gpt-6-astra",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2968,7 +2979,7 @@
       "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails.",
       "source_url": "https://router.worldclaw.ai/models/claude-opus-5-5",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -2990,7 +3001,7 @@
       "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 200K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 280/1260/28/280 Credits。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 200K–1M input, input/output/cache read/write rates are 280/1260/28/280 Credits per million tokens.",
       "source_url": "https://router.worldclaw.ai/models/gemini-3.1-pro-preview",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -3007,13 +3018,13 @@
         "cached": 0.98,
         "cache_write": 30.8
       },
-      "scope_zh": "WorldRouter · UTC 高峰时段",
-      "scope_en": "WorldRouter · UTC peak window",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 官方高峰时段为 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 15.4/46.2/0.49/15.4 Credits。页面未明确周末和节假日例外，不沿用其他平台日历。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. The published peak windows are UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 15.4/46.2/0.49/15.4 Credits for input/output/cache read/write. No weekend or holiday exception is specified; other platforms’ calendars are not assumed.",
+      "scope_zh": "WorldRouter · UTC 工作日高峰（中国法定节假日除外）",
+      "scope_en": "WorldRouter · UTC weekday peak, excluding CN public holidays",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 官方高峰仅适用于工作日（中国法定节假日除外）的 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 15.4/46.2/0.49/15.4 Credits。周末与中国法定节假日全天采用非高峰价。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. The published peak windows apply on weekdays excluding Chinese public holidays, at UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 15.4/46.2/0.49/15.4 Credits for input/output/cache read/write. All weekends and Chinese public holidays use off-peak pricing throughout the day.",
       "source_url": "https://router.worldclaw.ai/models/deepseek-v4-flash",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-10"
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16"
     },
     {
       "id": "worldrouter-deepseek-v4-pro",
@@ -3029,13 +3040,13 @@
         "cached": 3.08,
         "cache_write": 92.4
       },
-      "scope_zh": "WorldRouter · UTC 高峰时段",
-      "scope_en": "WorldRouter · UTC peak window",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 官方高峰时段为 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 46.2/138.6/1.54/46.2 Credits。页面未明确周末和节假日例外。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. The published peak windows are UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 46.2/138.6/1.54/46.2 Credits for input/output/cache read/write. No weekend or holiday exception is specified.",
+      "scope_zh": "WorldRouter · UTC 工作日高峰（中国法定节假日除外）",
+      "scope_en": "WorldRouter · UTC weekday peak, excluding CN public holidays",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 官方高峰仅适用于工作日（中国法定节假日除外）的 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 46.2/138.6/1.54/46.2 Credits。周末与中国法定节假日全天采用非高峰价。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. The published peak windows apply on weekdays excluding Chinese public holidays, at UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 46.2/138.6/1.54/46.2 Credits for input/output/cache read/write. All weekends and Chinese public holidays use off-peak pricing throughout the day.",
       "source_url": "https://router.worldclaw.ai/models/deepseek-v4-pro",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-10"
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16"
     },
     {
       "id": "worldrouter-kimi-k3",
@@ -3056,7 +3067,7 @@
       "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails.",
       "source_url": "https://router.worldclaw.ai/models/kimi-k3",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -3078,7 +3089,7 @@
       "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails.",
       "source_url": "https://router.worldclaw.ai/models/glm-5.3",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -3100,7 +3111,7 @@
       "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 512K–1M 的每百万 tokens 输入/输出/缓存读取为 60/240/12 Credits；缓存写入标为 N/A，不视为免费。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 512K–1M input, input/output/cache read rates are 60/240/12 Credits per million tokens. Cache writes are listed as N/A and are not assumed free.",
       "source_url": "https://router.worldclaw.ai/models/MiniMax-M3",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -3122,7 +3133,7 @@
       "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 256K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 80/400/16/80 Credits。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 256K–1M input, input/output/cache read/write rates are 80/400/16/80 Credits per million tokens.",
       "source_url": "https://router.worldclaw.ai/models/mimo-v2.5",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-10"
     },
     {
@@ -3151,9 +3162,9 @@
       "models_source_urls": [
         "https://docs.b.ai/llmservice/pricing-and-usage/"
       ],
-      "models_checked_at": "2026-10-15",
+      "models_checked_at": "2026-10-16",
       "source_url": "https://docs.b.ai/llmservice/pricing-and-usage/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-11"
     },
     {
@@ -3182,9 +3193,9 @@
       "models_source_urls": [
         "https://docs.b.ai/llmservice/pricing-and-usage/"
       ],
-      "models_checked_at": "2026-10-15",
+      "models_checked_at": "2026-10-16",
       "source_url": "https://docs.b.ai/llmservice/pricing-and-usage/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-11"
     },
     {
@@ -3206,7 +3217,7 @@
       "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算。提示超过 100K 时整次请求采用较高费率：输入 $0.50、输出 $2.50、缓存读取 $0.05、5 分钟缓存写入 $0.625 / 百万 tokens；Web Search 为 $0.01/次。其他缓存 TTL 费率未单列，不推算。活动、充值赠送与账户权益可能影响实际结算。",
       "note_en": "B.AI standard reference rates; accounts settle at 1 USD = 1,000,000 Credits. Prompts over 100K use higher rates for the entire request: input $0.50, output $2.50, cache reads $0.05 and 5-minute cache writes $0.625 per million tokens. Web Search costs $0.01 per use. Other cache TTL rates are not listed here or inferred. Promotions, top-up bonuses and account benefits may affect settlement.",
       "source_url": "https://docs.b.ai/llmservice/pricing-and-usage/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-11"
     },
     {
@@ -3225,7 +3236,7 @@
       "note_zh": "新购方案；免费档提供有限 Cursor Agent 与 Grok 用量，不是无限模型推理。",
       "note_en": "New-purchase plan. The free tier provides limited Cursor Agent and Grok usage, not unlimited inference.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "cursor-x-subscription",
       "product_name": "The X Subscription · Cursor / Grok / X",
@@ -3240,7 +3251,7 @@
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-x-plus",
@@ -3258,7 +3269,7 @@
       "note_zh": "新购方案；Grok 用量在 Cursor、Grok 与 X 的相关入口共享，按周刷新；用量随产品和任务变化，耗尽后可追加 top-offs 或等待刷新。价格不含税费。 Grok API 接入包含在付费档，但 API 用量按模型标准费率单独计费，不扣共享周用量池。 年付总额 $80；月费展示仍采用月付价格。",
       "note_en": "New-purchase plan. Grok usage is shared across relevant Cursor, Grok and X surfaces and refreshes weekly; consumption varies by product and task. Buy top-offs or wait after exhaustion. Prices exclude taxes and fees. Paid tiers include Grok API access, but API usage bills separately at standard model rates and does not draw from the shared weekly pool. Annual billing totals $80; the displayed monthly fee uses monthly billing.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "product_id": "cursor-x-subscription",
       "product_name": "The X Subscription · Cursor / Grok / X",
@@ -3276,7 +3287,7 @@
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-x-premium",
@@ -3294,8 +3305,8 @@
       "note_zh": "新购方案；Grok 用量在 Cursor、Grok 与 X 的相关入口共享，按周刷新；用量随产品和任务变化，耗尽后可追加 top-offs 或等待刷新。价格不含税费。 Grok API 接入包含在付费档，但 API 用量按模型标准费率单独计费，不扣共享周用量池。 年付总额 $300；月费展示仍采用月付价格。",
       "note_en": "New-purchase plan. Grok usage is shared across relevant Cursor, Grok and X surfaces and refreshes weekly; consumption varies by product and task. Buy top-offs or wait after exhaustion. Prices exclude taxes and fees. Paid tiers include Grok API access, but API usage bills separately at standard model rates and does not draw from the shared weekly pool. Annual billing totals $300; the displayed monthly fee uses monthly billing.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor-x-subscription",
       "product_name": "The X Subscription · Cursor / Grok / X",
       "tier_name": "Premium",
@@ -3312,18 +3323,18 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Composer 2.5",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。",
-      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access.",
+      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-x-super",
@@ -3341,8 +3352,8 @@
       "note_zh": "新购方案；Grok 用量在 Cursor、Grok 与 X 的相关入口共享，按周刷新；用量随产品和任务变化，耗尽后可追加 top-offs 或等待刷新。价格不含税费。 Grok API 接入包含在付费档，但 API 用量按模型标准费率单独计费，不扣共享周用量池。 年付总额 $1000；月费展示仍采用月付价格。",
       "note_en": "New-purchase plan. Grok usage is shared across relevant Cursor, Grok and X surfaces and refreshes weekly; consumption varies by product and task. Buy top-offs or wait after exhaustion. Prices exclude taxes and fees. Paid tiers include Grok API access, but API usage bills separately at standard model rates and does not draw from the shared weekly pool. Annual billing totals $1000; the displayed monthly fee uses monthly billing.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor-x-subscription",
       "product_name": "The X Subscription · Cursor / Grok / X",
       "tier_name": "Super",
@@ -3359,18 +3370,18 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Composer 2.5",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。",
-      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access.",
+      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-x-ultra",
@@ -3388,8 +3399,8 @@
       "note_zh": "新购方案；Grok 用量在 Cursor、Grok 与 X 的相关入口共享，按周刷新；用量随产品和任务变化，耗尽后可追加 top-offs 或等待刷新。价格不含税费。 Grok API 接入包含在付费档，但 API 用量按模型标准费率单独计费，不扣共享周用量池。 年付总额 $2000；月费展示仍采用月付价格。",
       "note_en": "New-purchase plan. Grok usage is shared across relevant Cursor, Grok and X surfaces and refreshes weekly; consumption varies by product and task. Buy top-offs or wait after exhaustion. Prices exclude taxes and fees. Paid tiers include Grok API access, but API usage bills separately at standard model rates and does not draw from the shared weekly pool. Annual billing totals $2000; the displayed monthly fee uses monthly billing.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor-x-subscription",
       "product_name": "The X Subscription · Cursor / Grok / X",
       "tier_name": "Ultra",
@@ -3406,18 +3417,18 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Composer 2.5",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。",
-      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access.",
+      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-x-teams-premium",
@@ -3435,8 +3446,8 @@
       "note_zh": "新购方案；Grok 用量在 Cursor、Grok 与 X 的相关入口共享，按周刷新；用量随产品和任务变化，耗尽后可追加 top-offs 或等待刷新。价格不含税费。 含 SSO、组织权限、集中账单和用量分析；各席位可混搭档位。 Grok API 接入包含在付费档，但 API 用量按模型标准费率单独计费，不扣共享周用量池。",
       "note_en": "New-purchase plan. Grok usage is shared across relevant Cursor, Grok and X surfaces and refreshes weekly; consumption varies by product and task. Buy top-offs or wait after exhaustion. Prices exclude taxes and fees. Includes SSO, organization controls, centralized billing and usage analytics; seat tiers can be mixed. Paid tiers include Grok API access, but API usage bills separately at standard model rates and does not draw from the shared weekly pool.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor-x-subscription",
       "product_name": "The X Subscription · Cursor / Grok / X",
       "tier_name": "Teams Premium",
@@ -3453,18 +3464,18 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Composer 2.5",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。 Teams 第三方模型在 API 费率上增加 $0.25 / 百万 tokens 的 Cursor Token Rate，额外用量和 BYOK 均适用；Cost 模式与自有模型豁免。",
-      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access. Teams third-party usage adds the $0.25 per million tokens Cursor Token Rate to API prices, including extra usage and BYOK; Cost mode and Cursor models are exempt.",
+      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。 Teams 第三方模型在 API 费率上增加 $0.25 / 百万 tokens 的 Cursor Token Rate，额外用量和 BYOK 均适用；Cost 模式与自有模型豁免。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access. Teams third-party usage adds the $0.25 per million tokens Cursor Token Rate to API prices, including extra usage and BYOK; Cost mode and Cursor models are exempt. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-x-teams-super",
@@ -3482,8 +3493,8 @@
       "note_zh": "新购方案；Grok 用量在 Cursor、Grok 与 X 的相关入口共享，按周刷新；用量随产品和任务变化，耗尽后可追加 top-offs 或等待刷新。价格不含税费。 含 SSO、组织权限、集中账单和用量分析；各席位可混搭档位。 Grok API 接入包含在付费档，但 API 用量按模型标准费率单独计费，不扣共享周用量池。",
       "note_en": "New-purchase plan. Grok usage is shared across relevant Cursor, Grok and X surfaces and refreshes weekly; consumption varies by product and task. Buy top-offs or wait after exhaustion. Prices exclude taxes and fees. Includes SSO, organization controls, centralized billing and usage analytics; seat tiers can be mixed. Paid tiers include Grok API access, but API usage bills separately at standard model rates and does not draw from the shared weekly pool.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor-x-subscription",
       "product_name": "The X Subscription · Cursor / Grok / X",
       "tier_name": "Teams Super",
@@ -3500,18 +3511,18 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Composer 2.5",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。 Teams 第三方模型在 API 费率上增加 $0.25 / 百万 tokens 的 Cursor Token Rate，额外用量和 BYOK 均适用；Cost 模式与自有模型豁免。",
-      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access. Teams third-party usage adds the $0.25 per million tokens Cursor Token Rate to API prices, including extra usage and BYOK; Cost mode and Cursor models are exempt.",
+      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。 Teams 第三方模型在 API 费率上增加 $0.25 / 百万 tokens 的 Cursor Token Rate，额外用量和 BYOK 均适用；Cost 模式与自有模型豁免。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access. Teams third-party usage adds the $0.25 per million tokens Cursor Token Rate to API prices, including extra usage and BYOK; Cost mode and Cursor models are exempt. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "cursor-x-teams-ultra",
@@ -3529,8 +3540,8 @@
       "note_zh": "新购方案；Grok 用量在 Cursor、Grok 与 X 的相关入口共享，按周刷新；用量随产品和任务变化，耗尽后可追加 top-offs 或等待刷新。价格不含税费。 含 SSO、组织权限、集中账单和用量分析；各席位可混搭档位。 Grok API 接入包含在付费档，但 API 用量按模型标准费率单独计费，不扣共享周用量池。",
       "note_en": "New-purchase plan. Grok usage is shared across relevant Cursor, Grok and X surfaces and refreshes weekly; consumption varies by product and task. Buy top-offs or wait after exhaustion. Prices exclude taxes and fees. Includes SSO, organization controls, centralized billing and usage analytics; seat tiers can be mixed. Paid tiers include Grok API access, but API usage bills separately at standard model rates and does not draw from the shared weekly pool.",
       "source_url": "https://cursor.com/pricing",
-      "checked_at": "2026-10-15",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16",
       "product_id": "cursor-x-subscription",
       "product_name": "The X Subscription · Cursor / Grok / X",
       "tier_name": "Teams Ultra",
@@ -3547,18 +3558,18 @@
         "Grok 4.7",
         "Grok 4.6",
         "Grok 4.5",
-        "Muse Spark 1.3",
+        "Muse Wonder",
         "Composer 2.5",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。 Teams 第三方模型在 API 费率上增加 $0.25 / 百万 tokens 的 Cursor Token Rate，额外用量和 BYOK 均适用；Cost 模式与自有模型豁免。",
-      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access. Teams third-party usage adds the $0.25 per million tokens Cursor Token Rate to API prices, including extra usage and BYOK; Cost mode and Cursor models are exempt.",
+      "models_note_zh": "订阅周池包含 Grok 4.7、4.6、4.5 与 Composer 2.5；第三方模型从首个请求起额外按 API 标价扣预付 credits，不含订阅额度。可用模型受组织策略约束。 Teams 第三方模型在 API 费率上增加 $0.25 / 百万 tokens 的 Cursor Token Rate，额外用量和 BYOK 均适用；Cost 模式与自有模型豁免。 当前模型目录以 Muse Wonder 取代 Muse Spark 1.3；Cursor 表列每百万 tokens 输入 $4、输出 $20、缓存读取 $0.20，未列缓存写入价。",
+      "models_note_en": "The weekly pool includes Grok 4.7, 4.6, 4.5 and Composer 2.5; third-party models bill from the first request at API list price against prepaid credits, with no bundled allowance. Organization policy can restrict access. Teams third-party usage adds the $0.25 per million tokens Cursor Token Rate to API prices, including extra usage and BYOK; Cost mode and Cursor models are exempt. The current catalog replaces Muse Spark 1.3 with Muse Wonder. Cursor lists $4 input, $20 output and $0.20 cached reads per million tokens, without a cache-write rate.",
       "models_source_urls": [
         "https://cursor.com/pricing",
         "https://x.ai/news/x-subscription",
         "https://cursor.com/docs/models-and-pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "codex-free",
@@ -3576,7 +3587,7 @@
       "note_zh": "ChatGPT Work 与 Codex 共享订阅用量；该档位官方入口列出桌面应用，具体可用性依发布进度。使用 API Key 时按 API 单独计费。",
       "note_en": "ChatGPT Work and Codex share subscription usage. The official entry for this tier lists the desktop app, with access depending on rollout. API-key usage bills separately at API rates.",
       "source_url": "https://learn.chatgpt.com/docs/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-13",
       "product_id": "codex",
       "product_name": "Codex",
@@ -3589,7 +3600,7 @@
       "models_source_urls": [
         "https://learn.chatgpt.com/docs/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "codex-go",
@@ -3607,7 +3618,7 @@
       "note_zh": "ChatGPT Work 与 Codex 共享订阅用量；该档位官方入口列出桌面应用，具体可用性依发布进度。使用 API Key 时按 API 单独计费。",
       "note_en": "ChatGPT Work and Codex share subscription usage. The official entry for this tier lists the desktop app, with access depending on rollout. API-key usage bills separately at API rates.",
       "source_url": "https://learn.chatgpt.com/docs/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-13",
       "product_id": "codex",
       "product_name": "Codex",
@@ -3620,7 +3631,7 @@
       "models_source_urls": [
         "https://learn.chatgpt.com/docs/pricing"
       ],
-      "models_checked_at": "2026-10-15"
+      "models_checked_at": "2026-10-16"
     },
     {
       "id": "gemini-4-argon",
@@ -3641,7 +3652,7 @@
       "note_zh": "2026-12-01 起输入 $4、输出 $20、缓存输入 $0.20 / 百万 tokens。仅支持隐式缓存，不支持显式缓存。Batch / Flex 为 Standard 的一半，Priority 为 1.8 倍。Contributor 为受邀私密预览、价格为 Standard 的一半，但数据可用于改进产品；不与普通付费层混同。搜索另计，无免费 API 层。",
       "note_en": "From Dec 1, 2026: input $4, output $20 and cached input $0.20 per million tokens. Implicit caching only; explicit caching is unsupported. Batch / Flex costs half of Standard and Priority costs 1.8×. The invite-only Contributor private preview costs half of Standard but permits product-improvement data use; it is distinct from ordinary paid tiers. Search costs extra; no free API tier.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15",
       "valid_until": "2026-11-30"
     },
@@ -3664,8 +3675,30 @@
       "note_zh": "缓存写入单独计费；网页搜索 $0.014 / 次。B.AI 以 1 USD = 1,000,000 Credits 结算；活动和实际扣费以平台显示为准。此处为平台参考价，不套用 Google 直连的活动截止日。",
       "note_en": "Cache writes bill separately; web search costs $0.014 per use. B.AI settles at 1 USD = 1,000,000 Credits; promotions and final charges follow the platform. These are platform reference rates, without assuming the direct Google API promotion deadline.",
       "source_url": "https://docs.b.ai/llmservice/pricing-and-usage/",
-      "checked_at": "2026-10-15",
+      "checked_at": "2026-10-16",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "siliconflow-deepseek-v4-1-flash",
+      "category": "api",
+      "provider": "硅基流动 SiliconFlow",
+      "name": "DeepSeek-V4.1-Flash",
+      "currency": "CNY",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 2,
+        "output": 8,
+        "cached": 0.04,
+        "cache_write": null
+      },
+      "scope_zh": "北京时间 00–02 / 08–24 时 · deepseek-ai/DeepSeek-V4.1-Flash",
+      "scope_en": "UTC+8 00:00–02:00 / 08:00–24:00 · deepseek-ai/DeepSeek-V4.1-Flash",
+      "note_zh": "硅基流动国内平台价格，单位为人民币 / 百万 tokens；缓存列为命中输入价。未单列缓存写入价，不视为免费；模型原厂价格另计，不能混用。 展示每日常规时段价；北京时间每日 02:00–08:00 每百万 tokens 输入 ¥1、输出 ¥4、缓存读取 ¥0.02。该时段与 DeepSeek 原厂及其他平台不同。",
+      "note_en": "Domestic SiliconFlow rates in CNY per million tokens. Cache reads mean cached input. A separate cache-write rate is not listed and is not assumed free. These are platform rates, distinct from model-originator prices. Regular-window rates are shown. Daily 02:00–08:00 UTC+8 costs CNY 1 input, 4 output and 0.02 cache read per million tokens. This schedule differs from the originator and other platforms.",
+      "source_url": "https://siliconflow.cn/pricing",
+      "checked_at": "2026-10-16",
+      "updated_at": "2026-10-16"
     }
   ]
 }

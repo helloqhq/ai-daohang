@@ -6,6 +6,8 @@
 
 ## 数据与核验
 
+2026-10-16 复核全部目录，新增硅基流动 DeepSeek V4.1 Flash，共 117 项（API 52、Token Plan 18、Agent 47）。更新 OpenCode Step 5 的计费与端点、Kiro K3 / Sonnet 4 生命周期、Cursor Muse Wonder、Copilot 退役预告和 WorldRouter 非高峰日历；6 项保留原价格核验日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-16.md)。
+
 2026-10-15 复核全部目录，新增 Google / B.AI Gemini 4 Argon，共 116 项（API 51、Token Plan 18、Agent 47）。同步 Cursor 新套餐模型、年付及 Grok API 单独计费条件、OpenCode Go 新模型额度、Copilot / Devin Argon 权益及 Codex Pro 条件；6 项保留原价格核验日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-15.md)。
 
 2026-10-13 复核目录并新增 The X Subscription 八档、Codex Free / Go，共 114 项（API 49、Token Plan 18、Agent 47）。Kimi 新 Plus / Pro / Max 价格已确认，剩余 6 项价格待核验、3 项 Gemini CLI 入口停服。旧 Cursor 套餐保留原价与权益，标为 legacy，与新购方案分表；OpenCode Go 补齐额度上调及接入条件。9 项保留原价格核验日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-13.md)。

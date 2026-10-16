@@ -1,7 +1,799 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "58f890ccea8e8a0f",
+  "snapshot_id": "8bf60c8ef5d0174d",
   "events": [
+    {
+      "id": "copilot-cli-v1099-2",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.99-2：默认语义搜索与沙箱启动修复",
+      "title_en": "Copilot CLI 1.0.99-2 enables semantic search and fixes sandbox startup",
+      "summary_zh": "在线会话默认启用语义代码搜索；管理员设置覆盖所选模型时会明确提示，并修复 Linux 沙箱命令偶发启动失败。",
+      "summary_en": "Online sessions enable semantic code search by default. A notice explains administrator overrides of model selection, and Linux sandbox commands start more reliably.",
+      "key_points_zh": [
+        "可选托管插件下载时原生聊天仍可运行；修复 CONNECT 代理认证提示。"
+      ],
+      "key_points_en": [
+        "Native chats can run during optional managed-plugin downloads; CONNECT proxy authentication is reported."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T00:49:13Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:20+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-2",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-2",
+          "collected_at": "2026-10-16T01:21:20+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T00:49:13Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "musk-grok-bot-growth-20261015",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "马斯克称 Grok Bot 增长速度超过其以往所见",
+      "title_en": "Musk praises Grok Bot’s growth",
+      "summary_zh": "马斯克称从未见过像 Grok Bot 这样快速增长的产品，并表示没有免费档，认为用户获得的价值超过付费。",
+      "summary_en": "Elon Musk says he has never seen anything grow as fast as Grok Bot and says it has no free tier, arguing users receive more value than they pay for.",
+      "key_points_zh": [
+        "这是本人对增长和价值的评价；未提供用户数、增速或独立验证数据。"
+      ],
+      "key_points_en": [
+        "This is his assessment of growth and value, without user counts, growth rates or independent verification."
+      ],
+      "importance_reason_zh": "保留已核实负责人的一手 AI 产品进展、观点或状态通报。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI product progress, opinion or status report.",
+      "published_at": "2026-10-15T22:52:49+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:23:23+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2110866513955868924",
+          "url": "https://x.com/elonmusk/status/2110866513955868924",
+          "collected_at": "2026-10-16T01:23:23+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15T22:52:49+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "musk-grok-bot-daily-improvements-20261015",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "马斯克称 Grok Bot 每天都有明显改进",
+      "title_en": "Musk says Grok Bot improves significantly every day",
+      "summary_zh": "马斯克发布短帖称 Grok Bot 每天都有明显改进，未说明本次涉及的版本或具体能力。",
+      "summary_en": "Elon Musk says Grok Bot improves significantly every day, without identifying a version or specific capability.",
+      "key_points_zh": [
+        "按负责人产品进展表述记录，不推断未公布的功能。"
+      ],
+      "key_points_en": [
+        "Recorded as the leader’s product-progress statement without inferring unannounced features."
+      ],
+      "importance_reason_zh": "保留已核实负责人的一手 AI 产品进展、观点或状态通报。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI product progress, opinion or status report.",
+      "published_at": "2026-10-15T22:50:25+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:23:23+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2110865910881820875",
+          "url": "https://x.com/elonmusk/status/2110865910881820875",
+          "collected_at": "2026-10-16T01:23:23+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15T22:50:25+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "musk-grok-bot-spam-lists-20261015",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "马斯克建议让 Grok Bot 协助从骚扰名单移除手机号",
+      "title_en": "Musk suggests asking Grok Bot to remove phone numbers from spam lists",
+      "summary_zh": "马斯克建议用户让 Grok Bot 将手机号从骚扰电话与短信名单移除；短帖未说明实现方式、地区、权限或效果保证。",
+      "summary_en": "Elon Musk suggests asking Grok Bot to remove a phone number from spam call and text lists. The post does not specify implementation, regions, permissions or guaranteed results.",
+      "key_points_zh": [
+        "仅报道本人给出的使用建议，不认定所有名单或地区都支持。"
+      ],
+      "key_points_en": [
+        "Reports his usage suggestion without assuming support for every list or region."
+      ],
+      "importance_reason_zh": "保留已核实负责人的一手 AI 产品进展、观点或状态通报。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI product progress, opinion or status report.",
+      "published_at": "2026-10-15T21:57:59+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:23:23+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2110852716247519517",
+          "url": "https://x.com/elonmusk/status/2110852716247519517",
+          "collected_at": "2026-10-16T01:23:23+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15T21:57:59+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "codex-01630",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Codex 0.163.0：即时 steering、配置搜索与权限恢复",
+      "title_en": "Codex 0.163.0 adds instant steering, searchable settings and restored permissions",
+      "summary_zh": "Codex 新增 /config 搜索与即时生效设置，响应中发送消息可立即引导当前任务；中断也会停止 Code Mode 单元及嵌套工具。",
+      "summary_en": "Codex adds searchable /config settings with supported live changes. Follow-up messages immediately steer an active response, and interruption stops Code Mode cells and nested tools.",
+      "key_points_zh": [
+        "恢复会话保留权限和网络授权，同时服从显式覆盖与当前托管策略；网络代理在 DNS 前检查权限。",
+        "/daemon 可重启托管后台服务器；符合资格账号默认开启 Daybreak，API Key 接入仍取决于服务器提供权限。"
+      ],
+      "key_points_en": [
+        "Resumed threads restore permissions and network approvals subject to explicit overrides and current managed policy; proxy authorization precedes DNS.",
+        "/daemon restarts managed background servers. Daybreak is enabled for eligible accounts; API-key access still requires server support."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T21:33:06Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:16+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
+          "collected_at": "2026-10-16T01:21:16+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T21:33:06Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21301",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.301：小窗口模型切换先压缩，重试可限制等待",
+      "title_en": "Claude Code 2.1.301 compacts before smaller-window switches and bounds retry waits",
+      "summary_zh": "切换到上下文更小的模型时，过长会话先由原模型压缩；无人值守重试新增用量重置等待上限变量。",
+      "summary_en": "When switching to a model with a smaller context window, the previous model first summarizes an overlong conversation. Unattended retries gain a configurable maximum wait for usage resets.",
+      "key_points_zh": [
+        "CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS 可让重置过远的请求结束；OpenTelemetry 新增权限与分类器决策字段。",
+        "mod hook 的 .catch 仅在抛错或超时时运行；长时间子 agent 的进度改为增量渲染。"
+      ],
+      "key_points_en": [
+        "CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS ends requests whose reset is too far away; OpenTelemetry adds permission and classifier decision fields.",
+        "A mod hook’s .catch runs only on errors or timeouts; long-running subagent progress renders incrementally."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T19:52:50+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:21+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-301",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-301",
+          "collected_at": "2026-10-16T01:21:21+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T19:52:50+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "copilot-model-retirement-preview-20261116",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "preview",
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Copilot 预告 11 月 16 日停用 Opus 4.8、Opus 5 与 GPT-5.6 Terra",
+      "title_en": "Copilot schedules selected model retirements for November 16",
+      "summary_zh": "GitHub 预告 2026 年 11 月 16 日在各 Copilot 使用场景停用 Claude Opus 4.8、Claude Opus 5 与 GPT-5.6 Terra；个人年付订阅的 Opus 4.8 不受此项停用影响。",
+      "summary_en": "GitHub plans to retire Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra across Copilot experiences on November 16, 2026. Opus 4.8 remains available to individual annual subscribers.",
+      "key_points_zh": [
+        "建议分别迁移至 Opus 5.5 或 GPT-6.1 Sol / GPT-6 Luna；企业替代模型可用性取决于默认启用和管理员策略。"
+      ],
+      "key_points_en": [
+        "Suggested replacements are Opus 5.5 or GPT-6.1 Sol / GPT-6 Luna; enterprise access depends on default enablement and administrator policy."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T19:35:13+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:36+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+          "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+          "collected_at": "2026-10-16T01:21:36+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T19:35:13+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "kilo-jetbrains-7110",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kilo JetBrains 7.1.10：远程分叉正式更新，恢复权限配置",
+      "title_en": "Kilo JetBrains 7.1.10 releases remote forks and restores permission settings",
+      "summary_zh": "稳定版支持从消息分叉远程 CLI 会话、在 agent 列表编辑模型，并捆绑 CLI 7.8.12。修复忽略路径搜索、MCP OAuth 和权限配置覆盖问题。",
+      "summary_en": "The stable release supports remote CLI forks from messages, model editing in the agent list and bundled CLI 7.8.12. It fixes ignored-path searches, MCP OAuth and overridden permission settings.",
+      "key_points_zh": [
+        "保留自定义 agent 与委派编辑权限；Windows 后台任务停止会拒绝失效父进程关联。",
+        "网关通过 KILO_AI_GATEWAY_URL 配置；取消启动会清理 MCP 服务器。"
+      ],
+      "key_points_en": [
+        "Preserves custom agents and edit permissions during delegation; Windows job stopping rejects stale parent links.",
+        "Gateway routing uses KILO_AI_GATEWAY_URL; interrupted startup cleans up MCP servers."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T19:21:50Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:36+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.10",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.10",
+          "collected_at": "2026-10-16T01:21:36+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T19:21:50Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "opencode-v1191",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "OpenCode 1.19.1 停止会话分享与分享链接导入",
+      "title_en": "OpenCode 1.19.1 discontinues session sharing",
+      "summary_zh": "OpenCode 1.19.1 发布说明明确停止会话分享；已有分享链接、分享命令及通过分享 URL 导入会话不再可用。",
+      "summary_en": "OpenCode 1.19.1 explicitly discontinues session sharing. Existing share links, sharing commands and session imports from share URLs are no longer available.",
+      "key_points_zh": [
+        "这是实际功能移除；没有据此推断本地会话或其他导入能力也被删除。"
+      ],
+      "key_points_en": [
+        "This is a specific feature removal, without assuming deletion of local sessions or other import methods."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T19:19:45Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:20+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v1.19.1",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.1",
+          "collected_at": "2026-10-16T01:21:20+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T19:19:45Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "pi-v130",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Pi 1.3.0：保留思考切换缓存，迁移 Kimi 与 OpenCode 协议",
+      "title_en": "Pi 1.3.0 preserves thinking-change caches and updates provider protocols",
+      "summary_zh": "GPT-6 API Key 会话中更改思考等级可保留提示缓存；Kimi Code 改用 Chat Completions，动态增加工具不再破坏缓存。",
+      "summary_en": "GPT-6 API-key sessions preserve prompt caches when thinking levels change. Kimi Code moves to Chat Completions so adding tools mid-conversation no longer invalidates the cache.",
+      "key_points_zh": [
+        "Kimi models.json 自定义 base URL 必须包含 /v1；OpenCode Go 修复为新 inference 端点并增加 Google 协议支持。",
+        "恢复会话保留已激活工具；修复 Code Mode 取消与 worker 累积，以及 Codex Sol 上下文从 272K 修正为 500K。"
+      ],
+      "key_points_en": [
+        "Kimi models.json base URL overrides must include /v1; OpenCode Go uses new inference endpoints and adds Google protocol support.",
+        "Resume restores active tools; fixes Code Mode cancellation and worker accumulation, and corrects Codex Sol context from 272K to 500K."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T19:17:33Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:20+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.3.0",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.3.0",
+          "collected_at": "2026-10-16T01:21:20+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T19:17:33Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "openai-rosalind-academic-plan-20261015",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "OpenAI 推出 Rosalind Academic Plan，资助合资格学术实验室使用",
+      "title_en": "OpenAI introduces sponsored Rosalind access for eligible academic labs",
+      "summary_zh": "OpenAI 宣布扩大 GPT-Rosalind 学术研究接入，新 Rosalind Academic Plan 向合资格实验室提供赞助使用。官方 X 说明对象为美国大学实验室。",
+      "summary_en": "OpenAI announces expanded academic access to GPT-Rosalind through the new Rosalind Academic Plan, offering sponsored use for eligible labs. Its official X post identifies labs at U.S. universities.",
+      "key_points_zh": [
+        "材料支持生命科学研究用途；未列资助额度、名额或保证获批条件。"
+      ],
+      "key_points_en": [
+        "The material supports life-sciences research use but does not establish grant amounts, capacity or guaranteed approval."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T19:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:15+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+          "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+          "collected_at": "2026-10-16T01:21:15+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15T19:00:00+00:00",
+          "date_kind": "published"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2110841898076418336",
+          "url": "https://x.com/OpenAI/status/2110841898076418336",
+          "collected_at": "2026-10-16T01:23:23+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15T21:15:00+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt-live11-20261015",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "GPT-Live-1.1 向 ChatGPT、Codex 与 dots 推出新声音",
+      "title_en": "GPT-Live-1.1 rolls out new voices in ChatGPT, Codex and dots",
+      "summary_zh": "OpenAI 宣布 GPT-Live-1.1 改进口音、减少“checking…”等待表述，新增法语、德语、印地语、墨西哥西语、韩语与日语声音。",
+      "summary_en": "OpenAI announces GPT-Live-1.1 with improved accents, less “checking…” language and new voices in French, German, Hindi, Mexican Spanish, Korean and Japanese.",
+      "key_points_zh": [
+        "原帖称当天向所有用户逐步推出，API 将稍后提供；不将 API 预告写成当前已可用。"
+      ],
+      "key_points_en": [
+        "The post says rollout to all users starts that day, with API availability coming later; API access is not presented as already available."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T18:19:54+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:23:23+00:00",
+      "updated_at": "2026-10-16T01:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2110797830361436604",
+          "url": "https://x.com/OpenAI/status/2110797830361436604",
+          "collected_at": "2026-10-16T01:23:23+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15T18:19:54+00:00",
+          "date_kind": "published"
+        },
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=GyO8Ao7yKJc",
+          "url": "https://www.youtube.com/watch?v=GyO8Ao7yKJc",
+          "published_at": "2026-10-15T18:24:44+00:00",
+          "date_kind": "published",
+          "collected_at": "2026-10-16T01:28:47+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v1099-1",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.99-1：单次信任目录与认证、权限修复",
+      "title_en": "Copilot CLI 1.0.99-1 adds one-off folder trust and authentication fixes",
+      "summary_zh": "新增 --trust-folder 用于 -p 或管道输入的单次会话，并支持通过 GitHub 安装链接安装已验证 Skills 与插件。",
+      "summary_en": "Adds --trust-folder for one-off -p or piped-input sessions and installation of verified skills and plugins through GitHub install links.",
+      "key_points_zh": [
+        "修复延迟工具定义导致的虚假上下文耗尽，以及托管 Assisted ask 权限不必要的确认。",
+        "沙箱 git 可使用 credentials.envVars 中配置的 GITHUB_TOKEN，Entra 登录保留所选账号。"
+      ],
+      "key_points_en": [
+        "Fixes false context exhaustion with deferred tool definitions and unnecessary prompts under managed Assisted ask permissions.",
+        "Sandboxed git can use GITHUB_TOKEN from credentials.envVars, and Entra authentication preserves the selected account."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T17:21:22Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:20+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-1",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-1",
+          "collected_at": "2026-10-16T01:21:20+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T17:21:22Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "kilo-nemotron35-super-vl-20261015",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Kilo 接入 Nemotron 3.5 Super VL，支持图像与视频",
+      "title_en": "Kilo adds Nemotron 3.5 Super VL with image and video input",
+      "summary_zh": "Kilo 宣布 NVIDIA Nemotron 3.5 Super VL 已可在 Desktop、CLI、VS Code 与 JetBrains 使用，提供 1M 上下文与最多 131,072 输出 tokens。",
+      "summary_en": "Kilo announces NVIDIA Nemotron 3.5 Super VL across Desktop, CLI, VS Code and JetBrains, with 1M context and up to 131,072 output tokens.",
+      "key_points_zh": [
+        "据平台介绍，模型为 120B 总参数 / 12B 激活参数，支持图像、视频、可配置思考、工具调用和 JSON schema 输出。",
+        "KiloBench 的 53% 为平台自己的测评结果，本站未独立验证。"
+      ],
+      "key_points_en": [
+        "The platform describes 120B total / 12B active parameters, images, video, configurable thinking, tool calls and JSON-schema output.",
+        "The 53% KiloBench result is the platform’s own evaluation and has not been independently verified here."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T15:34:14+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:36+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/nvidia-nemotron-35-super-vl",
+          "url": "https://blog.kilo.ai/p/nvidia-nemotron-35-super-vl",
+          "collected_at": "2026-10-16T01:21:36+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T15:34:14+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "tibo-capacity-improvements-day11-20261015",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "critical_fix"
+      ],
+      "title_zh": "Tibo：增加计算资源，减少模型满载并支持自动继续",
+      "title_en": "Tibo reports capacity improvements and automatic continuation",
+      "summary_zh": "Tibo 在 Day 11 更新中称已实施多项改动并增加计算资源，显著减少“Selected model is at capacity”提示；发生后也应最终自动继续。",
+      "summary_en": "In his Day 11 update, Tibo says changes and added compute substantially reduce “Selected model is at capacity” interruptions and should let work eventually continue automatically.",
+      "key_points_zh": [
+        "他征集仍遇到问题的反馈；原帖未给出改善比例或服务保证。"
+      ],
+      "key_points_en": [
+        "He requests reports of remaining cases, without quantified improvements or a service guarantee."
+      ],
+      "importance_reason_zh": "保留已核实负责人的一手 AI 产品进展、观点或状态通报。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI product progress, opinion or status report.",
+      "published_at": "2026-10-15T15:11:30+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:23:24+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2110750421367287996",
+          "url": "https://x.com/thsottiaux/status/2110750421367287996",
+          "collected_at": "2026-10-16T01:23:24+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15T15:11:30+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "copilot-agentic-autofix-ga-20261015",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability",
+        "pricing"
+      ],
+      "title_zh": "Copilot agentic autofix 正式可用，验证 CodeQL 后创建修复 PR",
+      "title_en": "Copilot agentic autofix reaches general availability",
+      "summary_zh": "GitHub 正式开放代码扫描 agentic autofix：检查相关代码、生成修复并重跑 CodeQL，必要时迭代后创建供审阅的草稿 PR。",
+      "summary_en": "GitHub makes agentic autofix generally available: it examines relevant code, proposes fixes, reruns CodeQL and iterates before opening a draft pull request for review.",
+      "key_points_zh": [
+        "面向 Enterprise Cloud 的 Code Security / Advanced Security 客户，含数据驻留；需企业策略、组织或仓库启用及 Copilot 计费方式。",
+        "仅默认分支警报，可将最多 25 个警报合并修复；消耗 Code Security 预算中的 AI Credits 与 Actions 分钟。"
+      ],
+      "key_points_en": [
+        "Available to Code Security / Advanced Security customers on Enterprise Cloud, including data residency; requires enterprise policy, org/repository enablement and a Copilot billing method.",
+        "Only default-branch alerts are supported; up to 25 can share a fix. It consumes AI Credits from the Code Security budget and Actions minutes."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T13:49:20+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:36+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability",
+          "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability",
+          "collected_at": "2026-10-16T01:21:36+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T13:49:20+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-harness-v021alpha4",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "DeepSeek Harness 0.2.1-alpha.4：自定义插件源与推理等级配置",
+      "title_en": "DeepSeek Harness 0.2.1-alpha.4 adds custom plugin sources and reasoning controls",
+      "summary_zh": "此预发布支持通过 UI 设置自定义 API 模型的推理等级，从自定义插件索引源发现并安装插件，并改进 Linux 命令启动与旧 systemd 兼容性。",
+      "summary_en": "This prerelease adds UI reasoning-level controls for custom API models and discovery/installation from custom plugin indexes, while improving Linux command startup and older systemd compatibility.",
+      "key_points_zh": [
+        "第三方插件兼容性优先检查 engines.dsh；修复命令参数输入恢复及 Office 交付引用已删除预览图的问题。"
+      ],
+      "key_points_en": [
+        "Plugin compatibility prioritizes engines.dsh; fixes command-argument input recovery and Office replies referring to deleted preview images."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T13:40:02Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:17+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.4",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.4",
+          "collected_at": "2026-10-16T01:21:17+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T13:40:02Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "kilo-v7812",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kilo 7.8.12 稳定版：新网关路由与 MCP、权限修复",
+      "title_en": "Kilo 7.8.12 stable adds gateway routing and MCP/permission fixes",
+      "summary_zh": "Kilo 7.8.12 将网关默认流量切至 ai-gateway.kilo.ai/api/v1，可通过 KILO_AI_GATEWAY_URL 覆盖，并纳入此前预发布的忽略路径设置与搜索修复。",
+      "summary_en": "Kilo 7.8.12 routes gateway traffic to ai-gateway.kilo.ai/api/v1 by default with KILO_AI_GATEWAY_URL overrides, and includes prior prerelease ignored-path settings and search fixes.",
+      "key_points_zh": [
+        "CLI 移动端可从指定消息分叉远程会话；MCP OAuth 恢复不再清除其他会话刚刷新的凭据。",
+        "修复子 agent 权限请求卡住、Windows 后台任务状态及取消启动时 MCP 进程泄漏。"
+      ],
+      "key_points_en": [
+        "Mobile can fork remote CLI sessions at a message; MCP OAuth recovery no longer clears credentials just refreshed by another session.",
+        "Fixes stuck subagent permission prompts, Windows job state and MCP leaks when startup is cancelled."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15T09:15:02Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:36+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.12",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.12",
+          "collected_at": "2026-10-16T01:21:36+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T09:15:02Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "tibo-done-and-dusted-20261015",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Tibo 发布“Done and dusted”状态短帖",
+      "title_en": "Tibo posts “Done and dusted”",
+      "summary_zh": "Tibo 发布“Done and dusted”简短状态通报，未说明已经完成的具体事项、产品或用户覆盖范围。",
+      "summary_en": "Tibo posts the brief status “Done and dusted”, without identifying the completed work, product or affected users.",
+      "key_points_zh": [
+        "按负责人状态通报保留，不将其改写为某项额度或修复已全部生效。"
+      ],
+      "key_points_en": [
+        "Retained as a leader’s status report without claiming any particular allowance or fix has fully propagated."
+      ],
+      "importance_reason_zh": "保留已核实负责人的一手 AI 产品进展、观点或状态通报。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI product progress, opinion or status report.",
+      "published_at": "2026-10-15T06:28:13+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:23:24+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2110618732666257557",
+          "url": "https://x.com/thsottiaux/status/2110618732666257557",
+          "collected_at": "2026-10-16T01:23:24+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15T06:28:13+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "tibo-day10-reset-20261015",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Tibo 发布“Day 10/ Reset”并回应重置按钮玩笑",
+      "title_en": "Tibo posts “Day 10/ Reset” and jokes about his reset button",
+      "summary_zh": "Tibo 写道有关其重置按钮丢失的传言被夸大了，并标注“Day 10/ Reset”。原帖未给出额度、产品或账户范围。",
+      "summary_en": "Tibo jokes that reports of his reset button being lost are greatly exaggerated and labels the post “Day 10/ Reset”, without specifying allowances, products or accounts.",
+      "key_points_zh": [
+        "只记录本人重置相关表述，不据此计算套餐权益。"
+      ],
+      "key_points_en": [
+        "Records his reset-related statement without calculating subscription entitlements."
+      ],
+      "importance_reason_zh": "保留已核实负责人的一手 AI 产品进展、观点或状态通报。",
+      "importance_reason_en": "Retained as a verified leader’s first-hand AI product progress, opinion or status report.",
+      "published_at": "2026-10-15T04:55:51+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:23:24+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2110595484180214059",
+          "url": "https://x.com/thsottiaux/status/2110595484180214059",
+          "collected_at": "2026-10-16T01:23:24+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15T04:55:51+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
     {
       "id": "elon-grok-bot-docs-20261015",
       "entity_ids": [
@@ -72,6 +864,158 @@
           "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-0",
           "collected_at": "2026-10-15T01:59:42+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "hermes-v0222",
+      "entity_ids": [
+        "hermes"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Hermes 0.22.2 修复错误发布与网关重启、本地模型长任务",
+      "title_en": "Hermes 0.22.2 corrects the release and fixes gateway/local-model failures",
+      "summary_zh": "Hermes 说明 0.22.1 从错误提交构建，带入未发布网关代码，可能让 Microsoft Store 应用卡在 Connecting；0.22.2 回到正确发布线。",
+      "summary_en": "Hermes says 0.22.1 was built from the wrong commit, included unreleased gateway work and could leave the Microsoft Store app stuck on Connecting. Version 0.22.2 restores the intended release line.",
+      "key_points_zh": [
+        "修复重启后 PID 复用导致网关无法启动；本地模型长任务支持流式进度、休眠计时排除与恢复重试。",
+        "已知问题：在 0.22.1 网关运行过的会话在 0.22.2 中仍不能删除；CLI 可运行 hermes update，Store 通过商店更新。"
+      ],
+      "key_points_en": [
+        "Fixes recycled PIDs preventing gateway startup; long local-model turns gain streamed progress, sleep-aware stall timers and recovery retries.",
+        "Known issue: sessions run under the 0.22.1 gateway cannot be deleted in 0.22.2. CLI installs use hermes update; Store installs update through the Store."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T01:21:20+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2",
+          "collected_at": "2026-10-16T01:21:20+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T08:21:32Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "kiro-kimi-k3-preview-20261015",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "preview",
+      "topics": [
+        "availability",
+        "pricing"
+      ],
+      "title_zh": "Kiro 实验接入 Kimi K3：1M 上下文、2.4× credits",
+      "title_en": "Kiro adds experimental Kimi K3 with 1M context at 2.4× credits",
+      "summary_zh": "Kiro 为 US geography 的 Pro、Pro+、Pro Max 与 Power 用户实验开放 Kimi K3，覆盖 IDE、CLI、Crew 和 Web，支持文本、图像与 1M 上下文。",
+      "summary_en": "Kiro offers experimental Kimi K3 access in IDE, CLI, Crew and Web for Pro, Pro+, Pro Max and Power users in the US geography, with text/image input and 1M context.",
+      "key_points_zh": [
+        "扣费倍率为 2.4×；需重启 IDE / CLI、运行 kirocrew restart 或刷新 Web 获取新模型目录。"
+      ],
+      "key_points_en": [
+        "The credit multiplier is 2.4×; restart IDE / CLI, run kirocrew restart or refresh Web to load the new catalog."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T01:21:36+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/kimi-k3-now-available-in-kiro",
+          "url": "https://kiro.dev/changelog/models/kimi-k3-now-available-in-kiro",
+          "collected_at": "2026-10-16T01:21:36+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "kiro-ide-markdown-review-20261015",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro IDE 向所有用户开放 Markdown 批注审阅",
+      "title_en": "Kiro IDE makes Markdown Review available to all users",
+      "summary_zh": "Kiro IDE 所有用户可对工作区 Markdown 文件添加批注，并一次性发送给 Kiro；同时改进工作流步骤通知、登录和终端问题。",
+      "summary_en": "All Kiro IDE users can comment on workspace Markdown files and send comments to Kiro in one batch. The update also improves workflow-step notifications and fixes sign-in and terminal issues.",
+      "key_points_zh": [
+        "可在暂存代码前生成提交信息；公告未列出具体修复细节，不扩写。"
+      ],
+      "key_points_en": [
+        "Commit messages can be generated before staging; unspecified fixes are not expanded beyond the announcement."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T01:21:36+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-3-11",
+          "url": "https://kiro.dev/changelog/ide/1-3-11",
+          "collected_at": "2026-10-16T01:21:36+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-15",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "qoder-v048",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "Qoder 0.4.8 修复旧指令偶发重新排队",
+      "title_en": "Qoder 0.4.8 fixes old instructions being queued again",
+      "summary_zh": "Qoder 0.4.8 修复过去指令偶尔被重新加入队列的问题，避免历史指令意外再次进入执行流程。",
+      "summary_en": "Qoder 0.4.8 fixes past instructions occasionally being queued again, preventing old instructions from unexpectedly reentering the execution flow.",
+      "key_points_zh": [
+        "更新说明未公布其他能力或受影响范围。"
+      ],
+      "key_points_en": [
+        "The release notes do not identify other capabilities or affected scope."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-15",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T01:23:23+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#october-15-2026::0.4.8",
+          "url": "https://docs.qoder.com/release-notes/qoder#october-15-2026",
+          "collected_at": "2026-10-16T01:23:23+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15",
+          "date_kind": "published"
         }
       ]
     },
@@ -493,6 +1437,44 @@
       ]
     },
     {
+      "id": "openrouter-private-endpoints-20261014",
+      "entity_ids": [
+        "openrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "availability"
+      ],
+      "title_zh": "OpenRouter 企业客户可申请 Private Endpoints",
+      "title_en": "OpenRouter Enterprise introduces Private Endpoints",
+      "summary_zh": "OpenRouter Enterprise 可申请把自有微调模型和专属部署接入现有 API，与公开目录一起路由；私有端点仅对组织内可见。",
+      "summary_en": "OpenRouter Enterprise customers can request routing of their own fine-tuned models and dedicated deployments through the existing API alongside the public catalog; private endpoints are visible only within the organization.",
+      "key_points_zh": [
+        "需 Enterprise 方案并提出申请；原公告未列价格或默认自动开放范围。"
+      ],
+      "key_points_en": [
+        "Requires Enterprise and a request; the announcement does not specify prices or default automatic access."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-14T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:21:21+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "openrouter-official",
+          "content_id": "https://openrouter.ai/blog/announcements/private-endpoints/",
+          "url": "https://openrouter.ai/blog/announcements/private-endpoints/",
+          "collected_at": "2026-10-16T01:21:21+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-14T00:00:00+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
       "id": "hermes-v0221",
       "entity_ids": [
         "hermes"
@@ -681,6 +1663,84 @@
           "url": "https://docs.qoder.com/release-notes/qoder#october-14-2026",
           "collected_at": "2026-10-15T02:03:57+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-sonnet4-retired-20261014",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Kiro 的 Claude Sonnet 4 于 10 月 14 日退役",
+      "title_en": "Claude Sonnet 4 retires in Kiro on October 14",
+      "summary_zh": "Kiro 公告 Claude Sonnet 4 自 2026 年 10 月 14 日结束服务，依赖此模型的工作需改选可用模型。",
+      "summary_en": "Kiro announces Claude Sonnet 4 reached end of life on October 14, 2026; workflows relying on it must switch to an available model.",
+      "key_points_zh": [
+        "公告指出 Sonnet 5.5 为最新 Sonnet；未将 Sonnet 4 与 Sonnet 4.5 混同。"
+      ],
+      "key_points_en": [
+        "The announcement identifies Sonnet 5.5 as the latest Sonnet and does not conflate Sonnet 4 with Sonnet 4.5."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-14",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T01:21:36+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/claude-sonnet-4-end-of-life",
+          "url": "https://kiro.dev/changelog/models/claude-sonnet-4-end-of-life",
+          "collected_at": "2026-10-16T01:21:36+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-14",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "devin-review-sarif-v3-20261014",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Devin：独立 Review manager、SARIF 导出与稳定 v3 API",
+      "title_en": "Devin adds Review manager, SARIF exports and stable v3 APIs",
+      "summary_zh": "Devin 新增组织级 Review manager 角色，可独立管理审阅设置；代码扫描结果支持 SARIF 2.1.0 导出，仓库与 blueprint 端点升级到稳定 /v3。",
+      "summary_en": "Devin adds an organization-level Review manager role for independent review configuration, SARIF 2.1.0 code-scan exports and stable /v3 repository and blueprint endpoints.",
+      "key_points_zh": [
+        "旧 /v3beta1 路径仍可使用；Terraform 增加仓库索引、blueprint 与仓库资源。",
+        "Teams 不支持的私有或共享频道不再提供触发器，缺少监视权限时保存自动化会报明原因；新增五个观测插件。"
+      ],
+      "key_points_en": [
+        "Old /v3beta1 paths remain functional; Terraform adds repository indexing, blueprint and repository resources.",
+        "Teams excludes unsupported private/shared-channel triggers and explains missing watch access when saving automations; five observability plugins are added."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-14",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T01:23:24+00:00",
+      "updated_at": "2026-10-16T01:28:02+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#october-14-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#october-14-2026",
+          "collected_at": "2026-10-16T01:23:24+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-14",
+          "date_kind": "published"
         }
       ]
     },

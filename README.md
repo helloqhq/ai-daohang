@@ -173,6 +173,8 @@ python3 scripts/collect.py feeds --opml /tmp/ai-news-subscriptions.opml
 
 ## 按需采集、翻译与更新
 
+计费页顶部新增“免费模型”“折扣模型”面板，支持 API、聊天与 Agent 场景，显示额度、资格、原价基准及优惠条件。默认排除失效或核验过时的优惠，可另行查看。共享套餐只登记一次。字段与更新约定见 [计费方案](docs/PRICING.md)。
+
 ### 通过 skill 完成一次更新
 
 采集 skill 位于 [skills/ai-news-collect/SKILL.md](skills/ai-news-collect/SKILL.md)，本机已安装在 `~/.codex/skills/ai-news-collect`。在 AI agent 中调用：
@@ -182,6 +184,8 @@ $ai-news-collect
 更新 /Users/qhq/Downloads/code/ai-daohang 的全部启用来源。
 按默认增量规则采集，补采失败断档；筛选重要事件，在同一 JSON 中输出中英文标题、摘要、关键点和入选理由，
 生成并校验本地 JSON，报告剩余待核查材料和来源覆盖情况。
+自动核实补充重要关注对象和信源，完善计费对象、价格、模型权益、免费额度与折扣渠道；
+证据不足的保留候选，价格核验与新闻覆盖分别报告。
 ```
 
 在新机器上，可让 agent 读取项目内的 `SKILL.md` 并按其流程执行；也可在 Codex 技能目录尚无同名项时，从项目根目录安装符号链接，再重新加载技能：
@@ -191,7 +195,9 @@ mkdir -p ~/.codex/skills
 ln -s "$PWD/skills/ai-news-collect" ~/.codex/skills/ai-news-collect
 ```
 
-skill 只负责本地采集与 JSON 更新，不推送、不部署。Python 脚本负责获取、解析、缓存和校验；**重要性判断、双语整理与归纳由正在运行的 agent 完成**，单独执行 `fetch` 不会自动生成双语新闻。
+skill 负责本地目录维护、采集与 JSON 更新，不推送、不部署。Python 脚本负责获取、解析、缓存和校验；**重要性判断、双语整理与归纳由正在运行的 agent 完成**，单独执行 `fetch` 不会自动生成双语新闻。
+
+技能通过正在运行的 agent 自动发现、核实并维护目录，包含 Agent 开发框架与 AI 人物，不依赖后台任务。可先用 `npm run catalog:inspect` 检查已登记来源、计费映射及待复核项；该命令不联网，实际核验仍须读取官方依据。新闻运行依赖 Python 3.11+，计费检查与构建依赖 Node.js 18.3+，均无额外运行库。
 
 ### 脚本流程与手动操作
 

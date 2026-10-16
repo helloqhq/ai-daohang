@@ -14,6 +14,8 @@
 | `public/data/index.json` | 数据版本、生成时间、按月历史文件索引、事件位置与统计 |
 | `public/data/events/YYYY-MM.json` | 相应月份的事件内容 |
 | `public/data/coverage.json` | 经过整理的来源采集覆盖状态 |
+| `public/data/pricing.json` / `pricing.xml` | 独立核验的计费、免费额度与折扣快照，字段见 PRICING.md |
+| `.collector/discovery-candidates.json` | 未完成核实的对象／信源候选及理由，不公开 |
 | `.collector/state.json` | 各来源成功区间、未完成区间和去重状态，不进入发布目录 |
 | `.collector/converted/`、`.collector/conversion-cache/` | 私有离线 RSS、导入清单与原始转换缓存，不进入发布目录 |
 | `.collector/cache/` | 有保留期限的RSS/Atom 原始 XML 缓存，不进入发布目录 |
@@ -36,7 +38,11 @@
 
 关注对象记录：`id`、`name`、`aliases`、`category`（模型或 Agent）、`kind`（厂商、模型品牌、应用或运行工具）、`enabled`，需要时附所属组织及模型系列关系。
 
+`kind` 实际支持模型侧 vendor、model_brand、api_platform，Agent 侧 application、runtime、framework。四类网页筛选由这些对象及人物投影而来，不把网页分类直接写入 category。自动纳入对象／人物用可选 `admission` 保存双语 AI 关联、影响力理由、HTTPS 证据链接及核实日期；结构由配置校验检查，证据真实性仍由 agent 判断。
+
 负责人记录：`id`、`name`、`entity_ids`、身份核实链接和已经核实的账号入口。官网能核实身份不等于所有同名账号都属于该人。
+
+人物范围包含已核实且有重要 AI 一手信息的负责人、研究者和项目作者。配置校验检查人物 ID 唯一、人物与来源关联有效、子类型与类别匹配、来源平台有效及已核实来源的身份依据，避免自动扩充产生悬空引用。
 
 信息源记录：`id`、`name`、`entity_ids`、可选 `person_id`、`url`、来源格式、`platform`、可选账号／频道标识、`adapter`、`capabilities`、`enabled`、核实状态及依据。配置状态与实际采集成功／失败分开记录。
 

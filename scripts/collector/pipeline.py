@@ -4,6 +4,7 @@ import datetime as dt
 import json
 import xml.etree.ElementTree as ET
 from collections import defaultdict
+from urllib.parse import urlparse
 from .adapters import ADAPTERS, HTTP, SourceError, in_window, feed_address, parse_feed
 from .storage import Store, RULES_VERSION, digest, now_iso, parse_time, read_json, write_json
 from .validation import ValidationError, require, validate_events
@@ -24,11 +25,33 @@ class Pipeline:
     def validate_config(self):
         entity_ids = [e['id'] for e in self.entities]
         source_ids = [s['id'] for s in self.sources]
+        people_ids = [p['id'] for p in self.people]
         require(len(entity_ids)==len(set(entity_ids)), '关注对象标识重复')
         require(len(source_ids)==len(set(source_ids)), '来源标识重复')
+        require(len(people_ids)==len(set(people_ids)), '人物标识重复')
+        def official_url(value):
+            parsed=urlparse(value or '')
+            return parsed.scheme=='https' and bool(parsed.netloc)
+        for entity in self.entities:
+            require(entity['category'] in ('model','agent'), '关注对象分类无效')
+            kinds=('vendor','model_brand','api_platform') if entity['category']=='model' else ('application','runtime','framework')
+            require(entity['kind'] in kinds, '关注对象子类型无效')
+        for person in self.people:
+            require(set(person.get('entity_ids',[])) <= set(entity_ids), '人物引用不存在的对象')
+            require(official_url(person.get('verification_url')), '人物缺少身份核实依据')
+        for item in [*self.entities,*self.people]:
+            admission=item.get('admission')
+            if admission is not None:
+                require(all(isinstance(admission.get(key),str) and admission[key].strip() for key in ('ai_relevance_zh','ai_relevance_en','influence_reason_zh','influence_reason_en')), '自动纳入缺少 AI 关联及影响力依据')
+                require(bool(admission.get('evidence_urls')) and all(official_url(url) for url in admission['evidence_urls']), '自动纳入缺少核实链接')
+                require(parse_time(admission.get('checked_at')) is not None, '自动纳入核实日期无效')
+        platforms={'web','github',*[p['id'] for p in self.platforms]}
         for source in self.sources:
             require(set(source['entity_ids']) <= set(entity_ids), '来源引用不存在的对象')
             require(source['adapter']=='rss', '信息获取统一使用 RSS/Atom')
+            require(not source.get('person_id') or source['person_id'] in people_ids, '来源引用不存在的人物')
+            require(source['platform'] in platforms, '来源引用不存在的平台')
+            require(source.get('verification')!='verified' or official_url(source.get('verification_url')), '已核实来源缺少身份依据')
 
     def catalog(self):
         return {'entities': self.entities, 'sources': [{**s,'feed_url':feed_address(s,self.config)} for s in self.sources], 'people': self.people, 'platforms': self.platforms}

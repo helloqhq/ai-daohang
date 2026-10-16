@@ -5,6 +5,7 @@ import {daysAgo,dateKey,filterEvents} from '../public/assets/model.js';
 import {createEventRenderer,escape} from '../public/assets/render.js';
 import {translate} from '../public/assets/i18n.js';
 import {renderPricing,validatePricing} from '../public/assets/pricing.js';
+import {renderOfferPanels} from '../public/assets/pricing-offers.js';
 
 export function renderInitialFeed(events,catalog,now=new Date()) {
   const filtered=filterEvents(events,catalog,{category:'all',from:daysAgo(6,now),to:daysAgo(0,now)});
@@ -27,6 +28,6 @@ if(process.argv[1] && resolve(process.argv[1])===fileURLToPath(import.meta.url))
   const html=await readFile(join(destination,'index.html'),'utf8');
   const feed=renderInitialFeed(months.flatMap(month=>month.events),catalog);
   const pricing=validatePricing(await readJSON('pricing.json'));
-  await writeFile(join(destination,'index.html'),html.replace(/<!-- feed:start -->[\s\S]*?<!-- feed:end -->/,`<!-- feed:start -->${feed}<!-- feed:end -->`).replace(/<!-- pricing:start -->[\s\S]*?<!-- pricing:end -->/,`<!-- pricing:start -->${renderPricing(pricing.plans)}<!-- pricing:end -->`));
+  await writeFile(join(destination,'index.html'),html.replace(/<!-- feed:start -->[\s\S]*?<!-- feed:end -->/,`<!-- feed:start -->${feed}<!-- feed:end -->`).replace(/<!-- pricing:start -->[\s\S]*?<!-- pricing:end -->/,`<!-- pricing:start -->${renderPricing(pricing.plans)}<!-- pricing:end -->`).replace(/(<div id="pricing-offer-panels"[^>]*>)[\s\S]*?(<\/div>)/,`$1${renderOfferPanels(pricing.plans)}$2`));
   console.log('首页已预渲染：沿用现有卡片、日期分组与近 7 天筛选');
 }

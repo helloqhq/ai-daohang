@@ -20,6 +20,10 @@
 
 ## 扩展方式
 
+2026-10-16 起，采集技能可按 [对象发现与信源维护](../skills/ai-news-collect/references/discovery.md) 自动补充四类对象及来源，无需逐个确认；必须核实 AI 强关联、影响力和身份，记录 `admission` 的双语理由、证据与实际日期。Agent 开放 application、runtime、framework 子类型。计费对象及价格／权益信源也在维护范围，已有映射通过 `npm run catalog:inspect` 检查；价格链接不等于动态订阅。
+
+订阅迁移保留原 ID，来源的可选 `maintenance` 记录旧地址、核实时间和双语原因；停用必须基于已核实的失效或替代事实，不能由单次超时触发。保留旧来源和事件引用，沿订阅指纹机制补采缺口；内部候选存 `.collector/discovery-candidates.json`。不能执行的新来源保留待接入，不仅凭配置标志认定接通。
+
 加入支持现有来源格式的新对象，应只需新增或修改配置。来源类型需要新增解析能力时，才增加相应适配逻辑；不要为每个厂商单独写一套页面。
 
 全部来源共用 RSS/Atom 读取器。原始平台独立登记，原生订阅或第三方转换后的 RSS 在 config/sources.json 集中维护。平台与适配器分别登记，避免把平台名等同于原始数据格式；同一平台可以使用公开网页、已配置接口或链接导入等不同读取方式。
@@ -38,7 +42,7 @@ Agent 应用／运行工具：Codex、Claude Code、Cursor、Gemini CLI、DeepSe
 
 2026-10-03 新增 Thibault “Tibo” Sottiaux，关联 OpenAI 与 Codex，订阅 [X @thsottiaux](https://x.com/thsottiaux)（来源 `tibo-x`，人物 `thibault-sottiaux`）。[OpenAI Forum 官方活动介绍](https://forum.openai.com/public/events/codex-is-for-everyone-why-codex-matters-beyond-code-fa40puy7wi)确认其姓名、昵称及负责 Codex 的身份；[OpenAI 开发者社区账号引用](https://community.openai.com/t/how-should-developers-plan-around-codex-resets/1395030/3)与本人 X 简介交叉核对账号。社区帖子是账号辅助依据，不作为官方产品公告。沿用现有 X 离线转换器，首次检查取得 5 条本人帖子及原始发布时间；仅保存部分正文，不保证完整时间窗，也不代表已启用定时推送。
 
-已按用户确认的推荐映射统一展示名，原始名称作为别名保留。Google 关联多条官方模型渠道；Grok 登记为模型品牌，厂商另行登记。Copilot 限定 GitHub Copilot 的 CLI、IDE Agent 等任务执行能力。后续新增歧义对象时先核实再确认，不凭同名搜索结果自动选择。
+已按用户确认的推荐映射统一展示名，原始名称作为别名保留。Google 关联多条官方模型渠道；Grok 登记为模型品牌，厂商另行登记。Copilot 限定 GitHub Copilot 的 CLI、IDE Agent 等任务执行能力。后续新增歧义对象先核实，证据不足时保留候选，不凭同名搜索结果自动选择。
 
 ### 已确认的 Agent 身份
 

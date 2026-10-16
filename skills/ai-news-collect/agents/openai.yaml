@@ -1,6 +1,6 @@
 interface:
   display_name: "AI 信息采集"
-  short_description: "复用脚本采集重要 AI 动态，在同一 JSON 中生成完整中英文内容"
-  default_prompt: "使用 $ai-news-collect 更新 ai-daohang 的重要 AI 动态，补采失败来源，在同一 JSON 中输出中英文两份内容并校验完整性。"
+  short_description: "采集双语 AI 动态，自动发现重要对象、优化信源并核验计费及优惠渠道"
+  default_prompt: "使用 $ai-news-collect 更新 ai-daohang 的双语 AI 动态，自动核实补充重要关注对象与信源，完善计费方案、免费额度及折扣渠道并校验本地数据。"
 policy:
   allow_implicit_invocation: true

@@ -29,6 +29,34 @@ class PipelineTests(unittest.TestCase):
     def candidate(self):
         self.p.ingest([{**self.record,'source_id':self.source['id']}])
         return next(m for m in self.p.store.materials().values() if m['content_id']==self.record['content_id'])
+    def test_config_rejects_dangling_people_and_invalid_object_kinds(self):
+        for change in (
+            lambda p: p.people.append(dict(p.people[0])),
+            lambda p: p.sources[0].update(person_id='unknown-person'),
+            lambda p: p.people[0].update(entity_ids=['unknown-entity']),
+            lambda p: p.sources[0].update(platform='unknown-platform'),
+            lambda p: p.sources[0].update(verification_url='javascript:alert(1)'),
+            lambda p: p.entities[0].update(category='chat'),
+            lambda p: p.entities[0].update(kind='framework'),
+        ):
+            pipeline=Pipeline(self.root)
+            change(pipeline)
+            with self.assertRaises(ValidationError):pipeline.validate_config()
+    def test_frameworks_and_automatic_admissions_require_evidence(self):
+        pipeline=Pipeline(self.root)
+        framework=next(e for e in pipeline.entities if e['category']=='agent')
+        framework['kind']='framework'
+        framework['admission']={
+            'ai_relevance_zh':'AI 任务编排框架','ai_relevance_en':'AI task orchestration framework',
+            'influence_reason_zh':'官方产品已接入','influence_reason_en':'Adopted by an official product',
+            'evidence_urls':['https://example.com/docs/integration'],'checked_at':'2026-10-16',
+        }
+        pipeline.validate_config()
+        for field,value in [('ai_relevance_en',''),('influence_reason_zh',''),('evidence_urls',[]),('checked_at','not-a-date')]:
+            admission=copy.deepcopy(framework['admission'])
+            framework['admission'][field]=value
+            with self.assertRaises(ValidationError):pipeline.validate_config()
+            framework['admission']=admission
     def packet(self,m):
         event={'id':'pi-v1','entity_ids':['pi'],'kind':'update','topics':['feature'],'title_zh':'新增重要功能','summary_zh':'变更影响实际使用。','key_points_zh':['保留限制条件'],'importance_reason_zh':'影响工作流程','published_at':m['published_at'],'date_precision':'datetime','first_collected_at':m['collected_at'],'updated_at':m['collected_at'],'sources':[{k:m[k] for k in ('source_id','url','content_id','material_scope','collected_at')}]}
         event.update(title_en='Important new feature',summary_en='A change that affects everyday use.',key_points_en=['Preserves limitations'],importance_reason_en='Affects the workflow')

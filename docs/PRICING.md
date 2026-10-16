@@ -1,6 +1,8 @@
 # 计费方案
 
-首页导航「计费方案」或 `/#pricing` 聚合三类数据：模型 API（每百万 tokens）、Token / Coding Plan 固定订阅、Agent 产品套餐。前端沿用原生 JavaScript、中英文切换与本地筛选，无第三方请求或依赖。
+首页导航「计费方案」或 `/#pricing` 聚合模型 API（每百万 tokens）、聊天产品、Token / Coding Plan 固定订阅与 Agent 产品套餐。前端沿用原生 JavaScript、中英文切换与本地筛选，无第三方请求或依赖。
+
+2026-10-16 增加顶部“免费模型”“折扣模型”快捷面板，覆盖模型 API、聊天产品与 Agent 套餐，可叠加类别、厂商、币种、关键词及优惠类型筛选。面板按可用方案去重计数；共享套餐以 `use_cases` 进入聊天与 Agent 等筛选，保留一个方案 ID，原归属不变。纯聊天方案支持 `category: chat`。未发现某类型记录时显示真实空结果，不填充示例价格。
 
 展示按厂商聚合，每个厂商下分别展示 API 模型及各订阅产品。同一 Token Plan 或 Agent 产品的档位共用一张表，对照价格、可用模型和额度；不因模型或产品名称相同而跨厂商、跨类别合并。模型列表超过 6 项时可展开全部，模型搜索包含折叠部分。
 
@@ -55,6 +57,8 @@ Pro $500 同时包含 GPT-6 Astra 和 GPT-6.1 Sol Ultrafast；API Sol Ultrafast 
 
 ## 更新与 RSS
 
+采集技能现按 [计费核验流程](../skills/ai-news-collect/references/pricing.md) 自动发现并核实对象、价格及权益信源，在调用范围内维护目录。`npm run catalog:inspect` 仅本地检查和去重既有来源，不能证明已联网核验。价格核验可以读取官方公开定价／条款；新闻保持 RSS/Atom，两个流程分别记录结果。定价与权益仍以实际读到的原文为准。
+
 核实每项 `source_url` 的适用条件后编辑 JSON，更新相应 `checked_at`；价格、条件、状态等内容确实变化时同时更新 `updated_at`。目录顶层 `checked_at` 取最近核验日期，各项日期独立显示。官方内容无法确认时保留 `pending` 和说明，不猜价格。定价页若有原生 RSS，可通过现有来源登记和新闻队列跟踪公告；新闻采集仍保持 RSS-only，核验目录不替代新闻材料及处置包，也不增加直接抓取器。
 
 ```sh
@@ -68,3 +72,30 @@ npm run build
 RSS 地址为 `https://go2-ai.com/data/pricing.xml`，首页提供发现链接。它是本站人工核验并发布后的当前计费快照，由本站生成，非厂商原生订阅，亦非完整价格变更历史。订阅项包含可用模型、权益说明与官方来源。每项的 GUID 包含方案 ID 和内容摘要；仅更改核验日期不会产生新 GUID，价格 / 条件 / 状态 / 模型权益变化会产生新的标识。发布前此地址仍是原网站的状态，须按既有发布流程部署后才可订阅新版。
 
 测试覆盖价格和日期校验、重复 ID、空价格语义、厂商 / 产品分组、档位模型校验与搜索、双语内容、链接安全、北京时间活动截止、过期提示和 RSS 去重。
+
+## 免费与折扣契约
+
+`pricing.json` 保持 `version: 1`，在方案上新增可选 `use_cases` 和 `offers`。既有无优惠记录仍有效；免费面板依据明确的推理权益，不能仅凭 `billing: free` 或零价推断。首批优惠由已有核实内容结构化，未刷新其核验日期，也不代表本次完成线上重核。
+
+| 字段 | 约定 |
+| --- | --- |
+| use_cases | 非空且不重复的 api、chat、agent 列表；同一购买权益可用于多个场景 |
+| offers | 优惠列表，id 在同一方案内稳定且唯一 |
+| type / kind | free：recurring、signup、trial、limited-time；discount：promotion、vs-origin、off-peak、batch、official-discount |
+| status | verified、pending、paused；独立于常规价格核实情况 |
+| models | 本优惠明确适用的模型，不能自动继承工具所有可连接模型 |
+| source_url / checked_at | 官方 HTTPS 依据和实际核实日期；不超过快照顶层核验日期 |
+| conditions_zh / conditions_en | 计价、时段、地域、额外费用、相对有效期等双语条件 |
+| eligibility_zh / eligibility_en | 账号、资格、地区及付费前提等双语说明 |
+| card_required | yes、no 或 unknown；未知必须展示未核实 |
+| quota_zh / quota_en | 免费必填：额度、刷新窗口、结转及领取后有效期；未知具体量如实说明 |
+| starts_at / ends_at | 可空，提供时必须为带时区 ISO 时间；开始含边界，结束不含边界；未公布结束时间为 null |
+| price | 已核实折扣必填；币种／单位沿用方案；API 用 input、output、cached、cache_write，订阅用 amount，仅列已核实维度 |
+| end_note_zh / end_note_en | 可选双语期限说明；已知月日但年份缺失时保留原始标签且标待核验，不能写成未公布期限 |
+| reference | 可选可比原价证据，包含 currency、billing、price、source_url、checked_at，以及双语 label 和 comparison |
+
+比较基准必须具有相同币种、计费单位和对应价格维度。模型版本、服务模式、上下文、地区等可比性由实际阅读原文核实并记录在 `comparison_zh/en`；字段校验不证明事实可比。按输入、输出等维度分别计算节省比例；没有可靠基准时仅显示价格及官方条件，不推算原价。不把 Credits 当作美元、不猜汇率。
+
+面板默认仅纳入已核实且可用的优惠：方案价格、模型权益、优惠及基准任一超过 30 天未核实，都需重新核验；到期、尚未开始、暂停及待核验记录默认排除，可通过复选框查看。常规计费表仍保留历史与待核验条目。分时优惠表示相应时段下可用，清楚展示时区和限制，不代表所有时刻均以优惠价计费。
+
+只对某项优惠生效的截止时间写在优惠中，不用方案的 `valid_until` 使整个套餐过期。领取后 N 天、账期结束等期限写入额度与条件，不伪造统一日期。优惠未知截止日明确标注“未公布截止日”；只知道月日没有年份的活动不能补造日期。仅复核方案、优惠或基准日期不改变 RSS GUID；价格、额度、条件和状态变更会改变内容标识。

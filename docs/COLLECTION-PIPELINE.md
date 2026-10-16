@@ -4,6 +4,8 @@
 
 ## 职责划分
 
+采集技能在新闻获取前按 [对象发现](../skills/ai-news-collect/references/discovery.md) 与 [计费核验](../skills/ai-news-collect/references/pricing.md) 自动维护目录。`scripts/maintain-catalog.mjs` 只检查本地来源复用、映射缺口和复核优先项；agent 读取官方依据作判断。此阶段可核实身份及价格，新闻材料仍统一通过订阅或独立转换 RSS 入队，不把官网核验混入在线覆盖。
+
 | 层 | 负责事项 |
 | --- | --- |
 | 独立按需转换器 | 官方页面／公开接口转换为私有 RSS 与校验清单，不改变在线覆盖 |

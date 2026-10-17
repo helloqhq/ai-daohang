@@ -50,7 +50,7 @@ test('free allowances and discounts require dated, bilingual, explicit evidence'
     p=>p.offers[0].models=[],p=>p.offers[0].quota_en='',p=>p.offers[0].conditions_en='',
     p=>p.offers[0].eligibility_zh='',p=>p.offers[0].card_required=true,
     p=>p.offers[0].source_url='javascript:alert(1)',p=>p.offers[0].checked_at='2026-02-30',
-    p=>p.offers[0].checked_at='2026-10-17',p=>p.offers[0].price={amount:1},
+    p=>p.offers[0].checked_at='9999-01-01',p=>p.offers[0].price={amount:1},
     p=>p.offers[0].starts_at='2026-10-16T00:00:00',
     p=>p.offers[0].ends_at='2026-02-30T00:00:00Z',
     p=>p.offers[0].kind='client-free',p=>p.use_cases=['chat','chat'],

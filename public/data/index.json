@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "8bf60c8ef5d0174d",
-  "generated_at": "2026-10-16T01:30:01+00:00",
+  "snapshot_id": "65034947ae1f5a71",
+  "generated_at": "2026-10-17T01:56:59+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 223,
+      "count": 233,
       "min_date": "2026-10-01T01:34:16Z",
-      "max_date": "2026-10-16T00:49:13Z"
+      "max_date": "2026-10-16T15:08:58Z"
     },
     {
       "month": "2026-09",
@@ -19,7 +19,16 @@
     }
   ],
   "event_locations": {
+    "copilot-cli-v1099-3": "2026-10",
+    "opencode-v1192-v1193": "2026-10",
+    "deepseek-harness-v021alpha5": "2026-10",
+    "cline-cloud-sessions-20261016": "2026-10",
+    "copilot-slack-teams-multi-repo-20261016": "2026-10",
+    "gemini-cli-nightly-20261016": "2026-10",
     "copilot-cli-v1099-2": "2026-10",
+    "glm-api-key-management-20261016": "2026-10",
+    "siliconflow-diffusiongemma-sunset-20261016": "2026-10",
+    "siliconflow-deepseek-v4-1-flash-20261016": "2026-10",
     "musk-grok-bot-growth-20261015": "2026-10",
     "musk-grok-bot-daily-improvements-20261015": "2026-10",
     "musk-grok-bot-spam-lists-20261015": "2026-10",
@@ -129,6 +138,7 @@
     "kiro-opus55-govcloud-20261009": "2026-10",
     "kiro-sonnet55-govcloud-20261009": "2026-10",
     "devin-memory-20261009": "2026-10",
+    "siliconflow-glm-5-3-flash-20261009": "2026-10",
     "demis-hassabis-x-2108331042083872882": "2026-10",
     "copilot-cli-1095-0": "2026-10",
     "elon-musk-x-2108321181602353333": "2026-10",
@@ -249,5 +259,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 229
+  "total_events": 239
 }

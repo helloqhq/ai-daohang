@@ -1,7 +1,293 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "8bf60c8ef5d0174d",
+  "snapshot_id": "65034947ae1f5a71",
   "events": [
+    {
+      "id": "copilot-cli-v1099-3",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.99-3：可关闭客户端遥测，修复沙箱凭据提示",
+      "title_en": "Copilot CLI 1.0.99-3 adds a client-telemetry opt-out and fixes sandbox credential hints",
+      "summary_zh": "Copilot CLI 1.0.99-3 新增 --disable-client-telemetry 关闭客户端遥测上传；沙箱命令在凭据代理证书信任失败时给出解释，并可在批准后于沙箱外重跑；另修复 diff 评论保留、插件操作路由与仅推理响应的 max-token 循环。",
+      "summary_en": "Copilot CLI 1.0.99-3 adds --disable-client-telemetry to turn off client telemetry uploads; sandboxed commands explain credential-proxy certificate trust failures and can offer an approved rerun outside the sandbox. It also fixes /diff comment retention, plugin action routing and endless reasoning-only max-token loops.",
+      "key_points_zh": [
+        "--disable-client-telemetry 标志可关闭 CLI 的客户端遥测上传。",
+        "沙箱 shell 命令在凭据代理证书信任失败时解释原因，并可在批准后于沙箱外重跑。",
+        "同一会话重开未变更 diff 时保留已保存的 /diff 评审评论，并提供显式丢弃操作；插件启用、停用、更新与卸载在清单刷新后可可靠路由。",
+        "仅推理的响应达到 max-token 且无进展时不再无限循环，以明确错误结束；会话恢复时若保存的模型被自动替换，会显示警告并同步当前模型显示。"
+      ],
+      "key_points_en": [
+        "The --disable-client-telemetry flag turns off client telemetry uploads from the CLI.",
+        "Sandboxed shell commands explain credential-proxy certificate trust failures and can offer an approved rerun outside the sandbox.",
+        "Saved /diff review comments are kept when reopening an unchanged diff in the same session, with an explicit discard action; plugin enable, disable, update and uninstall actions route reliably after inventory refreshes.",
+        "Reasoning-only responses that hit max-token without progress end with a clear error instead of looping; when a saved model is automatically replaced on resume, the CLI warns and keeps the active model display in sync."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T15:08:58Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T15:18:44+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-3",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-3",
+          "collected_at": "2026-10-16T15:18:44+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T15:08:58Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "opencode-v1192-v1193",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "OpenCode 1.19.2/1.19.3：1.x 不再接收 2.x 常规更新，推理选项生成模型变体",
+      "title_en": "OpenCode 1.19.2/1.19.3: 1.x installs are no longer offered 2.x updates; reasoning options generate model variants",
+      "summary_zh": "OpenCode 1.x 固定在 1.x 发布线：更新检查只使用 npm opencode-ai 的 latest 版本，1.x 安装不再被作为常规更新提供 2.x 构建，升级到 OpenCode 2 需经 /update 中的 2.0 入口或 opencode upgrade --major 显式选择；安装脚本拒绝安装 2.x。1.19.3 起配置模型推理选项会生成推理变体，替换目录变体并保留用户配置的覆盖。",
+      "summary_en": "OpenCode 1.x now stays on the 1.x release line: update checks use only the npm opencode-ai latest version, so 1.x installs are never offered a 2.x build as a regular update; upgrading to OpenCode 2 remains an explicit choice through the 2.0 offer in /update or opencode upgrade --major, and the install script refuses to install 2.x. From 1.19.3, configuring a model’s reasoning options generates reasoning variants that replace catalog variants while preserving configured overrides.",
+      "key_points_zh": [
+        "1.x 安装不再被当作常规更新推送 2.x；Homebrew Core 安装跳过 1.x 更新（其已跟踪 OpenCode 2），提供更新前会检查 tap 与 Chocolatey 可用性。",
+        "修复 yarn 管理的安装升级；配置模型推理选项生成推理变体，替换目录变体并保留已配置的覆盖。"
+      ],
+      "key_points_en": [
+        "1.x installs are never offered a 2.x build as a regular update; Homebrew Core installs skip 1.x updates (they now track OpenCode 2), and tap and Chocolatey availability is checked before offering an update.",
+        "Fixes upgrades for yarn-managed installs; configuring model reasoning options generates reasoning variants that replace catalog variants while preserving configured overrides."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T12:31:52Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T15:18:44+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v1.19.3",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.3",
+          "collected_at": "2026-10-16T15:18:44+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T12:31:52Z",
+          "date_kind": "updated"
+        },
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v1.19.2",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.2",
+          "collected_at": "2026-10-16T15:18:44+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T02:30:38Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-harness-v021alpha5",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "DeepSeek Harness 0.2.1-alpha.5：插件模型名称槽位与终端修复",
+      "title_en": "DeepSeek Harness 0.2.1-alpha.5 adds a plugin model-label slot and terminal fixes",
+      "summary_zh": "DeepSeek Harness 0.2.1-alpha.5 新增 conversation.input.model.label 槽位，插件可按模型渠道自定义输入框模型选择器中的名称展示；修复插件启停后已打开会话的技能菜单不更新、多终端重复查询与界面偏移等问题，并补充 PTC Mode 指引、统一 SDK、Web 与 headless 的模型身份说明。",
+      "summary_en": "DeepSeek Harness 0.2.1-alpha.5 adds a conversation.input.model.label slot so plugins can customize model-selector labels by provider, and fixes skill lists not refreshing in open sessions after plugin changes, redundant terminal queries and a Page Up layout shift, while completing PTC Mode guidance and aligning model identity prompts across SDK, Web and headless profiles.",
+      "key_points_zh": [
+        "新增 conversation.input.model.label 槽位，插件可按模型渠道自定义输入框模型选择器中的名称展示。",
+        "修复插件页启停插件后已打开会话的 / 菜单技能列表不更新；减少新建与恢复多个终端时的重复查询，避免失效终端在切换面板后反复重试。",
+        "补充 PTC Mode 缺失指引并统一 SDK、Web、headless 的模型身份说明；修复 Windows/Linux 右侧栏收起时在输入框按 Page Up 导致界面左移。"
+      ],
+      "key_points_en": [
+        "Adds the conversation.input.model.label slot so plugins can customize model labels by provider in the composer’s model selector.",
+        "Fixes the skill list in an open session’s / menu not updating after plugins are enabled or disabled; reduces redundant queries when creating or restoring terminals and stops failed terminals from retrying on panel switches.",
+        "Completes missing PTC Mode guidance and aligns model identity prompts across SDK, Web and headless profiles; fixes Page Up in a text input shifting the interface left on Windows and Linux with the right sidebar collapsed."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T12:23:28Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T15:18:41+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.5",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.5",
+          "collected_at": "2026-10-16T15:18:41+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T12:23:28Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "cline-cloud-sessions-20261016",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Cline 推出云上会话：托管沙箱任务在编辑器关闭后继续运行",
+      "title_en": "Cline rolls out Cloud sessions with hosted sandboxes that outlive the editor",
+      "summary_zh": "Cline 渐次推出 Cloud sessions：可在指定的 GitHub 仓库与分支上以托管沙箱运行任务，关闭编辑器后继续执行并通知完成；桌面 0.0.47 修复 Marketplace 插件加载、移除云会话开关。CLI 3.0.72 与 SDK 0.0.94 将插件限定为 worker（默认）或 sandbox 模式，移除 in_process；默认模型改为 Gemini 4 Argon，模型目录刷新至 6,952 个。",
+      "summary_en": "Cline gradually rolls out Cloud sessions: run a task in a hosted sandbox on a chosen GitHub repository and branch, with tasks continuing after the editor closes and notifying on completion. Desktop 0.0.47 fixes Marketplace plugin loading and removes the Cloud sessions toggle. CLI 3.0.72 and SDK 0.0.94 restrict plugins to worker (default) or sandbox modes and remove in_process; the default model becomes Gemini 4 Argon and the catalog grows to 6,952 models.",
+      "key_points_zh": [
+        "Cloud sessions 在 Settings 开启后渐次可用：任务显示在 Recent/History，完成时通知，关闭编辑器后继续运行。",
+        "未固定模型时 Cline provider 默认改为 Gemini 4 Argon（OpenRouter 仍为 Claude Sonnet 5.5）；推荐列表加入 Gemini 4 Argon、移除 Grok 4.7，免费列表以 Nemotron 3.5 Super VL 替换 Step 5 Preview，模型目录新增 Boundless 与 Standard Compute 提供商（6,862→6,952）。",
+        "CLI 3.0.72 / SDK 0.0.94：插件只允许 worker（默认）或 sandbox，CLINE_PLUGIN_MODE=in_process 不再支持；流式中断的提供商错误最多重试 3 次，且不再叠加整轮重试。",
+        "本地模型（LM Studio、Ollama）长请求不再因 5 分钟无输出而失败；OpenAI 兼容 base URL 不再静默追加 /v1，旧地址一次性迁移；回答 Cline 提问时附加的图片与文件现在会传给模型。"
+      ],
+      "key_points_en": [
+        "Cloud sessions roll out gradually after being enabled in Settings: tasks appear in Recent and History, notify on completion and keep running after the editor closes.",
+        "With no model pinned, the Cline provider now defaults to Gemini 4 Argon (OpenRouter stays on Claude Sonnet 5.5); the recommended list adds Gemini 4 Argon and drops Grok 4.7, the free list replaces Step 5 Preview with Nemotron 3.5 Super VL, and the catalog adds the Boundless and Standard Compute providers (6,862 → 6,952 models).",
+        "CLI 3.0.72 / SDK 0.0.94: plugins run only as worker (default) or sandbox, with CLINE_PLUGIN_MODE=in_process no longer supported; mid-stream provider errors retry up to three times without also triggering the whole-turn retry.",
+        "Long requests to local models (LM Studio, Ollama) no longer fail after five minutes of silence; OpenAI-compatible base URLs are no longer silently given a /v1 suffix, with a one-time migration for older host-only URLs; images and files attached to answers now reach the model."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T06:39:25Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T15:18:47+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/v4.1.25",
+          "url": "https://github.com/cline/cline/releases/tag/v4.1.25",
+          "collected_at": "2026-10-16T15:18:47+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T06:39:25Z",
+          "date_kind": "updated"
+        },
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/desktop-v0.0.47",
+          "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.47",
+          "collected_at": "2026-10-16T15:18:47+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T06:51:23Z",
+          "date_kind": "updated"
+        },
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/cli-v3.0.72",
+          "url": "https://github.com/cline/cline/releases/tag/cli-v3.0.72",
+          "collected_at": "2026-10-16T15:18:47+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T05:35:42Z",
+          "date_kind": "updated"
+        },
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.0.94",
+          "url": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.0.94",
+          "collected_at": "2026-10-16T15:18:47+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T03:51:13Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "copilot-slack-teams-multi-repo-20261016",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Copilot 在 Slack 与 Teams 支持跨仓库对话",
+      "title_en": "Copilot in Slack and Teams supports multi-repository conversations",
+      "summary_zh": "GitHub Copilot 在 Slack 与 Microsoft Teams 的单次对话可跨多个仓库跟踪 PR、查询合并动态、调查 issue 或汇总项目进展；@GitHub 可在消息任意位置提及，可引用共享消息与 threads 作为上下文，仓库切换更顺畅，任务启动与中断恢复的可靠性也有改进。",
+      "summary_en": "GitHub Copilot in Slack and Microsoft Teams now works across multiple repositories in a single conversation for tracking pull requests, catching up on merged changes, investigating issues or summarizing project activity; @GitHub can be mentioned anywhere in a message and can use shared messages and threads as context, with smoother repository switching and more reliable task startup and recovery from interruptions.",
+      "key_points_zh": [
+        "可跨仓库提问：汇总自己所有仓库中需要关注的开放 PR、查询本周合并的 PR、调查横跨前后端仓库的 issue、汇总近期活动。",
+        "@GitHub 可在消息任意位置提及；Slack 中可引用共享消息与 threads 作为上下文，减少复制粘贴；错误率、任务启动与中断恢复均有改进。"
+      ],
+      "key_points_en": [
+        "Cross-repository questions: list open pull requests that need attention, retrieve this week’s merged pull requests, investigate an issue spanning frontend and backend repositories, or summarize recent activity.",
+        "@GitHub can be mentioned anywhere in a message; shared Slack messages and threads can serve as context to avoid copy-pasting, and error rates, task startup and recovery from interruptions were improved."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T02:16:35+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T15:18:47+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates",
+          "url": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates",
+          "collected_at": "2026-10-16T15:18:47+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T02:16:35+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-nightly-20261016",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix",
+        "feature"
+      ],
+      "title_zh": "Gemini CLI 夜间版 v0.66.0：同步输出渲染与 Git 凭据提示收紧",
+      "title_en": "Gemini CLI nightly v0.66.0: synchronized output rendering and tighter Git credential prompts",
+      "summary_zh": "Gemini CLI 0.66.0 nightly 实现同步输出并隔离 spinner 渲染，修复调试控制台高度与 terminalBuffer 闪烁、可滚动工具容器右侧边框溢出；getSafeGitEnv 不再发起交互式凭据与 SSH 提示，另修复 Windows diff 参数引用、formatDuration 取整、.env 加载后的设置占位符与 SKILL.md frontmatter 解析。",
+      "summary_en": "Gemini CLI 0.66.0 nightly implements synchronized output with isolated spinner rendering, fixes debug-console height and terminalBuffer flickering plus right-hand border bleed in scrollable tool containers; getSafeGitEnv no longer issues interactive credential or SSH prompts, and the build also fixes Windows diff argument quoting, formatDuration rounding, settings placeholders after .env loading and SKILL.md frontmatter parsing.",
+      "key_points_zh": [
+        "UI：同步输出并隔离 spinner 渲染；修复调试控制台高度计算、terminalBuffer 闪烁与可滚动工具容器的右侧边框溢出。",
+        "核心：getSafeGitEnv 禁用交互式凭据与 SSH 提示；openDiff 的 Windows 参数格式化并加引号；SKILL.md frontmatter 单行描述解析加固；.env 加载后解析设置占位符。"
+      ],
+      "key_points_en": [
+        "UI: synchronized output with isolated spinner rendering; fixes for debug-console height calculation, terminalBuffer flickering and right-hand border bleed in scrollable tool containers.",
+        "Core: getSafeGitEnv disables interactive credential and SSH prompts; Windows diff arguments are formatted and quoted in openDiff; SKILL.md frontmatter parsing is hardened for single-line descriptions; settings placeholders resolve after .env files load."
+      ],
+      "importance_reason_zh": "预览构建包含 Git 凭据提示收紧与终端渲染可靠性修复。",
+      "importance_reason_en": "A preview build with tighter Git credential prompts and terminal-rendering reliability fixes.",
+      "published_at": "2026-10-16T01:32:08Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T15:18:41+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0-nightly.20261016.gdebf42324",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0-nightly.20261016.gdebf42324",
+          "collected_at": "2026-10-16T15:18:41+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T01:32:08Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
     {
       "id": "copilot-cli-v1099-2",
       "entity_ids": [
@@ -37,6 +323,125 @@
           "material_scope": "full_text",
           "published_at": "2026-10-16T00:49:13Z",
           "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "glm-api-key-management-20261016",
+      "entity_ids": [
+        "zhipu"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "pricing"
+      ],
+      "title_zh": "智谱 GLM 将标准 API 与 Coding Plan 的密钥分开管理",
+      "title_en": "Z.AI separates Standard API and Coding Plan key management for GLM",
+      "summary_zh": "自 2026-10-16 起，智谱标准模型 API（按量付费或用量包）与 GLM Coding Plan 的 API Key 分开管理：新建密钥需按用途选择入口，密钥类型决定计费——标准密钥走账户余额或用量包，Coding Plan 密钥走对应套餐额度，切换端点不改变计费类型。存量密钥自动归类，无需替换。",
+      "summary_en": "Starting October 16, 2026, Z.AI manages API keys for the standard model API (pay-as-you-go or usage bundles) and the GLM Coding Plan separately: new keys are created from the entry point matching their use, and the key type determines billing—Standard keys use account balance or usage bundles, Coding Plan keys use the plan quota, and changing endpoints does not change a key’s billing type. Existing keys are classified automatically and need no replacement.",
+      "key_points_zh": [
+        "标准密钥在编码工具中使用也不消耗 Coding Plan 额度，可能按量计费；Coding Plan 密钥按对应套餐额度计费，端点切换不改变计费类型。",
+        "存量密钥自动归类：Team Plan 项目密钥按团队规则；曾购买 Coding Plan 的账号为兼容密钥，保留原有使用与计费规则；从未购买过的按标准计费。"
+      ],
+      "key_points_en": [
+        "Using a Standard key in a coding tool does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against the corresponding plan quota, and switching endpoints does not change the billing type.",
+        "Existing keys are classified automatically: keys in a Team Plan project follow team rules; accounts that ever had a Coding Plan get a Compatible key retaining existing usage and billing rules; accounts that never had one use standard billing."
+      ],
+      "importance_reason_zh": "涉及密钥管理与计费路径的使用条件变化。",
+      "importance_reason_en": "Changes the conditions for key management and billing paths.",
+      "published_at": "2026-10-16",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T15:23:23+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "glm-coding-notices",
+          "content_id": "https://docs.z.ai/devpack/notice/api-key-management",
+          "url": "https://docs.z.ai/devpack/notice/api-key-management",
+          "collected_at": "2026-10-16T15:23:23+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "siliconflow-diffusiongemma-sunset-20261016",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "硅基流动 systemone 接口的 diffusiongemma 模型将于 10-17 停止服务",
+      "title_en": "SiliconFlow to retire diffusiongemma on its systemone endpoint on Oct 17",
+      "summary_zh": "硅基流动公告：systemone 接口（/v1/systemone）中的 diffusiongemma 模型将于 2026-10-17 停止服务，届时 model 指定该模型的请求将无法继续使用；同接口的 Kev-4b 与 SemIf 不受影响。",
+      "summary_en": "SiliconFlow announced that the diffusiongemma model on the systemone endpoint (/v1/systemone) stops serving on 2026-10-17, after which requests setting model to diffusiongemma will fail; the endpoint’s other models, Kev-4b and SemIf, are unaffected.",
+      "key_points_zh": [
+        "自 2026-10-17 起，model 指定 diffusiongemma 的请求无法继续使用。",
+        "systemone 端点的 Kev-4b 与 SemIf 继续可用；官方建议正在使用 diffusiongemma 的用户尽快切换。"
+      ],
+      "key_points_en": [
+        "From 2026-10-17 onward, requests with model set to diffusiongemma can no longer be served.",
+        "Kev-4b and SemIf on the systemone endpoint remain available; users of diffusiongemma are advised to switch promptly."
+      ],
+      "importance_reason_zh": "涉及模型可用性的重要变化。",
+      "importance_reason_en": "A material availability change for a hosted model.",
+      "published_at": "2026-10-16",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T15:23:23+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "siliconflow-updates",
+          "content_id": "https://docs.siliconflow.cn/docs/release-notes/overview#模型服务调整systemone-接口-diffusiongemma-模型将停止服务",
+          "url": "https://docs.siliconflow.cn/docs/release-notes/overview#模型服务调整systemone-接口-diffusiongemma-模型将停止服务",
+          "collected_at": "2026-10-16T15:23:23+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "siliconflow-deepseek-v4-1-flash-20261016",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "capability"
+      ],
+      "title_zh": "硅基流动上线高速版 DeepSeek V4.1 Flash",
+      "title_en": "SiliconFlow launches a high-speed DeepSeek V4.1 Flash",
+      "summary_zh": "硅基流动宣布上线高速版 DeepSeek V4.1 Flash。平台称该模型为 552B 参数的 MoE 模型，采用 Causal-Encoder-Decoder 结构（输入激活 8B、输出激活 16B），原生支持视觉理解，并称 HBM 与 SSD 需求降至上一代的 1/4 与 1/8；平台还引用其在 DeepSWE v1.1、CyberGym、Automation-Bench 上小幅超过 Claude Opus 5 与 GPT5.6-Sol 的评测结果（平台表述，未经本站验证）。",
+      "summary_en": "SiliconFlow announced a high-speed DeepSeek V4.1 Flash offering. The platform describes it as a 552B-parameter MoE model with a Causal-Encoder-Decoder structure (8B input / 16B output activation) and native vision understanding, saying HBM and SSD requirements fall to a quarter and an eighth of the previous generation; it also cites benchmark results slightly ahead of Claude Opus 5 and GPT5.6-Sol on DeepSWE v1.1, CyberGym and Automation-Bench (platform claims, not independently verified here).",
+      "key_points_zh": [
+        "平台称模型以 8B/16B 非对称激活与 KV Cache 压缩降低 Agent 场景成本；原生视觉理解可处理参考图、报错截图与业务图表。",
+        "公告未列出该平台的新价格；硅基流动称保留 V4 / V3.2 / V3.1 / V3 / R1 等多代 DeepSeek 模型，并称 Claude Code、Codex、Cursor、TRAE、OpenCode、Cline、Hermes Agent 等工具均可接入其 API。"
+      ],
+      "key_points_en": [
+        "The platform says asymmetric 8B/16B activation and KV-cache compression cut costs for agent workloads, and native vision handles reference images, error screenshots and business charts.",
+        "The post lists no new platform pricing; SiliconFlow says it retains DeepSeek generations V4 / V3.2 / V3.1 / V3 / R1 and that tools such as Claude Code, Codex, Cursor, TRAE, OpenCode, Cline and Hermes Agent can connect through its API."
+      ],
+      "importance_reason_zh": "平台上线与可用性变化；能力与评测表述来自平台方。",
+      "importance_reason_en": "A platform availability update; capability and benchmark claims come from the platform.",
+      "published_at": "2026-10-16",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T15:23:23+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://siliconflow.cn/news/qwoa3oxughhkwuoh9k2ci7xz",
+          "url": "https://siliconflow.cn/news/qwoa3oxughhkwuoh9k2ci7xz",
+          "collected_at": "2026-10-16T15:23:23+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16",
+          "date_kind": "published"
         }
       ]
     },
@@ -4301,6 +4706,46 @@
           "content_id": "https://docs.devin.ai/release-notes/overview#october-9-2026",
           "url": "https://docs.devin.ai/release-notes/overview#october-9-2026",
           "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-09",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "siliconflow-glm-5-3-flash-20261009",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "capability"
+      ],
+      "title_zh": "硅基流动上线高速版 GLM-5.3-Flash：缓存 ¥0.23、输入 ¥0.8、输出 ¥2.8 每百万 tokens",
+      "title_en": "SiliconFlow launches high-speed GLM-5.3-Flash at CNY 0.23 cached / 0.8 input / 2.8 output per million tokens",
+      "summary_zh": "硅基流动宣布上线高速版 GLM-5.3-Flash，平台价格为缓存命中 ¥0.23、输入 ¥0.8、输出 ¥2.8 每百万 tokens。平台称其为智谱 GLM-5 系列首款原生多模态模型，支持 1M 上下文与视觉编程，并引用 Artificial Analysis 42 分、与 Claude Opus 4.8 (max) 持平的评价（平台表述，未经本站验证）。",
+      "summary_en": "SiliconFlow announced high-speed GLM-5.3-Flash with platform pricing of CNY 0.23 cached / 0.8 input / 2.8 output per million tokens. The platform calls it the first natively multimodal model in Zhipu’s GLM-5 series, citing 1M context and visual-coding workflows plus an Artificial Analysis score of 42 that it says matches Claude Opus 4.8 (max) (platform claims, not independently verified here).",
+      "key_points_zh": [
+        "平台价格为缓存命中 ¥0.23、输入 ¥0.8、输出 ¥2.8 每百万 tokens。",
+        "平台称其融合稀疏注意力与线性注意力并支持 1M 长上下文，以视觉反馈闭环支持前端、游戏、3D 等编码场景；能力与评测表述来自平台方。"
+      ],
+      "key_points_en": [
+        "Platform pricing: CNY 0.23 cached / 0.8 input / 2.8 output per million tokens.",
+        "The platform says it combines sparse and linear attention with 1M-token context and uses a visual feedback loop for frontend, game and 3D coding; capability and benchmark claims are the platform’s own."
+      ],
+      "importance_reason_zh": "涉及平台定价与可用性的重要变化。",
+      "importance_reason_en": "Material platform pricing and availability changes.",
+      "published_at": "2026-10-09",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-16T15:23:23+00:00",
+      "updated_at": "2026-10-17T01:56:48+00:00",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://siliconflow.cn/news/ok5ja7brf921kgf1644yyedz",
+          "url": "https://siliconflow.cn/news/ok5ja7brf921kgf1644yyedz",
+          "collected_at": "2026-10-16T15:23:23+00:00",
           "material_scope": "full_text",
           "published_at": "2026-10-09",
           "date_kind": "published"

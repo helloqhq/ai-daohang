@@ -2,7 +2,7 @@ import {LANGUAGE_STORAGE_KEY,translate} from './i18n.js';
 import {syncAnalytics} from './analytics.js';
 
 export const CONSENT_STORAGE_KEY='ai-brief-storage-consent';
-export const CONSENT_VERSION=2;
+export const CONSENT_VERSION=3;
 export const CONSENT_LIFETIME=180*24*60*60*1000;
 
 function browserStorage() {

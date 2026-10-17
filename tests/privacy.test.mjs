@@ -135,3 +135,19 @@ test('legacy language-only consent never authorizes analytics',()=>{
   const preferences=createPrivacyPreferences(memoryStorage([[CONSENT_STORAGE_KEY,JSON.stringify(old)]]),()=>start);
   assert.equal(preferences.consent,null);
 });
+
+test('version 2 choices require renewed consent regardless of previously allowed categories',()=>{
+  for(const [preferences,analytics] of [[false,false],[true,false],[false,true],[true,true]]) {
+    const old={version:2,preferences,analytics,savedAt:start,expiresAt:start+CONSENT_LIFETIME};
+    const storage=memoryStorage([[CONSENT_STORAGE_KEY,JSON.stringify(old)],[LANGUAGE_STORAGE_KEY,'en']]);
+    const renewed=createPrivacyPreferences(storage,()=>start+1);
+    assert.equal(renewed.consent,null);
+    assert.equal(storage.getItem(CONSENT_STORAGE_KEY),null);
+    assert.equal(storage.getItem(LANGUAGE_STORAGE_KEY),null);
+    renewed.choose(preferences,analytics);
+    const nextVisit=createPrivacyPreferences(storage,()=>start+2);
+    assert.equal(nextVisit.consent.version,CONSENT_VERSION);
+    assert.equal(nextVisit.consent.preferences,preferences);
+    assert.equal(nextVisit.consent.analytics,analytics);
+  }
+});

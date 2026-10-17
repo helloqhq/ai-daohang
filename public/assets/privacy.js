@@ -67,8 +67,8 @@ export function initCookieControls(preferences,getLanguage) {
           <a class="cookie-policy" href="./privacy.html#browser-storage" data-legal-link data-i18n="cookiePolicy"></a>
         </div>
         <div class="cookie-actions">
+          <button type="button" class="consent-button consent-primary" data-consent="all" data-i18n="cookieAcceptAll"></button>
           <button type="button" class="consent-button" data-consent="necessary" data-i18n="cookieNecessaryOnly"></button>
-          <button type="button" class="consent-button" data-consent="preferences" data-i18n="cookieAllow"></button>
           <button type="button" class="cookie-customize" data-cookie-settings data-i18n="cookieCustomize"></button>
         </div>
       </div>
@@ -89,6 +89,7 @@ export function initCookieControls(preferences,getLanguage) {
       <p class="cookie-tracking" data-i18n="cookieTracking"></p>
       <a class="cookie-policy" href="./privacy.html#browser-storage" data-legal-link data-i18n="cookiePolicy"></a>
       <div class="cookie-dialog-actions">
+        <button type="button" class="consent-button consent-primary" data-consent="all" data-i18n="cookieAcceptAll"></button>
         <button type="button" class="consent-button" data-consent="necessary" data-i18n="cookieNecessaryOnly"></button>
         <button type="button" class="consent-button" data-cookie-save data-i18n="cookieSave"></button>
       </div>
@@ -131,7 +132,10 @@ export function initCookieControls(preferences,getLanguage) {
       refresh();dialog.showModal();
     });
   });
-  container.querySelectorAll('[data-consent]').forEach(button=>button.addEventListener('click',()=>choose(button.dataset.consent==='preferences')));
+  container.querySelectorAll('[data-consent]').forEach(button=>button.addEventListener('click',()=>{
+    const all=button.dataset.consent==='all';
+    choose(all,all);
+  }));
   container.querySelector('[data-cookie-save]').addEventListener('click',()=>choose(checkbox.checked,analyticsCheckbox.checked));
   container.querySelector('[data-cookie-close]').addEventListener('click',()=>dialog.close());
   window.addEventListener('storage',event=>{

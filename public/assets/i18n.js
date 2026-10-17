@@ -5,8 +5,9 @@ export function resolveLanguage(search, stored) {
   return LANGUAGES.includes(requested) ? requested : LANGUAGES.includes(stored) ? stored : 'zh';
 }
 
-// Footer clock zone per interface language.
-export const CLOCK_ZONES = {zh:'Asia/Shanghai',en:'America/Los_Angeles'};
+// Time zone per interface language: Chinese shows Beijing time, English shows US Pacific time.
+export const INTERFACE_ZONES = {zh:'Asia/Shanghai',en:'America/Los_Angeles'};
+export const CLOCK_ZONES = INTERFACE_ZONES;
 
 // Each entry keeps the Chinese and English copy together.
 export const messages = {
@@ -115,7 +116,7 @@ export const messages = {
   agents: ['Agent', 'Agents'],
   platforms: ['平台', 'Platforms'],
   people: ['名人', 'People'],
-  timezone: ['北京时间 UTC+8', 'Beijing time UTC+8'],
+  timezone: ['北京时间 UTC+8', 'Pacific Time {zone}'],
   clock: ['北京时间 {time}', 'Pacific Time {time}'],
   entity: ['关注对象', 'Following'],
   allEntities: ['全部对象', 'All'],

@@ -1,6 +1,6 @@
 import {createEventRenderer,escape,safeURL} from './render.js';
-import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventTime,formatClock,followingObjects} from './model.js';
-import {resolveLanguage,translate,LABELS,eventContent,coverageNote,CLOCK_ZONES} from './i18n.js';
+import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventTime,formatClock,followingObjects,zoneAbbreviation} from './model.js';
+import {resolveLanguage,translate,LABELS,eventContent,coverageNote,INTERFACE_ZONES} from './i18n.js';
 import {createPrivacyPreferences,initCookieControls} from './privacy.js';
 import {createPricingView} from './pricing.js';
 const preferences=createPrivacyPreferences();
@@ -8,17 +8,20 @@ const showSources=new URLSearchParams(location.search).get('showSources')==='1';
 let language=resolveLanguage(location.search,preferences.language());
 const cookieControls=initCookieControls(preferences,()=>language);
 const t=(key,values)=>translate(language,key,values);
+// Interface zone follows the language: Beijing time in Chinese, Pacific time in English.
+const zone=()=>INTERFACE_ZONES[language] || 'Asia/Shanghai';
+const zoneOfDay=value=>dateKey(value,zone());
 const name=record=>language==='en' ? record.name_en || record.name : record.name;
 const labels=()=>LABELS[language];
 const failure=(key,values)=>Object.assign(new Error(key),{key,values});
 const $ = id => document.getElementById(id);
 const pricingView=createPricingView(()=>language);
-const formatDate = value => {const d = dateKey(value);return d ? d.replaceAll('-','.') : t('dateUnknown');};
+const formatDate = value => {const d = zoneOfDay(value);return d ? d.replaceAll('-','.') : t('dateUnknown');};
 const eventTime = event => formatEventTime(event.published_at,event.date_precision,language);
 let clockTimer;
-function renderClock(){const el=$('footer-clock');if(el)el.textContent=t('clock',{time:formatClock(new Date(),CLOCK_ZONES[language])});}
+function renderClock(){const el=$('footer-clock');if(el)el.textContent=t('clock',{time:formatClock(new Date(),zone())});}
 function scheduleClock(){clearTimeout(clockTimer);if(document.hidden)return;renderClock();clockTimer=setTimeout(scheduleClock,60000-Date.now()%60000+50);}
-const state = {expanded:new Set(),catalog:null,index:null,coverage:null,events:new Map(),loaded:new Set(),filters:{category:'all',entity:'',kind:'',query:'',from:daysAgo(6),to:daysAgo(0)},visible:18,request:0,view:'feed',detailId:null,error:null,ready:false,unavailable:false};
+const state = {expanded:new Set(),catalog:null,index:null,coverage:null,events:new Map(),loaded:new Set(),filters:{category:'all',entity:'',kind:'',query:'',from:daysAgo(6,undefined,zone()),to:daysAgo(0,undefined,zone())},presetDays:7,visible:18,request:0,view:'feed',detailId:null,error:null,ready:false,unavailable:false};
 async function json(path, suffix='') {
   const response = await fetch(new URL(`data/${path}${suffix}`,document.baseURI),{cache:'no-cache'});
   if (!response.ok) throw failure('httpError',{status:response.status});
@@ -30,7 +33,7 @@ function tags(event) {return createEventRenderer(state.catalog,language).tags(ev
 function eventDetails(event) {return createEventRenderer(state.catalog,language).eventDetails(event);}
 function card(event) {return createEventRenderer(state.catalog,language,state.expanded).card(event);}
 async function loadMonths(from,to) {
-  const requested=relevantMonths(state.index,from,to);
+  const requested=relevantMonths(state.index,from,to,zone());
   for (const month of requested) {
     if(state.loaded.has(month.month)) continue;
     const value=await json(month.path,`?v=${encodeURIComponent(state.index.snapshot_id)}`);
@@ -42,16 +45,16 @@ async function loadMonths(from,to) {
 function updateCounts() {
   const all=[...state.events.values()];
   for(const [id,category] of [['count-all','all'],['count-model','model'],['count-agent','agent'],['count-platform','platform'],['count-person','person']]) {
-    $(id).textContent=filterEvents(all,state.catalog,{...state.filters,category,entity:'',kind:'',query:''}).length;
+     $(id).textContent=filterEvents(all,state.catalog,{...state.filters,category,entity:'',kind:'',query:''},zone()).length;
   }
 }
 function renderFeed() {
-  const events=filterEvents([...state.events.values()],state.catalog,state.filters);
+  const events=filterEvents([...state.events.values()],state.catalog,state.filters,zone());
   $('result-count').textContent=events.length ? String(events.length).padStart(2,'0') : '00';
   updateCounts();
   let lastDate='',out='';
   for(const event of events.slice(0,state.visible)) {
-    const d=dateKey(event.published_at);
+    const d=zoneOfDay(event.published_at);
     if(d!==lastDate){out+=`<div class="date-heading">${escape(formatDate(d))}</div>`;lastDate=d;}
     out+=card(event);
   }
@@ -131,6 +134,7 @@ function applyLanguage() {
   document.querySelector('meta[property="og:description"]').content=t('description');
   document.querySelector('meta[property="og:locale"]').content=language==='zh'?'zh_CN':'en_US';
   document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));
+  document.querySelectorAll('[data-i18n="timezone"]').forEach(el=>el.textContent=t('timezone',{zone:zoneAbbreviation(zone())}));
   for(const attribute of ['aria-label','placeholder']) document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(el=>el.setAttribute(attribute,t(el.getAttribute(`data-i18n-${attribute}`))));
   document.querySelectorAll('[data-i18n-kind]').forEach(el=>el.textContent=labels().kind[el.dataset.i18nKind]);
   document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===language)));
@@ -156,7 +160,15 @@ function setLanguage(next) {
   preferences.rememberLanguage(language);
   const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url);
   applyLanguage();renderClock();
-  if(state.ready){fillEntities();renderSnapshot();renderFeed();if(state.view==='sources')renderSources();}
+  // Presets re-anchor "today" to the new zone; custom calendar ranges stay as chosen.
+  if(state.ready){
+    if(typeof state.presetDays==='number'){
+      state.filters.from=daysAgo(state.presetDays-1,undefined,zone());
+      state.filters.to=daysAgo(0,undefined,zone());
+      $('date-from').value=state.filters.from;$('date-to').value=state.filters.to;
+    }
+    fillEntities();renderSnapshot();refreshFeed();if(state.view==='sources')renderSources();
+  }
   if($('event-dialog').open&&state.detailId){detail(state.detailId);$('event-dialog').scrollTop=dialogScroll;}
   window.scrollTo(0,scrollY);
 }
@@ -174,9 +186,9 @@ function bind() {
   $('kind-filter').addEventListener('change',e=>{state.filters.kind=e.target.value;state.visible=18;refreshFeed();});
   $('feed-list').addEventListener('toggle',e=>{if(!e.target.matches('details[data-event-id]'))return;const id=e.target.dataset.eventId;if(e.target.open)state.expanded.add(id);else state.expanded.delete(id);},true);
   let debounce; $('search-input').addEventListener('input',e=>{clearTimeout(debounce);debounce=setTimeout(()=>{state.filters.query=e.target.value;state.visible=18;refreshFeed();},160);});
-  document.querySelectorAll('[data-days]').forEach(button=>button.addEventListener('click',()=>{const days=button.dataset.days;state.filters.from=days==='all'?'':daysAgo(Number(days)-1);state.filters.to=days==='all'?'':daysAgo(0);document.querySelectorAll('[data-days]').forEach(b=>b.classList.toggle('selected',b===button));$('date-from').value=state.filters.from;$('date-to').value=state.filters.to;state.visible=18;refreshFeed();}));
+  document.querySelectorAll('[data-days]').forEach(button=>button.addEventListener('click',()=>{const days=button.dataset.days;state.presetDays=days==='all'?null:Number(days);state.filters.from=days==='all'?'':daysAgo(Number(days)-1,undefined,zone());state.filters.to=days==='all'?'':daysAgo(0,undefined,zone());document.querySelectorAll('[data-days]').forEach(b=>b.classList.toggle('selected',b===button));$('date-from').value=state.filters.from;$('date-to').value=state.filters.to;state.visible=18;refreshFeed();}));
   $('custom-date').addEventListener('click',()=>{$('custom-range').hidden=!$('custom-range').hidden;$('custom-date').setAttribute('aria-expanded',String(!$('custom-range').hidden));});
-  $('date-apply').addEventListener('click',()=>{const from=$('date-from').value,to=$('date-to').value;if(from&&to&&from>to){error(failure('dateError'));return;}$('error-box').hidden=true;state.filters.from=from;state.filters.to=to;document.querySelectorAll('[data-days]').forEach(b=>b.classList.remove('selected'));state.visible=18;refreshFeed();});
+  $('date-apply').addEventListener('click',()=>{const from=$('date-from').value,to=$('date-to').value;if(from&&to&&from>to){error(failure('dateError'));return;}$('error-box').hidden=true;state.filters.from=from;state.filters.to=to;state.presetDays=null;document.querySelectorAll('[data-days]').forEach(b=>b.classList.remove('selected'));state.visible=18;refreshFeed();});
   $('more-button').addEventListener('click',()=>{state.visible+=18;renderFeed();});
   $('source-search').addEventListener('input',renderSources);
   document.addEventListener('click',e=>{const button=e.target.closest('[data-detail]');if(button) detail(button.dataset.detail);});

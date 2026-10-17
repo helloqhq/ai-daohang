@@ -36,4 +36,6 @@ test('footer clock label and zone follow the interface language',()=>{
   assert.equal(translate('zh','clock',{time:'10-17 14:32'}),'北京时间 10-17 14:32');
   assert.equal(translate('en','clock',{time:'10-16 23:32'}),'Pacific Time 10-16 23:32');
   assert.deepEqual(CLOCK_ZONES,{zh:'Asia/Shanghai',en:'America/Los_Angeles'});
+  assert.equal(translate('zh','timezone'),'北京时间 UTC+8');
+  assert.equal(translate('en','timezone',{zone:'PDT'}),'Pacific Time PDT');
 });

@@ -1,17 +1,26 @@
-import {LABELS} from './i18n.js';
-export function dateKey(value) {
+import {LABELS,INTERFACE_ZONES} from './i18n.js';
+export function dateKey(value, timeZone = 'Asia/Shanghai') {
   if (!value) return '';
   if (value.length === 10) return value;
   const d = new Date(value);
   if (Number.isNaN(d.getTime())) return '';
-  return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
+  return new Intl.DateTimeFormat('en-CA',{timeZone,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
 }
 export function formatEventTime(value, precision = 'datetime', language = 'zh') {
-  const date = dateKey(value);
+  const zone = INTERFACE_ZONES[language] || 'Asia/Shanghai';
+  const date = dateKey(value, zone);
   if (!date) return language === 'en' ? 'Date unverified' : '日期待核实';
-  if (precision !== 'datetime' || value.length === 10) return date;
-  const hour = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Shanghai',hour:'2-digit',hourCycle:'h23'}).format(new Date(value));
+  if (precision !== 'datetime') return value.slice(0,10); // date-only sources keep their literal calendar date
+  if (value.length === 10) return value;
+  const hour = new Intl.DateTimeFormat('en-GB',{timeZone:zone,hour:'2-digit',hourCycle:'h23'}).format(new Date(value));
   return `${date} ${hour}${language === 'en' ? 'h' : '时'}`;
+}
+// Short zone label (PDT/PST) for interface copy; Shanghai keeps its fixed UTC+8 wording.
+export function zoneAbbreviation(timeZone, value = new Date()) {
+  const d = new Date(value);
+  if (!timeZone || Number.isNaN(d.getTime())) return '';
+  const part = new Intl.DateTimeFormat('en-US',{timeZone,timeZoneName:'short'}).formatToParts(d).find(p => p.type === 'timeZoneName');
+  return part ? part.value : '';
 }
 export function formatClock(value, timeZone) {
   if (!value) return '';
@@ -34,14 +43,14 @@ export function eventObjectIds(event, catalog) {
     return person ? [`person:${person}`] : [];
   })])];
 }
-export function daysAgo(days, now = new Date()) {
-  return dateKey(new Date(now.getTime() - days * 86400000));
+export function daysAgo(days, now = new Date(), timeZone = 'Asia/Shanghai') {
+  return dateKey(new Date(now.getTime() - days * 86400000), timeZone);
 }
-export function filterEvents(events, catalog, filters) {
+export function filterEvents(events, catalog, filters, timeZone = 'Asia/Shanghai') {
   const entities = new Map(followingObjects(catalog).map(e => [e.id,e]));
   const query = (filters.query || '').normalize('NFKC').toLocaleLowerCase().trim();
   return events.filter(event => {
-    const date = dateKey(event.published_at);
+    const date = dateKey(event.published_at, timeZone);
     const objectIds = eventObjectIds(event,catalog);
     if (filters.from && (!date || date < filters.from)) return false;
     if (filters.to && (!date || date > filters.to)) return false;
@@ -57,8 +66,8 @@ export function filterEvents(events, catalog, filters) {
     return true;
   }).sort((a,b) => (b.published_at || '').localeCompare(a.published_at || ''));
 }
-export function relevantMonths(index, from, to) {
-  return index.months.filter(m => (!from || !m.max_date || dateKey(m.max_date) >= from) && (!to || !m.min_date || dateKey(m.min_date) <= to));
+export function relevantMonths(index, from, to, timeZone = 'Asia/Shanghai') {
+  return index.months.filter(m => (!from || !m.max_date || dateKey(m.max_date,timeZone) >= from) && (!to || !m.min_date || dateKey(m.min_date,timeZone) <= to));
 }
 export function coverageSummary(sources) {
   return {total:sources.length,checked:sources.filter(s=>['success','partial'].includes(s.status)).length,complete:sources.filter(s=>s.status==='success' && s.reviewed_through && !s.pending_count).length,failed:sources.filter(s=>['failed','blocked'].includes(s.status)).length,pending:sources.reduce((n,s)=>n+s.pending_count,0)};

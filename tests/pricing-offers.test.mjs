@@ -77,6 +77,13 @@ test('discount comparisons preserve dimensions and reject currencies or invented
   assert.deepEqual(offerSavings(official,official.offers[0]),{});
   assert.ok(!renderPricing([official],'en',now).includes('−50%'));
 });
+test('offer windows display in the interface time zone per language',()=>{
+  const plan=structuredClone(discount);plan.offers[0].starts_at='2026-09-25T15:00:00+08:00';
+  const zh=renderPricing([plan],'zh',now);
+  assert.ok(zh.includes('2026/9/25 15:00:00 UTC+8'));
+  const en=renderPricing([plan],'en',now);
+  assert.ok(en.includes('25/09/2026, 00:00:00 PDT'));
+});
 test('offer windows use absolute timestamps without expiring the parent subscription',()=>{
   const plan=structuredClone(free),offer=plan.offers[0];
   offer.starts_at='2026-10-16T12:00:00+08:00';offer.ends_at='2026-10-17T00:00:00+08:00';

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {filterEvents,relevantMonths,dateKey,coverageSummary,followingObjects,formatEventTime,formatClock} from '../public/assets/model.js';
+import {filterEvents,relevantMonths,dateKey,coverageSummary,followingObjects,formatEventTime,formatClock,daysAgo,zoneAbbreviation} from '../public/assets/model.js';
 const catalog={entities:[{id:'pi',name:'Pi',aliases:['pi agent harness'],category:'agent'},{id:'openai',name:'OpenAI',aliases:[],category:'model'}]};
 const event=(id,date,entity,kind='update')=>({id,published_at:date,entity_ids:[entity],kind,title_zh:'测试',summary_zh:'支持 MCP',key_points_zh:['权限控制'],topics:['critical_fix']});
 const events=[event('a','2026-09-30T20:00:00Z','pi'),event('b','2026-10-02','openai','preview')];
@@ -41,12 +41,31 @@ test('following groups separate platforms and match people by their own sources'
  assert.equal(filterEvents(input,grouped,{...filters,category:'platform',entity:'codex'}).length,0);
 });
 
-test('hour display uses Shanghai time without inventing hours for date-only sources',()=>{
+test('hour display follows the interface zone without inventing hours for date-only sources',()=>{
  assert.equal(formatEventTime('2026-10-02T16:09:17Z','datetime','zh'),'2026-10-03 00时');
- assert.equal(formatEventTime('2026-10-03T06:42:19Z','datetime','en'),'2026-10-03 14h');
+ assert.equal(formatEventTime('2026-10-03T06:42:19Z','datetime','en'),'2026-10-02 23h');
+ assert.equal(formatEventTime('2026-11-01T08:30:00Z','datetime','en'),'2026-11-01 01h');
+ assert.equal(formatEventTime('2026-11-01T08:30:00Z','datetime','zh'),'2026-11-01 16时');
  assert.equal(formatEventTime('2026-10-03','date','zh'),'2026-10-03');
  assert.equal(formatEventTime('2026-10-03T00:00:00Z','date','zh'),'2026-10-03');
  assert.equal(formatEventTime(null,'unknown','zh'),'日期待核实');
+});
+test('Pacific abbreviations track the DST transition',()=>{
+ assert.equal(zoneAbbreviation('America/Los_Angeles',new Date('2026-10-17T06:32:00Z')),'PDT');
+ assert.equal(zoneAbbreviation('America/Los_Angeles',new Date('2026-11-01T09:00:00Z')),'PST');
+ assert.equal(zoneAbbreviation('Asia/Shanghai',new Date('2026-10-17T06:32:00Z')),'GMT+8');
+});
+test('interface zone shifts dates, preset ranges and month routing together',()=>{
+ const instant='2026-10-01T02:00:00Z'; // 10-01 10:00 Beijing / 09-30 19:00 Pacific
+ assert.equal(dateKey(instant,'Asia/Shanghai'),'2026-10-01');
+ assert.equal(dateKey(instant,'America/Los_Angeles'),'2026-09-30');
+ assert.equal(daysAgo(0,new Date(instant),'America/Los_Angeles'),'2026-09-30');
+ const list=[event('a',instant,'pi')];
+ assert.deepEqual(filterEvents(list,catalog,{...filters,from:'2026-09-30',to:'2026-09-30'},'America/Los_Angeles').map(e=>e.id),['a']);
+ assert.deepEqual(filterEvents(list,catalog,{...filters,from:'2026-10-01',to:'2026-10-01'},'America/Los_Angeles').map(e=>e.id),[]);
+ const index={months:[{month:'2026-09',min_date:instant,max_date:instant}]};
+ assert.equal(relevantMonths(index,'2026-09-30','2026-09-30','America/Los_Angeles').length,1);
+ assert.equal(relevantMonths(index,'2026-10-01','2026-10-02','America/Los_Angeles').length,0);
 });
 test('footer clock combines month-day and HH:mm per zone across midnight and DST',()=>{
  assert.equal(formatClock('2026-10-17T06:32:00Z','Asia/Shanghai'),'10-17 14:32');

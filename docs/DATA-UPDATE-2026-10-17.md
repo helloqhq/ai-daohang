@@ -46,3 +46,33 @@ GLM 三档、旧 MiniMax Token Plan 三档继续 `null` / `pending`，Gemini CLI
 静态核对 `dist/`：快照 ID 与 `public/` 一致，首页包含本轮新增事件与 GLM 密钥管理说明，计费 RSS 117 项。本轮无样式或结构改动，未做浏览器预览。最终新闻快照 ID 为 `65034947ae1f5a71`。
 
 公开更新位于 `public/data/catalog.json`、`coverage.json`、`index.json`、`events/2026-09.json`、`events/2026-10.json`、`pricing.json` 和 `pricing.xml`；9 月文件仅同步快照 ID。内部原文、处置包与核验缓存保留在忽略的 `.collector/`。未读取或修改约定中的视频产物，未暂存、提交、推送或部署。
+
+## 10 月 17 日夜间续更
+
+本次以工作区已有的 248 条事件为基线继续更新，保留此前未提交的数据改动。新增 7 条双语事件至 255 条，无既有事件更正；关注目录仍为 39 个对象、56 个来源，未新增、合并或停用对象与来源。
+
+沿用逐来源增量起点，在线查询总体范围为北京时间 2026-09-30 10:54 至 2026-10-17 21:38:40，离线转换终点为 21:38:46。最早起点属于长期未覆盖来源，不代表每个来源均已覆盖此区间。在线读取 110 条材料，HTTP 缓存命中 19 次。离线转换请求 76 次、缓存命中 0 次，21 个目标生成 RSS、9 个社交来源受限；导入 53 条材料，包括重复材料的正文与日期复核。原文指纹及适用规则未变的判断沿用，未重复发布既有事件。
+
+对最终 26 条候选逐条处置：7 条入选、3 条过滤、16 条待核查。新增内容：
+
+- DeepSeek Flash 升级至 DeepSeek-V4.1-Flash-1017，并开放自研 Search / Fetch API；调用名与模型 token 价格不变，性能结果保留厂商归属。
+- DeepSeek Harness 0.2.1-rc.2 适配 Flash-1017 与 Search / Fetch，标为 preview。
+- Devin 10-16 更新扩展 GitLab `/devin` 指令、跨平台 PR 检索、仓库工具、Teams 控制及企业身份集成。
+- 补录 Kiro CLI 2.31.0 的本地命令沙箱 / 自主模式、CLI 2.31.1 的 Mermaid / 无界面设置、IDE 1.3.0 的沙箱 / 工作流启动，以及 Web 的模型回退 / 步骤模型 / 循环恢复四条更新。
+
+Kiro 原生 RSS 的四条正文只有模板注释。本轮从同一已登记官方更新页读取正文并核对日期，经独立私有 RSS 补充导入；未修改在线覆盖边界，未将网页直接写成新闻事件。补充转换脚本和原文保留在忽略的 `.collector/`。过滤项目为无变更说明的 Hermes canary、Google 抗菌肽研究应用案例，以及原文明示 10-07 已结束的 GLM 活动。16 条待核查包括 9 条仅标题视频、5 条缺少可确认 AI 对象或链接上下文的负责人短帖、Claude Code 2.1.281 的版本 / 日期对应疑点及 MiniMax 无日期通知；不以活动日、抓取日或版本排序代替首次发表日。
+
+最终启用来源状态为 26 个 success、21 个 partial、9 个 blocked，无 failed。受限来源为 OpenAI / ZCode / Elon Musk / Demis Hassabis / Jeff Dean / Tibo / B.AI / WorldRouter 的 X 与 OpenAI TikTok。最早未覆盖起点仍为北京时间 09-30 10:54；Threads 为 09-30 18:47、YouTube 为 10-04 22:24。社区订阅、有限列表和离线来源的逐项未覆盖区间保留在 `coverage.json`，不据成功转换声称完整覆盖。
+
+计费维持 117 项（API 52、Token Plan 18、Agent 47；108 verified、6 pending、3 paused）。本轮对 107 项定价记录读到对应来源并复核；10 项保留原价格核验日期，包括不再单列价格的 Google 旧型号、Kimi 旧四档、403 的 Codex Pro 三档及没有有效首页正文的 Pi。模型权益单独按有效来源更新日期；Kiro 模型总表和 MiniMax m-plan 页面无可读正文，保留对应旧权益核验日期，不以成功 HTTP 响应冒充核验。硅基流动初次超时后只读重试成功。对无内容变化的页面复用前次核验事实，不批量更改 `updated_at`。
+
+8 项内容变化：
+
+- DeepSeek V4.1 Flash 标注当前后端版本为 1017；Search / Fetch 各为 $0.75 / 千次成功请求，经 Harness、Claude Code 或 Codex 的服务端工具调用暂免费，自北京时间 2026-11-01 00:00 起计费。该独立请求单位写入说明，不换算成 tokens。[官方价格](https://api-docs.deepseek.com/quick_start/pricing/)
+- OpenCode 免费条目补入 GLM-5.3-Flash Free、Beam Free 与 LL Alpha Free 的真实数据政策与地域限制；现有优惠记录扩大至 5 个已核实免费端点，不再沿用 Cat Jam / Muse Spark 1.3 Contributor Free 的旧名单。未公布截止日保持为空。[Zen 官方目录](https://opencode.ai/docs/zen/)
+- OpenCode Go / Go Plus 移除当前表中已不再列出的 Grok 4.6、Kimi K2.6 与 MiniMax M2.7，以当前 Beam Free 端点替换名单中的 Cat Jam Free；未推断两者是同一模型。[Go 官方目录](https://opencode.ai/docs/go/)
+- Kiro 四个付费档修订 Kimi K3 地域说明：10-15 公告称 US geography 内跨区域推理，但模型总表本次无正文，明确未重新核实两处说明的一致性。[模型公告](https://kiro.dev/changelog/models/kimi-k3-now-available-in-kiro)
+
+本轮没有新增基础价格方案，也没有改动 token 基础费率。免费 / 折扣仍为 11 条（5 条免费、6 条折扣），保留 Gemini CLI 已暂停记录及未核实条件。GLM 三档与 MiniMax 旧三档继续 null / pending。新出现的 Beam、LL Alpha 仅能确认平台端点，独立发布者与影响力依据不足，记录为内部发现候选，不新增公开关注对象。
+
+`pricing:build`、`apply → refresh → validate`、54 项 Python 测试、56 项 Node 测试及正式构建全部通过。255 条事件双语必填字段完整，关键点逐项对应；公开 JSON 快照 ID 一致，`dist/data/index.json` 与公开源目录一致，最终为 `a762269c6b3d38f8`。无可靠 token 计量，不报告用量。本轮未读取约定的视频产物，未暂存、提交、推送或部署。

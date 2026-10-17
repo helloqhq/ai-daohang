@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "65034947ae1f5a71",
-  "generated_at": "2026-10-17T01:56:59+00:00",
+  "snapshot_id": "a762269c6b3d38f8",
+  "generated_at": "2026-10-17T14:10:07+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 233,
+      "count": 249,
       "min_date": "2026-10-01T01:34:16Z",
-      "max_date": "2026-10-16T15:08:58Z"
+      "max_date": "2026-10-17T08:16:33Z"
     },
     {
       "month": "2026-09",
@@ -19,6 +19,16 @@
     }
   ],
   "event_locations": {
+    "deepseek-harness-v021rc2": "2026-10",
+    "deepseek-harness-v021rc1": "2026-10",
+    "cline-v00048-v3073-sdk0095": "2026-10",
+    "gemini-cli-nightly-20261017": "2026-10",
+    "deepseek-flash-1017-search-api-20261017": "2026-10",
+    "claude-code-v21302": "2026-10",
+    "copilot-cli-v10100": "2026-10",
+    "kilo-jetbrains-7111": "2026-10",
+    "kilo-v7813-v7814-preview": "2026-10",
+    "kilo-cursor-switch-offer-20261016": "2026-10",
     "copilot-cli-v1099-3": "2026-10",
     "opencode-v1192-v1193": "2026-10",
     "deepseek-harness-v021alpha5": "2026-10",
@@ -26,9 +36,11 @@
     "copilot-slack-teams-multi-repo-20261016": "2026-10",
     "gemini-cli-nightly-20261016": "2026-10",
     "copilot-cli-v1099-2": "2026-10",
+    "cursor-cloud-agent-canvases-20261016": "2026-10",
     "glm-api-key-management-20261016": "2026-10",
     "siliconflow-diffusiongemma-sunset-20261016": "2026-10",
     "siliconflow-deepseek-v4-1-flash-20261016": "2026-10",
+    "devin-gitlab-pr-tools-20261016": "2026-10",
     "musk-grok-bot-growth-20261015": "2026-10",
     "musk-grok-bot-daily-improvements-20261015": "2026-10",
     "musk-grok-bot-spam-lists-20261015": "2026-10",
@@ -73,6 +85,7 @@
     "qoder-v047": "2026-10",
     "kiro-sonnet4-retired-20261014": "2026-10",
     "devin-review-sarif-v3-20261014": "2026-10",
+    "kiro-cli-2311-20261014": "2026-10",
     "tibo-desktop-state-storage-20261013": "2026-10",
     "gemini-cli-v0640": "2026-10",
     "gemini-cli-v0650-preview0": "2026-10",
@@ -101,6 +114,8 @@
     "zcode-3153": "2026-10",
     "hermes-v0220": "2026-10",
     "gemini4-argon-robotics-demo-20261013": "2026-10",
+    "kiro-cli-2310-sandbox-20261013": "2026-10",
+    "kiro-ide-130-sandbox-workflows-20261013": "2026-10",
     "pi-v120": "2026-10",
     "copilot-telemetry-controls-20261012": "2026-10",
     "copilot-cli-1097-0": "2026-10",
@@ -112,6 +127,7 @@
     "kiro-fedramp-class-c-20261012": "2026-10",
     "zcode-3151": "2026-10",
     "x-subscription-20261012": "2026-10",
+    "kiro-web-fallback-workflow-20261012": "2026-10",
     "tibo-sol500k-context-20261011": "2026-10",
     "opencode-v1190": "2026-10",
     "tibo-perfection-resets-20261011": "2026-10",
@@ -259,5 +275,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 239
+  "total_events": 255
 }

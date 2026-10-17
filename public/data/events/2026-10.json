@@ -1,7 +1,488 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "65034947ae1f5a71",
+  "snapshot_id": "a762269c6b3d38f8",
   "events": [
+    {
+      "id": "deepseek-harness-v021rc2",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "kind": "preview",
+      "topics": [
+        "compatibility",
+        "feature",
+        "api"
+      ],
+      "title_zh": "DeepSeek Harness 0.2.1-rc.2：适配 Flash-1017 与 Search / Fetch API",
+      "title_en": "DeepSeek Harness 0.2.1-rc.2 adds Flash-1017 and Search / Fetch API support",
+      "summary_zh": "DeepSeek Harness 候选版 0.2.1-rc.2 适配 DeepSeek-V4.1-Flash-1017，并接入 DeepSeek Search 与 Fetch API。",
+      "summary_en": "DeepSeek Harness release candidate 0.2.1-rc.2 adds support for DeepSeek-V4.1-Flash-1017 and the DeepSeek Search and Fetch APIs.",
+      "key_points_zh": [
+        "Search / Fetch 接入可在网页搜索设置中开启；此版本仍为候选版。"
+      ],
+      "key_points_en": [
+        "Enable Search / Fetch integration in Web Search settings; this remains a release candidate."
+      ],
+      "importance_reason_zh": "为新模型和官方网页检索接口提供可执行的接入入口。",
+      "importance_reason_en": "Provides working integrations for the new model and official web retrieval APIs.",
+      "published_at": "2026-10-17T08:16:33Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-17T13:38:43+00:00",
+      "updated_at": "2026-10-17T14:10:06+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.2",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.2",
+          "collected_at": "2026-10-17T13:38:43+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-17T08:16:33Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-harness-v021rc1",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "DeepSeek Harness 0.2.1-rc.1 候选版：插件生态、SDK 会话恢复与凭据策略调整",
+      "title_en": "DeepSeek Harness 0.2.1-rc.1 candidate: plugin ecosystem, SDK session resume and credential changes",
+      "summary_zh": "DeepSeek Harness 0.2.1-rc.1 是 0.2.1 系列首个候选版本，汇总自 v0.2.0-rc.2 以来的用户与开发者变更：插件支持自定义索引源、Agent 创建插件与依赖同步；实验性提供 Claude Code Mods 兼容层、开发者工具组合包、思考过程机器翻译与 Git Worktrees 插件；TypeScript/Python SDK 支持恢复会话；凭据读取优先级与脱敏策略调整；并修复 Windows PowerShell、请求挂起、会话恢复等大量问题。",
+      "summary_en": "DeepSeek Harness 0.2.1-rc.1 is the first release candidate for the 0.2.1 series, summarizing user- and developer-facing changes since v0.2.0-rc.2: plugins gain custom index sources, an agent-created-plugin entry and dependency sync; experimental Claude Code Mods compatibility, developer-tools bundle, reasoning translation and Git Worktrees plugins; TypeScript/Python SDKs support session resume; credential precedence and masking change; and many Windows PowerShell, request-hang and session-recovery fixes.",
+      "key_points_zh": [
+        "插件系统：支持自定义插件索引源与「让 Agent 创建插件」入口；插件启用、停用、卸载与更新同步依赖，热重载时可替换插件直接生效；官方插件列表提供与当前发布对应的 Claude Code 与 Codex 组合包，可用于 headless、SDK 与 ACP profile。",
+        "实验性插件：Claude Code Mods 兼容层（官方称主要目的是验证 Mods API 能力大致为 DSH 插件能力的子集，并非完整兼容）；开发者工具组合包（会话原始日志、聊天定位、内嵌 NodeJS DevTools）；思考过程机器翻译插件（Bing、Google 或付费 DeepSeek Flash）；Git Worktrees 插件。",
+        "SDK 与工作目录：TypeScript 与 Python SDK 支持 resume 恢复已保存会话并保留原会话 ID 与工作目录；新增 working_directory 工具与 SDK 读写会话工作目录接口；自动化任务成为 Web 内置能力，提醒工具限 Standard、Creator、PTC 模式。",
+        "凭据与安全：已发送消息中的 API Key 与令牌自动识别并默认脱敏、按需查看；API Key 读取优先级调整为 Web/桌面优先已保存凭据，headless 默认读取环境变量与 .env、不读取已保存密钥；更新运行时、MCP 协议等依赖纳入兼容安全修复。",
+        "Web 与远端：支持 --public-url 反向代理地址（带路径前缀）、--tls-cert/--tls-key 原生 HTTPS 监听与绑定指定 IPv4/IPv6；本机 HTTP 访问可登录 DeepSeek 账号；SSH helper 支持远端文件操作、进程、终端、沙箱与 Node PTC。",
+        "兼容性与其他：第三方插件兼容性优先按 engines.dsh 判断；移除 runtime invariant 插件、both 混合工具展示模式与独立 package.json 子路径插件；Azure 提供方名称统一为 azure（旧 azure-openai-responses 需迁移）；自定义模型 API 推理等级可在界面配置；修复 Windows PowerShell 滚屏、模型响应流挂起与会话恢复失败等问题。"
+      ],
+      "key_points_en": [
+        "Plugins: custom plugin index sources and a “Let Agent create a plugin” entry; enable/disable/uninstall/update now sync dependencies, and replaceable hot-reloaded plugins take effect immediately; the official catalog offers Claude Code and Codex bundles matching the current release for headless, SDK and ACP profiles.",
+        "Experimental plugins: a Claude Code Mods compatibility layer (officially aimed at verifying that the Mods API is broadly a subset of DSH plugin capabilities, not full compatibility); a developer-tools bundle (raw session logs, chat navigation, embedded NodeJS DevTools); a reasoning-translation plugin (Bing, Google, or paid DeepSeek Flash); and a Git Worktrees plugin.",
+        "SDK and working directory: TypeScript and Python SDKs support resume with original session IDs and working directories; a new working_directory tool plus SDK APIs read and change session working directories; automation tasks become a built-in Web capability with reminder tools scoped to Standard, Creator and PTC modes.",
+        "Credentials and security: API keys and tokens in sent messages are detected and masked by default with opt-in reveal; API-key precedence changes so Web/Desktop prefer saved credentials while headless reads environment variables and .env and no longer reads saved keys; runtime, MCP-protocol and other dependency updates include compatible security fixes.",
+        "Web and remote access: --public-url for reverse-proxy addresses (with path prefixes), --tls-cert/--tls-key native HTTPS listeners and binding to specific IPv4/IPv6 addresses; DeepSeek account sign-in over local HTTP; SSH helpers cover remote file operations, processes, terminals, sandboxing and Node PTC.",
+        "Compatibility and cleanup: third-party plugin compatibility prioritizes engines.dsh; the runtime invariant plugin, both mixed tool-presentation mode and per-subpath package.json reading are removed; the Azure provider is renamed to azure (azure-openai-responses configs must migrate); custom API reasoning levels are configurable in the UI; fixes include Windows PowerShell scrolling, hung response streams and failed session recovery."
+      ],
+      "importance_reason_zh": "0.2.1 首个候选版本汇总大量功能、兼容性与安全相关变更，直接影响 DeepSeek Harness 用户与插件/SDK 开发者。",
+      "importance_reason_en": "The first 0.2.1 release candidate bundles substantial feature, compatibility and security changes affecting DeepSeek Harness users and plugin/SDK developers.",
+      "published_at": "2026-10-17T05:22:10Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-17T05:50:51+00:00",
+      "updated_at": "2026-10-17T06:11:26+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.1",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.1",
+          "collected_at": "2026-10-17T05:50:51+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-17T05:22:10Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "cline-v00048-v3073-sdk0095",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "Cline v0.0.48 / v3.0.73 / SDK v0.0.95：修复 GPT-6 系列 OpenAI 兼容请求，默认模型回到 Claude Sonnet 5.5",
+      "title_en": "Cline v0.0.48 / v3.0.73 / SDK v0.0.95 fix GPT-6 model requests on OpenAI-compatible endpoints and restore Claude Sonnet 5.5 as default",
+      "summary_zh": "Cline 同批次桌面 v0.0.48、CLI v3.0.73 与 SDK v0.0.95 修复 GPT-6 系列模型在 OpenAI 与 Azure OpenAI 兼容端点上因发送 max_tokens 而被拒绝的问题；Cline 推荐列表之首重新为 Claude Sonnet 5.5，自有 provider 默认模型改回该模型；模型目录刷新并新增 CommandCode 与 Reflection providers，多家平台默认模型调整。",
+      "summary_en": "The same Cline batch — Desktop v0.0.48, CLI v3.0.73 and SDK v0.0.95 — fixes GPT-6 models being rejected on OpenAI and Azure OpenAI-compatible endpoints; the Cline recommended list leads with Claude Sonnet 5.5 again and the provider default returns to it; the model catalog refreshes with new CommandCode and Reflection providers and several vendor default-model changes.",
+      "key_points_zh": [
+        "GPT-6 模型（gpt-6-sol、gpt-6.1-sol，SDK 声称含后续 gpt-5 到 gpt-9 系 ID）改发 max_completion_tokens，OpenAI 与 Azure 兼容端点不再拒绝此前所有请求；Azure gpt-35-turbo 仍发送 max_tokens。",
+        "Cline provider 在未选模型时再次默认 Claude Sonnet 5.5，该模型回到推荐列表首位。",
+        "模型目录刷新（SDK 自 6,952 增至 7,041 模型），新增 CommandCode 与 Reflection providers；默认模型调整：302.AI 为 Gemini 4 Argon，Eden AI 与 Prime Inference 为 Muse Spark Open，CoreWeave 为 Reflection Beam 1.0，NanoGPT 与 Pioneer 为 Nemotron 3.5 Super VL，Scaleway 为 DeepSeek V4.1 Flash。",
+        "SDK 版：hub daemon 记录启动客户端身份（CLINE_HUB_LAUNCHER_* 环境变量并以 OTel 资源属性发布，SSH 远程 hub 报告本地客户端与 ssh transport）；OpenCode Go base URL 固定为 https://opencode.ai/inference/go/v1（models.dev 将 provider 级 URL 移到仅 OpenAI 的路径）。"
+      ],
+      "key_points_en": [
+        "GPT-6 models (gpt-6-sol, gpt-6.1-sol, and in the SDK also later gpt-5 through gpt-9 ids) send max_completion_tokens, so OpenAI and Azure-compatible endpoints no longer reject every request; Azure gpt-35-turbo keeps max_tokens.",
+        "With no model chosen, the Cline provider defaults to Claude Sonnet 5.5 again, which is back at the top of the recommended list.",
+        "The model catalog refreshes (6,952 → 7,041 models in the SDK) and adds CommandCode and Reflection providers; default models change for 302.AI (Gemini 4 Argon), Eden AI and Prime Inference (Muse Spark Open), CoreWeave (Reflection Beam 1.0), NanoGPT and Pioneer (Nemotron 3.5 Super VL) and Scaleway (DeepSeek V4.1 Flash).",
+        "SDK release: the hub daemon records the launching client (CLINE_HUB_LAUNCHER_* variables published as OTel resource attributes, with SSH remote hubs reporting the local client and ssh transport); OpenCode Go keeps its base URL pinned to https://opencode.ai/inference/go/v1 because models.dev moved the provider-level URL to an OpenAI-only path."
+      ],
+      "importance_reason_zh": "GPT-6 系列此前在 OpenAI/Azure 兼容端点上全部请求被拒，本次为直接兼容性修复；默认模型与多家平台默认模型变化影响计费口径。",
+      "importance_reason_en": "GPT-6 series requests were entirely rejected on OpenAI/Azure-compatible endpoints before this direct compatibility fix; the default-model changes also affect billing expectations.",
+      "published_at": "2026-10-17T03:00:13Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-17T05:51:10+00:00",
+      "updated_at": "2026-10-17T06:11:26+00:00",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.0.95",
+          "url": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.0.95",
+          "collected_at": "2026-10-17T05:51:10+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-17T03:00:13Z",
+          "date_kind": "updated"
+        },
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/cli-v3.0.73",
+          "url": "https://github.com/cline/cline/releases/tag/cli-v3.0.73",
+          "collected_at": "2026-10-17T05:51:10+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-17T03:59:11Z",
+          "date_kind": "updated"
+        },
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/desktop-v0.0.48",
+          "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.48",
+          "collected_at": "2026-10-17T05:51:10+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-17T04:34:29Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-nightly-20261017",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix",
+        "feature"
+      ],
+      "title_zh": "Gemini CLI 夜间版 20261017：更新校验防 PATH 影子成功，按键映射支持 keys 数组",
+      "title_en": "Gemini CLI nightly 20261017 verifies active binary updates and adds keys-array keybindings",
+      "summary_zh": "Gemini CLI 夜间版 v0.66.0-nightly.20261017 校验活跃二进制更新以避免 PATH 影子情况下误报成功，按键映射支持 keybindings.json 的 keys 数组，透传 bootstrap 父进程终止信号到子进程，冲突重现时重置斜杠命令去重，并增加「未针对 Gemini 4 优化」横幅。",
+      "summary_en": "The Gemini CLI nightly v0.66.0-nightly.20261017 verifies active binary updates to prevent false success under PATH shadowing, adds keys-array support in keybindings.json, forwards termination signals from the bootstrap parent to child processes, resets slash-command conflict dedupe when conflicts reappear, and adds a banner noting Gemini CLI is not optimized for Gemini 4.",
+      "key_points_zh": [
+        "校验活跃二进制更新，避免 PATH 影子下误报更新成功。",
+        "keybindings.json 支持以 keys 数组给出按键映射。",
+        "bootstrap 父进程向子进程透传终止信号；斜杠命令冲突重现时重置冲突去重。",
+        "界面新增横幅说明 Gemini CLI 未针对 Gemini 4 优化。"
+      ],
+      "key_points_en": [
+        "Active binary updates are verified to prevent falsely reported success under PATH shadowing.",
+        "keybindings.json supports mappings via a keys array.",
+        "The bootstrap parent forwards termination signals to child processes; slash-command conflict dedupe resets when conflicts reappear.",
+        "A banner notes Gemini CLI is not optimized for Gemini 4."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-17T01:31:34Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-17T05:50:51+00:00",
+      "updated_at": "2026-10-17T06:11:26+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0-nightly.20261017.ged96faedf",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0-nightly.20261017.ged96faedf",
+          "collected_at": "2026-10-17T05:50:51+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-17T01:31:42Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-flash-1017-search-api-20261017",
+      "entity_ids": [
+        "deepseek"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "api"
+      ],
+      "title_zh": "DeepSeek 升级 Flash-1017，并开放自研 Search / Fetch API",
+      "title_en": "DeepSeek upgrades Flash to the 1017 version and opens its Search / Fetch APIs",
+      "summary_zh": "DeepSeek 宣布 V4.1 Flash 升级至 DeepSeek-V4.1-Flash-1017，官网与 App 同步更新；API 继续使用 deepseek-flash，调用方式和价格不变。同日开放基于自研搜索引擎的 Search / Fetch API。",
+      "summary_en": "DeepSeek announces DeepSeek-V4.1-Flash-1017 as an upgrade to V4.1 Flash, also updating its website and app. The API keeps the deepseek-flash name, calling method and prices. It also opens Search / Fetch APIs powered by its in-house search engine.",
+      "key_points_zh": [
+        "官方称新版本在多项测试中提升性能，同时减少任务运行时间和输出长度；这些结果为厂商报告。",
+        "官方报告 Terminal-Bench 4.0 为 42.3、DeepSWE v1.1 为 77.0；两项分别使用 Claude Code 和 Mini-SWE-V2 框架评测。",
+        "官方建议升级到 DeepSeek Harness 0.2.1-rc.1 或以上，以更好适配新模型；同时针对腾讯 CodeBuddy、WorkBuddy 等平台优化。"
+      ],
+      "key_points_en": [
+        "DeepSeek reports stronger benchmark performance with shorter task runtime and output length; these are vendor-reported results.",
+        "Reported scores include 42.3 on Terminal-Bench 4.0 and 77.0 on DeepSWE v1.1, evaluated with Claude Code and Mini-SWE-V2 respectively.",
+        "DeepSeek recommends Harness 0.2.1-rc.1 or later for the new model and reports optimizations for platforms including Tencent CodeBuddy and WorkBuddy."
+      ],
+      "importance_reason_zh": "同一调用入口升级模型，并新增官方搜索接口，影响模型与 Agent 接入。",
+      "importance_reason_en": "Upgrades the model behind an existing API name and adds official search APIs for model and agent integrations.",
+      "published_at": "2026-10-17",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-17T14:05:18+00:00",
+      "updated_at": "2026-10-17T14:10:06+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-official",
+          "content_id": "https://api-docs.deepseek.com/updates#date-2026-10-17",
+          "url": "https://api-docs.deepseek.com/updates#date-2026-10-17",
+          "collected_at": "2026-10-17T14:05:18+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-17",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21302",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.302：fork 子代理默认开启，桌面与 VS Code 后台运行主会话子代理",
+      "title_en": "Claude Code 2.1.302 turns fork subagents on by default and runs main-conversation subagents in the background",
+      "summary_zh": "Claude Code 2.1.302 将 fork 子代理（subagent_type: \"fork\"）在 claude -p、Agent SDK、桌面应用与 VS Code 默认开启（CLAUDE_CODE_FORK_SUBAGENT=0 可关闭），桌面与 VS Code 始终在后台运行主会话子代理；第三方 provider 下无权限模式的 -p 与 SDK 会话以默认模式启动；新增 CLAUDE_CODE_AUTO_MODE_MODEL 选择客户端侧自动模式分类模型，可在 /config 开关空闲压缩；并提示 Claude Design 独立版将于 2026-12-14 关闭。",
+      "summary_en": "Claude Code 2.1.302 turns fork subagents (subagent_type: \"fork\") on by default in claude -p, the Agent SDK, the desktop app and VS Code (opt out with CLAUDE_CODE_FORK_SUBAGENT=0), and the desktop app and VS Code always run main-conversation subagents in the background; sessions with no permission mode start in default mode on third-party providers; CLAUDE_CODE_AUTO_MODE_MODEL selects the client-side auto-mode classifier model and idle compaction can be toggled in /config; a notice says standalone Claude Design closes on December 14, 2026.",
+      "key_points_zh": [
+        "fork 子代理在 claude -p、Agent SDK、桌面应用与 VS Code 默认开启（CLAUDE_CODE_FORK_SUBAGENT=0 关闭；claude mcp serve 不提供）。",
+        "桌面应用与 VS Code 主会话子代理始终后台运行（与终端一致）；子代理自身的 Agent 调用在 -p、SDK、桌面与 VS Code 默认前台。",
+        "第三方 provider 下，未设置权限模式的 claude -p 与 Agent SDK 会话改以默认模式启动（遥测关闭或全新安装时适用）；--permission-mode auto 保持 auto。",
+        "新增 CLAUDE_CODE_AUTO_MODE_MODEL 选择客户端侧 auto 模式分类所用模型；/config 新增空闲压缩开关，压缩后的提示说明关闭方式。",
+        "/design-sync 与 /design-login 提示独立版 Claude Design（claude.ai/design）2026-12-14 关闭。",
+        "其他：事件级 prompt/agent 钩子最多 12 个并发执行；云会话例行任务页显示未启动原因（如组织并发云会话达到上限）；Claude Tag 管理设置按 Bundles、Connectors、Skills and plugins、Channels 四个标签页组织。"
+      ],
+      "key_points_en": [
+        "Fork subagents are on by default in claude -p, the Agent SDK, the desktop app and VS Code (CLAUDE_CODE_FORK_SUBAGENT=0 turns them off; claude mcp serve never offers them).",
+        "The desktop app and VS Code always run the main conversation’s subagents in the background, like the terminal; a subagent’s own Agent calls in -p, the SDK, desktop and VS Code run in the foreground by default.",
+        "claude -p and Agent SDK sessions with no permission mode start in default mode on third-party providers, with telemetry off or on a fresh install; --permission-mode auto keeps auto.",
+        "CLAUDE_CODE_AUTO_MODE_MODEL chooses the model for the client-side auto-mode classifier; /config adds an idle-compaction toggle and post-compaction notices say how to turn it off.",
+        "/design-sync and /design-login indicate standalone Claude Design (claude.ai/design) closes December 14, 2026.",
+        "Other changes: at most 12 prompt or agent hooks per event run at once; cloud-session routine pages show why the last run didn’t start such as org limits on concurrent cloud sessions; Claude Tag admin settings reorganize access into Bundles, Connectors, Skills and plugins, and Channels tabs."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T21:03:00Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-17T05:50:54+00:00",
+      "updated_at": "2026-10-17T06:11:26+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-302",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-302",
+          "collected_at": "2026-10-17T05:50:54+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T21:03:05+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10100",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.100：统一 Sessions 浏览器与会话目录发现上限，修复沙箱代理与 MCP 加载卡顿",
+      "title_en": "Copilot CLI 1.0.100 unifies the Sessions browser and fixes sandbox proxy handling and MCP-tool-load stalls",
+      "summary_zh": "Copilot CLI 1.0.100-0/1.0.100-1 将 /sessions、/session 与 /resume 默认使用统一 Sessions 浏览器，会话浏览对账号发现设 500 条上限并遵循 Retry-After 提示；提示更新沙箱代理证书颁发机构，沙箱 host-rule 流量在未配置代理时遵循 HTTPS_PROXY/HTTP_PROXY；修复会话在 MCP 服务器加载工具期间挂起、Gemini 工具调用报告枚举数组参数与语音听写语言标记等问题。",
+      "summary_en": "Copilot CLI 1.0.100-0/1.0.100-1 makes /sessions, /session and /resume use the unified Sessions browser by default, caps account discovery at 500 records during session browsing honoring Retry-After hints; prompts to update the sandbox proxy certificate authority when masked hosts change, and sandbox host-rule traffic honors HTTPS_PROXY/HTTP_PROXY when no sandbox proxy is configured; fixes include sessions stalling while an MCP server loads tools, Gemini tool calls failing on enum array parameters and voice dictation inserting language markers.",
+      "key_points_zh": [
+        "统一 Sessions 浏览器默认用于 /sessions、/session 与 /resume。",
+        "会话浏览将账号发现限制在 500 条记录，自动刷新时遵循 Retry-After 提示。",
+        "沙箱：host-rule 流量在未配置沙箱代理时遵循 HTTPS_PROXY/HTTP_PROXY；遮蔽主机名变化时提示更新沙箱代理证书颁发机构；托管插件托管策略变化时在既有会话中更新激活。",
+        "修复：MCP 服务器加载工具挂起导致会话停滞；Gemini 工具调用在数组参数定义枚举值时失败；较早工具结果无可读内容后 Gemini 对话失败；语音听写不再在文本中插入语言标记。"
+      ],
+      "key_points_en": [
+        "The unified Sessions browser is used by default for /sessions, /session, and /resume.",
+        "Session browsing caps account discovery at 500 records and respects Retry-After hints for automatic refresh timing.",
+        "Sandbox: host-rule traffic honors HTTPS_PROXY and HTTP_PROXY when no sandbox proxy is configured; the CLI prompts to update the sandbox proxy certificate authority when masked hosts change; managed plugins update activation in existing sessions when the managed policy changes.",
+        "Fixes: sessions no longer stall when an MCP server hangs while loading tools; Gemini tool calls no longer fail when array parameters define enum values; Gemini chats no longer fail after earlier tool results contain no readable content; voice dictation no longer inserts language markers into transcript text."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T20:10:54Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-17T05:50:51+00:00",
+      "updated_at": "2026-10-17T06:11:26+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.100-0",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.100-0",
+          "collected_at": "2026-10-17T05:50:51+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T20:10:08Z",
+          "date_kind": "updated"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.100-1",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.100-1",
+          "collected_at": "2026-10-17T05:50:51+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T22:41:25Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "kilo-jetbrains-7111",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kilo JetBrains 7.1.11：列出远程 agents 供移动端使用，捆绑 CLI v7.8.13",
+      "title_en": "Kilo JetBrains 7.1.11 lists remote agents for the mobile app and bundles Kilo CLI v7.8.13",
+      "summary_zh": "Kilo JetBrains 7.1.11 新增可供移动端使用的远程 agents 列表，内置 Kilo CLI v7.8.13；修复 JetBrains 插件忽略文件加载阻塞 UI 线程、延迟提示分发等问题，并同步 MCP OAuth 自动刷新、会话状态计时与迟到 OpenRouter 推理细节保留等 CLI 侧改进。",
+      "summary_en": "Kilo JetBrains 7.1.11 adds a list of remote agents for the mobile app and bundles Kilo CLI v7.8.13; fixes include editor context ignore-file loading blocking the JetBrains UI thread and deferred prompt dispatch, alongside the CLI-side MCP OAuth auto-refresh, session status timing and late OpenRouter reasoning retention improvements.",
+      "key_points_zh": [
+        "新增可供移动端使用的远程 agents 列表。",
+        "内置 Kilo CLI v7.8.13，与 CLI 预发布共享 MCP OAuth 自动刷新、会话状态计时与 OpenRouter 推理细节保留修复。",
+        "修复编辑器上下文忽略文件加载阻塞 JetBrains UI 线程；对延迟提示分发做防护；升级 Gradle 至 9.8.1、openapi-generator 至 7.26.0。"
+      ],
+      "key_points_en": [
+        "Adds a list of remote agents for the mobile app to use.",
+        "Bundles Kilo CLI v7.8.13, sharing the CLI prerelease fixes for automatic MCP OAuth refresh, session status timing and OpenRouter reasoning retention.",
+        "Fixes editor-context ignore-file loading blocking the JetBrains UI thread; guards deferred prompt dispatch; upgrades Gradle to 9.8.1 and openapi-generator to 7.26.0."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T19:53:41Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-17T05:51:10+00:00",
+      "updated_at": "2026-10-17T06:11:26+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.11",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.11",
+          "collected_at": "2026-10-17T05:51:10+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T19:53:41Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "kilo-v7813-v7814-preview",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kilo 7.8.13/7.8.14 预发布：Agent Manager 可指定会话代理，修复 MCP OAuth 过期与权限边界",
+      "title_en": "Kilo 7.8.13/7.8.14 prerelease lets Agent Manager pick session agents and fixes MCP OAuth expiry and permission scoping",
+      "summary_zh": "Kilo v7.8.13 与 v7.8.14 预发布（内容相同）引入 Agent Manager 会话可由主 agent 指定运行代理（含自定义 agent 的编辑/bash/MCP 权限规则）；自定义 agent 可委派文件编辑且自身编辑规则只约束自己，子 agent 保留配置的写权限；自动刷新过期的 MCP OAuth 令牌（含 403 拒绝场景）；显示 provider 加载失败原因；保留 OpenRouter/Gemini 迟到的推理细节供回放；移动端共享项目 agents。",
+      "summary_en": "Kilo v7.8.13 and v7.8.14 prereleases (identical notes) let a primary agent choose which agent runs an Agent Manager session, including custom agents with their edit/bash/MCP permission rules; custom agents can delegate file edits while their own edit rules apply only to themselves, subagents keep their configured write permissions; expired MCP OAuth tokens refresh automatically including 403 rejection; provider load failures are explained; late OpenRouter/Gemini reasoning details are kept for replay; remote-controlled CLIs share project agents with the mobile app.",
+      "key_points_zh": [
+        "Agent Manager：主 agent 将会话分发给远程控制时可指定运行代理，而非始终回落到工作区默认 agent；内部 agent 在按名请求时被拒绝并列出可选代理；重绘 New Worktree 对话框（可选择 base branch、分支名与版本）。",
+        "权限：自定义 agent 委派文件编辑时，其编辑规则（含路径级 deny）只约束该 agent 自身，子 agent 保留自身写权限；只读内置模式仍阻止编辑；需会话级编辑限制限制委派写入。",
+        "MCP 与 provider：OAuth 令牌过期自动刷新，服务器用 403 拒绝过期令牌时不再卡在 authentication required；provider 加载失败原因（如凭据被拒、网络错误）显示在 CLI/TUI/VS Code 模型选择器，可重新登录。",
+        "模型行为：保留 OpenRouter 迟到的 Gemini 思考签名等推理细节，供后续请求回放；OpenAI 兼容的 string 工具内容转归 opt-in，默认格式不变。",
+        "CLI 与移动端：远程控制的 CLI 共享 .kilo/agents 项目 agents，移动端启动会话时可选；修复会话状态计时、TUI 依赖库 console 输出叠写界面问题。"
+      ],
+      "key_points_en": [
+        "Agent Manager: a primary agent can choose which agent runs a fanned-out session instead of always falling back to the workspace default; internal agents are rejected on named requests with selectable agents listed; the New Worktree dialog is redesigned (base branch, optional branch name, versions).",
+        "Permissions: when a custom agent delegates file edits, its edit rules (including path-scoped denies) apply only to that agent and no longer constrain its subagent’s configured write permissions; built-in read-only modes still block edits; session-level edit restrictions confine delegated writes.",
+        "MCP and providers: expired OAuth tokens refresh automatically, and 403 rejections of expired tokens no longer leave connections stuck on authentication required; provider load-failure reasons (rejected credentials, network errors) surface in the CLI, TUI and VS Code model picker with sign-in offers.",
+        "Model behavior: late-arriving OpenRouter reasoning details such as Gemini thought signatures are preserved for subsequent requests; string tool-call content normalization for OpenAI-compatible providers is opt-in.",
+        "CLI and mobile: remote-controlled CLIs share .kilo/agents project agents so the mobile app can offer them; fixes include session status timing and stray dependency console writes overwriting the TUI."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T18:55:37Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-17T05:51:10+00:00",
+      "updated_at": "2026-10-17T06:11:26+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.13",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.13",
+          "collected_at": "2026-10-17T05:51:10+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T18:55:44Z",
+          "date_kind": "updated"
+        },
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.14",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.14",
+          "collected_at": "2026-10-17T05:51:10+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T21:18:13Z",
+          "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "kilo-cursor-switch-offer-20261016",
+      "entity_ids": [
+        "kilo",
+        "cursor"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "Kilo：Cursor 用户可在 11 月底前申请 Enterprise 最长一年免费",
+      "title_en": "Kilo offers Cursor customers free Enterprise for up to a year when claimed before the end of November",
+      "summary_zh": "Kilo 官方博客宣布：付费使用 Cursor 的公司可在官方优惠页于 11 月底前提交 Cursor 合同证明，换 Kilo Enterprise 至原合同剩余期限的最长一年免费。博客同时称 Cursor 的 $8 Plus 自 10 月 12 日起仅含 Grok 模型，Premium/Super/Ultra 无第三方模型额度，并称 11 月 12 日 OpenAI 将停止向 Cursor 提供其模型（上述 Cursor 变化与 OpenAI 截止时间来自该博客，属转述）。",
+      "summary_en": "A Kilo blog post announces that companies paying for Cursor can claim free Kilo Enterprise for the remainder of their contract, up to one year, by submitting proof of the Cursor contract on the offer page before the end of November. The post also says Cursor’s $8 Plus plan went Grok-only on October 12, Premium/Super/Ultra include no third-party model allowance, and OpenAI will stop providing its models to Cursor on November 12 (Cursor changes and the OpenAI cutoff are relayed from the Kilo blog).",
+      "key_points_zh": [
+        "官方优惠：持有效付费 Cursor 合同的团队免费使用 Kilo Enterprise 至原合同剩余期限，最长一年。",
+        "认领方式与期限：需在优惠页提交 Cursor 合同证明；认领须在 11 月底前提交（博客未给出具体截止时刻）。",
+        "博客转述 Cursor 变化：$8 Plus 自 2026-10-12 起仅含 Grok 模型；Premium/Super/Ultra 无第三方模型额度，GPT-6 等按 API 列表价从首 token 计费。",
+        "博客转述 OpenAI 截止：11 月 12 日 OpenAI 停止向 Cursor 提供模型；此后个人 OpenAI API key 仅用于本地 Chat 与 Agent。GPT 访问可经 ChatGPT Plan 连接 Kilo（Sign in with ChatGPT，2026-09-29 上线）。"
+      ],
+      "key_points_en": [
+        "Official offer: teams with an active paid Cursor contract get Kilo Enterprise free for the remainder of that contract, up to one year.",
+        "How and by when: submit the claim form with proof of the Cursor contract on the offer page; claims must be submitted before the end of November (the post gives no exact cutoff moment).",
+        "The post relays Cursor changes: the $8 Plus became Grok-only on October 12, 2026; Premium/Super/Ultra include no third-party model allowance and GPT-6 requests bill at API list price from the first token.",
+        "The post relays the OpenAI cutoff: OpenAI ends Cursor’s access on November 12; afterwards a personal OpenAI API key works only for local Chat and Agent. GPT access can run through a ChatGPT plan connected to Kilo (Sign in with ChatGPT, launched September 29, 2026)."
+      ],
+      "importance_reason_zh": "跨产品迁移优惠与模型可用性变化直接影响计费与工具选择，涉及已在目录中的 Cursor X Subscription 条目。",
+      "importance_reason_en": "A cross-product migration offer plus availability changes directly affect billing and tool choices, including Cursor X Subscription entries already in the catalog.",
+      "published_at": "2026-10-16T18:14:00Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-17T05:51:10+00:00",
+      "updated_at": "2026-10-17T06:11:26+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/cursor-exodus",
+          "url": "https://blog.kilo.ai/p/cursor-exodus",
+          "collected_at": "2026-10-17T05:51:10+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T18:14:24+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
     {
       "id": "copilot-cli-v1099-3",
       "entity_ids": [
@@ -327,6 +808,47 @@
       ]
     },
     {
+      "id": "cursor-cloud-agent-canvases-20261016",
+      "entity_ids": [
+        "cursor"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Cursor 云 Agent 支持生成可交互画布，Environments API 进入 Beta",
+      "title_en": "Cursor cloud agents can build interactive canvases and the Environments API enters beta",
+      "summary_zh": "Cursor 更新：云端 Agent 可在任务中构建可交互画布并分享链接；Environments API 进入 Beta，可编程创建与管理云端运行环境；云端环境最多支持 300 个仓库，大型环境加载速度提升 5 倍。",
+      "summary_en": "Cursor changelog: cloud agents can build interactive canvases as part of their work and share links to them; the Environments API is available in beta to programmatically create and manage cloud environments; cloud environments support up to 300 repositories, and large environments load 5x faster.",
+      "key_points_zh": [
+        "云端 Agent 可在任务中构建可交互画布，通过链接分享给团队。",
+        "Environments API 提供 Beta，用于程序化创建与管理 Agent 运行的云端环境。",
+        "云端环境最多支持 300 个仓库；大型环境加载速度提升 5 倍。"
+      ],
+      "key_points_en": [
+        "Cloud agents can build interactive canvases as part of their work and share links to finished canvases with the team.",
+        "The Environments API is available in beta to programmatically create and manage the cloud environments agents run in.",
+        "Cloud environments now support up to 300 repositories; large environments load 5x faster."
+      ],
+      "importance_reason_zh": "涉及功能、兼容性、计费或可用性的重要变化。",
+      "importance_reason_en": "Material changes to functionality, compatibility, billing or availability.",
+      "published_at": "2026-10-16T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-17T05:50:51+00:00",
+      "updated_at": "2026-10-17T06:11:26+00:00",
+      "sources": [
+        {
+          "source_id": "cursor-official",
+          "content_id": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+          "url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+          "collected_at": "2026-10-17T05:50:51+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16T00:00:00+00:00",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
       "id": "glm-api-key-management-20261016",
       "entity_ids": [
         "zhipu"
@@ -439,6 +961,51 @@
           "content_id": "https://siliconflow.cn/news/qwoa3oxughhkwuoh9k2ci7xz",
           "url": "https://siliconflow.cn/news/qwoa3oxughhkwuoh9k2ci7xz",
           "collected_at": "2026-10-16T15:23:23+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-16",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "devin-gitlab-pr-tools-20261016",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Devin 扩展 GitLab 指令、跨平台 PR 检索与企业集成控制",
+      "title_en": "Devin expands GitLab commands, cross-platform PR search and enterprise integration controls",
+      "summary_zh": "Devin 10 月 16 日更新为 GitLab 合并请求加入 /devin review 与 /devin <prompt>，并扩展仓库工具、Teams 权限和企业身份集成。",
+      "summary_en": "Devin’s October 16 update brings /devin review and /devin <prompt> to GitLab merge requests and expands repository tools, Teams controls and enterprise identity integrations.",
+      "key_points_zh": [
+        "可在 GitHub、GitLab、Azure DevOps、Gerrit 和 Perforce Swarm 按状态、作者、分支或标题列出与检索 PR；Bitbucket Cloud Review 可显示合并就绪状态。",
+        "GitHub 新增 issue、标签、PR 受让人、仓库信息和分支保护工具；GitLab 同时支持 issue 与标签工具，其他平台支持范围以公告为准。",
+        "Teams 的私聊与群聊访问设置分离，转发消息作为引用上下文；企业可隐藏旧 MCP 市场入口，已有 MCP 仍可运行。",
+        "支持按租户连接个人 Azure DevOps 账号；配置注销 URL 的 SAML SSO 登录可在退出时同步结束身份提供商会话。"
+      ],
+      "key_points_en": [
+        "List and search PRs by state, author, branch or title across GitHub, GitLab, Azure DevOps, Gerrit and Perforce Swarm; Bitbucket Cloud Review can display merge readiness.",
+        "GitHub gains tools for issues, labels, PR assignees, repository information and branch protection; GitLab also supports issue and label tools, with other platform coverage defined by the announcement.",
+        "Teams separates direct-message and group-chat access settings and treats forwarded messages as quoted context; enterprises can hide legacy MCP marketplace entry points while existing MCPs keep working.",
+        "Personal Azure DevOps accounts can connect per tenant; signing out of SAML SSO can also end the identity-provider session when a sign-out URL is configured."
+      ],
+      "importance_reason_zh": "扩大 Agent 在代码托管平台上的操作范围，并提供更细的企业接入控制。",
+      "importance_reason_en": "Expands agent actions across code-hosting platforms and adds finer enterprise integration controls.",
+      "published_at": "2026-10-16",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-17T14:05:18+00:00",
+      "updated_at": "2026-10-17T14:10:06+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#october-16-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#october-16-2026",
+          "collected_at": "2026-10-17T14:05:18+00:00",
           "material_scope": "full_text",
           "published_at": "2026-10-16",
           "date_kind": "published"
@@ -2150,6 +2717,45 @@
       ]
     },
     {
+      "id": "kiro-cli-2311-20261014",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kiro CLI 2.31.1：聊天内显示 Mermaid，修复无界面 V3 设置",
+      "title_en": "Kiro CLI 2.31.1 renders Mermaid in chat and fixes headless V3 settings",
+      "summary_zh": "Kiro CLI 2.31.1 在聊天中直接绘制 Mermaid 图表，并使已保存设置在无界面 V3 运行中生效。",
+      "summary_en": "Kiro CLI 2.31.1 draws Mermaid diagrams directly in chat and makes saved settings work in headless V3 runs.",
+      "key_points_zh": [
+        "公告还列出提示复制、阻塞面板、模型回退、压缩、Windows 安装及 AWS 登录等修复，未逐项展开细节。"
+      ],
+      "key_points_en": [
+        "The announcement also lists fixes for copied prompts, blocked panes, model fallback, compaction, Windows setup and AWS sign-in without detailing each fix."
+      ],
+      "importance_reason_zh": "改善图表输出，并修复自动化 V3 运行中的设置一致性。",
+      "importance_reason_en": "Improves diagram output and settings consistency in automated V3 runs.",
+      "published_at": "2026-10-14",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-17T14:08:07+00:00",
+      "updated_at": "2026-10-17T14:10:06+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/2-31-1",
+          "url": "https://kiro.dev/changelog/cli/2-31-1",
+          "collected_at": "2026-10-17T14:08:07+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-14",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
       "id": "tibo-desktop-state-storage-20261013",
       "entity_ids": [
         "openai",
@@ -3251,6 +3857,89 @@
       ]
     },
     {
+      "id": "kiro-cli-2310-sandbox-20261013",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Kiro CLI 2.31.0 向 V3 用户开放本地命令沙箱与自主模式",
+      "title_en": "Kiro CLI 2.31.0 opens local command sandbox and autonomous mode to V3 users",
+      "summary_zh": "Kiro CLI 2.31.0 向所有 V3 用户开放本地命令沙箱与本地自主模式，同时按需加载 MCP 工具，并将 KIRO_HOME 扩展到 V3 配置和状态。",
+      "summary_en": "Kiro CLI 2.31.0 makes the local command sandbox and local autonomous mode available to all V3 users, loads MCP tools on demand and extends KIRO_HOME across V3 configuration and state.",
+      "key_points_zh": [
+        "/sandbox 将 Agent 的 shell 命令及其子进程放入操作系统沙箱；出站网络可禁用、限常见开发主机或开放，本地 stdio MCP 服务器也可使用该沙箱。",
+        "Agent 本身、内置文件工具和远程 MCP 服务器在沙箱之外；权限规则仍然生效，不能据此认为所有操作均被隔离。",
+        "在本地 V3 会话运行 /autonomous on，会先启用命令沙箱并切换至 Default agent，减少逐条 shell 命令审批。"
+      ],
+      "key_points_en": [
+        "/sandbox places agent shell commands and child processes in an OS sandbox, with outbound networking blocked, limited to common development hosts or open; local stdio MCP servers can use the same sandbox.",
+        "The agent, built-in file tools and remote MCP servers remain outside the sandbox; permission rules still apply, so it does not isolate every action.",
+        "Running /autonomous on in a local V3 session first enables the command sandbox and switches to the Default agent, reducing per-command shell approvals."
+      ],
+      "importance_reason_zh": "为本地 Agent 执行加入具体的进程与网络边界，并明确自主模式前提。",
+      "importance_reason_en": "Adds explicit process and network boundaries for local agent execution and defines autonomous-mode prerequisites.",
+      "published_at": "2026-10-13",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-17T14:08:07+00:00",
+      "updated_at": "2026-10-17T14:10:06+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/2-31",
+          "url": "https://kiro.dev/changelog/cli/2-31",
+          "collected_at": "2026-10-17T14:08:07+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-13",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "kiro-ide-130-sandbox-workflows-20261013",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro IDE 1.3.0：本地命令沙箱、聊天启动工作流与标签状态",
+      "title_en": "Kiro IDE 1.3.0 adds a command sandbox, workflow launch from chat and live tab status",
+      "summary_zh": "Kiro IDE 1.3.0 可限制 Agent shell 命令访问范围，并从聊天启动已保存的 Workflows；同时显示编辑器标签的会话状态、说明模型回退并按需加载 MCP 工具。",
+      "summary_en": "Kiro IDE 1.3.0 can limit agent shell-command access and launch saved Workflows from chat. It also shows session status on editor tabs, explains model fallbacks and loads MCP tools on demand.",
+      "key_points_zh": [
+        "命令沙箱覆盖 shell 命令、子进程及可选本地 stdio MCP 服务器；网络可禁用、限开发主机或开放。Agent、内置文件工具和远程 MCP 仍在沙箱外。",
+        "通过状态栏 Command sandbox 确认是否启用；/workflow-run 可选择配方、填写输入并打开新工作流运行。"
+      ],
+      "key_points_en": [
+        "The sandbox covers shell commands, child processes and optionally local stdio MCP servers, with blocked, development-host-only or open networking. The agent, built-in file tools and remote MCP remain outside it.",
+        "Confirm activation through Command sandbox in the status bar; /workflow-run selects a recipe, collects inputs and opens a new workflow run."
+      ],
+      "importance_reason_zh": "改善 IDE 内任务执行边界及重复工作流的启动方式。",
+      "importance_reason_en": "Improves execution boundaries and reusable workflow launch inside the IDE.",
+      "published_at": "2026-10-13",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-17T14:08:07+00:00",
+      "updated_at": "2026-10-17T14:10:06+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-3",
+          "url": "https://kiro.dev/changelog/ide/1-3",
+          "collected_at": "2026-10-17T14:08:07+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-13",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
       "id": "pi-v120",
       "entity_ids": [
         "pi"
@@ -3694,6 +4383,49 @@
           "content_id": "https://x.ai/news/x-subscription",
           "url": "https://x.ai/news/x-subscription",
           "collected_at": "2026-10-13T14:48:25+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-12",
+          "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "kiro-web-fallback-workflow-20261012",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "Kiro Web 新增模型回退、步骤模型选择与会话恢复预览",
+      "title_en": "Kiro Web adds model fallback, per-step models and session reopen previews",
+      "summary_zh": "Kiro Web 可为模型选择回退模型，为工作流步骤单独选择模型，并在沙箱重启期间预览已保存对话；达到循环次数上限后也可继续运行。",
+      "summary_en": "Kiro Web can assign fallback models, select a model per workflow step and preview saved conversations while a sandbox restarts. Workflow loops can also continue after reaching their iteration cap.",
+      "key_points_zh": [
+        "原模型暂不可用时，回退仅处理当前轮；若原模型拒绝请求，则后续会话继续使用回退模型。",
+        "更换步骤模型前需停止该步骤，再发消息继续；仅影响该步骤，支持时可选择 effort 与 Thinking。",
+        "循环暂停后可增加 1–1,000 次迭代，或停止循环并进入下一步；会话恢复后完整历史替换预览。"
+      ],
+      "key_points_en": [
+        "If the original model is unavailable, fallback handles only that turn; if it refuses a request, fallback remains for the rest of the session.",
+        "Stop a step before changing its model, then send a message to continue; the choice affects only that step, with effort and Thinking controls when supported.",
+        "After a loop pauses, add 1–1,000 iterations or stop looping and continue to the next step; the complete history replaces the reopen preview once ready."
+      ],
+      "importance_reason_zh": "影响长任务的模型容错、工作流执行控制与恢复体验。",
+      "importance_reason_en": "Changes model resilience, workflow control and recovery for long-running tasks.",
+      "published_at": "2026-10-12",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-17T14:08:07+00:00",
+      "updated_at": "2026-10-17T14:10:06+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/web/model-fallback-and-workflow-updates",
+          "url": "https://kiro.dev/changelog/web/model-fallback-and-workflow-updates",
+          "collected_at": "2026-10-17T14:08:07+00:00",
           "material_scope": "full_text",
           "published_at": "2026-10-12",
           "date_kind": "published"

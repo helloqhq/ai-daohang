@@ -5,7 +5,7 @@ import {createPrivacyPreferences,initCookieControls} from './privacy.js';
 import {createPricingView} from './pricing.js';
 const preferences=createPrivacyPreferences();
 const showSources=new URLSearchParams(location.search).get('showSources')==='1';
-let language=resolveLanguage(location.search,preferences.language());
+let language=resolveLanguage(location.search,preferences.language(),navigator.languages?.length?navigator.languages:[navigator.language]);
 const cookieControls=initCookieControls(preferences,()=>language);
 const t=(key,values)=>translate(language,key,values);
 // Interface zone follows the language: Beijing time in Chinese, Pacific time in English.
@@ -154,11 +154,11 @@ function renderSnapshot() {
   $('coverage-description').textContent=t('coverageSummary',summary)+(summary.pending?t('pendingSuffix',{count:summary.pending}):'');
 }
 function setLanguage(next) {
+  preferences.rememberLanguage(next);
+  const url=new URL(location.href);url.searchParams.set('lang',next);history.replaceState(null,'',url);
   if(next===language) return;
   const scrollY=window.scrollY,dialogScroll=$('event-dialog').scrollTop;
   language=next;
-  preferences.rememberLanguage(language);
-  const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url);
   applyLanguage();renderClock();
   // Presets re-anchor "today" to the new zone; custom calendar ranges stay as chosen.
   if(state.ready){

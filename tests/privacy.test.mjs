@@ -1,13 +1,36 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createPrivacyPreferences,CONSENT_STORAGE_KEY,CONSENT_LIFETIME,CONSENT_VERSION} from '../public/assets/privacy.js';
-import {LANGUAGE_STORAGE_KEY} from '../public/assets/i18n.js';
+import {LANGUAGE_STORAGE_KEY,resolveLanguage} from '../public/assets/i18n.js';
 
 function memoryStorage(entries=[]) {
   const values=new Map(entries);
   return {getItem:key=>values.get(key)??null,setItem:(key,value)=>values.set(key,value),removeItem:key=>values.delete(key)};
 }
 const start=Date.UTC(2026,9,3);
+
+test('browser language selection respects preference consent, withdrawal and expiry',()=>{
+  const storage=memoryStorage();
+  const first=createPrivacyPreferences(storage,()=>start);
+  assert.equal(resolveLanguage('',first.language(),['zh-CN']),'zh');
+  assert.equal(storage.getItem(LANGUAGE_STORAGE_KEY),null);
+  assert.equal(storage.getItem(CONSENT_STORAGE_KEY),null);
+  first.choose(false);
+  first.rememberLanguage('en');
+  assert.equal(resolveLanguage('',first.language(),['zh-CN']),'zh');
+  first.choose(true);
+  first.rememberLanguage('en');
+  const next=createPrivacyPreferences(storage,()=>start+1);
+  assert.equal(resolveLanguage('',next.language(),['zh-CN']),'en');
+  assert.equal(resolveLanguage('?lang=zh',next.language(),['en-US']),'zh');
+  next.choose(false);
+  assert.equal(resolveLanguage('',next.language(),['zh-CN']),'zh');
+  next.choose(true);
+  next.rememberLanguage('en');
+  const expired=createPrivacyPreferences(storage,()=>start+1+CONSENT_LIFETIME);
+  assert.equal(resolveLanguage('',expired.language(),['zh-CN']),'zh');
+  assert.equal(storage.getItem(LANGUAGE_STORAGE_KEY),null);
+});
 
 test('first visit removes legacy language and never persists an optional preference before choosing',()=>{
   const storage=memoryStorage([[LANGUAGE_STORAGE_KEY,'en']]);

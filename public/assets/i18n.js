@@ -1,8 +1,15 @@
 export const LANGUAGES = ['zh', 'en'];
 export const LANGUAGE_STORAGE_KEY = 'ai-signal-language';
-export function resolveLanguage(search, stored) {
+export function resolveLanguage(search, stored, browserLanguages = []) {
   const requested = new URLSearchParams(search).get('lang');
-  return LANGUAGES.includes(requested) ? requested : LANGUAGES.includes(stored) ? stored : 'zh';
+  if (LANGUAGES.includes(requested)) return requested;
+  if (LANGUAGES.includes(stored)) return stored;
+  for (const locale of browserLanguages) {
+    if (typeof locale !== 'string') continue;
+    const language = locale.toLowerCase().split('-')[0];
+    if (LANGUAGES.includes(language)) return language;
+  }
+  return 'en';
 }
 
 // Time zone per interface language: Chinese shows Beijing time, English shows US Pacific time.

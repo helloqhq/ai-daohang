@@ -3,12 +3,30 @@ import assert from 'node:assert/strict';
 import {resolveLanguage,translate,eventContent,coverageNote,CLOCK_ZONES} from '../public/assets/i18n.js';
 import {filterEvents} from '../public/assets/model.js';
 
-test('explicit URL language wins over preference; invalid values keep a safe default',()=>{
-  assert.equal(resolveLanguage('?lang=en','zh'),'en');
-  assert.equal(resolveLanguage('?lang=zh','en'),'zh');
-  assert.equal(resolveLanguage('?lang=unknown','en'),'en');
-  assert.equal(resolveLanguage('','en'),'en');
-  assert.equal(resolveLanguage('','unknown'),'zh');
+test('explicit URL language wins over saved preference and browser languages',()=>{
+  assert.equal(resolveLanguage('?lang=en','zh',['zh-CN']),'en');
+  assert.equal(resolveLanguage('?lang=zh','en',['en-US']),'zh');
+  assert.equal(resolveLanguage('?lang=unknown','en',['zh-CN']),'en');
+  assert.equal(resolveLanguage('','zh',['en-US']),'zh');
+  assert.equal(resolveLanguage('','en',['zh-CN']),'en');
+});
+test('browser languages select the first supported language, including regional and script variants',()=>{
+  for(const [languages,expected] of [
+    [['zh-CN','en-US'],'zh'],
+    [['en-US','zh-CN'],'en'],
+    [['ja-JP','zh-CN','en-US'],'zh'],
+    [['ja-JP','en-GB','zh-CN'],'en'],
+    [['zh-TW'],'zh'],[['zh-HK'],'zh'],[['zh-Hant'],'zh'],
+    [['ZH-hant-TW'],'zh'],[['EN-gb'],'en'],
+    [['zh'],'zh'],[['en'],'en'],
+  ]) assert.equal(resolveLanguage('','unknown',languages),expected,JSON.stringify(languages));
+});
+test('missing, invalid and unsupported language preferences fall back to English',()=>{
+  assert.equal(resolveLanguage('','unknown'),'en');
+  for(const languages of [[],['ja-JP'],['fr-FR','de-DE'],[undefined,null,'',42,'english','zho']]) {
+    assert.equal(resolveLanguage('?lang=unknown',null,languages),'en');
+  }
+  assert.equal(resolveLanguage('?lang=unknown','unknown',['zh-CN']),'zh');
 });
 test('partial translations fall back as a complete article',()=>{
   const event={title_zh:'中文标题',summary_zh:'中文摘要',key_points_zh:['关键点'],importance_reason_zh:'入选理由',title_en:'English title'};

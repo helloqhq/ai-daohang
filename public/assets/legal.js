@@ -2,7 +2,7 @@ import {resolveLanguage,translate} from './i18n.js';
 import {createPrivacyPreferences,initCookieControls} from './privacy.js';
 
 const preferences=createPrivacyPreferences();
-let language=resolveLanguage(location.search,preferences.language());
+let language=resolveLanguage(location.search,preferences.language(),navigator.languages?.length?navigator.languages:[navigator.language]);
 const cookieControls=initCookieControls(preferences,()=>language);
 function applyLanguage() {
   const t=key=>translate(language,key);

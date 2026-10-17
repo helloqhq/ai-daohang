@@ -59,3 +59,17 @@ test('unknown dates and unsafe source URLs do not become structured date or cita
   const dateOnly=createEventRenderer(catalog,'zh').card({...event,published_at:'2026-10-03',date_precision:'date'});
   assert.ok(dateOnly.includes('itemprop="datePublished" datetime="2026-10-03"'));
 });
+
+test('compact list times retain full accessible dates, literal date precision and standalone context',()=>{
+  const renderer=createEventRenderer(catalog,'zh');
+  const html=renderer.card(event);
+  assert.match(html,/<time class="card-time" aria-label="2026-10-03 16时"[^>]*>16时<\/time>/);
+  assert.ok(!renderer.eventDetails(event).includes('原始依据 · 2026-10-03'));
+  assert.ok(renderer.eventDetails(event,{standalone:true}).includes('原始依据 · 2026-10-03 16时'));
+  const dateOnly=renderer.card({...event,published_at:'2026-10-03',date_precision:'date'});
+  assert.match(dateOnly,/<time class="card-time" aria-label="2026-10-03"[^>]*>仅日期<\/time>/);
+  const unknown=renderer.card({...event,published_at:null,date_precision:'unknown'});
+  assert.match(unknown,/<time class="card-time"[^>]*>日期待核实<\/time>/);
+  const english=createEventRenderer(catalog,'en').card(event);
+  assert.match(english,/<time class="card-time" aria-label="2026-10-03 01h"[^>]*>01h<\/time>/);
+});

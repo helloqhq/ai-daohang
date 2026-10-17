@@ -42,7 +42,7 @@ test('explicit free API inference uses token units and combines with model filte
 test('one plan with multiple offers is counted once in quick panels',()=>{
   const plan=structuredClone(free);plan.offers.push({...plan.offers[0],id:'second',kind:'trial'});
   assert.equal(filterPlans([plan],{offer:'free'},now).length,1);
-  assert.match(renderOfferPanels([plan],'en','free',now),/>1<span class="sr-only"> available plans/);
+  assert.match(renderOfferPanels([plan],'en','free',now),/>1<span class="pricing-panel-unit"> plans/);
 });
 test('free allowances and discounts require dated, bilingual, explicit evidence',()=>{
   const data={...snapshot,plans:[structuredClone(free)]};

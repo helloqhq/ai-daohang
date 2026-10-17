@@ -72,14 +72,24 @@ export function renderOffers(plan,language,now,filters,priceLabel) {
     const statusLabel=status==='verified'?'':t(status==='pending'?'pricingOfferPending':status==='paused'?'pricingOfferPaused':`pricingStatus_${status}`);
     const savings=Object.entries(offerSavings(plan,offer)).map(([key,value])=>`${t({input:'pricingInput',output:'pricingOutput',cached:'pricingCache',cache_write:'pricingCacheWrite',amount:'pricingPrice'}[key])} −${value}%`).join(' · ');
     const zoneStamp=value=>`${new Date(value).toLocaleString(language==='zh'?'zh-CN':'en-GB',{timeZone:LANGUAGE_ZONES[language],hour12:false})} ${language==='zh'?'UTC+8':zoneAbbreviation(LANGUAGE_ZONES[language],value)}`;
-    const end=offer.ends_at?`${t('pricingOfferEnds')}: ${escape(zoneStamp(offer.ends_at))}`:offer.end_note_zh?local(offer,'end_note'):t('pricingOfferNoEnd');
-    return `<article class="pricing-offer ${offer.type}"><strong>${t(`pricingOffer_${offer.type}`)} · ${t(`pricingOfferKind_${offer.kind}`)}</strong>${status==='verified'?'':`<span class="pricing-status ${status}">${statusLabel}</span>`}<p>${escape(offer.models.join(' · '))}</p>${offer.quota_zh?`<p>${t('pricingOfferQuota')}: ${local(offer,'quota')}</p>`:''}${offer.price?`<p class="pricing-offer-price">${prices(offer.price)} <small>${t(plan.category==='api'?'pricingPerMillion':'pricingOfferBilling')}</small></p>`:''}${offer.reference?`<p>${t('pricingOfferReference')}: ${local(offer.reference,'label')} · ${prices(offer.reference.price)}</p><p>${local(offer.reference,'comparison')} · ${savings}</p><a href="${escape(safeURL(offer.reference.source_url))}" target="_blank" rel="noopener noreferrer">${t('pricingOfferReferenceSource')} ↗</a>`:''}<p>${local(offer,'conditions')}</p><p>${t('pricingOfferEligibility')}: ${local(offer,'eligibility')} · ${t(`pricingCard_${offer.card_required}`)}</p><p>${end}</p>${offer.starts_at?`<p>${t('pricingOfferStarts')}: ${escape(zoneStamp(offer.starts_at))}</p>`:''}<a href="${escape(safeURL(offer.source_url))}" target="_blank" rel="noopener noreferrer">${t('pricingOfferSource')} ↗</a><span class="pricing-checked">${t('pricingChecked')} ${escape(offer.checked_at)}</span></article>`;
+    const end=offer.ends_at?escape(zoneStamp(offer.ends_at)):offer.end_note_zh?local(offer,'end_note'):t('pricingOfferNoEnd');
+    return `<article class="pricing-offer ${offer.type}"><strong>${t(`pricingOffer_${offer.type}`)} · ${t(`pricingOfferKind_${offer.kind}`)}</strong>${status==='verified'?'':`<span class="pricing-status ${status}">${statusLabel}</span>`}
+      <dl class="pricing-offer-facts">
+        <div><dt>${t('pricingOfferModels')}</dt><dd>${escape(offer.models.join(' · '))}</dd></div>
+        ${offer.quota_zh?`<div><dt>${t('pricingOfferQuota')}</dt><dd>${local(offer,'quota')}</dd></div>`:''}
+        ${offer.price?`<div><dt>${t('pricingPrice')}</dt><dd class="pricing-offer-price">${prices(offer.price)} <small>${t(plan.category==='api'?'pricingPerMillion':'pricingOfferBilling')}</small></dd></div>`:''}
+        ${offer.reference?`<div><dt>${t('pricingOfferReference')}</dt><dd>${local(offer.reference,'label')} · ${prices(offer.reference.price)}<p>${local(offer.reference,'comparison')} · ${savings}</p><a href="${escape(safeURL(offer.reference.source_url))}" target="_blank" rel="noopener noreferrer">${t('pricingOfferReferenceSource')} ↗</a></dd></div>`:''}
+        <div><dt>${t('pricingOfferConditions')}</dt><dd>${local(offer,'conditions')}</dd></div>
+        <div><dt>${t('pricingOfferEligibility')}</dt><dd>${local(offer,'eligibility')} · ${t(`pricingCard_${offer.card_required}`)}</dd></div>
+        <div><dt>${t('pricingOfferEnds')}</dt><dd>${end}</dd></div>
+        ${offer.starts_at?`<div><dt>${t('pricingOfferStarts')}</dt><dd>${escape(zoneStamp(offer.starts_at))}</dd></div>`:''}
+      </dl><a href="${escape(safeURL(offer.source_url))}" target="_blank" rel="noopener noreferrer">${t('pricingOfferSource')} ↗</a><span class="pricing-checked">${t('pricingChecked')} ${escape(offer.checked_at)}</span></article>`;
   }).join('');
 }
 export function renderOfferPanels(plans,language='zh',selected='all',now=new Date()) {
   const t=(key,values)=>translate(language,key,values);
   return ['free','discount'].map(type=>{
     const count=plans.filter(plan=>matchingOffers(plan,{offer:type},now).length).length;
-    return `<button type="button" class="pricing-quick-panel ${type}" data-pricing-offer="${type}" aria-pressed="${selected===type}" aria-controls="pricing-list"><span>${t(`pricingOffer_${type}`)}</span> <span class="pricing-panel-count">${count}<span class="sr-only"> ${t('pricingPanelCount')}</span></span></button>`;
+    return `<button type="button" class="pricing-quick-panel ${type}" data-pricing-offer="${type}" aria-pressed="${selected===type}" aria-controls="pricing-list"><span>${t(`pricingOffer_${type}`)}</span> <span class="pricing-panel-count">${count}<span class="pricing-panel-unit"> ${t('pricingPanelCount')}</span></span></button>`;
   }).join('');
 }

@@ -61,7 +61,7 @@ export function initCookieControls(preferences,getLanguage) {
   container.innerHTML=`
     <section id="cookie-banner" class="cookie-banner" aria-labelledby="cookie-title" hidden>
       <div class="cookie-banner-inner">
-        <div class="cookie-copy"><span class="cookie-eyebrow">COOKIE / LOCAL STORAGE</span>
+        <div class="cookie-copy">
           <h2 id="cookie-title" data-i18n="cookieTitle"></h2>
           <p data-i18n="cookieIntro"></p>
           <a class="cookie-policy" href="./privacy.html#browser-storage" data-legal-link data-i18n="cookiePolicy"></a>

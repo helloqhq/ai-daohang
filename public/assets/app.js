@@ -30,7 +30,7 @@ async function json(path, suffix='') {
 function checkSnapshot(value) {if (value.snapshot_id !== state.index.snapshot_id) throw failure('snapshotError');}
 function error(value) {state.error=value;$('error-box').hidden=false;$('error-box').textContent=t(value.key || 'loadError',value.values);}
 function tags(event) {return createEventRenderer(state.catalog,language).tags(event);}
-function eventDetails(event) {return createEventRenderer(state.catalog,language).eventDetails(event);}
+function eventDetails(event,options) {return createEventRenderer(state.catalog,language).eventDetails(event,options);}
 function card(event) {return createEventRenderer(state.catalog,language,state.expanded).card(event);}
 async function loadMonths(from,to) {
   const requested=relevantMonths(state.index,from,to,zone());
@@ -60,10 +60,11 @@ function renderFeed() {
   }
   if(!out){
     const filtered=state.filters.query || state.filters.entity || state.filters.kind || state.filters.category!=='all';
-    out=`<div class="empty-state"><div class="empty-mark" aria-hidden="true">∅</div><h3>${t(filtered?'noMatchesTitle':'noUpdatesTitle')}</h3><p>${t(filtered?'noMatchesCopy':'noUpdatesCopy')}</p>${filtered||showSources?`<button id="empty-reset">${t(filtered?'reset':'coverageLink')} ↗</button>`:''}</div>`;
+    out=`<div class="empty-state"><div class="empty-mark" aria-hidden="true">∅</div><h3>${t(filtered?'noMatchesTitle':'noUpdatesTitle')}</h3><p>${t(filtered?'noMatchesCopy':'noUpdatesCopy')}</p>${filtered||showSources?`<button id="empty-reset">${t(filtered?'clearConditions':'coverageLink')}</button>`:''}${state.filters.from||state.filters.to?`<button id="empty-history">${t('viewAllHistory')}</button>`:''}</div>`;
   }
   $('feed-list').innerHTML=out;$('feed-list').setAttribute('aria-busy','false');
   $('more-button').hidden=events.length<=state.visible;
+  $('empty-history')?.addEventListener('click',()=>setDateRange('all'));
   $('empty-reset')?.addEventListener('click',()=>{
     if(state.filters.query || state.filters.entity || state.filters.kind || state.filters.category!=='all') resetFilters();else switchView('sources');
   });
@@ -86,8 +87,16 @@ function resetFilters() {
   document.querySelectorAll('[data-category]').forEach(b=>{b.classList.toggle('selected',b.dataset.category==='all');b.setAttribute('aria-pressed',String(b.dataset.category==='all'));});
   fillEntities();state.visible=18;refreshFeed();
 }
+function setDateRange(days) {
+  state.presetDays=days==='all'?null:Number(days);
+  state.filters.from=days==='all'?'':daysAgo(Number(days)-1,undefined,zone());
+  state.filters.to=days==='all'?'':daysAgo(0,undefined,zone());
+  document.querySelectorAll('[data-days]').forEach(button=>{const selected=button.dataset.days===String(days);button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));});
+  $('date-from').value=state.filters.from;$('date-to').value=state.filters.to;state.visible=18;refreshFeed();
+}
 function switchView(view) {
   if(view==='sources'&&!showSources) return;
+  $('feed-snapshot').hidden=view!=='feed';
   state.view=view;$('feed-view').hidden=view!=='feed';$('sources-view').hidden=view!=='sources';$('pricing-view').hidden=view!=='pricing';
   const url=new URL(location.href);url.hash=view==='pricing'?'pricing':view==='sources'?'sources':'';history.replaceState(null,'',url);
   for(const [id,name] of [['feed-nav','feed'],['pricing-nav','pricing'],['sources-nav','sources']]){$(id).classList.toggle('selected',view===name);if(view===name)$(id).setAttribute('aria-current','page');else $(id).removeAttribute('aria-current');}
@@ -122,7 +131,7 @@ async function detail(id) {
     if(!event) throw failure('relatedUnavailable');
     state.detailId=id;
     const content=eventContent(event,language);
-    $('dialog-content').innerHTML=`<div class="card-meta">${tags(event)}<span class="kind-tag ${escape(event.kind)}">${labels().kind[event.kind]}</span></div><h2 id="dialog-title" class="dialog-title" lang="${content.lang}">${escape(content.title)}</h2>${eventDetails(event)}`;
+    $('dialog-content').innerHTML=`<div class="card-meta">${tags(event)}<span class="kind-tag ${escape(event.kind)}">${labels().kind[event.kind]}</span></div><h2 id="dialog-title" class="dialog-title" lang="${content.lang}">${escape(content.title)}</h2>${eventDetails(event,{standalone:true})}`;
     if(!$('event-dialog').open) $('event-dialog').showModal();
   }catch(e){error(e);}
 }
@@ -145,7 +154,9 @@ function applyLanguage() {
   if(state.unavailable){$('snapshot-time').textContent=t('unavailable');$('feed-list').textContent=t('retry');}
 }
 function renderSnapshot() {
-  $('snapshot-time').textContent=t('snapshot',{time:formatEventTime(state.index.generated_at,'datetime',language)});
+  const fullTime=formatEventTime(state.index.generated_at,'datetime',language);
+  $('snapshot-time').innerHTML=`<span aria-hidden="true">${escape(t('snapshot',{time:fullTime.slice(5)}))}</span><span class="sr-only">${escape(t('snapshot',{time:fullTime}))}</span>`;
+  $('snapshot-time').title=fullTime;
   $('source-count').textContent=state.catalog.sources.length;
   const summary=coverageSummary(state.coverage.sources);
   const stale=Date.now()-new Date(state.index.generated_at).getTime()>48*3600000;
@@ -186,9 +197,9 @@ function bind() {
   $('kind-filter').addEventListener('change',e=>{state.filters.kind=e.target.value;state.visible=18;refreshFeed();});
   $('feed-list').addEventListener('toggle',e=>{if(!e.target.matches('details[data-event-id]'))return;const id=e.target.dataset.eventId;if(e.target.open)state.expanded.add(id);else state.expanded.delete(id);},true);
   let debounce; $('search-input').addEventListener('input',e=>{clearTimeout(debounce);debounce=setTimeout(()=>{state.filters.query=e.target.value;state.visible=18;refreshFeed();},160);});
-  document.querySelectorAll('[data-days]').forEach(button=>button.addEventListener('click',()=>{const days=button.dataset.days;state.presetDays=days==='all'?null:Number(days);state.filters.from=days==='all'?'':daysAgo(Number(days)-1,undefined,zone());state.filters.to=days==='all'?'':daysAgo(0,undefined,zone());document.querySelectorAll('[data-days]').forEach(b=>b.classList.toggle('selected',b===button));$('date-from').value=state.filters.from;$('date-to').value=state.filters.to;state.visible=18;refreshFeed();}));
+  document.querySelectorAll('[data-days]').forEach(button=>button.addEventListener('click',()=>setDateRange(button.dataset.days)));
   $('custom-date').addEventListener('click',()=>{$('custom-range').hidden=!$('custom-range').hidden;$('custom-date').setAttribute('aria-expanded',String(!$('custom-range').hidden));});
-  $('date-apply').addEventListener('click',()=>{const from=$('date-from').value,to=$('date-to').value;if(from&&to&&from>to){error(failure('dateError'));return;}$('error-box').hidden=true;state.filters.from=from;state.filters.to=to;state.presetDays=null;document.querySelectorAll('[data-days]').forEach(b=>b.classList.remove('selected'));state.visible=18;refreshFeed();});
+  $('date-apply').addEventListener('click',()=>{const from=$('date-from').value,to=$('date-to').value;if(from&&to&&from>to){error(failure('dateError'));return;}$('error-box').hidden=true;state.filters.from=from;state.filters.to=to;state.presetDays=null;document.querySelectorAll('[data-days]').forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-pressed','false');});state.visible=18;refreshFeed();});
   $('more-button').addEventListener('click',()=>{state.visible+=18;renderFeed();});
   $('source-search').addEventListener('input',renderSources);
   document.addEventListener('click',e=>{const button=e.target.closest('[data-detail]');if(button) detail(button.dataset.detail);});

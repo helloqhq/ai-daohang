@@ -83,7 +83,7 @@ export function renderPricing(plans,language='zh',now=new Date(),filters={offer:
       const uses=(plan.use_cases||[]).map(value=>t(`pricingUse_${value}`)).join(' · ');
       return `<tr data-pricing-plan="${escape(plan.id)}"><th scope="row"><strong>${escape(api?plan.name:plan.tier_name)}</strong>${statusHTML}${uses?`<span class="pricing-use-cases">${uses}</span>`:''}${api?`<span class="pricing-scope">${escape(text(plan,'scope',language))}</span>`:''}</th>${price}${models}${api?'':`<td class="pricing-quota">${escape(text(plan,'scope',language))}</td>`}<td class="pricing-terms">${terms}</td></tr>`;
     }).join('');
-    return `<section class="pricing-section" data-pricing-product="${escape(api?'api':group.product_id)}" aria-label="${escape(provider.provider)} · ${title}"><div class="pricing-section-heading"><h4 id="${headingID}">${title} <span>${api?'':t(categoryKey[category])+' · '}${t('pricingResults',{count:records.length})}</span></h4><span>${t(api?'pricingAPIUnit':'pricingPlanUnit')}</span></div><p class="pricing-scroll-hint">${t('pricingScroll')}</p><div class="pricing-table-wrap" tabindex="0" role="region" aria-label="${escape(provider.provider)} · ${title} · ${t('pricingTable')}"><table class="pricing-table ${api?'pricing-api-table':'pricing-plan-table'}"><caption class="sr-only">${escape(provider.provider)} · ${title} · ${t(api?'pricingAPIUnit':'pricingPlanUnit')}</caption><thead><tr>${headings.map(key=>`<th scope="col">${t(key)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></section>`;
+    return `<section class="pricing-section" data-pricing-product="${escape(api?'api':group.product_id)}" aria-label="${escape(provider.provider)} · ${title}"><div class="pricing-section-heading"><h4 id="${headingID}">${title} <span>${api?'':t(categoryKey[category])+' · '}${t('pricingResults',{count:records.length})}</span></h4><span>${t(api?'pricingAPIUnit':'pricingPlanUnit')}</span></div><div class="pricing-table-wrap" tabindex="0" role="region" aria-label="${escape(provider.provider)} · ${title} · ${t('pricingTable')}"><table class="pricing-table ${api?'pricing-api-table':'pricing-plan-table'}"><caption class="sr-only">${escape(provider.provider)} · ${title} · ${t(api?'pricingAPIUnit':'pricingPlanUnit')}</caption><thead><tr>${headings.map(key=>`<th scope="col">${t(key)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></section>`;
     }).join('');
     return `<section class="pricing-vendor" data-pricing-provider="${escape(provider.provider)}" aria-labelledby="pricing-vendor-${providerIndex}"><div class="pricing-vendor-heading"><h3 id="pricing-vendor-${providerIndex}">${escape(provider.provider)}</h3><span>${t('pricingResults',{count:provider.groups.reduce((count,group)=>count+group.plans.length,0)})}</span></div>${sections}</section>`;
   }).join('');
@@ -95,6 +95,12 @@ export function createPricingView(getLanguage) {
   const filters={...defaults};
   let data=null,loading=false,failed=false;
   const t=(key,values)=>translate(getLanguage(),key,values);
+  function updateScrollHints() {
+    const tables=[...$('pricing-list').querySelectorAll('.pricing-table-wrap')].map(wrap=>({wrap,overflow:wrap.scrollWidth>wrap.clientWidth+1}));
+    for(const {wrap,overflow} of tables) wrap.classList.toggle('is-scrollable',overflow);
+    $('pricing-scroll-hint').hidden=!tables.some(table=>table.overflow);
+  }
+  new ResizeObserver(updateScrollHints).observe($('pricing-list'));
   function render() {
     if(!data) {
       $('pricing-list').innerHTML=failed?`<div class="empty-state" role="alert"><h3>${t('pricingLoadError')}</h3><button type="button" data-pricing-retry>${t('pricingRetry')}</button></div>`:`<div class="loading-state">${t('pricingLoading')}</div>`;
@@ -110,6 +116,7 @@ export function createPricingView(getLanguage) {
     $('pricing-offer-kind').value=filters.offerKind;
     const plans=filterPlans(data.plans,filters,now);
     $('pricing-list').innerHTML=renderPricing(plans,getLanguage(),now,filters);
+    updateScrollHints();
     $('pricing-result-count').textContent=t('pricingResults',{count:plans.length});
     for(const button of document.querySelectorAll('[data-pricing-category]')) {
       const selected=button.dataset.pricingCategory===filters.category;

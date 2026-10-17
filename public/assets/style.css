@@ -199,6 +199,7 @@ select{max-width:100%;color:var(--muted);background:var(--paper);border:1px soli
 footer{padding:22px 0 28px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
 footer .brand-name{font-size:12px;font-weight:500}
 .footer-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 22px}
+.footer-clock{font-variant-numeric:tabular-nums;white-space:nowrap}
 .footer-links a,.footer-links button{padding:8px 0;font-size:11px}
 .cookie-banner{position:fixed;inset:auto 0 0;z-index:20;background:var(--card);border-top:1px solid #3c4a60;box-shadow:0 -12px 40px #0004}
 .cookie-banner-inner{width:min(1184px,calc(100% - 64px));margin:auto;display:flex;align-items:center;gap:48px;padding:24px 0}

@@ -1,6 +1,6 @@
 import {createEventRenderer,escape,safeURL} from './render.js';
-import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventTime,followingObjects} from './model.js';
-import {resolveLanguage,translate,LABELS,eventContent,coverageNote} from './i18n.js';
+import {dateKey,daysAgo,filterEvents,relevantMonths,coverageSummary,formatEventTime,formatClock,followingObjects} from './model.js';
+import {resolveLanguage,translate,LABELS,eventContent,coverageNote,CLOCK_ZONES} from './i18n.js';
 import {createPrivacyPreferences,initCookieControls} from './privacy.js';
 import {createPricingView} from './pricing.js';
 const preferences=createPrivacyPreferences();
@@ -15,6 +15,9 @@ const $ = id => document.getElementById(id);
 const pricingView=createPricingView(()=>language);
 const formatDate = value => {const d = dateKey(value);return d ? d.replaceAll('-','.') : t('dateUnknown');};
 const eventTime = event => formatEventTime(event.published_at,event.date_precision,language);
+let clockTimer;
+function renderClock(){const el=$('footer-clock');if(el)el.textContent=t('clock',{time:formatClock(new Date(),CLOCK_ZONES[language])});}
+function scheduleClock(){clearTimeout(clockTimer);if(document.hidden)return;renderClock();clockTimer=setTimeout(scheduleClock,60000-Date.now()%60000+50);}
 const state = {expanded:new Set(),catalog:null,index:null,coverage:null,events:new Map(),loaded:new Set(),filters:{category:'all',entity:'',kind:'',query:'',from:daysAgo(6),to:daysAgo(0)},visible:18,request:0,view:'feed',detailId:null,error:null,ready:false,unavailable:false};
 async function json(path, suffix='') {
   const response = await fetch(new URL(`data/${path}${suffix}`,document.baseURI),{cache:'no-cache'});
@@ -152,13 +155,14 @@ function setLanguage(next) {
   language=next;
   preferences.rememberLanguage(language);
   const url=new URL(location.href);url.searchParams.set('lang',language);history.replaceState(null,'',url);
-  applyLanguage();
+  applyLanguage();renderClock();
   if(state.ready){fillEntities();renderSnapshot();renderFeed();if(state.view==='sources')renderSources();}
   if($('event-dialog').open&&state.detailId){detail(state.detailId);$('event-dialog').scrollTop=dialogScroll;}
   window.scrollTo(0,scrollY);
 }
 function bind() {
   $('sources-nav').hidden=!showSources;
+  document.addEventListener('visibilitychange',scheduleClock);
   document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.language)));
   $('event-dialog').addEventListener('close',()=>{state.detailId=null;});
   $('feed-nav').addEventListener('click',()=>switchView('feed'));$('sources-nav').addEventListener('click',()=>switchView('sources'));
@@ -181,7 +185,7 @@ function bind() {
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!document.querySelector('dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();if(state.view==='pricing')$('pricing-search').focus();else{switchView('feed');$('search-input').focus();}}});
 }
 async function init() {
-  bind();applyLanguage();$('date-from').value=state.filters.from;$('date-to').value=state.filters.to;
+  bind();applyLanguage();scheduleClock();$('date-from').value=state.filters.from;$('date-to').value=state.filters.to;
   if(location.hash==='#pricing') switchView('pricing');
   for(let attempt=0;attempt<2;attempt++){
     try {

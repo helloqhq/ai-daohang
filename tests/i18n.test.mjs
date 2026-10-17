@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {resolveLanguage,translate,eventContent,coverageNote} from '../public/assets/i18n.js';
+import {resolveLanguage,translate,eventContent,coverageNote,CLOCK_ZONES} from '../public/assets/i18n.js';
 import {filterEvents} from '../public/assets/model.js';
 
 test('explicit URL language wins over preference; invalid values keep a safe default',()=>{
@@ -31,4 +31,9 @@ test('counts and source coverage notes use the selected language',()=>{
   assert.equal(coverageNote({note:'RSS 订阅待配置'},'en'),'RSS feed not configured.');
   assert.equal(coverageNote({note:'RSS HTTP 403'},'en'),'RSS HTTP 403');
   assert.equal(coverageNote({note:'新的说明',note_en:'New note'},'en'),'New note');
+});
+test('footer clock label and zone follow the interface language',()=>{
+  assert.equal(translate('zh','clock',{time:'10-17 14:32'}),'北京时间 10-17 14:32');
+  assert.equal(translate('en','clock',{time:'10-16 23:32'}),'Pacific Time 10-16 23:32');
+  assert.deepEqual(CLOCK_ZONES,{zh:'Asia/Shanghai',en:'America/Los_Angeles'});
 });

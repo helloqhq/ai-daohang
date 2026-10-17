@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {filterEvents,relevantMonths,dateKey,coverageSummary,followingObjects,formatEventTime} from '../public/assets/model.js';
+import {filterEvents,relevantMonths,dateKey,coverageSummary,followingObjects,formatEventTime,formatClock} from '../public/assets/model.js';
 const catalog={entities:[{id:'pi',name:'Pi',aliases:['pi agent harness'],category:'agent'},{id:'openai',name:'OpenAI',aliases:[],category:'model'}]};
 const event=(id,date,entity,kind='update')=>({id,published_at:date,entity_ids:[entity],kind,title_zh:'测试',summary_zh:'支持 MCP',key_points_zh:['权限控制'],topics:['critical_fix']});
 const events=[event('a','2026-09-30T20:00:00Z','pi'),event('b','2026-10-02','openai','preview')];
@@ -47,4 +47,12 @@ test('hour display uses Shanghai time without inventing hours for date-only sour
  assert.equal(formatEventTime('2026-10-03','date','zh'),'2026-10-03');
  assert.equal(formatEventTime('2026-10-03T00:00:00Z','date','zh'),'2026-10-03');
  assert.equal(formatEventTime(null,'unknown','zh'),'日期待核实');
+});
+test('footer clock combines month-day and HH:mm per zone across midnight and DST',()=>{
+ assert.equal(formatClock('2026-10-17T06:32:00Z','Asia/Shanghai'),'10-17 14:32');
+ assert.equal(formatClock('2026-10-17T06:32:00Z','America/Los_Angeles'),'10-16 23:32');
+ assert.equal(formatClock('2026-10-17T07:00:00Z','America/Los_Angeles'),'10-17 00:00');
+ assert.equal(formatClock('2026-11-01T08:59:00Z','America/Los_Angeles'),'11-01 01:59');
+ assert.equal(formatClock('2026-11-01T09:00:00Z','America/Los_Angeles'),'11-01 01:00');
+ assert.equal(formatClock(null,'Asia/Shanghai'),'');
 });

@@ -13,6 +13,14 @@ export function formatEventTime(value, precision = 'datetime', language = 'zh') 
   const hour = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Shanghai',hour:'2-digit',hourCycle:'h23'}).format(new Date(value));
   return `${date} ${hour}${language === 'en' ? 'h' : '时'}`;
 }
+export function formatClock(value, timeZone) {
+  if (!value) return '';
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return '';
+  const date = new Intl.DateTimeFormat('en-CA',{timeZone,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
+  const time = new Intl.DateTimeFormat('en-GB',{timeZone,hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(d);
+  return `${date.slice(5)} ${time}`;
+}
 export function followingObjects(catalog) {
   return [
     ...catalog.entities.filter(e => e.enabled !== false).map(e => ({...e,category:e.kind === 'api_platform' ? 'platform' : e.category})),

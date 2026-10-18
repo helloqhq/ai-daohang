@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "a762269c6b3d38f8",
+  "snapshot_id": "d0380a16e9445415",
   "events": [
     {
       "id": "deepseek-harness-v021rc2",
@@ -1489,6 +1489,48 @@
           "material_scope": "full_text",
           "published_at": "2026-10-15T17:21:22Z",
           "date_kind": "updated"
+        }
+      ]
+    },
+    {
+      "id": "antigravity-biomolecular-viewer-20261015",
+      "entity_ids": [
+        "google",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Google Antigravity 加入生物分子结构查看器，支持研究者与 Agent 共享三维视图",
+      "title_en": "Google Antigravity adds a biomolecular viewer with a shared 3D state for researchers and agents",
+      "summary_zh": "Google 展示用 Antigravity 联合 UniProt、ProtNLM 与结构分析寻找抗菌肽候选物的工作流，并推出内嵌的生物分子结构查看器。Agent 可驱动三维视图，研究者对残基的高亮和结合位点的批注也会同步回 Agent。文中候选物仍在进行湿实验验证，不能视为已证实有效的疗法。",
+      "summary_en": "Google demonstrates an Antigravity workflow combining UniProt, ProtNLM and structural analysis to identify antimicrobial peptide candidates, and introduces an embedded biomolecular structure viewer. Agents can control the 3D view, while researchers’ residue highlights and binding-site annotations are synchronized back to the agent. The candidate is undergoing wet-lab validation and is not a proven therapy.",
+      "key_points_zh": [
+        "内嵌查看器可载入 AlphaFold Database 结构或研究者自己的预测，双方共享视觉上下文。",
+        "研究者引导科学策略，Agent 执行跨数据库编排、结构分析与文献综合。",
+        "候选物只有计算与结构依据，仍需湿实验验证。"
+      ],
+      "key_points_en": [
+        "The embedded viewer loads AlphaFold Database structures or researchers’ own predictions into shared visual context.",
+        "Researchers guide scientific strategy while agents orchestrate databases, structural analysis and literature synthesis.",
+        "The candidate has computational and structural support but still requires wet-lab validation."
+      ],
+      "importance_reason_zh": "新增可双向同步的专业三维工具，扩展 Agent 与研究者共同分析科学对象的能力。",
+      "importance_reason_en": "A new professional 3D tool with two-way state synchronization extends how agents and researchers analyze scientific objects together.",
+      "published_at": "2026-10-15T16:08:03+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-18T07:13:27+00:00",
+      "updated_at": "2026-10-18T07:21:27+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+          "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+          "collected_at": "2026-10-18T07:13:27+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15T16:08:03+00:00"
         }
       ]
     },
@@ -3576,6 +3618,44 @@
           "material_scope": "partial_text",
           "published_at": "2026-10-13T02:59:24+00:00",
           "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "demis-clinical-research-milestone-20261013",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Demis Hassabis 赞研究走向临床应用，并祝贺团队的《柳叶刀》论文",
+      "title_en": "Demis Hassabis welcomes research reaching clinical use and congratulates a team on its Lancet paper",
+      "summary_zh": "Demis Hassabis 发帖称，很高兴看到研究从实验室走向现实临床用途，并祝贺团队取得里程碑及发表《柳叶刀》论文。已取得的帖子文字没有说明具体项目、适应症或临床结果，本站不补充这些细节。",
+      "summary_en": "Demis Hassabis says it is exciting to see research move from the laboratory to real-world clinical utility, congratulating a team on its milestone and Lancet paper. The available post text does not identify the project, indication or clinical results; those details are not inferred.",
+      "key_points_zh": [
+        "这是 Hassabis 本人的研究进展评论。",
+        "来源仅为帖子部分文字，不代表已核验论文内容或临床效果。"
+      ],
+      "key_points_en": [
+        "This is Hassabis’s own comment on research progress.",
+        "The source is partial post text, not verification of the paper or its clinical outcomes."
+      ],
+      "importance_reason_zh": "保留已核实 AI 负责人的一手研究进展观点，并明确证据范围。",
+      "importance_reason_en": "Preserves a verified AI leader’s firsthand view of research progress while stating the limits of the evidence.",
+      "published_at": "2026-10-13T01:09:37+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-16T01:29:22+00:00",
+      "updated_at": "2026-10-18T07:21:27+00:00",
+      "sources": [
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2109813775377563908",
+          "url": "https://x.com/demishassabis/status/2109813775377563908",
+          "collected_at": "2026-10-16T01:29:22+00:00",
+          "material_scope": "partial_text",
+          "published_at": "2026-10-13T01:09:37+00:00"
         }
       ]
     },

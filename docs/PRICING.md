@@ -8,6 +8,8 @@
 
 ## 数据与核验
 
+2026-10-18 新增 Google AI / Antigravity 五档共享订阅和 B.AI 三个 API 模型，目录共 125 项（API 55、Token Plan 18、Agent 52）。OpenCode 免费表扩展至 14 个已核实端点，补充 B.AI 活动信源与四条折扣；明确 Devin SWE-2 免费期已结束，并恢复核实 Kiro K3 地域表。12 项保留原价格核验日期，6 项仍待核价、3 项旧 Gemini CLI 入口仍暂停。详见 [本轮更新记录](DATA-UPDATE-2026-10-18.md)。
+
 2026-10-16 复核全部目录，新增硅基流动 DeepSeek V4.1 Flash，共 117 项（API 52、Token Plan 18、Agent 47）。更新 OpenCode Step 5 的计费与端点、Kiro K3 / Sonnet 4 生命周期、Cursor Muse Wonder、Copilot 退役预告和 WorldRouter 非高峰日历；6 项保留原价格核验日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-16.md)。
 
 2026-10-15 复核全部目录，新增 Google / B.AI Gemini 4 Argon，共 116 项（API 51、Token Plan 18、Agent 47）。同步 Cursor 新套餐模型、年付及 Grok API 单独计费条件、OpenCode Go 新模型额度、Copilot / Devin Argon 权益及 Codex Pro 条件；6 项保留原价格核验日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-15.md)。

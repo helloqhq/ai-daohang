@@ -1,12 +1,12 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "a762269c6b3d38f8",
-  "generated_at": "2026-10-17T14:10:07+00:00",
+  "snapshot_id": "d0380a16e9445415",
+  "generated_at": "2026-10-18T07:21:27+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 249,
+      "count": 251,
       "min_date": "2026-10-01T01:34:16Z",
       "max_date": "2026-10-17T08:16:33Z"
     },
@@ -53,6 +53,7 @@
     "openai-rosalind-academic-plan-20261015": "2026-10",
     "openai-gpt-live11-20261015": "2026-10",
     "copilot-cli-v1099-1": "2026-10",
+    "antigravity-biomolecular-viewer-20261015": "2026-10",
     "kilo-nemotron35-super-vl-20261015": "2026-10",
     "tibo-capacity-improvements-day11-20261015": "2026-10",
     "copilot-agentic-autofix-ga-20261015": "2026-10",
@@ -107,6 +108,7 @@
     "musk-grok-memory-transfer-20261013": "2026-10",
     "b-ai-mimo25-migration-20261013": "2026-10",
     "jeff-dean-ai-research-events-20261013": "2026-10",
+    "demis-clinical-research-milestone-20261013": "2026-10",
     "copilot-cli-1097-2": "2026-10",
     "tibo-day8-reset-20261013": "2026-10",
     "kilo-789-preview": "2026-10",
@@ -275,5 +277,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 255
+  "total_events": 257
 }

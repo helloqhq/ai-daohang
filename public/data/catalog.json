@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "a762269c6b3d38f8",
+  "snapshot_id": "d0380a16e9445415",
   "entities": [
     {
       "id": "openai",
@@ -593,6 +593,36 @@
       "kind": "model_brand",
       "enabled": true,
       "color": "#bc6037"
+    },
+    {
+      "id": "antigravity",
+      "name": "Google Antigravity",
+      "name_en": "Google Antigravity",
+      "aliases": [
+        "Antigravity",
+        "Google Antigravity",
+        "Antigravity CLI",
+        "Antigravity SDK"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#426cb4",
+      "pricing_product_ids": [
+        "google-ai-antigravity"
+      ],
+      "admission": {
+        "ai_relevance_zh": "Google 的 Agent 开发平台，提供桌面应用、CLI、IDE 扩展和 SDK。",
+        "ai_relevance_en": "Google’s agent development platform with a desktop app, CLI, IDE extensions and SDK.",
+        "influence_reason_zh": "Google 官方将 Gemini CLI 个人用户迁移至 Antigravity；DeepMind 展示其在抗菌肽发现流程中的使用及共享三维结构查看器。",
+        "influence_reason_en": "Google directs Gemini CLI consumers to Antigravity; DeepMind demonstrates its use in antimicrobial peptide discovery and a shared 3D structure viewer.",
+        "evidence_urls": [
+          "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+          "https://antigravity.google/"
+        ],
+        "checked_at": "2026-10-18"
+      }
     }
   ],
   "sources": [
@@ -1830,7 +1860,8 @@
       "name_en": "Google Developers Blog",
       "entity_ids": [
         "google",
-        "gemini-cli"
+        "gemini-cli",
+        "antigravity"
       ],
       "url": "https://developers.googleblog.com/",
       "platform": "web",
@@ -1850,7 +1881,12 @@
       "feed_verified_at": "2026-10-06",
       "offline_conversion": true,
       "subscription_note": "官方 RSS 未提供条目日期，按需转换官方文章补充发布日期和正文；日期核实前不进入动态，完整时间窗未确认。",
-      "subscription_note_en": "The official RSS omits entry dates. On-demand conversion supplements publication dates and text from official articles. Undated items stay out of the news snapshot; the full window remains unconfirmed."
+      "subscription_note_en": "The official RSS omits entry dates. On-demand conversion supplements publication dates and text from official articles. Undated items stay out of the news snapshot; the full window remains unconfirmed.",
+      "maintenance": {
+        "checked_at": "2026-10-18",
+        "reason_zh": "补充已核实的 Antigravity 产品关联；原生订阅缺日期的条目继续由既有离线转换器补充，不改变完整覆盖语义。",
+        "reason_en": "Add the verified Antigravity product association. Existing offline conversion still supplies missing dates from the native feed; complete-window coverage semantics are unchanged."
+      }
     },
     {
       "id": "copilot-changelog",
@@ -2006,6 +2042,33 @@
       "subscription_note": "WorldRouter 官网反链至 WorldClaw 官方账号；关注 Router 模型接入、价格和服务变化，其他产品内容按相关性筛选。匿名页本轮解析5 条本人帖子及日期，不保证完整时间线。尚未执行正式采集。",
       "subscription_note_en": "WorldRouter links to the official WorldClaw account. Router model access, pricing and service changes are followed; other products are filtered for relevance. This check parsed five posts with dates, not a complete timeline. Formal collection has not run.",
       "account_handle": "WorldClawAI"
+    },
+    {
+      "id": "antigravity-blog",
+      "name": "Google Antigravity 官方博客",
+      "name_en": "Google Antigravity Blog",
+      "entity_ids": [
+        "antigravity",
+        "google"
+      ],
+      "url": "https://antigravity.google/blog",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://antigravity.google/blog",
+      "capabilities": {
+        "list": true,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://antigravity.google/blog/rss.xml",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-18",
+      "subscription_note": "官网博客直接链接的原生 RSS；按订阅实际内容和查询窗口记录覆盖，不能代替全部产品更新渠道。",
+      "subscription_note_en": "Native RSS linked directly by the official blog. Coverage follows the actual feed contents and query window; it does not cover every product update channel.",
+      "feed_verified_at": "2026-10-18"
     }
   ],
   "people": [

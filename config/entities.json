@@ -592,6 +592,36 @@
       "kind": "model_brand",
       "enabled": true,
       "color": "#bc6037"
+    },
+    {
+      "id": "antigravity",
+      "name": "Google Antigravity",
+      "name_en": "Google Antigravity",
+      "aliases": [
+        "Antigravity",
+        "Google Antigravity",
+        "Antigravity CLI",
+        "Antigravity SDK"
+      ],
+      "category": "agent",
+      "kind": "application",
+      "enabled": true,
+      "color": "#426cb4",
+      "pricing_product_ids": [
+        "google-ai-antigravity"
+      ],
+      "admission": {
+        "ai_relevance_zh": "Google 的 Agent 开发平台，提供桌面应用、CLI、IDE 扩展和 SDK。",
+        "ai_relevance_en": "Google’s agent development platform with a desktop app, CLI, IDE extensions and SDK.",
+        "influence_reason_zh": "Google 官方将 Gemini CLI 个人用户迁移至 Antigravity；DeepMind 展示其在抗菌肽发现流程中的使用及共享三维结构查看器。",
+        "influence_reason_en": "Google directs Gemini CLI consumers to Antigravity; DeepMind demonstrates its use in antimicrobial peptide discovery and a shared 3D structure viewer.",
+        "evidence_urls": [
+          "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+          "https://antigravity.google/"
+        ],
+        "checked_at": "2026-10-18"
+      }
     }
   ]
 }

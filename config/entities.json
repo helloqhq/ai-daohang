@@ -107,7 +107,8 @@
       "name_en": "Moonshot AI",
       "pricing_provider": "Kimi",
       "pricing_product_ids": [
-        "kimi-code"
+        "kimi-code",
+        "kimi-membership"
       ]
     },
     {

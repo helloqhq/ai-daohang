@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "d0380a16e9445415",
-  "generated_at": "2026-10-18T07:21:27+00:00",
+  "snapshot_id": "3739105c25bf49b4",
+  "generated_at": "2026-10-19T15:36:54+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 251,
+      "count": 256,
       "min_date": "2026-10-01T01:34:16Z",
-      "max_date": "2026-10-17T08:16:33Z"
+      "max_date": "2026-10-19"
     },
     {
       "month": "2026-09",
@@ -19,6 +19,9 @@
     }
   ],
   "event_locations": {
+    "minimax-m31-flash-20261019": "2026-10",
+    "deeptutor-v1615": "2026-10",
+    "anthropic-public-benefit-fund-20261018": "2026-10",
     "deepseek-harness-v021rc2": "2026-10",
     "deepseek-harness-v021rc1": "2026-10",
     "cline-v00048-v3073-sdk0095": "2026-10",
@@ -67,6 +70,8 @@
     "kiro-kimi-k3-preview-20261015": "2026-10",
     "kiro-ide-markdown-review-20261015": "2026-10",
     "qoder-v048": "2026-10",
+    "trae-v341-v344-20261015": "2026-10",
+    "anthropic-independent-evaluators-20261015": "2026-10",
     "kilo-jetbrains-7110rc4": "2026-10",
     "kilo-v7810-preview": "2026-10",
     "copilot-hydrafusion-max-20261014": "2026-10",
@@ -277,5 +282,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 257
+  "total_events": 262
 }

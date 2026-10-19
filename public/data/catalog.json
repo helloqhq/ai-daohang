@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "d0380a16e9445415",
+  "snapshot_id": "3739105c25bf49b4",
   "entities": [
     {
       "id": "openai",
@@ -108,7 +108,8 @@
       "name_en": "Moonshot AI",
       "pricing_provider": "Kimi",
       "pricing_product_ids": [
-        "kimi-code"
+        "kimi-code",
+        "kimi-membership"
       ]
     },
     {

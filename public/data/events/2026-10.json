@@ -1,7 +1,145 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "d0380a16e9445415",
+  "snapshot_id": "3739105c25bf49b4",
   "events": [
+    {
+      "id": "minimax-m31-flash-20261019",
+      "entity_ids": [
+        "minimax"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "MiniMax M3.1 Flash 发布：面向 Agent 任务，API 输入每百万 tokens $0.15",
+      "title_en": "MiniMax launches M3.1 Flash for agentic tasks at $0.15 per million input tokens",
+      "summary_zh": "MiniMax 正式推出 M3.1 Flash，称其在复杂 Agent 任务、编程、Computer Use 和网络安全上大幅提升，在线推理速度接近前代三倍、整体使用成本降低 70%。模型已通过 MiniMax API、M Plan 和 MiniMax Code 提供，权重将稍后发布，Pro 版本也在后续推出。",
+      "summary_en": "MiniMax officially launches M3.1 Flash, claiming major gains in complex agentic tasks, coding, computer use and cybersecurity, with online inference nearly three times faster and overall usage costs 70% lower than its predecessor. The model is available through the MiniMax API, M Plan and MiniMax Code; weights will be released later, and a Pro version will follow.",
+      "key_points_zh": [
+        "官方基准：AutomationBench-AA 居前列，BankerToolBench 76.2，DeepSWE v1.1 73.7%，OSWorld V2 61.7，Agents' Last Exam 29.6，CyberGym 82%。",
+        "官方称其在 OSWorld V2 与 ALE 上均位列中国模型第一。",
+        "通过更激进的稀疏化优化推理，输出速度可达 200+ TPS，P50 稳定在 170+ TPS。",
+        "API 统一计价为每百万 tokens 输入 $0.15、输出 $0.60、缓存输入 $0.015。",
+        "已通过 MiniMax API、M Plan 与 MiniMax Code 提供；模型权重将稍后发布，Pro 版本也将推出。"
+      ],
+      "key_points_en": [
+        "Official benchmarks: near the top on AutomationBench-AA, 76.2 on BankerToolBench, 73.7% on DeepSWE v1.1, 61.7 on OSWorld V2, 29.6 on Agents' Last Exam and 82% on CyberGym.",
+        "MiniMax says it ranks first among Chinese models on both OSWorld V2 and ALE.",
+        "More aggressive sparsity optimization enables output speeds of 200+ TPS, with a median (P50) of 170+ TPS.",
+        "Flat API pricing is $0.15 input, $0.60 output and $0.015 cached input per million tokens.",
+        "Available through the MiniMax API, M Plan and MiniMax Code; model weights will be released later, and a Pro version will follow."
+      ],
+      "importance_reason_zh": "新模型发布并伴随显著降价，直接影响 Agent 应用的模型选型与 API 成本。",
+      "importance_reason_en": "A new model release with a significant price cut that directly affects model selection and API costs for agent applications.",
+      "published_at": "2026-10-19",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-19T15:30:39+00:00",
+      "updated_at": "2026-10-19T15:35:00Z",
+      "sources": [
+        {
+          "source_id": "minimax-official",
+          "content_id": "https://www.minimax.io/blog/minimax-m31f",
+          "url": "https://www.minimax.io/blog/minimax-m31f",
+          "collected_at": "2026-10-19T15:30:39+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "id": "deeptutor-v1615",
+      "entity_ids": [
+        "deeptutor"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "DeepTutor 1.6.15：引导式学习支持改组问题、受限辅导记忆与原生 Gemini 语音",
+      "title_en": "DeepTutor 1.6.15 adds grouped questions, bounded tutoring memory and native Gemini speech",
+      "summary_zh": "DeepTutor 发布 1.6.15，改进 Guided Learning 的大纲调整、独立评分题组与受限辅导记忆，增强流式会话恢复和文档解析隔离，并新增检索对比实验、工作区指令与原生 Gemini 语音。",
+      "summary_en": "DeepTutor releases 1.6.15, improving Guided Learning with outline revisions, independently graded question groups and bounded tutoring memory, strengthening stream recovery and document-parsing isolation, and adding retrieval comparison experiments, workspace instructions and native Gemini speech.",
+      "key_points_zh": [
+        "Guided Learning 支持提交前预览模块重排、跨模块协同修改；导师可按 2 至 4 题一组呈现问题，保留部分提交并独立评分。",
+        "受限记忆保留教学偏好、未解决误解和来源锚点；用量总计纳入准备与记忆压缩调用，压缩单独计费。",
+        "流式内容定期保存以便恢复，未发送消息在服务端确认前保留可恢复副本，设置草稿在目录写入失败后仍保留。",
+        "可选查询改写层生成单一搜索查询并在失败时回退原文；新增 kb eval 与 eval-diff 记录改写来源并比较指标。",
+        "Gemini TTS 改用原生 generateContent 语音；onomeo 加入 OpenAI 兼容 provider 目录；可选 guard 附加组件默认关闭。",
+        "升级方式为 pip install -U deeptutor 或拉取最新 Docker 镜像，升级后需重启服务。"
+      ],
+      "key_points_en": [
+        "Guided Learning lets users preview module reordering before committing and apply coordinated changes across modules; tutors can present two to four questions as a group, retain partial submissions and grade each answer independently.",
+        "Bounded memory retains teaching preferences, unresolved misunderstandings and source anchors; usage totals now include preparation and memory-compression calls, with compression billed separately.",
+        "Streamed content is saved periodically for recovery, unsent messages keep recoverable copies until the server acknowledges their dismissal, and settings drafts survive failed catalog writes.",
+        "An optional query-rewrite layer produces one search query and falls back to the original on failure; new kb eval and eval-diff commands record rewrite provenance and compare metrics.",
+        "Gemini TTS uses native generateContent speech; onomeo joins the OpenAI-compatible provider catalog; the optional guard extra is disabled by default.",
+        "Upgrade with pip install -U deeptutor or pull the latest Docker image, then restart running services."
+      ],
+      "importance_reason_zh": "学习型 Agent 的功能与可靠性更新，并改变了用量统计与压缩计费口径。",
+      "importance_reason_en": "A feature and reliability update for a learning agent that also changes usage accounting and compression billing.",
+      "published_at": "2026-10-18T20:13:23Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-19T15:28:23+00:00",
+      "updated_at": "2026-10-19T15:35:00Z",
+      "sources": [
+        {
+          "source_id": "deeptutor-releases",
+          "content_id": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.6.15",
+          "url": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.6.15",
+          "collected_at": "2026-10-19T15:30:39+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-18T20:13:23Z"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-public-benefit-fund-20261018",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Anthropic 设立公共福利基金：初期承诺 5% 股份，随估值增长追加",
+      "title_en": "Anthropic creates Public Benefit Fund with an initial 5% share commitment that grows with valuation",
+      "summary_zh": "Anthropic 宣布将部分公司股份投入新设的 Anthropic Public Benefit Fund。在股东批准的前提下，初期承诺 5% 股份；公司估值每较设定基准增长 50%，董事会可酌情追加 2%。基金为全资 LLC，所持股份不用于游说或政治捐赠。",
+      "summary_en": "Anthropic announces that it will commit part of its shares to the newly created Anthropic Public Benefit Fund. Subject to stockholder approval, it will initially commit 5% of shares, with an additional 2% at the board's discretion for every 50% increase in company value above a set baseline. The fund is a wholly owned LLC, and its shares will not be used for lobbying or political giving.",
+      "key_points_zh": [
+        "初期承诺 5% 股份；公司估值每较基准增长 50%，董事会可酌情追加 2%。",
+        "基金为 Anthropic 全资 LLC，而非 501(c)(3)；所持股份不用于美国或海外游说与政治捐赠。",
+        "官方称基金可用于向传统非营利组织大额捐赠或向特定人群直接分配，并提到 AI 对劳动力市场的影响；Anthropic 此前已承诺 2 亿美元研究应对该问题。",
+        "结合联合创始人与员工已有的股权捐赠承诺，官方称约 20% 的 Anthropic 股份将用于公共利益，另加未来估值里程碑可能追加的部分。",
+        "未来数月将公布基金结构、治理和估值里程碑，并发布公共利益进展报告。"
+      ],
+      "key_points_en": [
+        "An initial 5% share commitment, with the board able to add 2% for every 50% increase in company value above a set baseline.",
+        "The fund is a wholly owned Anthropic LLC rather than a 501(c)(3); the shares it holds will not be used for lobbying or political giving in the US or abroad.",
+        "Anthropic says the fund could make large donations to traditional nonprofits or distribute directly to specific populations, citing labor-market impacts; the company has already committed $200 million to study and address the issue.",
+        "Combined with existing co-founder and employee equity pledges, Anthropic says roughly 20% of its shares will be dedicated to the public good, plus any additional percentage from future valuation milestones.",
+        "Anthropic will share more about the fund's structure, governance and valuation milestones in coming months and publish a public benefit report."
+      ],
+      "importance_reason_zh": "公司治理与公共利益承诺的结构性变化，涉及 AI 行业治理与外部监督讨论。",
+      "importance_reason_en": "A structural change in corporate governance and public-benefit commitments relevant to AI-industry governance and external oversight.",
+      "published_at": "2026-10-18",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-19T15:30:39+00:00",
+      "updated_at": "2026-10-19T15:35:00Z",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/public-benefit-fund",
+          "url": "https://www.anthropic.com/news/public-benefit-fund",
+          "collected_at": "2026-10-19T15:30:39+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-18"
+        }
+      ]
+    },
     {
       "id": "deepseek-harness-v021rc2",
       "entity_ids": [
@@ -2030,6 +2168,95 @@
           "material_scope": "full_text",
           "published_at": "2026-10-15",
           "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "trae-v341-v344-20261015",
+      "entity_ids": [
+        "trae"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "TRAE 3.4.1–3.4.4：TraeWork 对话迁移、统一 @ 引用与企业云任务策略",
+      "title_en": "TRAE 3.4.1–3.4.4 add TraeWork migration, unified @ references and enterprise cloud-task policy",
+      "summary_zh": "TRAE 发布 3.4.1 至 3.4.4 版本，新增从 TraeWork 一键迁移 Agent 对话、聊天框统一 @ 上下文引用、HTML Artifact 富预览分享与企业版云任务策略，并修复 WSL 附件路径等问题。",
+      "summary_en": "TRAE releases versions 3.4.1 through 3.4.4, adding one-click migration of agent conversations from TraeWork, a unified @ context menu, rich previews for shared HTML artifacts and an enterprise cloud-task policy, while fixing issues such as WSL attachment paths.",
+      "key_points_zh": [
+        "支持从 TraeWork 一键迁移 Agent 对话数据，包含自动检测安装、迁移进度、失败重试和迁移后可选卸载。",
+        "聊天输入框支持 @ 触发统一上下文引用菜单，可按类别浏览或搜索文件、文件夹、文档、规则与历史对话。",
+        "HTML Artifact 分享链接可在社交平台和搜索引擎展示标题、描述与缩略图。",
+        "企业版管理员可通过组织策略控制云端任务可用性，禁用时阻止远程会话的输入和发送。",
+        "新增每日签到抽奖，用户可从账户菜单或侧边栏横幅参与并获得积分或优惠券。",
+        "修复 WSL 附件 Windows 路径转换、HTML Artifact 重复显示及长页面图片导出失败提示不清等问题。"
+      ],
+      "key_points_en": [
+        "Agent conversation data can be migrated from TraeWork in one click, including automatic install detection, migration progress, retry on failure and an optional uninstall after migration.",
+        "The chat input supports an @-triggered unified context menu for browsing or searching files, folders, documents, rules and past conversations by category.",
+        "Shared HTML artifact links now show a title, description and thumbnail on social platforms and search engines.",
+        "Enterprise administrators can control cloud-task availability through an organization policy, which blocks input and sending in remote sessions when disabled.",
+        "A daily check-in lottery lets users earn points or coupons from the account menu or sidebar banner.",
+        "Fixes include Windows-to-Linux path conversion for WSL attachments, duplicate HTML artifact cards and unclear errors when exporting long pages as images."
+      ],
+      "importance_reason_zh": "Agent 应用的功能、企业控制与兼容性更新，影响多版本用户迁移和日常使用。",
+      "importance_reason_en": "Feature, enterprise-control and compatibility updates to an agent application that affect migration and daily use across versions.",
+      "published_at": "2026-10-15",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-19T15:30:39+00:00",
+      "updated_at": "2026-10-19T15:35:00Z",
+      "sources": [
+        {
+          "source_id": "trae-official",
+          "content_id": "https://docs.trae.cn/ide_changelog#hFwVMjI6X",
+          "url": "https://docs.trae.cn/ide_changelog#hFwVMjI6X",
+          "collected_at": "2026-10-19T15:30:39+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-independent-evaluators-20261015",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Anthropic 向 METR 开放员工级访问，启动独立评估常驻安排",
+      "title_en": "Anthropic gives METR employee-level access in embedded independent evaluation arrangement",
+      "summary_zh": "Anthropic 宣布已开始向非营利评估机构 METR 的一个团队提供类似员工的内部访问权限，用于独立评估前沿模型风险。METR 将发布评估结果；Anthropic 不能否决发布，但可要求隐去预定义类别的信息。",
+      "summary_en": "Anthropic says it has begun giving a team from the nonprofit evaluator METR employee-like access to its internal systems to independently assess frontier-model risks. METR will publish its assessments; Anthropic cannot veto publication but can require redaction of predefined categories of information.",
+      "key_points_zh": [
+        "Anthropic 已为 6 名 METR 员工提供公司硬件、办公空间及与内部风险评估团队大致相当的系统和工具访问。",
+        "除客户数据、律师-客户保密信息和模型架构等少数预定义类别外，Anthropic 员工被鼓励像对待同事一样与 METR 分享信息。",
+        "Anthropic 不能否决 METR 发布结论，但可要求隐去预定义类别的信息；METR 保留就所获访问级别发表声明的权利。",
+        "Anthropic 同时与 SecureBio、Accenture 和 Faculty 等评估方合作，并在与 Hugging Face 等组织初步洽谈；评估方访问分为三级。"
+      ],
+      "key_points_en": [
+        "Anthropic has given six METR employees company hardware, office space and access to internal tools and systems roughly comparable to its own risk-assessment teams.",
+        "Outside a few predefined categories such as customer data, attorney-client privileged information and model architectures, Anthropic employees are encouraged to share information with METR as they would with a colleague.",
+        "Anthropic cannot veto METR's publication of its findings but can require redaction of predefined categories; METR reserves the right to make certain statements about the level of access it received.",
+        "Anthropic is also working with SecureBio, Accenture and Faculty, and is in early discussions with organizations including Hugging Face; evaluator access is organized into three tiers."
+      ],
+      "importance_reason_zh": "前沿模型安全评估与外部监督机制的重要变化，可能影响其他实验室的评估实践。",
+      "importance_reason_en": "A significant change to frontier-model safety evaluation and external oversight that could influence evaluation practices at other labs.",
+      "published_at": "2026-10-15",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-19T15:30:39+00:00",
+      "updated_at": "2026-10-19T15:35:00Z",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+          "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+          "collected_at": "2026-10-19T15:30:39+00:00",
+          "material_scope": "full_text",
+          "published_at": "2026-10-15"
         }
       ]
     },

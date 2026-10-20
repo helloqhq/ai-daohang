@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "3739105c25bf49b4",
+  "snapshot_id": "336072346fa5b76c",
   "entities": [
     {
       "id": "openai",
@@ -623,6 +623,35 @@
           "https://antigravity.google/"
         ],
         "checked_at": "2026-10-18"
+      }
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "name_en": "Mistral AI",
+      "aliases": [
+        "Mistral",
+        "Mistral AI",
+        "Mistral Large",
+        "Timestral",
+        "Le Chonk"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#e97326",
+      "pricing_provider": "Mistral AI",
+      "admission": {
+        "ai_relevance_zh": "研发多模态、编程与时间序列模型，并提供模型 API。",
+        "ai_relevance_en": "Develops multimodal, coding and time-series models and provides model APIs.",
+        "influence_reason_zh": "官方发布 Large 4 多模态预览与 Timestral；Large 4 已被 OpenCode 官方模型服务集成。",
+        "influence_reason_en": "Publishes the Large 4 multimodal preview and Timestral; Large 4 is integrated into OpenCode’s official model service.",
+        "evidence_urls": [
+          "https://mistral.ai/news/mistral-large-4/",
+          "https://mistral.ai/news/timestral/",
+          "https://opencode.ai/v2/docs/console/models/"
+        ],
+        "checked_at": "2026-10-20"
       }
     }
   ],
@@ -1720,9 +1749,11 @@
       "adapter": "rss",
       "feed_url": "https://kiro.dev/changelog/feed.rss",
       "feed_provider": "native",
-      "feed_checked_at": "2026-10-06",
+      "feed_checked_at": "2026-10-20",
       "feed_verified_at": "2026-10-06",
-      "feed_date_precision": "date"
+      "feed_date_precision": "date",
+      "subscription_note": "官方 RSS 可取回，但 2026-10-19 的 Memory Across Chat Sessions 条目正文仅为模板注释，留待补充有效正文，不据标题扩写。",
+      "subscription_note_en": "The official RSS is reachable, but the October 19 Memory Across Chat Sessions entry contains only a template comment. It awaits usable text; no details are inferred from its title."
     },
     {
       "id": "kimi-code-releases",
@@ -1798,10 +1829,15 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "feed_checked_at": "2026-10-06",
+      "feed_checked_at": "2026-10-20",
       "offline_conversion": true,
       "subscription_note": "按需转换官方更新／通知为本地 RSS；仅使用原文发布日期，未知日期留待核查，完整在线覆盖未确认。",
-      "subscription_note_en": "Official updates or notices are converted on demand to local RSS. Only source publication dates are used; undated notices await review, and complete online coverage remains unconfirmed."
+      "subscription_note_en": "Official updates or notices are converted on demand to local RSS. Only source publication dates are used; undated notices await review, and complete online coverage remains unconfirmed.",
+      "maintenance": {
+        "checked_at": "2026-10-20",
+        "reason_zh": "官方列表日期改为 YYYY.MM.DD 的 time 标签；转换器兼容该格式并保留旧格式，按文章卡片取日期，完整在线覆盖仍未确认。",
+        "reason_en": "Official list dates now use YYYY.MM.DD time labels. The converter accepts this and the legacy format with per-card dates; complete online coverage remains unconfirmed."
+      }
     },
     {
       "id": "glm-coding-notices",
@@ -2070,6 +2106,32 @@
       "subscription_note": "官网博客直接链接的原生 RSS；按订阅实际内容和查询窗口记录覆盖，不能代替全部产品更新渠道。",
       "subscription_note_en": "Native RSS linked directly by the official blog. Coverage follows the actual feed contents and query window; it does not cover every product update channel.",
       "feed_verified_at": "2026-10-18"
+    },
+    {
+      "id": "mistral-official",
+      "name": "Mistral AI 官方新闻",
+      "name_en": "Mistral AI News",
+      "entity_ids": [
+        "mistral"
+      ],
+      "url": "https://mistral.ai/news/",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://mistral.ai/news/",
+      "capabilities": {
+        "list": true,
+        "text": false,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": "https://mistral.ai/rss.xml",
+      "feed_provider": "native",
+      "feed_checked_at": "2026-10-20",
+      "feed_verified_at": "2026-10-20",
+      "subscription_note": "已核实官方 RSS 的标题、简介、原文链接和时间；当前仅提供简介，首次按默认 72 小时采集，不追补窗口外历史。",
+      "subscription_note_en": "Official RSS titles, summaries, original links and dates were checked. The feed supplies summaries only; initial collection uses the default 72-hour window without backfilling older history."
     }
   ],
   "people": [

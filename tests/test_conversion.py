@@ -78,6 +78,14 @@ class ConversionTests(unittest.TestCase):
         self.assertEqual(rows[0]['text'],'First full text')
         self.assertEqual(rows[1]['published_at'],'2026-09-29')
 
+    def test_cognition_year_first_time_labels_keep_card_dates(self):
+        body='<ul><li><a href="/blog/new"><h2>New</h2><time datetime="2026-10-01T10:00:00-07:00">2026.10.01</time></a></li><li><a href="/blog/old"><h2>Old</h2><time datetime="2026-09-29T10:00:00-07:00">2026.09.29</time></a></li><li><a href="/blog/undated"><h2>Undated</h2></a></li></ul>'
+        source=self.source('cognition-blog','https://cognition.com/blog')
+        rows=convert(source,lambda url:body if url==source['url'] else '<article>New article body</article>',START,END)
+        self.assertEqual([r['published_at'] for r in rows],['2026-10-01','2026-09-29'])
+        self.assertEqual(rows[0]['text'],'New article body')
+        self.assertNotIn('New article body',rows[1]['text'])
+
     def test_google_blog_missing_feed_dates_are_supplemented_from_article(self):
         source={**self.source('google-developers-blog','https://developers.googleblog.com/'),'feed_url':'https://developers.googleblog.com/feeds/posts/default'}
         xml='<rss><channel><item><title>New model</title><link>https://developers.googleblog.com/new-model/</link><description>Short summary</description></item></channel></rss>'

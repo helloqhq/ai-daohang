@@ -35,5 +35,6 @@
     <outline text="GitHub Copilot 产品更新" title="GitHub Copilot 产品更新" type="rss" xmlUrl="https://github.blog/changelog/label/copilot/feed/" htmlUrl="https://github.blog/changelog/label/copilot/" category="web" />
     <outline text="小米 MiMo 官方发布" title="小米 MiMo 官方发布" type="rss" xmlUrl="https://github.com/XiaomiMiMo/MiMo-Code/releases.atom" htmlUrl="https://github.com/XiaomiMiMo/MiMo-Code/releases" category="github" />
     <outline text="Google Antigravity 官方博客" title="Google Antigravity 官方博客" type="rss" xmlUrl="https://antigravity.google/blog/rss.xml" htmlUrl="https://antigravity.google/blog" category="web" />
+    <outline text="Mistral AI 官方新闻" title="Mistral AI 官方新闻" type="rss" xmlUrl="https://mistral.ai/rss.xml" htmlUrl="https://mistral.ai/news/" category="web" />
   </body>
 </opml>

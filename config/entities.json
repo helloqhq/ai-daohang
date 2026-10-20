@@ -623,6 +623,35 @@
         ],
         "checked_at": "2026-10-18"
       }
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "name_en": "Mistral AI",
+      "aliases": [
+        "Mistral",
+        "Mistral AI",
+        "Mistral Large",
+        "Timestral",
+        "Le Chonk"
+      ],
+      "category": "model",
+      "kind": "vendor",
+      "enabled": true,
+      "color": "#e97326",
+      "pricing_provider": "Mistral AI",
+      "admission": {
+        "ai_relevance_zh": "研发多模态、编程与时间序列模型，并提供模型 API。",
+        "ai_relevance_en": "Develops multimodal, coding and time-series models and provides model APIs.",
+        "influence_reason_zh": "官方发布 Large 4 多模态预览与 Timestral；Large 4 已被 OpenCode 官方模型服务集成。",
+        "influence_reason_en": "Publishes the Large 4 multimodal preview and Timestral; Large 4 is integrated into OpenCode’s official model service.",
+        "evidence_urls": [
+          "https://mistral.ai/news/mistral-large-4/",
+          "https://mistral.ai/news/timestral/",
+          "https://opencode.ai/v2/docs/console/models/"
+        ],
+        "checked_at": "2026-10-20"
+      }
     }
   ]
 }

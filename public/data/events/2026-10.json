@@ -1,7 +1,335 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "3739105c25bf49b4",
+  "snapshot_id": "336072346fa5b76c",
   "events": [
+    {
+      "id": "zcode-v3162",
+      "entity_ids": [
+        "zcode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "ZCode 3.16.2：远程进程持久化、插件市场与本地文件安全修复",
+      "title_en": "ZCode 3.16.2 adds persistent remote processes, a plugin marketplace and local-file security fixes",
+      "summary_zh": "ZCode 3.16.2 新增远程会话持久进程，断开本地连接后可继续运行；加入插件市场、按需工具搜索及 MiMo 的 API / Token Plan 两种接入方式，并修复 Windows 本地文件越界读取和连接日志敏感信息泄露问题。",
+      "summary_en": "ZCode 3.16.2 adds persistent processes in remote sessions that survive local disconnections, a plugin marketplace, on-demand tool search and API / Token Plan access for MiMo. It also fixes out-of-bounds local-file reads on Windows and sensitive information leaking through connection logs.",
+      "key_points_zh": [
+        "远程持久进程不再受本地断连影响，移动远程控制加入账号登录和设备管理。",
+        "新增插件市场、工具搜索，以及 MiMo API / Token Plan 接入。",
+        "修复 Windows 文件越界读取、日志泄露及上下文耗尽后会话无响应等问题。"
+      ],
+      "key_points_en": [
+        "Persistent remote processes survive local disconnects; mobile remote control gains account login and device management.",
+        "Adds a plugin marketplace, tool search and MiMo API / Token Plan access.",
+        "Fixes Windows out-of-bounds file reads, log leakage and unresponsive sessions after context exhaustion."
+      ],
+      "importance_reason_zh": "包含远程执行、工具生态与明确安全修复，影响日常 Agent 使用。",
+      "importance_reason_en": "Changes remote execution and tool integration and includes explicit security fixes.",
+      "published_at": "2026-10-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-20T13:34:43+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "zcode-official",
+          "content_id": "https://zcode.z.ai/en/changelog::3.16.2",
+          "url": "https://zcode.z.ai/en/changelog",
+          "collected_at": "2026-10-20T13:34:43+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "google-coral-npu-compiler-v1-20261020",
+      "entity_ids": [
+        "google",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Google 完成 32 位 Coral NPU 架构并发布编译器 v1.0",
+      "title_en": "Google completes the 32-bit Coral NPU architecture and releases compiler v1.0",
+      "summary_zh": "Google 宣布完成含矩阵执行单元的 32 位 Coral NPU 架构，并发布基于 IREE / MLIR 的开源编译器 v1.0，支持将 JAX、PyTorch 和 TensorFlow 模型导向 Coral NPU。同期公布 Synaptics Astra SR200 系列、Coralboard SR，以及 Coralboard SL 全球正式供货。",
+      "summary_en": "Google announces completion of the 32-bit Coral NPU architecture with a Matrix Execution Unit and releases an open-source IREE / MLIR compiler v1.0 to target Coral NPU from JAX, PyTorch and TensorFlow models. It also announces Synaptics Astra SR200, Coralboard SR and worldwide general availability of Coralboard SL.",
+      "key_points_zh": [
+        "矩阵单元架构可配置至 1 TOPS；官方给出的平均推理功耗目标为 10mW。",
+        "完整 32 位 RTL、编译器、模拟器与参考 FPGA 支持芯片制造前评估。",
+        "SR200 MCU 提供 400 GOPS；Coralboard SL 通过 DigiKey 全球供货。"
+      ],
+      "key_points_en": [
+        "The Matrix Execution Unit architecture is configurable up to 1 TOPS, with a vendor-stated 10mW average inference-power target.",
+        "Complete 32-bit RTL, compiler, simulator and reference FPGA support evaluation before fabrication.",
+        "SR200 MCUs provide 400 GOPS; Coralboard SL is available worldwide through DigiKey."
+      ],
+      "importance_reason_zh": "开源硬件和编译工具链里程碑改善端侧 AI 模型的可移植性。",
+      "importance_reason_en": "An open hardware and compiler milestone improves edge-AI model portability.",
+      "published_at": "2026-10-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-20T13:34:43+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/",
+          "url": "https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/",
+          "collected_at": "2026-10-20T13:34:43+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-v7815",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Kilo 7.8.15：客户端自定义自动路由与子代理写入权限修复",
+      "title_en": "Kilo 7.8.15 adds client-side custom auto routing and fixes delegated write permissions",
+      "summary_zh": "Kilo 7.8.15 的 CLI 可将自有 provider 模型注册为自定义自动路由，由路由服务选型后在本地调用；新增 Docker 客户端评估与逐项结果上传。该版也让 browser_open 记住授权选择，并恢复按路径允许编辑的代理所委派子代理的编辑和写入能力。",
+      "summary_en": "Kilo 7.8.15 lets the CLI register its own provider models in custom auto routers, request a routing decision and run the selected model locally. It adds Docker-based client evaluations with incremental result uploads, remembers browser_open permission choices and restores edits and writes for subagents delegated by agents with path-specific edit allowances.",
+      "key_points_zh": [
+        "CLI 新增 kilo auto router add|remove|list 和 kilo auto eval <router>。",
+        "browser_open 可为当前 origin 或所有 origins 保存始终允许规则。",
+        "子代理按自身编辑 allowlist 执行，修复误继承全面编辑拒绝的问题。"
+      ],
+      "key_points_en": [
+        "The CLI adds kilo auto router add|remove|list and kilo auto eval <router>.",
+        "browser_open can remember always-allow rules for the current origin or all origins.",
+        "Delegated subagents use their own edit allowlist instead of inheriting a blanket edit denial."
+      ],
+      "importance_reason_zh": "改善自定义模型路由与多代理权限的实际可用性。",
+      "importance_reason_en": "Improves custom-model routing and practical delegated-agent permissions.",
+      "published_at": "2026-10-19T23:45:38Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-20T13:32:25+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.15",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.15",
+          "collected_at": "2026-10-20T13:32:25+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21304",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.304：自动模式引导设置、强制人工审批与审查深度",
+      "title_en": "Claude Code 2.1.304 adds guided auto-mode setup, human-only approvals and review levels",
+      "summary_zh": "Claude Code 2.1.304 新增 /auto-mode-setup，支持 Bedrock、Vertex、Foundry、Claude apps gateway 和关闭遥测的会话。mod 可用 decider: \"person\" 强制通过权限对话框或宿主回调审批；Code Review 增加 Quick、Standard、Deep 深度和组织全仓库审查选项。",
+      "summary_en": "Claude Code 2.1.304 adds /auto-mode-setup across Bedrock, Vertex, Foundry, Claude apps gateway and telemetry-disabled sessions. Mods can require approval through a permission dialog or host callback with decider: \"person\". Code Review adds Quick, Standard and Deep levels and an option to cover every repository in an organization.",
+      "key_points_zh": [
+        "tool.check 新增 e.isReadOnly；decider: \"person\" 在无法询问任何人时按 mod 原因拒绝。",
+        "Code Review 默认 Standard，可按仓库覆盖组织级审查深度。",
+        "自定义 ANTHROPIC_BASE_URL 默认启用工具搜索，遇到网关 400 / 422 时去除后重试。"
+      ],
+      "key_points_en": [
+        "tool.check adds e.isReadOnly; decider: \"person\" refuses with the mod’s reason when nobody can be asked.",
+        "Code Review defaults to Standard and supports per-repository overrides of the organization level.",
+        "Tool search defaults on for custom ANTHROPIC_BASE_URL connections and retries without it after gateway 400 / 422 errors."
+      ],
+      "importance_reason_zh": "提供新的自动模式配置和可明确强制人工审批的权限接口。",
+      "importance_reason_en": "Adds auto-mode configuration and an explicit human-only approval interface.",
+      "published_at": "2026-10-19T21:50:26+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-20T13:32:10+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-304",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-304",
+          "collected_at": "2026-10-20T13:32:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-model-policy-api-ga-20261019",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "availability"
+      ],
+      "title_zh": "Copilot 模型策略 REST API 正式可用：覆盖企业、团队、应用与组织",
+      "title_en": "Copilot model policy REST APIs reach general availability across four administrative levels",
+      "summary_zh": "GitHub 宣布 Copilot 模型策略的 GET / PATCH REST API 正式可用，可在企业、企业团队、企业应用及组织四个层级读取和修改可用模型策略；企业可按组织模式或企业团队模式下放控制。",
+      "summary_en": "GitHub has made GET / PATCH REST APIs for Copilot model policies generally available at enterprise, enterprise-team, enterprise-app and organization levels. Enterprises can delegate control according to organization mode or enterprise teams mode.",
+      "key_points_zh": [
+        "四类层级均支持 GET 和 PATCH 模型策略。",
+        "企业可按运行模式将模型控制下放给组织，或团队与应用。"
+      ],
+      "key_points_en": [
+        "GET and PATCH model-policy operations are available at all four levels.",
+        "Enterprises can delegate model control to organizations or to teams and apps, depending on their operating mode."
+      ],
+      "importance_reason_zh": "让大规模 Copilot 模型可用性管理可通过 API 自动化。",
+      "importance_reason_en": "Enables API automation of Copilot model availability across enterprises.",
+      "published_at": "2026-10-19T21:32:18+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-20T13:32:25+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+          "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+          "collected_at": "2026-10-20T13:32:25+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-model-retirement-20261019",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Copilot 停用 Gemini 3.7 Flash、GPT-5.5 等六款模型",
+      "title_en": "Copilot retires six models including Gemini 3.7 Flash and GPT-5.5",
+      "summary_zh": "GitHub 自 2026-10-19 起在多数 Copilot 体验中停用 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 与 Grok 4.5。官方分别建议迁移至 Gemini 3.8 Flash、GPT-6.1 Sol、GPT-6 Luna 与 Grok 4.7；企业管理员可能需先启用替代模型策略。",
+      "summary_en": "From October 19, 2026, GitHub retires Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5 mini and Grok 4.5 across most Copilot experiences. Suggested replacements are Gemini 3.8 Flash, GPT-6.1 Sol, GPT-6 Luna and Grok 4.7, respectively; enterprise administrators may need to enable replacement-model policies.",
+      "key_points_zh": [
+        "适用范围包括 Copilot Chat、行内编辑、Ask / Agent 模式及代码补全等多数体验。",
+        "GPT-5.5 / 5.4 建议迁移至 GPT-6.1 Sol，两款 mini 建议使用 GPT-6 Luna。",
+        "无需手动移除退役模型；工作流和集成应改用受支持型号。"
+      ],
+      "key_points_en": [
+        "Applies across most experiences, including Copilot Chat, inline edits, Ask / Agent modes and completions.",
+        "GPT-5.5 / 5.4 users are directed to GPT-6.1 Sol; both mini models to GPT-6 Luna.",
+        "No action is needed to remove retired models; workflows and integrations should use supported alternatives."
+      ],
+      "importance_reason_zh": "退役已生效，直接影响模型选择、集成和套餐权益表。",
+      "importance_reason_en": "The retirement is effective and directly affects model choices, integrations and entitlement lists.",
+      "published_at": "2026-10-19T21:27:10+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-20T13:32:25+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "collected_at": "2026-10-20T13:32:25+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10101-0",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.101-0：动态工作流子代理结构化输出与审批指引",
+      "title_en": "Copilot CLI 1.0.101-0 adds structured subagent output and assisted-approval guidance",
+      "summary_zh": "Copilot CLI 1.0.101-0 预发布版本为受支持模型的动态工作流子代理加入原生结构化输出，并新增 assistedApprovalInstructions 指导辅助权限确认。它还修复从 GPT 切换 Gemini 时历史自定义工具调用导致的失败，以及启动时没有选择模型造成的静默挂起。",
+      "summary_en": "The Copilot CLI 1.0.101-0 prerelease adds native structured output for dynamic workflow subagents on supported models and assistedApprovalInstructions to guide Assisted Permissions confirmations. It also fixes GPT-to-Gemini switches after custom tool calls and silent startup hangs when no model is selected.",
+      "key_points_zh": [
+        "结构化输出仅用于受支持模型的动态工作流子代理。",
+        "无默认模型时提示 /model 选择并保留首条输入。",
+        "修复模型列表刷新和 Windows 恢复会话的 shell 启动问题。"
+      ],
+      "key_points_en": [
+        "Structured output is for dynamic workflow subagents on supported models.",
+        "When no model is selected, /model is requested and the initial prompt is preserved.",
+        "Fixes model-list refresh and Windows shell startup in restored sessions."
+      ],
+      "importance_reason_zh": "预发布功能改善工作流自动化和权限确认的可控性。",
+      "importance_reason_en": "The prerelease improves workflow automation and configurable permission confirmation.",
+      "published_at": "2026-10-19T21:13:38Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-20T13:32:07+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.101-0",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.101-0",
+          "collected_at": "2026-10-20T13:32:07+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10100-stable",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.100 正式版：遥测开关、单次目录信任与 MCP 卡顿修复",
+      "title_en": "Copilot CLI 1.0.100 stable adds telemetry control, one-off folder trust and MCP hang fixes",
+      "summary_zh": "Copilot CLI 1.0.100 正式版加入 --disable-client-telemetry 与单次提示会话的 --trust-folder，可通过 GitHub 安装链接安装已核实 Skills 和插件；并修复 MCP 工具加载长时间卡住、仅推理且耗尽 tokens 的响应无限循环，以及延迟工具定义引发的误报上下文耗尽。",
+      "summary_en": "Copilot CLI 1.0.100 stable adds --disable-client-telemetry and --trust-folder for one-off prompt sessions, plus installation of verified Skills and plugins from GitHub install links. It fixes long stalls while loading MCP tools, infinite loops on reasoning-only max-token responses and false context exhaustion with deferred tool definitions.",
+      "key_points_zh": [
+        "--trust-folder 用于 -p 或管道 stdin 启动的单次提示模式。",
+        "统一 Sessions 浏览器成为 /sessions、/session 与 /resume 默认入口。",
+        "MCP 加载、沙箱代理和无进展响应循环的可靠性修复进入正式版。"
+      ],
+      "key_points_en": [
+        "--trust-folder applies to one-off prompt mode started with -p or piped stdin.",
+        "The unified Sessions browser becomes the default for /sessions, /session and /resume.",
+        "MCP loading, sandbox-proxy and no-progress response-loop fixes reach stable."
+      ],
+      "importance_reason_zh": "与此前预发布阶段分开记录正式版及明确的控制和可靠性改动。",
+      "importance_reason_en": "Records the stable stage separately from prior prereleases, including explicit controls and reliability changes.",
+      "published_at": "2026-10-19T18:43:10Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-20T13:32:07+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.100",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.100",
+          "collected_at": "2026-10-20T13:32:07+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "minimax-m31-flash-20261019",
       "entity_ids": [
@@ -46,6 +374,90 @@
           "collected_at": "2026-10-19T15:30:39+00:00",
           "material_scope": "full_text",
           "published_at": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "id": "devin-oncall-ga-20261019",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "Devin Oncall 面向全部组织正式开放，扩展 CI 查询与 Teams 恢复",
+      "title_en": "Devin Oncall becomes generally available to all organizations, with broader CI checks and Teams recovery",
+      "summary_zh": "Devin Oncall 正式向全部组织开放：响应器可监听 Slack、Teams 和 PagerDuty，结合遥测、代码、部署与运行手册调查告警，给出可能根因和后续行动，并维护持续更新的事件报告。同期更新新增按提交、分支或标签查询 CI，以及 Teams 会话崩溃后在原线程回复重试。",
+      "summary_en": "Devin Oncall is now generally available to all organizations. Responders monitor Slack, Teams and PagerDuty, investigate alerts using telemetry, code, deployments and runbooks, suggest likely causes and next actions, and maintain incident reports. The update also adds CI checks for commits, branches and tags and retries of crashed Teams sessions by replying in the same thread.",
+      "key_points_zh": [
+        "组织管理员在 Oncall 中连接工具并管理响应器；可生成定期调查报告。",
+        "CI 查询覆盖 GitHub、GitLab、Azure DevOps 与 Bitbucket Cloud / Data Center。",
+        "企业可按 Microsoft 敏感度标签分类 Teams 附件；未标记文件及 SharePoint / OneDrive 链接先请求分类。"
+      ],
+      "key_points_en": [
+        "Organization admins connect tools and manage responders in Oncall, with recurring investigation reports.",
+        "CI checks cover GitHub, GitLab, Azure DevOps and Bitbucket Cloud / Data Center.",
+        "Enterprises can classify Teams attachments by Microsoft sensitivity labels; unlabeled files and SharePoint / OneDrive links request classification first."
+      ],
+      "importance_reason_zh": "将事件响应能力正式开放，并改善跨平台运维和企业数据处理。",
+      "importance_reason_en": "Makes incident response broadly available and improves cross-platform operations and enterprise data handling.",
+      "published_at": "2026-10-19",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-20T13:34:43+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#october-19-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#october-19-2026",
+          "collected_at": "2026-10-20T13:34:43+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "google-litert-tensor-api-20261019",
+      "entity_ids": [
+        "google",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "capability"
+      ],
+      "title_zh": "Google 发布 LiteRT Tensor API：用 C++ 构建可跨平台执行的模型图",
+      "title_en": "Google releases LiteRT Tensor API for portable C++ model graphs",
+      "summary_zh": "Google 发布 LiteRT Tensor API，允许开发者用 C++ 逐算子构建模型与前后处理图、直接读取权重，并通过共享加速器缓冲区串联管线。模型可导出 .tflite 交由 LiteRT 执行，或直接通过 XNNPACK 在 CPU 上运行；官方仍建议多数项目优先采用常规模型转换路径。",
+      "summary_en": "Google releases the LiteRT Tensor API to build model and pre/post-processing graphs op by op in C++, ingest weights directly and chain pipelines through shared accelerator buffers. Graphs can export to .tflite for LiteRT or run directly on CPU through XNNPACK. Google still recommends conventional conversion for most projects.",
+      "key_points_zh": [
+        "面向需要底层图控制的新架构和优化，也可供编程 Agent 构造及调优模型。",
+        "当前支持 LiteRT 执行或直接 XNNPACK 路径；直接 GPU 后端、Python 编写和更广动态形状支持仍在开发。",
+        "官方开源 SAM 2 示例展示端侧浏览器分割；性能数据属于其特定测试。"
+      ],
+      "key_points_en": [
+        "Targets new architectures and optimizations requiring graph-level control, including model construction and tuning by coding agents.",
+        "Supports LiteRT execution or direct XNNPACK today; direct GPU backends, Python authoring and wider dynamic shapes remain in development.",
+        "An open SAM 2 sample demonstrates on-device browser segmentation; performance results belong to the vendor’s specific tests."
+      ],
+      "importance_reason_zh": "为端侧推理和 AI 编程工具提供新的底层模型编写接口。",
+      "importance_reason_en": "Provides a new low-level model-authoring interface for edge inference and coding agents.",
+      "published_at": "2026-10-19",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-20T13:34:43+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/",
+          "url": "https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/",
+          "collected_at": "2026-10-20T13:34:43+00:00",
+          "material_scope": "full_text"
         }
       ]
     },
@@ -6047,6 +6459,47 @@
           "url": "https://x.com/thsottiaux/status/2108275041276420573",
           "collected_at": "2026-10-09T13:43:48+00:00",
           "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21281",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.281：扩展 AGENTS.md 支持、网关护栏与 MCP 浏览器授权",
+      "title_en": "Claude Code 2.1.281 expands AGENTS.md support, gateway guardrails and browser-based MCP flows",
+      "summary_zh": "Claude Code 2.1.281 将 AGENTS.md 支持扩展至 Bedrock、Vertex、Foundry、LLM 网关和关闭遥测的会话；Claude apps gateway 的 Bedrock 上游新增 STS assume_role 与统一 guardrail 配置，并支持 MCP 2026-07-28 协议的 URL 模式询问。",
+      "summary_en": "Claude Code 2.1.281 expands AGENTS.md support to Bedrock, Vertex, Foundry, LLM gateways and telemetry-disabled sessions. Bedrock upstreams in Claude apps gateway gain STS assume_role and guardrail configuration, and MCP connections using the 2026-07-28 protocol gain URL-mode elicitation.",
+      "key_points_zh": [
+        "Bedrock 上游可通过 STS 承担角色，guardrail 必须覆盖全部 Bedrock 上游或全部不配。",
+        "自托管 runner 使用私有文件传递大 system prompt；相应 wrapper / hook 需改用文件参数。",
+        "自动模式和跳过权限模式中的危险 rm 提示等待两分钟后默认拒绝，并提供重写提示。"
+      ],
+      "key_points_en": [
+        "Bedrock upstreams can assume roles via STS; guardrails must be configured on all Bedrock upstreams or none.",
+        "Self-hosted runners pass large system prompts through private files; affected wrappers and hooks must use file arguments.",
+        "Dangerous rm prompts in auto mode and bypass-permission mode deny after two minutes and provide a rewrite hint."
+      ],
+      "importance_reason_zh": "补齐历史待审材料中的云端兼容和权限边界重要变化。",
+      "importance_reason_en": "Resolves an older queued release with material cloud-compatibility and permission-boundary changes.",
+      "published_at": "2026-10-08T19:00:30+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-09T13:40:38+00:00",
+      "updated_at": "2026-10-20T13:38:54.670317+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-281",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-281",
+          "collected_at": "2026-10-09T13:40:38+00:00",
+          "material_scope": "full_text"
         }
       ]
     },

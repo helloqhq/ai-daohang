@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "3739105c25bf49b4",
-  "generated_at": "2026-10-19T15:36:54+00:00",
+  "snapshot_id": "336072346fa5b76c",
+  "generated_at": "2026-10-20T13:40:55+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 256,
+      "count": 267,
       "min_date": "2026-10-01T01:34:16Z",
-      "max_date": "2026-10-19"
+      "max_date": "2026-10-20"
     },
     {
       "month": "2026-09",
@@ -19,7 +19,17 @@
     }
   ],
   "event_locations": {
+    "zcode-v3162": "2026-10",
+    "google-coral-npu-compiler-v1-20261020": "2026-10",
+    "kilo-v7815": "2026-10",
+    "claude-code-v21304": "2026-10",
+    "copilot-model-policy-api-ga-20261019": "2026-10",
+    "copilot-model-retirement-20261019": "2026-10",
+    "copilot-cli-v10101-0": "2026-10",
+    "copilot-cli-v10100-stable": "2026-10",
     "minimax-m31-flash-20261019": "2026-10",
+    "devin-oncall-ga-20261019": "2026-10",
+    "google-litert-tensor-api-20261019": "2026-10",
     "deeptutor-v1615": "2026-10",
     "anthropic-public-benefit-fund-20261018": "2026-10",
     "deepseek-harness-v021rc2": "2026-10",
@@ -169,6 +179,7 @@
     "claude-code-v21295": "2026-10",
     "copilot-review-org-billing-20261008": "2026-10",
     "tibo-x-2108275041276420573": "2026-10",
+    "claude-code-v21281": "2026-10",
     "codex-01620": "2026-10",
     "kilo-windows-arm-20261008": "2026-10",
     "hermes-v0216": "2026-10",
@@ -282,5 +293,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 262
+  "total_events": 273
 }

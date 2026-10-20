@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-19",
+  "checked_at": "2026-10-20",
   "plans": [
     {
       "id": "gpt-6-astra",
@@ -642,7 +642,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-10-19"
+      "models_checked_at": "2026-10-20"
     },
     {
       "id": "minimax-plan-max",
@@ -674,7 +674,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-10-19"
+      "models_checked_at": "2026-10-20"
     },
     {
       "id": "minimax-plan-ultra",
@@ -706,7 +706,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-10-19"
+      "models_checked_at": "2026-10-20"
     },
     {
       "id": "glm-plan-lite",
@@ -738,7 +738,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-18"
+      "models_checked_at": "2026-10-20"
     },
     {
       "id": "glm-plan-pro",
@@ -770,7 +770,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-18"
+      "models_checked_at": "2026-10-20"
     },
     {
       "id": "glm-plan-max",
@@ -802,7 +802,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-18"
+      "models_checked_at": "2026-10-20"
     },
     {
       "id": "kimi-plan-andante",
@@ -1386,8 +1386,8 @@
       "note_zh": "含 CLI、Agent 与代码审查；浮动额度可能变化，用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review; flex allowance can change. Additional paid usage can be budgeted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-10-18",
-      "updated_at": "2026-10-16",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
       "tier_name": "Pro",
@@ -1401,22 +1401,18 @@
         "Claude Haiku 5.5",
         "Claude Haiku 4.5",
         "Claude Sonnet 5",
-        "Gemini 3.7 Flash",
-        "GPT-5 mini",
         "GPT-5.3-Codex",
-        "GPT-5.4",
-        "GPT-5.4 mini",
         "GPT-5.6 Luna",
         "GPT-5.6 Terra",
-        "Grok 4.5",
         "Grok 4.6"
       ],
-      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 GitHub 预告 2026-11-16 停用 GPT-5.6 Terra、Claude Opus 5 与 Opus 4.8；个人年付订阅的 Opus 4.8 除外。到期前仍按当前档位权益列出，建议迁移到 Opus 5.5、GPT-6.1 Sol 或 GPT-6 Luna，并检查组织策略。",
-      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. GitHub plans to retire GPT-5.6 Terra, Claude Opus 5 and Opus 4.8 on 2026-11-16, except Opus 4.8 for individual annual subscribers. Current tier access remains listed until then; migrate to Opus 5.5, GPT-6.1 Sol or GPT-6 Luna as applicable and check organization policy.",
+      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 GitHub 预告 2026-11-16 停用 GPT-5.6 Terra、Claude Opus 5 与 Opus 4.8；个人年付订阅的 Opus 4.8 除外。到期前仍按当前档位权益列出，建议迁移到 Opus 5.5、GPT-6.1 Sol 或 GPT-6 Luna，并检查组织策略。 2026-10-19 已在多数体验停用 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 和 Grok 4.5，已从当前列表移除；部分官方套餐页仍残留旧型号，以专门退役公告为准。",
+      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. GitHub plans to retire GPT-5.6 Terra, Claude Opus 5 and Opus 4.8 on 2026-11-16, except Opus 4.8 for individual annual subscribers. Current tier access remains listed until then; migrate to Opus 5.5, GPT-6.1 Sol or GPT-6 Luna as applicable and check organization policy. On 2026-10-19, Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5 mini and Grok 4.5 were retired across most experiences and removed from this list. Some official plan pages still show old entries; the specific retirement notice takes precedence.",
       "models_source_urls": [
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
         "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
-        "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november"
+        "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+        "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026"
       ],
       "models_checked_at": "2026-10-17"
     },
@@ -1436,8 +1432,8 @@
       "note_zh": "含 CLI、Agent 与代码审查；浮动额度可能变化，用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review; flex allowance can change. Additional paid usage can be budgeted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-10-18",
-      "updated_at": "2026-10-16",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
       "tier_name": "Pro+",
@@ -1459,28 +1455,23 @@
         "Claude Opus 5",
         "Claude Fable 5",
         "Claude Sonnet 5",
-        "Gemini 3.7 Flash",
-        "GPT-5 mini",
         "GPT-5.3-Codex",
-        "GPT-5.4",
-        "GPT-5.4 mini",
         "GPT-5.4 nano",
-        "GPT-5.5",
         "GPT-5.6 Luna",
         "GPT-5.6 Sol",
         "GPT-5.6 Terra",
         "GPT-6 Sol",
-        "Grok 4.5",
         "Grok 4.6",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 GPT-5.4 nano 仅限 Codex VS Code 扩展，不在 Copilot Chat 中。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 Gemini 4 Argon 正式可用但逐步开放，按提供商标价计量；需相应客户端版本和组织模型策略许可。 GitHub 预告 2026-11-16 停用 GPT-5.6 Terra、Claude Opus 5 与 Opus 4.8；个人年付订阅的 Opus 4.8 除外。到期前仍按当前档位权益列出，建议迁移到 Opus 5.5、GPT-6.1 Sol 或 GPT-6 Luna，并检查组织策略。",
-      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. GPT-5.4 nano is limited to the Codex VS Code extension, not Copilot Chat. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. Gemini 4 Argon is generally available with a gradual rollout at provider list pricing, subject to client versions and organization model policy. GitHub plans to retire GPT-5.6 Terra, Claude Opus 5 and Opus 4.8 on 2026-11-16, except Opus 4.8 for individual annual subscribers. Current tier access remains listed until then; migrate to Opus 5.5, GPT-6.1 Sol or GPT-6 Luna as applicable and check organization policy.",
+      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 GPT-5.4 nano 仅限 Codex VS Code 扩展，不在 Copilot Chat 中。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 Gemini 4 Argon 正式可用但逐步开放，按提供商标价计量；需相应客户端版本和组织模型策略许可。 GitHub 预告 2026-11-16 停用 GPT-5.6 Terra、Claude Opus 5 与 Opus 4.8；个人年付订阅的 Opus 4.8 除外。到期前仍按当前档位权益列出，建议迁移到 Opus 5.5、GPT-6.1 Sol 或 GPT-6 Luna，并检查组织策略。 2026-10-19 已在多数体验停用 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 和 Grok 4.5，已从当前列表移除；部分官方套餐页仍残留旧型号，以专门退役公告为准。",
+      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. GPT-5.4 nano is limited to the Codex VS Code extension, not Copilot Chat. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. Gemini 4 Argon is generally available with a gradual rollout at provider list pricing, subject to client versions and organization model policy. GitHub plans to retire GPT-5.6 Terra, Claude Opus 5 and Opus 4.8 on 2026-11-16, except Opus 4.8 for individual annual subscribers. Current tier access remains listed until then; migrate to Opus 5.5, GPT-6.1 Sol or GPT-6 Luna as applicable and check organization policy. On 2026-10-19, Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5 mini and Grok 4.5 were retired across most experiences and removed from this list. Some official plan pages still show old entries; the specific retirement notice takes precedence.",
       "models_source_urls": [
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
         "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
         "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
-        "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november"
+        "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+        "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026"
       ],
       "models_checked_at": "2026-10-17"
     },
@@ -1500,8 +1491,8 @@
       "note_zh": "含 CLI、Agent 与代码审查；浮动额度可能变化，用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review; flex allowance can change. Additional paid usage can be budgeted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-10-18",
-      "updated_at": "2026-10-16",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
       "tier_name": "Max",
@@ -1523,27 +1514,22 @@
         "Claude Opus 5",
         "Claude Fable 5",
         "Claude Sonnet 5",
-        "Gemini 3.7 Flash",
-        "GPT-5 mini",
         "GPT-5.3-Codex",
-        "GPT-5.4",
-        "GPT-5.4 mini",
-        "GPT-5.5",
         "GPT-5.6 Luna",
         "GPT-5.6 Sol",
         "GPT-5.6 Terra",
         "GPT-6 Sol",
-        "Grok 4.5",
         "Grok 4.6",
         "Gemini 4 Argon"
       ],
-      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 官方 nano 表格与注释有冲突，按“Pro+ 扩展专用”注释暂不列入。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 Gemini 4 Argon 正式可用但逐步开放，按提供商标价计量；需相应客户端版本和组织模型策略许可。 GitHub 预告 2026-11-16 停用 GPT-5.6 Terra、Claude Opus 5 与 Opus 4.8；个人年付订阅的 Opus 4.8 除外。到期前仍按当前档位权益列出，建议迁移到 Opus 5.5、GPT-6.1 Sol 或 GPT-6 Luna，并检查组织策略。",
-      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. The nano table conflicts with its Pro+-only footnote; omitted here pending clarification. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. Gemini 4 Argon is generally available with a gradual rollout at provider list pricing, subject to client versions and organization model policy. GitHub plans to retire GPT-5.6 Terra, Claude Opus 5 and Opus 4.8 on 2026-11-16, except Opus 4.8 for individual annual subscribers. Current tier access remains listed until then; migrate to Opus 5.5, GPT-6.1 Sol or GPT-6 Luna as applicable and check organization policy.",
+      "models_note_zh": "按月付套餐核验，模型消耗 AI credits；可用性随 IDE、客户端版本及策略变化。Sonnet 4.6 仅旧年付用户可用，未列入。 官方 nano 表格与注释有冲突，按“Pro+ 扩展专用”注释暂不列入。 Haiku 5.5 逐步开放，按提供商公开费率扣用量；组织可用模型策略限制访问。 Gemini 4 Argon 正式可用但逐步开放，按提供商标价计量；需相应客户端版本和组织模型策略许可。 GitHub 预告 2026-11-16 停用 GPT-5.6 Terra、Claude Opus 5 与 Opus 4.8；个人年付订阅的 Opus 4.8 除外。到期前仍按当前档位权益列出，建议迁移到 Opus 5.5、GPT-6.1 Sol 或 GPT-6 Luna，并检查组织策略。 2026-10-19 已在多数体验停用 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 和 Grok 4.5，已从当前列表移除；部分官方套餐页仍残留旧型号，以专门退役公告为准。",
+      "models_note_en": "Verified for monthly plans; models consume AI credits. Availability varies by IDE, client version and policy. Sonnet 4.6 is limited to older annual plans and omitted. The nano table conflicts with its Pro+-only footnote; omitted here pending clarification. Haiku 5.5 is rolling out gradually, with usage charged at provider list pricing; organization model policies can restrict access. Gemini 4 Argon is generally available with a gradual rollout at provider list pricing, subject to client versions and organization model policy. GitHub plans to retire GPT-5.6 Terra, Claude Opus 5 and Opus 4.8 on 2026-11-16, except Opus 4.8 for individual annual subscribers. Current tier access remains listed until then; migrate to Opus 5.5, GPT-6.1 Sol or GPT-6 Luna as applicable and check organization policy. On 2026-10-19, Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5 mini and Grok 4.5 were retired across most experiences and removed from this list. Some official plan pages still show old entries; the specific retirement notice takes precedence.",
       "models_source_urls": [
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
         "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
         "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
-        "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november"
+        "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+        "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026"
       ],
       "models_checked_at": "2026-10-17"
     },
@@ -1563,8 +1549,8 @@
       "note_zh": "Go 订阅可选，Zen 按量付费；第三方 API 或已有订阅按原厂商规则计费。",
       "note_en": "Go is optional; Zen bills by usage. External APIs and existing subscriptions follow provider terms.",
       "source_url": "https://opencode.ai/",
-      "checked_at": "2026-10-18",
-      "updated_at": "2026-10-18",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
       "product_id": "opencode",
       "product_name": "OpenCode",
       "tier_name": "Open source / BYOK",
@@ -1574,13 +1560,13 @@
         "Gemini",
         "Ollama / local models"
       ],
-      "models_note_zh": "Console（原 Zen）按量计费，客户端免费不代表所有推理免费。免费表明确列出 14 个限时免费端点；具体额度以服务为准，未公布截止日。GLM、DeepSeek、Space Bunny 与 LongCat 免费端点不训练、零留存；Big Pickle、LL Alpha、Exo、MiMo 免费端点可能收集数据改进模型，LL Alpha 留存 30 天。三个 Nemotron 免费端点仅限 NVIDIA 试用，会记录使用用于安全与产品改进，不应提交个人或机密数据。Beam 不训练但为安全留存 30 天，不向中国内地、香港、澳门等官方列出的地区提供。Jev 免费端点面向结构化决策，隐私遵循官方通用政策。",
-      "models_note_en": "Console (formerly Zen) bills by usage; a free client does not make all inference free. The pricing table explicitly lists 14 temporarily free endpoints; actual quotas follow the service, with no published end date. The free GLM, DeepSeek, Space Bunny and LongCat endpoints have no training and zero retention. Big Pickle, LL Alpha, Exo and free MiMo endpoints may collect data to improve their models; LL Alpha retains it for 30 days. All three free Nemotron endpoints are NVIDIA trials with security and product-improvement logging; do not submit personal or confidential data. Beam excludes training but retains data for safety for 30 days, and is unavailable in mainland China, Hong Kong, Macau and other listed regions. The free Jev endpoint serves structured decisions under the documented general privacy policy.",
+      "models_note_zh": "Console（原 Zen）按量计费，客户端免费不代表所有推理免费。免费表明确列出 14 个限时免费端点；具体额度以服务为准，未公布截止日。GLM、DeepSeek、MiniMax M3.1 Flash 与 LongCat 免费端点不训练、零留存；Big Pickle、LL Alpha、Exo、MiMo 免费端点可能收集数据改进模型，LL Alpha 留存 30 天。三个 Nemotron 免费端点仅限 NVIDIA 试用，会记录使用用于安全与产品改进，不应提交个人或机密数据。Beam 不训练但为安全留存 30 天，不向中国内地、香港、澳门等官方列出的地区提供。Jev 免费端点面向结构化决策，隐私遵循官方通用政策。",
+      "models_note_en": "Console (formerly Zen) bills by usage; a free client does not make all inference free. The pricing table explicitly lists 14 temporarily free endpoints; actual quotas follow the service, with no published end date. The free GLM, DeepSeek, MiniMax M3.1 Flash and LongCat endpoints have no training and zero retention. Big Pickle, LL Alpha, Exo and free MiMo endpoints may collect data to improve their models; LL Alpha retains it for 30 days. All three free Nemotron endpoints are NVIDIA trials with security and product-improvement logging; do not submit personal or confidential data. Beam excludes training but retains data for safety for 30 days, and is unavailable in mainland China, Hong Kong, Macau and other listed regions. The free Jev endpoint serves structured decisions under the documented general privacy policy.",
       "models_source_urls": [
         "https://opencode.ai/docs/providers/",
-        "https://opencode.ai/docs/zen/"
+        "https://opencode.ai/v2/docs/console/models/"
       ],
-      "models_checked_at": "2026-10-18",
+      "models_checked_at": "2026-10-20",
       "offers": [
         {
           "id": "zen-temporary-models",
@@ -1591,7 +1577,7 @@
             "GLM-5.3-Flash Free",
             "DeepSeek V4.1 Flash Free",
             "Big Pickle",
-            "Space Bunny Free",
+            "MiniMax M3.1 Flash Free",
             "Beam Free",
             "LL Alpha Free",
             "LongCat 2.5 Preview Free",
@@ -1603,10 +1589,10 @@
             "Nemotron 3.5 Super VL Free",
             "Jev 1.13 Free"
           ],
-          "source_url": "https://opencode.ai/docs/zen/",
-          "checked_at": "2026-10-18",
-          "conditions_zh": "Console（原 Zen）按量计费，客户端免费不代表所有推理免费。免费表明确列出 14 个限时免费端点；具体额度以服务为准，未公布截止日。GLM、DeepSeek、Space Bunny 与 LongCat 免费端点不训练、零留存；Big Pickle、LL Alpha、Exo、MiMo 免费端点可能收集数据改进模型，LL Alpha 留存 30 天。三个 Nemotron 免费端点仅限 NVIDIA 试用，会记录使用用于安全与产品改进，不应提交个人或机密数据。Beam 不训练但为安全留存 30 天，不向中国内地、香港、澳门等官方列出的地区提供。Jev 免费端点面向结构化决策，隐私遵循官方通用政策。",
-          "conditions_en": "Console (formerly Zen) bills by usage; a free client does not make all inference free. The pricing table explicitly lists 14 temporarily free endpoints; actual quotas follow the service, with no published end date. The free GLM, DeepSeek, Space Bunny and LongCat endpoints have no training and zero retention. Big Pickle, LL Alpha, Exo and free MiMo endpoints may collect data to improve their models; LL Alpha retains it for 30 days. All three free Nemotron endpoints are NVIDIA trials with security and product-improvement logging; do not submit personal or confidential data. Beam excludes training but retains data for safety for 30 days, and is unavailable in mainland China, Hong Kong, Macau and other listed regions. The free Jev endpoint serves structured decisions under the documented general privacy policy.",
+          "source_url": "https://opencode.ai/v2/docs/console/models/",
+          "checked_at": "2026-10-20",
+          "conditions_zh": "Console（原 Zen）按量计费，客户端免费不代表所有推理免费。免费表明确列出 14 个限时免费端点；具体额度以服务为准，未公布截止日。GLM、DeepSeek、MiniMax M3.1 Flash 与 LongCat 免费端点不训练、零留存；Big Pickle、LL Alpha、Exo、MiMo 免费端点可能收集数据改进模型，LL Alpha 留存 30 天。三个 Nemotron 免费端点仅限 NVIDIA 试用，会记录使用用于安全与产品改进，不应提交个人或机密数据。Beam 不训练但为安全留存 30 天，不向中国内地、香港、澳门等官方列出的地区提供。Jev 免费端点面向结构化决策，隐私遵循官方通用政策。",
+          "conditions_en": "Console (formerly Zen) bills by usage; a free client does not make all inference free. The pricing table explicitly lists 14 temporarily free endpoints; actual quotas follow the service, with no published end date. The free GLM, DeepSeek, MiniMax M3.1 Flash and LongCat endpoints have no training and zero retention. Big Pickle, LL Alpha, Exo and free MiMo endpoints may collect data to improve their models; LL Alpha retains it for 30 days. All three free Nemotron endpoints are NVIDIA trials with security and product-improvement logging; do not submit personal or confidential data. Beam excludes training but retains data for safety for 30 days, and is unavailable in mainland China, Hong Kong, Macau and other listed regions. The free Jev endpoint serves structured decisions under the documented general privacy policy.",
           "eligibility_zh": "使用相应 Zen 免费模型端点；具体限制以官方为准",
           "eligibility_en": "Use the respective free Zen model endpoint; official restrictions apply",
           "card_required": "unknown",
@@ -1632,8 +1618,8 @@
       "note_zh": "各模型有独立的美元用量上限，五小时为月上限的 20%、每周为 50%。启用 Use balance 后超额转用 Console 按量余额；请求数为官方估算，不能视为固定额度。 GLM-5.3-Flash 月用量上限 $60。 Kimi K3 月用量上限 $15。 MiniMax M3 月用量上限 $60。 DeepSeek V4.1 Flash 月美元用量上限提高至 $80。Go 订阅仅适用于单成员 workspace，订阅后不可邀请成员；直接 API 端点现按协议区分为 /inference/go/openai/v1、/inference/go/anthropic/v1 与 /inference/go/google/v1beta；具体模型与协议以官方端点表为准。",
       "note_en": "Each model has its own dollar-denominated allowance: 20% of its monthly limit per five hours and 50% per week. Enable Use balance to fall back to Console pay-as-you-go credits; published request counts are estimates, not fixed quotas. GLM-5.3-Flash monthly allowance: $60. Kimi K3 monthly allowance: $15. MiniMax M3 monthly allowance: $60. DeepSeek V4.1 Flash monthly dollar allowance increases to $80. Go subscriptions require a single-member workspace, which cannot invite members while subscribed. Direct API endpoints now vary by protocol: /inference/go/openai/v1, /inference/go/anthropic/v1 and /inference/go/google/v1beta. Follow the official model/endpoint table.",
       "source_url": "https://opencode.ai/docs/go/",
-      "checked_at": "2026-10-18",
-      "updated_at": "2026-10-17",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
       "product_id": "opencode-go",
       "product_name": "OpenCode Go",
       "tier_name": "Go",
@@ -1663,17 +1649,17 @@
         "DeepSeek V4 Pro",
         "Hy4 preview",
         "Hy3",
-        "Space Bunny",
+        "MiniMax M3.1 Flash Free",
         "Claude Haiku 5.5",
         "Gemini 4 Argon Contributor",
         "Beam Free"
       ],
-      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。Go 的 Space Bunny 与 Zen 的 Space Bunny Free 是不同入口。 Haiku 5.5 月用量上限 $15；超过 100K 提示使用更高费率。 Step 5 Preview 已转为计费模型，每百万 tokens 输入 $1、输出 $2.70、缓存读取 $0.10；月美元用量上限限时四倍为 $60（常规 $15），不再是免费不限额。 Gemini 4 Argon Contributor 限时双倍月美元上限 $60（常规 $30），输入 $4、输出 $20、缓存读取 $0.20 / 百万 tokens；提示与输出可用于训练 Google 模型。Beam Free 限时免费、不用于训练，安全留存 30 天，受地域限制（含中国内地、香港、澳门）。当前 Go 目录不再列出 DeepSeek V4 Flash 与 Vision Exp。 当前 Go 模型表也不再列出 Kimi K2.6、MiniMax M2.7 和 Grok 4.6；保留其较新的同系列型号。",
-      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. Go’s Space Bunny and Zen’s Space Bunny Free are distinct offerings. Haiku 5.5 has a $15 monthly usage limit; prompts over 100K use higher rates. Step 5 Preview is now metered at $1 input, $2.70 output and $0.10 cached reads per million tokens. Its monthly dollar limit is temporarily quadrupled to $60 (normally $15); it is no longer free and unlimited. Gemini 4 Argon Contributor has a temporary doubled monthly dollar limit of $60 (normally $30), at $4 input, $20 output and $0.20 cached reads per million tokens; prompts and completions may train Google models. Beam Free is temporarily free, excludes training and retains data for safety for 30 days, with regional restrictions including mainland China, Hong Kong and Macau. The current Go catalog no longer lists DeepSeek V4 Flash or Vision Exp. The current Go model table also no longer lists Kimi K2.6, MiniMax M2.7 or Grok 4.6; newer models from those families remain listed.",
+      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。当前模型表已撤下 Space Bunny，新增 MiniMax M3.1 Flash Free（限时免费、不限请求量），不等同于其他付费 MiniMax 型号。 Haiku 5.5 月用量上限 $15；超过 100K 提示使用更高费率。 Step 5 Preview 已转为计费模型，每百万 tokens 输入 $1、输出 $2.70、缓存读取 $0.10；月美元用量上限限时四倍为 $60（常规 $15），不再是免费不限额。 Gemini 4 Argon Contributor 限时双倍月美元上限 $60（常规 $30），输入 $4、输出 $20、缓存读取 $0.20 / 百万 tokens；提示与输出可用于训练 Google 模型。Beam Free 限时免费、不用于训练，安全留存 30 天，受地域限制（含中国内地、香港、澳门）。当前 Go 目录不再列出 DeepSeek V4 Flash 与 Vision Exp。 当前 Go 模型表也不再列出 Kimi K2.6、MiniMax M2.7 和 Grok 4.6；保留其较新的同系列型号。",
+      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. The current catalog removes Space Bunny and adds MiniMax M3.1 Flash Free with temporarily unlimited free requests; this does not extend to other paid MiniMax models. Haiku 5.5 has a $15 monthly usage limit; prompts over 100K use higher rates. Step 5 Preview is now metered at $1 input, $2.70 output and $0.10 cached reads per million tokens. Its monthly dollar limit is temporarily quadrupled to $60 (normally $15); it is no longer free and unlimited. Gemini 4 Argon Contributor has a temporary doubled monthly dollar limit of $60 (normally $30), at $4 input, $20 output and $0.20 cached reads per million tokens; prompts and completions may train Google models. Beam Free is temporarily free, excludes training and retains data for safety for 30 days, with regional restrictions including mainland China, Hong Kong and Macau. The current Go catalog no longer lists DeepSeek V4 Flash or Vision Exp. The current Go model table also no longer lists Kimi K2.6, MiniMax M2.7 or Grok 4.6; newer models from those families remain listed.",
       "models_source_urls": [
-        "https://opencode.ai/docs/go/"
+        "https://opencode.ai/v2/docs/console/go/"
       ],
-      "models_checked_at": "2026-10-18"
+      "models_checked_at": "2026-10-20"
     },
     {
       "id": "opencode-go-plus",
@@ -1691,8 +1677,8 @@
       "note_zh": "各模型有独立的美元用量上限，五小时为月上限的 20%、每周为 50%。启用 Use balance 后超额转用 Console 按量余额；请求数为官方估算，不能视为固定额度。 GLM-5.3-Flash 月用量上限 $180。 Kimi K3 月用量上限 $60。 MiniMax M3 月用量上限 $180。 DeepSeek V4.1 Flash 月美元用量上限提高至 $160。Go 订阅仅适用于单成员 workspace，订阅后不可邀请成员；直接 API 端点现按协议区分为 /inference/go/openai/v1、/inference/go/anthropic/v1 与 /inference/go/google/v1beta；具体模型与协议以官方端点表为准。",
       "note_en": "Each model has its own dollar-denominated allowance: 20% of its monthly limit per five hours and 50% per week. Enable Use balance to fall back to Console pay-as-you-go credits; published request counts are estimates, not fixed quotas. GLM-5.3-Flash monthly allowance: $180. Kimi K3 monthly allowance: $60. MiniMax M3 monthly allowance: $180. DeepSeek V4.1 Flash monthly dollar allowance increases to $160. Go subscriptions require a single-member workspace, which cannot invite members while subscribed. Direct API endpoints now vary by protocol: /inference/go/openai/v1, /inference/go/anthropic/v1 and /inference/go/google/v1beta. Follow the official model/endpoint table.",
       "source_url": "https://opencode.ai/docs/go/",
-      "checked_at": "2026-10-18",
-      "updated_at": "2026-10-17",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
       "product_id": "opencode-go",
       "product_name": "OpenCode Go",
       "tier_name": "Go Plus",
@@ -1722,17 +1708,17 @@
         "DeepSeek V4 Pro",
         "Hy4 preview",
         "Hy3",
-        "Space Bunny",
+        "MiniMax M3.1 Flash Free",
         "Claude Haiku 5.5",
         "Gemini 4 Argon Contributor",
         "Beam Free"
       ],
-      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。Go 的 Space Bunny 与 Zen 的 Space Bunny Free 是不同入口。 Haiku 5.5 月用量上限 $60；超过 100K 提示使用更高费率。 Step 5 Preview 已转为计费模型，每百万 tokens 输入 $1、输出 $2.70、缓存读取 $0.10；月美元用量上限限时四倍为 $240（常规 $60），不再是免费不限额。 Gemini 4 Argon Contributor 限时双倍月美元上限 $240（常规 $120），输入 $4、输出 $20、缓存读取 $0.20 / 百万 tokens；提示与输出可用于训练 Google 模型。Beam Free 限时免费、不用于训练，安全留存 30 天，受地域限制（含中国内地、香港、澳门）。当前 Go 目录不再列出 DeepSeek V4 Flash 与 Vision Exp。 当前 Go 模型表也不再列出 Kimi K2.6、MiniMax M2.7 和 Grok 4.6；保留其较新的同系列型号。",
-      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. Go’s Space Bunny and Zen’s Space Bunny Free are distinct offerings. Haiku 5.5 has a $60 monthly usage limit; prompts over 100K use higher rates. Step 5 Preview is now metered at $1 input, $2.70 output and $0.10 cached reads per million tokens. Its monthly dollar limit is temporarily quadrupled to $240 (normally $60); it is no longer free and unlimited. Gemini 4 Argon Contributor has a temporary doubled monthly dollar limit of $240 (normally $120), at $4 input, $20 output and $0.20 cached reads per million tokens; prompts and completions may train Google models. Beam Free is temporarily free, excludes training and retains data for safety for 30 days, with regional restrictions including mainland China, Hong Kong and Macau. The current Go catalog no longer lists DeepSeek V4 Flash or Vision Exp. The current Go model table also no longer lists Kimi K2.6, MiniMax M2.7 or Grok 4.6; newer models from those families remain listed.",
+      "models_note_zh": "两档覆盖同一官方模型表，但逐模型额度不同；Muse Spark Contributor 受地域限制，LongCat 2.5 Preview Free 为限时免费。当前模型表已撤下 Space Bunny，新增 MiniMax M3.1 Flash Free（限时免费、不限请求量），不等同于其他付费 MiniMax 型号。 Haiku 5.5 月用量上限 $60；超过 100K 提示使用更高费率。 Step 5 Preview 已转为计费模型，每百万 tokens 输入 $1、输出 $2.70、缓存读取 $0.10；月美元用量上限限时四倍为 $240（常规 $60），不再是免费不限额。 Gemini 4 Argon Contributor 限时双倍月美元上限 $240（常规 $120），输入 $4、输出 $20、缓存读取 $0.20 / 百万 tokens；提示与输出可用于训练 Google 模型。Beam Free 限时免费、不用于训练，安全留存 30 天，受地域限制（含中国内地、香港、澳门）。当前 Go 目录不再列出 DeepSeek V4 Flash 与 Vision Exp。 当前 Go 模型表也不再列出 Kimi K2.6、MiniMax M2.7 和 Grok 4.6；保留其较新的同系列型号。",
+      "models_note_en": "Both tiers cover the official model list with different per-model allowances. Muse Spark Contributor has regional restrictions; LongCat 2.5 Preview Free is temporarily free. The current catalog removes Space Bunny and adds MiniMax M3.1 Flash Free with temporarily unlimited free requests; this does not extend to other paid MiniMax models. Haiku 5.5 has a $60 monthly usage limit; prompts over 100K use higher rates. Step 5 Preview is now metered at $1 input, $2.70 output and $0.10 cached reads per million tokens. Its monthly dollar limit is temporarily quadrupled to $240 (normally $60); it is no longer free and unlimited. Gemini 4 Argon Contributor has a temporary doubled monthly dollar limit of $240 (normally $120), at $4 input, $20 output and $0.20 cached reads per million tokens; prompts and completions may train Google models. Beam Free is temporarily free, excludes training and retains data for safety for 30 days, with regional restrictions including mainland China, Hong Kong and Macau. The current Go catalog no longer lists DeepSeek V4 Flash or Vision Exp. The current Go model table also no longer lists Kimi K2.6, MiniMax M2.7 or Grok 4.6; newer models from those families remain listed.",
       "models_source_urls": [
-        "https://opencode.ai/docs/go/"
+        "https://opencode.ai/v2/docs/console/go/"
       ],
-      "models_checked_at": "2026-10-18"
+      "models_checked_at": "2026-10-20"
     },
     {
       "id": "pi-free",
@@ -2585,8 +2571,8 @@
       "note_zh": "标准月费；官方首月半价公告仅标至“10 月 14 日”、未注明年份；本次已过当年该日期，故不作为当前优惠承诺，仍展示标准续订价。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
       "note_en": "Regular monthly fee. The first-month 50% notice ends on “October 14” without a year; this review is after that date in the current year, so it is not presented as a current offer. Regular renewal prices are shown. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-10-19",
-      "updated_at": "2026-10-19",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
       "tier_name": "Go",
@@ -2600,7 +2586,44 @@
         "https://platform.minimax.io/docs/m-plan/faq",
         "https://www.minimax.io/m-plan"
       ],
-      "models_checked_at": "2026-10-19"
+      "models_checked_at": "2026-10-20",
+      "offers": [
+        {
+          "id": "first-month-half-price",
+          "type": "discount",
+          "kind": "promotion",
+          "status": "pending",
+          "models": [
+            "MiniMax M3.1 Flash"
+          ],
+          "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
+          "checked_at": "2026-10-20",
+          "conditions_zh": "月付新购或符合条件的升级首月五折，第二个月按标准价自动续费；年付不参与。官方期限只写“10 月 14 日”，缺少年份，当前有效性待核验。",
+          "conditions_en": "50% off the first month for new monthly purchases and eligible upgrades; standard auto-renewal from month two. Annual billing is excluded. The official deadline says only October 14 without a year, so current validity remains unverified.",
+          "eligibility_zh": "Go、Explore 或 Build 的月付新购与活动期内符合规则的升级；不代表无需付费。",
+          "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; payment is required.",
+          "card_required": "unknown",
+          "ends_at": null,
+          "end_note_zh": "官方写至 10 月 14 日，未注明年份，待核验",
+          "end_note_en": "Official deadline: October 14, year unspecified; verification pending",
+          "price": {
+            "amount": 11.0
+          },
+          "reference": {
+            "label_zh": "同档位标准月费",
+            "label_en": "Standard monthly price for the same tier",
+            "comparison_zh": "同一官方页面、同一月付档位，首月活动价格与第二个月起标准续费比较。",
+            "comparison_en": "Same official page and monthly tier; compare the first-month promotion with standard renewal from month two.",
+            "currency": "USD",
+            "billing": "monthly",
+            "price": {
+              "amount": 22
+            },
+            "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
+            "checked_at": "2026-10-20"
+          }
+        }
+      ]
     },
     {
       "id": "minimax-m-plan-explore",
@@ -2618,8 +2641,8 @@
       "note_zh": "标准月费；官方首月半价公告仅标至“10 月 14 日”、未注明年份；本次已过当年该日期，故不作为当前优惠承诺，仍展示标准续订价。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
       "note_en": "Regular monthly fee. The first-month 50% notice ends on “October 14” without a year; this review is after that date in the current year, so it is not presented as a current offer. Regular renewal prices are shown. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-10-19",
-      "updated_at": "2026-10-19",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
       "tier_name": "Explore",
@@ -2634,7 +2657,44 @@
         "https://platform.minimax.io/docs/m-plan/faq",
         "https://www.minimax.io/m-plan"
       ],
-      "models_checked_at": "2026-10-19"
+      "models_checked_at": "2026-10-20",
+      "offers": [
+        {
+          "id": "first-month-half-price",
+          "type": "discount",
+          "kind": "promotion",
+          "status": "pending",
+          "models": [
+            "MiniMax M3.1 Flash"
+          ],
+          "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
+          "checked_at": "2026-10-20",
+          "conditions_zh": "月付新购或符合条件的升级首月五折，第二个月按标准价自动续费；年付不参与。官方期限只写“10 月 14 日”，缺少年份，当前有效性待核验。",
+          "conditions_en": "50% off the first month for new monthly purchases and eligible upgrades; standard auto-renewal from month two. Annual billing is excluded. The official deadline says only October 14 without a year, so current validity remains unverified.",
+          "eligibility_zh": "Go、Explore 或 Build 的月付新购与活动期内符合规则的升级；不代表无需付费。",
+          "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; payment is required.",
+          "card_required": "unknown",
+          "ends_at": null,
+          "end_note_zh": "官方写至 10 月 14 日，未注明年份，待核验",
+          "end_note_en": "Official deadline: October 14, year unspecified; verification pending",
+          "price": {
+            "amount": 27.5
+          },
+          "reference": {
+            "label_zh": "同档位标准月费",
+            "label_en": "Standard monthly price for the same tier",
+            "comparison_zh": "同一官方页面、同一月付档位，首月活动价格与第二个月起标准续费比较。",
+            "comparison_en": "Same official page and monthly tier; compare the first-month promotion with standard renewal from month two.",
+            "currency": "USD",
+            "billing": "monthly",
+            "price": {
+              "amount": 55
+            },
+            "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
+            "checked_at": "2026-10-20"
+          }
+        }
+      ]
     },
     {
       "id": "minimax-m-plan-build",
@@ -2652,8 +2712,8 @@
       "note_zh": "标准月费；官方首月半价公告仅标至“10 月 14 日”、未注明年份；本次已过当年该日期，故不作为当前优惠承诺，仍展示标准续订价。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
       "note_en": "Regular monthly fee. The first-month 50% notice ends on “October 14” without a year; this review is after that date in the current year, so it is not presented as a current offer. Regular renewal prices are shown. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-10-19",
-      "updated_at": "2026-10-19",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
       "tier_name": "Build",
@@ -2668,7 +2728,44 @@
         "https://platform.minimax.io/docs/m-plan/faq",
         "https://www.minimax.io/m-plan"
       ],
-      "models_checked_at": "2026-10-19"
+      "models_checked_at": "2026-10-20",
+      "offers": [
+        {
+          "id": "first-month-half-price",
+          "type": "discount",
+          "kind": "promotion",
+          "status": "pending",
+          "models": [
+            "MiniMax M3.1 Flash"
+          ],
+          "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
+          "checked_at": "2026-10-20",
+          "conditions_zh": "月付新购或符合条件的升级首月五折，第二个月按标准价自动续费；年付不参与。官方期限只写“10 月 14 日”，缺少年份，当前有效性待核验。",
+          "conditions_en": "50% off the first month for new monthly purchases and eligible upgrades; standard auto-renewal from month two. Annual billing is excluded. The official deadline says only October 14 without a year, so current validity remains unverified.",
+          "eligibility_zh": "Go、Explore 或 Build 的月付新购与活动期内符合规则的升级；不代表无需付费。",
+          "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; payment is required.",
+          "card_required": "unknown",
+          "ends_at": null,
+          "end_note_zh": "官方写至 10 月 14 日，未注明年份，待核验",
+          "end_note_en": "Official deadline: October 14, year unspecified; verification pending",
+          "price": {
+            "amount": 66.0
+          },
+          "reference": {
+            "label_zh": "同档位标准月费",
+            "label_en": "Standard monthly price for the same tier",
+            "comparison_zh": "同一官方页面、同一月付档位，首月活动价格与第二个月起标准续费比较。",
+            "comparison_en": "Same official page and monthly tier; compare the first-month promotion with standard renewal from month two.",
+            "currency": "USD",
+            "billing": "monthly",
+            "price": {
+              "amount": 132
+            },
+            "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
+            "checked_at": "2026-10-20"
+          }
+        }
+      ]
     },
     {
       "id": "kimi-plan-plus",
@@ -4664,6 +4761,67 @@
         "https://antigravity.google/docs/plans"
       ],
       "models_checked_at": "2026-10-18"
+    },
+    {
+      "id": "mistral-large-4",
+      "category": "api",
+      "provider": "Mistral AI",
+      "name": "Mistral Large 4 Preview",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 1.36,
+        "output": 4.18,
+        "cached": 0.14,
+        "cache_write": null
+      },
+      "scope_zh": "官方 API · Public Preview · 1M 上下文",
+      "scope_en": "Official API · Public Preview · 1M context",
+      "note_zh": "表格列官方划线标准价；当前官方促销价为每百万 tokens 输入 $0.68、输出 $2.09、缓存读取 $0.07。缓存写入未公布，不视为免费；模型仍为公开预览，优惠未公布截止日。",
+      "note_en": "The table lists the official struck-through standard rates. The current promotion is $0.68 input, $2.09 output and $0.07 cached reads per million tokens. Cache-write pricing is not specified and is not treated as free. The model is in public preview; no promotion end date is published.",
+      "source_url": "https://docs.mistral.ai/models/mistral-large-4",
+      "checked_at": "2026-10-20",
+      "updated_at": "2026-10-20",
+      "offers": [
+        {
+          "id": "preview-half-price",
+          "type": "discount",
+          "kind": "official-discount",
+          "status": "verified",
+          "models": [
+            "Mistral Large 4 Preview"
+          ],
+          "source_url": "https://docs.mistral.ai/models/mistral-large-4",
+          "checked_at": "2026-10-20",
+          "conditions_zh": "官方同一预览模型页列出五折促销，覆盖输入、输出和缓存读取价格；未公布截止日。",
+          "conditions_en": "The same official preview model page lists 50% promotional input, output and cached-read rates, with no published end date.",
+          "eligibility_zh": "使用 Mistral 官方 Mistral Large 4 预览 API，账号和服务条款适用。",
+          "eligibility_en": "Use the official Mistral Large 4 preview API, subject to account and service terms.",
+          "card_required": "unknown",
+          "ends_at": null,
+          "price": {
+            "input": 0.68,
+            "output": 2.09,
+            "cached": 0.07
+          },
+          "reference": {
+            "label_zh": "官方同模型标准价",
+            "label_en": "Official standard rates for the same model",
+            "comparison_zh": "同一官方页面、同一预览 API 和每百万 tokens 口径，按输入、输出及缓存读取分别比较。",
+            "comparison_en": "Same official page, preview API and per-million-token unit; compare input, output and cached reads separately.",
+            "currency": "USD",
+            "billing": "token",
+            "price": {
+              "input": 1.36,
+              "output": 4.18,
+              "cached": 0.14
+            },
+            "source_url": "https://docs.mistral.ai/models/mistral-large-4",
+            "checked_at": "2026-10-20"
+          }
+        }
+      ]
     }
   ]
 }

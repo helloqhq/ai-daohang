@@ -298,9 +298,13 @@ def convert(source,fetch,since,until,reconcile=()):
         out=[]
         for card in tree.nodes('li'):
             link=next((a for a in card.nodes('a') if a.attrs.get('href','').startswith('/blog/')),None)
+            time=card.first('time')
+            date=date_text(time.text().replace('.','-')) if time else None
             label=next((match for n in card.nodes() if (match:=re.fullmatch(r'(\d{2})\.(\d{2})\.(\d{2})',n.text()))),None)
-            if not link or not label:continue
-            month,day,year=map(int,label.groups());date=dt.date(2000+year,month,day).isoformat();url=absolute(base,link.attrs['href'])
+            if not link or not (date or label):continue
+            if not date:
+                month,day,year=map(int,label.groups());date=dt.date(2000+year,month,day).isoformat()
+            url=absolute(base,link.attrs['href'])
             title=next((h.text() for tag in ('h2','h3') for h in card.nodes(tag)),None) or link.text().splitlines()[0]
             row=item(title,url,card.text(),date)
             if in_window(date,since,until) or url in reconcile:

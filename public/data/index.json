@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "336072346fa5b76c",
-  "generated_at": "2026-10-20T13:40:55+00:00",
+  "snapshot_id": "e9f0c430976b9e91",
+  "generated_at": "2026-10-21T14:21:38+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 267,
+      "count": 293,
       "min_date": "2026-10-01T01:34:16Z",
-      "max_date": "2026-10-20"
+      "max_date": "2026-10-21T12:21:11Z"
     },
     {
       "month": "2026-09",
@@ -19,8 +19,33 @@
     }
   ],
   "event_locations": {
+    "hermes-v0223": "2026-10",
+    "mistral-nvidia-engineering-20261021": "2026-10",
+    "openai-google-cloud-model-garden-20261021": "2026-10",
+    "nvidia-local-ai-spark-station-20261021": "2026-10",
+    "nvidia-factory-operations-blueprint-20261021": "2026-10",
+    "nvidia-confidential-bare-metal-20261021": "2026-10",
+    "nvidia-agent-knowledge-foundation-20261021": "2026-10",
+    "nvidia-open-models-berlin-20261021": "2026-10",
+    "kimi-code-v230": "2026-10",
+    "copilot-cli-v10102-1": "2026-10",
+    "claude-code-v21306": "2026-10",
+    "copilot-cli-v10102-0": "2026-10",
+    "gemini-cli-nightly-20261021": "2026-10",
+    "claude-code-v21305": "2026-10",
+    "siliconflow-deepseek-flash1017-20261021": "2026-10",
+    "gemini-cli-v0650": "2026-10",
+    "gemini-cli-v0660-preview0": "2026-10",
+    "copilot-cli-v10101-stable": "2026-10",
+    "kilo-minimax-m31-flash-free-20261020": "2026-10",
+    "copilot-cli-v10101-1": "2026-10",
+    "mistral-voxtral3-20261020": "2026-10",
     "zcode-v3162": "2026-10",
     "google-coral-npu-compiler-v1-20261020": "2026-10",
+    "kiro-ide-v1410-20261020": "2026-10",
+    "google-model-explorer-arm-adapters-20261020": "2026-10",
+    "google-torchtitan-tpu-20261020": "2026-10",
+    "google-vllm-sglang-torchtpu-20261020": "2026-10",
     "kilo-v7815": "2026-10",
     "claude-code-v21304": "2026-10",
     "copilot-model-policy-api-ga-20261019": "2026-10",
@@ -30,6 +55,7 @@
     "minimax-m31-flash-20261019": "2026-10",
     "devin-oncall-ga-20261019": "2026-10",
     "google-litert-tensor-api-20261019": "2026-10",
+    "kiro-ide-v140-memory-20261019": "2026-10",
     "deeptutor-v1615": "2026-10",
     "anthropic-public-benefit-fund-20261018": "2026-10",
     "deepseek-harness-v021rc2": "2026-10",
@@ -293,5 +319,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 273
+  "total_events": 299
 }

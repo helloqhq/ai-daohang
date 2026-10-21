@@ -378,7 +378,8 @@
       "pricing_product_ids": [
         "opencode",
         "opencode-go"
-      ]
+      ],
+      "pricing_provider": "OpenCode"
     },
     {
       "id": "copilot",

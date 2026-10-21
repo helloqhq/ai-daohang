@@ -12,13 +12,15 @@ const free=snapshot.plans.find(plan=>plan.id==='kiro-free');
 const discount=snapshot.plans.find(plan=>plan.id==='deepseek-v4-1-flash');
 
 test('free access distinguishes inference allowances from free clients and stopped access',()=>{
-  const ids=filterPlans(snapshot.plans,{offer:'free'},now).map(plan=>plan.id);
-  for(const id of ['kiro-free','codex-free','cursor-x-free','opencode-free']) assert.ok(ids.includes(id));
-  for(const id of ['pi-free','cline-free','aider-free','kilo-free','gemini-cli-free']) assert.ok(!ids.includes(id));
-  assert.ok(filterPlans(snapshot.plans,{offer:'free',includeUnavailable:true},now).some(plan=>plan.id==='gemini-cli-free'));
-  const limited=filterPlans(snapshot.plans,{offer:'free',offerKind:'limited-time'},now);
-  assert.deepEqual(limited.map(plan=>plan.id),['opencode-free']);
-  assert.ok(limited[0].offers[0].models.includes('DeepSeek V4.1 Flash Free'));
+  const reviewed=new Date('2026-10-21T14:00:00Z');
+  const ids=filterPlans(snapshot.plans,{offer:'free'},reviewed).map(plan=>plan.id);
+  for(const id of ['kiro-free','codex-free','cursor-x-free','opencode-free','kilo-free']) assert.ok(ids.includes(id));
+  for(const id of ['pi-free','cline-free','aider-free','gemini-cli-free']) assert.ok(!ids.includes(id));
+  assert.ok(filterPlans(snapshot.plans,{offer:'free',includeUnavailable:true},reviewed).some(plan=>plan.id==='gemini-cli-free'));
+  const limited=filterPlans(snapshot.plans,{offer:'free',offerKind:'limited-time'},reviewed);
+  assert.deepEqual(limited.map(plan=>plan.id).sort(),['kilo-free','opencode-free']);
+  assert.ok(limited.find(plan=>plan.id==='opencode-free').offers[0].models.includes('DeepSeek V4.1 Flash Free'));
+  assert.deepEqual(limited.find(plan=>plan.id==='kilo-free').offers[0].models,['MiniMax M3.1 Flash']);
 });
 test('shared chat and agent subscriptions appear once and work with other filters',()=>{
   const shared=snapshot.plans.find(plan=>plan.id==='cursor-x-free');

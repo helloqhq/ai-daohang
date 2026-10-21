@@ -1,7 +1,849 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "336072346fa5b76c",
+  "snapshot_id": "e9f0c430976b9e91",
   "events": [
+    {
+      "id": "hermes-v0223",
+      "entity_ids": [
+        "hermes"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Hermes 0.22.3 正式版汇总约 620 项合并变更，扩展插件与 MCP 进度支持",
+      "title_en": "Hermes 0.22.3 stabilizes about 620 merged changes with plugin and MCP progress improvements",
+      "summary_zh": "Hermes 发布 0.22.3，汇总自 0.22.2 起约 620 个合并 PR，供 CLI、Microsoft Store、Docker 与 Hermes Cloud 使用；完整整理后的说明将随 0.23.0 提供。",
+      "summary_en": "Hermes released 0.22.3, rolling up about 620 PRs merged since 0.22.2 for the CLI, Microsoft Store, Docker and Hermes Cloud. Fully curated notes are planned for 0.23.0.",
+      "key_points_zh": [
+        "本次窗口包括 MCP 实时工具进度、插件 OAuth 登录与刷新、插件更新，以及桌面端排队提示的编辑。",
+        "安装器版桌面应用本次不更新，将随下一次打包版本更新；CLI 可运行 hermes update。"
+      ],
+      "key_points_en": [
+        "The release window includes live MCP tool progress, plugin OAuth sign-in and refresh, plugin updates, and editing queued desktop prompts.",
+        "The installer-based desktop app is unchanged this release and updates with the next bundle; CLI users can run hermes update."
+      ],
+      "importance_reason_zh": "为多个分发渠道提供稳定更新，并明确桌面安装器与其他渠道的差异。",
+      "importance_reason_en": "Provides a stable release across distribution channels while clarifying the installer desktop exception.",
+      "published_at": "2026-10-21T12:21:11Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-21T13:57:10+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.3",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.3",
+          "collected_at": "2026-10-21T13:57:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "mistral-nvidia-engineering-20261021",
+      "entity_ids": [
+        "mistral",
+        "nvidia"
+      ],
+      "kind": "preview",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Mistral 与 NVIDIA 合作开发面向工程的 AI 工作流",
+      "title_en": "Mistral and NVIDIA collaborate on AI engineering workflows",
+      "summary_zh": "Mistral 官方订阅宣布与 NVIDIA 合作，以 NVIDIA 加速计算开发新一代 AI 原生工程工作流；现有简介没有给出具体产品或上线日期。",
+      "summary_en": "Mistral’s official feed announces a collaboration with NVIDIA on a new generation of AI-native engineering workflows powered by NVIDIA accelerated computing. The summary specifies no product or launch date.",
+      "key_points_zh": [
+        "合作方向为工程场景中的 AI 工作流。",
+        "材料范围为官方 RSS 简介，不据此推断已推出具体服务。"
+      ],
+      "key_points_en": [
+        "The collaboration targets AI workflows for engineering.",
+        "Evidence is limited to the official RSS summary and does not establish a specific service launch."
+      ],
+      "importance_reason_zh": "是模型厂商向工程应用扩展的一手产品方向预告。",
+      "importance_reason_en": "A first-party preview of a model vendor’s expansion into engineering applications.",
+      "published_at": "2026-10-21T12:00:20+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T13:57:17+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "mistral-official",
+          "content_id": "https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/",
+          "url": "https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering/",
+          "collected_at": "2026-10-21T13:57:17+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-google-cloud-model-garden-20261021",
+      "entity_ids": [
+        "openai",
+        "codex",
+        "google"
+      ],
+      "kind": "preview",
+      "topics": [
+        "availability",
+        "api"
+      ],
+      "title_zh": "OpenAI 宣布模型与 Codex 工作流将接入 Google Cloud",
+      "title_en": "OpenAI announces models and Codex workflows for Google Cloud",
+      "summary_zh": "OpenAI 的官方订阅宣布，将与 Google Cloud 把前沿模型及 Codex 工作流引入 Gemini Model Garden，通过 Google Cloud Marketplace 提供。现有材料仅为公告简介。",
+      "summary_en": "OpenAI’s official feed announces that frontier models and Codex workflows are coming to Gemini Model Garden with Google Cloud, through Google Cloud Marketplace. The available material is the announcement summary.",
+      "key_points_zh": [
+        "该公告涉及 Google Cloud 上的模型与 Codex 工作流接入。",
+        "订阅简介未列出型号、价格、地区或具体开放时间。"
+      ],
+      "key_points_en": [
+        "The announcement concerns access to models and Codex workflows on Google Cloud.",
+        "The feed summary does not list model IDs, prices, regions or a precise availability date."
+      ],
+      "importance_reason_zh": "扩展模型与 Agent 工作流的云端分发渠道，具体条件仍待公布。",
+      "importance_reason_en": "Expands cloud distribution for models and agent workflows, with detailed terms still unspecified.",
+      "published_at": "2026-10-21T12:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T13:57:06+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/openai-models-google-cloud",
+          "url": "https://openai.com/index/openai-models-google-cloud",
+          "collected_at": "2026-10-21T13:57:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-local-ai-spark-station-20261021",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "NVIDIA 公布本地 Agent 平台更新：八机 DGX Spark 与 Model Launcher",
+      "title_en": "NVIDIA announces local-agent updates with eight-system DGX Spark clusters and Model Launcher",
+      "summary_zh": "NVIDIA 在 GTC Berlin 公布本地 AI 更新：DGX Spark 已支持手动配置最多八机集群，Underdog 本地桌面 Agent 已面向 RTX Spark 提供；另预告新的硬件与模型启动工具。",
+      "summary_en": "At GTC Berlin, NVIDIA announces local-AI updates: DGX Spark supports manually configured clusters of up to eight systems, and Underdog’s local desktop agent is available for RTX Spark. Additional hardware and model-launching tools are previewed.",
+      "key_points_zh": [
+        "DGX Spark 64GB 预计 10 月 23 日由合作伙伴陆续提供，Sync Model Launcher 计划本月推出，可下载适配模型和容器并连接 OpenCode。",
+        "DGX Station 的 Windows 版本预计 12 月推出；不能把这些计划日期写成已经可用。"
+      ],
+      "key_points_en": [
+        "DGX Spark 64GB is expected to start rolling out October 23; Sync Model Launcher is planned this month to download matched models and containers and connect OpenCode.",
+        "The Windows version of DGX Station is expected in December; these planned releases are not already available."
+      ],
+      "importance_reason_zh": "涉及本地 Agent 的模型运行、集群容量与部署入口的重要变化。",
+      "importance_reason_en": "Changes model execution, cluster capacity and deployment access for local agents.",
+      "published_at": "2026-10-21T10:50:37+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:02:12+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync/",
+          "url": "https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync/",
+          "collected_at": "2026-10-21T14:02:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-factory-operations-blueprint-20261021",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "NVIDIA Factory Operations Blueprint 在 GitHub 开放早期访问",
+      "title_en": "NVIDIA Factory Operations Blueprint enters early access on GitHub",
+      "summary_zh": "NVIDIA 宣布 Factory Operations Blueprint（FOX）在 GitHub 开放早期访问，帮助开发者部署持续运行的工厂管理 Agent，并协调视觉检查、根因分析、报告和车队管理等专门 Agent。",
+      "summary_en": "NVIDIA announces early access to Factory Operations Blueprint (FOX) on GitHub for always-on factory-manager agents coordinating specialists for visual inspection, root-cause analysis, reporting and fleet management.",
+      "key_points_zh": [
+        "可连接 Cosmos、Nemotron 及 CAD、产品生命周期、仿真、IT 和运营技术系统。",
+        "借助 Cosmos 上下文学习，Agent 可根据示例和文档适应任务，无需微调；当前为早期访问。"
+      ],
+      "key_points_en": [
+        "Can connect Cosmos, Nemotron and CAD, product-lifecycle, simulation, IT and operational-technology systems.",
+        "Cosmos in-context learning lets agents adapt from examples and documents without fine-tuning; access is currently early."
+      ],
+      "importance_reason_zh": "提供可获取的工业 Agent 参考实现，涉及真实工作流和系统集成。",
+      "importance_reason_en": "Provides an accessible industrial-agent reference implementation for operational workflows and integrations.",
+      "published_at": "2026-10-21T10:30:40+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:02:12+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/europe-industrial-leaders-engineering-manufacturing/",
+          "url": "https://blogs.nvidia.com/blog/europe-industrial-leaders-engineering-manufacturing/",
+          "collected_at": "2026-10-21T14:02:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-confidential-bare-metal-20261021",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "NVIDIA 扩展机密计算，新增 Confidential Bare Metal 部署选项",
+      "title_en": "NVIDIA adds Confidential Bare Metal to its confidential-computing options",
+      "summary_zh": "NVIDIA 宣布 Confidential Bare Metal，让前沿模型开发者在第三方独享裸金属基础设施运行敏感工作负载，同时管理自有软件栈并保护模型与数据；它与机密容器、机密虚拟机组成三类部署选项。",
+      "summary_en": "NVIDIA announces Confidential Bare Metal for frontier-model builders running sensitive workloads on dedicated third-party infrastructure while managing their own software stack and protecting models and data. It joins confidential containers and virtual machines as three deployment options.",
+      "key_points_zh": [
+        "新增传输保护、平台完整性度量与硬件访问限制。",
+        "Cohere 计划用于 Model Vault；Google Cloud 正将支持扩展至采用 GB300 NVL72 的 A4X Max 实例。"
+      ],
+      "key_points_en": [
+        "Adds transport protection, platform-integrity measurements and hardware access restrictions.",
+        "Cohere plans integration with Model Vault; Google Cloud is extending support to GB300 NVL72-powered A4X Max instances."
+      ],
+      "importance_reason_zh": "扩展敏感模型训练与推理可选择的安全基础设施模式。",
+      "importance_reason_en": "Expands secure infrastructure choices for sensitive model training and inference.",
+      "published_at": "2026-10-21T10:30:02+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:02:12+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/confidential-computing-model-builders-infrastructure/",
+          "url": "https://blogs.nvidia.com/blog/confidential-computing-model-builders-infrastructure/",
+          "collected_at": "2026-10-21T14:02:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-agent-knowledge-foundation-20261021",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "NVIDIA 扩展 Agent Toolkit，引入企业知识基础与 Kumo 模型",
+      "title_en": "NVIDIA expands Agent Toolkit with enterprise knowledge tools and Kumo models",
+      "summary_zh": "NVIDIA 扩展开源 Agent Toolkit，加入 Agent Knowledge Foundation，将 CUDA-X 数据处理库、Nemotron Retriever 与 Kumo 结构化数据模型用于企业检索、预测和决策；OpenShell 提供运行边界，NemoClaw 提供安全 Agent 参考设计。",
+      "summary_en": "NVIDIA expands its open-source Agent Toolkit with Agent Knowledge Foundation, combining CUDA-X data libraries, Nemotron Retriever and Kumo structured-data models for enterprise retrieval, prediction and decisions. OpenShell provides runtime boundaries and NemoClaw provides secure-agent reference designs.",
+      "key_points_zh": [
+        "新 Auto-Ontology 库把企业原始数据映射为客户、产品、订单等业务概念及关系。",
+        "Kumo Structured 包含表格、关系、时间序列与预测模型；NemoClaw 新增 Agent 优化蓝图。"
+      ],
+      "key_points_en": [
+        "The new Auto-Ontology library maps raw company data into business concepts and relationships such as customers, products and orders.",
+        "Kumo Structured includes tabular, relational, time-series and forecast models; NemoClaw adds an agent-optimization blueprint."
+      ],
+      "importance_reason_zh": "扩展企业 Agent 的知识接入、结构化预测与安全运行工具。",
+      "importance_reason_en": "Expands enterprise agents’ knowledge access, structured prediction and secure runtime tooling.",
+      "published_at": "2026-10-21T10:10:01+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:02:12+00:00",
+      "updated_at": "2026-10-21T14:21:13.692675+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit/",
+          "url": "https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit/",
+          "collected_at": "2026-10-21T14:02:12+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-10-21T14:21:13.692675+00:00",
+          "reason_zh": "核对原文后将 CUDA-X libraries 准确表述为数据处理库，避免误读为独立数据库产品；英文表述不变。",
+          "reason_en": "Clarifies CUDA-X libraries as data-processing libraries rather than a standalone database product; the English statement is unchanged.",
+          "url": "https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit/"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-open-models-berlin-20261021",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "availability",
+        "capability"
+      ],
+      "title_zh": "NVIDIA 扩展开放模型：Kumo、Cosmos、BioNeMo 与 Alpamayo 分阶段提供",
+      "title_en": "NVIDIA expands open models across Kumo, Cosmos, BioNeMo and Alpamayo",
+      "summary_zh": "NVIDIA 在 GTC Berlin 公布开放模型扩展，包括结构化企业数据的 Kumo、检索模型、Cosmos 世界模型与数据工具，以及 BioNeMo 蛋白质设计模型。各产品的开放状态和时间不同。",
+      "summary_en": "At GTC Berlin, NVIDIA announces an expanded open-model portfolio including Kumo for structured enterprise data, retrieval models, Cosmos world models and data tooling, and BioNeMo protein design. Availability and timing differ by product.",
+      "key_points_zh": [
+        "Kumo、Nemotron Retriever 与 RFD4-Proteina 已通过公告列出的官方或合作渠道提供；Cosmos Data Factory 提供数据策展、标注、生成与评估蓝图。",
+        "Nemotron 3.5 Bolt E4B 4GB 预计 10 月 23 日提供，Alpamayo 2 Edge 计划本月稍后开放下载，不能视为均已上线。"
+      ],
+      "key_points_en": [
+        "Kumo, Nemotron Retriever and RFD4-Proteina are available through the listed official or partner channels; Cosmos Data Factory provides data curation, labeling, generation and evaluation blueprints.",
+        "Nemotron 3.5 Bolt E4B 4GB is expected October 23, and Alpamayo 2 Edge is planned for download later this month; they are not all already available."
+      ],
+      "importance_reason_zh": "新增开放模型和开发工具，且需区分现有可用与计划开放的组件。",
+      "importance_reason_en": "Adds open models and developer tools while distinguishing current availability from planned access.",
+      "published_at": "2026-10-21T10:00:07+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:02:12+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/open-models-europe-industry/",
+          "url": "https://blogs.nvidia.com/blog/open-models-europe-industry/",
+          "collected_at": "2026-10-21T14:02:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-v230",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Kimi Code 2.3.0：插件技能改用限定名称，远控传输上限增至 100 MiB",
+      "title_en": "Kimi Code 2.3.0 requires qualified plugin skill names and raises remote transfers to 100 MiB",
+      "summary_zh": "Kimi Code 2.3.0 将插件技能按 <pluginId>:<skillName> 展示和调用，不再支持仅用技能短名；远控支持流式传输大请求与响应，上限由 10 MiB 提升至 100 MiB。",
+      "summary_en": "Kimi Code 2.3.0 displays and invokes plugin skills as <pluginId>:<skillName>; bare skill names no longer work. Remote control streams large requests and responses, raising the limit from 10 MiB to 100 MiB.",
+      "key_points_zh": [
+        "切换有历史记录会话的模型时，可按云端配置显示新建、压缩继续、直接继续或取消选项。",
+        "修复 Gemini 4 请求的 400 错误；dangerous_command_guard = false 现在同时关闭危险命令、敏感文件与 Git 控制路径的内置确认。"
+      ],
+      "key_points_en": [
+        "Cloud configuration can enable a model-switch dialog offering a new session, compact-and-continue, direct continuation or cancellation.",
+        "Fixes Gemini 4 request failures with HTTP 400; dangerous_command_guard = false now disables built-in confirmations for dangerous commands, sensitive files and Git control paths."
+      ],
+      "importance_reason_zh": "包含破坏旧调用方式的插件兼容性变化及权限开关行为变化。",
+      "importance_reason_en": "Includes a breaking plugin invocation change and a material change in permission-guard behavior.",
+      "published_at": "2026-10-21T06:06:23Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-21T13:57:17+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.3.0",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.3.0",
+          "collected_at": "2026-10-21T13:57:17+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10102-1",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.102-1 修复子代理审批继承与非交互模型选择",
+      "title_en": "Copilot CLI 1.0.102-1 fixes inherited subagent approvals and headless model selection",
+      "summary_zh": "Copilot CLI 1.0.102-1 让子代理遵循自定义工具和 MCP 工具审批，避免重复询问并使继承工作流可运行；-p 与管道输入现在遵循管理员管理的 Auto 模型选择。",
+      "summary_en": "Copilot CLI 1.0.102-1 makes subagents honor custom and MCP tool approvals, avoiding duplicate prompts and allowing inherited workflows to run. Prompt mode and piped stdin now honor managed Auto model selection.",
+      "key_points_zh": [
+        "审批规则可正确传递给子代理。",
+        "非交互运行遵循托管的 Auto 选择。"
+      ],
+      "key_points_en": [
+        "Approval rules propagate correctly to subagents.",
+        "Noninteractive runs respect managed Auto selection."
+      ],
+      "importance_reason_zh": "修复自动化工作流的权限继承和组织模型策略执行。",
+      "importance_reason_en": "Repairs permission inheritance and organizational model policy in automated workflows.",
+      "published_at": "2026-10-21T04:45:12Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-21T13:57:10+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.102-1",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.102-1",
+          "collected_at": "2026-10-21T13:57:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21306",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.306 修复云会话登录误报和 MCP 错误遮蔽",
+      "title_en": "Claude Code 2.1.306 fixes cloud sign-in errors and misleading MCP failures",
+      "summary_zh": "Claude Code 2.1.306 修复云会话中缺少会话环境变量时 claude -p 误报未登录的问题，也修复大量 MCP 工具会话中 API 错误被替换为提示词过长并触发多余压缩的问题。",
+      "summary_en": "Claude Code 2.1.306 fixes claude -p reporting “Not logged in” inside cloud sessions started without their environment variables. It also prevents API errors from being replaced by prompt-length errors and unnecessary compaction in sessions with many MCP tools.",
+      "key_points_zh": [
+        "修复云会话非交互运行的登录状态识别。",
+        "保留原始 API 错误，避免无必要的上下文压缩。"
+      ],
+      "key_points_en": [
+        "Fixes sign-in detection for noninteractive runs inside cloud sessions.",
+        "Preserves the underlying API error and avoids unnecessary context compaction."
+      ],
+      "importance_reason_zh": "修复会阻断云端自动化或掩盖真实故障的行为。",
+      "importance_reason_en": "Fixes behavior that can block cloud automation or obscure the actual failure.",
+      "published_at": "2026-10-21T03:27:13+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T13:57:15+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-306",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-306",
+          "collected_at": "2026-10-21T13:57:15+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10102-0",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.102-0 修复长命令提前中断与沙箱代理配置",
+      "title_en": "Copilot CLI 1.0.102-0 fixes long-running commands and sandbox proxy settings",
+      "summary_zh": "Copilot CLI 1.0.102-0 修复沙箱命令运行超过 10 秒后的可靠性问题；沙箱网络继承主机代理时遵循 NO_PROXY 与 ALL_PROXY。供应商过载导致回复截断时，会退避重试并显示原始错误与请求 ID。",
+      "summary_en": "Copilot CLI 1.0.102-0 fixes reliability for sandboxed commands running longer than 10 seconds. Sandboxed networking honors NO_PROXY and ALL_PROXY inherited from the host, and provider-overload interruptions retry with backoff while showing the provider message and request ID.",
+      "key_points_zh": [
+        "组织插件准备不再阻塞聊天发送；插件市场支持 git-subdir 来源。",
+        "修复 Fish 补全中选项别名的处理。"
+      ],
+      "key_points_en": [
+        "Organization plugin preparation no longer blocks sending chats; marketplaces accept git-subdir sources.",
+        "Fixes option-alias handling in Fish completions."
+      ],
+      "importance_reason_zh": "改善长任务、企业网络和插件环境下的运行可靠性。",
+      "importance_reason_en": "Improves reliability for long tasks, enterprise networks and plugin setups.",
+      "published_at": "2026-10-21T02:47:48Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-21T13:57:10+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.102-0",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.102-0",
+          "collected_at": "2026-10-21T13:57:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-nightly-20261021",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Gemini CLI 10 月 21 日夜间版支持可选的私网 MCP OAuth 端点",
+      "title_en": "Gemini CLI October 21 nightly supports opt-in private-network MCP OAuth endpoints",
+      "summary_zh": "Gemini CLI 0.67.0-nightly.20261021 支持选择性启用私网 MCP OAuth 端点，保留 shell 和 Git 环境中的用户级 ~/.gitconfig，并修复认证错误误判。",
+      "summary_en": "Gemini CLI 0.67.0-nightly.20261021 supports opt-in private-network MCP OAuth endpoints, preserves user-level ~/.gitconfig in shell and Git environments, and fixes authentication-error false positives.",
+      "key_points_zh": [
+        "私网端点需要显式启用。",
+        "夜间构建不等于稳定发布。"
+      ],
+      "key_points_en": [
+        "Private-network endpoints require explicit opt-in.",
+        "A nightly build is not a stable release."
+      ],
+      "importance_reason_zh": "提供企业私网认证与 Git 环境兼容性的预览修复。",
+      "importance_reason_en": "Previews fixes for private-network authentication and Git environment compatibility.",
+      "published_at": "2026-10-21T01:33:29Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-21T13:57:10+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261021.gd00859d6b",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261021.gd00859d6b",
+          "collected_at": "2026-10-21T13:57:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21305",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.305：Linux 嵌套命名空间开关与组织 MCP 策略调整",
+      "title_en": "Claude Code 2.1.305 adds a Linux namespace setting and changes managed MCP policy behavior",
+      "summary_zh": "Claude Code 2.1.305 新增 sandbox.allowNestedUserNamespaces，允许 Linux 沙箱命令创建用户命名空间以运行 Chromium 或 rootless podman，官方同时提醒这可绕过沙箱的文件保护。组织管理的 MCP 与插件权限规则也有变化。",
+      "summary_en": "Claude Code 2.1.305 adds sandbox.allowNestedUserNamespaces for Linux sandboxed commands to create user namespaces for Chromium or rootless podman; the notes warn that this can bypass sandbox file protections. Managed MCP and plugin permission rules also change.",
+      "key_points_zh": [
+        "allowedMcpServers 不再过滤仅在 env 中使用变量的 managed-mcp.json stdio 服务；需通过 deniedMcpServers 明确禁用。",
+        "组织设置 allowManagedPermissionRulesOnly 时，按路径挂载的桌面插件不再保留自身 allowed-tools；代码复审仍有阻断问题时不再以 LGTM 开场。"
+      ],
+      "key_points_en": [
+        "allowedMcpServers no longer filters managed-mcp.json stdio servers using variables only in env; use deniedMcpServers to keep them disabled.",
+        "With allowManagedPermissionRulesOnly, path-mounted desktop plugins lose their own allowed-tools; re-reviews no longer open with LGTM while blocking findings remain."
+      ],
+      "importance_reason_zh": "涉及组织安全策略与沙箱边界，升级后需要了解实际权限变化。",
+      "importance_reason_en": "Changes organizational security policy and sandbox boundaries that affect upgrade behavior.",
+      "published_at": "2026-10-21T00:17:20+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T13:57:15+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-305",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-305",
+          "collected_at": "2026-10-21T13:57:15+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "siliconflow-deepseek-flash1017-20261021",
+      "entity_ids": [
+        "siliconflow",
+        "deepseek"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "compatibility"
+      ],
+      "title_zh": "硅基流动将 DeepSeek-V4.1-Flash 升级到 1017 版本，模型 ID 不变",
+      "title_en": "SiliconFlow upgrades DeepSeek-V4.1-Flash to 1017 without changing its ID",
+      "summary_zh": "硅基流动公告确认，平台于 10 月 21 日将 deepseek-ai/DeepSeek-V4.1-Flash 升级至 DeepSeek-V4.1-Flash-1017。现有请求自动由新版服务，无需更改模型名称或调用代码。",
+      "summary_en": "SiliconFlow confirms that deepseek-ai/DeepSeek-V4.1-Flash was upgraded to DeepSeek-V4.1-Flash-1017 on October 21. Existing requests automatically use the new version without model-name or client-code changes.",
+      "key_points_zh": [
+        "平台模型 ID 保持不变。",
+        "此次是硅基流动渠道升级，与 DeepSeek 上游首次发布分别记录。"
+      ],
+      "key_points_en": [
+        "The platform model ID is unchanged.",
+        "This is a SiliconFlow channel upgrade, recorded separately from DeepSeek’s original release."
+      ],
+      "importance_reason_zh": "现有平台用户会直接切换到新的底层模型版本。",
+      "importance_reason_en": "Existing platform users are switched directly to a new underlying model version.",
+      "published_at": "2026-10-21",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:08:01+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "siliconflow-updates",
+          "content_id": "https://docs.siliconflow.cn/docs/release-notes/overview#模型升级deepseek-v41-flash-升级至-deepseek-v41-flash-1017",
+          "url": "https://docs.siliconflow.cn/docs/release-notes/overview#模型升级deepseek-v41-flash-升级至-deepseek-v41-flash-1017",
+          "collected_at": "2026-10-21T14:08:01+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "deepseek-flash-1017-search-api-20261017"
+      ]
+    },
+    {
+      "id": "gemini-cli-v0650",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Gemini CLI 0.65.0 修复不受信任目录设置与恢复会话丢失",
+      "title_en": "Gemini CLI 0.65.0 fixes untrusted-folder settings and resumed-session loss",
+      "summary_zh": "Gemini CLI 0.65.0 在不受信任目录强制工作区设置只读，修复恢复会话后快速退出删除历史、重复工具响应与快速 Ctrl+C 造成会话异常等问题，并修复认证循环。",
+      "summary_en": "Gemini CLI 0.65.0 enforces read-only workspace settings in untrusted folders and fixes resumed history deletion on quick exit, duplicate tool responses and session poisoning during rapid Ctrl+C interruptions, along with authentication loops.",
+      "key_points_zh": [
+        "OAuth 回调 iss 校验与 RFC 9207 元数据一致。",
+        "支持遥测自定义 OTLP 请求头；一个扩展未通过允许列表时仍加载其他扩展。"
+      ],
+      "key_points_en": [
+        "OAuth callback iss validation aligns with RFC 9207 metadata.",
+        "Supports custom OTLP telemetry headers and continues loading other extensions when one fails the allowlist."
+      ],
+      "importance_reason_zh": "包含信任边界、会话持久性与登录可靠性的关键修复。",
+      "importance_reason_en": "Contains important fixes to trust boundaries, session persistence and sign-in reliability.",
+      "published_at": "2026-10-20T21:17:57Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-21T13:57:10+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0",
+          "collected_at": "2026-10-21T13:57:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-v0660-preview0",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Gemini CLI 0.66.0 预览版加入私网 MCP OAuth 选项并改善终端与认证",
+      "title_en": "Gemini CLI 0.66.0 preview adds private-network MCP OAuth options and terminal fixes",
+      "summary_zh": "Gemini CLI 0.66.0-preview.0 改进终端同步输出和滚动记录，支持显式启用私网端点的 MCP OAuth 流程，并保留 shell 与 Git 环境中的用户级 ~/.gitconfig。该版本仍为预览。",
+      "summary_en": "Gemini CLI 0.66.0-preview.0 improves synchronized terminal output and scrollback, supports opt-in private-network endpoints for MCP OAuth flows, and preserves user-level ~/.gitconfig in shell and Git environments. It remains a preview.",
+      "key_points_zh": [
+        "验证更新后的活动二进制，防止 PATH 遮蔽导致误报更新成功。",
+        "加入 Gemini CLI 未针对 Gemini 4 优化的提示；修复认证错误误判与 Windows diff 参数引用。"
+      ],
+      "key_points_en": [
+        "Verifies the active binary after updating to prevent false success caused by PATH shadowing.",
+        "Adds a notice that Gemini CLI is not optimized for Gemini 4, and fixes authentication-error false positives and Windows diff argument quoting."
+      ],
+      "importance_reason_zh": "预览版改变 MCP 认证与更新校验行为。",
+      "importance_reason_en": "The preview changes MCP authentication and update verification behavior.",
+      "published_at": "2026-10-20T21:04:34Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-21T13:57:10+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0-preview.0",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0-preview.0",
+          "collected_at": "2026-10-21T13:57:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10101-stable",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.101 正式版加入结构化子代理输出与可配置审批指引",
+      "title_en": "Copilot CLI 1.0.101 stabilizes structured subagent output and assisted-approval guidance",
+      "summary_zh": "Copilot CLI 1.0.101 正式版为受支持模型的动态工作流子代理加入原生结构化输出，并提供 assistedApprovalInstructions。它还整合跨模型切换、MCP 登录、Windows 恢复会话与组织插件的修复。",
+      "summary_en": "Copilot CLI 1.0.101 brings native structured output for dynamic workflow subagents on supported models and assistedApprovalInstructions into a stable release. It also includes fixes for model switching, MCP sign-in, restored Windows sessions and organizational plugins.",
+      "key_points_zh": [
+        "从 GPT 切换 Gemini 时可处理历史自定义工具调用；组织团队可分配插件。",
+        "未选择模型时保留首条提示并请求 /model 选择；权限卡显示升级原因和诊断命令。"
+      ],
+      "key_points_en": [
+        "Switching from GPT to Gemini handles earlier custom tool calls, and organizational teams can assign plugins.",
+        "With no selected model, the first prompt is retained and /model selection is requested; approval prompts explain escalation causes and provide a diagnosis command."
+      ],
+      "importance_reason_zh": "将此前预发布的工作流功能带入正式版本。",
+      "importance_reason_en": "Brings previously previewed workflow features into a stable release.",
+      "published_at": "2026-10-20T18:49:53Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-21T13:57:10+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.101",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.101",
+          "collected_at": "2026-10-21T13:57:10+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "copilot-cli-v10101-0"
+      ]
+    },
+    {
+      "id": "kilo-minimax-m31-flash-free-20261020",
+      "entity_ids": [
+        "kilo",
+        "minimax"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "Kilo 限时免费提供 MiniMax M3.1 Flash",
+      "title_en": "Kilo offers MiniMax M3.1 Flash free for a limited time",
+      "summary_zh": "Kilo 官方博客宣布 MiniMax M3.1 Flash 已上线，并在限时活动中免费提供。公告未公布确切截止日或固定免费额度；模型能力与性能数据应分别按其来源理解。",
+      "summary_en": "Kilo’s official blog announces that MiniMax M3.1 Flash is live and free for a limited time. It gives no precise end date or fixed free allowance; capability and performance figures must be interpreted according to their sources.",
+      "key_points_zh": [
+        "免费仅适用于 Kilo 此次活动，不代表 MiniMax 官方 API 普遍免费。",
+        "公告未说明绑卡要求，也未提供固定的 tokens 或请求额度。"
+      ],
+      "key_points_en": [
+        "The free access applies to this Kilo promotion and does not make the MiniMax API universally free.",
+        "The announcement does not specify card requirements or a fixed token or request allowance."
+      ],
+      "importance_reason_zh": "提供可实际使用的限时免费模型渠道。",
+      "importance_reason_en": "Adds a usable limited-time free model channel.",
+      "published_at": "2026-10-20T18:28:33+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T13:57:17+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/minimax-m31-flash-is-free-in-kilo",
+          "url": "https://blog.kilo.ai/p/minimax-m31-flash-is-free-in-kilo",
+          "collected_at": "2026-10-21T13:57:17+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10101-1",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.101-1 改进团队插件分配、MCP 登录与本地连接",
+      "title_en": "Copilot CLI 1.0.101-1 improves team plugins, MCP authentication and local connections",
+      "summary_zh": "Copilot CLI 1.0.101-1 支持安装团队从团队 GitHub 市场分配的插件，扩展能力请求改为显式审批；macOS 沙箱在允许本地访问且没有主机过滤时可直连 localhost TCP。",
+      "summary_en": "Copilot CLI 1.0.101-1 installs team-assigned plugins from team GitHub marketplaces and requires explicit approval for extension capabilities. macOS sandboxed commands can reach localhost TCP when local access is enabled and no host filters apply.",
+      "key_points_zh": [
+        "无 OAuth 处理器的无头与 SDK 会话跳过必须重新登录的 MCP 连接，可续期授权仍可连接。",
+        "仅改变推理强度不再强制压缩超预算会话；组织权限卡解释升级原因。"
+      ],
+      "key_points_en": [
+        "Headless and SDK sessions without an OAuth handler skip MCP connections needing sign-in, while renewable grants still connect.",
+        "Changing only reasoning effort no longer forces compaction in over-budget sessions; approval cards explain escalation causes."
+      ],
+      "importance_reason_zh": "直接影响企业插件分发、无头会话认证和沙箱兼容性。",
+      "importance_reason_en": "Affects enterprise plugin distribution, headless authentication and sandbox compatibility.",
+      "published_at": "2026-10-20T15:04:42Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-21T13:57:10+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.101-1",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.101-1",
+          "collected_at": "2026-10-21T13:57:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "mistral-voxtral3-20261020",
+      "entity_ids": [
+        "mistral"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Mistral 发布 Voxtral 3 实时语音 Agent SDK",
+      "title_en": "Mistral introduces Voxtral 3 for real-time voice agents",
+      "summary_zh": "Mistral 的官方 RSS 将 Voxtral 3 描述为支持 50 多种语言的实时语音 Agent SDK，包含转录、情感语音合成与深度工具使用，支持欧盟托管或自行部署。当前证据范围为公告简介。",
+      "summary_en": "Mistral’s official RSS describes Voxtral 3 as a real-time voice agent SDK for over 50 languages, with transcription, emotional TTS and deep tool use, available with EU hosting or self-deployment. Evidence is limited to the announcement summary.",
+      "key_points_zh": [
+        "覆盖实时语音交互与工具调用。",
+        "简介未给出具体价格、许可证或部署要求。"
+      ],
+      "key_points_en": [
+        "Covers real-time speech interaction and tool use.",
+        "The summary does not specify prices, licensing or deployment requirements."
+      ],
+      "importance_reason_zh": "是语音 Agent 能力与部署选择的重要发布。",
+      "importance_reason_en": "A material release of voice-agent capabilities and deployment options.",
+      "published_at": "2026-10-20T12:00:22+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T13:57:17+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "mistral-official",
+          "content_id": "https://mistral.ai/news/voxtral-3/",
+          "url": "https://mistral.ai/news/voxtral-3/",
+          "collected_at": "2026-10-21T13:57:17+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
     {
       "id": "zcode-v3162",
       "entity_ids": [
@@ -82,6 +924,169 @@
           "content_id": "https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/",
           "url": "https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/",
           "collected_at": "2026-10-20T13:34:43+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-ide-v1410-20261020",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kiro IDE 1.4.10 将 Memory 默认关闭并调整工作流反馈",
+      "title_en": "Kiro IDE 1.4.10 turns Memory off by default and improves workflow feedback",
+      "summary_zh": "Kiro IDE 10 月 20 日更新将 Memory 设置默认值改为关闭，已批准的工作流步骤会遵循计划反馈；Powers 在某个服务器不可用时仍能工作，并修复聊天、工作流和 MCP 问题。",
+      "summary_en": "Kiro IDE’s October 20 update makes Memory default to Off, makes approved workflow steps follow plan feedback, keeps Powers working when a server is unavailable, and fixes chat, workflow and MCP issues.",
+      "key_points_zh": [
+        "Memory 的默认设置变为 Off。",
+        "工作流计划反馈和 Powers 故障恢复行为得到改善。"
+      ],
+      "key_points_en": [
+        "Memory now defaults to Off.",
+        "Workflow plan feedback and Powers resilience improve."
+      ],
+      "importance_reason_zh": "改变跨会话记忆的默认行为，并提升工作流可靠性。",
+      "importance_reason_en": "Changes the default behavior of cross-session memory and improves workflow reliability.",
+      "published_at": "2026-10-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T13:57:17+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-4-10",
+          "url": "https://kiro.dev/changelog/ide/1-4-10",
+          "collected_at": "2026-10-21T13:57:17+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "google-model-explorer-arm-adapters-20261020",
+      "entity_ids": [
+        "google",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Google Model Explorer 与 Arm 开源适配器支持边缘编译图调试",
+      "title_en": "Google Model Explorer and Arm adapters enable edge compiler graph debugging",
+      "summary_zh": "Google 介绍 Arm 为 Model Explorer 构建的 TOSA、VGF 与 PTE 开源适配器，开发者可在本地检查编译后的模型图、并排验证 NPU 委派，并叠加逐节点周期级性能数据。",
+      "summary_en": "Google describes Arm’s open-source TOSA, VGF and PTE adapters for Model Explorer, enabling local inspection of compiled graphs, side-by-side NPU delegation checks and per-node cycle-level performance overlays.",
+      "key_points_zh": [
+        "可发现图降级引入的多余算子及回退 CPU 的子图。",
+        "工具及适配器可通过 PyPI 或 GitHub 获取。"
+      ],
+      "key_points_en": [
+        "Can reveal extra operators introduced by lowering and subgraphs falling back to CPU.",
+        "The tools and adapters are available through PyPI or GitHub."
+      ],
+      "importance_reason_zh": "为端侧模型部署提供可用的编译和性能调试能力。",
+      "importance_reason_en": "Provides usable compiler and performance debugging for edge-model deployment.",
+      "published_at": "2026-10-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:08:01+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer/",
+          "url": "https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer/",
+          "collected_at": "2026-10-21T14:08:01+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "google-torchtitan-tpu-20261020",
+      "entity_ids": [
+        "google",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Google 发布 TorchTitan TPU 训练方案，支持原生 PyTorch 工作流",
+      "title_en": "Google details TorchTitan TPU training with native PyTorch workflows",
+      "summary_zh": "Google 介绍基于 TorchTPU 的 TorchTitan TPU 分支，以 torch.device(\"tpu\") 和 PyTorch 原生模型定义执行大规模训练；提供 SimpleFSDP、Graph Trainer、Pallas 内核及模型接入指引。",
+      "summary_en": "Google details the TorchTPU-based TorchTitan TPU fork for large-scale training with torch.device(\"tpu\") and native PyTorch model definitions, including SimpleFSDP, Graph Trainer, Pallas kernels and a model-onboarding skill.",
+      "key_points_zh": [
+        "Transformers 后端可将 500 多个 Hugging Face 模型接入同一训练器；MoE 通用路径目前尚无专家并行。",
+        "官方的 8,192 芯片结果为固定单芯片批量的弱扩展实验，不是建议的该模型训练配置。"
+      ],
+      "key_points_en": [
+        "The Transformers backend connects over 500 Hugging Face models to the trainer; the generic MoE path does not yet support expert parallelism.",
+        "The reported 8,192-chip result is a weak-scaling experiment with fixed per-chip batch size, not a recommended training configuration for that model."
+      ],
+      "importance_reason_zh": "降低 PyTorch 模型迁移 TPU 的成本，同时保留扩展实验的适用限制。",
+      "importance_reason_en": "Lowers the effort of moving PyTorch models to TPU while preserving the scaling experiment’s limitations.",
+      "published_at": "2026-10-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:08:01+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/",
+          "url": "https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/",
+          "collected_at": "2026-10-21T14:08:01+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "google-vllm-sglang-torchtpu-20261020",
+      "entity_ids": [
+        "google",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "availability"
+      ],
+      "title_zh": "vLLM 与 SGLang 发布基于 TorchTPU 的原生 PyTorch 推理后端",
+      "title_en": "vLLM and SGLang launch native PyTorch inference backends on TorchTPU",
+      "summary_zh": "Google 与 Inferact、RadixArk 合作发布 vLLM-TorchTPU 和 SGLang-TorchTPU，使开发者能以原生 PyTorch 在 TPU 上部署模型，并保留框架的调度、KV 缓存与 API 服务结构。",
+      "summary_en": "Google, Inferact and RadixArk launch vLLM-TorchTPU and SGLang-TorchTPU for native PyTorch model serving on TPU, retaining the frameworks’ scheduling, KV-cache management and API-server structure.",
+      "key_points_zh": [
+        "支持前缀缓存、工具调用、结构化输出、多模态及长上下文；TPU Sync 用于 KV 传输、分层卸载和预填充／解码分离。",
+        "既有 vLLM-Jax 与 SGLang-JAX 将继续维护；性能宣称来自官方公告，并非本站独立验证。"
+      ],
+      "key_points_en": [
+        "Supports prefix caching, tool use, structured output, multimodality and long context; TPU Sync handles KV transfer, tiered offloading and disaggregated prefill/decode.",
+        "Existing vLLM-Jax and SGLang-JAX remain maintained; performance claims come from the announcement and are not independently verified here."
+      ],
+      "importance_reason_zh": "为常用开源推理框架增加原生 PyTorch TPU 部署路径。",
+      "importance_reason_en": "Adds native PyTorch TPU deployment paths to widely used open inference frameworks.",
+      "published_at": "2026-10-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:08:01+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/",
+          "url": "https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/",
+          "collected_at": "2026-10-21T14:08:01+00:00",
           "material_scope": "full_text"
         }
       ]
@@ -457,6 +1462,45 @@
           "content_id": "https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/",
           "url": "https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/",
           "collected_at": "2026-10-20T13:34:43+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-ide-v140-memory-20261019",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kiro IDE 1.4.0 引入跨会话 Memory",
+      "title_en": "Kiro IDE 1.4.0 introduces cross-session Memory",
+      "summary_zh": "Kiro IDE 1.4.0 引入 Memory，可将仓库约定、用户更正及已排除的方案带入后续会话。用户可在 Memory 视图审阅记忆，并通过 Use only 模式使用记忆而不修改它。",
+      "summary_en": "Kiro IDE 1.4.0 introduces Memory to carry repository conventions, corrections and ruled-out approaches into later sessions. Users can review memories in the Memory view and use the Use only mode without changing them.",
+      "key_points_zh": [
+        "聊天会显示 Kiro 何时访问或修改记忆。",
+        "修复长 Markdown Review 查找、登录取消及 Ubuntu 24.04 .deb 安装后无法启动的问题。"
+      ],
+      "key_points_en": [
+        "Chat indicates when Kiro accesses or changes memory.",
+        "Fixes search in long Markdown Review documents, sign-in cancellation and startup after a .deb install on Ubuntu 24.04."
+      ],
+      "importance_reason_zh": "跨会话上下文记忆改变 Agent 的连续工作方式，用户可审阅和控制。",
+      "importance_reason_en": "Cross-session context changes how the agent continues work, with user inspection and controls.",
+      "published_at": "2026-10-19",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-21T14:08:16+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-4",
+          "url": "https://kiro.dev/changelog/ide/1-4",
+          "collected_at": "2026-10-21T14:08:16+00:00",
           "material_scope": "full_text"
         }
       ]
@@ -3367,10 +4411,10 @@
         "feature",
         "critical_fix"
       ],
-      "title_zh": "Devin：独立 Review manager、SARIF 导出与稳定 v3 API",
-      "title_en": "Devin adds Review manager, SARIF exports and stable v3 APIs",
-      "summary_zh": "Devin 新增组织级 Review manager 角色，可独立管理审阅设置；代码扫描结果支持 SARIF 2.1.0 导出，仓库与 blueprint 端点升级到稳定 /v3。",
-      "summary_en": "Devin adds an organization-level Review manager role for independent review configuration, SARIF 2.1.0 code-scan exports and stable /v3 repository and blueprint endpoints.",
+      "title_zh": "Devin：细化 Review 管理权限、SARIF 导出与稳定 v3 API",
+      "title_en": "Devin clarifies Review management permissions, SARIF exports and stable v3 APIs",
+      "summary_zh": "Devin 允许拥有 Manage Devin Review 权限的成员管理审阅设置、审阅规则及搜索仓库，无需同时具备账号、组织或 Git 集成管理员权限；组织级 Manage review rules 仅覆盖该组织的规则与自定义审阅者，不包含账号级 Review 设置。代码扫描支持 SARIF 2.1.0 导出，仓库和 blueprint 端点进入稳定 /v3。",
+      "summary_en": "Members with Manage Devin Review permission can manage review settings, review rules and repository searches without account, organization or Git-integration admin rights. The organization-level Manage review rules permission covers only that organization’s rules and custom reviewers, not account Review settings. Code scans support SARIF 2.1.0 exports, and repository and blueprint endpoints enter stable /v3.",
       "key_points_zh": [
         "旧 /v3beta1 路径仍可使用；Terraform 增加仓库索引、blueprint 与仓库资源。",
         "Teams 不支持的私有或共享频道不再提供触发器，缺少监视权限时保存自动化会报明原因；新增五个观测插件。"
@@ -3384,16 +4428,22 @@
       "published_at": "2026-10-14",
       "date_precision": "date",
       "first_collected_at": "2026-10-16T01:23:24+00:00",
-      "updated_at": "2026-10-16T01:28:02+00:00",
+      "updated_at": "2026-10-21T14:14:14.231677+00:00",
       "sources": [
         {
           "source_id": "devin-changelog",
           "content_id": "https://docs.devin.ai/release-notes/overview#october-14-2026",
           "url": "https://docs.devin.ai/release-notes/overview#october-14-2026",
-          "collected_at": "2026-10-16T01:23:24+00:00",
-          "material_scope": "full_text",
-          "published_at": "2026-10-14",
-          "date_kind": "published"
+          "collected_at": "2026-10-21T14:08:01+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-10-21T14:14:14.231677+00:00",
+          "reason_zh": "官方更新细化了权限范围：这是可授予既有或新建角色的管理权限，并非新增一个固定 Review manager 角色；同步更正中英文标题与摘要。",
+          "reason_en": "The updated official text clarifies assignable permissions on existing or new roles rather than a fixed new Review manager role; both titles and summaries are corrected.",
+          "url": "https://docs.devin.ai/release-notes/overview#october-14-2026"
         }
       ]
     },

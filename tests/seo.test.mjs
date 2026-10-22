@@ -1,10 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {renderInitialFeed} from '../scripts/prerender.mjs';
-import {createEventRenderer} from '../public/assets/render.js';
+import {createEventRenderer,safeURL} from '../public/assets/render.js';
 
 const catalog={entities:[{id:'agent',name:'工具',name_en:'Agent',category:'agent'}],sources:[{id:'official',name:'官方',name_en:'Official'}]};
 const event={id:'one',entity_ids:['agent'],kind:'update',topics:[],title_zh:'更新 <script>',summary_zh:'摘要 & 说明',key_points_zh:['修复'],title_en:'Update',summary_en:'Summary',key_points_en:['Fix'],importance_reason_zh:'重要修复',importance_reason_en:'Important fix',published_at:'2026-10-03T08:00:00Z',date_precision:'datetime',sources:[{source_id:'official',url:'https://example.com/update',material_scope:'full_text'}]};
+
+test('external links add the site source while preserving query encoding, fragments and existing attribution',()=>{
+  assert.equal(safeURL('https://example.com/watch?v=123&q=a%20b#t=30'),'https://example.com/watch?v=123&q=a%20b&utm_source=go2-ai.com#t=30');
+  assert.equal(safeURL('http://example.com/'),'http://example.com/?utm_source=go2-ai.com');
+  const attributed='https://example.com/?utm_source=partner&utm_medium=referral#details';
+  assert.equal(safeURL(attributed),attributed);
+  const once=safeURL('https://example.com/');
+  assert.equal(safeURL(once),once);
+  for(const url of ['https://go2-ai.com/?lang=en#pricing','https://www.go2-ai.com/friends.html']) assert.equal(safeURL(url),url);
+  for(const url of ['javascript:alert(1)','data:text/html,hello','mailto:hello@example.com','invalid']) assert.equal(safeURL(url),'#');
+});
 
 test('initial HTML contains the same first-page cards, grouping and seven-day range as the client',()=>{
   const events=Array.from({length:20},(_,i)=>({...event,id:`item-${i}`}));
@@ -15,7 +26,7 @@ test('initial HTML contains the same first-page cards, grouping and seven-day ra
   assert.equal((html.match(/class="date-heading"/g)||[]).length,1);
   assert.ok(html.includes(createEventRenderer(catalog,'zh').card(events[0])));
   assert.ok(html.includes('摘要 &amp; 说明'));
-  assert.ok(html.includes('href="https://example.com/update"'));
+  assert.ok(html.includes('href="https://example.com/update?utm_source=go2-ai.com"'));
   assert.ok(!html.includes('data-event-id="old"'));
   assert.ok(!html.includes('data-event-id="future"'));
   assert.ok(!html.includes('<script>'));
@@ -43,7 +54,7 @@ test('article semantics describe the rendered language, source date and citation
   assert.ok(html.includes('itemprop="description" lang="en">Summary'));
   assert.ok(html.includes('itemprop="inLanguage" content="en"'));
   assert.ok(html.includes('itemprop="datePublished" datetime="2026-10-03T08:00:00Z"'));
-  assert.ok(html.includes('itemprop="citation" href="https://example.com/update"'));
+  assert.ok(html.includes('itemprop="citation" href="https://example.com/update?utm_source=go2-ai.com"'));
   assert.ok(!html.includes('itemprop="author"'));
   assert.ok(!html.includes('itemprop="dateModified"'));
   const fallback=createEventRenderer(catalog,'en').card({...event,key_points_en:[]});

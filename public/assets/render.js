@@ -1,7 +1,16 @@
 import {followingObjects,eventObjectIds,formatEventTime} from './model.js';
 import {translate,LABELS,eventContent} from './i18n.js';
 export const escape = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export const safeURL = value => {try {const u = new URL(value);return ['http:','https:'].includes(u.protocol) ? u.href : '#';} catch {return '#';}};
+export const safeURL = value => {
+  try {
+    const u=new URL(value);
+    if(!['http:','https:'].includes(u.protocol)) return '#';
+    if(!['go2-ai.com','www.go2-ai.com'].includes(u.hostname) && !u.searchParams.has('utm_source')) {
+      u.search+=(u.search?'&':'?')+'utm_source=go2-ai.com';
+    }
+    return u.href;
+  } catch {return '#';}
+};
 
 export function createEventRenderer(catalog,language,expanded=new Set()) {
   const t=(key,values)=>translate(language,key,values);

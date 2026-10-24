@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "0f38798af8895654",
-  "generated_at": "2026-10-23T18:00:33+00:00",
+  "snapshot_id": "b8f347e39e3f3495",
+  "generated_at": "2026-10-24T14:13:07+00:00",
   "months": [
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 333,
+      "count": 341,
       "min_date": "2026-10-01T01:34:16Z",
-      "max_date": "2026-10-24"
+      "max_date": "2026-10-24T01:15:53Z"
     },
     {
       "month": "2026-09",
@@ -19,14 +19,22 @@
     }
   ],
   "event_locations": {
+    "gemini-cli-nightly-20261024": "2026-10",
     "kimi-k31-pro-20261024": "2026-10",
+    "claude-code-v21310": "2026-10",
+    "copilot-usage-client-metrics-20261023": "2026-10",
+    "copilot-teams-github-app-20261023": "2026-10",
+    "copilot-cli-v10104": "2026-10",
     "deepseek-harness-v021rc3": "2026-10",
+    "openai-training-env-security-20261023": "2026-10",
     "kimi-code-v231": "2026-10",
     "hermes-v0225": "2026-10",
     "codex-01640": "2026-10",
     "gemini-cli-nightly-20261023": "2026-10",
     "copilot-visual-studio-september-20261023": "2026-10",
     "zcode-v3163": "2026-10",
+    "kiro-claude-haiku-5-5-20261023": "2026-10",
+    "kiro-cli-v234-mcp-elicitation-20261023": "2026-10",
     "claude-code-v21309": "2026-10",
     "copilot-named-customization-metrics-20261022": "2026-10",
     "kilo-v7816-preview-security": "2026-10",
@@ -359,5 +367,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 339
+  "total_events": 347
 }

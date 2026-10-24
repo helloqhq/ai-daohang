@@ -1,7 +1,48 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "0f38798af8895654",
+  "snapshot_id": "b8f347e39e3f3495",
   "events": [
+    {
+      "id": "gemini-cli-nightly-20261024",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Gemini CLI nightly 新增模型发现命令并修复取消后继续执行",
+      "summary_zh": "10 月 24 日 nightly 新增 models 命令和 --list-models 参数用于发现可用模型；修复请求取消后仍继续处理流并自动催促的问题。迁移时把 Claude hook 超时从秒换算为毫秒，相对路径改为按活动 IDE 工作区根解析，并修正泰文和老挝文 SARA AM 符号的显示宽度。",
+      "key_points_zh": [
+        "新增 models 命令与 --list-models 参数，用于发现可用模型。",
+        "修复请求取消后继续处理流并自动催促的问题。",
+        "迁移时把 Claude hook 超时从秒转换为毫秒；相对路径按活动 IDE 工作区根解析，并修正泰文 / 老挝文显示宽度。"
+      ],
+      "importance_reason_zh": "模型发现命令方便多模型切换；取消语义修复影响自动化任务的可靠性。",
+      "title_en": "Gemini CLI nightly adds model discovery command and fixes post-cancellation execution",
+      "summary_en": "The October 24 nightly adds a models command and --list-models flag for model discovery, and fixes stream processing and auto-nudging that continued after request cancellation. It converts Claude hook timeouts from seconds to milliseconds during migration, resolves relative paths against the active IDE workspace root and corrects Thai and Lao SARA AM display width.",
+      "key_points_en": [
+        "Adds a models command and --list-models flag for model discovery.",
+        "Fixes stream processing and auto-nudging that continued after request cancellation.",
+        "Converts Claude hook timeouts from seconds to milliseconds during migration; relative paths resolve against the active IDE workspace root and Thai/Lao display width is corrected."
+      ],
+      "importance_reason_en": "The model discovery command eases multi-model switching; the cancellation fix affects automation reliability.",
+      "published_at": "2026-10-24T01:15:53Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-24T14:01:16+00:00",
+      "updated_at": "2026-10-24T14:12:49.157263+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261024.gcd1b45c2d",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261024.gcd1b45c2d",
+          "collected_at": "2026-10-24T14:01:16+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "kimi-k31-pro-20261024",
       "entity_ids": [
@@ -44,6 +85,180 @@
       ]
     },
     {
+      "id": "claude-code-v21310",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.310 增加 Monitor 工具与企业角色权限",
+      "summary_zh": "在 Bedrock、Vertex、Foundry 及禁用遥测或非必要流量的环境下提供 Monitor 工具与插件监控，同时阻止长时间前台休眠。云会话与 Remote Control 权限纳入企业自定义角色，管理员开启时需确认并列出有权角色；云环境对话框改为按行打开网络访问、设置脚本和环境变量。非交互会话中 MCP 工具调用超时而服务器征询未回答时，错误信息现在告知 Claude 未收到答案、不要重复调用。",
+      "key_points_zh": [
+        "Monitor 工具与插件监控覆盖 Bedrock、Vertex、Foundry 及关闭遥测的环境，长前台休眠被阻止。",
+        "云会话与 Remote Control 权限进入企业自定义角色，开启需确认并列出相关角色。",
+        "非交互会话 MCP 超时且征询未答时，错误说明未收到答案并提示不要重复调用。"
+      ],
+      "importance_reason_zh": "监控能力与企业角色控制影响大规模部署的运维方式。",
+      "title_en": "Claude Code 2.1.310 adds Monitor tool and enterprise role permissions",
+      "summary_en": "The Monitor tool and plugin monitors arrive on Bedrock, Vertex and Foundry and when telemetry or nonessential traffic is disabled, with long foreground sleeps blocked there. Cloud sessions and Remote Control permissions join Enterprise custom roles, enabling them in admin settings asks for confirmation and lists the roles holding the permission, and the cloud environment dialog opens network access, setup script and environment variables from rows. In non-interactive sessions, an MCP tool call that times out while the server's elicitation is unanswered now tells Claude that no answer came and not to repeat the call.",
+      "key_points_en": [
+        "The Monitor tool and plugin monitors cover Bedrock, Vertex, Foundry and telemetry-disabled environments, with long foreground sleeps blocked.",
+        "Cloud sessions and Remote Control permissions join Enterprise custom roles; enabling them requires confirmation and lists the roles.",
+        "Non-interactive MCP timeouts with unanswered elicitation now report that no answer came and not to repeat the call."
+      ],
+      "importance_reason_en": "Monitoring and enterprise role controls affect operations at scale.",
+      "published_at": "2026-10-23T23:49:22+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-24T14:01:20+00:00",
+      "updated_at": "2026-10-24T14:12:49.157263+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-310",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-310",
+          "collected_at": "2026-10-24T14:01:20+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-usage-client-metrics-20261023",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "feature"
+      ],
+      "title_zh": "Copilot 用量 API 按客户端统计第三方工具用量",
+      "summary_zh": "企业与组织及用户级 1 天和 28 天报告新增 totals_by_client 数组，统计 OpenCode 等此前未计入的工具用量。每个客户端条目包含请求数、会话数、token 用量，以及按模型拆分并带 model_selection_mode 的明细；未识别客户端归入 other。已知客户端包括 opencode、claude_code、codex、zed、copilot_cli、github_app、cloud_agent、code_review、vscode、jetbrains。",
+      "key_points_zh": [
+        "totals_by_client 进入企业、组织、企业用户与组织用户的 1 天 / 28 天报告。",
+        "每客户端含请求数、会话数、token 用量及按模型拆分与 model_selection_mode。",
+        "未识别客户端归入 other。"
+      ],
+      "importance_reason_zh": "让企业首次在报表中看到第三方 Agent 工具的实际用量。",
+      "title_en": "Copilot usage metrics API breaks down usage by client including third-party tools",
+      "summary_en": "Enterprise, organization and user-level 1-day and 28-day reports add a totals_by_client array that captures usage from tools like OpenCode that were not previously reported. Each client entry includes request count, session count and token usage, plus per-model totals with a model_selection_mode; unrecognized clients are grouped under other. Known clients include opencode, claude_code, codex, zed, copilot_cli, github_app, cloud_agent, code_review, vscode and jetbrains.",
+      "key_points_en": [
+        "totals_by_client lands in enterprise, organization, enterprise-user and organization-user 1-day/28-day reports.",
+        "Each client includes request count, session count, token usage plus per-model totals and model_selection_mode.",
+        "Unrecognized clients are grouped under other."
+      ],
+      "importance_reason_en": "Lets organizations see third-party agent tool usage in reports for the first time.",
+      "published_at": "2026-10-23T23:42:03+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-24T14:01:35+00:00",
+      "updated_at": "2026-10-24T14:12:49.157263+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode",
+          "url": "https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode",
+          "collected_at": "2026-10-24T14:01:35+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-teams-github-app-20261023",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "GitHub Copilot in Teams 整合通知应用，旧应用 11 月 16 日退役",
+      "summary_zh": "Teams 中新的 GitHub 应用（此前称 GitHub notifications）把频道、群聊和私聊通知与 Copilot 结合：收到 bug 通知后 @github 可调查问题、修复并创建 PR，团队评审合并。旧版应用将更名为 GitHub (deprecated) 并于 11 月 16 日退役；已安装 GitHub notifications 的用户需更新整合版应用，现有通知功能延续。",
+      "key_points_zh": [
+        "新应用在 Teams 频道与聊天中接收通知并支持 @github 把 issue 通知转成 PR。",
+        "旧版应用更名 GitHub (deprecated) 并于 2026 年 11 月 16 日退役。",
+        "已安装 GitHub notifications 的用户需更新到整合版应用。"
+      ],
+      "importance_reason_zh": "通知到修复的闭环改变 Teams 内的 Agent 使用方式，并有明确的退役期限。",
+      "title_en": "GitHub Copilot in Teams consolidates the notifications app; legacy app retires November 16",
+      "summary_en": "The new GitHub app in Microsoft Teams (previously GitHub notifications) combines channel, group-chat and private-chat notifications with Copilot: on a bug notification, @github can investigate, fix the issue and create a pull request for team review. The legacy app will be renamed GitHub (deprecated) and retired on November 16; existing GitHub notifications installs should move to the consolidated app, and current notification capabilities carry over.",
+      "key_points_en": [
+        "The new app receives notifications in Teams channels and chats and supports @github turning issue notifications into pull requests.",
+        "The legacy app is renamed GitHub (deprecated) and retires on November 16, 2026.",
+        "Existing GitHub notifications installs should update to the consolidated app."
+      ],
+      "importance_reason_en": "The notification-to-fix loop changes how agents are used in Teams, with a firm retirement date.",
+      "published_at": "2026-10-23T21:29:58+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-24T14:01:35+00:00",
+      "updated_at": "2026-10-24T14:12:49.157263+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams",
+          "url": "https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams",
+          "collected_at": "2026-10-24T14:01:35+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10104",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.104 开放协助权限并修复 Auto 与 Autopilot 等待",
+      "summary_zh": "1.0.104 系列（-0 至 -2）让 Assisted Permissions 不再需要实验模式；保存的 Auto 偏好不可用时回退默认偏好而不是每轮失败。托管模型 fusion 在 Auto 下启动会话并应用 fusionTier 设置；交互与 SDK Autopilot 会话继续等待挂接的后台任务，不再在 COPILOT_TASK_WAIT_TIMEOUT_SECONDS 后停止，-p --autopilot 仍遵循该超时。",
+      "key_points_zh": [
+        "Assisted Permissions 无需启用实验模式即可使用。",
+        "保存的 Auto 偏好不可用时回退默认偏好；托管模型 fusion 在 Auto 下应用 fusionTier 设置。",
+        "交互与 SDK Autopilot 会话持续等待后台任务；-p --autopilot 仍遵循超时。"
+      ],
+      "importance_reason_zh": "权限流程和后台任务等待直接影响日常自动化使用。",
+      "title_en": "Copilot CLI 1.0.104 opens Assisted Permissions and fixes Auto and Autopilot waiting",
+      "summary_en": "The 1.0.104 series (-0 through -2) makes Assisted Permissions available without experimental mode; an unavailable saved Auto preference falls back to the default instead of failing each turn. Managed model fusion starts sessions on Auto applying fusionTier settings, and Interactive and SDK Autopilot sessions keep waiting for attached background tasks instead of stopping after COPILOT_TASK_WAIT_TIMEOUT_SECONDS, while -p --autopilot still honors it.",
+      "key_points_en": [
+        "Assisted Permissions work without enabling experimental mode.",
+        "An unavailable saved Auto preference falls back to the default; managed model fusion applies fusionTier settings on Auto.",
+        "Interactive and SDK Autopilot sessions keep waiting for background tasks; -p --autopilot still honors the timeout."
+      ],
+      "importance_reason_en": "Permission flow and background-task waiting directly affect daily automation.",
+      "published_at": "2026-10-23T18:49:26Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-24T14:01:16+00:00",
+      "updated_at": "2026-10-24T14:12:49.157263+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.104-0",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.104-0",
+          "collected_at": "2026-10-24T14:01:16+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.104-1",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.104-1",
+          "collected_at": "2026-10-24T14:01:16+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.104-2",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.104-2",
+          "collected_at": "2026-10-24T14:01:16+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "deepseek-harness-v021rc3",
       "entity_ids": [
         "deepseek-harness"
@@ -79,6 +294,43 @@
           "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.3",
           "collected_at": "2026-10-23T17:50:12+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-training-env-security-20261023",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "OpenAI 说明加强前沿模型训练环境的安全隔离",
+      "summary_zh": "OpenAI 在官方新闻中说明已加强前沿模型训练与评估环境的隔离，包括离线环境与高算力红队测试。订阅仅提供摘要，未包含实施细节、时间表或具体事件。",
+      "key_points_zh": [
+        "训练与评估环境的隔离措施加强，包括离线环境。",
+        "使用高算力红队测试；细节需查官方原文。"
+      ],
+      "importance_reason_zh": "前沿模型训练安全是行业安全实践的基线信息。",
+      "title_en": "OpenAI details strengthened containment for its frontier model training environment",
+      "summary_en": "OpenAI's official news post explains that it strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming. The feed provides only the summary, without implementation details, timelines or any specific incident.",
+      "key_points_en": [
+        "Containment for training and evaluation environments is strengthened, including offline environments.",
+        "High-compute red-teaming is used; details require the official post."
+      ],
+      "importance_reason_en": "Frontier training security is baseline information for industry security practice.",
+      "published_at": "2026-10-23T10:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-10-24T14:01:14+00:00",
+      "updated_at": "2026-10-24T14:12:49.157263+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/securing-our-frontier-model-training-environment",
+          "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+          "collected_at": "2026-10-24T14:01:14+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },
@@ -313,6 +565,86 @@
           "url": "https://zcode.z.ai/en/changelog",
           "collected_at": "2026-10-23T17:53:56+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-claude-haiku-5-5-20261023",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "pricing"
+      ],
+      "title_zh": "Kiro 实验支持 Claude Haiku 5.5，短上下文按 0.06x 计费",
+      "summary_zh": "Claude Haiku 5.5 以实验支持进入 Kiro IDE、CLI、Crew 与 Web，面向 us-east-1 (IAD) 和 eu-central-1 (FRA) 的 Pro、Pro+、Pro Max 与 Power 客户。官方称该模型面向需要快速响应的高频任务，上下文窗口 1M tokens：不超过 10 万 tokens 的请求按 0.06x 信用乘数计费，超过 10 万 tokens 按 0.3x。需重启 IDE/CLI、运行 kirocrew restart 或刷新 Web 加载最新模型列表。",
+      "key_points_zh": [
+        "实验支持覆盖 IDE、CLI、Crew、Web 与四个付费档位，区域为 us-east-1 (IAD)、eu-central-1 (FRA)。",
+        "上下文窗口 1M tokens；不超过 10 万 tokens 按 0.06x 乘数，超过按 0.3x。",
+        "需重启客户端或刷新 Web 才能加载最新模型列表。"
+      ],
+      "importance_reason_zh": "新模型可用性与差异化计费乘数直接影响 Kiro 用户的成本与选择。",
+      "title_en": "Kiro adds experimental Claude Haiku 5.5 support, billed at 0.06x for short contexts",
+      "summary_en": "Claude Haiku 5.5 arrives with experimental support across the Kiro IDE, CLI, Crew and Web for Pro, Pro+, Pro Max and Power customers in us-east-1 (IAD) and eu-central-1 (FRA). Per the official note it targets high-volume work needing quick responses and has a 1M-token context window: requests up to 100K tokens bill at a 0.06x credit multiplier and requests above 100K tokens at 0.3x. Restart the IDE or CLI, run kirocrew restart, or refresh Web to load the latest model list.",
+      "key_points_en": [
+        "Experimental support covers IDE, CLI, Crew and Web for four paid tiers in us-east-1 (IAD) and eu-central-1 (FRA).",
+        "1M-token context window; requests up to 100K tokens bill at 0.06x and above that at 0.3x.",
+        "Restart clients or refresh Web to load the latest model list."
+      ],
+      "importance_reason_en": "New model availability and differentiated billing multipliers directly affect Kiro users' costs and choices.",
+      "published_at": "2026-10-23",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-24T14:01:35+00:00",
+      "updated_at": "2026-10-24T14:12:49.157263+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/claude-haiku-5-5",
+          "url": "https://kiro.dev/changelog/models/claude-haiku-5-5",
+          "collected_at": "2026-10-24T14:01:35+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-v234-mcp-elicitation-20261023",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Kiro CLI 2.34 支持 MCP 征询输入、工作流控制与记忆删除",
+      "summary_zh": "此版本让 V3 MCP 工具向用户请求输入，提供更多 Workflows 控制，并支持在 /memories 中删除记忆。还新增模型选择器编辑器，并改进工作流恢复、无头 MCP 登录、已保存会话与无障碍支持。",
+      "key_points_zh": [
+        "V3 MCP 工具可请求用户输入（elicitation）。",
+        "/memories 支持删除记忆；Workflows 控制增强。",
+        "新增模型选择器编辑器，改进工作流恢复与无头 MCP 登录。"
+      ],
+      "importance_reason_zh": "MCP 征询与工作流控制扩展 Agent 的交互与恢复能力。",
+      "title_en": "Kiro CLI 2.34 adds MCP elicitation, workflow controls and memory deletion",
+      "summary_en": "This release lets V3 MCP tools ask for input, adds more control over Workflows and supports deleting memories from /memories. It also adds a model picker editor and improves workflow recovery, headless MCP sign-in, saved sessions and accessibility.",
+      "key_points_en": [
+        "V3 MCP tools can ask users for input (elicitation).",
+        "/memories supports deleting memories; Workflow controls expand.",
+        "Adds a model picker editor and improves workflow recovery and headless MCP sign-in."
+      ],
+      "importance_reason_en": "MCP elicitation and workflow controls expand agent interaction and recovery.",
+      "published_at": "2026-10-23",
+      "date_precision": "date",
+      "first_collected_at": "2026-10-24T14:01:35+00:00",
+      "updated_at": "2026-10-24T14:12:49.157263+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/2-34",
+          "url": "https://kiro.dev/changelog/cli/2-34",
+          "collected_at": "2026-10-24T14:01:35+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },

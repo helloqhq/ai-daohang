@@ -113,7 +113,7 @@ def article_text(tree,sid):
              'google-official':('rich-text','article__body','article-body','blog-detail__body'),
              'google-developers-blog':('inner-block-content',),
              'dario-blog':('rich-text','w-richtext','essay-content'),
-             'grok-official':('prose',), 'moonshot-official':('prose','blog-content'),
+             'grok-official':('prose',), 'moonshot-official':('prose','blog-content','blog-v2-page-container'),
              'minimax-official':('prose','blog-content'), 'meta-official':('article-body',),
              'siliconflow-news':('sf_f_md_style',)}
     candidates=[n for n in tree.nodes() if n.tag in ('div','section','article') and any(m in n.attrs.get('class','') for m in markers.get(sid,())) and n.text()]
@@ -346,7 +346,7 @@ def convert(source,fetch,since,until,reconcile=()):
         url=row['url']
         if url in seen:continue
         seen.add(url)
-        if in_window(row['published_at'],since,until) or url in reconcile:
+        if in_window(row['published_at'],since,until,source.get('date_timezone')) or url in reconcile:
             detail=parse_html(fetch(url));body=article_text(detail,sid);date=page_date(detail)
             if sid=='google-developers-blog':
                 label=next((n.text() for n in detail.nodes() if 'published-date' in n.attrs.get('class','').split()),None)

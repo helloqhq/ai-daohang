@@ -19,6 +19,24 @@ END=dt.datetime(2026,10,3,tzinfo=dt.timezone.utc)
 class ConversionTests(unittest.TestCase):
     def source(self,sid,url='https://example.com/changelog',platform='web'):
         return {'id':sid,'url':url,'name':sid,'platform':platform}
+    def test_kimi_local_date_reads_v2_article_before_utc_midnight(self):
+        source={**self.source('moonshot-official','https://www.kimi.com/en/blog/'),'date_timezone':'Asia/Shanghai'}
+        index='<main><div><a href="/en/blog/kimi-k3-1-pro"><h2>Kimi K3.1 Pro</h2></a><p>2026-10-24</p></div><div><a href="/en/blog/future"><h2>Future</h2></a><p>2026-10-25</p></div></main>'
+        detail='<main><nav>Navigation</nav><div class="layout report-content blog-v2-page-container"><h1>Introducing Kimi K3.1 Pro</h1><p>Weights will be released by Nov 4.</p></div></main>'
+        requested=[]
+        def fetch(url):
+            requested.append(url);return index if url==source['url'] else detail
+        start=dt.datetime(2026,10,21,tzinfo=dt.timezone.utc)
+        end=dt.datetime(2026,10,23,18,tzinfo=dt.timezone.utc)
+        rows=convert(source,fetch,start,end)
+        parsed,_,_=parse_feed(rss_xml(source,rows),source,start,end)
+        self.assertEqual(requested,[source['url'],'https://www.kimi.com/en/blog/kimi-k3-1-pro'])
+        self.assertEqual(len(parsed),1)
+        self.assertEqual(parsed[0]['published_at'],'2026-10-24')
+        self.assertEqual(parsed[0]['date_precision'],'date')
+        self.assertEqual(parsed[0]['material_scope'],'full_text')
+        self.assertIn('Nov 4',parsed[0]['text'])
+        self.assertNotIn('Navigation',parsed[0]['text'])
     def test_duplicate_date_anchors_keep_distinct_qoder_versions(self):
         body=''.join('<div class="update-container" id="october-1-2026"><h3>Qoder '+v+'</h3><p>October 1, 2026</p><p>Change '+v+'</p></div>' for v in ('0.1.0','0.1.1'))
         source=self.source('qoder-official');rows=convert(source,lambda *a:body,START,END)

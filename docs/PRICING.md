@@ -8,6 +8,8 @@
 
 ## 数据与核验
 
+2026-10-24 新增 Kimi K3.1 Pro / Highspeed 两个官方 API 端点，目录共 133 项。同步 Kimi 编程权益、OpenCode MiniMax M3.1 Flash 转计量及 Flint 40B 免费端点、Kiro 正式可用性与推理路由、Antigravity Pro 的 Argon 试用资格。两个 WorldRouter 旧详情页返回 404，标为待核验并保留历史价格日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-24.md)。
+
 2026-10-20 按新增与退役线索复核目录，新增 Mistral Large 4 Preview 官方 API 及五折优惠，共 129 项。Copilot 三档移除 10 月 19 日已退役模型；OpenCode 免费与 Go 模型表以 MiniMax M3.1 Flash Free 替代 Space Bunny。MiniMax 首月五折的三条记录因截止日缺年份保留 pending；6 项价格仍待核验，未批量刷新其他方案日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-20.md)。
 
 2026-10-18 新增 Google AI / Antigravity 五档共享订阅和 B.AI 三个 API 模型，目录共 125 项（API 55、Token Plan 18、Agent 52）。OpenCode 免费表扩展至 14 个已核实端点，补充 B.AI 活动信源与四条折扣；明确 Devin SWE-2 免费期已结束，并恢复核实 Kiro K3 地域表。12 项保留原价格核验日期，6 项仍待核价、3 项旧 Gemini CLI 入口仍暂停。详见 [本轮更新记录](DATA-UPDATE-2026-10-18.md)。
@@ -50,6 +52,8 @@ Kimi 按档位区分 K3、1M 上下文和高速模型；Claude Pro 的 Fable 模
 本轮补齐 OpenAI API 长上下文、Batch / Flex / Fast 和 Astra Ultrafast 费率；API 的 Ultrafast 为对应 Standard 的 6 倍，Codex 订阅额度消耗为 8 倍、追加 credits 为 6 倍，不能混用。官方当前说明 Pro 无五小时限制，模型额度仍按面板重置。DeepSeek 高峰为周一至周五北京时间 09:00–12:00、14:00–18:00，中国法定节假日除外。OpenCode Go 逐模型以美元用量计额度，五小时为月上限的 20%、每周为 50%，请求数仅为估算；Go 的 Space Bunny 与 Zen 的 Space Bunny Free 分别记录。
 
 `checked_at` 是定价核验日期；`updated_at` 是本站录入或实际修改该项内容的日期，不冒充厂商发布时间。定价或模型权益超过 30 天未核验标「需重新核验」。带 `valid_until` 的活动超过北京时间截止日期后标「活动已到期」，价格划线；重新核实后再修改数据，不能把旧活动价继续当成当前价格。
+
+价格、模型权益和优惠独立核验。仅更新权益或记录读取失败时，`updated_at` 可以晚于价格的 `checked_at`；二者均不得晚于快照顶层日期。更新权益不能顺便刷新价格核验日期，价格是否过时仍按原 `checked_at` 判断。
 
 ### 2026-10-09 权益复核
 

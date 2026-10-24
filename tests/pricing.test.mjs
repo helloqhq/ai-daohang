@@ -15,6 +15,17 @@ test('the published snapshot has bilingual, dated prices with explicit units and
   const duplicate=structuredClone(snapshot);duplicate.plans.push(duplicate.plans[0]);assert.throws(()=>validatePricing(duplicate));
   const invalid=structuredClone(snapshot);invalid.plans[0].updated_at='9999-01-01';assert.throws(()=>validatePricing(invalid));
 });
+test('model rights can change without refreshing the price verification date',()=>{
+  const data=structuredClone(snapshot);
+  const plan=data.plans.find(plan=>plan.category==='agent');
+  data.checked_at='2026-10-24';
+  plan.checked_at='2026-10-11';
+  plan.updated_at=plan.models_checked_at='2026-10-24';
+  assert.equal(validatePricing(data),data);
+  assert.equal(pricingStatus(plan,new Date('2026-11-12T08:00:00Z')),'stale');
+  plan.updated_at='2026-10-25';
+  assert.throws(()=>validatePricing(data));
+});
 test('combined filters search both languages and keep original currency and category',()=>{
   const filters={category:'token-plan',currency:'CNY',provider:'Kimi',query:'code 共享'};
   assert.equal(filterPlans(snapshot.plans,filters).length,8);

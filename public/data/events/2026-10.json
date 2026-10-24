@@ -1,7 +1,1290 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "e9f0c430976b9e91",
+  "snapshot_id": "0f38798af8895654",
   "events": [
+    {
+      "id": "kimi-k31-pro-20261024",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Kimi 发布 K3.1 Pro 与 Highspeed，完整权重计划 11 月 4 日前发布",
+      "title_en": "Kimi launches K3.1 Pro and Highspeed, with full weights planned by November 4",
+      "summary_zh": "Kimi K3.1 Pro 现已在 Kimi.com、Work、Code 和 API 提供，支持 1M 上下文与原生视觉；Highspeed 官方称速度提高 2–3 倍。完整权重计划在 11 月 4 日前发布，不能视为已经开放下载。",
+      "summary_en": "Kimi K3.1 Pro is available on Kimi.com, Work, Code and the API with 1M context and native vision; the vendor describes Highspeed as 2–3× faster. Full weights are planned by November 4 and are not yet established as downloadable.",
+      "key_points_zh": [
+        "K3 后训练版本，重点增强编程、3D 创作及金融研究。",
+        "Terminal-Bench 4.0 的 65.7% 等分数为厂商报告，非本站复测。"
+      ],
+      "key_points_en": [
+        "A post-trained K3 version focused on coding, 3D creation and financial research.",
+        "Results such as 65.7% on Terminal-Bench 4.0 are vendor-reported, not independently reproduced here."
+      ],
+      "importance_reason_zh": "新增可用旗舰模型，并明确托管服务与权重发布的不同阶段。",
+      "importance_reason_en": "Adds available flagship endpoints while distinguishing hosted access from future weight release.",
+      "published_at": "2026-10-24",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:56:01+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "moonshot-official",
+          "content_id": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
+          "url": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
+          "collected_at": "2026-10-23T17:56:01+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-harness-v021rc3",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "DeepSeek Harness rc.3 修复草稿丢失并补充插件菜单",
+      "title_en": "DeepSeek Harness rc.3 fixes lost drafts and adds plugin menus",
+      "summary_zh": "预览版增加侧栏与会话中的插件浏览和创建入口，并修复切换会话后新建会话无法找回未发送草稿的问题。API Key 模式的模型列表更新方式与账号登录模式对齐。",
+      "summary_en": "The preview adds plugin browsing and creation menus in sidebars and conversations, fixes unsent drafts becoming inaccessible after switching sessions, and aligns API-key model-list updates with account sign-in.",
+      "key_points_zh": [
+        "修复未发送草稿恢复。",
+        "API Key 与账号模式对齐模型列表更新。"
+      ],
+      "key_points_en": [
+        "Restores access to unsent drafts.",
+        "Aligns model-list updates across API-key and account modes."
+      ],
+      "importance_reason_zh": "涉及会话内容保留及接入一致性。",
+      "importance_reason_en": "Affects draft preservation and provider consistency.",
+      "published_at": "2026-10-23T15:26:39Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.3",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-rc.3",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-v231",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Kimi Code 2.3.1 修复会话锁与 Windows 工作区信任",
+      "title_en": "Kimi Code 2.3.1 fixes session locks and Windows workspace trust",
+      "summary_zh": "修复 Windows 缺少 Git Bash 时的工作区信任失败，以及 macOS / Linux 崩溃后会话持续被占用。重试后可接管仍被占用的会话，并提供关闭会话锁的开关。",
+      "summary_en": "Fixes workspace-trust failures without Git Bash on Windows and sessions remaining occupied after crashes on macOS/Linux. A retry can offer session takeover, with a switch to disable session locking.",
+      "key_points_zh": [
+        "KIMI_CODE_SESSION_LOCK=0 可关闭会话锁；需自行评估并发风险。",
+        "占用错误显示客户端名称。"
+      ],
+      "key_points_en": [
+        "KIMI_CODE_SESSION_LOCK=0 disables session locking; concurrent-use risks still apply.",
+        "Session-in-use errors identify the holding client."
+      ],
+      "importance_reason_zh": "解决崩溃后无法恢复任务和 Windows 兼容性问题。",
+      "importance_reason_en": "Addresses blocked session recovery and Windows compatibility.",
+      "published_at": "2026-10-23T07:44:12Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.3.1",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.3.1",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "hermes-v0225",
+      "entity_ids": [
+        "hermes"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Hermes 0.22.5 发布：登录、用量窗口与委派后端改进",
+      "title_en": "Hermes 0.22.5 updates sign-in, usage windows and delegation backends",
+      "summary_zh": "稳定版汇总约 81 个已合并 PR，包含设备登录重构、窗口制套餐用量显示与模型切换恢复、可插拔委派后端和更新恢复修复。完整整理后的发布说明将随 0.23.0 提供。",
+      "summary_en": "The stable release rolls up about 81 merged PRs, including reworked device login, usage-window plan gauges and model-switch recovery, pluggable delegation backends, and updater recovery fixes. Fully curated notes are planned for 0.23.0.",
+      "key_points_zh": [
+        "委派可按模型映射或配置档路由，并按会话切换。",
+        "本次安装器桌面包不变；Store、CLI、Docker / Cloud 更新渠道分别适用。"
+      ],
+      "key_points_en": [
+        "Delegation can route by model map or profile and switch per session.",
+        "Installer desktop packages are unchanged; Store, CLI and Docker/Cloud follow their respective update paths."
+      ],
+      "importance_reason_zh": "改变多 Agent 路由及用量受限后的恢复流程。",
+      "importance_reason_en": "Changes multi-agent routing and recovery after usage limits.",
+      "published_at": "2026-10-23T05:28:45Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "codex-01640",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Codex 0.164.0 新增提示预设、企业 MCP 登录与凭据遮蔽",
+      "title_en": "Codex 0.164.0 adds prompt presets, enterprise MCP auth and credential masking",
+      "summary_zh": "新增十个 /presets 槽位、内联模型与权限参数、全屏记录中的图像预览，以及企业 MCP 登录支持。同步修复压缩失败损坏历史、恢复会话丢失设置及 Windows 代理认证问题。",
+      "summary_en": "Adds ten /presets slots, inline model and permission arguments, transcript image previews and enterprise MCP authentication. Fixes history corruption after failed compaction, lost settings on resume and Windows proxy authentication.",
+      "key_points_zh": [
+        "支持部分远程 Bash 与 Zsh 快照场景的凭据遮蔽。",
+        "加固 macOS 大小写路径及可替换符号链接的沙箱检查。"
+      ],
+      "key_points_en": [
+        "Masks credentials in supported remote Bash and Zsh snapshot scenarios.",
+        "Hardens sandbox checks for case-variant macOS paths and replaceable symlinks."
+      ],
+      "importance_reason_zh": "同时影响日常复用、企业接入和会话安全。",
+      "importance_reason_en": "Affects everyday reuse, enterprise access and session safety.",
+      "published_at": "2026-10-23T04:50:58Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-nightly-20261023",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Gemini CLI nightly 修复取消后的工具执行与思考签名",
+      "title_en": "Gemini CLI nightly fixes post-cancellation execution and thought signatures",
+      "summary_zh": "10 月 23 日 nightly 修复非交互模式终止信号处理，防止取消后继续执行工具；同时为含函数调用的模型轮次保留思考签名，并对齐逐轮用量上报。",
+      "summary_en": "The October 23 nightly handles termination signals in non-interactive mode to prevent tools running after cancellation. It also preserves thought signatures for function-call turns and aligns per-turn usage reporting.",
+      "key_points_zh": [
+        "旧设置迁移时保留 ${VAR} 占位符。"
+      ],
+      "key_points_en": [
+        "Preserves ${VAR} placeholders during legacy settings migration."
+      ],
+      "importance_reason_zh": "取消语义与函数调用兼容性影响自动化任务可靠性。",
+      "importance_reason_en": "Cancellation behavior and function-call compatibility affect automation reliability.",
+      "published_at": "2026-10-23T01:35:10Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261023.ga713410ab",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261023.ga713410ab",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-visual-studio-september-20261023",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Visual Studio Copilot 更新 PR 探索、BYOM 与 NuGet 修复",
+      "title_en": "Visual Studio Copilot updates PR exploration, BYOM and NuGet fixes",
+      "summary_zh": "Git agent 可通过 GitHub / Azure DevOps MCP 探索 PR；预览 BYOM 改用 Copilot SDK 驱动的新 Agent，旧 Ask / Agent 模式不再支持。NuGet 审计警告可触发 Agent 修复。",
+      "summary_en": "The Git agent can explore PRs through GitHub/Azure DevOps MCP. Preview BYOM now requires the new Copilot SDK-powered Agent and is no longer supported in the previous Ask/Agent modes. NuGet audit warnings can launch agent-driven fixes.",
+      "key_points_zh": [
+        "更新后须重新添加先前配置的 Ollama 模型。",
+        "NuGet 修复要求 Copilot 登录并启用 NuGet MCP。"
+      ],
+      "key_points_en": [
+        "Previously configured Ollama models must be re-added after updating.",
+        "NuGet fixes require Copilot sign-in and the NuGet MCP server."
+      ],
+      "importance_reason_zh": "BYOM 存在破坏性迁移，PR 与依赖修复流程也有变化。",
+      "importance_reason_en": "BYOM requires a breaking migration, while PR and dependency workflows expand.",
+      "published_at": "2026-10-23T00:17:51+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
+          "url": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "zcode-v3163",
+      "entity_ids": [
+        "zcode"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "ZCode 3.16.3 修复并发写入损坏与会话恢复",
+      "title_en": "ZCode 3.16.3 fixes concurrent-write corruption and session restoration",
+      "summary_zh": "更新修复多会话同时写入时可能损坏数据、重启恢复时丢失子目录，以及子 Agent 无法读取当前会话已打开文档的问题。远程连接、移动终端及容器插件缓存同步改进。",
+      "summary_en": "Fixes possible data corruption from simultaneous session writes, lost subdirectories during restoration and subagents failing to access documents already open in the session. Remote connections, mobile terminals and container plugin caches also improve.",
+      "key_points_zh": [
+        "各会话的文档浏览状态独立。",
+        "关闭最后一个终端标签会真正结束后台进程。"
+      ],
+      "key_points_en": [
+        "Document-view state is isolated per session.",
+        "Closing the last terminal tab terminates its background process."
+      ],
+      "importance_reason_zh": "涉及数据完整性、后台资源与跨会话协作。",
+      "importance_reason_en": "Affects data integrity, background resources and cross-session work.",
+      "published_at": "2026-10-23",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:53:56+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "zcode-official",
+          "content_id": "https://zcode.z.ai/en/changelog::3.16.3",
+          "url": "https://zcode.z.ai/en/changelog",
+          "collected_at": "2026-10-23T17:53:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21309",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.309 调整工作区信任和沙箱回退",
+      "title_en": "Claude Code 2.1.309 changes workspace trust and sandbox fallback",
+      "summary_zh": "ultrareview 现在要求工作区信任；在无法运行沙箱时，写入受保护路径的排除命令会被询问或拒绝无沙箱回退。sed -i 按 Bash 命令执行，不再由 /rewind 恢复。",
+      "summary_en": "ultrareview now requires workspace trust. When the sandbox cannot run, excluded commands writing to protected paths require a prompt or are denied an unsandboxed fallback. sed -i runs as Bash and is no longer restored by /rewind.",
+      "key_points_zh": [
+        "脚本使用 --trust-workspace 时参数不取值。",
+        "桌面和 VS Code 绕过权限模式会直接拒绝危险 rm / rmdir 并提示重写。"
+      ],
+      "key_points_en": [
+        "In scripts, --trust-workspace takes no value.",
+        "Desktop and VS Code bypass mode immediately deny dangerous rm/rmdir commands with rewrite guidance."
+      ],
+      "importance_reason_zh": "会改变无人值守脚本和撤销操作的行为。",
+      "importance_reason_en": "Changes unattended scripts and undo expectations.",
+      "published_at": "2026-10-22T22:29:53+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:14+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-309",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-309",
+          "collected_at": "2026-10-23T17:50:14+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-named-customization-metrics-20261022",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "feature"
+      ],
+      "title_zh": "Copilot 用量 API 展示自定义技能、Agent 与 MCP 名称",
+      "title_en": "Copilot metrics API exposes custom skill, agent and MCP names",
+      "summary_zh": "企业与组织报告开始按配置名称展示自定义技能、Agent、MCP、斜杠命令和插件；每类列表从 5 项增至最多 25 项。历史报表不回填，计数口径保持不变。",
+      "summary_en": "Enterprise and organization reports now expose configured names for custom skills, agents, MCP servers, slash commands and plugins, expanding each list from five to up to 25 entries. Older report days are not backfilled and counting rules are unchanged.",
+      "key_points_zh": [
+        "应用、ACP 与 prompt mode 要求 CLI 1.0.97+；SDK 要求 1.0.21+。",
+        "客户端遥测可能低估，不宜作精确账单。"
+      ],
+      "key_points_en": [
+        "App, ACP and prompt mode require CLI 1.0.97+; SDK requires 1.0.21+.",
+        "Client telemetry can undercount and is not exact accounting."
+      ],
+      "importance_reason_zh": "帮助组织识别实际被采用的内部扩展。",
+      "importance_reason_en": "Helps organizations identify adoption of internal extensions.",
+      "published_at": "2026-10-22T22:19:17+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api",
+          "url": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-v7816-preview-security",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix",
+        "feature"
+      ],
+      "title_zh": "Kilo 7.8.16 预览修复 MCP 提示执行与 URL 安全",
+      "title_en": "Kilo 7.8.16 preview hardens MCP prompts and URL handling",
+      "summary_zh": "CLI 将 MCP 提示中的 Shell 表达式作为文本处理，避免在本地执行；浏览器及 MCP OAuth 链接限制为 HTTP(S)。同时使用固定 Bun 运行时阻止受损 eMudhra 证书链。",
+      "summary_en": "The CLI treats shell expressions in MCP prompts as literal text rather than executing them locally, restricts browser and MCP OAuth links to HTTP(S), and uses a pinned Bun runtime to block compromised eMudhra chains.",
+      "key_points_zh": [
+        "新增会话 Host 注册表及 Kilo Cloud 会话适配器。"
+      ],
+      "key_points_en": [
+        "Adds a Session Host registry and Kilo Cloud session adapter."
+      ],
+      "importance_reason_zh": "涉及外部提示内容执行与认证链接安全。",
+      "importance_reason_en": "Addresses execution of external prompt content and authentication-link safety.",
+      "published_at": "2026-10-22T22:18:54Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.16",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.16",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-global-default-ga-20261022",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "feature"
+      ],
+      "title_zh": "Copilot 全局默认策略开始正式执行",
+      "title_en": "Copilot starts enforcing the GA global default policy",
+      "summary_zh": "Business / Enterprise 的全局默认策略开始分批执行，计划持续至 10 月 26 日。符合条件且未配置的正式功能会按默认策略设置，已明确配置的功能保持原选择。",
+      "summary_en": "The global default policy for Business/Enterprise is rolling out through October 26. Eligible unconfigured GA features are set according to the selected default; explicit feature choices are preserved.",
+      "key_points_zh": [
+        "这是一次性赋值，之后更改全局默认不会重写已设置的功能。",
+        "预览功能仍须主动启用。"
+      ],
+      "key_points_en": [
+        "This is a one-time assignment; later global-default changes do not rewrite configured features.",
+        "Preview features remain opt-in."
+      ],
+      "importance_reason_zh": "可能影响组织自动开放或限制 Agent 功能的范围。",
+      "importance_reason_en": "Can affect which agent features organizations automatically enable or restrict.",
+      "published_at": "2026-10-22T20:44:28+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available",
+          "url": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-decisions-api-20261022",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "availability"
+      ],
+      "title_zh": "OpenAI 公告 Decisions API，用于快速、聚焦的决策",
+      "title_en": "OpenAI announces the Decisions API for fast, focused decisions",
+      "summary_zh": "OpenAI 官方 RSS 公告 Decisions API，定位为面向应用的快速、聚焦、低成本决策接口。当前订阅仅提供简短介绍，未包含具体模型、费率或接入限制。",
+      "summary_en": "OpenAI’s official RSS announces the Decisions API for fast, focused, low-cost decisions in applications. The feed contains only a short description, without specific models, rates or access restrictions.",
+      "key_points_zh": [
+        "仅据公告确认产品定位；详细价格与能力需查官方文档。"
+      ],
+      "key_points_en": [
+        "Only the announced positioning is established; detailed pricing and capabilities require official documentation."
+      ],
+      "importance_reason_zh": "新增决策 API 入口，但材料不足以扩写技术规格。",
+      "importance_reason_en": "Introduces a decision API, without enough material to expand technical specifications.",
+      "published_at": "2026-10-22T19:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:07+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/decisions-api",
+          "url": "https://openai.com/index/decisions-api",
+          "collected_at": "2026-10-23T17:50:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-impact-industry-comparison-20261022",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Copilot 影响仪表盘新增自愿参与的行业比较",
+      "title_en": "Copilot impact dashboard adds opt-in industry comparisons",
+      "summary_zh": "企业及不属于企业的组织可按公司规模、行业比较 Agent 采用率与效果。参与默认关闭，样本不足会扩大对照组或不显示排名。",
+      "summary_en": "Enterprises and standalone organizations can compare agentic adoption and leverage by size and industry. Participation is disabled by default; small samples trigger broader groups or no ranking.",
+      "key_points_zh": [
+        "仅仪表盘可见，不进入 API、NDJSON 或下载。",
+        "数据驻留企业仅同地域比较，聚合数据 30 天后删除。"
+      ],
+      "key_points_en": [
+        "Available only in the dashboard, not APIs, NDJSON or downloads.",
+        "Data-residency enterprises compare within their region; aggregates are deleted after 30 days."
+      ],
+      "importance_reason_zh": "提供组织采用 Agent 的横向比较，并明确数据参与条件。",
+      "importance_reason_en": "Adds peer context for agent adoption with explicit data-participation rules.",
+      "published_at": "2026-10-22T16:28:24+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard",
+          "url": "https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10103-stable",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.103 修复 ACP 沙箱与断线回复",
+      "title_en": "Copilot CLI 1.0.103 fixes ACP sandboxing and reconnect replies",
+      "summary_zh": "正式版让 ACP 会话在恢复时仍遵循已保存沙箱设置及启动参数；云端断线重连后保留完整回复，并修复 Gemini nullable / enum 工具参数导致的 400 错误。",
+      "summary_en": "The stable release makes ACP sessions honor saved sandbox settings and launch flags on resume, preserves complete cloud replies after reconnects and fixes Gemini 400 errors for nullable/enum tool schemas.",
+      "key_points_zh": [
+        "Windows 开发工具 shim 继承相同沙箱授权。",
+        "远程启动选项更新并退出旧 --remote / --no-remote 参数。"
+      ],
+      "key_points_en": [
+        "Windows developer-tool shims inherit the same sandbox grants.",
+        "Remote-launch options change and legacy --remote/--no-remote flags retire."
+      ],
+      "importance_reason_zh": "修复跨客户端权限一致性及回复丢失。",
+      "importance_reason_en": "Fixes cross-client permission consistency and lost replies.",
+      "published_at": "2026-10-22T16:21:56Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.103",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.103",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "google-forty2020-20261022",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Google 发布 10 米精度 ForTy 全球森林类型地图",
+      "title_en": "Google releases the 10-meter ForTy forest typology map",
+      "summary_zh": "DeepMind、Google Research、WRI 与 IIASA 发布 ForTy 2020，将全球土地分为六类森林与土地利用类型，并分享 2017–2025 年逐年变化的早期时间序列。",
+      "summary_en": "DeepMind, Google Research, WRI and IIASA release ForTy 2020, classifying global land into six forest and land-use types, alongside an early annual change series for 2017–2025.",
+      "key_points_zh": [
+        "10×10 米分辨率可区分自然森林、种植森林与树木作物等。",
+        "时间序列为早期版本，不据此扩写监管合规结论。"
+      ],
+      "key_points_en": [
+        "10×10-meter resolution distinguishes natural forests, planted forests and tree crops.",
+        "The time series is early-stage; no regulatory compliance conclusion is inferred."
+      ],
+      "importance_reason_zh": "提供可用于研究森林转化的新全球数据产品。",
+      "importance_reason_en": "Provides a new global data product for forest-conversion research.",
+      "published_at": "2026-10-22T14:30:24+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:53:55+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+          "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+          "collected_at": "2026-10-23T17:53:55+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-jetbrains-7112",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Kilo JetBrains 7.1.12 增加自动路由与云会话适配",
+      "title_en": "Kilo JetBrains 7.1.12 adds auto routers and cloud-session integration",
+      "summary_zh": "增加支持客户端模型和本地评估的自定义自动路由、项目级 Agent 用量聚合，以及 Kilo Cloud 会话适配器。Agent Manager 建立 worktree 前会先获取基础分支。",
+      "summary_en": "Adds custom auto routers with client models and local evaluations, project-scoped usage aggregation and a Kilo Cloud session adapter. Agent Manager fetches the base branch before creating worktrees.",
+      "key_points_zh": [
+        "修复 MCP 提示内容及子 Agent 编辑工具可用性。"
+      ],
+      "key_points_en": [
+        "Fixes MCP prompt content and edit-tool availability for subagents."
+      ],
+      "importance_reason_zh": "拓展模型路由和本地 / 云端会话协作。",
+      "importance_reason_en": "Expands model routing and local/cloud session workflows.",
+      "published_at": "2026-10-22T13:58:01Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.12",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.12",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "opencode-v1194-security",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "OpenCode 1.19.4 升级 Bun 修复网络与 TLS 安全问题",
+      "title_en": "OpenCode 1.19.4 upgrades Bun for network and TLS security fixes",
+      "summary_zh": "发布将捆绑 Bun 升至 1.4.4，包含 Brotli、TLS、HTTP/1.1、HTTP/2、HTTP/3、WebSocket 与 fetch 的安全修复，并更新根证书。",
+      "summary_en": "Upgrades bundled Bun to 1.4.4 with security fixes for Brotli, TLS, HTTP/1.1, HTTP/2, HTTP/3, WebSocket and fetch, plus updated root certificates.",
+      "key_points_zh": [
+        "根证书更新到 NSS 3.131.1。"
+      ],
+      "key_points_en": [
+        "Updates root certificates to NSS 3.131.1."
+      ],
+      "importance_reason_zh": "涉及 Agent 网络请求和认证基础运行时的安全。",
+      "importance_reason_en": "Addresses the security of the runtime used for agent networking and authentication.",
+      "published_at": "2026-10-22T13:03:41Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v1.19.4",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.4",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "meituan-autoresearch-cyclicgraph-20261022",
+      "entity_ids": [
+        "meituan"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature"
+      ],
+      "title_zh": "美团公开 AutoResearch 图探索与自进化系统设计",
+      "title_en": "Meituan details graph-based AutoResearch and self-evolution",
+      "summary_zh": "技术团队介绍从串行 LOOP 迁移到 CyclicGraph Engine，通过状态机、互斥假设并行验证、业务知识库与线上反馈沉淀改进算法研究流程。文中效果为团队在两个项目中的报告。",
+      "summary_en": "The team describes moving from a serial LOOP to CyclicGraph Engine, using state machines, parallel tests of distinct hypotheses, business knowledge and production feedback to improve algorithm research. Results are team-reported across two projects.",
+      "key_points_zh": [
+        "两项目单任务耗时分别减少约 85% 与 83%，非本站独立验证。",
+        "约束尽量由代码实施，经验入库另经解释性验证。"
+      ],
+      "key_points_en": [
+        "The team reports about 85% and 83% less task time, without independent verification here.",
+        "Constraints are implemented in code where possible; stored experience also requires interpretability checks."
+      ],
+      "importance_reason_zh": "提供企业环境下长周期自主研究的具体架构经验。",
+      "importance_reason_en": "Provides concrete architecture lessons for long-running autonomous research in enterprise environments.",
+      "published_at": "2026-10-22T06:49:36.000Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:07+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "meituan-official",
+          "content_id": "https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html",
+          "url": "https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html",
+          "collected_at": "2026-10-23T17:50:07+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-cosmos-data-factory-20261022",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "feature",
+        "capability"
+      ],
+      "title_zh": "NVIDIA 扩展 Cosmos 数据工厂、训练工具与仿真模型",
+      "title_en": "NVIDIA expands Cosmos Data Factory, training tools and simulation models",
+      "summary_zh": "Cosmos Data Factory 发布五类云原生蓝图，覆盖驾驶数据、图像属性、事件视频、缺陷图像与视频增强。Cosmos Framework 扩展训练与部署工具，并增加 Cosmos 3 Nano 仿真变体和更新的 NIM 服务。",
+      "summary_en": "Cosmos Data Factory offers five cloud-native blueprints for driving data, image attributes, event video, defect images and video augmentation. Cosmos Framework expands training/deployment tools, with new Cosmos 3 Nano simulation variants and updated NIM services.",
+      "key_points_zh": [
+        "工具支持适配 GR00T、Alpamayo、Qwen、Pi0.5 等兼容模型。",
+        "NIM 最多 2 倍推理提速仅限厂商验证配置。"
+      ],
+      "key_points_en": [
+        "Tools support adapting GR00T, Alpamayo, Qwen, Pi0.5 and compatible models.",
+        "NIM’s claimed up-to-2× speedup applies only to vendor-validated configurations."
+      ],
+      "importance_reason_zh": "新增物理 AI 数据生成、训练及评测组件。",
+      "importance_reason_en": "Adds data-generation, training and evaluation components for physical AI.",
+      "published_at": "2026-10-22T05:00:27+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/",
+          "url": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-retail-blueprints-preview-20261022",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "NVIDIA 开放三项零售 Agent 与库存蓝图早期访问",
+      "title_en": "NVIDIA opens early access to retail agent and inventory blueprints",
+      "summary_zh": "NVIDIA 在 GTC Berlin 展示三项早期访问蓝图：员工生产力 Agent Harness、库存仿真与优化，以及 Agentic Finetuning Flywheel，运行在 Nebius 基础设施上。",
+      "summary_en": "At GTC Berlin, NVIDIA showcases three early-access blueprints on Nebius: Agent Harness for Employee Productivity, Inventory Simulation and Optimization, and Agentic Finetuning Flywheel.",
+      "key_points_zh": [
+        "员工助手整合排班、任务、库存告警与运营信息。",
+        "微调飞轮连接数据生成、模型微调和反馈；需申请早期访问。"
+      ],
+      "key_points_en": [
+        "The employee assistant consolidates schedules, tasks, inventory alerts and operational insights.",
+        "The finetuning flywheel connects data generation, training and feedback; early access requires a request."
+      ],
+      "importance_reason_zh": "提供可申请试用的 Agent 工作流蓝图，区别于文中的客户案例。",
+      "importance_reason_en": "Provides agent-workflow blueprints available by request, separate from the article’s customer examples.",
+      "published_at": "2026-10-22T05:00:23+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/european-retail-open-models-robotics/",
+          "url": "https://blogs.nvidia.com/blog/european-retail-open-models-robotics/",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-earth2-stormscope-eu-20261022",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability"
+      ],
+      "title_zh": "Earth-2 新增 StormScope EU 区域天气模型",
+      "title_en": "Earth-2 adds the regional StormScope EU weather model",
+      "summary_zh": "NVIDIA 介绍 Earth-2 新成员 StormScope EU，以欧洲天气与气候数据训练，使用 EUMETSAT 观测预测 16 个 Meteosat 通道的云层变化，间隔为 10 分钟。",
+      "summary_en": "NVIDIA introduces StormScope EU, an Earth-2 model trained on European weather and climate data, using EUMETSAT observations to predict cloud conditions across 16 Meteosat channels at 10-minute intervals.",
+      "key_points_zh": [
+        "GTC 演示通过 Earth2Studio 与 Earthmover 随新卫星观测更新。",
+        "可结合 CorrDiff 增加区域细节，具体效果保留厂商归属。"
+      ],
+      "key_points_en": [
+        "A GTC demo combines Earth2Studio and Earthmover to update with new satellite observations.",
+        "Can combine with CorrDiff for local detail; performance claims remain attributed to the vendor."
+      ],
+      "importance_reason_zh": "新增面向欧洲短临天气预测的区域模型。",
+      "importance_reason_en": "Adds a regional model for European weather nowcasting.",
+      "published_at": "2026-10-22T05:00:19+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/europe-earth-2-open-models-weather-climate-prediction/",
+          "url": "https://blogs.nvidia.com/blog/europe-earth-2-open-models-weather-climate-prediction/",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-personas-europe-20261022",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "capability"
+      ],
+      "title_zh": "NVIDIA 介绍欧洲公共服务 AI 与本地化合成人物数据集",
+      "title_en": "NVIDIA details European public-service AI and localized persona datasets",
+      "summary_zh": "官方介绍已发布的 Nemotron-Personas-UK：100 万条反映英国人口与地域多样性的合成人物，以及基于德国 2022 年人口普查的 Nemotron-Personas-Germany。其余公共服务部署和部分国家数据集仍在开发或规划。",
+      "summary_en": "NVIDIA describes the released Nemotron-Personas-UK dataset of one million synthetic personas, plus Nemotron-Personas-Germany grounded in Germany’s 2022 census. Other public-service deployments and some country datasets remain in development or planned.",
+      "key_points_zh": [
+        "德国数据为 100 万条记录，每条含六个合成人物。",
+        "可配合 NeMo User Sim 评估与训练模型；不把规划中的数据集写成已发布。"
+      ],
+      "key_points_en": [
+        "Germany’s dataset has one million records with six synthetic personas each.",
+        "Can support model evaluation and training with NeMo User Sim; planned datasets are not described as released."
+      ],
+      "importance_reason_zh": "为本地语言和公共服务 Agent 提供具体评测数据。",
+      "importance_reason_en": "Provides concrete evaluation data for local-language and public-service agents.",
+      "published_at": "2026-10-22T05:00:02+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/european-public-sector-open-models/",
+          "url": "https://blogs.nvidia.com/blog/european-public-sector-open-models/",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-nightly-20261022",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Gemini CLI nightly 将 IDE 桥接到容器沙箱并修复文件写入",
+      "title_en": "Gemini CLI nightly bridges IDE access into container sandboxes and fixes file writes",
+      "summary_zh": "10 月 22 日 nightly 可通过 exec stdio 将 IDE companion 桥接进容器沙箱，并让原子写入遵守只读文件和硬链接限制。同步修复主目录作为工作区时重复加载 Agent。",
+      "summary_en": "The October 22 nightly bridges the IDE companion into container sandboxes over exec stdio, makes atomic writes respect read-only files and hard links, and fixes duplicate agent loading when the home directory is the workspace.",
+      "key_points_zh": [
+        "不可信标志检查仅面向外部输出，并记住已批准标志。"
+      ],
+      "key_points_en": [
+        "Untrusted-flag checks are scoped to external output and remember approved flags."
+      ],
+      "importance_reason_zh": "涉及沙箱连接和文件权限正确性。",
+      "importance_reason_en": "Affects sandbox connectivity and file-permission correctness.",
+      "published_at": "2026-10-22T01:23:52Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261022.g09d81bf11",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261022.g09d81bf11",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-agent-skills-aaif-20261022",
+      "entity_ids": [
+        "anthropic",
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "availability"
+      ],
+      "title_zh": "Anthropic 将 Agent Skills 标准捐赠给 AAIF",
+      "title_en": "Anthropic donates Agent Skills to AAIF",
+      "summary_zh": "Anthropic 将 Agent Skills 名称、标志、GitHub 组织和 agentskills.io 域名捐赠给 Linux 基金会下的 AAIF，为标准提供中立治理。官方称已有 70 多个 Agent 平台集成。",
+      "summary_en": "Anthropic donates the Agent Skills name, logo, GitHub organization and agentskills.io domain to the Linux Foundation’s AAIF for neutral governance. The company reports integration by more than 70 agent platforms.",
+      "key_points_zh": [
+        "无需加入 AAIF 也可使用与贡献标准。",
+        "拟议路线图包括版本发布、正式提案流程及技能安全指导。"
+      ],
+      "key_points_en": [
+        "Using or contributing to the standard does not require AAIF membership.",
+        "The proposed roadmap covers versioned releases, formal proposals and skill-security guidance."
+      ],
+      "importance_reason_zh": "改变跨 Agent 技能标准的治理和维护方式。",
+      "importance_reason_en": "Changes governance and maintenance of an interoperable agent-skills standard.",
+      "published_at": "2026-10-22",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:53:55+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+          "collected_at": "2026-10-23T17:53:55+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-ide-workflow-control-20261022",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro IDE 新增工作流触发频率控制",
+      "title_en": "Kiro IDE adds workflow-start controls",
+      "summary_zh": "本次发布增加 Use workflows 控制，可选择 Kiro 在聊天中启动工作流的频率；同时改善 IDE 与 CLI 间已安装 Powers 的可靠性，并应用 Memory 默认 Off 设置。",
+      "summary_en": "Adds a Use workflows control for how often Kiro starts workflows in chat, improves installed Powers across IDE and CLI, and applies the Memory setting’s Off default.",
+      "key_points_zh": [
+        "终端与应用内反馈行为也有改进。"
+      ],
+      "key_points_en": [
+        "Terminal and in-product feedback behavior also improves."
+      ],
+      "importance_reason_zh": "用户可直接控制 Agent 的工作流启动行为。",
+      "importance_reason_en": "Gives users direct control over agent workflow initiation.",
+      "published_at": "2026-10-22",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-4-26",
+          "url": "https://kiro.dev/changelog/ide/1-4-26",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "google-api-gateway-streaming-20261022",
+      "entity_ids": [
+        "google",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "kind": "preview",
+      "topics": [
+        "api",
+        "compatibility"
+      ],
+      "title_zh": "Google API Gateway 流式传输进入公开预览",
+      "title_en": "Google API Gateway streaming enters public preview",
+      "summary_zh": "公开预览支持 SSE、WebSocket、gRPC 流与分块响应，现有 API 规范无需新增流式注解；流连接最长可保持一小时。可用于 Gemini 平台模型路由及其他流式后端。",
+      "summary_en": "Public preview supports SSE, WebSockets, gRPC streaming and chunked responses without new streaming annotations in existing API specs. Streams can remain open for up to one hour, including Gemini-platform model routing and other streaming backends.",
+      "key_points_zh": [
+        "预览期在创建网关时主动启用。",
+        "原有鉴权、API Key 与日志监控继续适用，客户端仍需重连逻辑。"
+      ],
+      "key_points_en": [
+        "Opt in when creating a gateway during preview.",
+        "Existing auth, API keys and monitoring apply; clients still need reconnect logic."
+      ],
+      "importance_reason_zh": "让 AI token 流与 Agent 进度通过同一网关治理。",
+      "importance_reason_en": "Brings streamed AI tokens and agent progress under the same gateway controls.",
+      "published_at": "2026-10-22",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:53:56+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/",
+          "url": "https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/",
+          "collected_at": "2026-10-23T17:53:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "minimax-code-mini-app-20261022",
+      "entity_ids": [
+        "minimax",
+        "minimax-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "MiniMax Code 发布带前后端的常驻 Mini App",
+      "title_en": "MiniMax Code launches persistent frontend/backend Mini Apps",
+      "summary_zh": "桌面应用本地会话现支持 Mini App：通过插件安装前端、Node 后端和持久数据目录，页面与 Agent 可互相调用。首发包含运行时、/miniapp-creator 及官方应用。",
+      "summary_en": "Local desktop sessions now support Mini Apps installed as plugins, with a frontend, Node backend and persistent data directory; pages and agents can call one another. Launch components include the runtime, /miniapp-creator and official apps.",
+      "key_points_zh": [
+        "macOS / Windows 可用，支持 hosted MCP 与页面内工具审批。",
+        "凭据由宿主管理；本地应用代码仍以当前用户身份运行。"
+      ],
+      "key_points_en": [
+        "Available on macOS/Windows with hosted MCP and in-page tool approvals.",
+        "Credentials are host-managed; local app code still runs as the current user."
+      ],
+      "importance_reason_zh": "将持续运行的工作界面与 Agent 会话连接起来。",
+      "importance_reason_en": "Connects persistent work interfaces with agent sessions.",
+      "published_at": "2026-10-22",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:53:55+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "minimax-official",
+          "content_id": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
+          "url": "https://www.minimax.io/blog/minimax-code-mini-app-1792650729",
+          "collected_at": "2026-10-23T17:53:55+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "qoder-v049-wecom-20261022",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Qoder 0.4.9 接入企业微信并新增视频与 Linux ARM64 支持",
+      "title_en": "Qoder 0.4.9 adds WeCom, video workflows and Linux ARM64",
+      "summary_zh": "配置插件后可在企业微信与 Qoder 对话、发起任务并接收回复。新增对话生成视频、任务监视与工作区播放，以及 Linux ARM64 桌面版本和实验性可恢复侧任务。",
+      "summary_en": "With the required plugin, users can chat with Qoder, start tasks and receive replies in WeCom. Adds conversational video generation, task monitoring and workspace playback, a Linux ARM64 desktop build and experimental recoverable side tasks.",
+      "key_points_zh": [
+        "侧任务持久化须在实验设置启用。",
+        "修复自定义 Agent 权限未生效及任务完成后 diff 丢失。"
+      ],
+      "key_points_en": [
+        "Side-task persistence requires enabling the experiment.",
+        "Fixes custom-agent permissions not taking effect and lost diffs after completion."
+      ],
+      "importance_reason_zh": "扩展企业沟通入口、平台兼容性及长任务恢复。",
+      "importance_reason_en": "Expands enterprise messaging, platform compatibility and long-task recovery.",
+      "published_at": "2026-10-22",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:53:56+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#october-22-2026::0.4.9",
+          "url": "https://docs.qoder.com/release-notes/qoder#october-22-2026",
+          "collected_at": "2026-10-23T17:53:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "pi-v140",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Pi 1.4.0 支持图像分类并修复摘要与并发执行",
+      "title_en": "Pi 1.4.0 adds image classification and fixes summaries and concurrency",
+      "summary_zh": "codemode models.classify() 可向 TypeSafe Jev 和 Cloudflare Clef 传图；压缩和分支摘要改用模型输出上限，避免长推理占满固定摘要上限。并发脚本改为等待空闲 worker。",
+      "summary_en": "codemode models.classify() accepts images for TypeSafe Jev and Cloudflare Clef. Compaction and branch summaries now use the model output limit rather than a fixed cap, and concurrent scripts wait for a free worker.",
+      "key_points_zh": [
+        "新增 MiniMax M3.1 Flash 并更新已退役模型的默认选择。",
+        "PI_CODEMODE_MAX_WORKERS 可调整 worker 上限；默认两路，等待最多 60 秒。"
+      ],
+      "key_points_en": [
+        "Adds MiniMax M3.1 Flash and updates defaults affected by retired models.",
+        "PI_CODEMODE_MAX_WORKERS adjusts worker capacity; default is two, with up to 60 seconds waiting."
+      ],
+      "importance_reason_zh": "影响分类模型能力与长会话、并发任务稳定性。",
+      "importance_reason_en": "Affects classifier capabilities and long-session/concurrency reliability.",
+      "published_at": "2026-10-21T22:49:48Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.4.0",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.4.0",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-v21307",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.307 增加安全遥测与 API 版本迁移",
+      "title_en": "Claude Code 2.1.307 adds safety telemetry and API migration",
+      "summary_zh": "新增 /claude-api api-version 迁移到 2026-10-21 API；claude_code.safety_event 记录被权限规则、安全检查、hook 或沙箱拦截、询问或退回的工具调用。自托管 checkout hook 默认 30 分钟超时。",
+      "summary_en": "Adds /claude-api api-version for migration to API version 2026-10-21 and claude_code.safety_event telemetry for tool calls stopped, prompted or returned by permission rules, safety checks, hooks or the sandbox. Self-hosted checkout hooks default to a 30-minute timeout.",
+      "key_points_zh": [
+        "@claude review stop / off / pause 可结束 PR 的持续审阅订阅。",
+        "VS Code 语音及扩展请求同步过滤可信证书。"
+      ],
+      "key_points_en": [
+        "@claude review stop/off/pause ends a PR’s always-review subscription.",
+        "VS Code dictation and extension requests filter trusted certificates."
+      ],
+      "importance_reason_zh": "影响 API 迁移、组织审计和自托管运行配置。",
+      "importance_reason_en": "Affects API migration, organizational auditing and self-hosted configuration.",
+      "published_at": "2026-10-21T22:29:29+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:14+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-307",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-307",
+          "collected_at": "2026-10-23T17:50:14+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "hermes-v0224",
+      "entity_ids": [
+        "hermes"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Hermes 0.22.4 更新插件目录与会话权限显示",
+      "title_en": "Hermes 0.22.4 updates plugins and session-permission display",
+      "summary_zh": "稳定版移除桌面输入框上方的建议提示；无依赖插件不再弹空的依赖许可。插件目录加入 bwrap、Singularity、mcp-serve、agent-importers 等入口，WhatsApp 退出后可安全重新配对。",
+      "summary_en": "The stable release removes desktop suggestion pills and empty dependency-consent prompts. The plugin catalog adds bwrap, Singularity, mcp-serve and agent-importers, while WhatsApp can be safely re-paired after logout.",
+      "key_points_zh": [
+        "审批模式标记跟随当前 profile。",
+        "桌面安装器包本轮不变；其他发行渠道按各自路径更新。"
+      ],
+      "key_points_en": [
+        "The approval-mode chip follows the active profile.",
+        "Desktop installer packages are unchanged; other distribution channels follow their update paths."
+      ],
+      "importance_reason_zh": "插件能力入口及权限显示有明确变化。",
+      "importance_reason_en": "Provides concrete changes to plugin access and permission visibility.",
+      "published_at": "2026-10-21T18:49:24Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.4",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.4",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-v10102-stable",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.102 修复长命令与子 Agent 授权",
+      "title_en": "Copilot CLI 1.0.102 fixes long commands and subagent approvals",
+      "summary_zh": "正式版修复沙箱长命令运行超过 10 秒的可靠性、子 Agent 重复权限提示，以及组织插件准备阻塞聊天的问题。prompt mode 遵循组织管理的 Auto 模型选择。",
+      "summary_en": "The stable release fixes sandboxed commands running beyond ten seconds, duplicate subagent approval prompts and chats blocked by organization plugin preparation. Prompt mode honors managed Auto model selection.",
+      "key_points_zh": [
+        "继承代理设置时支持 NO_PROXY 与 ALL_PROXY。",
+        "模型过载中断的回复采用退避重试并显示请求 ID。"
+      ],
+      "key_points_en": [
+        "Supports NO_PROXY and ALL_PROXY when inheriting host proxy settings.",
+        "Provider-overload interruptions retry with backoff and expose request IDs."
+      ],
+      "importance_reason_zh": "修复自动化与企业环境的核心执行可靠性。",
+      "importance_reason_en": "Fixes core execution reliability in automation and enterprise environments.",
+      "published_at": "2026-10-21T18:05:00Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-10-23T17:50:12+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.102",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.102",
+          "collected_at": "2026-10-23T17:50:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "hermes-v0223",
       "entity_ids": [
@@ -327,6 +1610,43 @@
       ]
     },
     {
+      "id": "openai-patch-the-planet-20261021",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "feature"
+      ],
+      "title_zh": "OpenAI 介绍 Patch the Planet 漏洞响应协作",
+      "title_en": "OpenAI introduces Patch the Planet vulnerability-response coordination",
+      "summary_zh": "官方 RSS 介绍 Patch the Planet，连接安全研究者、维护者与事件响应人员，协同处理开源项目中的关键漏洞。当前订阅仅含摘要，未说明完整机制与参与条件。",
+      "summary_en": "The official RSS introduces Patch the Planet, connecting security researchers, maintainers and incident responders to address critical open-source vulnerabilities. The feed provides only a summary, without full mechanisms or participation terms.",
+      "key_points_zh": [
+        "标题将其置于 Agent 发现关键漏洞的响应背景；不能据摘要推断自动修复覆盖。"
+      ],
+      "key_points_en": [
+        "The title places it in the context of agent-discovered vulnerabilities; automatic remediation coverage is not inferred."
+      ],
+      "importance_reason_zh": "关注 Agent 漏洞发现后如何连接实际响应链路。",
+      "importance_reason_en": "Tracks coordination after agent-driven vulnerability discovery.",
+      "published_at": "2026-10-21T07:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:07+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+          "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+          "collected_at": "2026-10-23T17:50:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
       "id": "kimi-code-v230",
       "entity_ids": [
         "moonshot",
@@ -364,6 +1684,42 @@
           "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.3.0",
           "collected_at": "2026-10-21T13:57:17+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-agents-biological-data-20261021",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 报告以数千 Agent 分析脑细胞数据",
+      "title_en": "OpenAI reports thousands of agents analyzing brain-cell data",
+      "summary_zh": "官方摘要称 OpenAI、PerturbAI 与 Scripps Research 使用分布式 Agent 从数百万脑细胞数据中发现研究线索。订阅未给出实验方法或完整验证结果，线索不等于生物学结论。",
+      "summary_en": "The official summary says OpenAI, PerturbAI and Scripps Research used distributed agents to find research leads in data from millions of brain cells. The feed omits methods and full validation; leads are not biological conclusions.",
+      "key_points_zh": [
+        "保留研究线索的初步性质，不扩写为已验证发现。"
+      ],
+      "key_points_en": [
+        "Preserves the preliminary nature of research leads rather than claiming validated discoveries."
+      ],
+      "importance_reason_zh": "展示大规模多 Agent 科研工作流的一手进展。",
+      "importance_reason_en": "Reports firsthand progress on a large multi-agent research workflow.",
+      "published_at": "2026-10-21T04:50:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:07+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+          "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+          "collected_at": "2026-10-23T17:50:07+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },
@@ -602,6 +1958,162 @@
       ],
       "related_event_ids": [
         "deepseek-flash-1017-search-api-20261017"
+      ]
+    },
+    {
+      "id": "kiro-frontier-models-ga-20261021",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Kiro 将 Fable 5.1、Sonnet 5.5、Terra 与 Luna 转正式可用",
+      "title_en": "Kiro makes Fable 5.1, Sonnet 5.5, Terra and Luna generally available",
+      "summary_zh": "Fable 5.1 转为 us-east-1 企业方案正式可用；Sonnet 5.5、GPT-5.6 Terra 和 Luna 面向 US / EU 的四个付费个人档位正式可用。GPT-5.6 Sol 仍为实验支持。",
+      "summary_en": "Fable 5.1 becomes GA for Enterprise in us-east-1; Sonnet 5.5 and GPT-5.6 Terra/Luna become GA for four paid individual tiers in US/EU. GPT-5.6 Sol remains experimental.",
+      "key_points_zh": [
+        "Sonnet 支持 IDE、CLI、Crew、Web；Terra / Luna 支持 IDE、CLI、Web。",
+        "相应预览 / 实验标签及 Excluded Models 赔偿例外不再适用；需刷新客户端模型列表。"
+      ],
+      "key_points_en": [
+        "Sonnet supports IDE, CLI, Crew and Web; Terra/Luna support IDE, CLI and Web.",
+        "Their preview/experimental labels and Excluded Models indemnity exception no longer apply; refresh client model lists."
+      ],
+      "importance_reason_zh": "改变生产可用性、地域和保障条件。",
+      "importance_reason_en": "Changes production availability, regional access and assurance terms.",
+      "published_at": "2026-10-21",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:50:29+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/fable-5-1-and-gpt-5-6-generally-available",
+          "url": "https://kiro.dev/changelog/models/fable-5-1-and-gpt-5-6-generally-available",
+          "collected_at": "2026-10-23T17:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "google-agents-cli-extensions-20261021",
+      "entity_ids": [
+        "google",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Google Agents CLI 扩展支持 LangChain 与自定义部署策略",
+      "title_en": "Google Agents CLI extensions support LangChain and custom deployment policies",
+      "summary_zh": "Agents CLI 从 1.5.0 起提供扩展系统，允许覆盖或新增命令；1.8.0 提供官方 LangChain 扩展，复用部署、评估和可观测流程而无需采用 ADK。",
+      "summary_en": "Agents CLI introduces an extension system from 1.5.0 for overriding or adding commands. Version 1.8.0 includes a first-party LangChain extension that reuses deployment, evaluation and observability without requiring ADK.",
+      "key_points_zh": [
+        "官方示例展示封装 deploy 命令加入 SBOM 扫描。",
+        "教程覆盖 LangChain 代理的搭建、运行、部署及评估。"
+      ],
+      "key_points_en": [
+        "An official example wraps deploy with an SBOM scan.",
+        "The walkthrough covers scaffolding, running, deploying and evaluating LangChain agents."
+      ],
+      "importance_reason_zh": "减少部署工具对单一 Agent 框架的绑定。",
+      "importance_reason_en": "Reduces dependence on a single agent framework in deployment tooling.",
+      "published_at": "2026-10-21",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:53:56+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/",
+          "url": "https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/",
+          "collected_at": "2026-10-23T17:53:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "devin-bitbucket-review-20261021",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Devin Review 支持 Bitbucket Cloud 并调整解决统计",
+      "title_en": "Devin Review adds Bitbucket Cloud and changes resolved metrics",
+      "summary_zh": "Devin Review 接入 Bitbucket Cloud，连接 workspace 后自动安装审阅 webhook；用户可关联个人账号。分析中的 resolved 仅统计代码中真正修复的发现，不再计入忽略项和重复项。",
+      "summary_en": "Devin Review supports Bitbucket Cloud with automatically installed review webhooks on connected workspaces and optional personal-account linking. Resolved analytics now count only findings fixed in code, excluding dismissed and duplicate findings.",
+      "key_points_zh": [
+        "有权绕过 GitHub 合并要求的用户确认后可直接合并受阻 PR。",
+        "Oncall 响应者与事件调查可配置 Lite 模式。"
+      ],
+      "key_points_en": [
+        "Users authorized to bypass GitHub merge requirements can confirm and merge blocked PRs.",
+        "Oncall responders and incident investigations can use Lite mode."
+      ],
+      "importance_reason_zh": "扩展代码托管兼容性，并改变审阅效果统计口径。",
+      "importance_reason_en": "Expands code-host compatibility and changes review-result metrics.",
+      "published_at": "2026-10-21",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T17:53:56+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#october-21-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#october-21-2026",
+          "collected_at": "2026-10-23T17:53:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-v2331-workflows-20261021",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Kiro CLI 2.33.1 工作流仅在明确请求后启动",
+      "title_en": "Kiro CLI 2.33.1 starts workflows only on request",
+      "summary_zh": "V3 中启用 Workflows 不再自动启动工作流，只有明确请求才运行。官方页面摘要还提到屏幕阅读器、MCP 设置及 V2 到 V3 会话恢复修复；未展开的细节不作扩写。",
+      "summary_en": "Enabling Workflows in V3 no longer starts one automatically; execution requires a request. The rendered official summary also mentions screen-reader, MCP setup and V2-to-V3 resume fixes; unexpanded details are not inferred.",
+      "key_points_zh": [
+        "已用同一官方页面的可见正文替换 RSS 模板注释，材料仍标部分正文。"
+      ],
+      "key_points_en": [
+        "Visible text from the same official page replaces the RSS template comment and remains marked partial text."
+      ],
+      "importance_reason_zh": "改变 Agent 工作流的默认启动条件。",
+      "importance_reason_en": "Changes the default conditions for starting agent workflows.",
+      "published_at": "2026-10-21",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T18:00:18+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/2-33-1",
+          "url": "https://kiro.dev/changelog/cli/2-33-1",
+          "collected_at": "2026-10-23T18:00:18+00:00",
+          "material_scope": "partial_text"
+        }
       ]
     },
     {
@@ -1088,6 +2600,46 @@
           "url": "https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/",
           "collected_at": "2026-10-21T14:08:01+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-v2330-trust-20261020",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Kiro CLI 2.33.0 加入工作区信任与模型回退设置",
+      "title_en": "Kiro CLI 2.33.0 adds workspace trust and model-fallback settings",
+      "summary_zh": "交互式 V3 会话在加载文件夹的 hook、Agent、MCP、steering、workflow 或语言服务器配置前先请求工作区信任。V3 可重新设置模型回退，并在 Agent 支持时保存到后续会话。",
+      "summary_en": "Interactive V3 sessions request workspace trust before loading folder hooks, agents, MCP, steering, workflows or language-server configuration. V3 can again configure model fallback and persist it for later sessions when the agent supports it.",
+      "key_points_zh": [
+        "信任按工作区根目录保存；主目录的信任不会保存，每次启动重新询问。",
+        "可通过 /model 或 /model fallback 设置并确认回退选择。"
+      ],
+      "key_points_en": [
+        "Trust is saved per workspace root, except the home directory, which prompts at every launch.",
+        "Set and inspect fallback via /model or /model fallback."
+      ],
+      "importance_reason_zh": "防止克隆仓库在信任前改变 Agent 行为，并恢复回退配置。",
+      "importance_reason_en": "Prevents cloned repositories from changing agent behavior before trust and restores fallback configuration.",
+      "published_at": "2026-10-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-23T18:00:18+00:00",
+      "updated_at": "2026-10-23T18:00:19.296052+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/2-33",
+          "url": "https://kiro.dev/changelog/cli/2-33",
+          "collected_at": "2026-10-23T18:00:18+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },

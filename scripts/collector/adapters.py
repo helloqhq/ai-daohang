@@ -66,10 +66,15 @@ def clean_text(value):
 
 def local(tag):return tag.rsplit('}',1)[-1]
 
-def in_window(value,since,until):
+def in_window(value,since,until,date_timezone=None):
     parsed=parse_time(value)
     if not parsed:return True
-    if len(value)==10:return since.date()<=parsed.date()<=until.date()
+    if len(value)==10:
+        if date_timezone:
+            from zoneinfo import ZoneInfo
+            zone=ZoneInfo(date_timezone)
+            since,until=since.astimezone(zone),until.astimezone(zone)
+        return since.date()<=parsed.date()<=until.date()
     return since<=parsed<=until
 
 def feed_address(source,config):
@@ -113,7 +118,7 @@ def parse_feed(body,source,since,until,feed_url=None):
         if urllib.parse.urlparse(url).scheme not in ('http','https'):
             continue
         valid_links+=1
-        if not in_window(published,since,until):continue
+        if not in_window(published,since,until,source.get('date_timezone')):continue
         # Media RSS content describes an attachment, not article text.
         body_tags=('{http://purl.org/rss/1.0/modules/content/}encoded',
                    '{http://www.w3.org/2005/Atom}content','content')

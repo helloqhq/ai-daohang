@@ -38,7 +38,7 @@ export function validatePricing(data) {
     if(!['token','monthly','monthly-from','seat-monthly','free'].includes(plan.billing)||(plan.category==='api')!==(plan.billing==='token')) throw new Error(`Invalid billing unit: ${plan.id}`);
     if(plan.billing==='free'&&(!['agent','chat'].includes(plan.category)||plan.price?.amount!==0)) throw new Error(`Invalid free plan price: ${plan.id}`);
     for(const key of ['provider','name','scope_zh','scope_en','note_zh','note_en']) if(typeof plan[key]!=='string'||!plan[key].trim()) throw new Error(`Missing ${key}: ${plan.id}`);
-    if(!validDate(plan.checked_at)||!validDate(plan.updated_at)||plan.updated_at>plan.checked_at||plan.checked_at>data.checked_at||plan.valid_until&&!validDate(plan.valid_until)) throw new Error(`Invalid dates: ${plan.id}`);
+    if(!validDate(plan.checked_at)||!validDate(plan.updated_at)||plan.updated_at>data.checked_at||plan.checked_at>data.checked_at||plan.valid_until&&!validDate(plan.valid_until)) throw new Error(`Invalid dates: ${plan.id}`);
     if(!plan.price||safeURL(plan.source_url)==='#'||new URL(plan.source_url).protocol!=='https:') throw new Error(`Missing price or HTTPS source: ${plan.id}`);
     if(plan.category!=='api') {
       for(const key of ['product_id','product_name','tier_name','models_note_zh','models_note_en']) if(typeof plan[key]!=='string'||!plan[key].trim()) throw new Error(`Missing ${key}: ${plan.id}`);

@@ -172,11 +172,17 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "subscription_note": "使用按需离线转换生成本地 RSS，再导入材料队列；未提供在线订阅地址，在线完整覆盖仍未确认。",
-      "feed_checked_at": "2026-10-04",
+      "subscription_note": "按需转换官网文章为本地 RSS；按 Asia/Shanghai 比较仅日期条目的查询边界，保留原始日精度，并提取新版博客正文。首屏列表不代表完整历史覆盖。",
+      "feed_checked_at": "2026-10-24",
       "name_en": "Kimi Research Blog",
-      "subscription_note_en": "Converted on demand to local RSS and imported into the material queue. No online feed URL is provided; complete online coverage remains unconfirmed.",
-      "offline_conversion": true
+      "subscription_note_en": "Converts official articles to local RSS on demand. Date-only query boundaries use Asia/Shanghai while preserving day precision; the current blog body layout is supported. The first-page list does not establish full historical coverage.",
+      "offline_conversion": true,
+      "date_timezone": "Asia/Shanghai",
+      "maintenance": {
+        "checked_at": "2026-10-24",
+        "reason_zh": "K3.1 Pro 公告已显示为北京时间 10 月 24 日；修复 UTC 午夜前被排除及新版 blog-v2-page-container 正文未提取问题，不虚构具体发布时间。",
+        "reason_en": "The K3.1 Pro announcement is dated October 24 in Beijing. Fix exclusion before UTC midnight and extraction of the new blog-v2-page-container body without inventing an exact publication time."
+      }
     },
     {
       "id": "minimax-official",
@@ -1094,11 +1100,16 @@
       "adapter": "rss",
       "feed_url": "https://kiro.dev/changelog/feed.rss",
       "feed_provider": "native",
-      "feed_checked_at": "2026-10-21",
+      "feed_checked_at": "2026-10-24",
       "feed_verified_at": "2026-10-06",
       "feed_date_precision": "date",
-      "subscription_note": "官方 RSS 可读取；10 月 19 日 Memory 条目仍仅含模板注释，本轮通过独立本地 RSS 从同一官方文章补充正文。后续优先读取原生 RSS，模板异常条目需再核查，不据标题扩写。",
-      "subscription_note_en": "The official RSS is reachable. Its October 19 Memory entry still contains only a template comment; this round a separate local RSS supplements text from the same official article. Native RSS remains primary; future template-only entries require review without inferring details from titles."
+      "subscription_note": "官方 RSS 可读取，但部分条目仅含模板注释或跳转链接；本轮通过同一官方页面的可见正文补充 CLI 2.33.0 / 2.33.1，并保留部分正文标记。后续仍优先原生 RSS，异常条目需独立核查。",
+      "subscription_note_en": "The official RSS is reachable, but some entries contain only template comments or pointer links. CLI 2.33.0 / 2.33.1 are supplemented from visible text on the same official pages and remain marked partial text. Native RSS remains primary; anomalous entries require separate checks.",
+      "maintenance": {
+        "checked_at": "2026-10-24",
+        "reason_zh": "修复两条 CLI 材料的模板正文缺口；1.4.26 的跳转条目与对应正文去重，未提升完整时间窗覆盖。",
+        "reason_en": "Repair template-only text for two CLI entries and deduplicate the 1.4.26 pointer against its article; do not promote full-window coverage."
+      }
     },
     {
       "id": "kimi-code-releases",
@@ -1367,9 +1378,14 @@
       "feed_url": null,
       "feed_provider": "offline",
       "offline_conversion": true,
-      "feed_checked_at": "2026-10-09",
-      "subscription_note": "按需转换官方资讯首屏与查询窗内文章，保留卡片发表日期；首屏含置顶文章，不代表全部历史。尚未执行正式采集。",
-      "subscription_note_en": "Converts the first page of official news and in-window article text on demand, retaining card publication dates. Pinned articles are included; the first page is not the full archive. Formal collection has not run."
+      "feed_checked_at": "2026-10-24",
+      "subscription_note": "已执行按需转换并导入官方资讯首屏与查询窗内文章；保留卡片发表日期。首屏含置顶文章，不代表全部历史，完整覆盖仍未确认。",
+      "subscription_note_en": "On-demand conversion and import of the official first-page news list and in-window articles have run, preserving card publication dates. Pinned articles are included; the first page is not the full archive and complete coverage remains unconfirmed.",
+      "maintenance": {
+        "checked_at": "2026-10-24",
+        "reason_zh": "本轮重试成功取得 11 条带日期卡片与查询窗内正文，移除“尚未执行正式采集”的过时说明；单次在线超时不作为停用理由。",
+        "reason_en": "Retry retrieved 11 dated cards and in-window article text. Remove the obsolete claim that collection has not run; a single online timeout is not grounds for disabling the source."
+      }
     },
     {
       "id": "b-ai-x",

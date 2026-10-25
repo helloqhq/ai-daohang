@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "b8f347e39e3f3495",
+  "snapshot_id": "f6b2032c0b546f0b",
   "events": [
     {
       "id": "gemini-cli-nightly-20261024",
@@ -4487,6 +4487,46 @@
           "material_scope": "full_text",
           "published_at": "2026-10-16",
           "date_kind": "published"
+        }
+      ]
+    },
+    {
+      "id": "musk-compute-10gw-20261015",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "马斯克回应其算力目标：“也许超过 10GW”",
+      "summary_zh": "马斯克发帖称“Maybe more than 10GW”（也许超过 10GW）。该帖是对一段视频片段的回复，片段称其目标是在 2027 年底前获得 10GW 算力；原帖本身未说明所指项目、统计口径或时间表，也未区分 xAI、SpaceX 等主体，不能当成已确认的产能计划。",
+      "key_points_zh": [
+        "原帖仅有“Maybe more than 10GW”一句，是对视频片段的回应表态。",
+        "所回复片段转述其目标为 2027 年底前 10GW 算力；该目标来自片段，原帖未确认。",
+        "属个人预估性质的观点，不是正式的产能、数据中心或产品公告。"
+      ],
+      "importance_reason_zh": "算力规模直接关系其 AI 训练上限，负责人一手表态具有信号意义；但口径与范围未交代，需按观点看待。",
+      "title_en": "Musk responds to his compute goal: \"Maybe more than 10GW\"",
+      "summary_en": "Elon Musk posted \"Maybe more than 10GW\". It was a reply to a video clip that described his goal of reaching 10GW of compute by the end of 2027; the post itself does not state the project, measurement basis or timeline, nor which entity (such as xAI or SpaceX) it covers, so it cannot be treated as a confirmed capacity plan.",
+      "key_points_en": [
+        "The post consists only of the sentence \"Maybe more than 10GW\", replying to a video clip.",
+        "The clip it replies to describes a goal of 10GW of compute by the end of 2027; that goal comes from the clip and is not confirmed in the post itself.",
+        "This is a personal estimate rather than an official capacity, data-center or product announcement."
+      ],
+      "importance_reason_en": "Compute scale bounds AI training capacity for his ventures, so a first-hand statement carries signal value; scope and basis are unstated and it should be read as an opinion.",
+      "published_at": "2026-10-15T23:36:46+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-10-16T01:29:22+00:00",
+      "updated_at": "2026-10-25T04:50:00+00:00",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2110877572011844019",
+          "url": "https://x.com/elonmusk/status/2110877572011844019",
+          "collected_at": "2026-10-16T01:29:22+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },

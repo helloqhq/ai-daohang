@@ -19,7 +19,7 @@ SOURCES=('anthropic-official','deepseek-official','qwen-official','meta-official
          'jeff-dean-x','tibo-x','openai-tiktok','mark-zuckerberg-threads',
          'devin-changelog','cognition-blog','glm-coding-notices','minimax-plan-notices',
          'google-developers-blog','siliconflow-updates','siliconflow-news',
-         'b-ai-x','worldrouter-x')
+         'b-ai-x','worldrouter-x','openai-youtube')
 
 
 def date_text(text):
@@ -254,6 +254,27 @@ def convert(source,fetch,since,until,reconcile=()):
             if len(out)>=data['data']['totalNum']:return out
             if not rows:raise SourceError('混元文章列表分页不完整')
             page+=1
+    if sid=='openai-youtube':
+        # The public watch page carries the video description; captions are not claimed.
+        from collector.adapters import parse_feed
+        all_records,_,_=parse_feed(fetch(source['feed_url']),source,dt.datetime.min.replace(tzinfo=dt.timezone.utc),until)
+        out=[];enriched=0
+        for x in all_records:
+            row=item(x['title'],x['url'],'',x['published_at'])
+            if in_window(x['published_at'],since,until) or x['url'] in reconcile:
+                page=fetch(x['url']);match=re.search(r'ytInitialPlayerResponse\s*=\s*',page)
+                payload=balanced(page,page.find('{',match.end())) if match else ''
+                try:details=json.loads(payload).get('videoDetails') or {}
+                except ValueError:details={}
+                desc=clean_text(details.get('shortDescription') or '')
+                if not desc:continue
+                row.update(text=desc,full=False,material_scope='partial_text')
+                if details.get('title'):row['title']=details['title']
+                enriched+=1
+            out.append(row)
+        if reconcile and not enriched:raise SourceError('YouTube 匿名页未提供可核实视频简介','blocked')
+        if not out:raise SourceError('YouTube 订阅未返回条目，转换规则需要复核')
+        return out
     tree=parse_html(fetch(base))
     if sid=='siliconflow-news':
         out=[];seen=set()
@@ -377,6 +398,7 @@ def rss_xml(source,rows):
         for key,value in [('title',row['title']),('link',row['url']),('guid',content_id)]:ET.SubElement(entry,key).text=value
         ET.SubElement(entry,'{'+AUDIT+'}content_id').text=content_id
         if row.get('date_label'):ET.SubElement(entry,'{'+AUDIT+'}date_label').text=row['date_label']
+        if row.get('material_scope'):ET.SubElement(entry,'{'+AUDIT+'}material_scope').text=row['material_scope']
         date=row.get('published_at')
         if date:
             if not parse_time(date):raise SourceError('转换条目日期格式无效')

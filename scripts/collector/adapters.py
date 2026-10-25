@@ -135,6 +135,9 @@ def parse_feed(body,source,since,until,feed_url=None):
         if source.get('platform') in ('youtube','tiktok'):scope='metadata_only'
         name=html.unescape(''.join(title.itertext()).strip()) if title is not None else url
         if not text or text==name:scope='metadata_only';text=name
+        # A converted feed may declare its real evidence scope, e.g. a video description.
+        declared_scope=entry.findtext('{urn:ai-daohang:offline-feed}material_scope')
+        if declared_scope in ('partial_text','full_text') and text and text!=name:scope=declared_scope
         declared_id=entry.find('{urn:ai-daohang:offline-feed}content_id')
         content_id=declared_id.text if declared_id is not None and declared_id.text else url
         records.append({'title':name or url,'url':url,'content_id':content_id,'text':text,

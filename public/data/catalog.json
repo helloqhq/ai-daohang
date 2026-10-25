@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "b8f347e39e3f3495",
+  "snapshot_id": "f6b2032c0b546f0b",
   "entities": [
     {
       "id": "openai",
@@ -1344,7 +1344,10 @@
       "adapter": "rss",
       "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A",
       "feed_provider": "native",
-      "name_en": "OpenAI YouTube"
+      "name_en": "OpenAI YouTube",
+      "offline_conversion": true,
+      "subscription_note": "官方 RSS 提供标题与日期；离线转换补充公开视频简介（partial_text），不含字幕。",
+      "subscription_note_en": "The official feed provides titles and dates; offline conversion adds public video descriptions (partial_text), not captions."
     },
     {
       "id": "openai-x",

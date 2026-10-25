@@ -65,6 +65,30 @@ class ConversionTests(unittest.TestCase):
         self.assertNotIn('retirement',rows[0]['text'])
         with self.assertRaises(SourceError):convert(source,lambda *a:body.replace('2026.10.01','undated'),START,END)
 
+    def test_youtube_descriptions_supplement_native_feed_as_partial_text(self):
+        source={**self.source('openai-youtube','https://www.youtube.com/OpenAI',platform='youtube'),'feed_url':'https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A'}
+        feed='<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Meet the New Codex CLI</title><link href="https://www.youtube.com/watch?v=newcli"/><published>2026-10-05T18:29:08+00:00</published></entry><entry><title>Older talk</title><link href="https://www.youtube.com/watch?v=older"/><published>2026-09-01T00:00:00+00:00</published></entry></feed>'
+        page='<script>var ytInitialPlayerResponse = {"videoDetails":{"videoId":"newcli","title":"Meet the New Codex CLI","shortDescription":"The rebuilt Codex CLI ships in the terminal."}};</script>'
+        requested=[]
+        def fetch(url):
+            requested.append(url)
+            if url==source['feed_url']:return feed
+            if url.endswith('newcli'):return page
+            raise AssertionError('unexpected fetch '+url)
+        rows=convert(source,fetch,dt.datetime(2026,10,1,tzinfo=dt.timezone.utc),dt.datetime(2026,10,8,tzinfo=dt.timezone.utc))
+        parsed,_,_=parse_feed(rss_xml(source,rows),source,dt.datetime(2026,10,1,tzinfo=dt.timezone.utc),dt.datetime(2026,10,8,tzinfo=dt.timezone.utc))
+        self.assertEqual(requested,[source['feed_url'],'https://www.youtube.com/watch?v=newcli'])
+        self.assertEqual(len(parsed),1)
+        self.assertEqual(parsed[0]['material_scope'],'partial_text')
+        self.assertEqual(parsed[0]['published_at'],'2026-10-05T18:29:08+00:00')
+        self.assertIn('rebuilt Codex CLI',parsed[0]['text'])
+
+    def test_youtube_reconcile_blocks_when_anonymous_pages_lack_video_data(self):
+        source={**self.source('openai-youtube','https://www.youtube.com/OpenAI',platform='youtube'),'feed_url':'https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A'}
+        feed='<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Hunt bugs</title><link href="https://www.youtube.com/watch?v=bugs"/><published>2026-10-01T22:05:37+00:00</published></entry></feed>'
+        def fetch(url):return feed if url==source['feed_url'] else '<html>consent wall without player data</html>'
+        with self.assertRaises(SourceError):convert(source,fetch,START,END,{'https://www.youtube.com/watch?v=bugs'})
+
     def test_siliconflow_pinned_news_keeps_card_dates_and_reads_only_article_body(self):
         source=self.source('siliconflow-news','https://siliconflow.cn/news')
         index='<main><div><a href="/news/pinned"></a><h3>Pinned</h3><div>2026-09-01</div></div><article><a href="/news/latest"></a><h3>Latest</h3><p>Campaign starts 2026-10-08</p><div>2026-10-01</div></article><article><a href="/news/older"></a><h3>Older</h3><div>2026-09-29</div></article></main>'

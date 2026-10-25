@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-24",
+  "checked_at": "2026-10-25",
   "plans": [
     {
       "id": "gpt-6-astra",
@@ -670,7 +670,7 @@
       "note_zh": "此前记录的标准月费为 $22，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。",
       "note_en": "The previously recorded standard monthly fee was $22, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
-      "checked_at": "2026-10-19",
+      "checked_at": "2026-10-25",
       "updated_at": "2026-10-24",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
@@ -702,7 +702,7 @@
       "note_zh": "此前记录的标准月费为 $55，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。",
       "note_en": "The previously recorded standard monthly fee was $55, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
-      "checked_at": "2026-10-19",
+      "checked_at": "2026-10-25",
       "updated_at": "2026-10-24",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
@@ -734,7 +734,7 @@
       "note_zh": "此前记录的标准月费为 $132，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。",
       "note_en": "The previously recorded standard monthly fee was $132, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
-      "checked_at": "2026-10-19",
+      "checked_at": "2026-10-25",
       "updated_at": "2026-10-24",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
@@ -763,11 +763,11 @@
       },
       "scope_zh": "2,000 credits / 5 小时 · 10,000 / 周",
       "scope_en": "2,000 credits / 5 hours · 10,000 / week",
-      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。",
-      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement.",
+      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-10-25 复核：官方概述页标明套餐“每月 18 美元起”（Starting at just 18 USD per month）并确认各档 credits 与模型路由不变；各档完整结算价在需登录的订阅页展示，仍待核验。",
+      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-10-25: the official overview states plans \"Starting at just 18 USD per month\" and confirms tier credits and model routing unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-17",
-      "updated_at": "2026-10-17",
+      "checked_at": "2026-10-25",
+      "updated_at": "2026-10-25",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
       "tier_name": "Lite",
@@ -780,7 +780,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-24"
+      "models_checked_at": "2026-10-25"
     },
     {
       "id": "glm-plan-pro",
@@ -798,7 +798,7 @@
       "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。",
       "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-17",
+      "checked_at": "2026-10-25",
       "updated_at": "2026-10-17",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
@@ -812,7 +812,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-24"
+      "models_checked_at": "2026-10-25"
     },
     {
       "id": "glm-plan-max",
@@ -830,7 +830,7 @@
       "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。",
       "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-17",
+      "checked_at": "2026-10-25",
       "updated_at": "2026-10-17",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
@@ -844,7 +844,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-24"
+      "models_checked_at": "2026-10-25"
     },
     {
       "id": "kimi-plan-andante",
@@ -1966,7 +1966,7 @@
       "note_zh": "Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
       "note_en": "Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
       "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
-      "checked_at": "2026-10-18",
+      "checked_at": "2026-10-25",
       "updated_at": "2026-10-06",
       "product_id": "gemini-cli",
       "product_name": "Gemini CLI",
@@ -1980,7 +1980,7 @@
         "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
         "https://geminicli.com/docs/resources/quota-and-pricing/"
       ],
-      "models_checked_at": "2026-10-18",
+      "models_checked_at": "2026-10-25",
       "offers": [
         {
           "id": "former-consumer-allowance",
@@ -1991,7 +1991,7 @@
             "Gemini"
           ],
           "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
-          "checked_at": "2026-10-18",
+          "checked_at": "2026-10-25",
           "conditions_zh": "Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
           "conditions_en": "Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
           "eligibility_zh": "原 Google 个人登录入口，已停止服务",
@@ -2019,7 +2019,7 @@
       "note_zh": "展示 Google AI 订阅本身的美国月费，已不包含此 Gemini CLI 入口。Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
       "note_en": "The displayed amount is the US monthly price of the Google AI subscription itself, which no longer includes this Gemini CLI access. Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
       "source_url": "https://gemini.google/us/subscriptions/",
-      "checked_at": "2026-10-18",
+      "checked_at": "2026-10-25",
       "updated_at": "2026-10-09",
       "product_id": "gemini-cli",
       "product_name": "Gemini CLI",
@@ -2033,7 +2033,7 @@
         "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
         "https://geminicli.com/docs/resources/quota-and-pricing/"
       ],
-      "models_checked_at": "2026-10-18"
+      "models_checked_at": "2026-10-25"
     },
     {
       "id": "gemini-cli-ultra",
@@ -2051,7 +2051,7 @@
       "note_zh": "展示 Google AI 订阅本身的美国月费，已不包含此 Gemini CLI 入口。Google 官方确认此入口自 2026-06-18 起停止服务，免费个人账号及 Google AI Pro / Ultra 用户迁移至 Antigravity CLI。旧文档的每日请求数不再作为此入口当前额度；企业 Code Assist 许可和付费 API Key 接入仍受支持。",
       "note_en": "The displayed amount is the US monthly price of the Google AI subscription itself, which no longer includes this Gemini CLI access. Google confirms this access stopped on June 18, 2026. Free personal-account and Google AI Pro / Ultra users move to Antigravity CLI. Old daily-request figures are not current entitlements for this access; enterprise Code Assist licenses and paid API keys remain supported.",
       "source_url": "https://gemini.google/us/subscriptions/",
-      "checked_at": "2026-10-18",
+      "checked_at": "2026-10-25",
       "updated_at": "2026-10-09",
       "product_id": "gemini-cli",
       "product_name": "Gemini CLI",
@@ -2065,7 +2065,7 @@
         "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
         "https://geminicli.com/docs/resources/quota-and-pricing/"
       ],
-      "models_checked_at": "2026-10-18"
+      "models_checked_at": "2026-10-25"
     },
     {
       "id": "cline-free",
@@ -2666,7 +2666,7 @@
             "MiniMax M3.1 Flash"
           ],
           "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-          "checked_at": "2026-10-21",
+          "checked_at": "2026-10-25",
           "conditions_zh": "月付新购或符合条件的升级首月五折，第二个月按标准价自动续费；年付不参与。官方期限只写“10 月 14 日”，缺少年份，当前有效性待核验。",
           "conditions_en": "50% off the first month for new monthly purchases and eligible upgrades; standard auto-renewal from month two. Annual billing is excluded. The official deadline says only October 14 without a year, so current validity remains unverified.",
           "eligibility_zh": "Go、Explore 或 Build 的月付新购与活动期内符合规则的升级；不代表无需付费。",
@@ -2689,7 +2689,7 @@
               "amount": 22
             },
             "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-            "checked_at": "2026-10-24"
+            "checked_at": "2026-10-25"
           }
         }
       ]
@@ -2737,7 +2737,7 @@
             "MiniMax M3.1 Flash"
           ],
           "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-          "checked_at": "2026-10-21",
+          "checked_at": "2026-10-25",
           "conditions_zh": "月付新购或符合条件的升级首月五折，第二个月按标准价自动续费；年付不参与。官方期限只写“10 月 14 日”，缺少年份，当前有效性待核验。",
           "conditions_en": "50% off the first month for new monthly purchases and eligible upgrades; standard auto-renewal from month two. Annual billing is excluded. The official deadline says only October 14 without a year, so current validity remains unverified.",
           "eligibility_zh": "Go、Explore 或 Build 的月付新购与活动期内符合规则的升级；不代表无需付费。",
@@ -2760,7 +2760,7 @@
               "amount": 55
             },
             "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-            "checked_at": "2026-10-24"
+            "checked_at": "2026-10-25"
           }
         }
       ]
@@ -2808,7 +2808,7 @@
             "MiniMax M3.1 Flash"
           ],
           "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-          "checked_at": "2026-10-21",
+          "checked_at": "2026-10-25",
           "conditions_zh": "月付新购或符合条件的升级首月五折，第二个月按标准价自动续费；年付不参与。官方期限只写“10 月 14 日”，缺少年份，当前有效性待核验。",
           "conditions_en": "50% off the first month for new monthly purchases and eligible upgrades; standard auto-renewal from month two. Annual billing is excluded. The official deadline says only October 14 without a year, so current validity remains unverified.",
           "eligibility_zh": "Go、Explore 或 Build 的月付新购与活动期内符合规则的升级；不代表无需付费。",
@@ -2831,7 +2831,7 @@
               "amount": 132
             },
             "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-            "checked_at": "2026-10-24"
+            "checked_at": "2026-10-25"
           }
         }
       ]
@@ -3473,12 +3473,12 @@
           "id": "eligible-usage-promotion",
           "type": "discount",
           "kind": "promotion",
-          "status": "pending",
+          "status": "paused",
           "models": [
             "MiMo-V2.6-Flash"
           ],
           "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
-          "checked_at": "2026-10-21",
+          "checked_at": "2026-10-25",
           "conditions_zh": "本轮官方模型页只列标准参考价，最新活动页预告 10 月 22 日 17:00 UTC+8 的新阵容，未重述该 MiMo 型号的此前折扣。保留历史优惠价与 ID，当前资格、费率和结束时间仍待确认，不作为已核实有效优惠推荐。",
           "conditions_en": "The model page lists standard reference prices, while the latest promotion page previews an October 22, 17:00 UTC+8 lineup without restating this MiMo model’s earlier discount. Historical offer prices and IDs are retained; current eligibility, rates and end time remain unconfirmed and are not recommended as verified active offers.",
           "eligibility_zh": "仅符合平台活动资格的用量；结算以平台为准",
@@ -3507,7 +3507,9 @@
             "comparison_zh": "同渠道同模型标准参考价，适用用量按其 10% 结算",
             "comparison_en": "Same-channel model reference rate; eligible usage settles at 10% of it"
           },
-          "starts_at": "2026-09-25T15:00:00+08:00"
+          "starts_at": "2026-09-25T15:00:00+08:00",
+          "end_note_zh": "2026-10-25 官方促销页不再列出 MiMo 条目，未公布结束日期",
+          "end_note_en": "As of 2026-10-25 the official promotions page no longer lists the MiMo entries; no end date was published"
         }
       ]
     },
@@ -3593,11 +3595,11 @@
       },
       "scope_zh": "WorldRouter · 输入 0–200K",
       "scope_en": "WorldRouter · Input 0–200K",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 200K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 280/1260/28/280 Credits。 2026-10-24 原型号官方详情页返回 HTTP 404；保留历史价格与核验日期，当前费率及可用性待确认，未据此判定停服。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 200K–1M input, input/output/cache read/write rates are 280/1260/28/280 Credits per million tokens. On October 24, 2026 the official detail page returns HTTP 404. Historical rates and their verification date are retained; current rates and availability remain unconfirmed, without inferring retirement.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 200K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 280/1260/28/280 Credits。 2026-10-24 原型号官方详情页返回 HTTP 404；保留历史价格与核验日期，当前费率及可用性待确认，未据此判定停服。 2026-10-25 详情页仍返回 HTTP 404，且官方模型列表已不含 Gemini 与 MiMo 系列条目；继续保留历史价格与原核验日期，不据此判定停服。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 200K–1M input, input/output/cache read/write rates are 280/1260/28/280 Credits per million tokens. On October 24, 2026 the official detail page returns HTTP 404. Historical rates and their verification date are retained; current rates and availability remain unconfirmed, without inferring retirement. On 2026-10-25 the detail page still returns HTTP 404 and the official model list no longer includes any Gemini or MiMo entries; historical rates and their original verification dates are retained, without inferring retirement.",
       "source_url": "https://router.worldclaw.ai/models/gemini-3.1-pro-preview",
-      "checked_at": "2026-10-21",
-      "updated_at": "2026-10-24"
+      "checked_at": "2026-10-25",
+      "updated_at": "2026-10-25"
     },
     {
       "id": "worldrouter-deepseek-v4-flash",
@@ -3725,11 +3727,11 @@
       },
       "scope_zh": "WorldRouter · 输入 0–256K",
       "scope_en": "WorldRouter · Input 0–256K",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 256K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 80/400/16/80 Credits。 2026-10-24 原型号官方详情页返回 HTTP 404；保留历史价格与核验日期，当前费率及可用性待确认，未据此判定停服。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 256K–1M input, input/output/cache read/write rates are 80/400/16/80 Credits per million tokens. On October 24, 2026 the official detail page returns HTTP 404. Historical rates and their verification date are retained; current rates and availability remain unconfirmed, without inferring retirement.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 256K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 80/400/16/80 Credits。 2026-10-24 原型号官方详情页返回 HTTP 404；保留历史价格与核验日期，当前费率及可用性待确认，未据此判定停服。 2026-10-25 详情页仍返回 HTTP 404，且官方模型列表已不含 Gemini 与 MiMo 系列条目；继续保留历史价格与原核验日期，不据此判定停服。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 256K–1M input, input/output/cache read/write rates are 80/400/16/80 Credits per million tokens. On October 24, 2026 the official detail page returns HTTP 404. Historical rates and their verification date are retained; current rates and availability remain unconfirmed, without inferring retirement. On 2026-10-25 the detail page still returns HTTP 404 and the official model list no longer includes any Gemini or MiMo entries; historical rates and their original verification dates are retained, without inferring retirement.",
       "source_url": "https://router.worldclaw.ai/models/mimo-v2.5",
-      "checked_at": "2026-10-21",
-      "updated_at": "2026-10-24"
+      "checked_at": "2026-10-25",
+      "updated_at": "2026-10-25"
     },
     {
       "id": "b-ai-plan-pro",
@@ -4453,7 +4455,7 @@
             "Qwen3.8 Flash"
           ],
           "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
-          "checked_at": "2026-10-24",
+          "checked_at": "2026-10-25",
           "conditions_zh": "符合官方资格的用量按标准参考价的 30% 结算；该页未公布结束时间，活动与最终账单以平台为准。 官方现已预告 2026-10-22 17:00 北京时间改为标准价的 80%；该时间前继续原有活动规则。此前 30% 费率的数值核验日期仍保留，不因新预告而刷新。",
           "conditions_en": "Eligible usage settles at 30% of the standard reference rate. No end date is published on this page; platform terms and final billing prevail. The official update schedules replacement with 80% of standard rates at 17:00 Beijing time on October 22, 2026; existing rules continue until then. The numerical verification date of the earlier 30% rates is retained rather than refreshed by the new announcement.",
           "eligibility_zh": "仅符合 B.AI 活动资格的用量",
@@ -4493,7 +4495,7 @@
             "Qwen3.8-Flash"
           ],
           "source_url": "https://docs.b.ai/llmservice/models/qwen3-8-flash/",
-          "checked_at": "2026-10-24",
+          "checked_at": "2026-10-25",
           "conditions_zh": "自 2026-10-22 17:00 北京时间起，B.AI API 与 Chat 用量按标准参考价的 80% 结算；开始前不生效。此处比较输入、输出和缓存读取，显式缓存创建按官方另列口径，不合并计算。",
           "conditions_en": "From October 22, 2026 at 17:00 Beijing time, B.AI API and Chat usage is billed at 80% of standard reference rates; it is not active before then. This compares input, output and cache reads; explicit cache creation follows its separately documented basis and is not combined.",
           "eligibility_zh": "活动开始后通过 B.AI API 或 Chat 使用 Qwen3.8-Flash；最终结算以平台为准。",
@@ -4550,12 +4552,12 @@
           "id": "eligible-usage-promotion",
           "type": "discount",
           "kind": "promotion",
-          "status": "pending",
+          "status": "paused",
           "models": [
             "MiMo-V2.6-Pro"
           ],
           "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
-          "checked_at": "2026-10-21",
+          "checked_at": "2026-10-25",
           "conditions_zh": "本轮官方模型页只列标准参考价，最新活动页预告 10 月 22 日 17:00 UTC+8 的新阵容，未重述该 MiMo 型号的此前折扣。保留历史优惠价与 ID，当前资格、费率和结束时间仍待确认，不作为已核实有效优惠推荐。",
           "conditions_en": "The model page lists standard reference prices, while the latest promotion page previews an October 22, 17:00 UTC+8 lineup without restating this MiMo model’s earlier discount. Historical offer prices and IDs are retained; current eligibility, rates and end time remain unconfirmed and are not recommended as verified active offers.",
           "eligibility_zh": "仅符合 B.AI 活动资格的用量",
@@ -4584,7 +4586,9 @@
             "checked_at": "2026-10-24",
             "comparison_zh": "相同平台、型号、币种和每百万 tokens 单位的标准价与活动价比较",
             "comparison_en": "Same platform, model, currency and per-million-token units for standard and promotional rates"
-          }
+          },
+          "end_note_zh": "2026-10-25 官方促销页不再列出 MiMo 条目，未公布结束日期",
+          "end_note_en": "As of 2026-10-25 the official promotions page no longer lists the MiMo entries; no end date was published"
         }
       ]
     },
@@ -4895,19 +4899,19 @@
       "note_zh": "当前官方预览模型页列每百万 tokens 输入 $1.36、输出 $4.18、缓存读取 $0.14；本轮未再读到此前五折优惠的官方依据，优惠保留为待核验，不据 OpenCode 渠道的折扣推断官方 API 也打折。缓存写入未公布，不视为免费。",
       "note_en": "The current official preview page lists $1.36 input, $4.18 output and $0.14 cached reads per million tokens. The earlier half-price promotion could not be re-established from that page and remains pending. OpenCode channel discounts do not establish a discount on the official API. Cache-write pricing is unspecified, not free.",
       "source_url": "https://docs.mistral.ai/models/mistral-large-4",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-10-25",
       "updated_at": "2026-10-21",
       "offers": [
         {
           "id": "preview-half-price",
           "type": "discount",
           "kind": "official-discount",
-          "status": "pending",
+          "status": "paused",
           "models": [
             "Mistral Large 4 Preview"
           ],
           "source_url": "https://docs.mistral.ai/models/mistral-large-4",
-          "checked_at": "2026-10-21",
+          "checked_at": "2026-10-25",
           "conditions_zh": "2026-10-21 官方模型页仅显示标准费率，未再取得此前五折活动的明确条款；当前有效性待核验，不能认定已结束或仍有效。",
           "conditions_en": "On October 21, 2026 the official model page shows standard rates without explicit terms for the earlier half-price offer. Current validity is unverified; neither expiry nor continued availability is established.",
           "eligibility_zh": "使用 Mistral 官方 Mistral Large 4 预览 API，账号和服务条款适用。",
@@ -4933,7 +4937,9 @@
             },
             "source_url": "https://docs.mistral.ai/models/mistral-large-4",
             "checked_at": "2026-10-21"
-          }
+          },
+          "end_note_zh": "2026-10-25 模型页仅列标准价且无促销说明，未公布结束日期",
+          "end_note_en": "As of 2026-10-25 the model page lists only standard prices with no promotion text; no end date was published"
         }
       ]
     },

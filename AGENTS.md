@@ -50,4 +50,6 @@ AI agent 默认不得主动读取、搜索、递归扫描或索引这些文件�
 - [docs/DATA-CONTRACT.md](docs/DATA-CONTRACT.md)：公开/内部文件边界与字段契约
 - [docs/PRICING.md](docs/PRICING.md)：计费字段与核验规则
 - [skills/ai-news-collect/SKILL.md](skills/ai-news-collect/SKILL.md)：完整采集更新流程（`fetch → queue → read → apply → validate`）
+- [GLOSSARY.md](GLOSSARY.md)：核心术语约定（事件/预告/观点的区分、摘要≠翻译、关注对象≠厂商等），生成中英文案前先对齐用词
+- [docs/adr/](docs/adr/)：已采纳的架构决策（RSS-only 采集、事件中心内容、skill 产出静态数据等），改采集入口或数据结构前先查阅
 - [docs/OFFLINE-RSS.md](docs/OFFLINE-RSS.md)：离线导入操作与限制

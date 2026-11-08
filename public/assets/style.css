@@ -296,6 +296,8 @@ dialog::backdrop{background:#05070acc}
 .friend-card:hover{border-color:var(--accent)}
 .friend-card h3{display:flex;justify-content:space-between;margin:12px 0;font-size:23px;font-weight:550}
 .friend-card h3>span:last-child,.friend-domain{color:var(--accent)}
+.friend-name{display:inline-flex;align-items:center;gap:10px;min-width:0}
+.friend-icon{width:24px;height:24px;flex:none;border-radius:6px;object-fit:contain}
 .friend-domain{font:11px var(--mono)}
 .friend-contact{display:block;margin-top:12px;font-size:12px}
 .friend-info{margin:20px 0 24px;font-size:13px}

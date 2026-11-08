@@ -3,6 +3,7 @@ import datetime as dt
 import email.utils
 import gzip
 import html
+import http.client
 import re
 import ssl
 import urllib.error
@@ -41,7 +42,7 @@ class HTTP:
             if exc.code==304 and cached:
                 self.hits+=1;return cached['body'],cached.get('headers',{})
             raise SourceError(f'RSS HTTP {exc.code}','blocked' if exc.code in (401,403,429) else 'failed') from exc
-        except (urllib.error.URLError,TimeoutError,OSError) as exc:
+        except (urllib.error.URLError,TimeoutError,OSError,http.client.HTTPException) as exc:
             raise SourceError('RSS 无法读取：'+type(exc).__name__) from exc
         # Keep raw XML locally. Validation follows before source progress is recorded.
         write_json(path,{'url':url,'body':body,'headers':response_headers})

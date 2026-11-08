@@ -1,7 +1,1607 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "f6b2032c0b546f0b",
+  "snapshot_id": "2eec17bb7737e8d8",
   "events": [
+    {
+      "id": "claude-code-2-1-316",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "pricing"
+      ],
+      "title_zh": "Claude Code 2.1.316 增加网关共享组预算",
+      "summary_zh": "Claude Code 2.1.316 新增网关共享组预算（pooled_budget）、分层策略模式、Bedrock guardrail 输入标记，以及 CLAUDE_CODE_DISABLE_ULTRATHINK、CLAUDE_CODE_SUBAGENT_EFFORT 等开关；VS Code 可直接登录网关，代码审查分析页新增按严重度统计。",
+      "key_points_zh": [
+        "网关支持一组共享月度预算，叠加在成员个人上限之上。",
+        "策略可按层级合并，匹配到的每条策略都生效。",
+        "新增 ultrathink 与子代理努力度环境开关。"
+      ],
+      "importance_reason_zh": "共享预算与分层策略让企业能在保留个人上限的同时做团队级成本控制。",
+      "title_en": "Claude Code 2.1.316 adds pooled group budgets",
+      "summary_en": "Claude Code 2.1.316 adds pooled group budgets to the Claude apps gateway, layered policy mode, Bedrock guardrail input tagging, and environment switches including CLAUDE_CODE_DISABLE_ULTRATHINK and CLAUDE_CODE_SUBAGENT_EFFORT. VS Code can sign in to a gateway from the chat panel, and code review analytics adds a findings-by-severity card.",
+      "key_points_en": [
+        "A shared monthly group budget sits on top of each member's limit.",
+        "Layered policy mode applies every matching policy.",
+        "New switches for ultrathink and subagent effort."
+      ],
+      "importance_reason_en": "Shared budgets and layered policies let enterprises control team-level cost while keeping individual limits.",
+      "published_at": "2026-10-31T01:06:03+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:07:38+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-316",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-316",
+          "collected_at": "2026-11-08T06:07:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-cursor-marketplace-incident",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Kilo 复盘 Cursor 扩展市场中的 Claude Code 供应链攻击",
+      "summary_zh": "Kilo 复盘 Cursor 扩展市场事件：10 月 29 日，一个被篡改的 Claude Code 2.1.313 扩展出现在市场，并非 Anthropic 构建，存活约 2:27 至 13:35（太平洋时间），最多可能有 5,000 名用户安装。恶意版本收集主机信息、向 authorized_keys 添加名为 svc-telemetry 的 SSH 密钥，并通过 LaunchAgent 或计划任务每 60 秒重试反向隧道；仅卸载扩展不足以清除。",
+      "key_points_zh": [
+        "被篡改的 Claude Code 2.1.313 在 Cursor 市场上线约 11 小时，最多约 5,000 次安装。",
+        "载荷添加 svc-telemetry SSH 密钥，并建立 macOS LaunchAgent / Windows 计划任务持久化。",
+        "Cursor 已下架并轮换密钥；受影响用户需检查密钥、运行修复脚本并从干净机器轮换凭据。"
+      ],
+      "importance_reason_zh": "主流扩展市场首次出现高仿冒名包的持久化后门，暴露了 AI 工具链的信任与响应缺口。",
+      "title_en": "Kilo analyzes the Claude Code supply-chain attack in the Cursor marketplace",
+      "summary_en": "Kilo reviewed the Cursor marketplace incident: on October 29 a tampered build of Anthropic's Claude Code 2.1.313, not built by Anthropic, appeared in the marketplace for about 2:27am to 1:35pm PT, with up to 5,000 users possibly installing it. The payload collected host details, added an SSH key labeled svc-telemetry to authorized_keys and installed persistence through a macOS LaunchAgent or Windows scheduled task that retried a reverse tunnel every 60 seconds. Uninstalling the extension alone is not sufficient.",
+      "key_points_en": [
+        "A tampered Claude Code 2.1.313 was live for about 11 hours, with up to 5,000 installs.",
+        "The payload added an svc-telemetry SSH key and persisted via LaunchAgent or scheduled task.",
+        "Cursor pulled it and rotated keys; affected users must check the key, run remediation and rotate credentials from a clean machine."
+      ],
+      "importance_reason_en": "A persistent backdoor inside a major extension marketplace exposes trust and response gaps across the AI toolchain.",
+      "published_at": "2026-10-30T17:10:07+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/know-your-ai-toolchain-lessons-from",
+          "url": "https://blog.kilo.ai/p/know-your-ai-toolchain-lessons-from",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "opencode-2-2-4",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "OpenCode 2.2.4 让桌面终端随会话持久化",
+      "summary_zh": "OpenCode 2.2.4 让 Desktop 终端归属于会话，并在服务重启后保留滚动缓冲、与 TUI 及其他窗口同步；重命名的终端也会保留名称。新增实验性 artifacts，代理可通过内置本地 provider 或插件存储发布、更新并提供 HTML/静态文件。还提供 Claude Agent 引导式接入与快速选择 worktree 基础分支。",
+      "key_points_zh": [
+        "Desktop 终端随会话持久化并跨服务重启保留滚动缓冲。",
+        "实验性 artifacts 可发布和更新 HTML/静态文件。",
+        "Claude Agent 接入会引导安装、登录并验证连接。"
+      ],
+      "importance_reason_zh": "持久终端与可发布产物，让会话更像可恢复的开发环境。",
+      "title_en": "OpenCode 2.2.4 makes desktop terminals persist with sessions",
+      "summary_en": "OpenCode 2.2.4 makes Desktop terminals belong to the session, survive server restarts with their scrollback and stay synchronized with the TUI and other windows; renamed terminals keep their names. Experimental artifacts let agents publish, update and serve HTML or static files through a built-in local provider or plugin storage. It also adds guided Claude Agent setup and a fast base-branch picker for worktrees.",
+      "key_points_en": [
+        "Desktop terminals persist with the session across restarts.",
+        "Experimental artifacts publish and serve HTML or static files.",
+        "Guided Claude Agent setup installs, signs in and verifies the connection."
+      ],
+      "importance_reason_en": "Persistent terminals and publishable artifacts make sessions behave more like recoverable development environments.",
+      "published_at": "2026-10-30T16:59:08Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:07:38+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.2.4",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.4",
+          "collected_at": "2026-11-08T06:07:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-314",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.314 限制工作目录外写入并支持空闲压缩",
+      "summary_zh": "Claude Code 2.1.314 新增 permissions.blockWritesOutsideWorkingDirectories，在所有权限模式下阻止 Write、Edit 与 NotebookEdit 写入工作目录之外的路径；网关上游可按 IdP 组路由，Bedrock guardrail 可记录触发的过滤器。VS Code 与 Desktop 支持空闲会话压缩。",
+      "key_points_zh": [
+        "新增工作目录外写入拦截，覆盖所有权限模式。",
+        "网关上游可按 IdP 组路由，故障转移同样生效。",
+        "VS Code 与 Desktop 的空闲长会话会被摘要压缩。"
+      ],
+      "importance_reason_zh": "写入边界收紧降低了误改仓库外文件的风险，是企业与本地使用都关心的安全默认值。",
+      "title_en": "Claude Code 2.1.314 blocks writes outside working directories",
+      "summary_en": "Claude Code 2.1.314 adds permissions.blockWritesOutsideWorkingDirectories, which makes Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode. Gateway upstreams can be scoped to IdP groups, Bedrock guardrail traces identify which filter fired, and VS Code and Desktop summarize idle 200K+ token conversations.",
+      "key_points_en": [
+        "Writes outside working directories are blocked in every permission mode.",
+        "Gateway upstreams can be routed by IdP group, including on failover.",
+        "Idle long conversations are compacted in VS Code and Desktop."
+      ],
+      "importance_reason_en": "Tighter write boundaries reduce the risk of modifying files outside the repository, a security default relevant to both enterprises and local users.",
+      "published_at": "2026-10-30T01:16:56+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:07:38+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-314",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-314",
+          "collected_at": "2026-11-08T06:07:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openrouter-guardrails-org-limits",
+      "entity_ids": [
+        "openrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "OpenRouter Guardrails 分离组织上限与工作区默认值",
+      "summary_zh": "OpenRouter 的 Guardrails 现在把组织级上限与工作区默认值分开：管理员可设置组织范围限制，再为成员分配不同预算与模型访问权限，并独立修改每条策略；现有 Guardrails 继续生效。",
+      "key_points_zh": [
+        "组织级限制与工作区默认值分离。",
+        "可在组织上限内为成员设置不同预算与模型访问。",
+        "每条策略可独立修改，现有配置继续生效。"
+      ],
+      "importance_reason_zh": "更细的预算与模型权限控制，是企业把多模型访问纳入治理的前提。",
+      "title_en": "OpenRouter guardrails separate organization limits from workspace defaults",
+      "summary_en": "OpenRouter guardrails now separate organization-wide limits from workspace defaults. Admins can set organization limits, give people different budgets and model access within them, and change each policy independently. Existing guardrails keep working.",
+      "key_points_en": [
+        "Organization limits are separate from workspace defaults.",
+        "Per-person budgets and model access sit within organization limits.",
+        "Policies change independently and existing guardrails keep working."
+      ],
+      "importance_reason_en": "Finer budget and model-access controls are a prerequisite for governing multi-model use in enterprises.",
+      "published_at": "2026-10-30T00:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "openrouter-official",
+          "content_id": "https://openrouter.ai/blog/announcements/guardrail-policies/",
+          "url": "https://openrouter.ai/blog/announcements/guardrail-policies/",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-models-opus-5-5-gpt-5-6-sol",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "model_release"
+      ],
+      "title_zh": "Kiro 正式提供 Claude Opus 5.5 与 GPT-5.6 Sol",
+      "summary_zh": "Kiro 将 Claude Opus 5.5 与 GPT-5.6 Sol 正式提供，覆盖 Kiro 各界面并获得扩展容量；现有计划、区域、上下文窗口、额度倍率与推理范围保持不变。",
+      "key_points_zh": [
+        "两款模型在 Kiro 全界面正式可用。",
+        "扩展容量用于支撑生产负载。",
+        "计划、区域、上下文窗口与额度倍率不变。"
+      ],
+      "importance_reason_zh": "正式可用与容量扩展决定了生产团队能否稳定依赖这些前沿模型。",
+      "title_en": "Kiro makes Claude Opus 5.5 and GPT-5.6 Sol generally available",
+      "summary_en": "Claude Opus 5.5 and GPT-5.6 Sol are generally available with full Kiro support. Expanded capacity supports more dependable access for production workloads, and existing plans, regions, surfaces, context windows, credit multipliers and inference scopes remain unchanged.",
+      "key_points_en": [
+        "Both models are generally available across Kiro surfaces.",
+        "Expanded capacity targets production workloads.",
+        "Plans, regions, context windows and credit multipliers are unchanged."
+      ],
+      "importance_reason_en": "General availability and added capacity determine whether production teams can rely on these frontier models.",
+      "published_at": "2026-10-30",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/gpt-5-6-sol-and-claude-opus-5-5-generally-available",
+          "url": "https://kiro.dev/changelog/models/gpt-5-6-sol-and-claude-opus-5-5-generally-available",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-2-37-v2-upgrades-acp",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "Kiro CLI 2.37 默认自动升级 V2 代理并支持 ACP 登录",
+      "summary_zh": "Kiro CLI 2.37 在 V3 会话启动时默认自动升级 V2 代理，并允许声明终端认证能力的 ACP 客户端从终端登录 Kiro；还为 Mermaid 增加节点形状与嵌套子图、KIRORUNTIMEDIR 覆盖，并修复全屏滚动、点击定位与 Homebrew 升级提示。",
+      "key_points_zh": [
+        "V3 会话启动时默认自动升级 V2 代理。",
+        "支持终端认证的 ACP 客户端可从终端登录。",
+        "新增 Mermaid 节点形状/嵌套子图与运行时目录覆盖。"
+      ],
+      "importance_reason_zh": "自动升级降低了迁移成本，ACP 登录则扩大了第三方编辑器的接入方式。",
+      "title_en": "Kiro CLI 2.37 auto-upgrades V2 agents and adds ACP sign-in",
+      "summary_en": "Kiro CLI 2.37 enables automatic V2 agent upgrades by default when a V3 session starts and lets ACP clients that declare terminal authentication sign in to Kiro from a terminal. It also adds Mermaid node shapes and nested subgraphs, a KIRORUNTIMEDIR override, and fixes for fullscreen scrolling, click targeting and the Homebrew upgrade hint.",
+      "key_points_en": [
+        "V2 agents upgrade automatically when a V3 session starts.",
+        "ACP clients with terminal auth can sign in from the terminal.",
+        "Mermaid node shapes, nested subgraphs and a runtime-directory override."
+      ],
+      "importance_reason_en": "Automatic upgrades lower migration cost, while ACP sign-in broadens access from third-party editors.",
+      "published_at": "2026-10-30",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/2-37",
+          "url": "https://kiro.dev/changelog/cli/2-37",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "codex-0-166-0",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Codex 0.166.0 增加转录搜索与断点续跑",
+      "summary_zh": "Codex 0.166.0 增加键盘驱动的转录选择与搜索、codex queue --resume 和 codex doctor --network-only，并在 TUI 中提供更清晰的安全拦截说明与可选的更安全后续提示；同时把 GPT-6.1 Terra 加入内置、Vertex AI 与 Amazon Bedrock 模型目录。",
+      "key_points_zh": [
+        "支持按词、行、页选择转录并搜索。",
+        "codex queue --resume 可恢复未加载的线程。",
+        "新增网络诊断命令，并改进安全拦截后的可选提示。"
+      ],
+      "importance_reason_zh": "转录检索与断点续跑提升了长会话的可用性，网络诊断则降低了接入排障成本。",
+      "title_en": "Codex 0.166.0 adds transcript search and resume-after-queue",
+      "summary_en": "Codex 0.166.0 adds keyboard-driven transcript selection with word, line and page motions plus search, codex queue --resume for unloaded threads, and codex doctor --network-only for connectivity and WebSocket diagnostics. It also adds clearer safety-block explanations with safer follow-up prompts and puts GPT-6.1 Terra in the bundled, Vertex AI and Amazon Bedrock catalogs.",
+      "key_points_en": [
+        "Word, line and page transcript selection with integrated search.",
+        "codex queue --resume restores unloaded threads.",
+        "Network-only diagnostics, clearer safety blocks and safer follow-up prompts."
+      ],
+      "importance_reason_en": "Transcript search and resumable threads improve long-session usability, while network diagnostics lower connectivity troubleshooting costs.",
+      "published_at": "2026-10-29T19:50:20Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:07:30+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
+          "collected_at": "2026-11-08T06:07:30+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "antigravity-plugin-marketplace",
+      "entity_ids": [
+        "antigravity",
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Antigravity 推出插件市场",
+      "summary_zh": "Antigravity 推出插件市场，插件是以 plugin.json 定义的版本化自包含包，最多可打包 Skills、MCP 配置、Rules、生命周期 Hooks 与自定义代理五类扩展。市场在 App 与 CLI 同步上线，首批合作方包括 Atlassian、Canva、CrowdStrike、Databricks、Datadog、Figma、Stripe 与 Unity 等。",
+      "key_points_zh": [
+        "插件为版本化 bundle，统一安装、更新与开关。",
+        "可组合 Skills、MCP、Rules、Hooks 与自定义代理五类原语。",
+        "App 与 CLI 同步上线，支持 agy plugin install/validate。"
+      ],
+      "importance_reason_zh": "统一的插件打包与分发方式，会把 Antigravity 的扩展生态从仓库级配置转为可复用产品。",
+      "title_en": "Antigravity launches a plugin marketplace",
+      "summary_en": "Antigravity launched a plugin marketplace. A plugin is a versioned, self-contained bundle defined by plugin.json that can package up to five extensibility primitives: skills, MCP configurations, rules, lifecycle hooks and custom agents. The marketplace is rolling out in the App and CLI, with launch partners including Atlassian, Canva, CrowdStrike, Databricks, Datadog, Figma, Stripe and Unity.",
+      "key_points_en": [
+        "Plugins are versioned bundles that install, update and toggle as one unit.",
+        "Up to five primitives: skills, MCP configs, rules, hooks and custom agents.",
+        "Available in the App and CLI, with agy plugin install and validate."
+      ],
+      "importance_reason_en": "A common packaging and distribution format turns Antigravity extensions from repository-level configuration into reusable products.",
+      "published_at": "2026-10-29T17:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:12+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "antigravity-blog",
+          "content_id": "https://antigravity.google/blog/plugin-marketplace-in-antigravity",
+          "url": "https://antigravity.google/blog/plugin-marketplace-in-antigravity",
+          "collected_at": "2026-11-08T06:08:12+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
+      "id": "opencode-2-2-1",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "OpenCode 2.2.1 增加 /goal 目标循环与图像生成",
+      "summary_zh": "OpenCode 2.2.1 新增 /goal 目标循环，让会话持续到审查者确认目标达成，并支持 pause/resume/clear；实验性 image_generate 工具可创建或编辑图像。Desktop 增加后台 shell 实时输出面板和新版模型选择器。@opencode/ai 移除 fal、Black Forest Labs、Replicate、Stability 供应商及多个旧入口。",
+      "key_points_zh": [
+        "/goal 让会话持续推进直到审查者确认目标完成。",
+        "实验性 image_generate 工具支持创建/编辑图像。",
+        "Desktop 可查看并停止后台 shell；模型选择器支持搜索。"
+      ],
+      "importance_reason_zh": "目标循环把“完成标准”交给审查者，可能减少长任务的提前停止。",
+      "title_en": "OpenCode 2.2.1 adds /goal loops and image generation",
+      "summary_en": "OpenCode 2.2.1 adds /goal, which keeps a session working until a reviewer confirms the objective is met, with pause, resume and clear controls. An experimental image_generate tool can create or edit images, Desktop adds live output for background shells and a redesigned model picker, and @opencode/ai removes the fal, Black Forest Labs, Replicate and Stability providers plus several legacy entry points.",
+      "key_points_en": [
+        "/goal keeps working until a reviewer confirms completion.",
+        "Experimental image_generate can create or edit images.",
+        "Desktop shows and stops background shells; the model picker is redesigned."
+      ],
+      "importance_reason_en": "Goal loops hand the completion criterion to a reviewer and may reduce premature stopping on long tasks.",
+      "published_at": "2026-10-29T05:16:55Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:07:38+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.2.1",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.1",
+          "collected_at": "2026-11-08T06:07:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-2-36-approve-for-me",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Kiro CLI 2.36 加入“Approve for me”自动审批",
+      "summary_zh": "Kiro CLI 2.36 为交互式 V3 会话加入“Approve for me”：Kiro 自动批准例行操作、阻止高风险操作并在不确定时询问。现有 deny、ask、allow 规则优先，只有未决操作由该功能处理，并标记为“Approved for you”。",
+      "key_points_zh": [
+        "例行操作自动批准，高风险操作阻止。",
+        "现有 deny/ask/allow 规则优先。",
+        "自动批准的操作会标注“Approved for you”。"
+      ],
+      "importance_reason_zh": "自动审批减少例行提示中断，但要求现有规则足够明确才能安全放行。",
+      "title_en": "Kiro CLI 2.36 adds \"Approve for me\"",
+      "summary_en": "Kiro CLI 2.36 adds \"Approve for me\" to interactive V3 sessions: Kiro approves routine actions, blocks risky ones and asks when unsure. Existing deny, ask and allow rules decide first; the feature handles only unsettled actions and marks each as \"Approved for you\".",
+      "key_points_en": [
+        "Routine actions are approved automatically; risky ones are blocked.",
+        "Existing deny/ask/allow rules take precedence.",
+        "Auto-approved actions are marked \"Approved for you\"."
+      ],
+      "importance_reason_en": "Automatic approval reduces interruptions from routine prompts but requires clear existing rules to be safe.",
+      "published_at": "2026-10-29",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/2-36",
+          "url": "https://kiro.dev/changelog/cli/2-36",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-4-carbon",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "preview",
+      "topics": [
+        "model_release",
+        "capability",
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "Google 发布 Gemini 4 Carbon 前沿模型",
+      "summary_zh": "Google 发布 Gemini 4 Carbon，称其为下一代前沿模型。官方给出的 Artificial Analysis 智能指数为 59，SEC-bench Pro 88.2%、ExploitGym 54.8%、CWE-bench 71.0%。初期定价为每百万 token 输入 2 美元、输出 10 美元，并通过 Fairwind 向有限的安全防御者开放。",
+      "key_points_zh": [
+        "Artificial Analysis 智能指数 59。",
+        "SEC-bench Pro 88.2%、ExploitGym 54.8%、CWE-bench 71.0%。",
+        "初期价格 2/10 美元每百万 token，经 Fairwind 限量开放给安全防御者。"
+      ],
+      "importance_reason_zh": "前沿模型同时在通用智能与安全基准上给出数字，并以低价和受限渠道切入防御场景，会影响模型选型与安全采购。",
+      "title_en": "Google introduces Gemini 4 Carbon, its next frontier model",
+      "summary_en": "Google introduced Gemini 4 Carbon, describing it as its next frontier model. Google reports an Artificial Analysis Intelligence Index of 59, SEC-bench Pro 88.2%, ExploitGym 54.8% and CWE-bench 71.0%, with introductory pricing of $2/$10 per million tokens and a limited rollout to security defenders through Fairwind.",
+      "key_points_en": [
+        "Artificial Analysis Intelligence Index of 59.",
+        "SEC-bench Pro 88.2%, ExploitGym 54.8% and CWE-bench 71.0%.",
+        "Introductory pricing of $2/$10 per million tokens, with limited defender access via Fairwind."
+      ],
+      "importance_reason_en": "Numbers across general intelligence and security benchmarks, plus low pricing and a restricted channel, affect both model selection and security procurement.",
+      "published_at": "2026-10-28T17:00:58+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:07:27+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+          "collected_at": "2026-11-08T06:07:27+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
+      "id": "copilot-fusion-ga",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "pricing"
+      ],
+      "title_zh": "GitHub Copilot Fusion 正式可用",
+      "summary_zh": "GitHub Copilot Fusion 正式可用：用户不再逐任务选模型，而是选择 Fusion 与努力度（Standard/High/Max），由 Copilot 路由并编排多个模型。官方称 Fusion Max 在 Artificial Analysis Coding Agent Index 得分 60，接近 Claude Code + Opus 5.5 Max，同时 API 成本与 token 用量约为一半、每任务耗时少约 40%。",
+      "key_points_zh": [
+        "Fusion 统一路由与编排多个模型。",
+        "提供 Standard、High、Max 三档努力度。",
+        "官方称 Fusion Max 得分 60，成本与 token 约为对比方案一半。"
+      ],
+      "importance_reason_zh": "把模型选择交给路由层，可能在不牺牲太多质量的情况下显著降低编码代理成本。",
+      "title_en": "GitHub Copilot Fusion becomes generally available",
+      "summary_en": "GitHub Copilot Fusion is generally available. Instead of picking a model per task, users choose Fusion and an effort level (Standard, High or Max), and Copilot routes and orchestrates multiple models. GitHub says Fusion Max scored 60 on the Artificial Analysis Coding Agent Index, within two points of Claude Code with Opus 5.5 Max, at about half the API cost and token use and roughly 40% less time per task.",
+      "key_points_en": [
+        "Fusion routes and orchestrates multiple models.",
+        "Three effort levels: Standard, High and Max.",
+        "GitHub reports a score of 60 at about half the cost and tokens of the comparison."
+      ],
+      "importance_reason_en": "Delegating model choice to a routing layer may cut coding-agent costs substantially without giving up much quality.",
+      "published_at": "2026-10-28T16:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:09:02+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
+          "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
+          "collected_at": "2026-11-08T06:09:02+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "deeptutor-1-7-0",
+      "entity_ids": [
+        "deeptutor"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "DeepTutor 1.7.0 引入模块化安装与学习笔记本",
+      "summary_zh": "DeepTutor 1.7.0 引入模块化安装（deeptutor 核心与 deeptutor[full]）、按学习流程重组的工作区、基于页面/子页面/区块的 Learning notebook 与 Dito 助手，以及带旁白的 Video Lesson。deeptutor-cli 成为兼容别名，用户数据在模块移除时保留。",
+      "key_points_zh": [
+        "核心聊天/CLI/SDK 与 deeptutor[full] 分离安装。",
+        "Learning notebook 取代 Co-Writer，支持页面、区块与 Word 导入。",
+        "Video Lesson 支持旁白；模块可启停并保护依赖。"
+      ],
+      "importance_reason_zh": "模块化安装与学习工作区重组，降低了部署体积并改变课程制作流程。",
+      "title_en": "DeepTutor 1.7.0 introduces modular installs and a learning notebook",
+      "summary_en": "DeepTutor 1.7.0 introduces modular installation with a core chat/CLI/SDK package and deeptutor[full], a workspace reorganized around learning, a Learning notebook built from pages, subpages and blocks with the Dito assistant, and narrated Video Lessons. deeptutor-cli becomes a compatibility alias, and removing modules preserves user data.",
+      "key_points_en": [
+        "Core chat/CLI/SDK and deeptutor[full] install separately.",
+        "The Learning notebook replaces Co-Writer with pages, blocks and Word import.",
+        "Video Lesson adds narration; modules can be enabled or removed safely."
+      ],
+      "importance_reason_en": "Modular installs and a reorganized learning workspace reduce deployment size and change lesson production.",
+      "published_at": "2026-10-28T14:13:12Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "deeptutor-releases",
+          "content_id": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.7.0",
+          "url": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.7.0",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-servicenow-partnership",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "OpenAI 与 ServiceNow 扩大企业工作流合作",
+      "summary_zh": "OpenAI 与 ServiceNow 扩大合作，把 OpenAI 模型与代理引入 ServiceNow，同时把 ServiceNow 工作流接入 ChatGPT 与 Codex。",
+      "key_points_zh": [
+        "OpenAI 模型与代理进入 ServiceNow。",
+        "ServiceNow 工作流进入 ChatGPT 与 Codex。",
+        "合作面向企业工作流。"
+      ],
+      "importance_reason_zh": "双向嵌入把代理接入企业系统记录与流程，是企业采用的关键集成路径。",
+      "title_en": "OpenAI and ServiceNow expand enterprise workflow partnership",
+      "summary_en": "OpenAI and ServiceNow expanded their partnership to bring OpenAI models and agents into ServiceNow, and ServiceNow workflows into ChatGPT and Codex.",
+      "key_points_en": [
+        "OpenAI models and agents are coming into ServiceNow.",
+        "ServiceNow workflows are coming into ChatGPT and Codex.",
+        "The partnership targets enterprise workflows."
+      ],
+      "importance_reason_en": "Bidirectional embedding connects agents to enterprise systems of record and process, a key path to enterprise adoption.",
+      "published_at": "2026-10-28T13:15:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:07:27+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/openai-servicenow-partnership-expansion",
+          "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+          "collected_at": "2026-11-08T06:07:27+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "openrouter-provider-routing",
+      "entity_ids": [
+        "openrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "OpenRouter 重写默认供应商路由",
+      "summary_zh": "OpenRouter 重写默认供应商路由：不再把大多数流量发给最便宜的供应商，而是持续监测每个端点，在成本、速度与可靠性之间为每个请求重新平衡。",
+      "key_points_zh": [
+        "默认路由不再偏向最便宜端点。",
+        "持续监测每个供应商端点的表现。",
+        "按请求在成本、速度与可靠性之间重新平衡。"
+      ],
+      "importance_reason_zh": "路由策略从价格优先转向多目标优化，会直接影响延迟与失败率。",
+      "title_en": "OpenRouter rebuilds default provider routing",
+      "summary_en": "OpenRouter rebuilt its default provider routing: instead of sending most traffic to the cheapest provider for a model, the new algorithm continuously monitors every provider endpoint and rebalances cost, speed and reliability for each request.",
+      "key_points_en": [
+        "Default routing no longer favors the cheapest endpoint.",
+        "Every provider endpoint is continuously monitored.",
+        "Each request is rebalanced across cost, speed and reliability."
+      ],
+      "importance_reason_en": "Moving from price-first to multi-objective routing directly affects latency and failure rates.",
+      "published_at": "2026-10-28T00:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "openrouter-official",
+          "content_id": "https://openrouter.ai/blog/announcements/how-we-rebuilt-provider-routing/",
+          "url": "https://openrouter.ai/blog/announcements/how-we-rebuilt-provider-routing/",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-web-session-recaps",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro Web 增加会话回顾与引导式工作流",
+      "summary_zh": "Kiro Web 可为每个会话保留简短回顾，并把代理设置与账户设置分开；工作流会在规划与审查阶段请求输入，Schedule 取代 Automations，重新打开的会话可在沙箱启动期间继续使用。",
+      "key_points_zh": [
+        "每个会话可保留简短回顾。",
+        "代理设置与账户设置分栏。",
+        "Schedule 取代 Automations；工作流在规划/审查阶段请求输入。"
+      ],
+      "importance_reason_zh": "会话回顾与引导式工作流降低了在 Web 端恢复长任务与配置代理的成本。",
+      "title_en": "Kiro Web adds session recaps and guided workflows",
+      "summary_en": "Kiro Web can keep a short recap for each session and separates agent settings from account settings. Workflows now ask for input during planning and review, Schedule replaces Automations, and reopened sessions stay usable while their sandbox starts.",
+      "key_points_en": [
+        "Each session can keep a short recap.",
+        "Agent and account settings are separated.",
+        "Schedule replaces Automations; workflows request input during planning and review."
+      ],
+      "importance_reason_en": "Recaps and guided workflows reduce the cost of resuming long tasks and configuring agents on the web.",
+      "published_at": "2026-10-28",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/web/session-recap-and-reorganized-settings",
+          "url": "https://kiro.dev/changelog/web/session-recap-and-reorganized-settings",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-ai-for-science-expansion",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "capability"
+      ],
+      "title_zh": "Anthropic 将 AI for Science 扩展到 20 家科研机构",
+      "summary_zh": "Anthropic 扩大 AI for Science 计划，新增 20 家科学基金会、研究机构与研究团队，为高影响力科研项目提供免费 Claude 额度。该计划于 2025 年 5 月启动，并提供面向科学家的折扣 Team 方案。",
+      "key_points_zh": [
+        "新增 20 家基金会、研究机构与研究团队。",
+        "为高影响力科学项目提供免费 Claude 额度。",
+        "计划 2025 年 5 月启动，另有面向科学家的折扣 Team 方案。"
+      ],
+      "importance_reason_zh": "免费额度与机构合作决定了科研团队能否把前沿模型纳入日常研究流程。",
+      "title_en": "Anthropic expands AI for Science to foundations and research institutions",
+      "summary_en": "Anthropic expanded its AI for Science program to 20 scientific foundations, institutions and research groups, giving free Claude credits to researchers working on high-impact projects. The program began in May 2025 and is accompanied by a discounted Team plan for scientists.",
+      "key_points_en": [
+        "Adds 20 foundations, institutions and research groups.",
+        "Provides free Claude credits for high-impact scientific projects.",
+        "The program began in May 2025 and includes a discounted Team plan for scientists."
+      ],
+      "importance_reason_en": "Free credits and institutional partnerships determine whether research teams can fold frontier models into daily work.",
+      "published_at": "2026-10-28",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:24:32+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+          "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+          "collected_at": "2026-11-08T06:24:32+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "corridor-joins-cognition",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "安全公司 Corridor 加入 Cognition",
+      "summary_zh": "安全初创公司 Corridor 宣布加入 Cognition，其团队将投入 Devin Security。Corridor 此前为 AI 原生团队提供安全层，联合创始人 Jack Cable 与 Ashwin Ramaswami 在公告中说明此次合并。",
+      "key_points_zh": [
+        "Corridor 团队并入 Cognition。",
+        "将推进 Devin Security。",
+        "Corridor 此前定位为 AI 原生团队的安全层。"
+      ],
+      "importance_reason_zh": "安全团队与编码代理团队合并，反映代理产品正把安全能力内化为核心模块。",
+      "title_en": "Corridor joins Cognition",
+      "summary_en": "Security startup Corridor is joining Cognition, where its team will work on Devin Security. Corridor had positioned itself as the security layer for AI-native teams; co-founders Jack Cable and Ashwin Ramaswami announced the move.",
+      "key_points_en": [
+        "Corridor's team is joining Cognition.",
+        "The team will work on Devin Security.",
+        "Corridor previously served as a security layer for AI-native teams."
+      ],
+      "importance_reason_en": "Merging a security team into a coding-agent company shows agent products are internalizing security capabilities.",
+      "published_at": "2026-10-28",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:24:32+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "cognition-blog",
+          "content_id": "https://cognition.com/blog/corridor-joining-cognition",
+          "url": "https://cognition.com/blog/corridor-joining-cognition",
+          "collected_at": "2026-11-08T06:24:32+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-312",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.312 增加 OIDC 用户标识与全屏点击发送",
+      "summary_zh": "Claude Code 2.1.312 新增网关 oidc.user_id_claim，可用 id_token 中除 sub 以外的声明识别用户（如 Microsoft Entra ID 的 oid）；全屏模式下点击排队消息的提示即可立即发送。云会话例程可选择努力度，云环境设置脚本框加入带高亮的 Bash 编辑器。",
+      "key_points_zh": [
+        "网关支持自定义 OIDC 用户标识声明。",
+        "全屏下可点击提示立即发送排队消息。",
+        "未知模型名改用较短系统提示，自动模型回退覆盖自定义部署名。"
+      ],
+      "importance_reason_zh": "身份映射与未知模型处理，影响企业网关接入和自托管部署的可用性。",
+      "title_en": "Claude Code 2.1.312 adds OIDC user claims and click-to-send",
+      "summary_en": "Claude Code 2.1.312 adds oidc.user_id_claim so gateways can identify people by an id_token claim other than sub, such as Microsoft Entra ID's oid; click-to-send for queued messages in fullscreen; effort selection for cloud routines; and a colored Bash editor for cloud setup scripts. Unknown model names now use a shorter system prompt, and automatic model fallback covers custom deployment names.",
+      "key_points_en": [
+        "Gateways can map users through a custom OIDC claim.",
+        "Fullscreen queued messages send on click.",
+        "Shorter prompts for unknown models and fallback for custom deployment names."
+      ],
+      "importance_reason_en": "Identity mapping and unknown-model handling affect enterprise gateway integration and self-hosted deployments.",
+      "published_at": "2026-10-27T20:35:04+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:07:38+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-312",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-312",
+          "collected_at": "2026-11-08T06:07:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-0-66-0",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Gemini CLI 0.66.0 修复终端渲染并重构工具调用分组",
+      "summary_zh": "Gemini CLI 0.66.0 主要修复终端 UI 的同步输出、调试控制台高度与边框渲染，重构工具调用分组，修正 Windows diff 参数、凭据/SSH 交互提示与 SKILL.md 单行描述解析，并加入“Gemini CLI 尚未针对 Gemini 4 优化”的提示。",
+      "key_points_zh": [
+        "修复同步输出、调试控制台与滚动容器边框。",
+        "工具调用分组改由调度器发出。",
+        "加入 Gemini 4 兼容性提示，并修复 Windows diff 与技能解析。"
+      ],
+      "importance_reason_zh": "终端稳定性与工具展示修复，直接影响长会话中的可读性与可靠性。",
+      "title_en": "Gemini CLI 0.66.0 fixes terminal rendering and regroups tool calls",
+      "summary_en": "Gemini CLI 0.66.0 focuses on terminal UI fixes including synchronized output, debug console height and scrollable tool-container borders, moves tool-call grouping to the scheduler, fixes Windows diff arguments, credential and SSH prompts, and single-line SKILL.md descriptions, and adds a banner noting that Gemini CLI is not yet optimized for Gemini 4.",
+      "key_points_en": [
+        "Fixes synchronized output, debug console and scroll-container borders.",
+        "Tool-call groups are emitted by the scheduler.",
+        "Adds a Gemini 4 compatibility banner and Windows diff/skill parsing fixes."
+      ],
+      "importance_reason_en": "Terminal stability and tool display fixes directly affect readability and reliability in long sessions.",
+      "published_at": "2026-10-27T20:26:28Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:07:30+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0",
+          "collected_at": "2026-11-08T06:07:30+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "codex-0-165-0",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Codex 0.165.0 新增 Vertex AI 供应商并默认启用 Memory v2",
+      "summary_zh": "Codex 0.165.0 新增内置 Google Cloud Vertex AI 供应商（model_provider = \"gcp\"），把 GPT-6.1 Terra 加入模型目录，为会话选择器增加仓库过滤与按目录分组，并默认启用推理强度调整和 Memory v2。还修复了市场 URL 校验可能让 Git 连接不同主机的问题。",
+      "key_points_zh": [
+        "新增内置 Vertex AI 供应商，可用 GCP 凭据。",
+        "GPT-6.1 Terra 进入模型目录。",
+        "新配置默认启用 Memory v2，并支持导入外部代理记忆。"
+      ],
+      "importance_reason_zh": "云供应商与记忆默认值同时变化，会影响企业接入方式与会话连续性。",
+      "title_en": "Codex 0.165.0 adds Vertex AI and enables Memory v2 by default",
+      "summary_en": "Codex 0.165.0 adds a built-in Google Cloud Vertex AI provider configured with model_provider = \"gcp\", adds GPT-6.1 Terra to the model catalog, adds repository filtering and directory grouping to the session picker, and enables reasoning-effort changes plus Memory v2 by default. It also closes a marketplace URL validation gap that could let Git connect to a different host.",
+      "key_points_en": [
+        "Built-in Vertex AI provider using GCP credentials.",
+        "GPT-6.1 Terra is added to the model catalog.",
+        "Memory v2 is default for fresh profiles, with external-agent memory import."
+      ],
+      "importance_reason_en": "Simultaneous cloud-provider and memory-default changes affect enterprise connectivity and session continuity.",
+      "published_at": "2026-10-27T20:11:49Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:07:30+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
+          "collected_at": "2026-11-08T06:07:30+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "genie-4",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "preview",
+      "topics": [
+        "model_release",
+        "capability"
+      ],
+      "title_zh": "Google 发布 Genie 4 实时世界模型",
+      "summary_zh": "Genie 4 是 Google 的新一代实时世界模型，原生支持音频与对话，并使用 Gemini 3.8 Flash 作为规划回路；目前以研究预览形式提供。",
+      "key_points_zh": [
+        "实时世界模拟。",
+        "原生音频与对话能力。",
+        "由 Gemini 3.8 Flash 负责规划，处于研究预览。"
+      ],
+      "importance_reason_zh": "把可交互世界模拟与语音对话结合，是代理训练和游戏/仿真环境的重要基础设施方向。",
+      "title_en": "Google introduces Genie 4, a real-time world model",
+      "summary_en": "Genie 4 is Google's new generation world model for real-time simulation, with native audio and dialogue and a planning loop driven by Gemini 3.8 Flash. It is available as a research preview.",
+      "key_points_en": [
+        "Real-time world simulation.",
+        "Native audio and dialogue.",
+        "Gemini 3.8 Flash planning loop, offered as a research preview."
+      ],
+      "importance_reason_en": "Combining interactive world simulation with spoken dialogue is an important infrastructure direction for agent training and game or simulation environments.",
+      "published_at": "2026-10-27T16:01:38+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:07:27+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+          "collected_at": "2026-11-08T06:07:27+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "opencode-2-2-0",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "OpenCode 2.2.0 引入桌面插件与键控会话指令",
+      "summary_zh": "OpenCode 2.2.0 引入实验性 Desktop 插件创建、安装与分享，并刷新桌面体验；插件可附加键控会话指令，不必修改系统提示而破坏提示缓存，且这些指令能跨压缩与回退保留。还新增按供应商/模型配置提示缓存 TTL。破坏性变更包括 @opencode/ai 根导出改为 Promise API、移除 GitHub Action、TUI 插件要求 OpenTUI 0.7。",
+      "key_points_zh": [
+        "实验性 Desktop 插件可创建、安装与分享。",
+        "插件可附加键控会话指令，跨压缩与回退保留且不额外触发模型轮次。",
+        "@opencode/ai 根导出改为 Promise API，GitHub Action 被移除。"
+      ],
+      "importance_reason_zh": "插件指令机制与缓存 TTL 配置，影响扩展生态和长会话成本。",
+      "title_en": "OpenCode 2.2.0 adds desktop plugins and keyed session instructions",
+      "summary_en": "OpenCode 2.2.0 introduces experimental creation, installation and sharing of Desktop plugins and a refreshed desktop experience. Plugins can attach keyed session instructions that survive compaction and reverts without editing the system prompt or busting the prompt cache, and prompt cache TTLs become configurable per provider and model. Breaking changes include the @opencode/ai root moving to the Promise API, removal of the GitHub Action, and OpenTUI 0.7 for TUI plugins.",
+      "key_points_en": [
+        "Experimental Desktop plugins can be created, installed and shared.",
+        "Keyed session instructions survive compaction and reverts without an extra model turn.",
+        "The @opencode/ai root is now the Promise API and the GitHub Action is removed."
+      ],
+      "importance_reason_en": "Plugin instructions and cache TTL configuration affect the extension ecosystem and long-session costs.",
+      "published_at": "2026-10-27T09:04:44Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:07:38+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.2.0",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.0",
+          "collected_at": "2026-11-08T06:07:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-oracle-apps-chatgpt",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "OpenAI 与 Oracle 扩大合作，把 Oracle 应用接入 ChatGPT",
+      "summary_zh": "OpenAI 与 Oracle 扩大合作，计划把 Oracle 的业务应用和 AI 代理接入 ChatGPT，并用 OpenAI 技术支撑新的 Oracle 产品。",
+      "key_points_zh": [
+        "Oracle 业务应用与代理将进入 ChatGPT。",
+        "OpenAI 技术将用于新的 Oracle 产品。",
+        "合作覆盖企业与业务工作流。"
+      ],
+      "importance_reason_zh": "把企业应用直接接入 ChatGPT，是代理进入企业数据与流程的关键分销渠道。",
+      "title_en": "OpenAI expands Oracle partnership to bring Oracle apps into ChatGPT",
+      "summary_en": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
+      "key_points_en": [
+        "Oracle business apps and agents will be available in ChatGPT.",
+        "OpenAI technology will power new Oracle products.",
+        "The partnership targets enterprise and business workflows."
+      ],
+      "importance_reason_en": "Wiring enterprise applications directly into ChatGPT is a key distribution path for agents entering enterprise data and processes.",
+      "published_at": "2026-10-27T07:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:07:27+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/oracle-apps-in-chatgpt",
+          "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+          "collected_at": "2026-11-08T06:07:27+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1-0-104",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.104 调整 Fusion 默认行为与 Autopilot 等待",
+      "summary_zh": "Copilot CLI 1.0.104 让托管模型 fusion 默认以 Auto 启动并应用 fusionTier 设置；交互式与 SDK Autopilot 会话会继续等待后台任务，而不是在 COPILOT_TASK_WAIT_TIMEOUT_SECONDS 后停止（-p --autopilot 仍遵循该超时）。Assisted Permissions 不再需要开启实验模式。",
+      "key_points_zh": [
+        "fusion 默认从 Auto 启动并应用 fusionTier。",
+        "交互式/SDK Autopilot 会等待附加后台任务。",
+        "Assisted Permissions 无需实验模式。"
+      ],
+      "importance_reason_zh": "默认模型与等待语义变化，会影响自动任务的完成率与成本。",
+      "title_en": "Copilot CLI 1.0.104 changes Fusion defaults and Autopilot waiting",
+      "summary_en": "Copilot CLI 1.0.104 makes the managed fusion model start sessions on Auto and apply fusionTier settings. Interactive and SDK Autopilot sessions now keep waiting for attached background tasks instead of stopping after COPILOT_TASK_WAIT_TIMEOUT_SECONDS, while -p --autopilot still honors that timeout. Assisted Permissions no longer require experimental mode.",
+      "key_points_en": [
+        "Fusion starts on Auto and applies fusionTier settings.",
+        "Interactive and SDK Autopilot sessions wait for attached background tasks.",
+        "Assisted Permissions are available without experimental mode."
+      ],
+      "importance_reason_en": "Changes to default model selection and waiting semantics affect completion rates and cost for automated tasks.",
+      "published_at": "2026-10-27T02:15:11Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:07:38+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.104",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.104",
+          "collected_at": "2026-11-08T06:07:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openrouter-csam-screening",
+      "entity_ids": [
+        "openrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "OpenRouter 对流经请求进行 CSAM 筛查",
+      "summary_zh": "OpenRouter 将对流经其服务的所有推理请求进行儿童性虐待材料（CSAM）筛查，筛查在请求处理过程中实时进行；被标记的内容可能被保留以供人工复核，并在法律要求时报告与保全。",
+      "key_points_zh": [
+        "覆盖所有流经 OpenRouter 的推理请求。",
+        "筛查在请求处理过程中实时进行。",
+        "被标记内容可能保留供人工复核，并依法报告。"
+      ],
+      "importance_reason_zh": "平台级内容筛查会改变开发者对请求隐私与内容留存的预期。",
+      "title_en": "OpenRouter screens inference requests for CSAM",
+      "summary_en": "OpenRouter will screen all inference requests passing through its service for child sexual abuse material (CSAM). Screening happens in flight during request processing; content flagged as potential CSAM may be retained for human review, with reporting and preservation where required by law.",
+      "key_points_en": [
+        "Covers all inference requests passing through OpenRouter.",
+        "Screening runs in flight during request processing.",
+        "Flagged content may be retained for review and reported where required."
+      ],
+      "importance_reason_en": "Platform-level screening changes developer expectations around request privacy and content retention.",
+      "published_at": "2026-10-27T00:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "openrouter-official",
+          "content_id": "https://openrouter.ai/blog/announcements/csam-screening/",
+          "url": "https://openrouter.ai/blog/announcements/csam-screening/",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-2-35-org-controls",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Kiro CLI 2.35 增加提权警告与组织级工具控制",
+      "summary_zh": "Kiro CLI 2.35 在以 root 或 Administrator 启动时发出警告，并让 V3 会话遵循组织的 MCP 与 Web 工具设置；还支持从长回答跳回提示、显示注册表隐藏的 MCP 服务器，并修复模型回退、会话恢复、听写与 MCP 连接问题。",
+      "key_points_zh": [
+        "以 root/Administrator 启动时发出警告。",
+        "V3 会话遵循组织 MCP 与 Web 工具策略。",
+        "显示被注册表隐藏的 MCP 服务器，并修复恢复/听写问题。"
+      ],
+      "importance_reason_zh": "提权警告与组织策略落地，关系到企业环境中 CLI 的合规使用。",
+      "title_en": "Kiro CLI 2.35 adds privilege warnings and organization controls",
+      "summary_en": "Kiro CLI 2.35 warns when the CLI starts as root or Administrator and makes V3 sessions follow the organization's MCP and web tool settings. It also allows jumping back to the prompt from a long answer in fullscreen, shows which MCP servers the registry hid, and fixes model fallback, session resume, dictation and MCP connection issues.",
+      "key_points_en": [
+        "Warns when started as root or Administrator.",
+        "V3 sessions follow organization MCP and web-tool settings.",
+        "Shows registry-hidden MCP servers and fixes resume/dictation issues."
+      ],
+      "importance_reason_en": "Privilege warnings and organization-policy enforcement affect compliant CLI use in enterprises.",
+      "published_at": "2026-10-27",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/2-35",
+          "url": "https://kiro.dev/changelog/cli/2-35",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-gsa-partnership",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "Anthropic 扩大与 GSA 合作，政府客户享 40% 折扣",
+      "summary_zh": "Anthropic 扩大与美国 GSA 的合作，向政府客户提供 Claude Enterprise、Claude for Government 与 Claude API 的 40% 折扣。折扣首次覆盖所有产品面，并延伸至州、地方、部落与领地政府；约 500 家美国联邦、州与地方政府机构已在使用 Claude。",
+      "key_points_zh": [
+        "Claude Enterprise、Government 与 API 统一 40% 折扣。",
+        "首次覆盖所有产品面，并延伸至州、地方、部落与领地政府。",
+        "约 500 家美国联邦、州与地方政府机构已在使用 Claude。"
+      ],
+      "importance_reason_zh": "统一折扣降低了政府机构采用 Claude 的采购门槛，也加剧了公共部门 AI 合同的竞争。",
+      "title_en": "Anthropic expands GSA partnership with 40% government discount",
+      "summary_en": "Anthropic expanded its partnership with the GSA through an agreement giving government partners a 40% discount on Claude Enterprise, Claude for Government and the Claude API. For the first time the discount applies across every product surface and extends to state, local, tribal and territorial governments. About 500 US federal, state and local government organizations now use Claude.",
+      "key_points_en": [
+        "A 40% discount across Claude Enterprise, Government and the API.",
+        "First time the discount covers every product surface, including state and local governments.",
+        "About 500 US government organizations now use Claude."
+      ],
+      "importance_reason_en": "A uniform discount lowers procurement barriers for government adoption and intensifies competition for public-sector AI contracts.",
+      "published_at": "2026-10-27",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:24:32+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/expanding-partnership-gsa",
+          "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+          "collected_at": "2026-11-08T06:24:32+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "frontiercode-2-0",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Cognition 发布 FrontierCode 2.0 编码基准",
+      "summary_zh": "Cognition 发布 FrontierCode 2.0，扩大仓库与任务类型覆盖（含安全补丁和性能优化），提高代码可合并性标准。与 1.1 相比，参考解平均修改的文件多 67%、代码行多 89%，所在代码库规模大 25%。",
+      "key_points_zh": [
+        "任务覆盖更多仓库，并加入安全补丁与性能优化。",
+        "评分更强调正确性、设计与彻底性。",
+        "参考解平均多改 67% 文件、89% 代码行，代码库大 25%。"
+      ],
+      "importance_reason_zh": "基准难度与任务分布更接近生产代码审查，会影响编码代理的能力评估口径。",
+      "title_en": "Cognition releases FrontierCode 2.0 coding benchmark",
+      "summary_en": "Cognition released FrontierCode 2.0, broadening repository and task coverage to include security patches and performance optimizations and raising mergeability standards. Reference solutions modify 67% more files and 89% more lines on average than FrontierCode 1.1, in codebases 25% larger.",
+      "key_points_en": [
+        "Broader repository coverage, including security patches and performance work.",
+        "Stricter correctness, design and thoroughness criteria.",
+        "Reference solutions touch 67% more files and 89% more lines in 25% larger codebases."
+      ],
+      "importance_reason_en": "A harder benchmark with a production-like task mix changes how coding-agent capability is measured.",
+      "published_at": "2026-10-27",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:24:32+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "cognition-blog",
+          "content_id": "https://cognition.com/blog/frontier-code-2.0",
+          "url": "https://cognition.com/blog/frontier-code-2.0",
+          "collected_at": "2026-11-08T06:24:32+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-311",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Claude Code 2.1.311 让 ultrathink 使用 xhigh 努力度",
+      "summary_zh": "Claude Code 2.1.311 让交互终端中的 ultrathink 以 xhigh 努力度运行当前轮次，支持 Opus 5.5、Sonnet 5.5、Haiku 5.5 与 Fable 5.1；新增自托管 runner 的 --hold-idle-file/--max-hold-min、VS Code 代码块语法着色与 Claude Tag 技能使用视图，并调整 JSON 输出的控制字符转义。",
+      "key_points_zh": [
+        "ultrathink 在支持模型上以 xhigh 努力度运行。",
+        "自托管 runner 可保留空闲会话以等待宿主机进程。",
+        "VS Code 增加代码块语法着色；Claude Tag 显示技能使用情况。"
+      ],
+      "importance_reason_zh": "努力度与 runner 空闲策略的变化，会影响长任务的推理质量与资源占用。",
+      "title_en": "Claude Code 2.1.311 runs ultrathink at xhigh effort",
+      "summary_en": "Claude Code 2.1.311 makes ultrathink run its turn at xhigh effort in the interactive terminal on Opus 5.5, Sonnet 5.5, Haiku 5.5 and Fable 5.1. It also adds --hold-idle-file and --max-hold-min for self-hosted runners, syntax coloring for code blocks in VS Code, a Claude Tag skills view, and escapes control characters in JSON output.",
+      "key_points_en": [
+        "Ultrathink runs at xhigh effort on supported models.",
+        "Self-hosted runners can hold an idle session for host processes.",
+        "VS Code code-block coloring and Claude Tag skill usage reporting."
+      ],
+      "importance_reason_en": "Changes to effort levels and runner idle policy affect reasoning quality and resource use on long tasks.",
+      "published_at": "2026-10-26T22:02:28+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:07:38+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-311",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-311",
+          "collected_at": "2026-11-08T06:07:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gpt-6-1-terra",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "OpenAI 发布 GPT-6.1 Terra，主打大规模计算机使用",
+      "summary_zh": "OpenAI 发布 GPT-6.1 Terra，称其面向快速、可靠的大规模计算机使用。模型提供 105 万 token 上下文和 12.8 万 token 最大输出，API 定价为每百万输入/输出 token 1 美元/5 美元，约为 GPT-5.6 Terra 与 GPT-6.1 Sol 的一半。",
+      "key_points_zh": [
+        "105 万 token 上下文，最大输出 12.8 万 token。",
+        "API 价格 1/5 美元每百万 token，较同级前代低约 50%。",
+        "已加入 Codex 内置、Google Vertex AI 与 Amazon Bedrock 模型目录。"
+      ],
+      "importance_reason_zh": "更低的单 token 成本叠加长上下文，会直接改变长程代理与批量计算机使用任务的成本结构。",
+      "title_en": "OpenAI releases GPT-6.1 Terra for computer use at scale",
+      "summary_en": "OpenAI released GPT-6.1 Terra, positioned for fast and capable computer use at scale. It offers a 1.05M-token context window and up to 128K output tokens, priced at $1/$5 per million input/output tokens, about half the price of GPT-5.6 Terra and GPT-6.1 Sol.",
+      "key_points_en": [
+        "1.05M-token context and up to 128K output tokens.",
+        "API pricing of $1/$5 per million tokens, roughly 50% below comparable predecessors.",
+        "Added to the built-in Codex, Google Vertex AI and Amazon Bedrock model catalogs."
+      ],
+      "importance_reason_en": "Lower per-token cost combined with long context directly changes the economics of long-horizon agents and bulk computer-use work.",
+      "published_at": "2026-10-26T18:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:07:27+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/introducing-gpt-6-1-terra",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+          "collected_at": "2026-11-08T06:07:27+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "mimo-code-0-1-16",
+      "entity_ids": [
+        "mimo"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "MiMo Code 0.1.16 移除旧版 Compose 与 Orchestrator",
+      "summary_zh": "MiMo Code 0.1.16 移除旧版 Compose 主代理、内置 workflow 与 compose:* 技能，复杂任务改用 build 模式下的 /compose-next（clarify → spec → implement → verify → review → finish）；MCP 工具改为懒加载；实验性 Orchestrator 模式被移除。Claude 会话导入与 agent-CLI 技能需通过环境变量显式启用。",
+      "key_points_zh": [
+        "旧版 Compose 与 compose:* 技能不再提供，改用 /compose-next。",
+        "MCP 工具按需发现并懒加载。",
+        "实验性 Orchestrator 移除；Claude 会话导入与 agent-CLI 技能改为显式启用。"
+      ],
+      "importance_reason_zh": "移除多套旧工作流会改变现有用户的默认路径，需要迁移到 build 模式。",
+      "title_en": "MiMo Code 0.1.16 removes legacy Compose and Orchestrator",
+      "summary_en": "MiMo Code 0.1.16 retires the legacy Compose agent, its built-in workflow and the compose:* skill set; complex work moves to /compose-next on the build agent (clarify, spec, implement, verify, review, finish). MCP tools now load lazily, the experimental Orchestrator mode is removed, and Claude session import plus agent-CLI skills require explicit environment flags.",
+      "key_points_en": [
+        "Legacy Compose and compose:* skills are replaced by /compose-next on the build agent.",
+        "MCP tools are discovered on demand and loaded lazily.",
+        "Orchestrator is removed; Claude import and agent-CLI skills become opt-in."
+      ],
+      "importance_reason_en": "Removing several older workflows changes the default path for existing users and requires migration to build mode.",
+      "published_at": "2026-10-26T10:01:53Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:08:12+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "mimo-releases",
+          "content_id": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.16",
+          "url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.16",
+          "collected_at": "2026-11-08T06:08:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-7-8-18",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kilo Code 7.8.18 通过本地 API 暴露云会话",
+      "summary_zh": "Kilo Code 7.8.18 通过本地 Kilo API 暴露托管云会话，便于编辑器接入；还修复 VS Code 1.143 中复制选中聊天文本会清除选择、焦点跳转的问题，并升级 DOMPurify 与 vite 以处理安全告警。",
+      "key_points_zh": [
+        "本地 Kilo API 可访问托管云会话。",
+        "修复 VS Code 1.143 复制聊天文本的选择/焦点问题。",
+        "升级 DOMPurify 与 vite 修复已知安全问题。"
+      ],
+      "importance_reason_zh": "云会话的本地 API 接入与依赖安全修复，影响编辑器集成和供应链安全。",
+      "title_en": "Kilo Code 7.8.18 exposes cloud sessions through the local API",
+      "summary_en": "Kilo Code 7.8.18 exposes hosted cloud sessions through the local Kilo API so editors can connect to them. It also fixes copying selected chat text in VS Code 1.143 clearing the selection and moving focus, and updates DOMPurify and vite to address security advisories.",
+      "key_points_en": [
+        "Hosted cloud sessions are reachable through the local Kilo API.",
+        "Fixes chat-text copy selection and focus in VS Code 1.143.",
+        "Updates DOMPurify and vite for security advisories."
+      ],
+      "importance_reason_en": "Local API access to cloud sessions and dependency security fixes affect editor integration and supply-chain safety.",
+      "published_at": "2026-10-26T09:14:38Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.18",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.18",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "cline-4-1-26",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Cline 4.1.26 为云任务增加 Local/Cloud 模型切换",
+      "summary_zh": "Cline 4.1.26 在启用云会话时于 Settings > API Configuration 提供 Local/Cloud 切换，云任务可使用单独保存的 Cline 模型；启动或恢复云沙箱会显示包含仓库、分支与步骤的进度卡。模型请求重试次数从 5 降到 3，并刷新模型目录与多个供应商的默认模型。",
+      "key_points_zh": [
+        "云任务可单独选择 Cline 模型，与本地模型分开保存。",
+        "云沙箱启动/恢复显示进度卡。",
+        "模型请求最多重试 3 次；模型目录新增 CommandCode、Reflection 等供应商。"
+      ],
+      "importance_reason_zh": "云/本地模型分离与更少的重试，会影响团队在云沙箱中的成本与失败恢复行为。",
+      "title_en": "Cline 4.1.26 adds Local/Cloud model selection for cloud tasks",
+      "summary_en": "Cline 4.1.26 adds a Local/Cloud toggle in Settings > API Configuration when cloud sessions are enabled, letting cloud tasks use a separately saved Cline model. Starting or resuming a cloud sandbox shows a progress card with the repo, branch and steps. Model requests now retry at most three times instead of five, and the model catalog and several provider defaults were refreshed.",
+      "key_points_en": [
+        "Cloud tasks can use a separately saved Cline model.",
+        "Cloud sandbox startup shows a repo/branch/step progress card.",
+        "Model requests retry at most three times; the catalog adds CommandCode, Reflection and other providers."
+      ],
+      "importance_reason_en": "Separating cloud and local models and reducing retries affects cost and failure recovery in cloud sandboxes.",
+      "published_at": "2026-10-26T09:06:51Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/v4.1.26",
+          "url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "cline-desktop-0-0-49",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Cline Desktop 0.0.49 增加文件改动面板与集成终端",
+      "summary_zh": "Cline Desktop 0.0.49 新增 Changes 按钮与文件改动面板（可按最后一轮或整个会话查看 diff）、项目文件树、集成终端、PR 状态菜单，以及管理 Ollama/LM Studio 本地模型的设置页。快捷键可配置，Hub 启动失败时会提供重试与导出诊断。",
+      "key_points_zh": [
+        "Changes 面板可按轮次或整个会话查看文件 diff。",
+        "新增项目文件树、集成终端与 PR 状态菜单。",
+        "新增本地模型设置页；Hub 失败可重试/导出诊断。"
+      ],
+      "importance_reason_zh": "桌面端补上 diff、文件树与终端，减少了在代理与编辑器之间切换的成本。",
+      "title_en": "Cline Desktop 0.0.49 adds a changes pane and integrated terminal",
+      "summary_en": "Cline Desktop 0.0.49 adds a Changes button and pane showing files changed in the last turn or the whole session with diffs, a project file tree with a read-only tabbed viewer, an integrated terminal, a pull request status menu, and a settings page for Ollama and LM Studio models. Keybindings are configurable, and a failed Hub start now offers retry and diagnostics export.",
+      "key_points_en": [
+        "Changes pane shows diffs by turn or for the whole session.",
+        "Adds a project file tree, integrated terminal and PR status menu.",
+        "Local model settings plus Hub retry/diagnostics."
+      ],
+      "importance_reason_en": "Diffs, a file tree and a terminal in the desktop app reduce switching between the agent and the editor.",
+      "published_at": "2026-10-26T04:49:44Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/desktop-v0.0.49",
+          "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.49",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "cline-sdk-0-2-0",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Cline SDK 0.2.0 改为重新附着运行中的会话",
+      "summary_zh": "Cline SDK 0.2.0 在会话已有运行时改为重新附着而不是替换运行时，hub 会记录每个注册能力的客户端并把请求发给仍连接的客户端；仅流式输出推理后断线的回合会重试，模型请求重试上限降为 3。Gemini 供应商不再发送原生 Google Search，自动压缩不再对上下文上限未知的模型运行。",
+      "key_points_zh": [
+        "启动已有运行的会话会重新附着，避免运行时被替换。",
+        "hub 跟踪每个能力的客户端，断连时快速失败。",
+        "仅推理后断线的回合会重试；Gemini 不再发送原生搜索。"
+      ],
+      "importance_reason_zh": "重新附着与快速失败提升了多客户端协作的可靠性，也改变了 Gemini 提供商的行为。",
+      "title_en": "Cline SDK 0.2.0 reattaches to running sessions",
+      "summary_en": "Cline SDK 0.2.0 reattaches to a live session that already has a run instead of replacing its runtime. The hub records every client that registered a capability and sends each request to the first one still connected, failing quickly if none remain. Turns that drop after streaming only reasoning are retried, model requests retry at most three times, the Gemini provider no longer sends native Google Search, and auto-compaction skips models with an unknown context limit.",
+      "key_points_en": [
+        "Starting a session with an active run reattaches instead of replacing it.",
+        "The hub routes requests to connected capability clients and fails fast.",
+        "Reasoning-only dropped turns retry; Gemini drops native search."
+      ],
+      "importance_reason_en": "Reattachment and fast failure improve reliability for multi-client collaboration, while changing Gemini provider behavior.",
+      "published_at": "2026-10-26T03:34:08Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-08T06:08:07+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.2.0",
+          "url": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.2.0",
+          "collected_at": "2026-11-08T06:08:07+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-s1-ipo",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Anthropic 提交 S-1，拟以代码 ANT 在纳斯达克上市",
+      "summary_zh": "Anthropic 向美国 SEC 提交 S-1 注册声明，拟在纳斯达克全球精选市场以代码“ANT”上市 A 类普通股。发行股数与价格区间尚未确定，注册声明尚未生效，发行只能通过招股说明书进行。",
+      "key_points_zh": [
+        "已向 SEC 提交 S-1 注册声明。",
+        "拟在纳斯达克全球精选市场上市，代码 ANT。",
+        "发行股数与价格区间未定，注册声明尚未生效。"
+      ],
+      "importance_reason_zh": "IPO 申报把公司的财务与治理结构置于公开审视之下，也会影响其算力与产品投入的融资节奏。",
+      "title_en": "Anthropic files S-1 for proposed Nasdaq IPO under ANT",
+      "summary_en": "Anthropic filed a registration statement on Form S-1 with the SEC for a proposed initial public offering of Class A common stock. It intends to list on the Nasdaq Global Select Market under the symbol ANT. The number of shares and the price range have not been determined, and the registration statement has not yet become effective; the offering will be made only by prospectus.",
+      "key_points_en": [
+        "Filed an S-1 registration statement with the SEC.",
+        "Intends to list on Nasdaq under the symbol ANT.",
+        "Share count and price range are undetermined; the registration is not yet effective."
+      ],
+      "importance_reason_en": "An IPO filing exposes finances and governance to public scrutiny and affects the financing cadence behind compute and product investment.",
+      "published_at": "2026-10-26",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:24:32+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/s1-sec",
+          "url": "https://www.anthropic.com/news/s1-sec",
+          "collected_at": "2026-11-08T06:24:32+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "devin-security-2026-10",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature"
+      ],
+      "title_zh": "Cognition 升级 Devin Security 并投入数亿美元额度",
+      "summary_zh": "Cognition 升级 Devin Security，使用 Claude Mythos 等前沿网络安全模型进行深度扫描，按客户威胁模型评估可利用性与潜在损失，并在真实虚拟机上编写、验证和端到端测试修复。公司同时承诺投入数亿美元的 Devin 额度，用于免费扫描与修复。",
+      "key_points_zh": [
+        "深度扫描由 Claude Mythos 等前沿安全模型驱动。",
+        "按客户威胁模型区分紧急风险与噪声。",
+        "在真实 VM 上并行验证修复，并投入数亿美元额度。"
+      ],
+      "importance_reason_zh": "把漏洞发现、排序与修复验证放在同一代理流程中，可能压缩企业安全团队的修复周期。",
+      "title_en": "Cognition upgrades Devin Security and commits hundreds of millions in credits",
+      "summary_en": "Cognition upgraded Devin Security with deep scans powered by Claude Mythos and other frontier cyber models. It assesses exploitability and potential damage against a customer-specific threat model, then writes, validates and end-to-end tests fixes on real VMs in parallel. Cognition also committed hundreds of millions of dollars in Devin credits for free scans and remediation.",
+      "key_points_en": [
+        "Deep scans powered by Claude Mythos and other frontier cyber models.",
+        "Prioritizes findings using a customer-specific threat model.",
+        "Validates fixes on real VMs in parallel, backed by hundreds of millions in credits."
+      ],
+      "importance_reason_en": "Putting discovery, prioritization and fix validation in one agent workflow could shorten enterprise remediation cycles.",
+      "published_at": "2026-10-26",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-08T06:24:32+00:00",
+      "updated_at": "2026-11-08T06:50:25+00:00",
+      "sources": [
+        {
+          "source_id": "cognition-blog",
+          "content_id": "https://cognition.com/blog/devin-security",
+          "url": "https://cognition.com/blog/devin-security",
+          "collected_at": "2026-11-08T06:24:32+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "gemini-cli-nightly-20261024",
       "entity_ids": [

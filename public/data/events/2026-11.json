@@ -1,7 +1,1946 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "2eec17bb7737e8d8",
+  "snapshot_id": "1a7cdcce8be7625d",
   "events": [
+    {
+      "id": "claude-code-2-1-325-20261113",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "Claude Code 2.1.325 收紧沙箱 Bash 与技能运行权限",
+      "summary_zh": "Claude Code 2.1.325 默认让沙箱内的 Bash 命令走常规权限流程，需设置 sandbox.autoAllowBashIfSandboxed: true 才继续免提示；沙箱拒绝写入外部目录中的 .claude 设置、技能、代理、命令与 Hook；定时任务与 /loop 运行声明 allowed-tools 或 hooks 的技能前需要确认。VS Code 增加提示建议与不生成 API Key 的控制台登录。",
+      "key_points_zh": [
+        "沙箱内 Bash 默认走常规权限流程。",
+        "外部目录中的 .claude 配置、技能与 Hook 拒绝写入。",
+        "运行带 allowed-tools 或 hooks 的技能前需确认。"
+      ],
+      "importance_reason_zh": "免提示范围收窄会改变既有无人值守流程的行为，升级前需要补充显式允许规则。",
+      "title_en": "Claude Code 2.1.325 tightens sandbox Bash and skill permissions",
+      "summary_en": "Claude Code 2.1.325 makes sandboxed Bash commands follow the normal permission flow by default; sandbox.autoAllowBashIfSandboxed: true restores prompt-free runs. The sandbox now refuses writes to .claude settings, skills, agents, commands and hooks in added directories, and scheduled tasks or /loop ask before running a skill that declares allowed-tools or hooks. VS Code gains prompt suggestions and a console sign-in that creates no API key.",
+      "key_points_en": [
+        "Sandboxed Bash now follows the normal permission flow by default.",
+        "Writes to .claude config, skills and hooks in added directories are refused.",
+        "Skills declaring allowed-tools or hooks need confirmation before unattended runs."
+      ],
+      "importance_reason_en": "Narrower prompt-free scope changes existing unattended flows, so explicit allow rules are needed before upgrading.",
+      "published_at": "2026-11-13T21:02:14+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:40+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-325",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-325",
+          "collected_at": "2026-11-15T14:19:40+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-model-deprecations-dec2026-20261113",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "availability"
+      ],
+      "title_zh": "GitHub Copilot 将于 12 月 14 日下线六款模型",
+      "summary_zh": "GitHub 宣布 2026 年 12 月 14 日在所有 Copilot 体验（含聊天、内联编辑、ask 与 agent 模式、代码补全）下线 Claude Fable 5、Claude Haiku 4.5、Gemini 3.8 Flash、Gemini 4 Argon、Grok 4.6 与 Kimi K3，并给出替代模型，Kimi K3 的替代尚未公布。Claude Haiku 4.5 对年度订阅的个人用户继续可用；企业管理员需确认替代模型已启用。",
+      "key_points_zh": [
+        "六款模型统一在 2026 年 12 月 14 日下线。",
+        "替代方案为 Fable 5.2、Haiku 5.5、Gemini 4 Hydrogen、Gemini 4 Carbon 与 Grok 4.7。",
+        "Kimi K3 的替代模型尚未公布。",
+        "Claude Haiku 4.5 对年度订阅个人用户保留。"
+      ],
+      "importance_reason_zh": "固定的下线日期要求团队在 12 月中旬前完成模型与工作流迁移，并检查企业策略是否自动启用替代模型。",
+      "title_en": "GitHub Copilot will retire six models on December 14",
+      "summary_en": "GitHub will retire Claude Fable 5, Claude Haiku 4.5, Gemini 3.8 Flash, Gemini 4 Argon, Grok 4.6 and Kimi K3 across all Copilot experiences, including chat, inline edits, ask and agent modes and code completions, on December 14, 2026. It names successor models except for Kimi K3. Claude Haiku 4.5 stays available to individual subscribers on annual plans, and enterprise administrators must confirm that the successors are enabled.",
+      "key_points_en": [
+        "All six models retire on December 14, 2026.",
+        "Suggested successors are Fable 5.2, Haiku 5.5, Gemini 4 Hydrogen, Gemini 4 Carbon and Grok 4.7.",
+        "No successor is announced for Kimi K3.",
+        "Claude Haiku 4.5 remains for individual annual subscribers."
+      ],
+      "importance_reason_en": "A fixed retirement date forces teams to migrate models and workflows before mid-December and to check whether enterprise policies auto-enable the successors.",
+      "published_at": "2026-11-13T20:40:05+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:56+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+          "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+          "collected_at": "2026-11-15T14:19:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-ghes-app-20261113",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "GitHub Copilot 应用正式支持 GitHub Enterprise Server",
+      "summary_zh": "GitHub Copilot 应用的 GHES 支持结束预览转为正式可用：用户可添加 GHES 账号以处理远程仓库、议题与拉取请求，需先登录 GitHub.com 或 GHE.com。该功能要求应用 1.2.0 及以上版本，GHES 不支持云会话。",
+      "key_points_zh": [
+        "GHES 支持由预览转为正式可用。",
+        "需先登录 GitHub.com 或 GHE.com 账号。",
+        "要求 1.2.0 及以上版本，且不支持云会话。"
+      ],
+      "importance_reason_zh": "自托管 GitHub 的企业可以统一在 Copilot 应用内工作，但云会话仍不可用，需保留本地执行路径。",
+      "title_en": "GitHub Copilot app supports GitHub Enterprise Server",
+      "summary_en": "GitHub Enterprise Server support in the GitHub Copilot app moved from an opt-in preview to general availability: users can add a GHES account to work with remote repositories, issues and pull requests after signing in with a GitHub.com or GHE.com account. It requires app version 1.2.0 or later, and cloud sessions are not available for GHES.",
+      "key_points_en": [
+        "GHES support moved from preview to general availability.",
+        "Requires a GitHub.com or GHE.com sign-in first.",
+        "Needs app 1.2.0+; cloud sessions are unavailable for GHES."
+      ],
+      "importance_reason_en": "Enterprises on self-hosted GitHub can consolidate work in the Copilot app, but without cloud sessions they still need a local execution path.",
+      "published_at": "2026-11-13T18:27:13+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:56+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app",
+          "url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app",
+          "collected_at": "2026-11-15T14:19:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-2-6-2-20261113",
+      "entity_ids": [
+        "kimi-code",
+        "moonshot"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "feature"
+      ],
+      "title_zh": "Kimi Code 2.6.2 增加自定义搜索地址并修复长会话加载",
+      "summary_zh": "Kimi Code 2.6.1 与 2.6.2 修复长会话重新打开时的数秒加载延迟，以及工具结果含注记、错误或耗时头时以空回复卡住的压缩问题。2.6.2 允许自定义注册表（api.json）提供方配置 search_url 与 feedback_url，供 WebSearch 与 /feedback 使用，并停止接受纯文本 /feedback 提交。",
+      "key_points_zh": [
+        "修复长会话重开时的数秒加载延迟。",
+        "修复含注记的工具结果导致压缩失效、回复为空。",
+        "自定义注册表可配置 search_url 与 feedback_url。"
+      ],
+      "importance_reason_zh": "长会话卡死直接影响日常使用，自定义搜索地址则让私有部署可以接入自有检索服务。",
+      "title_en": "Kimi Code 2.6.2 adds custom search URLs and fixes long-session loading",
+      "summary_en": "Kimi Code 2.6.1 and 2.6.2 fix multi-second loading delays when reopening long sessions and a stall where sessions with tool result notes, errors or timing headers returned empty replies instead of compacting. 2.6.2 also lets custom registry (api.json) providers set search_url and feedback_url for WebSearch and /feedback, and stops accepting text-only /feedback submissions.",
+      "key_points_en": [
+        "Long sessions no longer take seconds to reopen.",
+        "Tool result notes no longer break compaction into empty replies.",
+        "Custom registries can set search_url and feedback_url."
+      ],
+      "importance_reason_en": "Session stalls hit daily use, and custom search URLs let private deployments point at their own retrieval service.",
+      "published_at": "2026-11-13T17:32:14Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.6.2",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.6.2",
+          "collected_at": "2026-11-15T14:19:46+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.6.1",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.6.1",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-wallet-20261113",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "OpenAI 推出 ChatGPT Wallet，让智能体在批准后付款",
+      "summary_zh": "OpenAI 推出 ChatGPT Wallet，让 ChatGPT Work、Codex 与 dots 中的智能体在用户批准后完成购买，并沿用现有银行卡保护。官方摘要未说明支持地区、单笔限额或可用商户范围。",
+      "key_points_zh": [
+        "覆盖 ChatGPT Work、Codex 与 dots 中的智能体。",
+        "每笔付款需要用户批准。",
+        "沿用现有卡片保护机制。",
+        "未公布地区、限额与商户范围。"
+      ],
+      "importance_reason_zh": "代理从给出建议走向完成交易，支付授权与风控边界会成为企业采用时的核心考量。",
+      "title_en": "OpenAI launches ChatGPT Wallet for agent purchases with user approval",
+      "summary_en": "OpenAI launched ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex and dots to complete purchases with user approval and existing card protections. The summary does not name supported regions, per-purchase limits or which merchants work.",
+      "key_points_en": [
+        "Covers agents in ChatGPT Work, Codex and dots.",
+        "Every purchase requires user approval.",
+        "Existing card protections still apply.",
+        "Regions, limits and merchant coverage were not disclosed."
+      ],
+      "importance_reason_en": "Agents moving from advice to completed transactions makes authorization and fraud boundaries the central adoption question.",
+      "published_at": "2026-11-13T15:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:22+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/introducing-chatgpt-wallet",
+          "url": "https://openai.com/index/introducing-chatgpt-wallet",
+          "collected_at": "2026-11-15T14:19:22+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-chatgpt-business-signin-20261113",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "pricing",
+        "compatibility"
+      ],
+      "title_zh": "Kilo 的 Sign in with ChatGPT 支持 Business 套餐",
+      "summary_zh": "Kilo by Anaconda 的 Sign in with ChatGPT 现支持 ChatGPT Business 套餐，团队可在 Kilo Desktop、IDE 扩展、Cloud Agents 与 CLI 中直接使用已有 ChatGPT 额度，无需管理单独的 API Key。此前该功能已支持 Plus 与 Pro 账户。",
+      "key_points_zh": [
+        "支持 ChatGPT Business 套餐登录。",
+        "覆盖 Desktop、IDE 扩展、Cloud Agents 与 CLI。",
+        "沿用已有 ChatGPT 额度，无需单独 API Key。"
+      ],
+      "importance_reason_zh": "组织级订阅接入减少了团队分发 API Key 的运维与安全负担。",
+      "title_en": "Kilo's Sign in with ChatGPT supports Business plans",
+      "summary_en": "Sign in with ChatGPT in Kilo by Anaconda now supports ChatGPT Business plans, so teams can use existing ChatGPT allowances in Kilo Desktop, IDE extensions, Cloud Agents and the CLI without separate API keys. The feature previously supported Plus and Pro accounts.",
+      "key_points_en": [
+        "Supports signing in with ChatGPT Business plans.",
+        "Works in Desktop, IDE extensions, Cloud Agents and the CLI.",
+        "Uses existing ChatGPT allowances instead of separate API keys."
+      ],
+      "importance_reason_en": "Organization-level subscription access reduces the operational and security burden of distributing API keys.",
+      "published_at": "2026-11-13T14:04:08+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/announcing-business-plan-support",
+          "url": "https://blog.kilo.ai/p/announcing-business-plan-support",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1-0-111-20261113",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "api"
+      ],
+      "title_zh": "Copilot CLI 1.0.111 用正则配置企业权限规则",
+      "summary_zh": "Copilot CLI 1.0.111 为企业托管的 Shell、Bash 与 PowerShell 权限规则加入正则表达式支持，并新增 --host-allow-session-creation，让远程客户端在一次启动中创建会话而不改动已保存设置；同时修复 MCP OAuth 重复重连、取消授权后仍显示 needs-auth 等问题。",
+      "key_points_zh": [
+        "企业托管权限规则支持正则表达式。",
+        "--host-allow-session-creation 仅对本次启动生效。",
+        "修复 MCP OAuth 重复重连与授权取消后的状态。"
+      ],
+      "importance_reason_zh": "正则规则让企业能用少量策略覆盖大量命令，但也要求更谨慎的规则审查。",
+      "title_en": "Copilot CLI 1.0.111 adds regex enterprise permission rules",
+      "summary_en": "Copilot CLI 1.0.111 adds regular expression support to enterprise-managed Shell, Bash and PowerShell permission rules, and adds --host-allow-session-creation so remote clients can create sessions for one launch without changing saved settings. It also fixes duplicate MCP OAuth reconnects and servers staying in needs-auth after a canceled authorization.",
+      "key_points_en": [
+        "Regex support in enterprise-managed permission rules.",
+        "--host-allow-session-creation applies only to the current launch.",
+        "Fixes duplicate MCP OAuth reconnects and post-cancel auth state."
+      ],
+      "importance_reason_en": "Regex rules let enterprises cover many commands with few policies, but raise the stakes on rule review.",
+      "published_at": "2026-11-13T13:40:16Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.111",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.111",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "opencode-2-3-0-20261113",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "OpenCode 2.3.0 让子代理默认在后台运行",
+      "summary_zh": "OpenCode 2.3.0 让子代理始终在后台运行，立即返回会话 ID 并在空闲时向父会话汇报，父会话可继续工作的同时并发运行多个子代理；TUI 默认把连续工具调用与思考折叠为一行活动记录，可通过 session.verbosity 恢复。还增加实验性 MCP 事件、shell 超时转后台、Windows 本地命令走 process daemon 与提供方双向 TLS 客户端证书。",
+      "key_points_zh": [
+        "子代理默认后台运行并立即返回会话 ID。",
+        "TUI 默认折叠工具调用与思考为活动行。",
+        "新增实验性 MCP 事件与 shell 超时转后台开关。"
+      ],
+      "importance_reason_zh": "并发子代理成为默认行为，改变了长任务的等待方式，也提高了并行会话的资源占用。",
+      "title_en": "OpenCode 2.3.0 runs subagents in the background by default",
+      "summary_en": "OpenCode 2.3.0 makes subagents always run in the background: they return a session ID immediately, report back when idle, and several can run while the parent session keeps working. The TUI now folds each run of tool calls and thoughts into one activity row by default, restorable through session.verbosity. It also adds experimental MCP events, a flag to move timed-out shell commands to the background, Windows local commands through the process daemon, and mutual-TLS client certificates for providers.",
+      "key_points_en": [
+        "Subagents run in the background and return their session ID immediately.",
+        "The TUI folds tool calls and thoughts into one activity row by default.",
+        "Experimental MCP events and a shell-timeout background flag."
+      ],
+      "importance_reason_en": "Background subagents by default change how long tasks are awaited and raise the resource cost of parallel sessions.",
+      "published_at": "2026-11-13T08:55:07Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:02+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
+          "collected_at": "2026-11-15T14:19:02+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "mimo-code-0-1-17-20261113",
+      "entity_ids": [
+        "mimo"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "feature",
+        "capability"
+      ],
+      "title_zh": "MiMo Code 0.1.17 取消按模型名推断参数",
+      "summary_zh": "MiMo Code 0.1.17 移除按模型名推断行为的策略：上下文与输出上限、推理档位改从 models.dev 与用户配置读取，默认不再发送 temperature/top_p；GPT 模型不再自动切换到 Codex 风格提示词与工具集（可用 MIMOCODE_CODEX_MODE=true 开启），内置联网搜索改为通过 MIMOCODE_ENABLE_EXA=1 启用。另支持小米 API Key 与 Token Plan Key 同时登录，记忆检索支持中文子串。",
+      "key_points_zh": [
+        "上下文、输出上限与推理档位改由 models.dev 与配置决定。",
+        "默认不再发送 temperature 与 top_p。",
+        "Codex 模式与内置搜索都改为显式开启。"
+      ],
+      "importance_reason_zh": "默认行为整体收窄，现有工作流若依赖自动推断的档位或搜索，需要在配置中显式补回。",
+      "title_en": "MiMo Code 0.1.17 stops inferring settings from model names",
+      "summary_en": "MiMo Code 0.1.17 removes model-name heuristics: context and output limits and reasoning levels now come from models.dev and user config, and temperature/top_p are no longer sent by default. GPT models no longer switch to a Codex-style prompt and toolset automatically (set MIMOCODE_CODEX_MODE=true to opt in), and built-in web search is now opt-in via MIMOCODE_ENABLE_EXA=1. Xiaomi API and Token Plan keys can be signed in together, and memory search recalls Chinese substrings.",
+      "key_points_en": [
+        "Limits and reasoning levels come from models.dev and config.",
+        "temperature and top_p are no longer sent by default.",
+        "Codex mode and built-in search are now explicit opt-ins."
+      ],
+      "importance_reason_en": "Defaults narrow overall, so workflows relying on inferred levels or search must set them explicitly.",
+      "published_at": "2026-11-13T08:07:14Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:11+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "mimo-releases",
+          "content_id": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.17",
+          "url": "https://github.com/XiaomiMiMo/MiMo-Code/releases/tag/v0.1.17",
+          "collected_at": "2026-11-15T14:19:11+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-harness-0-2-2-rc3-20261113",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "capability",
+        "critical_fix"
+      ],
+      "title_zh": "DeepSeek Harness 0.2.2 rc 增加工作树审阅与 AgentTeam",
+      "summary_zh": "DeepSeek Harness 0.2.2-rc.2 与 rc.3 新增按分支、提交和文件类型审阅 Git worktree 改动并直接处理 GitHub 评审、子代理具名与多层协作（AgentTeam 可按会话开启）、桌面端切换正式版/开发版更新渠道；rc.3 增加实验性 DeepSeek 会话导入插件，并修复 Windows 桌面版应用内更新失败后无法自动重开的问题。",
+      "key_points_zh": [
+        "Git worktree 支持按分支、提交与文件类型审阅改动。",
+        "AgentTeam 按会话开启多层子代理协作。",
+        "rc.3 增加实验性 DeepSeek 会话导入插件。"
+      ],
+      "importance_reason_zh": "把评审流程与多层子代理纳入桌面客户端，候选版行为仍可能变化，适合先在小范围试点。",
+      "title_en": "DeepSeek Harness 0.2.2 release candidates add worktree review and AgentTeam",
+      "summary_en": "DeepSeek Harness 0.2.2-rc.2 and rc.3 add reviewing Git worktree changes by branch, commit and file type with direct handling of GitHub reviews, named multilayer subagents with AgentTeam enabled per session, and a desktop switch between stable and development update channels. rc.3 adds an experimental DeepSeek chat import plugin and fixes Windows desktop in-app updates that failed and left the app unable to reopen.",
+      "key_points_en": [
+        "Git worktree changes can be reviewed by branch, commit and file type.",
+        "AgentTeam enables multilayer subagent collaboration per session.",
+        "rc.3 adds an experimental DeepSeek chat import plugin."
+      ],
+      "importance_reason_en": "Bringing review and multilayer subagents into the desktop client is promising, but release-candidate behavior can still change, so pilots should stay small.",
+      "published_at": "2026-11-13T08:04:46Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:18:38+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-rc.3",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-rc.3",
+          "collected_at": "2026-11-15T14:18:38+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-rc.2",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.2-rc.2",
+          "collected_at": "2026-11-15T14:18:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-323-20261113",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.323 试验让 Claude 用 JavaScript 调用工具",
+      "summary_zh": "Claude Code 2.1.323 引入实验性 Code Mode：由 Claude 编写 JavaScript 调用工具，需手动开启，也可按组织关闭。插件新增 engines[\"claude-code\"] 版本范围，安装时选择符合范围的最新版本；claude plugin validate 增加 TypeScript Hook 类型检查与 $ 名词校验；长时 Hook 每 30 秒发送一次进度心跳。",
+      "key_points_zh": [
+        "Code Mode 让 Claude 写 JavaScript 调用工具，需手动开启。",
+        "插件可声明兼容的 Claude Code 版本范围。",
+        "plugin validate 检查 TypeScript Hook 与 $ 名词。"
+      ],
+      "importance_reason_zh": "工具调用改由代码编排，可能减少往返轮次，但也把插件与 Hook 的兼容性检查推到发布前。",
+      "title_en": "Claude Code 2.1.323 experiments with Claude writing JavaScript to call tools",
+      "summary_en": "Claude Code 2.1.323 adds experimental Code Mode, in which Claude writes JavaScript to call its tools. It is opt-in and can be disabled for an organization. Plugins can declare an engines[\"claude-code\"] version range, and install or update picks the newest version that fits. claude plugin validate now type-checks a plugin's TypeScript hooks module and validates the $ nouns a mod adds, and long-running hooks send a progress heartbeat every 30 seconds.",
+      "key_points_en": [
+        "Code Mode lets Claude write JavaScript to call tools, opt-in only.",
+        "Plugins can declare a compatible Claude Code version range.",
+        "plugin validate checks TypeScript hooks and $ nouns."
+      ],
+      "importance_reason_en": "Orchestrating tools from code can cut round trips, but pushes plugin and hook compatibility checks earlier into publishing.",
+      "published_at": "2026-11-13T00:24:37+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-323",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-323",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1-0-110-20261112",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.110 可在屏蔽对话框中回答密码提示",
+      "summary_zh": "Copilot CLI 1.0.110 实验性支持在屏蔽对话框中回答代理命令触发的 git、ssh 与 sudo 密码提示（需 /experimental on）；为屏幕阅读器补充当前会话与空闲状态播报；/mcp add 或 /mcp edit 遇到无效配置时保留原有配置并报错，/rewind 不再把后续轮次已恢复的文件计为已恢复。",
+      "key_points_zh": [
+        "实验性支持在屏蔽对话框回答 git、ssh、sudo 密码提示。",
+        "屏幕阅读器可识别当前会话与需要关注的会话。",
+        "无效 MCP 配置不再覆盖已有配置。"
+      ],
+      "importance_reason_zh": "把密码提示纳入代理流程会扩大自动化范围，同时把凭据暴露面集中到一个受控对话框。",
+      "title_en": "Copilot CLI 1.0.110 answers password prompts in a masked dialog",
+      "summary_en": "Copilot CLI 1.0.110 experimentally answers git, ssh and sudo password prompts from agent commands in a masked dialog, enabled with /experimental on. Screen readers now identify the current session and announce sessions that need attention or are idle. /mcp add or /mcp edit keeps the existing configuration when the file is invalid, and /rewind stops counting files that later turns already restored.",
+      "key_points_en": [
+        "Experimental masked dialog for git, ssh and sudo password prompts.",
+        "Screen readers announce the current session and attention states.",
+        "Invalid MCP configuration no longer overwrites the existing one."
+      ],
+      "importance_reason_en": "Bringing password prompts into the agent flow widens automation while concentrating credential exposure in one controlled dialog.",
+      "published_at": "2026-11-12T22:59:42Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.110",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.110",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-4-hydrogen-20261112",
+      "entity_ids": [
+        "google",
+        "antigravity",
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Google 发布 Gemini 4 Hydrogen，主打智能体编程",
+      "summary_zh": "Google 发布 Gemini 4 Hydrogen。GitHub 同日说明称这是 Google 最新的 Flash 模型，面向快速、高效的智能体编程、工具调用与多步工作流，指令遵循能力较 Gemini 3.8 Flash 有所提升。该模型当天在 GitHub Copilot 面向 Pro、Pro+、Max、Business 与 Enterprise 用户开放，按供应商标价计费；Google Antigravity 也发布了题为“Gemini 4 Hydrogen and Orchestrator”的公告。",
+      "key_points_zh": [
+        "GitHub 称其为 Google 最新 Flash 模型，面向智能体编程、工具调用与多步工作流。",
+        "指令遵循优于 Gemini 3.8 Flash。",
+        "Copilot 面向 Pro、Pro+、Max、Business 与 Enterprise 开放，按用量计费。",
+        "Antigravity 同日发布 Gemini 4 Hydrogen 与 Orchestrator 公告。"
+      ],
+      "importance_reason_zh": "Flash 档位更新直接影响高频代理与工具调用任务的成本，Copilot 也把它列为 Gemini 3.8 Flash 的替代模型。",
+      "title_en": "Google releases Gemini 4 Hydrogen, its latest Flash model",
+      "summary_en": "Google released Gemini 4 Hydrogen. In its same-day post, GitHub describes it as Google's latest Flash model, designed for fast, efficient agentic coding, tool use and multistep workflows, with improved instruction following over Gemini 3.8 Flash. It became generally available in GitHub Copilot that day for Pro, Pro+, Max, Business and Enterprise users, billed at provider list pricing, and Google Antigravity published a post titled \"Gemini 4 Hydrogen and Orchestrator\".",
+      "key_points_en": [
+        "GitHub calls it Google's latest Flash model, aimed at agentic coding, tool use and multistep workflows.",
+        "Improved instruction following over Gemini 3.8 Flash.",
+        "Available in Copilot to Pro, Pro+, Max, Business and Enterprise under usage-based billing.",
+        "Antigravity published a same-day Gemini 4 Hydrogen and Orchestrator post."
+      ],
+      "importance_reason_en": "A Flash-tier update changes the cost of high-volume agent and tool-calling work, and Copilot names it the replacement for Gemini 3.8 Flash.",
+      "published_at": "2026-11-12T18:00:50+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:11+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+          "collected_at": "2026-11-15T14:19:40+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "antigravity-blog",
+          "content_id": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity",
+          "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity",
+          "collected_at": "2026-11-15T14:19:11+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+          "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+          "collected_at": "2026-11-15T14:19:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-2-6-0-20261112",
+      "entity_ids": [
+        "kimi-code",
+        "moonshot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "api",
+        "compatibility"
+      ],
+      "title_zh": "Kimi Code 2.6.0 折叠工具调用并调整服务端接口",
+      "summary_zh": "Kimi Code 2.6.0 在全新界面中把连续工具调用与思考折叠为摘要行，可在 /settings 或 tui.toml 中选择折叠粒度；活动栏显示当前轮次与上一轮耗时；服务端 API 会话创建时携带代理配置、模型与思考等级，prompts 不再接受 profile。破坏性变更包括移除 transcript 相关 WebSocket 帧与 GET /sessions/{id}/transcript 端点。",
+      "key_points_zh": [
+        "连续工具调用与思考折叠为摘要行，可选粒度。",
+        "活动栏显示当前轮次与上一轮耗时。",
+        "服务端 API 改用 turns 帧，移除 transcript 端点。"
+      ],
+      "importance_reason_zh": "服务端接口移除旧 transcript 帧与端点，自建客户端的集成需要按新帧格式改造。",
+      "title_en": "Kimi Code 2.6.0 folds tool calls and reshapes server APIs",
+      "summary_en": "Kimi Code 2.6.0 folds consecutive tool calls and thinking into summary lines in the fullscreen UI, with folding density configurable in /settings or tui.toml. The activity bar shows how long the current turn has run and how long the last turn took. Server API sessions now carry their agent profile, model and thinking level at creation, and prompts no longer accept profile. Breaking changes remove the transcript WebSocket frames and the GET /sessions/{id}/transcript endpoints.",
+      "key_points_en": [
+        "Consecutive tool calls and thinking fold into summary lines with configurable density.",
+        "The activity bar shows current and previous turn durations.",
+        "Server APIs now stream turns frames; transcript endpoints are gone."
+      ],
+      "importance_reason_en": "Removing the old transcript frames and endpoints means self-built clients must migrate to the new frame format.",
+      "published_at": "2026-11-12T10:09:15Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.6.0",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.6.0",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-ide-1-4-178-20261112",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kiro IDE 1.4.178 可跟随工作流运行并重载技能",
+      "summary_zh": "Kiro IDE 1.4.178 可在 Workflow 标签页逐步跟随工作流运行；会话压缩后代理会重新加载用户指定的技能与 steering 文件；聊天中的大型 Mermaid 图表保持可读。修复包括权限变更后冻结、大文件写入前卡住，以及 Windows 网络驱动器上修改配置后未重载。",
+      "key_points_zh": [
+        "Workflow 标签页可逐步跟随运行。",
+        "压缩后重新加载技能与 steering 文件。",
+        "大型 Mermaid 图表在聊天中保持可读。"
+      ],
+      "importance_reason_zh": "压缩后仍保留技能与 steering，减少长会话中行为漂移与重复配置。",
+      "title_en": "Kiro IDE 1.4.178 follows workflow runs and reloads skills after compaction",
+      "summary_en": "Kiro IDE 1.4.178 lets users follow a workflow run step by step from its Workflow tab, reloads the skills and steering files a user asked for after a conversation compacts, and keeps large Mermaid diagrams readable in chat. Fixes cover freezes after a permissions change, stalls before large file writes, and missed reloads after editing configuration on a Windows network drive.",
+      "key_points_en": [
+        "Workflow runs can be followed step by step.",
+        "Skills and steering files reload after compaction.",
+        "Large Mermaid diagrams stay readable in chat."
+      ],
+      "importance_reason_en": "Keeping skills and steering after compaction reduces behavior drift and repeated setup in long sessions.",
+      "published_at": "2026-11-12",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-4-178",
+          "url": "https://kiro.dev/changelog/ide/1-4-178",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-4#patch-1-4-178",
+          "url": "https://kiro.dev/changelog/ide/1-4#patch-1-4-178",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-copy-compaction-20261112",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro CLI 支持复制历史回复并自选压缩时机",
+      "summary_zh": "Kiro CLI 新增 /copy N 与 /copy last N，可复制较早的回复或最近几条消息，并允许选择触发自动压缩的上下文用量；代理监视器显示每个子代理的任务，/model 的搜索、排序与编辑控件移到 Up；从 V2 升级到 V3 时，V2 代理的允许规则不再被放宽。",
+      "key_points_zh": [
+        "/copy N 与 /copy last N 复制历史回复。",
+        "可选择自动压缩的上下文阈值。",
+        "V2 升级 V3 时不再放宽允许规则。"
+      ],
+      "importance_reason_zh": "自选压缩时机让长会话在可控点上整理上下文，减少中途压缩导致的信息损失。",
+      "title_en": "Kiro CLI copies earlier replies and lets users choose when compaction starts",
+      "summary_en": "Kiro CLI adds /copy N and /copy last N to copy an earlier response or the last few messages, and lets users choose the context usage at which automatic compaction starts. The agent monitor shows each sub-agent's task, /model search, sort and edit controls move to Up, and upgrading a V2 agent to V3 no longer widens its allow rules.",
+      "key_points_en": [
+        "/copy N and /copy last N copy earlier replies.",
+        "The automatic compaction threshold is configurable.",
+        "V2 to V3 upgrades no longer widen allow rules."
+      ],
+      "importance_reason_en": "Choosing when compaction starts lets long sessions tidy context at a controlled point instead of losing information mid-task.",
+      "published_at": "2026-11-12",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/3-3",
+          "url": "https://kiro.dev/changelog/cli/3-3",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cloudtrail-audit-20261112",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "api"
+      ],
+      "title_zh": "Kiro 把 MCP 工具调用记录到 AWS CloudTrail",
+      "summary_zh": "Kiro 开始在 us-east-1 与 eu-central-1 的配置文件中，把对 Kiro 服务 MCP 工具的调用记录到 AWS CloudTrail。安全与审计团队可查看请求者、被调用的工具、调用时间以及是否完成。",
+      "key_points_zh": [
+        "覆盖 us-east-1 与 eu-central-1 的配置文件。",
+        "记录请求者、工具、时间与完成状态。",
+        "仅针对 Kiro 服务的 MCP 工具调用。"
+      ],
+      "importance_reason_zh": "把代理工具调用纳入既有云审计链路，满足安全团队对可追溯性的要求。",
+      "title_en": "Kiro logs MCP tool calls to AWS CloudTrail",
+      "summary_en": "Kiro now records calls to Kiro service MCP tools in AWS CloudTrail for Kiro profiles in US East (N. Virginia) and Europe (Frankfurt). Security and audit teams can see who made a request, which tool was called, when it ran and whether it completed.",
+      "key_points_en": [
+        "Covers profiles in us-east-1 and eu-central-1.",
+        "Records requester, tool, time and completion.",
+        "Limited to Kiro service MCP tool calls."
+      ],
+      "importance_reason_en": "Feeding agent tool calls into existing cloud audit trails meets security teams' traceability requirements.",
+      "published_at": "2026-11-12",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/general/audit-kiro-tool-calls-with-aws-cloudtrail",
+          "url": "https://kiro.dev/changelog/general/audit-kiro-tool-calls-with-aws-cloudtrail",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-mobile-android-20261112",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "feature"
+      ],
+      "title_zh": "Kiro 上线 Android 版移动应用",
+      "summary_zh": "Kiro Mobile 上架 Google Play，可在 Android 手机上继续 Kiro 云会话，无需保持笔记本开机；登录 Kiro 账号后即可看到会话、已连接仓库与模型选择。该应用要求 Pro、Pro+、Pro Max 或 Power 套餐。",
+      "key_points_zh": [
+        "已在 Google Play 上架。",
+        "可继续云会话，无需保持笔记本开机。",
+        "要求 Pro、Pro+、Pro Max 或 Power 套餐。"
+      ],
+      "importance_reason_zh": "移动端接入让云会话不必依赖桌面常开，扩大了代理在不间断任务中的使用场景。",
+      "title_en": "Kiro Mobile arrives on Android",
+      "summary_en": "Kiro Mobile is available on Google Play, so users can work in Kiro cloud sessions from an Android phone without keeping a laptop on. After signing in with a Kiro account, sessions, connected repositories and model choices are already there. The app requires a Pro, Pro+, Pro Max or Power plan.",
+      "key_points_en": [
+        "Available on Google Play.",
+        "Cloud sessions work without keeping a laptop on.",
+        "Requires Pro, Pro+, Pro Max or Power."
+      ],
+      "importance_reason_en": "Mobile access decouples cloud sessions from an always-on desktop, widening use for continuous agent work.",
+      "published_at": "2026-11-12",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/mobile/kiro-mobile-for-android",
+          "url": "https://kiro.dev/changelog/mobile/kiro-mobile-for-android",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "alphagenome-2-20261111",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability"
+      ],
+      "title_zh": "Google 发布 AlphaGenome 2 基因组模型",
+      "summary_zh": "Google 发布 AlphaGenome 2，称其可预测 DNA 序列及其变异如何影响特定人类细胞类型与疾病。官方摘要未给出模型规模、评测数字或访问方式。",
+      "key_points_zh": [
+        "预测 DNA 序列与变异的影响。",
+        "区分特定人类细胞类型。",
+        "面向疾病相关研究，未公布访问方式。"
+      ],
+      "importance_reason_zh": "基因组模型的预测粒度影响致病机制与靶点研究的工作方式，但本次公告缺少可比数据。",
+      "title_en": "Google releases AlphaGenome 2",
+      "summary_en": "Google released AlphaGenome 2, which it says predicts how DNA sequences and their variations affect specific human cell types and disease. The summary gives no model size, benchmark numbers or access details.",
+      "key_points_en": [
+        "Predicts the impact of DNA sequences and variants.",
+        "Resolves effects by specific human cell type.",
+        "Aimed at disease research; access details were not disclosed."
+      ],
+      "importance_reason_en": "Finer-grained genomic prediction shapes how disease mechanisms and targets are studied, though this announcement lacks comparable data.",
+      "published_at": "2026-11-11T15:00:15+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:40+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+          "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+          "collected_at": "2026-11-15T14:19:40+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-plus-veterans-20261111",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "OpenAI 称逾 2 万名退伍军人领取一年免费 ChatGPT Plus",
+      "summary_zh": "OpenAI 表示已有超过 2 万名退伍军人与即将退役的军人领取一年免费 ChatGPT Plus，并介绍了他们用该服务准备转业的过程。官方摘要未说明资格审核方式与活动截止时间。",
+      "key_points_zh": [
+        "面向退伍军人与即将退役的军人。",
+        "提供一年免费 ChatGPT Plus。",
+        "官方称已超过 2 万人领取。"
+      ],
+      "importance_reason_zh": "这是面向特定人群的订阅权益扩展，对计划采购的教育与转业培训项目有直接参考价值。",
+      "title_en": "OpenAI says more than 20,000 veterans claimed a free year of ChatGPT Plus",
+      "summary_en": "OpenAI said more than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus, and described how they use it to prepare for civilian careers. The summary does not explain eligibility checks or when the offer ends.",
+      "key_points_en": [
+        "Targeted at veterans and transitioning service members.",
+        "Provides a free year of ChatGPT Plus.",
+        "OpenAI says more than 20,000 people have claimed it."
+      ],
+      "importance_reason_en": "A subscription benefit aimed at a specific group matters for training and transition programs planning tool budgets.",
+      "published_at": "2026-11-11T08:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:18:19+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/chatgpt-plus-for-veterans",
+          "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+          "collected_at": "2026-11-15T14:18:19+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-enterprise-seat-api-20261111",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "feature"
+      ],
+      "title_zh": "GitHub App 可管理企业级 Copilot 席位",
+      "summary_zh": "企业级 GitHub App 现可调用企业级 Copilot 席位管理 API，控制哪些用户与企业团队获得 Copilot 席位。该能力通过新增的“Enterprise Copilot license management”细粒度权限授予。",
+      "key_points_zh": [
+        "企业级 GitHub App 可调用席位管理 API。",
+        "可管理机构内用户与团队的席位分配。",
+        "需新增的企业级细粒度权限。"
+      ],
+      "importance_reason_zh": "席位分配可编程后，企业能把 Copilot 授权接入现有的身份与采购自动化。",
+      "title_en": "GitHub Apps can manage enterprise Copilot seats",
+      "summary_en": "Enterprise GitHub Apps can now call the enterprise-level Copilot seat management APIs to control which users and enterprise teams are assigned Copilot seats. Access comes through a new enterprise fine-grained permission, Enterprise Copilot license management.",
+      "key_points_en": [
+        "Enterprise GitHub Apps can call the seat management APIs.",
+        "Assignments can be managed for users and enterprise teams.",
+        "Requires the new enterprise fine-grained permission."
+      ],
+      "importance_reason_en": "Programmable seat assignment lets enterprises wire Copilot licensing into existing identity and procurement automation.",
+      "published_at": "2026-11-11T00:10:31+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:56+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-10-github-app-support-for-enterprise-copilot-seat-management",
+          "url": "https://github.blog/changelog/2026-11-10-github-app-support-for-enterprise-copilot-seat-management",
+          "collected_at": "2026-11-15T14:19:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-0-68-0-20261110",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Gemini CLI 0.68.0 增加扩展校验命令",
+      "summary_zh": "Gemini CLI 0.68.0 增加扩展校验命令与相应评测测试，修复终端宽度变化后的内联历史重绘、Windows 路径大小写判断、回填搜索前导斜杠导致的自动补全问题，以及在加载指示器中显示 429 限流冷却倒计时；开启动态模型配置且关闭预览时，/model 会列出 Auto。",
+      "key_points_zh": [
+        "新增扩展校验命令与评测测试。",
+        "修复终端宽度变化后的历史重绘。",
+        "429 限流时在加载指示器显示冷却倒计时。"
+      ],
+      "importance_reason_zh": "扩展校验让第三方扩展在发布前发现问题，限流倒计时则减少盲目重试。",
+      "title_en": "Gemini CLI 0.68.0 adds an extension validation command",
+      "summary_en": "Gemini CLI 0.68.0 adds an extension validation command with evaluation tests, fixes inline history re-rendering after terminal width changes, case-insensitive path handling on Windows, leading-slash normalization in file search autocomplete, and surfaces 429 rate-limit cool-downs with a countdown in the loading indicator. /model now lists Auto when dynamic model configuration is on and preview access is off.",
+      "key_points_en": [
+        "Adds an extension validation command and evaluation tests.",
+        "Fixes history re-rendering after terminal width changes.",
+        "Shows a 429 cool-down countdown in the loading indicator."
+      ],
+      "importance_reason_en": "Extension validation catches problems before publishing, and the countdown reduces blind retries.",
+      "published_at": "2026-11-10T21:17:07Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:18:37+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.68.0",
+          "collected_at": "2026-11-15T14:18:37+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cpp-msbuild-lsp-20261110",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Copilot CLI 的 C++ 语言服务器自动配置 MSBuild",
+      "summary_zh": "微软 C++ 语言服务器为 Copilot CLI 内置 MSBuild 编译命令提取器，并在打开项目时自动调用，代理无需再查找并运行配置技能即可生成 compilation database。官方称这减少了准备步骤与 token 消耗；CMake 与自定义构建系统仍需自行提供或生成 compile_commands.json。",
+      "key_points_zh": [
+        "内置 MSBuild 编译命令提取器并自动调用。",
+        "无需代理先运行配置技能即可获得代码智能。",
+        "CMake 与自定义构建系统仍需自行生成 compile_commands.json。"
+      ],
+      "importance_reason_zh": "把编译数据库生成内置化，减少了大型 C++ 项目首次索引的准备时间与 token 开销。",
+      "title_en": "Copilot CLI's C++ language server configures MSBuild automatically",
+      "summary_en": "The Microsoft C++ Language Server for Copilot CLI now bundles its MSBuild compile-commands extractor and invokes it on project open, so an agent no longer needs to discover and run a configuration skill before generating a compilation database. Microsoft says this makes setup deterministic and uses fewer tokens; CMake and custom build systems still need their own compile_commands.json.",
+      "key_points_en": [
+        "The MSBuild extractor is bundled and invoked automatically.",
+        "Agents get code intelligence without a separate setup skill.",
+        "CMake and custom build systems still supply their own compilation database."
+      ],
+      "importance_reason_en": "Building the compilation database in reduces setup time and token spend for first-time indexing of large C++ projects.",
+      "published_at": "2026-11-10T17:04:10+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:56+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-10-c-language-server-now-auto-configures-msbuild-builds",
+          "url": "https://github.blog/changelog/2026-11-10-c-language-server-now-auto-configures-msbuild-builds",
+          "collected_at": "2026-11-15T14:19:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1-0-109-20261110",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.109 支持 Fable 5.2 与 CIDR 沙箱规则",
+      "summary_zh": "Copilot CLI 1.0.109 在模型选择器中加入 Claude Fable 5.2，并让沙箱主机允许/拒绝规则支持 IPv4 与 IPv6 CIDR；并行文件操作选择“不再询问”后会批准全部覆盖请求，/compact 完成后页脚的 AI credits 立即更新。",
+      "key_points_zh": [
+        "模型选择器新增 Claude Fable 5.2。",
+        "沙箱主机规则支持 IPv4/IPv6 CIDR。",
+        "并行文件操作的“不再询问”一次覆盖全部请求。"
+      ],
+      "importance_reason_zh": "CIDR 规则让企业可以按网段配置沙箱出口，而不必逐条列出主机。",
+      "title_en": "Copilot CLI 1.0.109 adds Claude Fable 5.2 and CIDR sandbox rules",
+      "summary_en": "Copilot CLI 1.0.109 adds Claude Fable 5.2 to the model picker and supports IPv4/IPv6 CIDR in sandbox host allow and deny rules. Choosing \"don't ask again\" for parallel file operations now approves all covered requests, and the footer's AI credits update as soon as /compact finishes.",
+      "key_points_en": [
+        "Claude Fable 5.2 appears in the model picker.",
+        "Sandbox host rules accept IPv4/IPv6 CIDR ranges.",
+        "\"Don't ask again\" covers all parallel file operation requests."
+      ],
+      "importance_reason_en": "CIDR rules let enterprises pin sandbox egress by network range instead of listing hosts one by one.",
+      "published_at": "2026-11-10T17:02:15Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.109",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.109",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-4-carbon-ga-20261110",
+      "entity_ids": [
+        "google",
+        "antigravity",
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "availability",
+        "capability"
+      ],
+      "title_zh": "Gemini 4 Carbon 正式可用，Copilot 与 Antigravity 同步接入",
+      "summary_zh": "Google 宣布 Gemini 4 Carbon 正式可用。GitHub 同日说明称该模型面向复杂编码、智能体与推理任务，侧重安全代码生成与安全工作，在 Copilot 中面向 Pro+、Max、Business 与 Enterprise 用户提供并按下标价计费；Google Antigravity 也发布“Gemini 4 Carbon and /swarm”公告。该模型此前于 10 月 28 日以受限方式发布。",
+      "key_points_zh": [
+        "10 月 28 日的受限发布转为正式可用。",
+        "定位复杂编码、智能体与推理任务，侧重安全代码生成。",
+        "Copilot 向 Pro+、Max、Business 与 Enterprise 开放，按用量计费。",
+        "Antigravity 同日发布 Gemini 4 Carbon 与 /swarm 公告。"
+      ],
+      "importance_reason_zh": "从受限开放转为全面可用，意味着团队可以把这一前沿模型放进常规编码与安全工作流。",
+      "title_en": "Gemini 4 Carbon reaches general availability in Copilot and Antigravity",
+      "summary_en": "Google announced that Gemini 4 Carbon is generally available. In its same-day post, GitHub describes the model as built for complex coding, agentic and reasoning tasks with a focus on secure code generation and security work, and offers it in Copilot to Pro+, Max, Business and Enterprise users at provider list pricing. Google Antigravity also published a \"Gemini 4 Carbon and /swarm\" post. The model had launched on October 28 with limited access.",
+      "key_points_en": [
+        "The October 28 limited release becomes generally available.",
+        "Positioned for complex coding, agentic and reasoning tasks with a security focus.",
+        "Copilot access for Pro+, Max, Business and Enterprise under usage-based billing.",
+        "Antigravity published a same-day Gemini 4 Carbon and /swarm post."
+      ],
+      "importance_reason_en": "Moving from restricted access to general availability lets teams place this frontier model in everyday coding and security workflows.",
+      "published_at": "2026-11-10T16:03:47+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:11+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+          "collected_at": "2026-11-15T14:19:40+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "antigravity-blog",
+          "content_id": "https://antigravity.google/blog/gemini-4-carbon-in-google-antigravity",
+          "url": "https://antigravity.google/blog/gemini-4-carbon-in-google-antigravity",
+          "collected_at": "2026-11-15T14:19:11+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
+          "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
+          "collected_at": "2026-11-15T14:19:56+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "gemini-4-carbon"
+      ]
+    },
+    {
+      "id": "alphaproof-code-20261110",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability"
+      ],
+      "title_zh": "Google 发布 AlphaProof Code，用 Lean 验证 Signal 核心加密",
+      "summary_zh": "Google 发布 AlphaProof Code，称其在深度验证复杂软件方面取得突破：由智能体在 Lean 中编写约 300 万行证明，用于验证 Signal 的核心加密实现。官方摘要未说明耗时、成本或对外开放方式。",
+      "key_points_zh": [
+        "面向复杂软件的形式化验证。",
+        "智能体在 Lean 中编写约 300 万行证明。",
+        "验证对象为 Signal 的核心加密实现。"
+      ],
+      "importance_reason_zh": "把形式化验证推进到真实生产级加密代码，是判断 AI 能否参与安全关键软件工程的重要案例。",
+      "title_en": "Google introduces AlphaProof Code, verifying Signal's core encryption in Lean",
+      "summary_en": "Google introduced AlphaProof Code, claiming a breakthrough in verifying complex software at depth: agents wrote about three million lines of Lean proofs to verify Signal's core encryption. The summary does not give runtime, cost or how outside teams can use it.",
+      "key_points_en": [
+        "Targets formal verification of complex software.",
+        "Agents wrote roughly three million lines of Lean proofs.",
+        "The verification target was Signal's core encryption."
+      ],
+      "importance_reason_en": "Pushing formal verification into real production cryptography is a key test of whether AI can join safety-critical software work.",
+      "published_at": "2026-11-10T12:02:28+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:40+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/introducing-alphaproof-code/",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+          "collected_at": "2026-11-15T14:19:40+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "opencode-2-2-7-20261110",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "compatibility"
+      ],
+      "title_zh": "OpenCode 2.2.7 支持 Copilot Auto 与标记未读",
+      "summary_zh": "OpenCode 2.2.7 在模型选择器中支持 GitHub Copilot Auto，由 Copilot 路由按 Auto 折扣为每个会话选模型，路由失败时回退到账户默认模型；新增侧栏标签快捷键、会话标记未读、read 工具负偏移与文件名近似建议，shell 结果附带退出码。破坏性变更包括移除 @opencode/ai 的 ImageResponse.image，以及部分 SDK 端点不再等待插件加载。",
+      "key_points_zh": [
+        "模型选择器可选 Copilot Auto，按 Auto 折扣计费。",
+        "read 支持负偏移，找不到文件时给出近似路径。",
+        "SDK 部分端点不再等待插件加载，需要监听 *.updated 事件。"
+      ],
+      "importance_reason_zh": "接入 Copilot Auto 把模型路由交给供应商，同时 SDK 行为变化要求集成方调整刷新逻辑。",
+      "title_en": "OpenCode 2.2.7 adds Copilot Auto and unread markers",
+      "summary_en": "OpenCode 2.2.7 lets you pick GitHub Copilot Auto in the model picker, so Copilot's router chooses a model per session at the Auto discount and falls back to the account default if routing fails. It adds side-panel tab shortcuts, marking sessions unread, a negative read offset with close-name suggestions, and exit codes on shell results. Breaking changes include removing ImageResponse.image from @opencode/ai and SDK endpoints that no longer wait for plugins to load.",
+      "key_points_en": [
+        "Copilot Auto is selectable and billed at the Auto discount.",
+        "read accepts negative offsets and suggests close file names.",
+        "Some SDK endpoints no longer wait for plugins; listen for *.updated events."
+      ],
+      "importance_reason_en": "Copilot Auto hands model routing to the provider, while the SDK change forces integrations to refresh on events.",
+      "published_at": "2026-11-10T10:37:15Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:02+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.2.7",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.7",
+          "collected_at": "2026-11-15T14:19:02+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "businesses-in-chatgpt-20261110",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "OpenAI 在 ChatGPT 内推出商家资料管理",
+      "summary_zh": "OpenAI 推出 Businesses in ChatGPT，让商家在 ChatGPT 内管理企业信息、查看自身在 ChatGPT 中的展示情况，并把用户关注转化为行动。官方摘要未披露适用地区、收费方式或上线时间。",
+      "key_points_zh": [
+        "商家可在 ChatGPT 内管理企业信息。",
+        "可查看自身在 ChatGPT 中的展示情况。",
+        "目标是把握用户关注并转化为行动。"
+      ],
+      "importance_reason_zh": "把商家资料纳入 ChatGPT，意味着对话入口开始承载本地商家与转化链路。",
+      "title_en": "OpenAI introduces Businesses in ChatGPT",
+      "summary_en": "OpenAI introduced Businesses in ChatGPT so businesses can manage their information, see how they show up in ChatGPT and turn interest into action inside ChatGPT. The summary does not disclose regions, pricing or launch timing.",
+      "key_points_en": [
+        "Businesses can manage their company information inside ChatGPT.",
+        "They can see how the business appears in ChatGPT.",
+        "The goal is turning user interest into action."
+      ],
+      "importance_reason_en": "Putting business profiles inside ChatGPT shows the chat entry point starting to carry merchant discovery and conversion.",
+      "published_at": "2026-11-10T10:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:18:19+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/introducing-businesses-chatgpt",
+          "url": "https://openai.com/index/introducing-businesses-chatgpt",
+          "collected_at": "2026-11-15T14:18:19+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "longcat-2-5-open-source-20261110",
+      "entity_ids": [
+        "meituan"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "availability",
+        "capability"
+      ],
+      "title_zh": "美团以 MIT 协议开源 LongCat-2.5",
+      "summary_zh": "美团以 MIT 协议开源 LongCat-2.5，允许商用推理部署与二次训练，无需额外授权。模型总参数 1.6 万亿、每 token 激活约 480 亿，支持一百万上下文。官方称可在单卡显存不足 80GB 的国产加速器上完成长序列训练与微调，长序列 SFT 的单卡吞吐较 DDP 基线提升 86%。",
+      "key_points_zh": [
+        "MIT 协议开源，允许商用推理部署与二次训练。",
+        "总参数 1.6 万亿，每 token 激活约 480 亿，支持 100 万上下文。",
+        "单卡显存不足 80GB 的国产加速器可承载长序列训练。",
+        "长序列 SFT 单卡吞吐较 DDP 基线提升 86%。"
+      ],
+      "importance_reason_zh": "开放权重与国产算力适配一起降低了万亿级 MoE 的自部署门槛，也给出可复现的长序列训练配置。",
+      "title_en": "Meituan open-sources LongCat-2.5 under the MIT license",
+      "summary_en": "Meituan open-sourced LongCat-2.5 under the MIT license, allowing commercial inference deployment and further training without extra permission. The model has 1.6T total parameters with about 48B activated per token and a one-million-token context. Meituan says long-context training and fine-tuning run on domestic accelerators with under 80GB of memory per card, and that its FSDP configuration reached 86% higher per-card throughput than a DDP baseline on long-sequence SFT.",
+      "key_points_en": [
+        "MIT-licensed, permitting commercial inference and further training.",
+        "1.6T total parameters, about 48B active per token, 1M-token context.",
+        "Long-sequence training fits domestic accelerators with under 80GB per card.",
+        "Long-sequence SFT throughput is 86% higher than a DDP baseline."
+      ],
+      "importance_reason_en": "Open weights plus domestic-accelerator tuning lower the barrier to self-hosting a trillion-parameter MoE and give a reproducible long-context training setup.",
+      "published_at": "2026-11-10T06:56:54.000Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:18:36+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "meituan-official",
+          "content_id": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+          "url": "https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html",
+          "collected_at": "2026-11-15T14:18:36+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "longcat-2-5"
+      ]
+    },
+    {
+      "id": "hermes-0-23-1-20261110",
+      "entity_ids": [
+        "hermes"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Hermes Agent 0.23.1 修复插件目录被静默回退",
+      "summary_zh": "Hermes Agent 0.23.1 为补丁版本，汇总自 0.23.0 以来的约 618 个 PR。主要修复是：线上插件目录 JSON 超过客户端 2 MiB 上限，导致每次安装都静默回退到随版本发布的旧目录；本次把上限提高到 16 MiB。仍停留在 0.23.0 及更早版本的安装会继续回退。发行说明另提到 TUI Esc 回溯、跨机群聊与网关连接共享等未在此文档化的变更。",
+      "key_points_zh": [
+        "插件目录超过 2 MiB 上限导致安装回退到旧目录。",
+        "上限提高到 16 MiB，恢复使用线上目录。",
+        "0.23.0 及更早版本在升级前仍会回退。"
+      ],
+      "importance_reason_zh": "未升级的实例拿不到新插件且没有报错，属于容易被忽略的功能性故障。",
+      "title_en": "Hermes Agent 0.23.1 fixes a silent plugin catalog fallback",
+      "summary_en": "Hermes Agent 0.23.1 is a patch release rolling up about 618 PRs merged since 0.23.0. Its main fix: the live plugin catalog exceeded the 2 MiB cap clients accept, so every install silently fell back to the catalog shipped with the release. This release raises the cap to 16 MiB. Installs still on 0.23.0 or older keep falling back. The notes also mention TUI Esc backtrack, cross-machine group chats and shared gateway connections without full documentation.",
+      "key_points_en": [
+        "The catalog outgrew the 2 MiB cap and installs fell back to the bundled copy.",
+        "The cap rises to 16 MiB so the live catalog is used again.",
+        "Installs on 0.23.0 or older keep falling back until updated."
+      ],
+      "importance_reason_en": "Un-upgraded instances quietly miss new plugins without an error, which is easy to overlook.",
+      "published_at": "2026-11-10T01:42:15Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:02+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1",
+          "collected_at": "2026-11-15T14:19:02+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openrouter-extractions-api-20261110",
+      "entity_ids": [
+        "openrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "capability"
+      ],
+      "title_zh": "OpenRouter 推出 Extractions API",
+      "summary_zh": "OpenRouter 发布 Extractions API，用于从文档与图片中提取带类型的字段：指定字段后返回取值、位置与置信度。上线时由三个模型提供该能力；在 Cloudflare 的 Clairic 上，同一请求可读取文本与图片并返回数字、日期、列表、估算与预测。",
+      "key_points_zh": [
+        "按字段名提取取值、位置与置信度。",
+        "上线时由三个模型提供。",
+        "同一请求可同时处理文本与图片。"
+      ],
+      "importance_reason_zh": "把结构化抽取做成独立 API，减少为每类文档维护提示词与后处理的工作量。",
+      "title_en": "OpenRouter introduces the Extractions API",
+      "summary_en": "OpenRouter introduced the Extractions API for pulling typed fields out of documents and images: name the fields and get values, spans and confidence back. Three models serve it at launch. On Cloudflare's Clairic, a single request reads text and images and returns numbers, dates, lists, estimates and forecasts.",
+      "key_points_en": [
+        "Returns values, spans and confidence for named fields.",
+        "Three models serve it at launch.",
+        "One request can read both text and images."
+      ],
+      "importance_reason_en": "A dedicated extraction API cuts the work of maintaining prompts and post-processing for each document type.",
+      "published_at": "2026-11-10T00:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "openrouter-official",
+          "content_id": "https://openrouter.ai/blog/announcements/extractions-api/",
+          "url": "https://openrouter.ai/blog/announcements/extractions-api/",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-grok-4-7-20261110",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "Kiro 实验支持 Grok 4.7，200K 内按 2.7 倍 credits 计费",
+      "summary_zh": "Grok 4.7 以实验性支持上线 Kiro IDE、CLI、Crew 与 Web，面向 Pro、Pro+、Pro Max 与 Power 用户，提供 50 万 token 上下文。20 万 token 以内的请求按 2.7 倍 credits 计费，超过 20 万 token 按 5.4 倍计费；需重启 IDE/CLI、运行 kirocrew restart 或刷新 Web 以加载最新模型列表。",
+      "key_points_zh": [
+        "覆盖 IDE、CLI、Crew 与 Web，定位实验性支持。",
+        "上下文窗口 50 万 token。",
+        "20 万 token 内 2.7 倍 credits，超出部分按 5.4 倍计费。"
+      ],
+      "importance_reason_zh": "上下文超过 20 万 token 时 credits 翻倍，长会话的实际成本需要按 token 区间核算。",
+      "title_en": "Kiro adds experimental Grok 4.7 with tiered credit pricing",
+      "summary_en": "Grok 4.7 is available with experimental support in Kiro IDE, CLI, Crew and Web for Pro, Pro+, Pro Max and Power customers, with a 500K-token context window. Requests up to 200K tokens carry a 2.7x credit multiplier; requests beyond that are billed at 5.4x. Users must restart the IDE or CLI, run kirocrew restart, or refresh Web to load the latest model list.",
+      "key_points_en": [
+        "Covers IDE, CLI, Crew and Web as experimental support.",
+        "500K-token context window.",
+        "2.7x credits up to 200K tokens and 5.4x beyond that."
+      ],
+      "importance_reason_en": "Credits double past 200K tokens, so long sessions need to be costed by token band.",
+      "published_at": "2026-11-10",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/grok-4-7-now-available-in-kiro",
+          "url": "https://kiro.dev/changelog/models/grok-4-7-now-available-in-kiro",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-enterprise-management-20261110",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "compatibility",
+        "availability"
+      ],
+      "title_zh": "Kiro 预览企业统一策略管理",
+      "summary_zh": "Kiro Enterprise Management 进入预览，仅对 us-east-1 新建的 Kiro 配置文件开放，既有配置文件与欧洲区域后续支持。管理员在 AWS 控制台编写一份策略即可下发到 Kiro IDE、CLI、Web 与 Crew LTS（IDE 需 1.4.154 及以上，CLI 需 3.1.0 及以上）；策略包含模型、命令、文件、联网与 MCP 的允许/拒绝/询问规则，默认模型与日志设置，以及分发的 steering 文件、Skills 与 Powers，可按全员、组或个人生效，身份源支持 IAM Identity Center、Okta 与 Microsoft Entra ID。",
+      "key_points_zh": [
+        "单一策略覆盖 IDE、CLI、Web 与 Crew LTS。",
+        "规则可对模型、命令、文件、联网与 MCP 调用生效。",
+        "仅限 us-east-1 新建配置文件，既有配置待支持。"
+      ],
+      "importance_reason_zh": "把权限、默认设置与 Skills 统一下发，降低了多客户端团队的一致性与合规成本。",
+      "title_en": "Kiro previews one enterprise policy across every client",
+      "summary_en": "Kiro Enterprise Management is in preview for newly created Kiro profiles in US East (N. Virginia) only, with existing profiles and Europe to follow. Administrators write one policy in the AWS console and every developer receives it in Kiro IDE, CLI, Web and Crew LTS, provided the IDE is 1.4.154+ and the CLI is 3.1.0+. The policy holds allow/deny/ask rules for models, shell commands, file reads and writes, web search and MCP tools, settings such as the default model and prompt logging, and the steering files, Skills and Powers to distribute. Rules can target everyone, a group or one user, with IAM Identity Center, Okta or Microsoft Entra ID as the identity source.",
+      "key_points_en": [
+        "One policy covers IDE, CLI, Web and Crew LTS.",
+        "Rules apply to models, commands, files, web search and MCP calls.",
+        "Preview limited to new profiles in us-east-1; existing profiles come later."
+      ],
+      "importance_reason_en": "Centralizing permissions, defaults and Skills lowers consistency and compliance overhead for multi-client teams.",
+      "published_at": "2026-11-10",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/general/enterprise-management-preview",
+          "url": "https://kiro.dev/changelog/general/enterprise-management-preview",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-credit-pooling-okta-entra-20261110",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "feature",
+        "availability"
+      ],
+      "title_zh": "Kiro 额度池支持 Okta 与 Microsoft Entra ID",
+      "summary_zh": "直接连接 Okta 或 Microsoft Entra ID 的 Kiro 配置文件现可用额度池共享 credits，此前仅支持 AWS IAM Identity Center。管理员可在控制台 Access management > Credit sharing 添加用户与组、购买席位、设置使用上限，并用迁移向导移动既有订阅者；新建的三种身份源配置文件默认启用额度池。",
+      "key_points_zh": [
+        "额度池扩展到 Okta 与 Microsoft Entra ID。",
+        "可按用户与组设置使用上限。",
+        "新建配置文件默认启用额度池。"
+      ],
+      "importance_reason_zh": "身份源不再是启用额度池的前置条件，团队可以按组织实际使用的 IdP 统一计费。",
+      "title_en": "Kiro credit pooling supports Okta and Microsoft Entra ID",
+      "summary_en": "Kiro profiles that connect directly to Okta or Microsoft Entra ID can now share credits through credit pooling, previously limited to AWS IAM Identity Center. Administrators add users and groups, buy seats, set usage limits and move existing subscribers with the Switch to credit sharing wizard under Access management > Credit sharing, and new profiles on all three identity sources start with credit pooling.",
+      "key_points_en": [
+        "Credit pooling extends to Okta and Microsoft Entra ID.",
+        "Usage limits can be set per user and group.",
+        "New profiles start with credit pooling enabled."
+      ],
+      "importance_reason_en": "The identity provider is no longer a prerequisite for pooling, so teams can bill through the IdP they actually use.",
+      "published_at": "2026-11-10",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/general/credit-pooling-okta-and-microsoft-entra-id",
+          "url": "https://kiro.dev/changelog/general/credit-pooling-okta-and-microsoft-entra-id",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-approve-for-me-20261110",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Kiro IDE 增加 Approve for me 权限模式",
+      "summary_zh": "Kiro IDE 1.4.154 在聊天中加入 Approve for me：自动批准常规操作、阻止高风险操作、不确定时询问用户；在可用地区，Autopilot 开关变为包含 Supervised、Accept file changes 与 Approve for me 的权限模式菜单。该版本还带来组织托管设置、记忆视图排序与过滤、工作流运行改进，并修复停止轮次、spec 任务与工作区信任问题。",
+      "key_points_zh": [
+        "Approve for me 自动批准常规操作、阻止高风险操作。",
+        "Autopilot 开关改为三档权限模式菜单。",
+        "新增组织托管设置与记忆视图排序过滤。"
+      ],
+      "importance_reason_zh": "审批粒度从“全自动/全手动”变成三档，团队可以按任务风险选择自动化程度。",
+      "title_en": "Kiro IDE adds an Approve for me permission mode",
+      "summary_en": "Kiro IDE 1.4.154 adds Approve for me to chat: Kiro approves routine actions, blocks risky ones and asks when unsure. Where available, the Autopilot toggle becomes a permission mode menu with Supervised, Accept file changes and Approve for me. The release also brings organization-managed settings, memory view sorting and filtering, workflow run improvements, and fixes for stopped turns, spec tasks and workspace trust.",
+      "key_points_en": [
+        "Approve for me approves routine actions and blocks risky ones.",
+        "The Autopilot toggle becomes a three-mode permission menu.",
+        "Adds organization-managed settings and memory view sorting."
+      ],
+      "importance_reason_en": "Approval granularity moves from all-or-nothing to three levels, so teams can match automation to task risk.",
+      "published_at": "2026-11-10",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-4-154",
+          "url": "https://kiro.dev/changelog/ide/1-4-154",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-4#patch-1-4-154",
+          "url": "https://kiro.dev/changelog/ide/1-4#patch-1-4-154",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-3-2-diagrams-output-details-20261111",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kiro CLI 3.2 增加全屏图表查看与输出详略设置",
+      "summary_zh": "Kiro CLI 3.2.0 增加超出终端宽度的 Mermaid 图表全屏查看、无需 OAuth 配置即可登录更多 MCP 服务器，并允许耗尽的 workflow loop 再执行一次或直接结束；3.2.1 把输出详略设置开放给所有用户，可在 /settings 选择每次工具调用显示一行到完整输出，并修复无图形会话的 Linux 主机与 Identity Center 参数下的登录问题。",
+      "key_points_zh": [
+        "Mermaid 图表可全屏查看。",
+        "无需 OAuth 配置即可登录更多 MCP 服务器。",
+        "输出详略可在 /settings 中选择。"
+      ],
+      "importance_reason_zh": "输出详略与图表查看改善长任务的可读性，MCP 登录简化则减少首次接入成本。",
+      "title_en": "Kiro CLI 3.2 adds a full-screen diagram viewer and output detail settings",
+      "summary_en": "Kiro CLI 3.2.0 adds a full-screen viewer for Mermaid diagrams too wide for the terminal and signs users in to more MCP servers without OAuth configuration, and lets a workflow loop that used all its iterations run once more or finish. 3.2.1 opens output details to everyone, letting users choose in /settings how much of each tool call to show, from one line to the full output, and fixes sign-in on Linux hosts without a graphical session and with Identity Center flags.",
+      "key_points_en": [
+        "Mermaid diagrams can be viewed full screen.",
+        "More MCP servers sign in without OAuth configuration.",
+        "Output detail is configurable in /settings."
+      ],
+      "importance_reason_en": "Output detail and diagram viewing improve readability in long tasks, while simpler MCP sign-in lowers first-time setup cost.",
+      "published_at": "2026-11-10",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/3-2",
+          "url": "https://kiro.dev/changelog/cli/3-2",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/3-2-1",
+          "url": "https://kiro.dev/changelog/cli/3-2-1",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/3-2#patch-3-2-1",
+          "url": "https://kiro.dev/changelog/cli/3-2#patch-3-2-1",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-ipo-roadshow-20261110",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Anthropic 启动 IPO 路演",
+      "summary_zh": "Anthropic PBC 宣布为其拟议的 A 类普通股首次公开募股启动路演。官方摘要未列出定价区间、发行规模或上市时间。",
+      "key_points_zh": [
+        "为其拟议 IPO 启动路演。",
+        "发行标的为 A 类普通股。",
+        "未公布定价区间、规模与上市时间。"
+      ],
+      "importance_reason_zh": "路演是 S-1 之后的实质进展，会影响公司融资节奏与对外合作的稳定性判断。",
+      "title_en": "Anthropic launches roadshow for its proposed IPO",
+      "summary_en": "Anthropic PBC launched the roadshow for its proposed initial public offering of Class A common stock. The summary lists no price range, offering size or listing date.",
+      "key_points_en": [
+        "The roadshow has started for the proposed IPO.",
+        "The offering covers Class A common stock.",
+        "No price range, size or listing date was disclosed."
+      ],
+      "importance_reason_en": "A roadshow is concrete progress after the S-1 and affects how partners read the company's funding timeline.",
+      "published_at": "2026-11-10",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:32:02+00:00",
+      "updated_at": "2026-11-15T14:33:46+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/roadshow-launch",
+          "url": "https://www.anthropic.com/news/roadshow-launch",
+          "collected_at": "2026-11-15T14:32:02+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "related_event_ids": [
+        "anthropic-s1-ipo"
+      ]
+    },
+    {
+      "id": "pi-1-5-1-20261109",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "capability"
+      ],
+      "title_zh": "Pi 1.5.1 增加空闲缓存预热与 Anthropic 消息线程",
+      "summary_zh": "Pi 1.5.1 新增 pi auth login/logout 独立登录命令、空闲提示缓存预热（预计划算时最长保持 30 分钟）、Anthropic 消息线程（只发送新消息并保留完整请求回退）、更丰富的 Mermaid 图与 GitHub Copilot 分类器调用。破坏性变更包括自定义 GrepOperations.readFile 不再用于上下文行，以及禁用工具时不再发送空 tools 数组。",
+      "key_points_zh": [
+        "新增 pi auth login/logout，无需进入会话。",
+        "空闲缓存预热最长 30 分钟，按模型 cache.ttl 计时。",
+        "可选 GitHub Copilot 分类器做类型化决策。"
+      ],
+      "importance_reason_zh": "消息线程与缓存预热同时作用于延迟和账单，需要按供应商缓存策略核对收益。",
+      "title_en": "Pi 1.5.1 adds idle cache warming and Anthropic message threads",
+      "summary_en": "Pi 1.5.1 adds pi auth login/logout for signing in without starting a session, idle prompt cache warming that keeps eligible caches warm for up to 30 minutes when a refresh is expected to pay for itself, and Anthropic message threads that send only new messages with a full-request fallback. It also adds richer Mermaid diagrams and GitHub Copilot classifier calls. Breaking changes: custom GrepOperations.readFile callbacks no longer handle context lines, and disabled tools no longer send an empty tools array.",
+      "key_points_en": [
+        "pi auth login/logout works without starting a session.",
+        "Idle cache warming lasts up to 30 minutes, timed from the model's cache TTL.",
+        "GitHub Copilot classifiers are callable for typed decisions."
+      ],
+      "importance_reason_en": "Message threads and cache warming affect both latency and billing, so the gain depends on each provider's cache policy.",
+      "published_at": "2026-11-09T23:47:44Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.5.1",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.5.1",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-321-20261109",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "pricing",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.321 默认切换到 Claude Fable 5.2",
+      "summary_zh": "Claude Code 2.1.321 增加 Claude Fable 5.2（claude-fable-5-2）并设为默认 Fable 模型：100 万 token 上下文，每百万 token 输入 8 美元、输出 40 美元，缓存读取 0.20 美元。已保存的 Fable 5.1 选择在 Pro 与 Max 上自动迁移，Team 与 Enterprise 需组织允许；另新增 claude remote-control --settings 与 VS Code 凭据冲突提示。",
+      "key_points_zh": [
+        "Fable 5.2 成为默认 Fable 模型，上下文 100 万 token。",
+        "价格 8/40 美元每百万 token，缓存读取 0.20 美元。",
+        "Pro 与 Max 自动迁移，Team 与 Enterprise 需组织允许。"
+      ],
+      "importance_reason_zh": "默认模型切换会改变既有会话的成本结构，缓存读取价格也需要单独评估。",
+      "title_en": "Claude Code 2.1.321 makes Claude Fable 5.2 the default",
+      "summary_en": "Claude Code 2.1.321 adds Claude Fable 5.2 (claude-fable-5-2) and makes it the default Fable model: a one-million-token context at $8 per million input tokens and $40 per million output tokens, with $0.20 per million cache reads. Saved Fable 5.1 picks migrate automatically on Pro and Max, and on Team and Enterprise once the organization allows it. The release also adds claude remote-control --settings and a VS Code warning when both an auth token and an API key are set.",
+      "key_points_en": [
+        "Fable 5.2 becomes the default Fable model with a 1M-token context.",
+        "$8/$40 per million tokens, with $0.20 per million cache reads.",
+        "Pro and Max migrate automatically; Team and Enterprise need org approval."
+      ],
+      "importance_reason_en": "A default model switch changes the cost profile of existing sessions, and the cache-read price deserves its own review.",
+      "published_at": "2026-11-09T20:24:45+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-321",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-321",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-robotics-2-5-20261109",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability"
+      ],
+      "title_zh": "Google 发布 Gemini Robotics 2.5",
+      "summary_zh": "Google 发布 Gemini Robotics 2.5，称其为目前最强的视觉-语言-动作模型，在机器人灵巧性、可靠性与安全性方面有所提升。官方摘要未给出基准数字、支持硬件或开放范围。",
+      "key_points_zh": [
+        "定位为 Google 最强的视觉-语言-动作模型。",
+        "官方称提升灵巧性、可靠性与安全性。",
+        "公告未披露基准分数或可用范围。"
+      ],
+      "importance_reason_zh": "具身智能的能力上限取决于这类基础模型，但本次公告缺少可比较指标，实际影响有待后续数据。",
+      "title_en": "Google introduces Gemini Robotics 2.5",
+      "summary_en": "Google introduced Gemini Robotics 2.5, describing it as its most capable vision-language-action model, with improved robot dexterity, reliability and safety. The summary gives no benchmark numbers, supported hardware or availability details.",
+      "key_points_en": [
+        "Described as Google's most capable vision-language-action model.",
+        "Google claims better dexterity, reliability and safety.",
+        "No benchmark scores or availability details were disclosed."
+      ],
+      "importance_reason_en": "These foundation models set the ceiling for embodied AI, but without comparable metrics the practical impact is still open.",
+      "published_at": "2026-11-09T19:51:47+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:40+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+          "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+          "collected_at": "2026-11-15T14:19:40+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-enterprise-aws-marketplace-20261109",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "pricing"
+      ],
+      "title_zh": "ChatGPT Enterprise 上架 AWS Marketplace",
+      "summary_zh": "ChatGPT Enterprise 现可通过 AWS Marketplace 采购，企业可沿用既有的 AWS 采购与计费关系，简化采购流程。官方摘要未说明价格差异或适用地区。",
+      "key_points_zh": [
+        "通过 AWS Marketplace 提供。",
+        "复用企业既有采购与计费关系。",
+        "未说明价格差异与地区限制。"
+      ],
+      "importance_reason_zh": "采购路径并入云账单，通常会缩短企业采购周期，但价格与合同条款仍需单独核对。",
+      "title_en": "ChatGPT Enterprise is now available in AWS Marketplace",
+      "summary_en": "ChatGPT Enterprise is now available through AWS Marketplace, so organizations can use their existing AWS purchasing and billing relationships to simplify procurement. The summary does not mention price differences or regional limits.",
+      "key_points_en": [
+        "Available through AWS Marketplace.",
+        "Reuses an organization's existing AWS purchasing and billing.",
+        "No price differences or regional limits were given."
+      ],
+      "importance_reason_en": "Folding procurement into the cloud bill usually shortens enterprise purchase cycles, though pricing and contract terms still need separate review.",
+      "published_at": "2026-11-09T19:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:18:19+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+          "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+          "collected_at": "2026-11-15T14:18:19+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-fable-5-2-20261109",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "availability",
+        "capability"
+      ],
+      "title_zh": "Claude Fable 5.2 在 GitHub Copilot 正式可用",
+      "summary_zh": "Claude Fable 5.2 在 GitHub Copilot 正式可用，面向大型代码库中的复杂多步编码任务。GitHub 称早期测试中它以更少步骤与工具调用解决更多任务；该模型默认要求数据保留以运行 Anthropic 的安全分类器，符合条件的企业客户可使用零数据保留，企业策略默认关闭该模型。",
+      "key_points_zh": [
+        "面向大型代码库的复杂多步编码任务。",
+        "GitHub 称其用更少步骤与工具调用解决更多任务。",
+        "默认要求数据保留以运行安全分类器。",
+        "企业策略默认关闭，管理员需手动启用。"
+      ],
+      "importance_reason_zh": "默认开启的数据保留改变了企业合规评估的前提，启用前需要与现有零数据保留约定对照。",
+      "title_en": "Claude Fable 5.2 is generally available in GitHub Copilot",
+      "summary_en": "Claude Fable 5.2 is generally available in GitHub Copilot for complex, multistep coding tasks in large codebases. GitHub says early testing solved more tasks than Fable 5.1 with fewer steps and tool calls. The model requires data retention by default to run Anthropic's safety classifiers, with zero data retention available to certain eligible enterprise customers; the enterprise policy is off by default.",
+      "key_points_en": [
+        "Targets complex, multistep coding in large codebases.",
+        "GitHub says it solved more tasks with fewer steps and tool calls.",
+        "Requires data retention by default for safety classifiers.",
+        "The enterprise policy is off by default and must be enabled."
+      ],
+      "importance_reason_en": "Retention on by default changes the compliance baseline, so teams must compare it with existing zero-retention commitments before enabling.",
+      "published_at": "2026-11-09T16:46:43+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:56+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+          "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+          "collected_at": "2026-11-15T14:19:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1-0-108-20261109",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.108 增加共享索引与沙箱目录跟随",
+      "summary_zh": "Copilot CLI 1.0.108 新增 /index 命令，并为符合条件的仓库默认启用受管共享 tgrep 索引；沙箱开启时，/cd 后会重启本地 MCP 服务器以套用新目录的拒绝路径；Windows 增加仅枚举的目录授权，Grok 4.6/4.7 的 PDF 附件改为文件引用而不是整轮失败。",
+      "key_points_zh": [
+        "/index 与默认启用的受管共享 tgrep 索引。",
+        "/cd 后重启本地 MCP 服务器以跟随目录策略。",
+        "Windows 新增枚举式目录授权（enumeratePaths）。"
+      ],
+      "importance_reason_zh": "索引共享与目录策略跟随，减少了多仓库会话中重复建索引与沙箱越权的问题。",
+      "title_en": "Copilot CLI 1.0.108 adds shared indexing and sandbox-aware directory changes",
+      "summary_en": "Copilot CLI 1.0.108 adds /index commands and turns on managed shared tgrep indexing by default for eligible repositories. With the sandbox on, a running local MCP server restarts after /cd so it follows the new directory's denied paths. Windows gains enumerate-only directory grants, and PDF attachments on Grok 4.6/4.7 fall back to file references instead of failing the turn.",
+      "key_points_en": [
+        "/index commands and managed shared tgrep indexing on by default.",
+        "Local MCP servers restart after /cd to follow directory policy.",
+        "Windows gains enumerate-only directory grants."
+      ],
+      "importance_reason_en": "Shared indexing and directory-aware policy cut duplicate index builds and sandbox escapes in multi-repo sessions.",
+      "published_at": "2026-11-09T16:20:30Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.108",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.108",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-fable-5-2-mythos-5-2-20261109",
+      "entity_ids": [
+        "anthropic",
+        "claude-code",
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "pricing"
+      ],
+      "title_zh": "Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2",
+      "summary_zh": "Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2，称两者是面向高难度技术工作的最强模型，在编码、金融与科学研究方面设定新标准。Claude Code 同日说明 Fable 5.2 提供 100 万 token 上下文，每百万 token 输入 8 美元、输出 40 美元，缓存读取 0.20 美元，并把它设为默认 Fable 模型；GitHub 称 Fable 5.2 默认要求数据保留以运行安全分类器。官方未在摘要中给出 Mythos 5.2 的价格或可用范围。",
+      "key_points_zh": [
+        "同时发布 Claude Fable 5.2 与 Claude Mythos 5.2。",
+        "官方称在编码、金融与科学研究上设定新标准。",
+        "Fable 5.2：100 万 token 上下文，8/40 美元每百万 token，缓存读取 0.20 美元。",
+        "Fable 5.2 默认要求数据保留以运行安全分类器。"
+      ],
+      "importance_reason_zh": "旗舰模型换代同时改变默认模型、单价与数据处理条款，选型与合规评估都要重新做。",
+      "title_en": "Anthropic introduces Claude Fable 5.2 and Claude Mythos 5.2",
+      "summary_en": "Anthropic introduced Claude Fable 5.2 and Claude Mythos 5.2, describing them as its most capable models for daunting technical work and a new bar in coding, finance and the sciences. Claude Code's same-day notes put Fable 5.2 at a one-million-token context, $8 per million input tokens and $40 per million output tokens with $0.20 per million cache reads, and make it the default Fable model. GitHub says Fable 5.2 requires data retention by default to run Anthropic's safety classifiers. The summary gives no pricing or availability for Mythos 5.2.",
+      "key_points_en": [
+        "Both Claude Fable 5.2 and Claude Mythos 5.2 launched together.",
+        "Anthropic claims a new bar in coding, finance and the sciences.",
+        "Fable 5.2: 1M-token context, $8/$40 per million tokens, $0.20 per million cache reads.",
+        "Fable 5.2 requires data retention by default for safety classifiers."
+      ],
+      "importance_reason_en": "A flagship refresh changes the default model, unit price and data-retention terms at once, so selection and compliance reviews both need redoing.",
+      "published_at": "2026-11-09",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:33:46+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "collected_at": "2026-11-15T14:32:02+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-321",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-321",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+          "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+          "collected_at": "2026-11-15T14:32:26+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "claude-code-2-1-321-20261109",
+        "copilot-fable-5-2-20261109"
+      ]
+    },
     {
       "id": "copilot-code-review-settings-api",
       "entity_ids": [
@@ -534,6 +2473,47 @@
           "url": "https://docs.qoder.com/release-notes/qoder#november-6-2026",
           "collected_at": "2026-11-08T06:24:32+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-web-approve-for-me-20261106",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Kiro Web 增加 Approve for me 操作审批",
+      "summary_zh": "Kiro Web 可开启 Approve for me，由模型对代理操作做安全检查；每个会话会显示模型批准、阻止或转交用户的动作。",
+      "key_points_zh": [
+        "Web 端可开启 Approve for me。",
+        "由模型检查代理操作的风险。",
+        "会话中列出批准、阻止与转交的动作。"
+      ],
+      "importance_reason_zh": "Web 端与 IDE 采用同一套审批逻辑，减少了跨客户端使用时的行为差异。",
+      "title_en": "Kiro Web adds Approve for me action review",
+      "summary_en": "Kiro Web lets users turn on Approve for me, a model safety check for agent actions. Each session then shows which actions the model approved, blocked or sent to the user.",
+      "key_points_en": [
+        "Approve for me is available in Kiro Web.",
+        "The model checks agent actions for risk.",
+        "Sessions list approved, blocked and escalated actions."
+      ],
+      "importance_reason_en": "Sharing approval logic with the IDE reduces behavior differences when switching clients.",
+      "published_at": "2026-11-06",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-15T14:19:06+00:00",
+      "updated_at": "2026-11-15T14:29:15+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/web/approve-for-me-in-kiro-web",
+          "url": "https://kiro.dev/changelog/web/approve-for-me-in-kiro-web",
+          "collected_at": "2026-11-15T14:19:06+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },

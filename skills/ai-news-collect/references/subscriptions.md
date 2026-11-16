@@ -8,7 +8,7 @@
 
 ## 故障诊断与修复
 
-先分层定位，再改配置：DNS（`dscacheutil -q host -a name 域名`、`dig @1.1.1.1 域名 A`）、TCP/TLS（`curl -v -m 20`）、HTTP 状态、XML 可解析性。响应是登录页、HTML 或空 body 都不算有效订阅。单次超时、`403` 或 `429` 通常是本机网络或实例限流，不得据此停用来源；应换时间、换实例复测，并保留原未覆盖起点。原生订阅失败时，用同一路由的 RSSHub 结果与官方页面交叉核对标题、发布日期和原始链接，确认不是缓存或伪造内容后再切换。
+先分层定位，再改配置：DNS（`dscacheutil -q host -a name 域名`、`dig @1.1.1.1 域名 A`）、TCP/TLS（`curl -v -m 20`）、HTTP 状态、XML 可解析性。响应是登录页、HTML 或空 body 都不算有效订阅。诊断要单独、串行执行，不要用全量 `fetch` 的 6 个并发去压公共实例；RSSHub 路由可给 40–60 秒，失败后间隔重试。单次超时、`403` 或 `429` 通常是本机网络或实例限流，不得据此停用来源；应换时间、换实例复测，并保留原未覆盖起点。原生订阅失败时，用同一路由的 RSSHub 结果与官方页面交叉核对标题、发布日期和原始链接，确认不是缓存或伪造内容后再切换。
 
 ```sh
 # 逐条核对：状态、条目数、标题、日期、原始链接
@@ -25,7 +25,7 @@ for it in items[:2]:
 PY
 ```
 
-切换时直接写 `feed_url`，设 `feed_provider: "rsshub"`，更新 `feed_checked_at` 与 `feed_verified_at`，并在 `maintenance` 里写明双语原因。改地址会清除旧 `fetched_through` 指纹，下次 `fetch` 会从 `uncovered_from` 补采；补采材料仍要逐条判断，不能因为“源刚修好”就全部保留。2026-11-16 的实例轮换可作示例：原 Threads 实例返回 503，YouTube 原生订阅超时，Google 开发者博客 TLS 被重置；`rsshub.liumingye.cn` 同时返回了 5 条 Threads 帖子、30 条 YouTube 视频和 10 篇带日期的 Google 开发者文章。公共实例会轮换，不要把某次可用的实例写死为永久保证。
+切换时直接写 `feed_url`，设 `feed_provider: "rsshub"`，在 `maintenance` 里写明双语原因。`feed_checked_at` 记本次实际检查日期；只有直接请求新地址并取得有效条目时才写 `feed_verified_at`。只有公开目录、第三方监控或搜索引擎摘要作依据时，注明证据来源与“网络恢复后实测”，不把未直接验证写成已验证。改地址会清除旧 `fetched_through` 指纹，下次 `fetch` 会从 `uncovered_from` 补采；先查看补采窗口和 `queue` 总量，再按来源／日期分批处理。不要用 `--since` 截断补采来减少候选，它会推进覆盖并留下永久断档。补采材料仍要逐条判断，不能因为“源刚修好”就全部保留。2026-11-16 的实例轮换可作示例：原 Threads 实例返回 503，YouTube 原生订阅超时，Google 开发者博客 TLS 被重置；`rsshub.liumingye.cn` 同时返回了 5 条 Threads 帖子、30 条 YouTube 视频和 10 篇带日期的 Google 开发者文章。公共实例会轮换，不要把某次可用的实例写死为永久保证。
 
 官方路径本身也可能变化。Mistral 的订阅路径已从 `/rss.xml` 改为 `/news/rss`；本机 DNS 被污染、无法直接复核时，应注明证据来自公开订阅目录或第三方监控，并保留“待网络恢复后实测”的状态，而不是把未验证写成已验证。
 
@@ -56,6 +56,6 @@ python3 scripts/collect.py import-feed 来源ID /本地/feed.xml --since 2026-09
 
 OPML 与网站来源页便于订阅管理。按需转换配置 `feed_provider: offline`、`feed_url: null`、`offline_conversion: true`；原生来源也可启用正文补充。操作见 [离线 RSS](../../../docs/OFFLINE-RSS.md)。转换、缓存重放及导入均无常驻服务。离线导入只处理对应已登记来源的 XML，不能推进在线订阅的完整覆盖进度。变更订阅地址后，旧成功状态不能证明新地址可用；脚本自动重新检查并保留必要补采起点。
 
-RSS description/summary 默认 partial_text；content/content:encoded 是文字材料范围。视频订阅默认 metadata_only，完整文字也不代表视频画面理解。原文只有月份时保存 `date_label`，不补造日；Atom `updated` 保存为更新时间语义。缺少关键内容或日期时 defer，不能从 URL 日期、版本号或发布时间相近的其他条目猜测事实。
+RSS description/summary 默认 partial_text；content/content:encoded 是文字材料范围。视频订阅默认 metadata_only，完整文字也不代表视频画面理解。原文只有日期时按 `date` 精度保存，订阅补出的 `00:00` 不是真实时刻；原文只有月份时保存 `date_label`，不补造日；Atom `updated` 保存为更新时间语义。缺少关键内容或日期时 defer，不能从 URL 日期、版本号或发布时间相近的其他条目猜测事实。
 
 订阅条目 ID 默认使用原文链接；共享同一页面／锚点的多个版本使用转换 RSS 的稳定版本内容标识。材料指纹包含正文、标题、日期、URL、材料范围与预览标识。近期条目通过 ETag／Last-Modified 复查，更改后重新进入队列。有限 feed 未覆盖查询起点时保持 partial；RSS 不保证能找回服务已经丢弃的历史条目。

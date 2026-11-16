@@ -23,11 +23,13 @@ description: 为 ai-daohang 按需采集双语 AI 动态，自动发现并核实
 
 ## 每次采集
 
-1. 执行 `python3 scripts/collect.py fetch`。可用 `--entities codex trae zcode minimax-code` 限定对象。默认首次回溯 72 小时；后续逐来源增量、重叠查询并补采失败断档。`--since ISO时间` 仅用于用户明确指定回溯起点；不要每轮重置起点或删除 `.collector/`。
-2. 执行 `queue` 查看简短候选清单；按需 `read 材料ID`，长材料可用 `--offset`、`--characters` 分段。分页和摘录是阅读组织方式，最终处理全部既定范围内候选。判断已缓存且原文未变的材料无需重复加工。
-3. 对 `offline_conversion: true` 的来源，执行独立的 `python3 scripts/convert_feeds.py`，再 `python3 scripts/collect.py import-converted .collector/converted/manifest.json`；转换有失败项时退出码为 1，仍可导入清单中的成功项。只重放缓存使用 `--offline`，实际流程见 [离线 RSS](../../docs/OFFLINE-RSS.md)。转换器不调用模型、不推进在线覆盖。订阅材料不足时，按 [RSS 订阅管理](references/subscriptions.md) 配置提供全文／字幕的订阅；受限时可导入从同一订阅地址取得的 RSS/Atom XML。月份日期保留原始标签，不能补造日；只有 Atom 更新时间时保留 `date_kind: updated`，不能推断首次发表日期。未知发布时间先核实；不能用抓取时间或版本顺序代替发布时间。
-4. 对照现有 `public/data/index.json` 与相关月份事件，用实际发布对象、版本和阶段归并事件。生成 [处置包](references/packet.md)，执行 `apply 文件.json` 和 `validate`。即使全被过滤也提交判断，再 `refresh` 更新覆盖快照。
-5. 检查 `queue` 的剩余候选及 `.collector/state.json` 的覆盖缺口。因材料不足可 `defer` 并明确缺少什么，读取失败或运行中断保持待处理，不写“没有重要更新”。
+1. 先看上次运行留下的失败／部分覆盖来源，单独复测后再全量 `fetch`。`fetch` 默认 6 并发，公共 RSSHub 容易被限流；逐一探测订阅应串行执行，RSSHub 路由可放宽到 40–60 秒。单次超时、`403`／`429` 或 DNS 污染只记录真实状态与未覆盖起点，不据此停用来源或改写 `enabled`。判定方法见 [RSS 订阅管理](references/subscriptions.md)。
+2. 执行 `python3 scripts/collect.py fetch`。可用 `--entities codex trae zcode minimax-code` 限定对象。默认首次回溯 72 小时；后续逐来源增量、重叠查询并补采失败断档。`--since ISO时间` 仅用于用户明确指定回溯起点；不要每轮重置起点、删除 `.collector/` 或用它截断补采缺口。
+3. 读取 `fetch` 返回的 `sources` 状态，并再次执行 `queue`：`partial`／失败不推进完整覆盖；修复或更换 `feed_url` 会清除 `fetched_through`，从 `uncovered_from` 补采，补采材料和新指纹都要重新判断。旧 `reject`／`keep` 只在内容指纹、解析版本、规则版本都未变时可复用，不能把旧结论套到新内容上。
+4. 执行 `queue` 查看简短候选清单；按需 `read 材料ID`，长材料可用 `--offset`、`--characters` 分段。分页和摘录是阅读组织方式，最终处理全部既定范围内候选。判断已缓存且原文未变的材料无需重复加工。候选多时按来源／日期分批读取并生成多个处置包；两批之间不要再 `fetch`，否则指纹可能变化而整批失效。补采的旧材料仍按内容和发布时间判断，不因“来自断档”整体保留，也不因来源刚修复而降低标准。
+5. 对 `offline_conversion: true` 的来源，执行独立的 `python3 scripts/convert_feeds.py`，再 `python3 scripts/collect.py import-converted .collector/converted/manifest.json`；转换有失败项时退出码为 1，仍可导入清单中的成功项。只重放缓存使用 `--offline`，实际流程见 [离线 RSS](../../docs/OFFLINE-RSS.md)。转换器不调用模型、不推进在线覆盖。订阅材料不足时，按 [RSS 订阅管理](references/subscriptions.md) 配置提供全文／字幕的订阅；受限时可导入从同一订阅地址取得的 RSS/Atom XML。月份日期保留原始标签，不能补造日；只有 Atom 更新时间时保留 `date_kind: updated`，不能推断首次发表日期。未知发布时间先核实；不能用抓取时间或版本顺序代替发布时间。
+6. 对照现有 `public/data/index.json` 与相关月份事件，用实际发布对象、版本和阶段归并事件。生成 [处置包](references/packet.md)，执行 `apply 文件.json` 和 `validate`。即使全被过滤也提交判断，再 `refresh` 更新覆盖快照。只有日期没有时刻、或订阅把日期补成当天 `00:00` 时，用 `date_precision: "date"` 并保留原日期，不能把午夜当成真实时刻；已发布事件的时间或精度有误，走 `corrections` 修正，不新建事件。
+7. 检查 `queue` 的剩余候选及 `.collector/state.json` 的覆盖缺口。因材料不足可 `defer` 并明确缺少什么，读取失败或运行中断保持待处理，不写“没有重要更新”。修改过 `config/*.json` 时，`build` 前必须再 `refresh`，否则 `public/data/catalog.json` 仍是旧来源说明；改过转换器或共享脚本时运行对应测试。整套 `public/data/` 一起更新，不手改单月文件；发布与部署不由本 skill 执行。
 
 ## 编辑判断
 

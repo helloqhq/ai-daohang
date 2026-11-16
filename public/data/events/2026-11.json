@@ -1,7 +1,145 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "1a7cdcce8be7625d",
+  "snapshot_id": "7c4080530b19913d",
   "events": [
+    {
+      "first_collected_at": "2026-11-16T13:52:57+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "qwen-official",
+          "content_id": "https://qwen.ai/blog?id=qwen4-max",
+          "url": "https://qwen.ai/blog?id=qwen4-max",
+          "collected_at": "2026-11-16T13:52:57+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "qwen4-max-20261116",
+      "entity_ids": [
+        "qwen"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "pricing",
+        "api"
+      ],
+      "title_zh": "Qwen 发布 Qwen4-Max：2.4T 稀疏 MoE，主打长程任务与专业交付",
+      "summary_zh": "阿里 Qwen 团队发布 Qwen4-Max，称其为可全天候协作的 AI “新同事”。模型采用 Qwen4 系列新架构，拥有 2.4 万亿主干参数、每 token 激活 71B，另有 328B N-gram Embedding 参数，支持原生视觉与 100 万 token 上下文。官方称 Work360 行业基准得分为 52.69，高于 Qwen3.8-Max 的 47.74；相较上一代全面下调 API 价格，Work360 单个任务平均费用从 26.58 元降至 11.16 元，降幅 58%。文章页显示日期为 8 月 3 日，但订阅源给出的发布时间为 2026-11-16，本事件采用订阅源时间。",
+      "key_points_zh": [
+        "2.4T 主干参数，每 token 激活 71B，另有 328B N-gram Embedding 参数。",
+        "原生视觉能力，支持 100 万 token 上下文。",
+        "Work360 得分 52.69，上一代 Qwen3.8-Max 为 47.74。",
+        "全面下调 API 价格，Work360 单任务平均成本下降 58%。",
+        "同步开源 Qwen-Live-Delivery-Plugin，支持长程任务分阶段交付。"
+      ],
+      "importance_reason_zh": "旗舰模型换代同时改变架构、上下文长度与 API 价格，专业工作流的选型和成本测算都需要重做。",
+      "title_en": "Qwen releases Qwen4-Max: a 2.4T sparse MoE built for long-running professional work",
+      "summary_en": "Alibaba’s Qwen team released Qwen4-Max, pitched as an always-on AI “new colleague.” It uses a new Qwen4-series architecture with a 2.4-trillion-parameter backbone, 71B parameters activated per token and another 328B of N-gram embedding parameters, plus native vision and a 1M-token context. Qwen reports a Work360 industry benchmark score of 52.69 versus 47.74 for Qwen3.8-Max, and says API prices fell across the board, cutting the average Work360 task cost from 26.58 yuan to 11.16 yuan, a 58% drop. The article page shows August 3, but the feed dates the post to November 16, 2026; this event follows the feed date.",
+      "key_points_en": [
+        "2.4T-parameter backbone with 71B activated per token and 328B of N-gram embedding parameters.",
+        "Native vision and a 1M-token context window.",
+        "Work360 score of 52.69, up from 47.74 for Qwen3.8-Max.",
+        "API prices cut across the board, with average Work360 task cost down 58%.",
+        "The Qwen-Live-Delivery-Plugin is open-sourced for staged long-running delivery."
+      ],
+      "importance_reason_en": "A flagship refresh changes the architecture, context window and API prices at once, so teams must redo model selection and cost planning.",
+      "published_at": "2026-11-16T10:00:00+08:00",
+      "date_precision": "datetime",
+      "date_kind": "published"
+    },
+    {
+      "first_collected_at": "2026-11-16T13:52:58+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "siliconflow-updates",
+          "content_id": "https://docs.siliconflow.cn/docs/release-notes/overview#功能更新动态限流上线限流值随模型负载自动调整",
+          "url": "https://docs.siliconflow.cn/docs/release-notes/overview#功能更新动态限流上线限流值随模型负载自动调整",
+          "collected_at": "2026-11-16T13:52:58+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "siliconflow-dynamic-rate-limits-20261116",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "availability"
+      ],
+      "title_zh": "硅基流动上线动态限流：按模型负载自动调整配额",
+      "summary_zh": "硅基流动上线按模型分批开启的动态限流。启用模型的固定限流阈值被取消，系统根据实时负载放宽或收紧限流，把闲置资源优先供给真实业务请求；模型广场可筛选已启用模型，模型详情页的 Rate Limits 板块展示实时限流值与规则。启用动态限流的模型不再沿用 L0–L5 用量等级分层限流，对应已发放且未过期的等级权益自动失效；暂未接入的模型保持原有限流逻辑。",
+      "key_points_zh": [
+        "动态限流按模型分批开启，替换固定阈值。",
+        "系统根据实时负载自动放宽或收紧限流。",
+        "模型详情页 Rate Limits 板块可查看实时限流值与规则。",
+        "启用模型的 L0–L5 用量等级权益自动失效。",
+        "未接入动态限流的模型继续按用量等级执行。"
+      ],
+      "importance_reason_zh": "配额从固定等级改为随负载浮动，直接影响 API 容量规划与已购等级权益的价值判断。",
+      "title_en": "SiliconFlow launches load-based dynamic rate limits",
+      "summary_en": "SiliconFlow introduced dynamic rate limiting, enabled model by model in batches. For participating models, fixed thresholds are replaced by limits that widen or tighten with real-time load so idle capacity goes to live business traffic; the model catalog can filter for enabled models, and each model’s Rate Limits panel shows the current limit and rules. Participating models no longer use the L0–L5 usage-tier limits, so issued and unexpired tier entitlements for those models lapse automatically. Models not yet covered keep the existing logic.",
+      "key_points_en": [
+        "Dynamic limits roll out model by model and replace fixed thresholds.",
+        "Limits widen or tighten automatically with real-time load.",
+        "The model detail page shows current limits and rules under Rate Limits.",
+        "L0–L5 usage-tier entitlements lapse for participating models.",
+        "Models without dynamic limits keep tier-based limits."
+      ],
+      "importance_reason_en": "Quotas now float with load instead of following fixed tiers, changing API capacity planning and the value of purchased tier entitlements.",
+      "published_at": "2026-11-16",
+      "date_precision": "date",
+      "date_kind": "published"
+    },
+    {
+      "first_collected_at": "2026-11-16T13:31:48+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "deeptutor-releases",
+          "content_id": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.7.3",
+          "url": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.7.3",
+          "collected_at": "2026-11-16T13:31:48+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "deeptutor-1-7-3-20261116",
+      "entity_ids": [
+        "deeptutor"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "compatibility"
+      ],
+      "title_zh": "DeepTutor 1.7.3 改进 PDF 阅读、书籍编辑与搜索接入",
+      "summary_zh": "DeepTutor 发布 1.7.3，PDF 阅读器增加连续缩放、文本适配和图片查看器；书籍编辑支持先审阅 diff 再应用结构改动，并可撤销最近一次未改动编辑。搜索新增 DeepSeek、SpecStream 与 SearchApi（含网页、新闻、学术模式），Web Fetch 可选 DeepSeek 后端，配置好的 ACP 进程可作为本地子代理。该版本还改进推理强度选择、Docling 结构化解析、模型流恢复与桌面升级回滚。",
+      "key_points_zh": [
+        "PDF 阅读器增加连续缩放、文本适配与图片查看器。",
+        "书籍结构改动先展示可审阅 diff，再应用并可撤销。",
+        "搜索新增 DeepSeek、SpecStream 与 SearchApi。",
+        "Web Fetch 可选 DeepSeek 后端，ACP 进程可作为本地子代理。",
+        "改进 Docling 解析、模型流恢复与桌面升级回滚。"
+      ],
+      "importance_reason_zh": "阅读、编辑与检索多条学习链路同时增强，并接入更多模型与搜索后端，适合需要本地知识工作流的用户升级。",
+      "title_en": "DeepTutor 1.7.3 improves PDF reading, book editing and search integrations",
+      "summary_en": "DeepTutor 1.7.3 adds continuous zoom, text-fit controls and an image viewer to its PDF reader. Book editing now shows a reviewable diff before structural changes are applied and can undo the most recent unchanged edit. Search adds DeepSeek, SpecStream and SearchApi, including web, news and scholar modes; Web Fetch gains a selectable DeepSeek backend, and a configured ACP process can act as a local subagent. The release also improves reasoning-effort selection, Docling structured parsing, model-stream recovery and desktop upgrade rollback.",
+      "key_points_en": [
+        "Continuous zoom, text-fit controls and an image viewer in the PDF reader.",
+        "Book structure changes show a reviewable diff and can be undone.",
+        "Search adds DeepSeek, SpecStream and SearchApi.",
+        "Web Fetch offers a DeepSeek backend, and ACP processes can serve as local subagents.",
+        "Improves Docling parsing, model-stream recovery and desktop upgrade rollback."
+      ],
+      "importance_reason_en": "Reading, editing and retrieval all improve at once, with more model and search backends for local knowledge workflows.",
+      "published_at": "2026-11-15T20:35:33Z",
+      "date_precision": "datetime",
+      "date_kind": "published"
+    },
     {
       "id": "claude-code-2-1-325-20261113",
       "entity_ids": [
@@ -345,6 +483,52 @@
       ]
     },
     {
+      "first_collected_at": "2026-11-16T13:31:06+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+          "collected_at": "2026-11-16T13:31:06+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "codex-0-169-0-20261113",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "critical_fix"
+      ],
+      "title_zh": "Codex 0.169.0 支持多侧聊标签、旧任务搜索与终端自定义提供方",
+      "summary_zh": "Codex 0.169.0 的终端工作区支持多个侧聊标签，可在键盘或鼠标间切换，并在重启后恢复已保存的本地侧聊。Agent 命令中心可按名称、提示预览或工作目录搜索旧任务；全屏记录可折叠每轮已完成活动，同时保留答案与工具输出搜索。终端内可新增或编辑自定义模型提供方，并支持 SSH 或无浏览器环境的设备码登录；未信任目录默认禁用项目配置与 MCP。",
+      "key_points_zh": [
+        "终端工作区支持多个侧聊标签，重启后可恢复。",
+        "可按名称、提示预览或工作目录搜索旧任务。",
+        "全屏记录可折叠每轮已完成活动。",
+        "终端内可新增或编辑自定义模型提供方，支持设备码登录。",
+        "未信任目录默认禁用项目配置与 MCP，需显式 --trust。"
+      ],
+      "importance_reason_zh": "多侧聊与旧任务检索改善了长会话管理，自定义提供方和设备码登录则扩大了可用模型与远程环境范围。",
+      "title_en": "Codex 0.169.0 adds multiple side-chat tabs, older-task search and terminal provider setup",
+      "summary_en": "The Codex 0.169.0 terminal workspace supports multiple side-chat tabs, switchable by keyboard or mouse and restored after restart. The agent command center can search older tasks by name, prompt preview or working directory, and the full-screen transcript can collapse completed activity while keeping answers visible and tool output searchable. Custom model providers can be added or edited from the terminal, with device-code sign-in for SSH or browserless environments. Untrusted directories keep project configuration and MCP disabled by default.",
+      "key_points_en": [
+        "Multiple side-chat tabs in the terminal workspace, restored after restart.",
+        "Search older tasks by name, prompt preview or working directory.",
+        "Collapse completed activity in the full-screen transcript.",
+        "Add or edit custom providers in the terminal, with device-code sign-in.",
+        "Untrusted directories disable project config and MCP by default; use --trust explicitly."
+      ],
+      "importance_reason_en": "Multiple side chats and older-task search improve long-session management, while custom providers and device-code login widen model and remote-environment options.",
+      "published_at": "2026-11-13T08:39:10Z",
+      "date_precision": "datetime",
+      "date_kind": "published"
+    },
+    {
       "id": "mimo-code-0-1-17-20261113",
       "entity_ids": [
         "mimo"
@@ -436,6 +620,52 @@
       ]
     },
     {
+      "first_collected_at": "2026-11-16T13:31:06+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
+          "collected_at": "2026-11-16T13:31:06+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "codex-0-168-0-20261113",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "critical_fix"
+      ],
+      "title_zh": "Codex 0.168.0 增加模型提供方浏览、侧边会话与音频附件",
+      "summary_zh": "Codex 0.168.0 可在 Sessions → Model providers 浏览模型提供方，并为新会话选择默认项；启用 tui_workspace 后可在主对话旁打开可调整大小的侧边会话。该版本支持为音频模型附加录音、生成或编辑带帧数与时长控制的 GIF，并新增 osc777 终端通知。修复项包括按登录账户过滤本地历史、旧会话沿用已保存的模型提供方，以及工具调用打断后的 Markdown 渲染与推理摘要恢复。",
+      "key_points_zh": [
+        "可在 Sessions → Model providers 浏览提供方并设置新会话默认项。",
+        "tui_workspace 支持主对话旁的侧边会话与缩放。",
+        "音频模型可附加录音，并支持生成或编辑 GIF。",
+        "新增 osc777 终端通知方式。",
+        "修复本地历史账户隔离与旧会话提供方沿用问题。"
+      ],
+      "importance_reason_zh": "模型提供方管理与侧边会话改变了多模型、多任务并行的日常用法，账户隔离修复也关系到本地历史隐私。",
+      "title_en": "Codex 0.168.0 adds model-provider browsing, side conversations and audio attachments",
+      "summary_en": "Codex 0.168.0 lets users browse model providers under Sessions → Model providers and pick a default for new chats; enabling tui_workspace opens a resizable side conversation beside the main chat. The release supports attaching recordings for audio-capable models, generating or editing GIFs with frame-count and timing controls, and osc777 terminal notifications. Fixes cover scoping local history to the signed-in account, keeping saved providers for existing chats, and restoring Markdown rendering and reasoning summaries after tool-interrupted turns.",
+      "key_points_en": [
+        "Browse providers under Sessions → Model providers and set the default for new chats.",
+        "tui_workspace enables a resizable side conversation.",
+        "Audio-capable models accept recordings, and GIFs can be generated or edited.",
+        "Adds osc777 terminal notifications.",
+        "Fixes local-history account scoping and provider retention for existing chats."
+      ],
+      "importance_reason_en": "Provider management and side conversations change multi-model, multi-task workflows, while account scoping affects local-history privacy.",
+      "published_at": "2026-11-13T03:56:26Z",
+      "date_precision": "datetime",
+      "date_kind": "published"
+    },
+    {
       "id": "claude-code-2-1-323-20261113",
       "entity_ids": [
         "claude-code"
@@ -476,6 +706,145 @@
           "material_scope": "full_text"
         }
       ]
+    },
+    {
+      "first_collected_at": "2026-11-16T13:52:57+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-official",
+          "content_id": "https://api-docs.deepseek.com/updates#date-2026-11-13",
+          "url": "https://api-docs.deepseek.com/updates#date-2026-11-13",
+          "collected_at": "2026-11-16T13:52:57+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "deepseek-app-apis-20261113",
+      "entity_ids": [
+        "deepseek"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "feature",
+        "availability"
+      ],
+      "title_zh": "DeepSeek 开放完整应用 API：搜索、文件、URL 读取与语音能力",
+      "summary_zh": "DeepSeek 将 App 中的联网搜索、文件输入、URL 读取、语音交互与安全能力开放给开发者，deepseek-flash 在 Messages、Responses 和 Chat Completions API 中支持对应参数。搜索分为关闭思考的普通联网搜索与开启思考的多步深度搜索；文件输入支持 PDF、Office 文件和图片；URL 读取会自动抓取消息中的链接。底层能力还以独立的 Search/Fetch、OCR、ASR、TTS API 提供，官方同时开源了可导入历史记录的演示客户端。",
+      "key_points_zh": [
+        "deepseek-flash 在 Messages、Responses 与 Chat Completions API 中开放应用能力。",
+        "联网搜索分普通搜索与多步深度思考搜索，支持引用。",
+        "文件输入支持 PDF、Office 文件与图片，URL 读取可自动抓取链接。",
+        "Search/Fetch、OCR、ASR、TTS 作为独立 API 提供。",
+        "开源可导入 DeepSeek 聊天历史的演示客户端。"
+      ],
+      "importance_reason_zh": "把消费端 App 的检索、文件与语音能力一次性开放为 API，能显著缩短聊天类应用的搭建周期。",
+      "title_en": "DeepSeek opens its full app capability set as APIs",
+      "summary_en": "DeepSeek opened the web search, file input, URL reading, voice interaction and safety capabilities behind its app to developers. deepseek-flash supports the corresponding parameters across the Messages, Responses and Chat Completions APIs. Search runs either as ordinary web search with thinking off or as multi-step deep-thinking search with thinking on; file input accepts PDFs, Office files and images; URL reading fetches links found in the message. The underlying capabilities are also available as standalone Search/Fetch, OCR, ASR and TTS APIs, and DeepSeek open-sourced a demo client that can import chat history.",
+      "key_points_en": [
+        "deepseek-flash exposes app capabilities across the Messages, Responses and Chat Completions APIs.",
+        "Web search comes in ordinary and multi-step deep-thinking modes, with citations.",
+        "File input covers PDFs, Office files and images; URL reading fetches links automatically.",
+        "Search/Fetch, OCR, ASR and TTS are available as standalone APIs.",
+        "An open-source demo client can import DeepSeek chat history."
+      ],
+      "importance_reason_en": "Opening the consumer app’s retrieval, file and voice capabilities as APIs shortens the path to building chat-style applications.",
+      "published_at": "2026-11-13",
+      "date_precision": "date",
+      "date_kind": "published"
+    },
+    {
+      "first_collected_at": "2026-11-16T13:52:58+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "zcode-official",
+          "content_id": "https://zcode.z.ai/en/changelog::3.18.2",
+          "url": "https://zcode.z.ai/en/changelog",
+          "collected_at": "2026-11-16T13:52:58+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "zcode-3-18-2-20261113",
+      "entity_ids": [
+        "zcode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "ZCode 3.18.2 增加语音输入、Worktree 与设计检查",
+      "summary_zh": "ZCode 发布 3.18.2，输入框支持实时语音转文字，新增 Worktree 并行任务开发、设计系统检查、日语/俄语/韩语界面与会话管理工具。内置浏览器支持点选页面元素并直接编辑保存、设备尺寸预设及 PNG/PDF 导出；分享可设置有效期并新增管理页。该版本还修复了工作流脚本逃逸沙箱的安全问题，以及安装更新、登录、本地化和内置浏览器键盘输入等问题。",
+      "key_points_zh": [
+        "输入框支持实时语音输入。",
+        "新增 Worktree 并行任务开发与设计系统检查。",
+        "内置浏览器可点选元素编辑保存，支持设备预设与 PNG/PDF 导出。",
+        "新增日语、俄语、韩语界面。",
+        "修复工作流脚本可逃逸沙箱的安全问题。"
+      ],
+      "importance_reason_zh": "并行任务、设计检查和浏览器内编辑集中在一次更新，同时修补沙箱逃逸漏洞，现有用户需要尽快升级。",
+      "title_en": "ZCode 3.18.2 adds voice input, Worktree and design checks",
+      "summary_en": "ZCode 3.18.2 adds real-time speech-to-text in the input box, Worktree-based parallel task development, design-system checks, Japanese/Russian/Korean interfaces and a session management tool. The built-in browser can select page elements for direct editing and saving, offers device-size presets and exports pages as PNG or PDF; shares can now expire and have a management page. The release also fixes a security issue where workflow scripts could escape the sandbox, along with update installation, login, localization and browser keyboard-input problems.",
+      "key_points_en": [
+        "Real-time voice input in the composer.",
+        "Worktree parallel development and design-system checks.",
+        "Built-in browser element selection, editing, device presets and PNG/PDF export.",
+        "Japanese, Russian and Korean interfaces.",
+        "Fixes a sandbox escape in workflow scripts."
+      ],
+      "importance_reason_en": "Parallel tasks, design checks and in-browser editing land together with a sandbox-escape fix, so existing users should upgrade promptly.",
+      "published_at": "2026-11-13",
+      "date_precision": "date",
+      "date_kind": "published"
+    },
+    {
+      "first_collected_at": "2026-11-16T13:52:58+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#november-13-2026::0.5.11",
+          "url": "https://docs.qoder.com/release-notes/qoder#november-13-2026",
+          "collected_at": "2026-11-16T13:52:58+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "qoder-0-5-11-20261113",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "compatibility"
+      ],
+      "title_zh": "Qoder 0.5.11 增加下一步建议、自定义 UI 插件与 Issue 协作",
+      "summary_zh": "Qoder 0.5.11 在输入框空闲且为空时主动给出下一步建议，按 Tab 或右方向键即可插入。该版本新增自定义 UI 插件、Issue 评论/回复/附件与 Agent 指派，以及 Kiro 任务、记忆、Skills、MCP 配置和 Powers 导入。还改进 IM 插件管理、云自动化资源选择、网页上下文引用、知识库增量更新、SOCKS5 代理，并支持 SSH 会话从本机发送文件。",
+      "key_points_zh": [
+        "输入框空闲时给出下一步建议，Tab 或右方向键插入。",
+        "可用 plugin-creator 构建带自定义界面的 UI 插件。",
+        "Issue 支持评论、回复、附件、Agent 指派与执行记录。",
+        "支持从 Kiro 导入任务、记忆、Skills、MCP 与 Powers。",
+        "新增 SOCKS5 代理与 SSH 本机文件发送。"
+      ],
+      "importance_reason_zh": "协作与插件能力扩展让 Qoder 从单人编码工具走向团队工作流，迁移用户也获得 Kiro 导入路径。",
+      "title_en": "Qoder 0.5.11 adds next-step suggestions, custom UI plugins and issue collaboration",
+      "summary_en": "Qoder 0.5.11 proactively suggests next steps when the composer is idle and empty; Tab or the right arrow inserts a suggestion. The release adds custom UI plugins, issue comments, replies, attachments and agent assignment, plus imports for Kiro tasks, memory, Skills, MCP configurations and Powers. It also improves IM plugin management, cloud automation resource selection, browser context references, incremental knowledge updates and SOCKS5 proxying, and lets SSH sessions send files from the local machine.",
+      "key_points_en": [
+        "Next-step suggestions appear when the composer is idle and empty; Tab or right arrow inserts one.",
+        "The plugin-creator skill builds plugins with custom interfaces.",
+        "Issues support comments, replies, attachments, agent assignment and execution records.",
+        "Imports tasks, memory, Skills, MCP configurations and Powers from Kiro.",
+        "Adds SOCKS5 proxy support and local file sending over SSH."
+      ],
+      "importance_reason_en": "Collaboration and plugin additions move Qoder from a single-user coding tool toward team workflows, and Kiro users get a migration path.",
+      "published_at": "2026-11-13",
+      "date_precision": "date",
+      "date_kind": "published"
     },
     {
       "id": "copilot-cli-1-0-110-20261112",
@@ -618,6 +987,57 @@
           "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.6.0",
           "collected_at": "2026-11-15T14:19:06+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "first_collected_at": "2026-11-16T14:14:39+00:00",
+      "updated_at": "2026-11-16T14:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/",
+          "url": "https://developers.googleblog.com/en/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/",
+          "collected_at": "2026-11-16T14:14:39+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "id": "google-agent-anomaly-detection-20261112",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature"
+      ],
+      "title_zh": "Google 介绍 Agent Anomaly Detection：在五个公开基准上捕获 87% 有害指令",
+      "summary_zh": "Google 开发者博客介绍 Agent Anomaly Detection（AAD），它通过分析 OpenTelemetry 轨迹与日志，异步、低延迟地标记 AI Agent 的目标劫持和工具误用。官方称在五个并非自建的公开安全基准上，AAD 捕获了 87% 由 Agent 实际执行的有害指令，且不增加运行时延迟。开发者可将 AAD 与语义治理、严格工具权限一起使用，作为纵深防御的一部分。",
+      "key_points_zh": [
+        "分析 OpenTelemetry 轨迹与日志，异步标记目标劫持和工具误用。",
+        "在五个公开安全基准上捕获 87% 由 Agent 执行的有害指令。",
+        "官方称不增加运行时延迟。",
+        "建议与语义治理和严格工具权限组合使用。"
+      ],
+      "importance_reason_zh": "Agent 安全监控从原则走向可量化测试，为部署自主 Agent 的团队提供了可接入的检测层。",
+      "title_en": "Google details Agent Anomaly Detection, catching 87% of harmful agent actions on five public benchmarks",
+      "summary_en": "Google’s developer blog details Agent Anomaly Detection (AAD), which analyzes OpenTelemetry traces and logs to flag goal hijacks and tool misuse asynchronously and with low latency. Google says AAD caught 87% of harmful instructions actually carried out by agents across five public security benchmarks it did not author, without adding runtime latency. Developers can pair AAD with semantic governance and strict tool limits as part of defense in depth.",
+      "key_points_en": [
+        "Analyzes OpenTelemetry traces and logs to flag goal hijacks and tool misuse asynchronously.",
+        "Caught 87% of harmful agent-executed instructions across five public benchmarks.",
+        "Google says it adds no runtime latency.",
+        "Recommended alongside semantic governance and strict tool limits."
+      ],
+      "importance_reason_en": "Agent security monitoring moves from principle to measurable testing, giving teams deploying autonomous agents a detection layer they can integrate.",
+      "published_at": "2026-11-12",
+      "date_precision": "date",
+      "date_kind": "published",
+      "corrections": [
+        {
+          "at": "2026-11-16T14:40:00+00:00",
+          "reason_zh": "RSSHub 条目只提供日期，原事件误用了 00:00 时间；改为日期精度，避免伪造具体时刻。",
+          "reason_en": "The RSSHub entry supplies only a date, so the original event wrongly used a 00:00 time. It now uses date precision to avoid implying an exact time.",
+          "url": "https://developers.googleblog.com/en/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/"
         }
       ]
     },
@@ -792,6 +1212,52 @@
       ]
     },
     {
+      "first_collected_at": "2026-11-16T13:52:58+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-12-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-12-2026",
+          "collected_at": "2026-11-16T13:52:58+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "devin-2026-11-12",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "critical_fix"
+      ],
+      "title_zh": "Devin 重做 Review 页面并增加自动修复开关",
+      "summary_zh": "Devin 11 月 12 日更新向所有组织开放重设计的 Devin Review 页面：合并控制、操作菜单和 diff 大小移至顶栏，侧边栏可收起，发现项改用新卡片与面板。新增独立的“自动修复 Devin Review 发现项”设置，与“响应机器人”分开。安全扫描可同步到多个连接，发现项状态变更可撤销，并新增 Veracode 与 Black Duck 发现项来源（封闭测试）。",
+      "key_points_zh": [
+        "重设计的 Devin Review 页面向所有组织开放。",
+        "自动修复发现项成为独立设置，与响应机器人分开。",
+        "安全扫描可同步到多个外部连接。",
+        "发现项驳回或标记已审阅后可用 Undo 撤销。",
+        "新增 Veracode 与 Black Duck 发现项来源（封闭测试）。"
+      ],
+      "importance_reason_zh": "审查界面与自动修复开关同时调整，改变了 PR 审查的默认自动化程度和团队配置方式。",
+      "title_en": "Devin redesigns Review and adds a separate auto-fix setting",
+      "summary_en": "Devin’s November 12 update makes the redesigned Devin Review page available to all organizations: merge controls, the actions menu and the diff-size pill move to the top bar, the sidebar collapses, and findings use new cards and panels. A new “Automatically fix Devin Review findings” setting is separate from “Responding to bots.” Security scans can sync to multiple connections, finding status changes can be undone, and Veracode and Black Duck finding sources arrive in closed beta.",
+      "key_points_en": [
+        "The redesigned Devin Review page is available to all organizations.",
+        "Auto-fixing findings is now a separate setting from responding to bots.",
+        "Security scans can sync to multiple external connections.",
+        "Dismissing or reviewing a finding can be undone.",
+        "Adds Veracode and Black Duck finding sources in closed beta."
+      ],
+      "importance_reason_en": "The review UI and auto-fix switch change the default automation level and how teams configure pull-request review.",
+      "published_at": "2026-11-12",
+      "date_precision": "date",
+      "date_kind": "published"
+    },
+    {
       "id": "alphagenome-2-20261111",
       "entity_ids": [
         "google"
@@ -913,6 +1379,200 @@
           "material_scope": "full_text"
         }
       ]
+    },
+    {
+      "first_collected_at": "2026-11-16T14:14:39+00:00",
+      "updated_at": "2026-11-16T14:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/a2ui-10-build-delightful-fast-reliable-agentic-experiences/",
+          "url": "https://developers.googleblog.com/en/a2ui-10-build-delightful-fast-reliable-agentic-experiences/",
+          "collected_at": "2026-11-16T14:14:39+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "id": "google-a2ui-1-0-20261111",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "compatibility"
+      ],
+      "title_zh": "Google 发布 A2UI 1.0：面向 Agent 的生成式 UI 开放协议",
+      "summary_zh": "Google 发布 A2UI 1.0，这是一个用于生成式 UI 的开放协议，让 AI Agent 在 Web、移动和桌面应用中渲染可交互的原生界面。项目提供 React、Angular、Lit、Flutter、SwiftUI 与 Jetpack Compose 渲染器 SDK，以及 Python、TypeScript、Dart 的 Agent SDK。1.0 版本引入双向函数调用、可替换的推理格式和安全数据绑定，方便团队把生成式 UI 接入现有产品栈。",
+      "key_points_zh": [
+        "开放协议，让 Agent 渲染 Web、移动与桌面的原生交互界面。",
+        "提供 React、Angular、Lit、Flutter、SwiftUI、Jetpack Compose 渲染器 SDK。",
+        "提供 Python、TypeScript、Dart 的 Agent SDK。",
+        "1.0 增加双向函数调用、可替换推理格式与安全数据绑定。"
+      ],
+      "importance_reason_zh": "生成式 UI 从各家私有实现走向开放协议与多框架 SDK，会降低 Agent 前端集成的迁移成本。",
+      "title_en": "Google releases A2UI 1.0, an open protocol for agent-generated interfaces",
+      "summary_en": "Google released A2UI 1.0, an open protocol for generative UI that lets AI agents render interactive native screens across web, mobile and desktop apps. It provides renderer SDKs for React, Angular, Lit, Flutter, SwiftUI and Jetpack Compose, plus agent SDKs for Python, TypeScript and Dart. Version 1.0 adds bidirectional function calls, swappable inference formats and secure data binding for integrating generative UI into existing product stacks.",
+      "key_points_en": [
+        "An open protocol for agents to render native interactive screens on web, mobile and desktop.",
+        "Renderer SDKs for React, Angular, Lit, Flutter, SwiftUI and Jetpack Compose.",
+        "Agent SDKs for Python, TypeScript and Dart.",
+        "1.0 adds bidirectional function calls, swappable inference formats and secure data binding."
+      ],
+      "importance_reason_en": "Generative UI moves from proprietary implementations toward an open protocol with multi-framework SDKs, lowering migration costs for agent frontends.",
+      "published_at": "2026-11-11",
+      "date_precision": "date",
+      "date_kind": "published",
+      "corrections": [
+        {
+          "at": "2026-11-16T14:40:00+00:00",
+          "reason_zh": "RSSHub 条目只提供日期，原事件误用了 00:00 时间；改为日期精度，避免伪造具体时刻。",
+          "reason_en": "The RSSHub entry supplies only a date, so the original event wrongly used a 00:00 time. It now uses date precision to avoid implying an exact time.",
+          "url": "https://developers.googleblog.com/en/a2ui-10-build-delightful-fast-reliable-agentic-experiences/"
+        }
+      ]
+    },
+    {
+      "first_collected_at": "2026-11-16T13:52:57+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "minimax-official",
+          "content_id": "https://www.minimax.io/blog/minimax-h3-image",
+          "url": "https://www.minimax.io/blog/minimax-h3-image",
+          "collected_at": "2026-11-16T13:52:57+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "minimax-h3-image-20261111",
+      "entity_ids": [
+        "minimax"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "MiniMax 发布开源图像模型 H3-Image：4K 生成进入 10 秒级",
+      "summary_zh": "MiniMax 发布基于 H3 的开源权重图像生成模型 H3-Image，支持文生图、参考图生成和图像编辑。官方称可在 10 秒内生成 4096×4096 的 4K 图像，速度最高为主流方案的 5 倍，并能理解最多 16 张参考图。模型同时通过 MiniMax API、MiniMax Code 和 Hailuo AI 提供，定价为主流同类方案的 50%–70%，发布周 4K 及以上分辨率请求再打五折。",
+      "key_points_zh": [
+        "开源权重，支持文生图、参考图生成和图像编辑。",
+        "10 秒内生成 4096×4096 图像，最高 5 倍于主流方案。",
+        "最多支持 16 张参考图。",
+        "可通过 MiniMax API、MiniMax Code 与 Hailuo AI 使用。",
+        "定价为主流方案的 50%–70%，发布周 4K 及以上请求五折。"
+      ],
+      "importance_reason_zh": "开源权重的高分辨率图像模型把 4K 生成的速度和价格同时拉低，会直接影响创作者与 API 用户的模型选择。",
+      "title_en": "MiniMax releases open-weight H3-Image, bringing 4K generation under 10 seconds",
+      "summary_en": "MiniMax released H3-Image, an open-weight image generation model built on H3 that supports text-to-image, reference-based generation and image editing. MiniMax says it can produce a 4096×4096 image in under 10 seconds, up to 5× faster than mainstream alternatives, and can work with up to 16 reference images. It is available through the MiniMax API, MiniMax Code and Hailuo AI; pricing is 50–70% of comparable mainstream offerings, with a further 50% off 4K-and-above requests during launch week.",
+      "key_points_en": [
+        "Open weights with text-to-image, reference-based generation and editing.",
+        "A 4096×4096 image in under 10 seconds, up to 5× faster than mainstream options.",
+        "Support for up to 16 reference images.",
+        "Available through the MiniMax API, MiniMax Code and Hailuo AI.",
+        "Priced at 50–70% of mainstream alternatives, with 50% off 4K-and-above requests in launch week."
+      ],
+      "importance_reason_en": "An open-weight high-resolution image model lowers both latency and price for 4K generation, directly affecting creator and API model choices.",
+      "published_at": "2026-11-11",
+      "date_precision": "date",
+      "date_kind": "published"
+    },
+    {
+      "first_collected_at": "2026-11-16T13:52:58+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://siliconflow.cn/news/l79jsom7hup3ovmj80tzblmx",
+          "url": "https://siliconflow.cn/news/l79jsom7hup3ovmj80tzblmx",
+          "collected_at": "2026-11-16T13:52:58+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "siliconflow-minimax-h3-20261111",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "api",
+        "pricing",
+        "capability"
+      ],
+      "title_zh": "硅基流动上线 MiniMax H3：0.5 元/秒生成带立体声视频",
+      "summary_zh": "硅基流动上线 MiniMax 开源的 MiniMax H3（FL2VA），开发者可通过 API 生成带原生立体声音的视频，并支持输入首帧、尾帧或首尾双帧控制关键画面。模型采用 33B 单流 H3-Omni Transformer 联合预测视频与音频，并重构 H3-VAE 以降低训练与推理成本。硅基流动定价 0.5 元/秒，支持生成 5–15 秒、480P 或 768P 的带音轨视频。",
+      "key_points_zh": [
+        "支持文生视频与首帧、尾帧、首尾双帧控制。",
+        "原生立体声音视频同步生成。",
+        "33B 单流 H3-Omni Transformer 联合预测视频与音频。",
+        "硅基流动定价 0.5 元/秒。",
+        "支持 5–15 秒、480P 或 768P。"
+      ],
+      "importance_reason_zh": "把带原生音频的视频生成接入国内 API 并按秒计价，为广告、电商与游戏内容生产提供了可直接核算成本的方案。",
+      "title_en": "SiliconFlow adds MiniMax H3 with native-stereo video at ¥0.5 per second",
+      "summary_en": "SiliconFlow added MiniMax’s open-source MiniMax H3 (FL2VA), letting developers generate video with native stereo audio through its API and control key frames with a first frame, last frame or both. The model uses a 33B single-stream H3-Omni Transformer to predict video and audio jointly and a rebuilt H3-VAE to cut training and inference costs. SiliconFlow prices it at ¥0.5 per second for 5–15 second clips at 480P or 768P with an audio track.",
+      "key_points_en": [
+        "Text-to-video plus first-frame, last-frame and first/last-frame control.",
+        "Native stereo audio generated together with video.",
+        "A 33B single-stream H3-Omni Transformer predicts video and audio jointly.",
+        "Priced at ¥0.5 per second on SiliconFlow.",
+        "Supports 5–15 second clips at 480P or 768P."
+      ],
+      "importance_reason_en": "Native-audio video generation with per-second pricing gives advertising, e-commerce and game teams a directly costable production option.",
+      "published_at": "2026-11-11",
+      "date_precision": "date",
+      "date_kind": "published",
+      "related_event_ids": [
+        "siliconflow-wan22-offline-minimax-h3"
+      ]
+    },
+    {
+      "first_collected_at": "2026-11-16T13:52:58+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-11-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-11-2026",
+          "collected_at": "2026-11-16T13:52:58+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "devin-2026-11-11",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Devin 增加 Design Mode、服务用户筛选与堆叠 PR 视图",
+      "summary_zh": "Devin 11 月 11 日更新加入 Design Mode：选中页面元素后打开紧凑提示栏，可按属性编辑，绘制五种颜色的聚光灯框或铅笔标注，并把带注释的页面图连同说明发送；支持取色器和页面 CSS 变量搜索。会话列表的“创建者”筛选纳入服务用户，堆叠 PR 增加可见性与顺序偏好，相邻仓库设置建议可批量批准，Devin 也能给自己设置未来提醒。",
+      "key_points_zh": [
+        "Design Mode 支持逐属性编辑、五种颜色标注与页面图发送。",
+        "支持取色器与页面 CSS 变量搜索。",
+        "会话列表可按服务用户筛选。",
+        "堆叠 PR 增加可见性与顺序偏好。",
+        "仓库设置建议可批量批准，Devin 可自我提醒。"
+      ],
+      "importance_reason_zh": "Design Mode 把视觉修改与自然语言说明合并到同一反馈回路，减少前端任务的往返沟通。",
+      "title_en": "Devin adds Design Mode, service-user filtering and stacked-PR visibility",
+      "summary_en": "Devin’s November 11 update adds Design Mode: selecting a page element opens a compact prompt bar with per-property editing, spotlight boxes or pencil annotations in five colors, and the option to send the annotated page image with a note, plus an eyedropper and page CSS-variable search. The sessions list can filter by service user, stacked PRs gain visibility and order preferences, adjacent repository setup suggestions can be approved together, and Devin can set itself future reminders.",
+      "key_points_en": [
+        "Design Mode offers per-property editing, five annotation colors and annotated-page sending.",
+        "Includes an eyedropper and page CSS-variable search.",
+        "Session lists can filter by service user.",
+        "Stacked PRs gain visibility and stack-order preferences.",
+        "Repository setup suggestions can be batch-approved, and Devin can set its own reminders."
+      ],
+      "importance_reason_en": "Design Mode folds visual edits and natural-language notes into one feedback loop, cutting back-and-forth on frontend tasks.",
+      "published_at": "2026-11-11",
+      "date_precision": "date",
+      "date_kind": "published"
     },
     {
       "id": "gemini-cli-0-68-0-20261110",
@@ -1354,6 +2014,58 @@
       ]
     },
     {
+      "first_collected_at": "2026-11-16T14:14:39+00:00",
+      "updated_at": "2026-11-16T14:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/",
+          "url": "https://developers.googleblog.com/en/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/",
+          "collected_at": "2026-11-16T14:14:39+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "id": "google-ai-edge-on-device-speech-20261110",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature",
+        "availability"
+      ],
+      "title_zh": "Google AI Edge Gallery 增加端侧离线语音识别与合成",
+      "summary_zh": "Google AI Edge Gallery 新增端侧、离线的自动语音识别（ASR）与文本转语音（TTS）能力，面向语音应用开发。Android 可使用 ML Kit 获得优化性能，跨平台则可通过 MediaPipe Tasks 与 LiteRT 集成开放权重模型。该本地管线可与 Gemini Nano、Gemma 4 等端侧小模型配合，实现实时流式转写和低延迟语音合成。",
+      "key_points_zh": [
+        "新增端侧离线 ASR 与 TTS。",
+        "Android 可通过 ML Kit 使用优化实现。",
+        "跨平台可通过 MediaPipe Tasks 与 LiteRT 集成开放权重模型。",
+        "可与 Gemini Nano、Gemma 4 等端侧小模型组合。"
+      ],
+      "importance_reason_zh": "离线语音链路补齐了端侧 Agent 的输入输出能力，减少对云端的依赖。",
+      "title_en": "Google AI Edge Gallery adds on-device offline speech recognition and synthesis",
+      "summary_en": "Google AI Edge Gallery now supports on-device, offline automatic speech recognition and text-to-speech for voice applications. Android can use ML Kit for optimized performance, while cross-platform apps can integrate open-weight models through MediaPipe Tasks and LiteRT. The local pipeline can pair with on-device small models such as Gemini Nano and Gemma 4 for real-time streaming transcription and low-latency synthesis.",
+      "key_points_en": [
+        "Adds on-device, offline ASR and TTS.",
+        "Android can use ML Kit for an optimized implementation.",
+        "Cross-platform apps can use MediaPipe Tasks and LiteRT with open-weight models.",
+        "Works with on-device models such as Gemini Nano and Gemma 4."
+      ],
+      "importance_reason_en": "An offline speech pipeline completes on-device agent input and output, reducing cloud dependence.",
+      "published_at": "2026-11-10",
+      "date_precision": "date",
+      "date_kind": "published",
+      "corrections": [
+        {
+          "at": "2026-11-16T14:40:00+00:00",
+          "reason_zh": "RSSHub 条目只提供日期，原事件误用了 00:00 时间；改为日期精度，避免伪造具体时刻。",
+          "reason_en": "The RSSHub entry supplies only a date, so the original event wrongly used a 00:00 time. It now uses date precision to avoid implying an exact time.",
+          "url": "https://developers.googleblog.com/en/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/"
+        }
+      ]
+    },
+    {
       "id": "kiro-grok-4-7-20261110",
       "entity_ids": [
         "kiro"
@@ -1626,6 +2338,51 @@
       ]
     },
     {
+      "first_collected_at": "2026-11-16T13:52:58+00:00",
+      "updated_at": "2026-11-16T14:03:41+00:00",
+      "sources": [
+        {
+          "source_id": "trae-official",
+          "content_id": "https://docs.trae.cn/ide_changelog#hWMca85H9",
+          "url": "https://docs.trae.cn/ide_changelog#hWMca85H9",
+          "collected_at": "2026-11-16T13:52:58+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "id": "trae-3-4-18-20261110",
+      "entity_ids": [
+        "trae"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "TRAE v3.4.18 增加目录信任与 Agent Window Hooks 编辑",
+      "summary_zh": "TRAE 发布 v3.4.18：打开或创建项目时需确认目录信任，未信任目录中的项目规则、技能、命令和 Hooks 不会加载，终端命令也不会运行；可在 Agent Window 中直接编辑全局与项目 Hooks。新版本还支持从历史会话打开关联工作区或转到 Agent Window，macOS Dock 同步展示最近工作区，文档产物可查看代码与表格的结构化差异，并优化斜杠菜单预加载、Remote SSH 连接等待和行内翻译同步。",
+      "key_points_zh": [
+        "打开或创建项目时确认目录信任。",
+        "未信任目录中的规则、技能、命令和 Hooks 不加载，终端命令不运行。",
+        "可在 Agent Window 直接编辑全局与项目 Hooks。",
+        "历史会话可打开关联工作区或转到 Agent Window。",
+        "文档产物支持代码与表格的结构化差异查看。"
+      ],
+      "importance_reason_zh": "目录信任把项目级配置与命令执行纳入显式授权，直接改变打开外部仓库时的默认安全边界。",
+      "title_en": "TRAE v3.4.18 adds directory trust and Hooks editing in the Agent Window",
+      "summary_en": "TRAE v3.4.18 asks users to confirm directory trust when opening or creating a project; in untrusted directories, project rules, skills, commands and Hooks are not loaded and terminal commands do not run. Global and project Hooks can now be edited directly in the Agent Window. The release also opens linked workspaces or switches to the Agent Window from history, mirrors recent workspaces in the macOS Dock menu, adds structured code and table diffs in document artifacts, and improves slash-menu preloading, Remote SSH connection waits and inline-translation sync.",
+      "key_points_en": [
+        "Directory trust is confirmed when opening or creating a project.",
+        "Untrusted directories load no rules, skills, commands or Hooks, and run no terminal commands.",
+        "Global and project Hooks can be edited in the Agent Window.",
+        "History sessions can open a linked workspace or switch to the Agent Window.",
+        "Document artifacts show structured code and table diffs."
+      ],
+      "importance_reason_en": "Directory trust turns project-level configuration and command execution into an explicit authorization step, changing the default security boundary for outside repositories.",
+      "published_at": "2026-11-10",
+      "date_precision": "date",
+      "date_kind": "published"
+    },
+    {
       "id": "pi-1-5-1-20261109",
       "entity_ids": [
         "pi"
@@ -1874,6 +2631,109 @@
           "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.108",
           "collected_at": "2026-11-15T14:19:06+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "first_collected_at": "2026-11-16T14:14:39+00:00",
+      "updated_at": "2026-11-16T14:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/",
+          "url": "https://developers.googleblog.com/en/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/",
+          "collected_at": "2026-11-16T14:14:39+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "id": "maxtext-context-parallelism-20261109",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature"
+      ],
+      "title_zh": "Google MaxText 支持最长 1400 万 token 的 TPU 长上下文训练",
+      "summary_zh": "Google Cloud 的 MaxText 框架新增上下文并行，支持在 Cloud TPU 上训练最长 1400 万 token 的长上下文。实现包含 All-gather、A2A、P2P 与 USP 四种策略，并借助 Tokamax Splash Attention 内核管理注意力计算与显存瓶颈，避免在 HBM 中物化完整的键值序列。开发者可在 MaxText v0.2.4 中使用这些能力。",
+      "key_points_zh": [
+        "支持最长 1400 万 token 的 TPU 长上下文训练。",
+        "提供 All-gather、A2A、P2P、USP 四种上下文并行策略。",
+        "使用 Tokamax Splash Attention 内核管理计算与显存。",
+        "避免在 HBM 中物化完整 KV 序列，可在 v0.2.4 中使用。"
+      ],
+      "importance_reason_zh": "把长上下文训练推到千万 token 量级，会改变长文档、代码库与多模态序列的训练可行性。",
+      "title_en": "Google MaxText supports long-context TPU training up to 14 million tokens",
+      "summary_en": "Google Cloud’s MaxText framework added context parallelism for long-context training on Cloud TPUs at up to 14 million tokens. The implementation offers four strategies—All-gather, A2A, P2P and USP—and uses the Tokamax Splash Attention kernel to manage attention compute and memory bottlenecks without materializing full key-value sequences in HBM. Developers can use the capabilities in MaxText v0.2.4.",
+      "key_points_en": [
+        "Long-context TPU training up to 14 million tokens.",
+        "Four context-parallel strategies: All-gather, A2A, P2P and USP.",
+        "Uses the Tokamax Splash Attention kernel to manage compute and memory.",
+        "Avoids materializing full KV sequences in HBM; available in v0.2.4."
+      ],
+      "importance_reason_en": "Pushing long-context training to tens of millions of tokens changes what is feasible for long documents, codebases and multimodal sequences.",
+      "published_at": "2026-11-09",
+      "date_precision": "date",
+      "date_kind": "published",
+      "corrections": [
+        {
+          "at": "2026-11-16T14:40:00+00:00",
+          "reason_zh": "RSSHub 条目只提供日期，原事件误用了 00:00 时间；改为日期精度，避免伪造具体时刻。",
+          "reason_en": "The RSSHub entry supplies only a date, so the original event wrongly used a 00:00 time. It now uses date precision to avoid implying an exact time.",
+          "url": "https://developers.googleblog.com/en/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/"
+        }
+      ]
+    },
+    {
+      "first_collected_at": "2026-11-16T14:14:39+00:00",
+      "updated_at": "2026-11-16T14:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/from-prompt-to-app-build-with-google-maps-in-ai-studio/",
+          "url": "https://developers.googleblog.com/en/from-prompt-to-app-build-with-google-maps-in-ai-studio/",
+          "collected_at": "2026-11-16T14:14:39+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "id": "google-maps-ai-studio-20261109",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "api",
+        "availability"
+      ],
+      "title_zh": "Google AI Studio 可直接用提示词构建 Maps 应用",
+      "summary_zh": "开发者现在可在 Google AI Studio 中通过提示 Gemini 使用真实地理空间概念，构建由 Google Maps Platform 驱动的应用。该集成提供一键生成的演示密钥，无需跳转 Cloud Console 或绑定信用卡；开发者可直接访问 Maps、Places 与 Routes 等核心 API，并获得每日沙箱配额用于原型开发。",
+      "key_points_zh": [
+        "可在 AI Studio 中通过提示词构建 Maps 应用。",
+        "一键生成演示密钥，无需 Cloud Console 或信用卡。",
+        "可直接访问 Maps、Places 与 Routes 等 API。",
+        "提供每日沙箱配额用于原型开发。"
+      ],
+      "importance_reason_zh": "把地图 API 的开通与原型流程压缩到提示词内，降低了地理空间应用的首个可用版本门槛。",
+      "title_en": "Google AI Studio lets developers build Maps apps from prompts",
+      "summary_en": "Developers can now build applications powered by Google Maps Platform directly in Google AI Studio by prompting Gemini with real-world geospatial concepts. The integration provides one-click demo keys generated without Cloud Console redirects or a credit card, immediate access to core Maps, Places and Routes APIs, and daily sandbox quotas for prototyping.",
+      "key_points_en": [
+        "Build Maps apps from prompts in AI Studio.",
+        "One-click demo keys need no Cloud Console redirect or credit card.",
+        "Immediate access to Maps, Places and Routes APIs.",
+        "Daily sandbox quotas support prototyping."
+      ],
+      "importance_reason_en": "Compressing Maps API setup and prototyping into a prompt lowers the barrier to a first working geospatial app.",
+      "published_at": "2026-11-09",
+      "date_precision": "date",
+      "date_kind": "published",
+      "corrections": [
+        {
+          "at": "2026-11-16T14:40:00+00:00",
+          "reason_zh": "RSSHub 条目只提供日期，原事件误用了 00:00 时间；改为日期精度，避免伪造具体时刻。",
+          "reason_en": "The RSSHub entry supplies only a date, so the original event wrongly used a 00:00 time. It now uses date precision to avoid implying an exact time.",
+          "url": "https://developers.googleblog.com/en/from-prompt-to-app-build-with-google-maps-in-ai-studio/"
         }
       ]
     },
@@ -2557,6 +3417,48 @@
           "material_scope": "full_text"
         }
       ]
+    },
+    {
+      "first_collected_at": "2026-11-16T14:14:39+00:00",
+      "updated_at": "2026-11-16T14:25:00+00:00",
+      "sources": [
+        {
+          "source_id": "mark-zuckerberg-threads",
+          "content_id": "https://www.threads.com/t/DfXrs6RGonx",
+          "url": "https://www.threads.com/t/DfXrs6RGonx",
+          "collected_at": "2026-11-16T14:14:39+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "id": "meta-muse-realtime-voice-20261105",
+      "entity_ids": [
+        "meta"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature",
+        "availability"
+      ],
+      "title_zh": "扎克伯格：Muse App 支持实时语音对话与多音色",
+      "summary_zh": "扎克伯格在 Threads 表示，Muse App 现已支持与 Muse 实时对话，并可从多个声音中选择。该帖未披露模型版本、开放地区、资费或完整功能范围。",
+      "key_points_zh": [
+        "Muse App 支持与 Muse 实时语音对话。",
+        "用户可从多个声音中选择。",
+        "帖子未披露模型版本、地区、资费与完整功能范围。"
+      ],
+      "importance_reason_zh": "语音交互让 Muse 从创作工具延伸为可实时对话的助手，但官方披露有限，仍需后续资料确认。",
+      "title_en": "Zuckerberg: Muse app adds real-time voice conversations and multiple voices",
+      "summary_en": "Mark Zuckerberg said on Threads that the Muse app now supports real-time conversations with Muse and lets users choose from multiple voices. The post did not disclose the model version, availability, pricing or the full feature set.",
+      "key_points_en": [
+        "The Muse app supports real-time voice conversations with Muse.",
+        "Users can choose from multiple voices.",
+        "The post gives no model version, regional availability, pricing or full feature scope."
+      ],
+      "importance_reason_en": "Voice interaction extends Muse from a creation tool toward a real-time assistant, though official details remain limited.",
+      "published_at": "2026-11-05T18:32:19+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published"
     },
     {
       "id": "gemini-omni-1-2-flash",

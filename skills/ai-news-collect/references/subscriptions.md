@@ -6,6 +6,31 @@
 
 原生 RSS 优先；没有原生 RSS 时配置已核实的转换服务。RSSHub 在 `config/collection.json` 用 `rsshub_base_url` 集中指定实例，各来源使用 `rsshub_route`；也可直接填写任意兼容服务的 `feed_url`。直接 feed_url 优先。公共实例可用性不保证，读取失败保留未覆盖起点。采集器仍只读 RSS；经确认的独立离线转换器可读取官方页面／公开接口，输出私有 RSS。微信没有核实可用账号订阅时保留待配置。
 
+## 故障诊断与修复
+
+先分层定位，再改配置：DNS（`dscacheutil -q host -a name 域名`、`dig @1.1.1.1 域名 A`）、TCP/TLS（`curl -v -m 20`）、HTTP 状态、XML 可解析性。响应是登录页、HTML 或空 body 都不算有效订阅。单次超时、`403` 或 `429` 通常是本机网络或实例限流，不得据此停用来源；应换时间、换实例复测，并保留原未覆盖起点。原生订阅失败时，用同一路由的 RSSHub 结果与官方页面交叉核对标题、发布日期和原始链接，确认不是缓存或伪造内容后再切换。
+
+```sh
+# 逐条核对：状态、条目数、标题、日期、原始链接
+curl -sS -m 20 -o /tmp/feed.xml -w '%{http_code} %{size_download}\n' 'https://实例/路由'
+python3 - <<'PY'
+import re
+t=open('/tmp/feed.xml').read()
+print((re.search(r'<title>(.*?)</title>',t,re.S) or [None,''])[1])
+items=re.findall(r'<item>(.*?)</item>',t,re.S)
+print('items',len(items))
+for it in items[:2]:
+    print((re.search(r'<title>(.*?)</title>',it,re.S) or [None,''])[1],
+          (re.search(r'<pubDate>(.*?)</pubDate>',it,re.S) or [None,''])[1])
+PY
+```
+
+切换时直接写 `feed_url`，设 `feed_provider: "rsshub"`，更新 `feed_checked_at` 与 `feed_verified_at`，并在 `maintenance` 里写明双语原因。改地址会清除旧 `fetched_through` 指纹，下次 `fetch` 会从 `uncovered_from` 补采；补采材料仍要逐条判断，不能因为“源刚修好”就全部保留。2026-11-16 的实例轮换可作示例：原 Threads 实例返回 503，YouTube 原生订阅超时，Google 开发者博客 TLS 被重置；`rsshub.liumingye.cn` 同时返回了 5 条 Threads 帖子、30 条 YouTube 视频和 10 篇带日期的 Google 开发者文章。公共实例会轮换，不要把某次可用的实例写死为永久保证。
+
+官方路径本身也可能变化。Mistral 的订阅路径已从 `/rss.xml` 改为 `/news/rss`；本机 DNS 被污染、无法直接复核时，应注明证据来自公开订阅目录或第三方监控，并保留“待网络恢复后实测”的状态，而不是把未验证写成已验证。
+
+离线转换器输出 XML 前必须过滤 XML 1.0 不允许的控制字符（例如 `0x05`），否则 `import-converted` 会在解析阶段整体失败。该项已由转换器的 `xml_safe()` 处理，并在 `tests/test_conversion.py` 留有回归用例；新增转换器应复用同一清洗步骤。
+
 ```json
 {
   "id": "example-releases",

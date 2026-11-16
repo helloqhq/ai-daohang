@@ -44,6 +44,14 @@ class ConversionTests(unittest.TestCase):
         self.assertEqual(len(parsed),2);self.assertNotEqual(parsed[0]['content_id'],parsed[1]['content_id'])
         self.assertEqual(parsed[0]['url'],parsed[1]['url'])
         self.assertEqual(parsed[0]['published_at'],'2026-10-01')
+    def test_rss_xml_drops_control_characters_embedded_in_official_text(self):
+        row={'title':'Hyra\x05 2.0','url':'https://example.com/hyra','text':'Body\x0bwith\x1fcontrols','full':True,'published_at':'2026-10-01','content_id':'hyra'}
+        xml=rss_xml(self.source('tencent-official'),[row])
+        parsed,_,_=parse_feed(xml,self.source('tencent-official'),START,END)
+        self.assertEqual(len(parsed),1)
+        self.assertEqual(parsed[0]['title'],'Hyra 2.0')
+        self.assertNotIn('\x05',parsed[0]['text'])
+        self.assertNotIn('\x0b',parsed[0]['text'])
     def test_chinese_dates_and_trae_sections_do_not_mix_versions(self):
         body='<div><h2 id="one">2026 年 10 月 01 日（功能）</h2><p>Version 1</p><h2 id="two">2026 年 09 月 29 日</h2><p>Version 2</p></div>'
         rows=convert(self.source('trae-official'),lambda *a:body,START,END)

@@ -53,6 +53,8 @@ python3 scripts/collect.py import-feed meituan-official /本地/atom.xml --since
 
 只有月份的材料不得猜测具体日期。可确认整个月早于查询窗口的旧材料可按窗口外过滤；月份与窗口交叠的材料保留待核查。未知日不能写成新闻发布日期。原始 RSS/Atom、转换结果与编辑判断保留各自事实范围。
 
+转换器生成 XML 前必须移除 XML 1.0 不允许的控制字符。2026-11-16 的腾讯转换结果含 `0x05`，导致整份清单在 `import-converted` 解析阶段失败；`scripts/converters/official.py` 现统一经 `xml_safe()` 清洗，`tests/test_conversion.py` 增加了控制字符回归用例。新增转换器应复用该函数，不能用字符串拼接绕过。
+
 ## 验证
 
 ```sh

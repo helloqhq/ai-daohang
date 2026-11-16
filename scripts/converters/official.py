@@ -385,26 +385,32 @@ def convert(source,fetch,since,until,reconcile=()):
     return out
 
 
+INVALID_XML_CHARS=dict.fromkeys([*range(0x00,0x09),0x0b,0x0c,*range(0x0e,0x20),*range(0xd800,0xe000),0xfffe,0xffff])
+def xml_safe(value):
+    """Drop code points XML 1.0 forbids; official pages occasionally embed control characters."""
+    return None if value is None else str(value).translate(INVALID_XML_CHARS)
+
+
 def rss_xml(source,rows):
     root=ET.Element('rss',version='2.0');channel=ET.SubElement(root,'channel')
-    ET.SubElement(channel,'title').text=source['name'];ET.SubElement(channel,'link').text=source['url']
+    ET.SubElement(channel,'title').text=xml_safe(source['name']);ET.SubElement(channel,'link').text=xml_safe(source['url'])
     ET.SubElement(channel,'description').text='On-demand offline conversion of the registered official source.'
-    ET.SubElement(channel,'{'+AUDIT+'}source_id').text=source['id']
+    ET.SubElement(channel,'{'+AUDIT+'}source_id').text=xml_safe(source['id'])
     seen=set()
     for row in rows:
         content_id=row.get('content_id',row['url'])
         if content_id in seen:continue
         seen.add(content_id);entry=ET.SubElement(channel,'item')
-        for key,value in [('title',row['title']),('link',row['url']),('guid',content_id)]:ET.SubElement(entry,key).text=value
-        ET.SubElement(entry,'{'+AUDIT+'}content_id').text=content_id
-        if row.get('date_label'):ET.SubElement(entry,'{'+AUDIT+'}date_label').text=row['date_label']
-        if row.get('material_scope'):ET.SubElement(entry,'{'+AUDIT+'}material_scope').text=row['material_scope']
+        for key,value in [('title',row['title']),('link',row['url']),('guid',content_id)]:ET.SubElement(entry,key).text=xml_safe(value)
+        ET.SubElement(entry,'{'+AUDIT+'}content_id').text=xml_safe(content_id)
+        if row.get('date_label'):ET.SubElement(entry,'{'+AUDIT+'}date_label').text=xml_safe(row['date_label'])
+        if row.get('material_scope'):ET.SubElement(entry,'{'+AUDIT+'}material_scope').text=xml_safe(row['material_scope'])
         date=row.get('published_at')
         if date:
             if not parse_time(date):raise SourceError('转换条目日期格式无效')
-            ET.SubElement(entry,'pubDate').text=date
-            ET.SubElement(entry,'{'+AUDIT+'}date_kind').text=row.get('date_kind','published')
+            ET.SubElement(entry,'pubDate').text=xml_safe(date)
+            ET.SubElement(entry,'{'+AUDIT+'}date_kind').text=xml_safe(row.get('date_kind','published'))
         body=html.escape(row['text']).replace('\n','<br>')
-        ET.SubElement(entry,'{'+CONTENT+'}encoded' if row['full'] else 'description').text=body
+        ET.SubElement(entry,'{'+CONTENT+'}encoded' if row['full'] else 'description').text=xml_safe(body)
     ET.indent(root)
     return ET.tostring(root,encoding='unicode',xml_declaration=True)

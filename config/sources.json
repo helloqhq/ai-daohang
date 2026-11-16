@@ -684,12 +684,19 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A",
-      "feed_provider": "native",
+      "feed_url": "https://rsshub.liumingye.cn/youtube/channel/UCXZCJLdBC09xxGZ6gcdrc6A",
+      "feed_provider": "rsshub",
       "name_en": "OpenAI YouTube",
       "offline_conversion": true,
-      "subscription_note": "官方 RSS 提供标题与日期；离线转换补充公开视频简介（partial_text），不含字幕。",
-      "subscription_note_en": "The official feed provides titles and dates; offline conversion adds public video descriptions (partial_text), not captions."
+      "feed_checked_at": "2026-11-16",
+      "feed_verified_at": "2026-11-16",
+      "subscription_note": "2026-11-16 复核：YouTube 原生 RSS 在本网络持续超时，改用 RSSHub 路由，实测返回 30 条带标题、日期与原始链接的视频条目；离线转换仍按需补充公开视频简介（partial_text），不含字幕，完整时间窗未确认。",
+      "subscription_note_en": "Checked on November 16, 2026: the native YouTube feed kept timing out from this network, so the source uses an RSSHub route that returned 30 dated video entries with titles and original links. Offline conversion still supplies public video descriptions (partial_text) on demand; captions and a complete window remain unconfirmed.",
+      "maintenance": {
+        "checked_at": "2026-11-16",
+        "reason_zh": "原生 YouTube 订阅在本网络不可达；改用可用的 RSSHub 实例恢复标题、日期与链接，历史与完整覆盖语义不变。",
+        "reason_en": "The native YouTube feed is unreachable from this network. A working RSSHub instance restores titles, dates and links; history and complete-window semantics are unchanged."
+      }
     },
     {
       "id": "openai-x",
@@ -865,14 +872,19 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://rsshub.rssforever.com/threads/zuck",
+      "feed_url": "https://rsshub.liumingye.cn/threads/zuck",
       "feed_provider": "rsshub",
-      "feed_checked_at": "2026-10-21",
-      "subscription_note": "2026-10-21 复核现用 RSSHub 订阅返回 HTTP 503；保留原地址与历史，不因临时故障停用，完整账号时间窗仍未确认。",
+      "feed_checked_at": "2026-11-16",
+      "subscription_note": "2026-11-16 复核：原 RSSHub 实例持续不可用，改用可访问的 RSSHub 实例，实测返回 5 条带日期与原始链接的帖子；完整账号时间窗仍未确认，不因单一实例故障停用。",
       "name_en": "Mark Zuckerberg · Threads",
-      "subscription_note_en": "The configured RSSHub feed returned HTTP 503 on October 21, 2026. Its URL and history are retained during the temporary failure; a complete account window remains unconfirmed.",
+      "subscription_note_en": "Checked on November 16, 2026: the previous RSSHub instance remained unavailable, so the source now uses an accessible RSSHub instance that returned five dated posts with original links. A complete account window is still unconfirmed, and a single instance failure is not grounds for disabling the source.",
       "offline_conversion": false,
-      "feed_verified_at": "2026-10-04"
+      "feed_verified_at": "2026-11-16",
+      "maintenance": {
+        "checked_at": "2026-11-16",
+        "reason_zh": "原 RSSHub 地址已连续失败；切换至可返回有效 XML 的实例并记录验证日期，订阅语义与历史不变。",
+        "reason_en": "The previous RSSHub address kept failing. The source switches to an instance that returns valid XML, with the verification date recorded; subscription semantics and history are unchanged."
+      }
     },
     {
       "id": "demis-hassabis-x",
@@ -1271,17 +1283,17 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://developers.googleblog.com/feeds/posts/default",
-      "feed_provider": "native",
-      "feed_checked_at": "2026-10-06",
-      "feed_verified_at": "2026-10-06",
+      "feed_url": "https://rsshub.liumingye.cn/google/developers/en",
+      "feed_provider": "rsshub",
+      "feed_checked_at": "2026-11-16",
+      "feed_verified_at": "2026-11-16",
       "offline_conversion": true,
-      "subscription_note": "官方 RSS 未提供条目日期，按需转换官方文章补充发布日期和正文；日期核实前不进入动态，完整时间窗未确认。",
-      "subscription_note_en": "The official RSS omits entry dates. On-demand conversion supplements publication dates and text from official articles. Undated items stay out of the news snapshot; the full window remains unconfirmed.",
+      "subscription_note": "2026-11-16 复核：原生订阅在本网络 TLS 连接被重置，改用 RSSHub 路由，实测返回 10 条带发布日期、标题与原始链接的文章；离线转换仍可用于补齐正文，完整时间窗未确认。",
+      "subscription_note_en": "Checked on November 16, 2026: TLS connections to the native feed were reset from this network, so the source uses an RSSHub route that returned ten articles with publication dates, titles and original links. Offline conversion can still supplement article text; the full window remains unconfirmed.",
       "maintenance": {
-        "checked_at": "2026-10-18",
-        "reason_zh": "补充已核实的 Antigravity 产品关联；原生订阅缺日期的条目继续由既有离线转换器补充，不改变完整覆盖语义。",
-        "reason_en": "Add the verified Antigravity product association. Existing offline conversion still supplies missing dates from the native feed; complete-window coverage semantics are unchanged."
+        "checked_at": "2026-11-16",
+        "reason_zh": "原生订阅在本网络无法完成 TLS 握手；改用可用的 RSSHub 路由恢复带日期的条目，离线转换保留。",
+        "reason_en": "TLS handshakes to the native feed fail from this network. A working RSSHub route restores dated entries, and offline conversion is retained."
       }
     },
     {
@@ -1490,12 +1502,16 @@
         "complete_window": false
       },
       "adapter": "rss",
-      "feed_url": "https://mistral.ai/rss.xml",
+      "feed_url": "https://mistral.ai/news/rss",
       "feed_provider": "native",
-      "feed_checked_at": "2026-10-20",
-      "feed_verified_at": "2026-10-20",
-      "subscription_note": "已核实官方 RSS 的标题、简介、原文链接和时间；当前仅提供简介，首次按默认 72 小时采集，不追补窗口外历史。",
-      "subscription_note_en": "Official RSS titles, summaries, original links and dates were checked. The feed supplies summaries only; initial collection uses the default 72-hour window without backfilling older history."
+      "feed_checked_at": "2026-11-16",
+      "subscription_note": "官方新闻订阅地址现为 /news/rss，旧配置使用 /rss.xml；2026-11-16 本网络 DNS 被污染、无法直接复核，公开订阅目录 Feeder（feeder.co/discover/db0abed6a7/mistral-ai）显示该地址可用并列出 11 月 5 日文章，恢复网络后仍需再次实测。当前仅提供简介，按默认窗口采集，不追补窗口外历史。",
+      "subscription_note_en": "The official news feed is now served at /news/rss; the previous configuration used /rss.xml. DNS was polluted on this network on November 16, 2026, so direct verification was impossible. The public Feeder directory (feeder.co/discover/db0abed6a7/mistral-ai) lists the address as working and shows a November 5 post; a direct retest is still needed once connectivity is restored. The feed supplies summaries only and is collected within the default window without backfilling older history.",
+      "maintenance": {
+        "checked_at": "2026-11-16",
+        "reason_zh": "修正为官方现行订阅路径；本网络无法直接验证，已注明证据来源与待复核状态，不以单次超时停用。",
+        "reason_en": "Corrected to the current official feed path. Direct verification is blocked on this network, so the evidence source and pending retest are noted; one timeout does not disable the source."
+      }
     },
     {
       "id": "nvidia-ai-blog",

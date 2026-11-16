@@ -158,3 +158,13 @@ YouTube、TikTok、X、Threads、微信公众号加入来源平台范围。默�
 硅基流动、B.AI、WorldRouter 按用户确认新增为 API 平台，实际动态分类为「平台」，不将转售模型当作平台自研模型。官方动态入口与定价入口分开登记；硅基流动更新公告和资讯、B.AI 官方 X、WorldRouter 官网反链的 WorldClaw X 共四个渠道使用已验证的按需 RSS 转换。未取得可用原生订阅，保留有限列表与完整时间窗缺口，本次未导入历史动态。
 
 WorldRouter 采用 [router.worldclaw.ai](https://router.worldclaw.ai/) 官方入口；不混同 `worldrouter.cc` 自托管网关。官网账号覆盖 WorldClaw 其他产品，采集时只筛选 Router 相关的重要变化。详见 [本轮身份依据、渠道范围与计费口径](PLATFORM-SOURCES-2026-10-10.md)。
+
+## 2026-11-16 订阅修复
+
+本机网络对多个原生入口不可达：YouTube 视频订阅超时，`developers.googleblog.com` 的 TLS 连接被重置，`mistral.ai` 的 DNS 被污染为 Facebook／Twitter 地址。按“单次失败不停用、先分层定位”的原则处理：
+
+- OpenAI YouTube、Google 开发者博客、扎克伯格 Threads 改用 `rsshub.liumingye.cn` 的对应路由。实测分别返回 30 条视频、10 篇文章与 5 条帖子，标题、发布日期和原始链接齐全；完整时间窗仍为 partial。
+- Mistral 改用官方 `https://mistral.ai/news/rss`（旧配置为 `/rss.xml`）。本机无法直连，公开目录 Feeder 显示该地址可用并列出 2026-11-05 文章；`feed_checked_at` 记为 2026-11-16，恢复网络后仍需实测。
+- X、TikTok、部分离线转换入口仍受本机网络限制，保留既有覆盖缺口，不因本轮修复而宣称完整。
+
+诊断、实例轮换和 XML 控制字符清洗的通用步骤见 [RSS 订阅管理](../skills/ai-news-collect/references/subscriptions.md) 与 [按需离线 RSS](OFFLINE-RSS.md)。

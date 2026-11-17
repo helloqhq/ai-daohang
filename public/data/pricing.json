@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-10-25",
+  "checked_at": "2026-11-17",
   "plans": [
     {
       "id": "gpt-6-astra",
@@ -667,11 +667,11 @@
       },
       "scope_zh": "已停止新购；旧订阅可按历史条件续订",
       "scope_en": "Closed to new purchases; legacy renewal terms apply",
-      "note_zh": "此前记录的标准月费为 $22，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。",
-      "note_en": "The previously recorded standard monthly fee was $22, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits.",
+      "note_zh": "此前记录的标准月费为 $22，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。 2026-11-17 复核：迁移通知页仍确认上述续订、升降档与升级规则；旧档位结算价仍仅在需登录页面展示，保持待核验。",
+      "note_en": "The previously recorded standard monthly fee was $22, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits. Re-checked on 2026-11-17: the migration notice still confirms the renewal, tier-change and upgrade rules above; legacy checkout prices remain visible only on the login-gated page and stay pending.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
-      "checked_at": "2026-10-25",
-      "updated_at": "2026-10-24",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
       "tier_name": "Plus (legacy)",
@@ -699,11 +699,11 @@
       },
       "scope_zh": "已停止新购；旧订阅可按历史条件续订",
       "scope_en": "Closed to new purchases; legacy renewal terms apply",
-      "note_zh": "此前记录的标准月费为 $55，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。",
-      "note_en": "The previously recorded standard monthly fee was $55, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits.",
+      "note_zh": "此前记录的标准月费为 $55，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。 2026-11-17 复核：迁移通知页仍确认上述续订、升降档与升级规则；旧档位结算价仍仅在需登录页面展示，保持待核验。",
+      "note_en": "The previously recorded standard monthly fee was $55, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits. Re-checked on 2026-11-17: the migration notice still confirms the renewal, tier-change and upgrade rules above; legacy checkout prices remain visible only on the login-gated page and stay pending.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
-      "checked_at": "2026-10-25",
-      "updated_at": "2026-10-24",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
       "tier_name": "Max (legacy)",
@@ -731,11 +731,11 @@
       },
       "scope_zh": "已停止新购；旧订阅可按历史条件续订",
       "scope_en": "Closed to new purchases; legacy renewal terms apply",
-      "note_zh": "此前记录的标准月费为 $132，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。",
-      "note_en": "The previously recorded standard monthly fee was $132, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits.",
+      "note_zh": "此前记录的标准月费为 $132，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。 2026-11-17 复核：迁移通知页仍确认上述续订、升降档与升级规则；旧档位结算价仍仅在需登录页面展示，保持待核验。",
+      "note_en": "The previously recorded standard monthly fee was $132, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits. Re-checked on 2026-11-17: the migration notice still confirms the renewal, tier-change and upgrade rules above; legacy checkout prices remain visible only on the login-gated page and stay pending.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
-      "checked_at": "2026-10-25",
-      "updated_at": "2026-10-24",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
       "tier_name": "Ultra (legacy)",
@@ -763,11 +763,11 @@
       },
       "scope_zh": "2,000 credits / 5 小时 · 10,000 / 周",
       "scope_en": "2,000 credits / 5 hours · 10,000 / week",
-      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-10-25 复核：官方概述页标明套餐“每月 18 美元起”（Starting at just 18 USD per month）并确认各档 credits 与模型路由不变；各档完整结算价在需登录的订阅页展示，仍待核验。",
-      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-10-25: the official overview states plans \"Starting at just 18 USD per month\" and confirms tier credits and model routing unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.",
+      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-10-25 复核：官方概述页标明套餐“每月 18 美元起”（Starting at just 18 USD per month）并确认各档 credits 与模型路由不变；各档完整结算价在需登录的订阅页展示，仍待核验。 2026-11-17 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），各档 credits、模型路由与非高峰半价（高峰为周一至周五 14:00–18:00 UTC+8）不变；各档完整结算价仍在需登录的订阅页展示，保持待核验。",
+      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-10-25: the official overview states plans \"Starting at just 18 USD per month\" and confirms tier credits and model routing unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending. Re-checked on 2026-11-17: the overview still states plans \"Starting at just 18 USD per month\" and confirms tier credits, model routing and off-peak half-credit billing (peak Monday–Friday 14:00–18:00 UTC+8) unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-25",
-      "updated_at": "2026-10-25",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
       "tier_name": "Lite",
@@ -780,7 +780,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-25"
+      "models_checked_at": "2026-11-17"
     },
     {
       "id": "glm-plan-pro",
@@ -795,11 +795,11 @@
       },
       "scope_zh": "12,000 credits / 5 小时 · 60,000 / 周",
       "scope_en": "12,000 credits / 5 hours · 60,000 / week",
-      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。",
-      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement.",
+      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-11-17 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），各档 credits、模型路由与非高峰半价（高峰为周一至周五 14:00–18:00 UTC+8）不变；各档完整结算价仍在需登录的订阅页展示，保持待核验。",
+      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-11-17: the overview still states plans \"Starting at just 18 USD per month\" and confirms tier credits, model routing and off-peak half-credit billing (peak Monday–Friday 14:00–18:00 UTC+8) unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-25",
-      "updated_at": "2026-10-17",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
       "tier_name": "Pro",
@@ -812,7 +812,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-25"
+      "models_checked_at": "2026-11-17"
     },
     {
       "id": "glm-plan-max",
@@ -827,11 +827,11 @@
       },
       "scope_zh": "28,000 credits / 5 小时 · 140,000 / 周",
       "scope_en": "28,000 credits / 5 hours · 140,000 / week",
-      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。",
-      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement.",
+      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-11-17 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），各档 credits、模型路由与非高峰半价（高峰为周一至周五 14:00–18:00 UTC+8）不变；各档完整结算价仍在需登录的订阅页展示，保持待核验。",
+      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-11-17: the overview still states plans \"Starting at just 18 USD per month\" and confirms tier credits, model routing and off-peak half-credit billing (peak Monday–Friday 14:00–18:00 UTC+8) unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.",
       "source_url": "https://docs.z.ai/devpack/overview",
-      "checked_at": "2026-10-25",
-      "updated_at": "2026-10-17",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
       "tier_name": "Max",
@@ -844,7 +844,7 @@
       "models_source_urls": [
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-10-25"
+      "models_checked_at": "2026-11-17"
     },
     {
       "id": "kimi-plan-andante",
@@ -2363,7 +2363,7 @@
       "note_zh": "月额度不结转；免费档有访问限制。",
       "note_en": "Monthly credits expire; free access is limited.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-17",
       "updated_at": "2026-10-16",
       "product_id": "kiro",
       "product_name": "Kiro",
@@ -2400,7 +2400,7 @@
             "Qwen3 Coder Next"
           ],
           "source_url": "https://kiro.dev/pricing/",
-          "checked_at": "2026-10-24",
+          "checked_at": "2026-11-17",
           "conditions_zh": "月额度不结转；免费档有访问限制。",
           "conditions_en": "Monthly credits expire; free access is limited.",
           "eligibility_zh": "免费档；模型访问与地域限制见官方模型表",
@@ -2428,8 +2428,8 @@
       "note_zh": "月额度不结转；个人社交登录 / AWS Builder ID 可购买追加 credits，$0.04/个，未用完可结转并在购买后 12 个月过期。企业超额用量须管理员启用，按 $0.04/个月底结算。展示商业区域税前价。",
       "note_en": "Monthly included credits do not roll over. Individual social-login / AWS Builder ID users can buy add-on credits at $0.04 each; unused add-ons roll over and expire 12 months after purchase. Enterprise overages require administrator enablement and are billed at $0.04 per credit at month-end. Commercial-region prices are before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-24",
-      "updated_at": "2026-10-24",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "kiro",
       "product_name": "Kiro",
       "tier_name": "Pro",
@@ -2463,7 +2463,48 @@
         "https://kiro.dev/changelog/models/claude-sonnet-4-end-of-life",
         "https://kiro.dev/changelog/models/kimi-k3-now-available-in-kiro"
       ],
-      "models_checked_at": "2026-10-24"
+      "models_checked_at": "2026-10-24",
+      "offers": [
+        {
+          "id": "first-upgrade-trial",
+          "type": "free",
+          "kind": "trial",
+          "status": "verified",
+          "models": [
+            "GPT-5.6 Sol",
+            "GPT-5.6 Terra",
+            "GPT-5.6 Luna",
+            "Claude Opus 5.5",
+            "Claude Sonnet 5.5",
+            "Claude Opus 5",
+            "Claude Opus 4.8",
+            "Claude Opus 4.7",
+            "Claude Opus 4.6",
+            "Claude Opus 4.5",
+            "Claude Sonnet 5",
+            "Claude Sonnet 4.6",
+            "Claude Haiku 4.5",
+            "Auto",
+            "Claude Sonnet 4.5",
+            "DeepSeek 3.2",
+            "MiniMax M2.5",
+            "GLM-5",
+            "MiniMax M2.1",
+            "Qwen3 Coder Next",
+            "Kimi K3"
+          ],
+          "source_url": "https://kiro.dev/pricing/",
+          "checked_at": "2026-11-17",
+          "quota_zh": "首次升级当月剩余天数免费（费用与 credits 按秒折算），另赠 500 试用 credits，须在 12 个月内使用；试用 credits 在套餐 credits 用完后消耗。",
+          "quota_en": "The rest of the first upgrade month is free (fees and credits prorated to the second), plus 500 trial credits usable within 12 months; trial credits are consumed after plan credits run out.",
+          "conditions_zh": "仅适用于从 Kiro Free 首次升级到付费方案：首张账单于次月 1 日出具。直接选择 Pro+ / Pro Max / Power 时免费 Pro 月仍计入，只付所选方案按秒折算价与 Pro 折算价的差额。再次升级按常规折算，无免费月；退回免费档后未用完的试用 credits 保留，但只能用于免费档模型。官方说明 11 月 1 日前升级的用户保留 $20 折扣与未用完 credits。",
+          "conditions_en": "Applies only to the first upgrade from Kiro Free to a paid plan; the first bill arrives on the 1st of the following month. Starting directly on Pro+ / Pro Max / Power still counts the free Pro month: you pay only the difference between your plan’s prorated price and the prorated Pro price. Later upgrades are prorated as usual without a free month. Returning to Free keeps unused trial credits, usable only on free-tier models. Per the official page, users who upgraded before November 1 keep the $20 discount and their unused credits.",
+          "eligibility_zh": "首次从 Kiro Free 升级到付费方案的用户；升级须绑定有效信用卡，并非无条件免费使用。",
+          "eligibility_en": "Users upgrading from Kiro Free to a paid plan for the first time; a valid credit card is required, so this is not unconditional free usage.",
+          "card_required": "yes",
+          "ends_at": null
+        }
+      ]
     },
     {
       "id": "kiro-proplus",
@@ -2481,7 +2522,7 @@
       "note_zh": "月额度不结转；个人社交登录 / AWS Builder ID 可购买追加 credits，$0.04/个，未用完可结转并在购买后 12 个月过期。企业超额用量须管理员启用，按 $0.04/个月底结算。展示商业区域税前价。",
       "note_en": "Monthly included credits do not roll over. Individual social-login / AWS Builder ID users can buy add-on credits at $0.04 each; unused add-ons roll over and expire 12 months after purchase. Enterprise overages require administrator enablement and are billed at $0.04 per credit at month-end. Commercial-region prices are before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-17",
       "updated_at": "2026-10-24",
       "product_id": "kiro",
       "product_name": "Kiro",
@@ -2534,7 +2575,7 @@
       "note_zh": "月额度不结转；个人社交登录 / AWS Builder ID 可购买追加 credits，$0.04/个，未用完可结转并在购买后 12 个月过期。企业超额用量须管理员启用，按 $0.04/个月底结算。展示商业区域税前价。",
       "note_en": "Monthly included credits do not roll over. Individual social-login / AWS Builder ID users can buy add-on credits at $0.04 each; unused add-ons roll over and expire 12 months after purchase. Enterprise overages require administrator enablement and are billed at $0.04 per credit at month-end. Commercial-region prices are before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-17",
       "updated_at": "2026-10-24",
       "product_id": "kiro",
       "product_name": "Kiro",
@@ -2587,7 +2628,7 @@
       "note_zh": "月额度不结转；个人社交登录 / AWS Builder ID 可购买追加 credits，$0.04/个，未用完可结转并在购买后 12 个月过期。企业超额用量须管理员启用，按 $0.04/个月底结算。展示商业区域税前价。",
       "note_en": "Monthly included credits do not roll over. Individual social-login / AWS Builder ID users can buy add-on credits at $0.04 each; unused add-ons roll over and expire 12 months after purchase. Enterprise overages require administrator enablement and are billed at $0.04 per credit at month-end. Commercial-region prices are before tax.",
       "source_url": "https://kiro.dev/pricing/",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-17",
       "updated_at": "2026-10-24",
       "product_id": "kiro",
       "product_name": "Kiro",
@@ -2637,11 +2678,11 @@
       },
       "scope_zh": "1× Go 用量 · 多模态共享额度",
       "scope_en": "1× Go usage · shared multimodal quota",
-      "note_zh": "标准月费；官方首月半价公告仅标至“10 月 14 日”、未注明年份；本次已过当年该日期，故不作为当前优惠承诺，仍展示标准续订价。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
-      "note_en": "Regular monthly fee. The first-month 50% notice ends on “October 14” without a year; this review is after that date in the current year, so it is not presented as a current offer. Regular renewal prices are shown. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
+      "note_zh": "标准月费；官方页面确认首月半价上线活动已于 2026 年 10 月 14 日结束，不再作为当前优惠。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
+      "note_en": "Regular monthly fee. The official page confirms the first-month 50% launch offer ended on October 14, 2026; it is no longer a current promotion. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-10-24",
-      "updated_at": "2026-10-24",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
       "tier_name": "Go",
@@ -2661,20 +2702,20 @@
           "id": "first-month-half-price",
           "type": "discount",
           "kind": "promotion",
-          "status": "pending",
+          "status": "paused",
           "models": [
             "MiniMax M3.1 Flash"
           ],
           "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-          "checked_at": "2026-10-25",
-          "conditions_zh": "月付新购或符合条件的升级首月五折，第二个月按标准价自动续费；年付不参与。官方期限只写“10 月 14 日”，缺少年份，当前有效性待核验。",
-          "conditions_en": "50% off the first month for new monthly purchases and eligible upgrades; standard auto-renewal from month two. Annual billing is excluded. The official deadline says only October 14 without a year, so current validity remains unverified.",
-          "eligibility_zh": "Go、Explore 或 Build 的月付新购与活动期内符合规则的升级；不代表无需付费。",
-          "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; payment is required.",
+          "checked_at": "2026-11-17",
+          "conditions_zh": "上线活动期内月付新购或符合条件的升级首月五折，第二个月起按标准价自动续费；年付不参与。官方页面确认活动已于 2026 年 10 月 14 日结束，规则仅作历史参考。",
+          "conditions_en": "During the launch offer, new monthly purchases and eligible upgrades received 50% off the first month, with standard auto-renewal from month two; annual billing was excluded. The official page confirms the offer ended on October 14, 2026; the rules are retained for historical reference only.",
+          "eligibility_zh": "活动期内 Go、Explore 或 Build 的月付新购与符合规则的升级；活动已结束，不再对新购生效。",
+          "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; the offer has ended and no longer applies to new purchases.",
           "card_required": "unknown",
           "ends_at": null,
-          "end_note_zh": "官方写至 10 月 14 日，未注明年份，待核验",
-          "end_note_en": "Official deadline: October 14, year unspecified; verification pending",
+          "end_note_zh": "官方页面明确活动已于 2026 年 10 月 14 日结束；未公布具体结束时刻与时区。",
+          "end_note_en": "The official page states the offer ended on October 14, 2026; no exact end time or timezone is published.",
           "price": {
             "amount": 11.0
           },
@@ -2689,7 +2730,7 @@
               "amount": 22
             },
             "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-            "checked_at": "2026-10-25"
+            "checked_at": "2026-11-17"
           }
         }
       ]
@@ -2707,11 +2748,11 @@
       },
       "scope_zh": "3× Go 用量 · 多模态共享额度",
       "scope_en": "3× Go usage · shared multimodal quota",
-      "note_zh": "标准月费；官方首月半价公告仅标至“10 月 14 日”、未注明年份；本次已过当年该日期，故不作为当前优惠承诺，仍展示标准续订价。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
-      "note_en": "Regular monthly fee. The first-month 50% notice ends on “October 14” without a year; this review is after that date in the current year, so it is not presented as a current offer. Regular renewal prices are shown. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
+      "note_zh": "标准月费；官方页面确认首月半价上线活动已于 2026 年 10 月 14 日结束，不再作为当前优惠。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
+      "note_en": "Regular monthly fee. The official page confirms the first-month 50% launch offer ended on October 14, 2026; it is no longer a current promotion. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-10-24",
-      "updated_at": "2026-10-24",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
       "tier_name": "Explore",
@@ -2732,20 +2773,20 @@
           "id": "first-month-half-price",
           "type": "discount",
           "kind": "promotion",
-          "status": "pending",
+          "status": "paused",
           "models": [
             "MiniMax M3.1 Flash"
           ],
           "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-          "checked_at": "2026-10-25",
-          "conditions_zh": "月付新购或符合条件的升级首月五折，第二个月按标准价自动续费；年付不参与。官方期限只写“10 月 14 日”，缺少年份，当前有效性待核验。",
-          "conditions_en": "50% off the first month for new monthly purchases and eligible upgrades; standard auto-renewal from month two. Annual billing is excluded. The official deadline says only October 14 without a year, so current validity remains unverified.",
-          "eligibility_zh": "Go、Explore 或 Build 的月付新购与活动期内符合规则的升级；不代表无需付费。",
-          "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; payment is required.",
+          "checked_at": "2026-11-17",
+          "conditions_zh": "上线活动期内月付新购或符合条件的升级首月五折，第二个月起按标准价自动续费；年付不参与。官方页面确认活动已于 2026 年 10 月 14 日结束，规则仅作历史参考。",
+          "conditions_en": "During the launch offer, new monthly purchases and eligible upgrades received 50% off the first month, with standard auto-renewal from month two; annual billing was excluded. The official page confirms the offer ended on October 14, 2026; the rules are retained for historical reference only.",
+          "eligibility_zh": "活动期内 Go、Explore 或 Build 的月付新购与符合规则的升级；活动已结束，不再对新购生效。",
+          "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; the offer has ended and no longer applies to new purchases.",
           "card_required": "unknown",
           "ends_at": null,
-          "end_note_zh": "官方写至 10 月 14 日，未注明年份，待核验",
-          "end_note_en": "Official deadline: October 14, year unspecified; verification pending",
+          "end_note_zh": "官方页面明确活动已于 2026 年 10 月 14 日结束；未公布具体结束时刻与时区。",
+          "end_note_en": "The official page states the offer ended on October 14, 2026; no exact end time or timezone is published.",
           "price": {
             "amount": 27.5
           },
@@ -2760,7 +2801,7 @@
               "amount": 55
             },
             "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-            "checked_at": "2026-10-25"
+            "checked_at": "2026-11-17"
           }
         }
       ]
@@ -2778,11 +2819,11 @@
       },
       "scope_zh": "7.5× Go 用量 · 多模态共享额度",
       "scope_en": "7.5× Go usage · shared multimodal quota",
-      "note_zh": "标准月费；官方首月半价公告仅标至“10 月 14 日”、未注明年份；本次已过当年该日期，故不作为当前优惠承诺，仍展示标准续订价。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
-      "note_en": "Regular monthly fee. The first-month 50% notice ends on “October 14” without a year; this review is after that date in the current year, so it is not presented as a current offer. Regular renewal prices are shown. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
+      "note_zh": "标准月费；官方页面确认首月半价上线活动已于 2026 年 10 月 14 日结束，不再作为当前优惠。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
+      "note_en": "Regular monthly fee. The official page confirms the first-month 50% launch offer ended on October 14, 2026; it is no longer a current promotion. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-10-24",
-      "updated_at": "2026-10-24",
+      "checked_at": "2026-11-17",
+      "updated_at": "2026-11-17",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
       "tier_name": "Build",
@@ -2803,20 +2844,20 @@
           "id": "first-month-half-price",
           "type": "discount",
           "kind": "promotion",
-          "status": "pending",
+          "status": "paused",
           "models": [
             "MiniMax M3.1 Flash"
           ],
           "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-          "checked_at": "2026-10-25",
-          "conditions_zh": "月付新购或符合条件的升级首月五折，第二个月按标准价自动续费；年付不参与。官方期限只写“10 月 14 日”，缺少年份，当前有效性待核验。",
-          "conditions_en": "50% off the first month for new monthly purchases and eligible upgrades; standard auto-renewal from month two. Annual billing is excluded. The official deadline says only October 14 without a year, so current validity remains unverified.",
-          "eligibility_zh": "Go、Explore 或 Build 的月付新购与活动期内符合规则的升级；不代表无需付费。",
-          "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; payment is required.",
+          "checked_at": "2026-11-17",
+          "conditions_zh": "上线活动期内月付新购或符合条件的升级首月五折，第二个月起按标准价自动续费；年付不参与。官方页面确认活动已于 2026 年 10 月 14 日结束，规则仅作历史参考。",
+          "conditions_en": "During the launch offer, new monthly purchases and eligible upgrades received 50% off the first month, with standard auto-renewal from month two; annual billing was excluded. The official page confirms the offer ended on October 14, 2026; the rules are retained for historical reference only.",
+          "eligibility_zh": "活动期内 Go、Explore 或 Build 的月付新购与符合规则的升级；活动已结束，不再对新购生效。",
+          "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; the offer has ended and no longer applies to new purchases.",
           "card_required": "unknown",
           "ends_at": null,
-          "end_note_zh": "官方写至 10 月 14 日，未注明年份，待核验",
-          "end_note_en": "Official deadline: October 14, year unspecified; verification pending",
+          "end_note_zh": "官方页面明确活动已于 2026 年 10 月 14 日结束；未公布具体结束时刻与时区。",
+          "end_note_en": "The official page states the offer ended on October 14, 2026; no exact end time or timezone is published.",
           "price": {
             "amount": 66.0
           },
@@ -2831,7 +2872,7 @@
               "amount": 132
             },
             "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-            "checked_at": "2026-10-25"
+            "checked_at": "2026-11-17"
           }
         }
       ]
@@ -2852,7 +2893,7 @@
       "note_zh": "标准月费 ¥99；年付总额 ¥948（折合 ¥79/月）。包含 Kimi Code，与其他会员功能共享月总额度；未用额度不结转。保留 5 小时滚动窗口，无周限额；月总额度用尽仍影响 Code，可另购 Extra Usage。旧套餐可续订，不强制迁移。",
       "note_en": "Regular monthly price ¥99; annual total ¥948 (equivalent to ¥79/month). Includes Kimi Code and shares the monthly pool with other membership features; unused credits do not roll over. Retains a rolling 5-hour limit with no weekly limit; exhausting monthly credits affects Code. Extra Usage is optional. Legacy plans can renew without mandatory migration.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-17",
       "updated_at": "2026-10-24",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -2890,7 +2931,7 @@
       "note_zh": "标准月费 ¥199；年付总额 ¥1,908（折合 ¥159/月）。包含 Kimi Code，与其他会员功能共享月总额度；未用额度不结转。保留 5 小时滚动窗口，无周限额；月总额度用尽仍影响 Code，可另购 Extra Usage。旧套餐可续订，不强制迁移。",
       "note_en": "Regular monthly price ¥199; annual total ¥1,908 (equivalent to ¥159/month). Includes Kimi Code and shares the monthly pool with other membership features; unused credits do not roll over. Retains a rolling 5-hour limit with no weekly limit; exhausting monthly credits affects Code. Extra Usage is optional. Legacy plans can renew without mandatory migration.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-17",
       "updated_at": "2026-10-24",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -2931,7 +2972,7 @@
       "note_zh": "标准月费 ¥699；年付总额 ¥6,708（折合 ¥559/月）。包含 Kimi Code，与其他会员功能共享月总额度；未用额度不结转。保留 5 小时滚动窗口，无周限额；月总额度用尽仍影响 Code，可另购 Extra Usage。旧套餐可续订，不强制迁移。",
       "note_en": "Regular monthly price ¥699; annual total ¥6,708 (equivalent to ¥559/month). Includes Kimi Code and shares the monthly pool with other membership features; unused credits do not roll over. Retains a rolling 5-hour limit with no weekly limit; exhausting monthly credits affects Code. Extra Usage is optional. Legacy plans can renew without mandatory migration.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-17",
       "updated_at": "2026-10-24",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -2972,7 +3013,7 @@
       "note_zh": "标准月费 ¥1,399；年付总额 ¥13,428（折合 ¥1,119/月）。包含 Kimi Code，与其他会员功能共享月总额度；未用额度不结转。保留 5 小时滚动窗口，无周限额；月总额度用尽仍影响 Code，可另购 Extra Usage。",
       "note_en": "Regular monthly price ¥1,399; annual total ¥13,428 (equivalent to ¥1,119/month). Includes Kimi Code and shares the monthly pool with other membership features; unused credits do not roll over. Retains a rolling 5-hour limit with no weekly limit; exhausting monthly credits affects Code. Extra Usage is optional.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-17",
       "updated_at": "2026-10-24",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
@@ -3010,7 +3051,7 @@
       "note_zh": "标准月费 ¥49；年付总额 ¥468（折合 ¥39/月）。不含 Kimi Code；包含办公文件、Deep Research、网站部署、1 个并行 Agent 任务、6 个定时/小组件任务、20 个项目和 20GB 项目存储。共享额度覆盖 K3 与 K3 Swarm，未用额度不结转。",
       "note_en": "Regular monthly price ¥49; annual total ¥468 (equivalent to ¥39/month). Kimi Code is not included. The plan includes office files, Deep Research, website deployment, one parallel Agent task, six scheduled/widget tasks, 20 projects and 20GB of project storage. The shared allowance covers K3 and K3 Swarm; unused credits do not roll over.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
-      "checked_at": "2026-10-24",
+      "checked_at": "2026-11-17",
       "updated_at": "2026-10-19",
       "product_id": "kimi-membership",
       "product_name": "Kimi Membership",
@@ -3023,7 +3064,7 @@
       "models_source_urls": [
         "https://www.kimi.com/en/help/membership/membership-overview"
       ],
-      "models_checked_at": "2026-10-24",
+      "models_checked_at": "2026-11-17",
       "use_cases": [
         "chat"
       ]

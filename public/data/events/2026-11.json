@@ -1,7 +1,514 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "7c4080530b19913d",
+  "snapshot_id": "67572900218baefb",
   "events": [
+    {
+      "id": "copilot-cli-1-0-113-1-20261117",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Copilot CLI 1.0.113-1 允许管理员禁用内置 Browser Use",
+      "summary_zh": "GitHub Copilot CLI 1.0.113-1 新增托管设置 features.browserUse，管理员可禁用内置 Browser Use，且对运行中的会话同样生效。",
+      "key_points_zh": [
+        "新增托管设置 features.browserUse。",
+        "管理员可禁用内置 Browser Use。",
+        "设置对运行中的会话生效。"
+      ],
+      "importance_reason_zh": "企业可集中管控代理的浏览器操作能力，影响合规与权限策略。",
+      "title_en": "Copilot CLI 1.0.113-1 lets admins disable built-in Browser Use",
+      "summary_en": "GitHub Copilot CLI 1.0.113-1 adds the managed setting features.browserUse, letting administrators disable the built-in Browser Use, including in running sessions.",
+      "key_points_en": [
+        "Adds the managed setting features.browserUse.",
+        "Administrators can disable built-in Browser Use.",
+        "The setting applies to running sessions."
+      ],
+      "importance_reason_en": "Gives enterprises central control over agents' browser actions for compliance and permission policies.",
+      "published_at": "2026-11-17T03:48:10Z",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:32:55+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.113-1",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.113-1",
+          "collected_at": "2026-11-17T13:32:55+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-nato-cyber-defense-20261117",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "OpenAI 与 NATO 及盟国网络机构合作加强防御",
+      "summary_zh": "OpenAI 宣布与 NATO 及盟国网络机构合作，帮助受信任的防御者发现漏洞、测试修复并保护关键系统。官方公告摘要仅给出合作方向，未披露具体部署范围与工具细节。",
+      "key_points_zh": [
+        "与 NATO 及盟国网络机构开展合作。",
+        "面向受信任防御者：发现漏洞、测试修复、保护关键系统。",
+        "公告摘要未披露具体部署与工具细节。"
+      ],
+      "importance_reason_zh": "前沿 AI 进入政府间防务合作，是网络安全方向的重要落地信号。",
+      "title_en": "OpenAI works with NATO and allied cyber agencies to strengthen defenses",
+      "summary_en": "OpenAI announced it is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems. The announcement summary states the direction of the cooperation without disclosing deployment scope or tool details.",
+      "key_points_en": [
+        "Cooperation with NATO and allied cyber agencies.",
+        "Aims at trusted defenders: finding vulnerabilities, testing fixes, protecting essential systems.",
+        "The announcement summary does not disclose deployment or tool details."
+      ],
+      "importance_reason_en": "Frontier AI entering intergovernmental defense cooperation is a significant deployment signal for cybersecurity.",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:32:36+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+          "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+          "collected_at": "2026-11-17T13:32:36+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-dgx-spark-hpc-kit-20261116",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "NVIDIA 发布 DGX Spark HPC 开发者套件：四节点桌面集群",
+      "summary_zh": "NVIDIA 在 SC26 推出 DGX Spark HPC Developer Kit：四台 DGX Spark 通过 ConnectX-7 直连成环，无需网络交换机，合计 512GB 内存与 20TB NVMe 存储；借助 NVFP4 可在本地部署最高 700B 参数模型（如 DeepSeek V4.1）。面向科研人员的 HPC SDK 安装手册即将推出，让多节点科学工作负载、AI 模型与代理在桌面运行，未发表结果与专有数据可留在本地。",
+      "key_points_zh": [
+        "四节点 DGX Spark 经 ConnectX-7 环形直连，无需网络交换机。",
+        "合计 512GB 内存、20TB NVMe 存储。",
+        "NVFP4 下本地可部署最高 700B 参数模型，如 DeepSeek V4.1。",
+        "HPC SDK 安装手册即将推出。"
+      ],
+      "importance_reason_zh": "把多节点超算能力放到桌面，改变科研人员的本地开发与调试方式。",
+      "title_en": "NVIDIA introduces the DGX Spark HPC Developer Kit: a four-node desk cluster",
+      "summary_en": "At SC26 NVIDIA introduced the DGX Spark HPC Developer Kit: four DGX Spark systems connected directly in a ring over ConnectX-7 with no network switch, providing 512GB of combined memory and 20TB of NVMe storage; with NVFP4, researchers can locally deploy models up to 700B parameters such as DeepSeek V4.1. An NVIDIA HPC SDK installation playbook is coming soon, letting multi-node scientific workloads, AI models and agents run at the desk while unpublished results and proprietary datasets stay on premises.",
+      "key_points_en": [
+        "Four DGX Spark nodes ring-connected over ConnectX-7, no network switch needed.",
+        "512GB combined memory and 20TB NVMe storage.",
+        "With NVFP4, local deployment of models up to 700B parameters such as DeepSeek V4.1.",
+        "NVIDIA HPC SDK installation playbook coming soon."
+      ],
+      "importance_reason_en": "Puts multi-node supercomputing on the desk, changing local development and debugging for researchers.",
+      "published_at": "2026-11-16T23:00:05+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:31+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/",
+          "url": "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/",
+          "collected_at": "2026-11-17T13:33:31+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-326-20261116",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.326 支持团队模式下的 Code Mode 并收紧沙箱权限",
+      "summary_zh": "Claude Code 2.1.326 允许在启用 agent teams 时开启 Code Mode，已开启者的团队会话直接以 Code Mode 启动。未设置模式且组织策略未加载的终端与 VS Code 会话默认以 auto 模式启动，Claude Code + Cowork HIPAA 配置组织同样默认 auto，可用 disableAutoMode 关闭。沙箱与权限多处收紧：macOS、Linux、WSL 的沙箱命令默认不再写入部分敏感主目录，文件工具拒绝写入 .credentials.json 等登录文件，worktree 隔离的子代理拒绝可能改写共享分支的 git 命令，hook 的 block 决定在更多情况下生效。",
+      "key_points_zh": [
+        "agent teams 启用时可开启 Code Mode，已开启者的团队会话以 Code Mode 启动。",
+        "未设置模式且组织策略未加载的会话默认 auto；HIPAA 配置组织默认 auto，可用 disableAutoMode 关闭。",
+        "沙箱命令在 macOS、Linux、WSL 默认不再写入部分敏感主目录，可用 sandbox.filesystem.allowWrite 放行。",
+        "文件工具拒绝写入 .credentials.json 等登录文件，部分 cp/mv 命令需先确认。",
+        "worktree 隔离的子代理拒绝可能改写共享分支的 git 命令；ExitWorktree 在后台任务仍运行时拒绝移除 worktree。",
+        "hook 的 \"decision\": \"block\" 在更多情况下生效；新增 OTEL_RESOURCE_INCLUDE_HOST 与 VS Code claudeCode.promptSuggestions 设置。"
+      ],
+      "importance_reason_zh": "默认权限与沙箱行为变化直接影响现有会话与自动化流程，团队模式与 Code Mode 的组合扩展了多代理用法。",
+      "title_en": "Claude Code 2.1.326 enables Code Mode with agent teams and tightens sandbox permissions",
+      "summary_en": "Claude Code 2.1.326 lets you turn on Code Mode while agent teams are enabled; sessions with teams on now start in Code Mode if it was already enabled. Terminal and VS Code sessions with no mode set start in auto mode when the organization policy has not loaded, and organizations with the Claude Code + Cowork HIPAA configuration also default to auto mode, which disableAutoMode turns off. Sandbox and permission behavior tightens in several places: sandboxed commands on macOS, Linux and WSL no longer write to some sensitive home folders by default, file tools refuse writes to sign-in files such as .credentials.json, subagents isolated in a worktree refuse git commands that can rewrite shared branches, and a hook's block decision holds in more cases.",
+      "key_points_en": [
+        "Code Mode can be enabled with agent teams on; already-enabled setups start team sessions in Code Mode.",
+        "Sessions with no mode set default to auto when org policy has not loaded; HIPAA-configured orgs default to auto, disableAutoMode turns it off.",
+        "Sandboxed commands on macOS, Linux and WSL no longer write to some sensitive home folders by default; sandbox.filesystem.allowWrite can allow them.",
+        "File tools refuse writes to sign-in files such as .credentials.json; some cp and mv commands ask first.",
+        "Worktree-isolated subagents refuse git commands that can rewrite shared branches; ExitWorktree refuses removal while background work may still run.",
+        "A hook's \"decision\": \"block\" holds in more cases; adds OTEL_RESOURCE_INCLUDE_HOST and the VS Code claudeCode.promptSuggestions setting."
+      ],
+      "importance_reason_en": "Default permission and sandbox changes directly affect existing sessions and automation, while Code Mode with teams expands multi-agent usage.",
+      "published_at": "2026-11-16T22:18:49+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:12+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-326",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-326",
+          "collected_at": "2026-11-17T13:33:12+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-weekly-20261116",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Copilot 周报：VS Code 会话收件箱与模型对比代理，应用支持分钟级自动化",
+      "summary_zh": "GitHub Copilot 11 月 9 日周报汇总多项新功能：VS Code 1.146 的 Agents 窗口新增 Inbox 模式，跨工作区把需要注意的会话排在前面；开启 Compare Models 后代理可自行查找模型、运行对比并总结结果（实验性）。Copilot 应用支持通过二维码把云与 Codespace 会话接力到 GitHub Mobile、在对话内重新登录 MCP 服务器、按分钟或自定义 cron 调度 Project 自动化、下载多语言语音模型听写。周报同时重述了 Claude Fable 5.2、Gemini 4 Carbon 与 GHES 仓库接入等此前已公布的能力。",
+      "key_points_zh": [
+        "VS Code Agents 窗口新增 Inbox 模式，跨工作区优先显示需要注意的会话（实验性）。",
+        "Compare Models 开启后，代理可查找可用模型、发起对比并读取结果总结（实验性）。",
+        "Copilot 应用可用二维码把云与 Codespace 会话接力到 GitHub Mobile。",
+        "MCP 服务器需要重新登录时，可在对话内连接对应连接器并继续任务。",
+        "Project 自动化支持分钟级调度与自定义 cron（如工作日 9:30）。",
+        "设置中下载多语言语音模型后，可用法语、西班牙语等语言听写。"
+      ],
+      "importance_reason_zh": "会话管理与模型对比交给代理自动完成，改变多会话工作流；应用端调度与移动端接力扩展使用场景。",
+      "title_en": "Copilot weekly: VS Code session Inbox and model-comparison agents, minute-level app automations",
+      "summary_en": "GitHub Copilot's November 9 weekly roundup brings several new features: the Agents window in VS Code 1.146 adds Inbox mode, surfacing sessions that need attention first across workspaces; with Compare Models enabled, agents can find available models, launch comparisons and summarize the results (experimental). The Copilot app can hand cloud and Codespace sessions to GitHub Mobile via QR code, re-sign-in to MCP servers inside the conversation, schedule Project automations down to the minute or with custom cron, and dictate in more languages after downloading the multilingual voice model. The roundup also recaps previously announced capabilities such as Claude Fable 5.2, Gemini 4 Carbon and GHES repository access.",
+      "key_points_en": [
+        "Inbox mode in the VS Code Agents window prioritizes sessions needing attention across workspaces (experimental).",
+        "With Compare Models enabled, agents can find models, run comparisons and read results to summarize findings (experimental).",
+        "The Copilot app hands cloud and Codespace sessions to GitHub Mobile via QR code.",
+        "MCP servers needing re-authentication can be connected in place without leaving the conversation.",
+        "Project automations support minute-level scheduling and custom cron such as weekdays at 9:30.",
+        "After downloading the multilingual voice model in settings, dictation works in French, Spanish and other languages."
+      ],
+      "importance_reason_en": "Agent-driven session management and model comparison change multi-session workflows; app scheduling and mobile handoff broaden usage.",
+      "published_at": "2026-11-16T21:34:53+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:16+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9",
+          "url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9",
+          "collected_at": "2026-11-17T13:33:16+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-model-retirement-nov16-effective-20261116",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Copilot 正式停用 Opus 4.8、Opus 5 与 GPT-5.6 Terra",
+      "summary_zh": "按 10 月 15 日预告，GitHub Copilot 自 2026 年 11 月 16 日起在大多数体验（Copilot Chat、内联编辑、ask 与 agent 模式、代码补全）中停用 Claude Opus 4.8、Claude Opus 5 与 GPT-5.6 Terra。年付个人订阅者仍可使用 Opus 4.8；Opus 5 从模型选择器移除，但经现有授权保留为运行时拒绝回退。官方建议替代为 Claude Opus 5.5 与 GPT-6.1 Sol 或 GPT-6 Luna；默认启用策略下，Business 与 Enterprise 客户自动启用替代模型，除非管理员关闭全局默认或显式禁用。",
+      "key_points_zh": [
+        "11 月 16 日起大多数 Copilot 体验停用 Opus 4.8、Opus 5、GPT-5.6 Terra。",
+        "年付个人订阅者仍可使用 Claude Opus 4.8。",
+        "Opus 5 移出模型选择器，仍作为运行时拒绝回退保留。",
+        "建议替代：Opus 4.8/5 换 Opus 5.5；GPT-5.6 Terra 换 GPT-6.1 Sol 或 GPT-6 Luna。",
+        "默认启用策略下 Business/Enterprise 自动启用替代模型，管理员关闭全局默认或显式禁用时除外。"
+      ],
+      "importance_reason_zh": "模型下线直接影响现有工作流与集成，用户需按替代建议迁移。",
+      "title_en": "Copilot deprecates Opus 4.8, Opus 5 and GPT-5.6 Terra",
+      "summary_en": "As announced on October 15, GitHub Copilot deprecated Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra across most experiences (Copilot Chat, inline edits, ask and agent modes, code completions) as of November 16, 2026. Claude Opus 4.8 remains available to individual subscribers on annual plans; Opus 5 is removed from the model picker but stays available for runtime refusal fallback through existing authorized access. Suggested alternatives are Claude Opus 5.5 and GPT-6.1 Sol or GPT-6 Luna; under default model enablement, alternatives are automatically enabled for Business and Enterprise customers unless an administrator turned off the global default or explicitly disabled the model.",
+      "key_points_en": [
+        "Opus 4.8, Opus 5 and GPT-5.6 Terra deprecated across most Copilot experiences as of November 16.",
+        "Claude Opus 4.8 remains available to individual subscribers on annual plans.",
+        "Opus 5 leaves the model picker but remains for runtime refusal fallback.",
+        "Suggested alternatives: Opus 4.8/5 to Opus 5.5; GPT-5.6 Terra to GPT-6.1 Sol or GPT-6 Luna.",
+        "Alternatives auto-enable for Business/Enterprise under default enablement unless admins turned off the global default or disabled the model."
+      ],
+      "importance_reason_en": "Model retirement directly affects existing workflows and integrations; users need to migrate to the suggested alternatives.",
+      "published_at": "2026-11-16T20:25:20+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:16+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026",
+          "url": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026",
+          "collected_at": "2026-11-17T13:33:16+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "copilot-model-retirement-preview-20261116"
+      ]
+    },
+    {
+      "id": "copilot-plugin-only-customizations-20261116",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Copilot 企业可强制自定义项仅来自插件或托管设置",
+      "summary_zh": "GitHub Copilot 新增托管设置 strictPluginOnlyCustomization，企业管理员可要求技能、自定义代理、hooks、MCP 服务器与可执行 Copilot 扩展这五类自定义项只能来自合规插件或托管设置，阻止用户与项目级独立配置，可按类别单独启用。该设置不是市场白名单，需与 strictKnownMarketplaces 等市场策略配合使用；适用于 GitHub Enterprise Cloud 上由企业或其组织发放 Copilot Business/Enterprise 许可的成员。",
+      "key_points_zh": [
+        "strictPluginOnlyCustomization 阻止用户与项目来源的独立自定义项。",
+        "覆盖技能、自定义代理、hooks、MCP 服务器、可执行 Copilot 扩展五类，可逐类选择。",
+        "合规插件与托管设置仍可用，受其他策略约束。",
+        "需与 strictKnownMarketplaces 配合限制市场来源；本身不是市场白名单。",
+        "适用于 GitHub Enterprise Cloud 的 Copilot Business/Enterprise 成员。"
+      ],
+      "importance_reason_zh": "企业可在不整体禁用能力的前提下统一分发受批准的 MCP 工具与扩展，收紧配置管控。",
+      "title_en": "Copilot enterprises can require customizations to come from plugins or managed settings",
+      "summary_en": "GitHub Copilot adds the managed setting strictPluginOnlyCustomization, letting enterprise administrators require five customization categories — skills, custom agents, hooks, MCP servers and executable Copilot extensions — to come from eligible plugins or managed settings rather than standalone user or project configuration, with per-category selection. The setting is not a marketplace allowlist and pairs with marketplace policies such as strictKnownMarketplaces; it applies on GitHub Enterprise Cloud to members with Copilot Business or Enterprise licenses issued by the enterprise or one of its organizations.",
+      "key_points_en": [
+        "strictPluginOnlyCustomization blocks standalone customizations from user and project sources.",
+        "Covers skills, custom agents, hooks, MCP servers and executable Copilot extensions, selectable per category.",
+        "Eligible plugins and managed settings remain allowed, subject to other policies.",
+        "Pairs with strictKnownMarketplaces to restrict marketplace sources; not itself a marketplace allowlist.",
+        "Applies to Copilot Business/Enterprise members on GitHub Enterprise Cloud."
+      ],
+      "importance_reason_en": "Enterprises can distribute approved MCP tools and extensions through a shared plugin library without disabling the capabilities entirely.",
+      "published_at": "2026-11-16T19:48:33+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:16+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-16-control-where-github-copilot-customizations-come-from",
+          "url": "https://github.blog/changelog/2026-11-16-control-where-github-copilot-customizations-come-from",
+          "collected_at": "2026-11-17T13:33:16+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-local-harness-retirement-20261116",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility"
+      ],
+      "title_zh": "VS Code 弃用 Local harness，2027 年 2 月移除",
+      "summary_zh": "VS Code 1.146 弃用协调 Copilot 代理会话的旧 Local harness，并将于 2027 年 2 月移除。替代的 Microsoft Copilot harness 已内置于 VS Code，自 1.143 起为新会话默认；它基于 Copilot SDK，与 Copilot CLI 和 Copilot 应用共享代理运行时，支持 Fusion 选模、协助权限、连接器（预览）与画布（预览），选择它不会把文件移到云端。三个月过渡期内 Local harness 在组织策略允许时仍可用，但新功能只投向 Copilot harness；切换不会自动转换自定义项，需在移除前检查兼容性。",
+      "key_points_zh": [
+        "VS Code 1.146 弃用 Local harness，2027 年 2 月移除。",
+        "Copilot harness 自 1.143 起为新会话默认，与 CLI、应用共享代理运行时。",
+        "支持 Fusion 选模、协助权限、连接器与画布（后两者预览）。",
+        "现有 Copilot 套餐（含 Free）可继续使用；功能取决于套餐、设置与组织策略。",
+        "管理员可强制托管运行时权限与沙箱限制；选择 harness 本身不启用沙箱。",
+        "切换不自动转换自定义项，需在 2027 年 2 月前检查兼容性。"
+      ],
+      "importance_reason_zh": "明确的移除时间表要求仍用 Local harness 的用户与管理员迁移并验证自定义项。",
+      "title_en": "VS Code deprecates the Local harness, removal in February 2027",
+      "summary_en": "VS Code 1.146 deprecates the Local harness, the older software coordinating model, context and tools for Copilot agent sessions, and will remove it in February 2027. Its replacement, the Microsoft Copilot harness, is built into VS Code and has been the default for new sessions since 1.143; built on the Copilot SDK, it shares the coding-agent runtime with Copilot CLI and the Copilot app, supports Fusion model selection, assisted permissions, connectors (preview) and canvases (preview), and does not move files to the cloud. During the three-month transition the Local harness remains available where organization policy permits, but new features focus on the Copilot harness; switching does not automatically convert customizations, which need a compatibility review before removal.",
+      "key_points_en": [
+        "VS Code 1.146 deprecates the Local harness; removal in February 2027.",
+        "The Copilot harness has been default for new sessions since 1.143 and shares the agent runtime with CLI and the app.",
+        "Supports Fusion model selection, assisted permissions, connectors and canvases (the latter two in preview).",
+        "Existing Copilot plans, including Free, keep working; features depend on plan, settings and org policy.",
+        "Admins can enforce managed runtime permissions and sandbox restrictions; selecting the harness does not enable sandboxing.",
+        "Switching does not auto-convert customizations; review compatibility before February 2027."
+      ],
+      "importance_reason_en": "A firm removal date requires users and admins still on the Local harness to migrate and validate customizations.",
+      "published_at": "2026-11-16T19:22:56+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:16+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-16-vs-code-retires-the-local-harness-in-february-2027",
+          "url": "https://github.blog/changelog/2026-11-16-vs-code-retires-the-local-harness-in-february-2027",
+          "collected_at": "2026-11-17T13:33:16+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-academic-researchers-200k-20261116",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "pricing"
+      ],
+      "title_zh": "OpenAI 向 20 万名科研人员免费开放前沿模型",
+      "summary_zh": "OpenAI 扩展 ChatGPT for Academic Researchers 计划，向全球 20 万名研究人员免费开放其前沿模型。公告摘要未说明申请方式与期限细节。",
+      "key_points_zh": [
+        "ChatGPT for Academic Researchers 计划扩展。",
+        "覆盖全球 200,000 名研究人员。",
+        "免费使用 OpenAI 前沿模型。"
+      ],
+      "importance_reason_zh": "大规模免费科研访问改变学术用户的可用性与成本。",
+      "title_en": "OpenAI expands free frontier-model access to 200,000 researchers",
+      "summary_en": "OpenAI is expanding its ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to its frontier models. The announcement summary does not detail application steps or program duration.",
+      "key_points_en": [
+        "Expansion of the ChatGPT for Academic Researchers program.",
+        "Covers 200,000 researchers worldwide.",
+        "Free access to OpenAI frontier models."
+      ],
+      "importance_reason_en": "Large-scale free research access changes availability and cost for academic users.",
+      "published_at": "2026-11-16T17:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:32:36+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+          "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+          "collected_at": "2026-11-17T13:32:36+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-child-safety-tools-20261116",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "OpenAI 推出打击在线儿童性虐待的新工具与合作",
+      "summary_zh": "OpenAI 宣布新工具、实用指南与合作伙伴计划，用于预防、检测和应对在线儿童性剥削与虐待。公告摘要未列出具体工具名称与上线范围。",
+      "key_points_zh": [
+        "发布新工具、实用指南与合作计划。",
+        "目标：预防、检测、应对在线儿童性剥削与虐待。",
+        "摘要未列出具体工具与上线范围。"
+      ],
+      "importance_reason_zh": "平台安全能力与行业协作的实质投入，影响内容治理生态。",
+      "title_en": "OpenAI adds tools and partnerships against online child sexual abuse",
+      "summary_en": "OpenAI announced new tools, practical guidance and partnerships to help prevent, detect and respond to online child sexual exploitation and abuse. The announcement summary does not name the specific tools or their rollout scope.",
+      "key_points_en": [
+        "New tools, practical guidance and partnership plans.",
+        "Goal: prevent, detect and respond to online child sexual exploitation and abuse.",
+        "The summary does not list specific tools or rollout scope."
+      ],
+      "importance_reason_en": "Substantive investment in platform safety capabilities and industry collaboration affects the content-governance ecosystem.",
+      "published_at": "2026-11-16T17:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:32:36+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/strengthening-online-child-safety",
+          "url": "https://openai.com/index/strengthening-online-child-safety",
+          "collected_at": "2026-11-17T13:32:36+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-vera-rubin-mlperf-20261116",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Vera Rubin 首次 MLPerf 亮相：包揽 Training v6.1，代理推理能效提升逾 10 倍",
+      "summary_zh": "NVIDIA 称 Vera Rubin 平台在 MLPerf 首秀中包揽 Training v6.1 全部基准，是唯一在所有基准提交结果的平台；首次 MLPerf Endpoints 提交中，代理 AI 每瓦吞吐较上代提升超过 10 倍。Vera Rubin NVL72 每 GPU 性能最高达高度优化的 GB300 NVL72 的 2 倍。NVIDIA 表示性能将随 CUDA 软件栈持续优化而提升。以上为厂商宣称，结果来自 MLCommons 11 月 16 日公布的条目。",
+      "key_points_zh": [
+        "包揽 MLPerf Training v6.1 全部基准，唯一全项提交的平台。",
+        "首次 Endpoints 提交：代理 AI 每瓦吞吐代际提升超 10 倍。",
+        "Vera Rubin NVL72 每 GPU 性能最高为 GB300 NVL72 的 2 倍。",
+        "NVIDIA 称性能将随软件优化继续提升。"
+      ],
+      "importance_reason_zh": "新一代平台的官方基准首秀，为训练与代理推理基础设施选型提供参考。",
+      "title_en": "Vera Rubin debuts in MLPerf: sweeps Training v6.1, over 10x agentic efficiency gain",
+      "summary_en": "NVIDIA says the Vera Rubin platform swept every MLPerf Training v6.1 benchmark in its debut and was the only platform with results on every benchmark; in its first MLPerf Endpoints submission it delivered more than 10x generational gains in throughput per watt for agentic AI. Vera Rubin NVL72 delivered up to 2x more performance per GPU than the highly optimized GB300 NVL72. NVIDIA says performance will keep climbing through CUDA software-stack optimization. These are vendor claims, based on results released by MLCommons on November 16.",
+      "key_points_en": [
+        "Swept every MLPerf Training v6.1 benchmark; the only platform with results on all benchmarks.",
+        "First Endpoints submission: over 10x generational throughput-per-watt gain for agentic AI.",
+        "Vera Rubin NVL72 up to 2x performance per GPU versus GB300 NVL72.",
+        "NVIDIA says performance will keep improving with software optimization."
+      ],
+      "importance_reason_en": "The next-generation platform's official benchmark debut informs training and agentic-inference infrastructure choices.",
+      "published_at": "2026-11-16T16:00:25+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:31+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/",
+          "url": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/",
+          "collected_at": "2026-11-17T13:33:31+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-rubin-hpc-20261116",
+      "entity_ids": [
+        "nvidia"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "NVIDIA 发布 Rubin HPC GPU：面向科学与工程代理的仿真加速",
+      "summary_zh": "NVIDIA 在 SC26 宣布 Vera Rubin 平台新成员 Rubin HPC GPU，面向科学、工程与分析工作流的仿真与数据处理。单 GPU CUDA 核心数超过 50,000，创纪录；配备稀疏数据加速能力与第七代 NVLink 互连。NVIDIA 称其将加速代理用于验证想法的仿真，缩短从探索到科学发现与工业设计的路径。",
+      "key_points_zh": [
+        "Rubin HPC 属于 Vera Rubin 平台，面向仿真与数据处理。",
+        "单 GPU CUDA 核心超 50,000，创纪录。",
+        "稀疏数据加速与第七代 NVLink 互连。",
+        "定位：加速科学/工程代理的仿真循环。"
+      ],
+      "importance_reason_zh": "面向 AI 代理科研负载的专用 GPU，扩展 Vera Rubin 平台产品线。",
+      "title_en": "NVIDIA announces Rubin HPC, a GPU for science and engineering agents",
+      "summary_en": "At SC26 NVIDIA announced Rubin HPC, a new GPU in the Vera Rubin platform designed to accelerate simulation and data processing for science, engineering and analytics workflows. It features a record number of CUDA cores — more than 50,000 on a single GPU — sparse data acceleration and seventh-generation NVLink interconnect. NVIDIA says it will accelerate the simulations agents use to test ideas, shortening the path from exploration to scientific discovery and industrial design.",
+      "key_points_en": [
+        "Rubin HPC joins the Vera Rubin platform, targeting simulation and data processing.",
+        "Record CUDA core count: more than 50,000 on a single GPU.",
+        "Sparse data acceleration and seventh-generation NVLink.",
+        "Positioned to accelerate the simulation loop of science/engineering agents."
+      ],
+      "importance_reason_en": "A dedicated GPU for AI-agent scientific workloads extends the Vera Rubin platform lineup.",
+      "published_at": "2026-11-16T16:00:01+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:31+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/rubin-hpc/",
+          "url": "https://blogs.nvidia.com/blog/rubin-hpc/",
+          "collected_at": "2026-11-17T13:33:31+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "first_collected_at": "2026-11-16T13:52:57+00:00",
       "updated_at": "2026-11-16T14:03:41+00:00",
@@ -50,6 +557,175 @@
       "date_kind": "published"
     },
     {
+      "id": "openai-embedded-assessments-20261116",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 启动嵌入式评估：外部机构独立评测对齐与 safeguards",
+      "summary_zh": "OpenAI 宣布嵌入式评估（embedded assessments）第一阶段，与 Apollo Research、METR、Transluce 和 Goodfire 合作，独立评估模型对齐、safeguards 与监控系统。公告摘要未给出评估时间表与结果发布方式。",
+      "key_points_zh": [
+        "嵌入式评估进入第一阶段。",
+        "合作方：Apollo Research、METR、Transluce、Goodfire。",
+        "独立评估模型对齐、safeguards 与监控系统。"
+      ],
+      "importance_reason_zh": "把外部评估嵌入模型开发流程，改变安全评测的独立性与深度。",
+      "title_en": "OpenAI begins embedded assessments with external evaluators",
+      "summary_en": "OpenAI begins the first phase of embedded assessments with Apollo Research, METR, Transluce and Goodfire to independently evaluate model alignment, safeguards and monitoring systems. The announcement summary does not give an assessment timeline or how results will be published.",
+      "key_points_en": [
+        "First phase of embedded assessments underway.",
+        "Partners: Apollo Research, METR, Transluce and Goodfire.",
+        "Independent evaluation of model alignment, safeguards and monitoring systems."
+      ],
+      "importance_reason_en": "Embedding external evaluation into model development changes the independence and depth of safety assessments.",
+      "published_at": "2026-11-16T08:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:32:36+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+          "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+          "collected_at": "2026-11-17T13:32:36+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-healthcare-computer-use-20261116",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "ChatGPT for Healthcare 引入计算机操作代理与医疗插件",
+      "summary_zh": "OpenAI 扩展 ChatGPT for Healthcare：引入计算机操作（computer-use）代理、改进临床回答，并新增可在医疗软件间完成实际工作的医疗插件。官方同日发布面向医疗团队的 computer-use 代理专文；公告摘要未披露具体软件集成与可用范围。",
+      "key_points_zh": [
+        "引入 computer-use 代理。",
+        "临床回答能力改进。",
+        "新增跨医疗软件完成实际工作的医疗插件。",
+        "同日发布面向医疗团队的 computer-use 代理专文。"
+      ],
+      "importance_reason_zh": "医疗场景从问答走向跨软件操作，是垂直行业代理的重要落地。",
+      "title_en": "ChatGPT for Healthcare adds computer-use agents and healthcare plugins",
+      "summary_en": "OpenAI expands ChatGPT for Healthcare with computer-use agents, improved clinical answers and new healthcare plugins that work across healthcare software to get real work done. A companion article on advancing computer-use agents for healthcare teams was published the same day; the announcement summaries do not disclose specific software integrations or availability scope.",
+      "key_points_en": [
+        "Introduces computer-use agents.",
+        "Improved clinical answers.",
+        "New healthcare plugins that work across healthcare software.",
+        "Companion article on computer-use agents for healthcare teams published the same day."
+      ],
+      "importance_reason_en": "Healthcare use moves from question-answering to cross-software operation, a significant vertical-agent deployment.",
+      "published_at": "2026-11-16T06:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:32:36+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+          "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+          "collected_at": "2026-11-17T13:32:36+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+          "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+          "collected_at": "2026-11-17T13:32:36+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
+      "id": "openrouter-hugging-face-inference-20261116",
+      "entity_ids": [
+        "openrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "availability"
+      ],
+      "title_zh": "OpenRouter 为 Hugging Face Inference Providers 提供路由",
+      "summary_zh": "Hugging Face Inference Providers 上的聊天模型现经 OpenRouter 路由运行；OpenRouter 还可把 traces 发送到 Hugging Face Storage Bucket。公告摘要未说明计费与可用模型范围。",
+      "key_points_zh": [
+        "HF Inference Providers 聊天模型改经 OpenRouter 路由。",
+        "OpenRouter traces 可写入 Hugging Face Storage Bucket。",
+        "摘要未说明计费与模型范围。"
+      ],
+      "importance_reason_zh": "两大平台打通推理路由与数据链路，影响 Hugging Face 用户的模型访问方式。",
+      "title_en": "OpenRouter now powers inference on Hugging Face",
+      "summary_en": "Chat models on Hugging Face Inference Providers now run through OpenRouter's routing, and OpenRouter can send traces to a Hugging Face Storage Bucket. The announcement summary does not detail pricing or the available model scope.",
+      "key_points_en": [
+        "HF Inference Providers chat models now route through OpenRouter.",
+        "OpenRouter traces can be sent to a Hugging Face Storage Bucket.",
+        "The summary does not detail pricing or model scope."
+      ],
+      "importance_reason_en": "Connecting the two platforms' inference routing and data paths changes model access for Hugging Face users.",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:12+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "openrouter-official",
+          "content_id": "https://openrouter.ai/blog/announcements/hugging-face-inference-providers/",
+          "url": "https://openrouter.ai/blog/announcements/hugging-face-inference-providers/",
+          "collected_at": "2026-11-17T13:33:12+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "google-bitwise-zero-rl-tpu-20261116",
+      "entity_ids": [
+        "google",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Google 在 TPU 上实现训练-推理零位差，稳定 on-policy RL",
+      "summary_zh": "Google 介绍如何在 64 片 Cloud TPU v5p 上消除 on-policy LLM 强化学习中训练与推理的对数概率浮点漂移，实现 bitwise-zero 的训练-推理一致性，并给出基于 JAX 与 Pallas、可在 Tunix 中复用的四部分通用配方。",
+      "key_points_zh": [
+        "消除 on-policy RL 的训练-推理 logprob 浮点漂移。",
+        "在 64 片 Cloud TPU v5p 上验证。",
+        "四部分 JAX/Pallas 配方，已在 Tunix 中提供。"
+      ],
+      "importance_reason_zh": "训练-推理不一致是 RL 稳定性的核心难题，零位差配方直接影响后训练质量。",
+      "title_en": "Google achieves bitwise-zero train-inference mismatch for on-policy RL on TPU",
+      "summary_en": "Google describes how it eliminated floating-point train-inference logprob drift for on-policy LLM reinforcement learning across 64 Cloud TPU v5p chips, achieving bitwise-zero train-inference consistency, and provides a generalizable four-part JAX and Pallas recipe available in Tunix.",
+      "key_points_en": [
+        "Eliminates train-inference logprob floating-point drift for on-policy RL.",
+        "Validated across 64 Cloud TPU v5p chips.",
+        "A four-part JAX/Pallas recipe provided in Tunix."
+      ],
+      "importance_reason_en": "Train-inference mismatch is a core RL stability problem; a bitwise-zero recipe directly affects post-training quality.",
+      "published_at": "2026-11-16T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-17T13:33:16+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/unlocking-stable-on-policy-rl-on-tpu-with-bitwise-zero-traininference-mismatch/",
+          "url": "https://developers.googleblog.com/en/unlocking-stable-on-policy-rl-on-tpu-with-bitwise-zero-traininference-mismatch/",
+          "collected_at": "2026-11-17T13:33:16+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
       "first_collected_at": "2026-11-16T13:52:58+00:00",
       "updated_at": "2026-11-16T14:03:41+00:00",
       "sources": [
@@ -93,6 +769,263 @@
       "published_at": "2026-11-16",
       "date_precision": "date",
       "date_kind": "published"
+    },
+    {
+      "id": "kiro-web-terminal-20261116",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro Web 支持在会话工作区内运行终端",
+      "summary_zh": "Kiro Web 新增终端：可在会话工作区内直接运行命令，终端可置于对话旁边或下方，用于运行构建与测试、查看输出或手动尝试命令。",
+      "key_points_zh": [
+        "Kiro Web 会话工作区内可运行命令。",
+        "终端可放在对话旁边或下方。",
+        "支持构建、测试与手动命令。"
+      ],
+      "importance_reason_zh": "Web 端补齐本地执行能力，减少在 IDE 与浏览器间切换。",
+      "title_en": "Kiro Web adds a terminal in the session workspace",
+      "summary_en": "Kiro Web now lets you run commands in your session's workspace: open a terminal beside the conversation or below it to run builds and tests, check output, or try a command yourself.",
+      "key_points_en": [
+        "Run commands inside the Kiro Web session workspace.",
+        "Terminal can sit beside or below the conversation.",
+        "Supports builds, tests and manual commands."
+      ],
+      "importance_reason_en": "Adds local execution to the web experience, reducing switching between IDE and browser.",
+      "published_at": "2026-11-16",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-17T13:33:14+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/web/terminal-in-kiro-web",
+          "url": "https://kiro.dev/changelog/web/terminal-in-kiro-web",
+          "collected_at": "2026-11-17T13:33:14+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-3-4-hooks-20261116",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Kiro CLI 3.4 新增可改写工具输入与应答权限提示的 Hook",
+      "summary_zh": "Kiro CLI 3.4 新增 hook：可在工具调用运行前改写其输入，或代答权限提示，让脚本把团队规则应用到 V3 会话的每次工具调用，而不必逐次人工批准。同时提供四个 /memories 选项，在更多位置恢复与列出云会话，并修复 headless、上下文窗口、MCP、搜索、/tangent、/rewind 与显示问题。",
+      "key_points_zh": [
+        "Hook 可在工具运行前改写其输入。",
+        "Hook 可代答权限提示，按团队规则自动处理 V3 会话工具调用。",
+        "新增四个 /memories 选项。",
+        "更多位置支持恢复与列出云会话。",
+        "修复 headless、上下文窗口、MCP、搜索、/tangent、/rewind 与显示问题。"
+      ],
+      "importance_reason_zh": "权限审批可编程化，直接改变团队级代理治理与无人值守流程。",
+      "title_en": "Kiro CLI 3.4 adds hooks that rewrite tool inputs and answer permission prompts",
+      "summary_en": "Kiro CLI 3.4 adds hooks that rewrite a tool call's inputs before it runs or answer its permission prompt, so a script can apply team rules to every tool call in V3 sessions instead of waiting for manual approval. It also offers four /memories choices, resumes and lists cloud sessions in more places, and fixes headless, context window, MCP, search, /tangent, /rewind and display issues.",
+      "key_points_en": [
+        "Hooks can rewrite a tool call's inputs before it runs.",
+        "Hooks can answer permission prompts, applying team rules to every V3 tool call.",
+        "Adds four /memories choices.",
+        "Cloud sessions can be resumed and listed in more places.",
+        "Fixes headless, context window, MCP, search, /tangent, /rewind and display issues."
+      ],
+      "importance_reason_en": "Programmable permission approval changes team-level agent governance and unattended workflows.",
+      "published_at": "2026-11-16",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-17T13:33:14+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/3-4",
+          "url": "https://kiro.dev/changelog/cli/3-4",
+          "collected_at": "2026-11-17T13:33:14+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-enterprise-realtime-events-20261116",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro 企业版支持实时遥测事件与私有连接",
+      "summary_zh": "Kiro 企业管理员可将每次 LLM 请求与完成的工具调用作为实时 OpenTelemetry 事件流式发送到可观测性工具，或使用每日 CSV 报告与 OpenTelemetry 指标核对趋势；可跟踪 credits、模型、对话、响应时间、工具结果、客户端版本与代理模式。实时事件与私有连接目前适用于 US East（北弗吉尼亚）与 Europe（法兰克福）区域的 Kiro profile。",
+      "key_points_zh": [
+        "每次 LLM 请求与完成的工具调用可实时流式输出为 OTel 事件。",
+        "提供每日 CSV 报告与 OpenTelemetry 指标。",
+        "跟踪 credits、模型、对话、响应时间、工具结果、客户端版本、代理模式。",
+        "实时事件与私有连接限于 US East（北弗吉尼亚）与 Europe（法兰克福）。"
+      ],
+      "importance_reason_zh": "企业获得细粒度代理审计与成本观测能力，区域限制需纳入部署规划。",
+      "title_en": "Kiro Enterprise adds real-time telemetry events and private connectivity",
+      "summary_en": "Kiro Enterprise administrators can stream each LLM request and completed tool call as a real-time OpenTelemetry event to their observability tools, or use daily CSV reports and OpenTelemetry metrics for reconciled trends, tracking credits, models, conversations, response times, tool outcomes, client versions and agent modes. Real-time events and private connectivity are available for Kiro profiles in US East (N. Virginia) and Europe (Frankfurt).",
+      "key_points_en": [
+        "Each LLM request and completed tool call can stream as a real-time OTel event.",
+        "Daily CSV reports and OpenTelemetry metrics are available.",
+        "Tracks credits, models, conversations, response times, tool outcomes, client versions and agent modes.",
+        "Real-time events and private connectivity are limited to US East (N. Virginia) and Europe (Frankfurt)."
+      ],
+      "importance_reason_en": "Enterprises gain fine-grained agent auditing and cost observability; region limits factor into deployment planning.",
+      "published_at": "2026-11-16",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-17T13:33:14+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/general/real-time-telemetry-and-private-connectivity",
+          "url": "https://kiro.dev/changelog/general/real-time-telemetry-and-private-connectivity",
+          "collected_at": "2026-11-17T13:33:14+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "qoder-0-5-13-20261116",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "Qoder 0.5.13 修复子代理配置阻断会话与压缩恢复问题",
+      "summary_zh": "Qoder 0.5.13 集中修复日常使用问题：部分子代理的无效模型设置或配置不再阻止主对话启动或继续；频繁切换任务、后台通知爆发或会话内容加载失败后任务无法打开的问题得到修复；部分模型的上下文超限错误可被正确识别并通过压缩恢复；切换模型或更改上下文窗口后用量计算不再沿用旧设置；压缩对话分叉或恢复到指定消息时的错误消息链接被修复；部分用户收不到活动权益领取通知的问题也已修复。",
+      "key_points_zh": [
+        "子代理无效模型配置不再阻断主对话启动或继续。",
+        "修复频繁切换任务等场景下任务无法打开。",
+        "上下文超限错误可正确识别并经压缩恢复。",
+        "切换模型/上下文窗口后用量计算使用新设置。",
+        "修复压缩对话分叉或恢复时的消息链接。",
+        "修复部分用户收不到活动权益领取通知。"
+      ],
+      "importance_reason_zh": "多处阻断性缺陷修复，直接恢复会话可用性与压缩恢复路径。",
+      "title_en": "Qoder 0.5.13 fixes subagent config blocking sessions and compaction recovery",
+      "summary_en": "Qoder 0.5.13 focuses on everyday fixes: invalid model settings in some subagents no longer prevent the main conversation from starting or continuing; tasks failing to open after frequent task switching, bursts of background notifications or content-load failures are fixed; context-limit errors from some models are now recognized correctly so compaction recovery works; context usage calculations no longer retain outdated settings after switching models or changing the context window; incorrect links between retained messages when forking or restoring a compacted conversation are fixed; and some users not receiving campaign-benefit notifications is fixed.",
+      "key_points_en": [
+        "Invalid subagent model settings no longer block the main conversation.",
+        "Fixes tasks failing to open after frequent switching and similar scenarios.",
+        "Context-limit errors are recognized correctly and recover through compaction.",
+        "Context usage uses current settings after model or context-window changes.",
+        "Fixes message links when forking or restoring compacted conversations.",
+        "Fixes missing campaign-benefit claim notifications for some users."
+      ],
+      "importance_reason_en": "Several blocking defects are fixed, restoring session usability and the compaction recovery path.",
+      "published_at": "2026-11-16",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-17T13:41:46+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#november-16-2026::0.5.13",
+          "url": "https://docs.qoder.com/release-notes/qoder#november-16-2026",
+          "collected_at": "2026-11-17T13:41:46+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "devin-2026-11-16",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Devin 更新：跨服务身份簿、Mark done 与安全发现导出",
+      "summary_zh": "Devin 11 月 16 日更新引入 Phonebook：为成员维护跨 Devin、Slack、Microsoft Teams、git 服务商、Jira、Linear 与 Pylon 的关联身份，在 Devin 中提及某人会同时在 Slack 中标记本人。侧边栏显示已订阅会话，Mark done 取代 Archive，把会话移入 Done 文件夹但保持运行，不影响其他订阅者。云会话输入框输入 # 可选择 Slack 频道，分享时可导入 Slack 联系人；Security Findings 支持 CSV 导出，Security > Configure 更名 Customize，可按 profile 管理扫描路径、包含/排除规则与威胁模型适用仓库。旧 Slack 线程中提及 Devin 会新开会话而非失败，!ultrafast 成为 !fastultra 的别名。",
+      "key_points_zh": [
+        "Phonebook 关联成员跨服务身份，Devin 提及同步标记 Slack。",
+        "Mark done 取代 Archive：会话移入 Done 但继续运行。",
+        "云会话输入 # 选择 Slack 频道；分享时可导入 Slack 联系人。",
+        "Security Findings 支持 CSV 导出；Configure 更名 Customize。",
+        "企业知识管理员可维护迁移的技能；Customize 新增 Skills 层级页。",
+        "旧 Slack 线程提及 Devin 改为新开会话；!ultrafast 作为 !fastultra 别名。"
+      ],
+      "importance_reason_zh": "跨服务身份与协作流程改进影响团队日常使用，安全导出与策略管理增强企业能力。",
+      "title_en": "Devin update: cross-service phonebook, Mark done and security findings export",
+      "summary_en": "Devin's November 16 update introduces Phonebook, keeping each member's linked identities across Devin, Slack, Microsoft Teams, git providers, Jira, Linear and Pylon; a mention in Devin now tags the person in Devin and Slack at the same time. The sidebar shows subscribed sessions, and Mark done replaces Archive, moving a session to the Done folder while it keeps running for other subscribers. Typing # in a cloud session composer picks a Slack channel, and the Share dialog can import Slack contacts; Security Findings can be exported to CSV, Security > Configure is renamed Customize with per-profile scan paths, include/exclude globs and threat-model repository scope. Tagging Devin in an old Slack thread starts a new session instead of failing, and !ultrafast is accepted as an alias of !fastultra.",
+      "key_points_en": [
+        "Phonebook links member identities across services; Devin mentions also tag the person in Slack.",
+        "Mark done replaces Archive: sessions move to Done but keep running.",
+        "Type # in cloud composers to pick Slack channels; Share can import Slack contacts.",
+        "Security Findings export to CSV; Configure renamed Customize.",
+        "Enterprise Knowledge managers can maintain migrated skills; Customize adds a Skills layers page.",
+        "Tagging Devin in old Slack threads starts a new session; !ultrafast aliases !fastultra."
+      ],
+      "importance_reason_en": "Cross-service identity and collaboration changes affect daily team use; security export and policy management strengthen enterprise capabilities.",
+      "published_at": "2026-11-16",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-17T13:41:46+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-16-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-16-2026",
+          "collected_at": "2026-11-17T13:41:46+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "siliconflow-yuan-jinhui-inference-20261116",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "袁进辉：推理算力供给远远不够，行业面临洗牌机会",
+      "summary_zh": "硅基流动创始人兼 CEO 袁进辉在 11 月 12 日第十七届财新峰会圆桌上表示，2026 年推理首次超过训练成为算力消耗主体，当前算力供给\"远远不够\"。他认为训练算力有上界（最先进模型完整训练约 100 万亿 token），而推理随持续调用没有理论上限，不少头部模型服务商单日处理 token 已超 100 万亿；推理场景可分散部署、按负载混合异构芯片，为训练市场优势厂商之外的新玩家提供洗牌机会。他还判断开源模型能力终将追平闭源，企业将更多基于开源构建自主、安全、可控的智能。以上为其个人观点。",
+      "key_points_zh": [
+        "2026 年推理首次超过训练成为算力消耗主体。",
+        "袁进辉判断当前算力供给远远不够。",
+        "训练算力有上界，推理 token 需求无理论上限；部分头部服务商单日处理超 100 万亿 token。",
+        "推理可分散部署、混合异构芯片，带来行业洗牌机会。",
+        "开源模型能力终将追平闭源，企业倾向基于开源构建自主智能。"
+      ],
+      "importance_reason_zh": "头部 AI Infra 厂商负责人对算力供需与开源趋势的一手判断，影响行业预期。",
+      "title_en": "Yuan Jinhui: inference compute supply falls far short, reshuffle ahead",
+      "summary_en": "SiliconFlow founder and CEO Yuan Jinhui said at the November 12 Caixin Summit roundtable that in 2026 inference overtook training for the first time as the main consumer of compute, and current supply is \"far from enough\". He argued training compute has an upper bound (a full training run of the most advanced models is around 100 trillion tokens) while inference has no theoretical ceiling as calls continue, with some leading model providers already processing over 100 trillion tokens per day; inference can be deployed in distributed clusters mixing heterogeneous chips by workload, opening reshuffle opportunities for new players beyond the vendors that dominate training. He also expects open-source models to eventually match closed-source capability, with enterprises increasingly building autonomous, secure and controllable intelligence on open source. These are his personal views.",
+      "key_points_en": [
+        "In 2026 inference overtook training as the main compute consumer for the first time.",
+        "Yuan Jinhui judges current compute supply far from enough.",
+        "Training compute has an upper bound; inference token demand has no theoretical ceiling, with some leaders processing over 100 trillion tokens daily.",
+        "Inference supports distributed deployment and heterogeneous chip mixing, creating reshuffle opportunities.",
+        "Open-source capability will eventually match closed source; enterprises lean toward building autonomous intelligence on open source."
+      ],
+      "importance_reason_en": "A first-hand view on compute supply-demand and open-source trends from a leading AI Infra founder shapes industry expectations.",
+      "published_at": "2026-11-16",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-17T13:41:47+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://siliconflow.cn/news/hn9kfedjyy1d18gyt0hj9r4c",
+          "url": "https://siliconflow.cn/news/hn9kfedjyy1d18gyt0hj9r4c",
+          "collected_at": "2026-11-17T13:41:47+00:00",
+          "material_scope": "full_text"
+        }
+      ]
     },
     {
       "first_collected_at": "2026-11-16T13:31:48+00:00",

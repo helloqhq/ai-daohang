@@ -1,19 +1,19 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "7c4080530b19913d",
-  "generated_at": "2026-11-16T14:21:47+00:00",
+  "snapshot_id": "67572900218baefb",
+  "generated_at": "2026-11-17T13:54:50+00:00",
   "months": [
     {
       "month": "2026-11",
       "path": "events/2026-11.json",
-      "count": 109,
+      "count": 131,
       "min_date": "2026-11-02",
-      "max_date": "2026-11-16T10:00:00+08:00"
+      "max_date": "2026-11-17T03:48:10Z"
     },
     {
       "month": "2026-10",
       "path": "events/2026-10.json",
-      "count": 381,
+      "count": 383,
       "min_date": "2026-10-01T01:34:16Z",
       "max_date": "2026-10-31T01:06:03+00:00"
     },
@@ -26,8 +26,30 @@
     }
   ],
   "event_locations": {
+    "copilot-cli-1-0-113-1-20261117": "2026-11",
+    "openai-nato-cyber-defense-20261117": "2026-11",
+    "nvidia-dgx-spark-hpc-kit-20261116": "2026-11",
+    "claude-code-2-1-326-20261116": "2026-11",
+    "copilot-weekly-20261116": "2026-11",
+    "copilot-model-retirement-nov16-effective-20261116": "2026-11",
+    "copilot-plugin-only-customizations-20261116": "2026-11",
+    "copilot-local-harness-retirement-20261116": "2026-11",
+    "openai-academic-researchers-200k-20261116": "2026-11",
+    "openai-child-safety-tools-20261116": "2026-11",
+    "nvidia-vera-rubin-mlperf-20261116": "2026-11",
+    "nvidia-rubin-hpc-20261116": "2026-11",
     "qwen4-max-20261116": "2026-11",
+    "openai-embedded-assessments-20261116": "2026-11",
+    "chatgpt-healthcare-computer-use-20261116": "2026-11",
+    "openrouter-hugging-face-inference-20261116": "2026-11",
+    "google-bitwise-zero-rl-tpu-20261116": "2026-11",
     "siliconflow-dynamic-rate-limits-20261116": "2026-11",
+    "kiro-web-terminal-20261116": "2026-11",
+    "kiro-cli-3-4-hooks-20261116": "2026-11",
+    "kiro-enterprise-realtime-events-20261116": "2026-11",
+    "qoder-0-5-13-20261116": "2026-11",
+    "devin-2026-11-16": "2026-11",
+    "siliconflow-yuan-jinhui-inference-20261116": "2026-11",
     "deeptutor-1-7-3-20261116": "2026-11",
     "claude-code-2-1-325-20261113": "2026-11",
     "copilot-model-deprecations-dec2026-20261113": "2026-11",
@@ -211,6 +233,7 @@
     "google-api-gateway-streaming-20261022": "2026-10",
     "minimax-code-mini-app-20261022": "2026-10",
     "qoder-v049-wecom-20261022": "2026-10",
+    "anthropic-guest-investigators-life-sciences-20261022": "2026-10",
     "pi-v140": "2026-10",
     "claude-code-v21307": "2026-10",
     "hermes-v0224": "2026-10",
@@ -236,6 +259,7 @@
     "google-agents-cli-extensions-20261021": "2026-10",
     "devin-bitbucket-review-20261021": "2026-10",
     "kiro-cli-v2331-workflows-20261021": "2026-10",
+    "anthropic-stubbs-ltbt-20261021": "2026-10",
     "gemini-cli-v0650": "2026-10",
     "gemini-cli-v0660-preview0": "2026-10",
     "copilot-cli-v10101-stable": "2026-10",
@@ -523,5 +547,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 496
+  "total_events": 520
 }

@@ -19,6 +19,13 @@ test('model rights can change without refreshing the price verification date',()
   const data=structuredClone(snapshot);
   const plan=data.plans.find(plan=>plan.category==='agent');
   data.checked_at='2026-10-25';
+  for(const record of data.plans) {
+    for(const key of ['checked_at','updated_at','models_checked_at']) if(record[key]>data.checked_at) record[key]=data.checked_at;
+    for(const offer of record.offers||[]) {
+      if(offer.checked_at>data.checked_at) offer.checked_at=data.checked_at;
+      if(offer.reference&&offer.reference.checked_at>data.checked_at) offer.reference.checked_at=data.checked_at;
+    }
+  }
   plan.checked_at='2026-10-11';
   plan.updated_at=plan.models_checked_at='2026-10-25';
   assert.equal(validatePricing(data),data);

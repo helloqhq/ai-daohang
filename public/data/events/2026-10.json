@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "7c4080530b19913d",
+  "snapshot_id": "67572900218baefb",
   "events": [
     {
       "id": "claude-code-2-1-316",
@@ -3060,6 +3060,49 @@
       ]
     },
     {
+      "id": "anthropic-guest-investigators-life-sciences-20261022",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Anthropic 面向生命科学开放客座研究员申请",
+      "summary_zh": "Anthropic 邀请学术机构、非营利组织与政府实验室的首席研究员及其团队申请客座研究项目，用 Claude 研究因果人类生物学、结构与计算分子生物学、药物化学、药物发现与临床科学。项目为期 8–12 周，与 Anthropic 研究员直接合作，模型与运行环境免费；成果将联合发表并开源配套数据与代码，客座研究员全程保留数据权利及后续独立研究权利。",
+      "key_points_zh": [
+        "面向学术、非营利与政府实验室的 PI 开放申请。",
+        "方向：因果人类生物学、结构与计算分子生物学、药物化学、药物发现、临床科学。",
+        "8–12 周与 Anthropic 研究员直接合作。",
+        "模型与 harness 免费运行；成果联合发表并开源数据与代码。",
+        "数据权利与后续独立研究权利归客座研究员。"
+      ],
+      "importance_reason_zh": "免费前沿模型访问与深度合作机会，扩大科研社区对 Claude 的使用。",
+      "title_en": "Anthropic opens guest investigator call for life sciences",
+      "summary_en": "Anthropic invites principal investigators and their groups at academic institutions, nonprofits or government labs to apply for guest projects using Claude on causal human biology, structural and computational molecular biology, medicinal chemistry, drug discovery and clinical science. Over 8–12 weeks guest investigators work directly with Anthropic researchers, with models and harnesses run at no cost; outputs will be co-published with accompanying data and code open-sourced, and guests retain rights to their data and any independent follow-on research.",
+      "key_points_en": [
+        "Open call for PIs at academic, nonprofit and government labs.",
+        "Areas: causal human biology, structural/computational molecular biology, medicinal chemistry, drug discovery, clinical science.",
+        "8–12 weeks of direct collaboration with Anthropic researchers.",
+        "Models and harnesses run at no cost; outputs co-published with data and code open-sourced.",
+        "Guests retain data rights and rights to independent follow-on research."
+      ],
+      "importance_reason_en": "Free frontier-model access and deep collaboration expand Claude usage in the research community.",
+      "published_at": "2026-10-22",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-17T13:41:46+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+          "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+          "collected_at": "2026-11-17T13:41:46+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "pi-v140",
       "entity_ids": [
         "pi"
@@ -4045,6 +4088,47 @@
           "url": "https://kiro.dev/changelog/cli/2-33-1",
           "collected_at": "2026-10-23T18:00:18+00:00",
           "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-stubbs-ltbt-20261021",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "物理学家 Christopher Stubbs 加入 Anthropic 长期利益信托",
+      "summary_zh": "实验物理学家、哈佛大学前科学院长 Christopher Stubbs 加入 Anthropic 的长期利益信托（Long-Term Benefit Trust）。他是哈佛 Samuel C. Moncher 物理学与天文学教授，1998 年作为 High-Z 超新星搜索团队成员参与发现宇宙加速膨胀，曾任 Vera C. Rubin 天文台首任项目科学家，并就国家安全与军备控制向美国政府提供咨询。",
+      "key_points_zh": [
+        "Stubbs 加入 Anthropic 长期利益信托。",
+        "哈佛物理学与天文学教授、前科学院长（2018–2024）。",
+        "参与发现宇宙加速膨胀，曾任 Rubin 天文台首任项目科学家。",
+        "曾就国家安全与军备控制向美国政府提供咨询。"
+      ],
+      "importance_reason_zh": "信托成员变化影响 Anthropic 公共利益使命的治理结构。",
+      "title_en": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+      "summary_en": "Experimental physicist and former Harvard Dean of Science Christopher Stubbs has joined Anthropic's Long-Term Benefit Trust. He is Harvard's Samuel C. Moncher Professor of Physics and of Astronomy, helped discover the accelerating expansion of the universe as a member of the High-Z Supernova Search Team in 1998, served as inaugural project scientist of what is now the Vera C. Rubin Observatory, and has advised the US government on national security and arms control.",
+      "key_points_en": [
+        "Stubbs joins Anthropic's Long-Term Benefit Trust.",
+        "Harvard professor of physics and astronomy; former Dean of Science (2018–2024).",
+        "Helped discover the accelerating expansion of the universe; inaugural project scientist of the Rubin Observatory.",
+        "Has advised the US government on national security and arms control."
+      ],
+      "importance_reason_en": "Trust membership changes affect the governance of Anthropic's public-benefit mission.",
+      "published_at": "2026-10-21",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-17T13:41:46+00:00",
+      "updated_at": "2026-11-17T13:54:28+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+          "url": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+          "collected_at": "2026-11-17T13:41:46+00:00",
+          "material_scope": "full_text"
         }
       ]
     },

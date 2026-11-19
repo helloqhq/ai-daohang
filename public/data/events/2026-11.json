@@ -1,7 +1,1117 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "67572900218baefb",
+  "snapshot_id": "aca972abe7ed0884",
   "events": [
+    {
+      "id": "kimi-code-cli-2-7-0-20261119",
+      "entity_ids": [
+        "kimi-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "Kimi Code CLI 2.7.0 支持 Amazon Bedrock 并实验提示预测",
+      "summary_zh": "Kimi Code CLI 2.7.0 新增 Amazon Bedrock provider 支持，并在 TUI 提供实验性 next-prompt 预测等改进。",
+      "key_points_zh": [
+        "新增 Amazon Bedrock provider：以 type = \"bedrock\" 与 AWS_REGION 配置。",
+        "实验性 next-prompt 预测：设 KIMI_CODE_EXPERIMENTAL_PROMPT_PREDICTION=1 后按 Tab 或右箭头接受预测。",
+        "反馈对话框支持多行输入；/settings 新增 Follow-up behavior 设置。"
+      ],
+      "importance_reason_zh": "Bedrock 支持扩大 Kimi Code 的云平台兼容面，提示预测改进 TUI 交互。",
+      "title_en": "Kimi Code CLI 2.7.0 adds Amazon Bedrock and experimental prompt prediction",
+      "summary_en": "Kimi Code CLI 2.7.0 adds Amazon Bedrock provider support and experimental next-prompt prediction in the TUI, among other changes.",
+      "key_points_en": [
+        "New Amazon Bedrock provider, configured with type = \"bedrock\" and AWS_REGION.",
+        "Experimental next-prompt predictions: enable with KIMI_CODE_EXPERIMENTAL_PROMPT_PREDICTION=1 and accept with Tab or Right Arrow.",
+        "The feedback dialog accepts multiple lines, and /settings gains a Follow-up behavior setting."
+      ],
+      "importance_reason_en": "Bedrock support widens Kimi Code cloud compatibility, and prompt prediction improves TUI interaction.",
+      "published_at": "2026-11-19T11:38:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.7.0",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.7.0",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-desktop-1-4-0-20261119",
+      "entity_ids": [
+        "kimi-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "Kimi Code Desktop 1.4.0 支持接入外部编码智能体",
+      "summary_zh": "Kimi Code Desktop 1.4.0 支持将 Claude Code、Codex、Cursor 等外部智能体连接到桌面应用，可交接会话、查看历史并跨回合协作。",
+      "key_points_zh": [
+        "支持连接 Claude Code、Codex、Cursor 等外部智能体，交接会话、审阅历史并跨回合协作。",
+        "后台任务通知以可折叠行展示，含任务时长与状态。",
+        "shell 工具子进程可使用 KIMI_CODE_SESSION_ID 与 KIMI_CODE_WORKSPACE_ID 环境变量。"
+      ],
+      "importance_reason_zh": "跨工具智能体交接增强 Kimi Desktop 与其他编码智能体的互操作。",
+      "title_en": "Kimi Code Desktop 1.4.0 connects external coding agents",
+      "summary_en": "Kimi Code Desktop 1.4.0 can connect external agents such as Claude Code, Codex, and Cursor to hand off sessions, review history, and collaborate across turns.",
+      "key_points_en": [
+        "External agents like Claude Code, Codex, and Cursor can be connected to hand off sessions, review history, and collaborate across turns.",
+        "Background task notifications appear as collapsible rows styled like tool calls, with task duration and status.",
+        "KIMI_CODE_SESSION_ID and KIMI_CODE_WORKSPACE_ID are exposed to shell tool subprocesses."
+      ],
+      "importance_reason_en": "Cross-tool agent handoff improves interoperability between Kimi Desktop and other coding agents.",
+      "published_at": "2026-11-19T11:29:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/kimi-code-desktop%401.4.0",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/kimi-code-desktop%401.4.0",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "worldrouter-ragflow-provider-20261119",
+      "entity_ids": [
+        "worldrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility"
+      ],
+      "title_zh": "WorldRouter 成为 RAGFlow 内置模型提供商",
+      "summary_zh": "WorldRouter 官方账号宣布成为 infiniflow 开源 RAGFlow 的内置模型提供商：添加 WorldRouter API key 后，RAGFlow 会列出其可用模型，可设为默认 LLM 直接对话数据集。帖文以 1/2 开头，续篇未抓取。",
+      "key_points_zh": [
+        "WorldRouter 已内置为开源 RAGFlow（infiniflow）的模型提供商。",
+        "添加 WorldRouter API key 后，RAGFlow 列出其可用模型并可设为默认 LLM。",
+        "原帖标注 1/2，续篇未被本次采集捕获。"
+      ],
+      "importance_reason_zh": "平台兼容性扩展，影响 RAGFlow 用户的模型接入路径。",
+      "title_en": "WorldRouter becomes a built-in model provider in RAGFlow",
+      "summary_en": "WorldRouter's official account announced it is now a built-in model provider in infiniflow's open-source RAGFlow: adding a WorldRouter API key lists its models in RAGFlow, and one can be set as the default LLM to chat with datasets. The post is marked 1/2; the follow-up was not captured.",
+      "key_points_en": [
+        "WorldRouter is now a built-in model provider in infiniflow's open-source RAGFlow.",
+        "With a WorldRouter API key added, RAGFlow lists available models, and one can be picked as the default LLM.",
+        "The post is marked 1/2; the follow-up was not captured in this round."
+      ],
+      "importance_reason_en": "A compatibility expansion affecting how RAGFlow users connect models.",
+      "published_at": "2026-11-19T05:14:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "worldrouter-x",
+          "content_id": "https://x.com/WorldClawAI/status/2123283782304465394",
+          "url": "https://x.com/WorldClawAI/status/2123283782304465394",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-328-20261119",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Claude Code 2.1.328 将 Opus 4.6 与 Sonnet 4.6 自动模式扩展到多云平台",
+      "summary_zh": "Claude Code 2.1.328 把 Opus 4.6 与 Sonnet 4.6 的自动模式（auto mode）扩展到 Amazon Bedrock、Google Cloud Agent Platform、Microsoft Foundry 与 Claude 应用网关，无权限模式的交互会话默认进入自动模式。",
+      "key_points_zh": [
+        "auto mode 覆盖 Amazon Bedrock、Google Cloud's Agent Platform、Microsoft Foundry 与 Claude 应用网关；无权限模式的交互会话默认以自动模式启动。",
+        "mcp_tool hooks 新增 \"onFailure\": \"block\"，hook 调用失败时阻止动作（与命令和 HTTP hook 一致）。",
+        "当跳过权限提示的会话消息可能被云会话延迟并丢弃时给出警告；/status 与 claude doctor 对缺少 endpoint 的 OpenTelemetry exporter 提示诊断失效。"
+      ],
+      "importance_reason_zh": "自动模式扩展到多云平台并成为默认路径，改变企业环境下的权限行为。",
+      "title_en": "Claude Code 2.1.328 extends Opus 4.6 and Sonnet 4.6 auto mode across clouds",
+      "summary_en": "Claude Code 2.1.328 extends auto mode for Claude Opus 4.6 and Sonnet 4.6 to Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry, and the Claude apps gateway, and interactive sessions without a permission mode now start in auto mode.",
+      "key_points_en": [
+        "Auto mode covers Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry, and the Claude apps gateway; interactive sessions with no permission mode start in it.",
+        "mcp_tool hooks gain \"onFailure\": \"block\", so a hook whose call fails blocks the action, as with command and HTTP hooks.",
+        "A warning appears when a message from a session that skips permission prompts may be held and dropped by a cloud session; /status and claude doctor note that an OpenTelemetry exporter without an endpoint disables diagnostics."
+      ],
+      "importance_reason_en": "Auto mode reaching multiple cloud platforms and becoming the default path changes permission behavior in enterprise setups.",
+      "published_at": "2026-11-19T01:20:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-328",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-328",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-gpt62-astra-hard-tasks-20261118",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Tibo 称 GPT-6.2 Astra 在最难任务上独一档并回应沟通风格反馈",
+      "summary_zh": "Codex 负责人 Tibo（Thibault Sottiaux）称 GPT-6.2 Astra 擅长最难的任务，团队分享了 AMD 与 Jalapeño 芯片优化结果；同时表示已收到对其沟通风格的反馈，团队正在改进。",
+      "key_points_zh": [
+        "称 Astra 在\"世界上最难的任务\"上表现出独一档的水平。",
+        "表示已收到沟通风格反馈，团队正在改进。",
+        "提及团队分享了 AMD 与 Jalapeño 芯片优化结果。"
+      ],
+      "importance_reason_zh": "负责人一手评价与改进承诺，反映 Astra 的实际使用边界。",
+      "title_en": "Tibo calls GPT-6.2 Astra in a league of its own on hardest tasks, responds to style feedback",
+      "summary_en": "Codex lead Tibo (Thibault Sottiaux) says GPT-6.2 Astra is good at hard things, that the team shared AMD and Jalapeño chip optimization results, and that he has received feedback on its communication style and the team is working on it.",
+      "key_points_en": [
+        "He says Astra seems to be in a league of its own for \"really the hardest tasks in the world.\"",
+        "He says he has received feedback on its communication style and the team is working on that.",
+        "He notes the team shared results on AMD and Jalapeño chip optimizations."
+      ],
+      "importance_reason_en": "First-party assessment and improvement commitment from the product lead.",
+      "published_at": "2026-11-18T22:03:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2123175166519992652",
+          "url": "https://x.com/thsottiaux/status/2123175166519992652",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-for-accounting-20261118",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "OpenAI 介绍 ChatGPT for Accounting",
+      "summary_zh": "OpenAI 在 YouTube 发布 ChatGPT for Accounting 介绍视频（仅标题级证据，正文细节待补充）。",
+      "key_points_zh": [
+        "OpenAI 官方 YouTube 频道发布 ChatGPT for Accounting 介绍视频。",
+        "视频简介未提供更多细节。"
+      ],
+      "importance_reason_zh": "ChatGPT 向会计场景的产品扩展，证据目前限于视频标题。",
+      "title_en": "OpenAI introduces ChatGPT for Accounting",
+      "summary_en": "OpenAI published an introducing video for ChatGPT for Accounting on its YouTube channel (title-level evidence; details pending).",
+      "key_points_en": [
+        "OpenAI's official YouTube channel published an introducing video for ChatGPT for Accounting.",
+        "The video description adds no further detail."
+      ],
+      "importance_reason_en": "A product expansion of ChatGPT into accounting; evidence is currently title-level only.",
+      "published_at": "2026-11-18T21:38:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=AhmCKHNqhB8",
+          "url": "https://www.youtube.com/watch?v=AhmCKHNqhB8",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
+      "id": "gemini-4-neon-20261118",
+      "entity_ids": [
+        "google",
+        "copilot",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "availability"
+      ],
+      "title_zh": "Google 发布 Gemini 4 Neon",
+      "summary_zh": "Google DeepMind 发布 Gemini 4 Neon：DeepMind 负责人 Demis Hassabis 称其具备前沿级智能与快速任务完成能力，Pro 与 Ultra 用户现已可用；模型同日进入 GitHub Copilot 各端与 Google Antigravity。",
+      "key_points_zh": [
+        "Demis Hassabis 宣布 Gemini 4 Neon 上线，称具备前沿级智能与快速任务完成，Pro 与 Ultra 用户现已可用。",
+        "Gemini 4 Neon 在 GitHub Copilot 面向 Pro+、Max、Business 与 Enterprise 用户开放，覆盖 VS Code、Copilot CLI、编码代理与应用等入口。",
+        "GitHub 引用 Google 数据称 Neon 质量接近 Gemini 4 Carbon、单任务 token 成本更低，且更少做出无依据的代码或工具结果声明。",
+        "Gemini 4 Neon 同步进入 Google Antigravity。"
+      ],
+      "importance_reason_zh": "新一代旗舰模型上线直接改变多个编码智能体平台的可选模型与成本结构。",
+      "title_en": "Google launches Gemini 4 Neon",
+      "summary_en": "Google DeepMind launched Gemini 4 Neon: Demis Hassabis describes frontier-level intelligence and fast task completion, available now to Pro and Ultra users; the model also shipped to GitHub Copilot surfaces and Google Antigravity the same day.",
+      "key_points_en": [
+        "Demis Hassabis announced Gemini 4 Neon with frontier-level intelligence and super-fast task completion, available now to Pro and Ultra users.",
+        "Gemini 4 Neon is available in GitHub Copilot to Pro+, Max, Business, and Enterprise users across VS Code, Copilot CLI, the coding agent, apps, and more.",
+        "Citing Google, GitHub reports Neon delivers quality close to Gemini 4 Carbon at lower token cost per task and is less likely to make unsupported claims about code, tools, or test results.",
+        "Gemini 4 Neon is also available in Google Antigravity."
+      ],
+      "importance_reason_en": "A new flagship model immediately changes available models and cost structures across multiple coding agent platforms.",
+      "published_at": "2026-11-18T21:35:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+          "collected_at": "2026-11-19T14:38:01+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2123168218743554465",
+          "url": "https://x.com/demishassabis/status/2123168218743554465",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot",
+          "url": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot",
+          "collected_at": "2026-11-19T14:40:39+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "antigravity-blog",
+          "content_id": "https://antigravity.google/blog/gemini-4-neon-in-google-antigravity",
+          "url": "https://antigravity.google/blog/gemini-4-neon-in-google-antigravity",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
+      "id": "genie-4-availability-20261118",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Genie 4 面向符合条件的 Ultra 订阅用户开放",
+      "summary_zh": "Google DeepMind 宣布 Genie 4 现已可用，符合条件的 Ultra 订阅用户可在 Project Genie 中试用；该实时世界模型此前于 2026 年 10 月 27 日以研究预览形式发布。",
+      "key_points_zh": [
+        "官方博客确认 Genie 4 现已可用。",
+        "Demis Hassabis 称符合条件的 Ultra 订阅用户可在 Project Genie 中试用，并附官方博客链接。"
+      ],
+      "importance_reason_zh": "Genie 4 从研究预览进入消费级订阅可用，扩大该世界模型的真实用户覆盖。",
+      "title_en": "Genie 4 opens to eligible Ultra subscribers",
+      "summary_en": "Google DeepMind announced Genie 4 is now available, with eligible Ultra subscribers able to try it in Project Genie; the realtime world model was previously released as a research preview on October 27, 2026.",
+      "key_points_en": [
+        "The official blog confirms Genie 4 is now available.",
+        "Demis Hassabis says eligible Ultra subscribers can try it in Project Genie and links the official blog."
+      ],
+      "importance_reason_en": "Genie 4 moves from research preview to consumer subscription availability, widening real-user coverage of the world model.",
+      "published_at": "2026-11-18T18:13:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/genie-4-is-now-available/",
+          "url": "https://deepmind.google/blog/genie-4-is-now-available/",
+          "collected_at": "2026-11-19T14:38:01+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2123130606162985350",
+          "url": "https://x.com/demishassabis/status/2123130606162985350",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "related_event_ids": [
+        "genie-4"
+      ]
+    },
+    {
+      "id": "tibo-asks-sol-feedback-20261118",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Tibo 征询用户对 6.2 Sol 的使用反馈",
+      "summary_zh": "Tibo 发帖询问\"6.2 Sol 今天用起来如何\"，原帖未附具体数据或范围说明。",
+      "key_points_zh": [
+        "原帖仅征询用户对 6.2 Sol 的当日使用感受。",
+        "未提供数据、范围或后续回复内容。"
+      ],
+      "importance_reason_zh": "负责人对上线模型的反馈征集，按负责人账号宽标准保留。",
+      "title_en": "Tibo asks how 6.2 Sol is treating users",
+      "summary_en": "Tibo posted \"How is 6.2 Sol treating you today?\" without further data or scope in the captured text.",
+      "key_points_en": [
+        "The post only asks users how 6.2 Sol is treating them today.",
+        "No data, scope, or follow-up replies are included in the captured text."
+      ],
+      "importance_reason_en": "A feedback request from the product lead on the launched model, kept under the wider owner-account standard.",
+      "published_at": "2026-11-18T17:56:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2123113107048501273",
+          "url": "https://x.com/thsottiaux/status/2123113107048501273",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-claude-linked-billing-20261118",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "feature"
+      ],
+      "title_zh": "Kilo 支持 Claude Platform 组织关联计费（beta）",
+      "summary_zh": "Kilo 上线关联计费（linked billing）beta：管理员将 Claude Platform 组织与 Kilo 关联一次后，Claude API 用量按现有条款直接计入该组织，替代手动创建与轮换 Claude API key 的方式。",
+      "key_points_zh": [
+        "管理员一次性关联 Claude Platform 组织，Claude API 用量直接由 Anthropic 按现有条款计入该组织。",
+        "替代此前在 Kilo 中创建、粘贴并轮换 Claude API key 的方式。"
+      ],
+      "importance_reason_zh": "计费整合降低团队使用 Claude 的管理成本，是计费方式变化。",
+      "title_en": "Kilo adds linked billing with Claude Platform (beta)",
+      "summary_en": "Kilo launched linked billing in beta: an admin links the Claude Platform organization to Kilo once, and Anthropic bills Claude API usage in Kilo directly to that organization on existing terms, replacing manual Claude API key creation and rotation.",
+      "key_points_en": [
+        "An admin links the Claude Platform organization once, and Anthropic bills Claude API usage directly to that organization on existing terms.",
+        "This replaces creating, pasting, and rotating a Claude API key inside Kilo as teams change."
+      ],
+      "importance_reason_en": "Billing integration cuts the administrative cost of using Claude for teams, a change in how usage is billed.",
+      "published_at": "2026-11-18T16:58:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/kilo-now-supports-linked-billing",
+          "url": "https://blog.kilo.ai/p/kilo-now-supports-linked-billing",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "b-ai-deepseek-v41-flash-discount-20261118",
+      "entity_ids": [
+        "b-ai"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing"
+      ],
+      "title_zh": "B.AI 将 DeepSeek-V4.1-Flash 折扣提升至 50%",
+      "summary_zh": "B.AI 官方账号宣布 DeepSeek-V4.1-Flash 折扣从 40% 提升至 50%，自帖文发布日起生效；同时可购买 HY4/HY4-Flash 产品。",
+      "key_points_zh": [
+        "DeepSeek-V4.1-Flash 折扣从 40% 升至 50%，自发布日起生效。",
+        "官方称现可购买 HY4/HY4-Flash 产品。"
+      ],
+      "importance_reason_zh": "平台折扣调整直接影响第三方接入 DeepSeek 模型的成本。",
+      "title_en": "B.AI raises the DeepSeek-V4.1-Flash discount to 50%",
+      "summary_en": "B.AI's official account announced the DeepSeek-V4.1-Flash discount rose from 40% to 50%, effective from the post date, and that HY4/HY4-Flash products can now be purchased.",
+      "key_points_en": [
+        "The DeepSeek-V4.1-Flash discount rose from 40% to 50%, effective from the post date.",
+        "HY4/HY4-Flash products can now be purchased, per the post."
+      ],
+      "importance_reason_en": "A marketplace discount change that directly cuts third-party access costs to the DeepSeek model.",
+      "published_at": "2026-11-18T11:09:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "b-ai-x",
+          "content_id": "https://x.com/BAI_AGI/status/2123010578851512733",
+          "url": "https://x.com/BAI_AGI/status/2123010578851512733",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-research-acceleration-20261118",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 报告：编码智能体正在加速 AI 研究，但性能仍不均衡",
+      "summary_zh": "OpenAI 发布《Research acceleration: The jagged frontier》报告，衡量编码智能体对 AI 研究的加速作用与性能不均之处；官方 X 总结称研究者对 AI 的使用量呈指数级增长、智能助手能完成更长任务、人类在研究中的参与仍至关重要、安全投入时间增加。",
+      "key_points_zh": [
+        "报告衡量编码智能体如何加速 AI 研究、哪些环节仍不均衡，及其对递归自我改进的信号。",
+        "官方总结：研究者对 AI 的使用量呈指数级增长，智能助手能完成更长任务。",
+        "官方总结：人类在研究中的参与仍然至关重要；安全性与相关事务的投入时间增加。"
+      ],
+      "importance_reason_zh": "厂商关于 AI 自我加速的量化报告，保留归属，是能力演进的重要信号。",
+      "title_en": "OpenAI reports coding agents are accelerating AI research unevenly",
+      "summary_en": "OpenAI published \"Research acceleration: The jagged frontier,\" measuring how coding agents accelerate AI research and where performance remains uneven; its account adds that researchers' AI use is growing exponentially, assistants complete longer tasks, human involvement remains critical, and safety-related time is increasing.",
+      "key_points_en": [
+        "The report measures how coding agents accelerate AI research, where performance stays jagged, and what it signals about recursive self-improvement.",
+        "Per OpenAI's summary, researchers' AI usage is growing exponentially and assistants complete longer tasks.",
+        "Per OpenAI's summary, human involvement in research remains critical, and time spent on safety and related work is increasing."
+      ],
+      "importance_reason_en": "A vendor-attributed quantitative report on AI self-acceleration, an important capability signal.",
+      "published_at": "2026-11-18T08:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "collected_at": "2026-11-19T14:37:43+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2123191365983248653",
+          "url": "https://x.com/OpenAI/status/2123191365983248653",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-frontier-risk-20261118",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 说明从训练到部署的前沿 AI 风险管理",
+      "summary_zh": "OpenAI 发文说明其在训练到部署全程管理前沿 AI 风险的方法，涵盖模型对齐、沙箱、阻断式防护与监控。",
+      "key_points_zh": [
+        "文档覆盖模型对齐、沙箱、阻断式防护（blocking safeguards）与监控。",
+        "OpenAI 官方 X 同步分享该文档。"
+      ],
+      "importance_reason_zh": "前沿安全框架的官方说明，反映头部厂商的安全实践。",
+      "title_en": "OpenAI details frontier AI risk management from training to deployment",
+      "summary_en": "OpenAI explained how it manages frontier AI risk from training through deployment, covering model alignment, sandboxing, blocking safeguards, and monitoring.",
+      "key_points_en": [
+        "The writeup covers model alignment, sandboxing, blocking safeguards, and monitoring.",
+        "OpenAI's official account shared the document."
+      ],
+      "importance_reason_en": "An official account of frontier safety practices at a leading lab.",
+      "published_at": "2026-11-18T06:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/managing-frontier-ai-risk",
+          "url": "https://openai.com/index/managing-frontier-ai-risk",
+          "collected_at": "2026-11-19T14:37:43+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2123165872261075233",
+          "url": "https://x.com/OpenAI/status/2123165872261075233",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-recommends-sol-ultrafast-20261118",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Tibo 推荐 Pro 200/500 用户尝试 GPT-6.2 Sol ultrafast",
+      "summary_zh": "Tibo 称向 Pro 200/500 套餐用户推荐尝试 6.2 Sol ultrafast，表示体验\"完全不同\"，并称会继续把该速度档带给更多用户。",
+      "key_points_zh": [
+        "向 Pro 200/500 用户推荐 6.2 Sol ultrafast，称使用感受\"完全是另一种感觉\"。",
+        "表示会随时间推移把这类速度带给更多用户。"
+      ],
+      "importance_reason_zh": "套餐速度档的第一手使用体验与扩展意向。",
+      "title_en": "Tibo recommends GPT-6.2 Sol ultrafast for Pro 200/500 users",
+      "summary_en": "Tibo recommends that users on Pro 200/500 try 6.2 Sol ultrafast, calling it \"quite the blast\" and a completely different feel, and says he is excited to keep bringing these speeds to more users over time.",
+      "key_points_en": [
+        "He recommends 6.2 Sol ultrafast to Pro 200/500 users as a completely different feel.",
+        "He says he is excited to keep bringing these speeds to more users over time."
+      ],
+      "importance_reason_en": "First-hand experience with and intent to expand a plan-tier speed option.",
+      "published_at": "2026-11-18T05:48:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2122929829863735594",
+          "url": "https://x.com/thsottiaux/status/2122929829863735594",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-sol-astra-vibes-20261118",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Tibo 解释 6.2 Sol/Astra 上线日体验差异的原因",
+      "summary_zh": "Tibo 解释上线日影响者与普通用户对 6.2 Sol/Astra 体验评价不同的原因：部分人提前获得访问权，而团队在过去 3-4 天做了大量改动且此后未见重新测试。",
+      "key_points_zh": [
+        "称部分影响者提前一段时间获得访问权。",
+        "称团队在过去 3-4 天做了大量改动。",
+        "称这些改动之后未见重新测试。"
+      ],
+      "importance_reason_zh": "解释发布日评价分歧的原因，涉及模型迭代节奏的一手信息。",
+      "title_en": "Tibo explains why early impressions of 6.2 Sol/Astra differed",
+      "summary_en": "Tibo explains differing impressions between influencers and the wider crowd on launch day for 6.2 Sol/Astra: a few people had access a while ago, and the team made many changes in the last 3-4 days with no re-testing in that window, as far as he knows.",
+      "key_points_en": [
+        "He says a few influencers got access a while ago.",
+        "He says the team made many changes in the last 3-4 days.",
+        "He says no re-testing was done within those days, as far as he is aware."
+      ],
+      "importance_reason_en": "First-party context on why launch-day impressions diverged, touching release iteration cadence.",
+      "published_at": "2026-11-18T05:47:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2122929634916679820",
+          "url": "https://x.com/thsottiaux/status/2122929634916679820",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "codex-0-170-0-20261118",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Codex CLI 0.170.0 在 TUI 增加实时语音通话",
+      "summary_zh": "Codex CLI 0.170.0 在终端界面新增基于 WebRTC 协商的实时语音通话，并带有多项实验功能与修复。",
+      "key_points_zh": [
+        "TUI 支持基于 WebRTC 协商的 realtime 语音通话。",
+        "OpenTelemetry HTTP exporter 支持自动刷新认证头；实验支持跨环境同名 MCP 服务器。",
+        "超大 WebSocket 请求自动回退 HTTP 且不再多余重试；修复 MCP OAuth 凭据在取消、登录、登出时的竞态。"
+      ],
+      "importance_reason_zh": "实时语音让终端内的智能体交互多出一条通道，是 Codex CLI 的显著功能扩展。",
+      "title_en": "Codex CLI 0.170.0 adds realtime voice calls in the TUI",
+      "summary_en": "Codex CLI 0.170.0 adds WebRTC-negotiated realtime voice calls in the terminal UI, plus experimental features and fixes.",
+      "key_points_en": [
+        "The TUI supports realtime voice calls with WebRTC negotiation.",
+        "OpenTelemetry HTTP exporters gain automatically refreshed authentication headers; identical MCP server names across environments are supported experimentally.",
+        "Oversized WebSocket requests fall back to HTTP without unnecessary retries, and MCP OAuth credential races during cancellation, login, and logout are fixed."
+      ],
+      "importance_reason_en": "Realtime voice adds a new interaction channel for agents in the terminal, a notable capability expansion for Codex CLI.",
+      "published_at": "2026-11-18T03:45:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
+          "collected_at": "2026-11-19T14:38:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "opencode-2-3-2-gpt62-prompt-caching-20261118",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "pricing"
+      ],
+      "title_zh": "OpenCode 2.3.2 修复 GPT-6.2 系统提示逐步骤重复计费",
+      "summary_zh": "OpenCode v2.3.2 修复 GPT-6.2 模型的提示缓存问题：此前 Responses 路由中 instructions 字段的系统提示每一步都被按未缓存输入计费，OpenCode 现改为每步发送 leading developer message 使其从第二步起被缓存。",
+      "key_points_zh": [
+        "GPT-6.2 模型的系统提示不再每步按未缓存输入计费；OpenCode 在所有 Responses 路由上改为发送 leading developer message。",
+        "覆盖 OpenAI（API key 与 ChatGPT 登录）、GitHub Copilot、Zen、Azure 与 OpenRouter 路由。",
+        "官方示例显示 GitHub Copilot gpt-6.2-sol 每步未缓存输入显著下降。"
+      ],
+      "importance_reason_zh": "该修复直接降低使用 GPT-6.2 的每步成本，是影响费用的关键修复。",
+      "title_en": "OpenCode 2.3.2 fixes GPT-6.2 system prompt re-billing every step",
+      "summary_en": "OpenCode v2.3.2 fixes GPT-6.2 prompt caching: the system prompt sent in the Responses instructions field was re-billed as uncached input on every step, and OpenCode now sends it as a leading developer message so it caches from the second step on.",
+      "key_points_en": [
+        "GPT-6.2 models no longer re-bill the system prompt as uncached input on every step; OpenCode sends it as a leading developer message on every Responses route.",
+        "Routes covered include OpenAI (API key and ChatGPT sign-in), GitHub Copilot, Zen, Azure, and OpenRouter.",
+        "The release notes show a large drop in uncached input per step on GitHub Copilot gpt-6.2-sol."
+      ],
+      "importance_reason_en": "The fix directly cuts per-step cost for GPT-6.2 users, a cost-critical repair.",
+      "published_at": "2026-11-18T01:35:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.3.2",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.2",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-chip-design-20261118",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 模型助力芯片设计：AMD GPU IP 功耗效率五个月提升 14%",
+      "summary_zh": "OpenAI 发文介绍其模型在芯片设计上的进展：模型优化了 Jalapeño 定制推理芯片的电路并改进 RISC-V 核心设计；官方 X 称与 AMD 合作中，模型在不到五个月里识别出旗舰 GPU IP 功耗效率 14% 的提升，成果建立在 AMD 工程师多年优化基础上。",
+      "key_points_zh": [
+        "OpenAI 称其模型优化了 Jalapeño 首款定制推理芯片的电路，并改进 RISC-V 核心设计。",
+        "与 AMD 合作中，模型在不到五个月里识别出旗舰 GPU IP 功耗效率 14% 的提升；OpenAI 强调成果建立在 AMD 工程师多年优化之上。",
+        "官方称同样的方法也用于 Jalapeño，其性能提升已得到验证。"
+      ],
+      "importance_reason_zh": "厂商性能与工程宣称（保留归属），显示模型进入芯片设计工作流。",
+      "title_en": "OpenAI models advance chip design: 14% power-efficiency gain on AMD GPU IP in five months",
+      "summary_en": "OpenAI described progress in AI-assisted chip design: its models optimized circuits in the Jalapeño silicon and improved RISC-V core designs; per OpenAI's account, models identified a 14% power-efficiency gain on AMD's flagship GPU IP in under five months, building on years of AMD engineering.",
+      "key_points_en": [
+        "OpenAI says its models optimized circuits in Jalapeño, its first custom inference chip, and improved RISC-V core designs.",
+        "With AMD, OpenAI credits models with identifying a 14% power-efficiency gain on flagship GPU IP in under five months, noting the result builds on years of AMD engineering.",
+        "OpenAI says the same approach contributed to Jalapeño, whose performance gains are described as verified."
+      ],
+      "importance_reason_en": "Vendor-attributed performance claims showing models entering chip design workflows.",
+      "published_at": "2026-11-18T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/advancing-chip-design-with-our-models",
+          "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+          "collected_at": "2026-11-19T14:37:43+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2123100386638877054",
+          "url": "https://x.com/OpenAI/status/2123100386638877054",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-ide-20261118-gitlab-mcp",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "Kiro IDE 支持从 GitLab 安装技能、权限脚本应答与 MCP 组织单点登录",
+      "summary_zh": "Kiro IDE 更新支持从 GitLab 安装 powers 与 skills、用脚本应答权限提示，并对组织 MCP 服务器单点登录；同版提供跨会话 Memory 等改进。",
+      "key_points_zh": [
+        "支持从 GitLab 安装 powers 与 skills。",
+        "权限提示可用脚本应答（Permission Request Hooks）。",
+        "组织 MCP 服务器一次登录；聊天可在侧栏与编辑器区之间移动，Memories 视图提供记忆设置。"
+      ],
+      "importance_reason_zh": "GitLab 支持与 MCP 组织登录扩展 Kiro 的平台兼容面。",
+      "title_en": "Kiro IDE adds GitLab installs, scripted permission answers, and organization MCP sign-in",
+      "summary_en": "Kiro IDE can now install powers and skills from GitLab, answer permission prompts with a script, and sign in once to organization MCP servers, alongside cross-session Memory improvements.",
+      "key_points_en": [
+        "Powers and skills can be installed from GitLab.",
+        "Permission prompts can be answered by a script (Permission Request Hooks).",
+        "Organization MCP servers need one sign-in; chats move between the Side Bar and Editor Area, and the Memories view offers Memory settings."
+      ],
+      "importance_reason_en": "GitLab support and organization MCP sign-in widen Kiro's platform compatibility.",
+      "published_at": "2026-11-18",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-4-236",
+          "url": "https://kiro.dev/changelog/ide/1-4-236",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-4#patch-1-4-236",
+          "url": "https://kiro.dev/changelog/ide/1-4#patch-1-4-236",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-ipo-pricing-20261118",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Anthropic 完成首次公开募股定价",
+      "summary_zh": "Anthropic 官网宣布其拟议首次公开募股完成定价；此前公司已于 10 月 26 日提交 S-1（拟以代码 ANT 上市）并于 11 月 10 日启动路演。",
+      "key_points_zh": [
+        "Anthropic 宣布 IPO 定价完成（官网公告，详情正文待补充）。",
+        "此前进程：10 月 26 日向 SEC 提交 S-1，11 月 10 日启动路演。"
+      ],
+      "importance_reason_zh": "Anthropic 上市进程的关键节点，影响公司治理与行业资本格局。",
+      "title_en": "Anthropic prices its initial public offering",
+      "summary_en": "Anthropic announced on its site that its proposed initial public offering has been priced; the company previously filed its S-1 on October 26 (listing under ticker ANT) and launched its roadshow on November 10.",
+      "key_points_en": [
+        "Anthropic announced its IPO pricing (site announcement; details pending full text).",
+        "Prior steps: S-1 filed with the SEC on October 26 and roadshow launched November 10."
+      ],
+      "importance_reason_en": "A key milestone in Anthropic's listing process, affecting governance and the industry's capital landscape.",
+      "published_at": "2026-11-18",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+          "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+          "collected_at": "2026-11-19T14:40:39+00:00",
+          "material_scope": "metadata_only"
+        }
+      ],
+      "related_event_ids": [
+        "anthropic-s1-ipo",
+        "anthropic-ipo-roadshow-20261110"
+      ]
+    },
+    {
+      "id": "mai-code-2-copilot-20261117",
+      "entity_ids": [
+        "copilot",
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "compatibility"
+      ],
+      "title_zh": "GitHub Copilot 上线 MAI Code 2 与 MAI Code 2 Flash",
+      "summary_zh": "微软在 GitHub Copilot 推出新一代 MAI Code 2 与 MAI Code 2 Flash 编码模型，官方称该家族从轻量编码辅助扩展到复杂智能体软件工程；Kilo 博客同步预告 MAI 编码模型即将接入 Kilo。",
+      "key_points_zh": [
+        "MAI Code 2 面向通用编码，覆盖深度调试、多文件实现、重构与仓库级推理。",
+        "MAI Code 2 Flash 为轻量低成本模型，适合代码解释、定向编辑、常规修复与快速迭代。",
+        "两款模型均面向智能体编码工作流设计。",
+        "Kilo 宣布微软 MAI 编码模型即将进入 Kilo。"
+      ],
+      "importance_reason_zh": "微软自研编码模型进入 Copilot 并扩散到第三方工具，改变供应商模型布局。",
+      "title_en": "MAI Code 2 and MAI Code 2 Flash arrive in GitHub Copilot",
+      "summary_en": "Microsoft shipped its next-generation MAI Code 2 and MAI Code 2 Flash coding models in GitHub Copilot, expanding the family from lightweight assistance to complex agentic software engineering; Kilo also announced the MAI coding models are coming to Kilo.",
+      "key_points_en": [
+        "MAI Code 2 is a general-purpose coding model for deep debugging, multi-file implementation, refactoring, and repository-wide reasoning.",
+        "MAI Code 2 Flash is a lightweight, cost-efficient model for code explanations, targeted edits, routine fixes, and rapid iteration.",
+        "Both models are designed for agentic coding workflows.",
+        "Kilo announced Microsoft's new MAI coding models are coming to Kilo."
+      ],
+      "importance_reason_en": "Microsoft's in-house coding models landing in Copilot and third-party tools reshape the model supply for coding agents.",
+      "published_at": "2026-11-17T18:01:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot",
+          "url": "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot",
+          "collected_at": "2026-11-19T14:40:39+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/microsofts-new-mai-coding-models",
+          "url": "https://blog.kilo.ai/p/microsofts-new-mai-coding-models",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-ignite-20261117",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "GitHub Copilot Ignite 更新：应用支持 Azure DevOps，代码审查自适应深度，JetBrains 云沙箱",
+      "summary_zh": "GitHub 在 Ignite 2026 期间发布多项 Copilot 更新：应用支持 Azure DevOps 仓库与已登录浏览器，代码审查引入自适应深度与暴露密钥检测，JetBrains 平台获得云沙箱、设备端语音听写与浏览器使用控制（GitHub Enterprise Server 应用支持此前已单独上线）。",
+      "key_points_zh": [
+        "Copilot 应用支持 Azure DevOps 仓库，智能体可创建分支、改代码并开 PR；GitHub Enterprise Server 应用支持此前已于 11 月 13 日上线。",
+        "Copilot 代码审查（公开预览）按变更风险自适应审查深度，可引用相关仓库并在合入主干前标记暴露的密钥。",
+        "JetBrains 平台新增云沙箱（公开预览，GitHub 托管的隔离环境）、设备端语音听写与浏览器使用控制。"
+      ],
+      "importance_reason_zh": "Ignite 批量更新扩展 Copilot 的平台覆盖与审查能力，影响企业工作流接入。",
+      "title_en": "GitHub Copilot Ignite updates: Azure DevOps in app, adaptive code review, JetBrains cloud sandbox",
+      "summary_en": "GitHub shipped multiple Copilot updates around Ignite 2026: the app supports Azure DevOps repositories and your signed-in browser, code review gains adaptive depth and secret detection, and Copilot for JetBrains adds a cloud sandbox, on-device voice dictation, and browser use controls (GitHub Enterprise Server app support shipped separately on November 13).",
+      "key_points_en": [
+        "The Copilot app works with Azure DevOps repositories, where an agent can create branches, change code, and open PRs; GitHub Enterprise Server app support shipped separately on November 13.",
+        "Copilot code review (public preview) matches review depth to each pull request, can draw on related repositories, and flags exposed secrets before they reach your main branch.",
+        "Copilot for JetBrains adds a cloud sandbox (public preview, a GitHub-hosted isolated environment), on-device voice dictation, and browser use controls."
+      ],
+      "importance_reason_en": "The Ignite batch expands Copilot platform coverage and review capability, affecting enterprise workflow integration.",
+      "published_at": "2026-11-17T18:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-17-github-copilot-app-microsoft-ignite-releases",
+          "url": "https://github.blog/changelog/2026-11-17-github-copilot-app-microsoft-ignite-releases",
+          "collected_at": "2026-11-19T14:40:39+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more",
+          "url": "https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more",
+          "collected_at": "2026-11-19T14:40:39+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-17-github-copilot-in-jetbrains-ignite-releases",
+          "url": "https://github.blog/changelog/2026-11-17-github-copilot-in-jetbrains-ignite-releases",
+          "collected_at": "2026-11-19T14:40:39+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gpt-6-2-astra-sol-20261117",
+      "entity_ids": [
+        "openai",
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "availability"
+      ],
+      "title_zh": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol",
+      "summary_zh": "OpenAI 正式发布 GPT-6.2 Astra 与 GPT-6.2 Sol，官方介绍主打专业产出、编程、计算机操作与更低成本，覆盖 ChatGPT Work、Codex 与 API；两款模型同步进入 GitHub Copilot，Codex 团队还将 GPT-6.2 Sol ultrafast 速度档扩展到 Pro 200 套餐。",
+      "key_points_zh": [
+        "两款模型面向智能体编程与代码审查，官方称在代码审查中捕获的真实问题显著多于此前 GPT-6 系列且 token 消耗更低。",
+        "GitHub 称 GPT-6.2 Sol 在代码审查中捕获的真实问题约为 GPT-6.1 Sol 的两倍，同时保持结论准确。",
+        "两款模型已在 GitHub Copilot 面向相关套餐开放，按供应商标价用量计费。",
+        "Codex 负责人 Tibo 称 Sol ultrafast 已扩展到 Pro 200 套餐，并表示这是其日常首选模型。",
+        "OpenAI 官方账号称 GPT-6.2 Astra 在专业工作与科研评测中创下新高，单任务成本低于 GPT-6 Astra 的三分之一。"
+      ],
+      "importance_reason_zh": "双模型发布与套餐速度档扩展直接影响编码智能体的模型选择、代码审查质量与 token 成本。",
+      "title_en": "OpenAI ships GPT-6.2 Astra and GPT-6.2 Sol",
+      "summary_en": "OpenAI released GPT-6.2 Astra and GPT-6.2 Sol, focused on professional outputs, coding, computer use, and lower cost across ChatGPT Work, Codex, and the API; both models are now in GitHub Copilot, and the Codex team extended the Sol ultrafast speed tier to Pro 200 plans.",
+      "key_points_en": [
+        "Both models target agentic coding and code review; per official notes, they catch significantly more real issues than earlier GPT-6 models while using fewer tokens.",
+        "GitHub states GPT-6.2 Sol caught nearly twice as many real code review issues as GPT-6.1 Sol while keeping findings accurate.",
+        "Both models are generally available in GitHub Copilot for eligible plans, billed at provider list pricing under usage-based billing.",
+        "Codex lead Tibo said Sol ultrafast is now extended to Pro 200 plans and that it is his go-to model for daily work.",
+        "The official OpenAI account says GPT-6.2 Astra sets new highs on professional-work and scientific-research evals at less than a third of GPT-6 Astra cost per task."
+      ],
+      "importance_reason_en": "The release and the plan-tier speed expansion directly affect model choice, code review quality, and token cost for coding agents.",
+      "published_at": "2026-11-17T17:45:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "collected_at": "2026-11-19T14:37:43+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available",
+          "url": "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available",
+          "collected_at": "2026-11-19T14:40:39+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2122750126297161811",
+          "url": "https://x.com/OpenAI/status/2122750126297161811",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2122750124543926515",
+          "url": "https://x.com/OpenAI/status/2122750124543926515",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2122753991000133943",
+          "url": "https://x.com/thsottiaux/status/2122753991000133943",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=C1zYX5jwqq4",
+          "url": "https://www.youtube.com/watch?v=C1zYX5jwqq4",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
+      "id": "kilo-desktop-ga-20261117",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "Kilo Desktop 正式版发布",
+      "summary_zh": "Kilo Desktop 从测试转入正式可用（GA），官方称其为从想法到合并 PR 的最快路径，支持并行多智能体、跨仓库工作与逐个 diff 审查，并将 notebook 集成进同一应用。",
+      "key_points_zh": [
+        "Kilo Desktop 结束测试正式可用。",
+        "支持同时运行多个智能体、跨多个仓库工作并逐个审查 diff。",
+        "集成 notebook 用于研究、数据科学与把结论转化为改进。"
+      ],
+      "importance_reason_zh": "Kilo Desktop 覆盖其桌面端产品的正式发布节点。",
+      "title_en": "Kilo Desktop is generally available",
+      "summary_en": "Kilo Desktop moved from beta to general availability, described by Kilo as the fastest path from idea to merged PR with several agents at once, work across repositories, and eyes on every diff, plus integrated notebooks for research and data science.",
+      "key_points_en": [
+        "Kilo Desktop is now generally available after its beta period.",
+        "It supports running several agents at once, working across more than one repository, and reviewing each diff.",
+        "Notebooks are integrated for exploring datasets, testing hypotheses, and turning findings into better decisions."
+      ],
+      "importance_reason_en": "This marks the general availability milestone for Kilo's desktop product.",
+      "published_at": "2026-11-17T16:41:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/kilo-desktop-is-generally-available",
+          "url": "https://blog.kilo.ai/p/kilo-desktop-is-generally-available",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-for-sales-20261117",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "OpenAI 推出 ChatGPT for Sales",
+      "summary_zh": "OpenAI 推出 ChatGPT for Sales：新增 Sales 插件与 30 多个新增或扩展的合作插件，用于调研潜在客户、准备提案、更新 CRM 与推进交易。",
+      "key_points_zh": [
+        "ChatGPT 新增 Sales 插件。",
+        "同步推出 30 多个新增或扩展的合作插件。"
+      ],
+      "importance_reason_zh": "ChatGPT 面向销售场景的产品扩展。",
+      "title_en": "OpenAI introduces ChatGPT for Sales",
+      "summary_en": "OpenAI introduced ChatGPT for Sales: a new Sales plugin plus 30+ new and expanded partner plugins to research prospects, prepare pitches, update CRM records, and move deals forward.",
+      "key_points_en": [
+        "ChatGPT gains a new Sales plugin.",
+        "More than 30 new and expanded partner plugins ship alongside it."
+      ],
+      "importance_reason_en": "A product expansion of ChatGPT into sales workflows.",
+      "published_at": "2026-11-17T08:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/introducing-chatgpt-for-sales",
+          "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+          "collected_at": "2026-11-19T14:37:43+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=pmOJIq7Ah00",
+          "url": "https://www.youtube.com/watch?v=pmOJIq7Ah00",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
     {
       "id": "copilot-cli-1-0-113-1-20261117",
       "entity_ids": [
@@ -78,6 +1188,50 @@
           "collected_at": "2026-11-17T13:32:36+00:00",
           "material_scope": "partial_text"
         }
+      ]
+    },
+    {
+      "id": "gemini-4-hydrogen-robotics-20261117",
+      "entity_ids": [
+        "google",
+        "antigravity"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "feature"
+      ],
+      "title_zh": "Google 介绍 Gemini 4 Hydrogen 机器人定位与 Antigravity Robotics 插件",
+      "summary_zh": "Google 开发者博客发文称 Gemini 4 Hydrogen 是专为机器人构建的快速高效模型，具备空间与具身推理能力，并推出 Antigravity Robotics 插件与 google-genai SDK 首日支持；此前 GitHub Copilot 曾将其描述为面向智能体编程的 Flash 模型，两处官方描述存在差异。",
+      "key_points_zh": [
+        "Google 称 Hydrogen 是专为机器人构建的模型，强调空间与具身推理能力。",
+        "Antigravity Robotics 插件支持快速硬件启动、MuJoCo 仿真与闭环控制。",
+        "google-genai SDK 提供首日支持，官方称开发者可用自然语言提示在一个下午内从未开箱机械臂做出 real-to-sim-to-real 应用。"
+      ],
+      "importance_reason_zh": "官方对 Hydrogen 的定位补充与机器人插件，明确该模型的实际应用方向和工具链。",
+      "title_en": "Google details Gemini 4 Hydrogen robotics focus with Antigravity Robotics plugin",
+      "summary_en": "The Google Developers Blog describes Gemini 4 Hydrogen as a fast, efficient model built specifically for robotics with spatial and embodied reasoning, alongside a new Robotics plugin for Antigravity and day-one google-genai SDK support; GitHub Copilot had earlier described the model for agentic coding, leaving differing official descriptions.",
+      "key_points_en": [
+        "Google describes Hydrogen as built specifically for robotics, emphasizing spatial and embodied reasoning.",
+        "The Antigravity Robotics plugin supports rapid hardware bring-up, MuJoCo simulation, and closed-loop control.",
+        "The google-genai SDKs have day-one support; Google says developers can go from an unboxed robot arm to a real-to-sim-to-real application in an afternoon with natural language prompts."
+      ],
+      "importance_reason_en": "The official positioning detail and robotics tooling clarify what the model is actually built for and how to apply it.",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/gemini-hydrogen-for-robotics/",
+          "url": "https://developers.googleblog.com/en/gemini-hydrogen-for-robotics/",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "related_event_ids": [
+        "gemini-4-hydrogen-20261112"
       ]
     },
     {
@@ -1289,6 +2443,48 @@
           "collected_at": "2026-11-15T14:19:22+00:00",
           "material_scope": "partial_text"
         }
+      ]
+    },
+    {
+      "id": "daybreak-red-team-defense-factory-20261113",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "OpenAI 推出 Daybreak Red Team 与 Daybreak Defense Factory",
+      "summary_zh": "OpenAI 在 Codex Security 生态发布 Daybreak Red Team 与 Daybreak Defense Factory（视频标题级证据；Daybreak Red 此前已上线 AWS GovCloud）。",
+      "key_points_zh": [
+        "官方视频介绍 Daybreak Red Team 与 Daybreak Defense Factory 两个新组件。",
+        "Daybreak Red 此前已宣布在 AWS GovCloud（美国东部）上线，本条为其扩展组件。"
+      ],
+      "importance_reason_zh": "Codex Security 产品线扩展，面向漏洞研究与防御工厂场景。",
+      "title_en": "OpenAI introduces Daybreak Red Team and Daybreak Defense Factory",
+      "summary_en": "OpenAI introduced Daybreak Red Team and Daybreak Defense Factory in the Codex Security ecosystem (title-level video evidence; Daybreak Red previously shipped on AWS GovCloud).",
+      "key_points_en": [
+        "Official video introduces the new Daybreak Red Team and Daybreak Defense Factory components.",
+        "Daybreak Red previously shipped on AWS GovCloud (US East); this entry covers its expanded components."
+      ],
+      "importance_reason_en": "An expansion of the Codex Security product line toward vulnerability research and defense factory scenarios.",
+      "published_at": "2026-11-13T14:38:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=YmxpxJZvm4M",
+          "url": "https://www.youtube.com/watch?v=YmxpxJZvm4M",
+          "collected_at": "2026-11-19T14:38:23+00:00",
+          "material_scope": "metadata_only"
+        }
+      ],
+      "related_event_ids": [
+        "daybreak-red-aws-govcloud"
       ]
     },
     {
@@ -2506,6 +3702,46 @@
       "published_at": "2026-11-11",
       "date_precision": "date",
       "date_kind": "published"
+    },
+    {
+      "id": "grok-bot-1-0-20261111",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "feature"
+      ],
+      "title_zh": "xAI 发布 Grok Bot 1.0",
+      "summary_zh": "xAI 发布 Grok Bot 1.0：自 beta 以来新增三人协作、主动承担与能力提升三方面改进，Bot 可共享并接入 Slack、Microsoft Teams 与视频通话，能识别待办工作并跟进任务。",
+      "key_points_zh": [
+        "Grok Bot 结束 beta 发布 1.0 版。",
+        "多人协作：Bot 可共享并带入 Slack、Microsoft Teams 与视频通话，从共事者身上学习并持续改进。",
+        "主动性：Bot 可识别需要完成的工作并主动承担，跟进未完成任务，并在需要人类判断时引入人。"
+      ],
+      "importance_reason_zh": "Grok Bot 正式版明确其产品形态与团队协作能力，属产品正式发布节点。",
+      "title_en": "xAI launches Grok Bot 1.0",
+      "summary_en": "xAI launched Grok Bot 1.0 with three major improvements since beta: multiplayer teammates, proactive teammates, and more capable teammates; Bots can be shared, brought into Slack, Microsoft Teams, and video calls, recognize work that needs doing, and follow up on unfinished tasks.",
+      "key_points_en": [
+        "Grok Bot 1.0 ends the beta period as a major update.",
+        "Multiplayer teammates: Bots can be shared and brought into Slack, Microsoft Teams, and video calls, learning from everyone they work with.",
+        "Proactive teammates: Bots recognize work that needs to be done, offer to take it on, follow up on unfinished tasks, and bring people in when a decision requires their judgment."
+      ],
+      "importance_reason_en": "The 1.0 release defines the product form and team-collaboration capabilities of Grok Bot.",
+      "published_at": "2026-11-11",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "grok-official",
+          "content_id": "https://x.ai/news/grok-bot-1-0",
+          "url": "https://x.ai/news/grok-bot-1-0",
+          "collected_at": "2026-11-19T14:50:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
     },
     {
       "id": "gemini-cli-0-68-0-20261110",
@@ -4433,6 +5669,44 @@
           "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
           "collected_at": "2026-11-08T06:07:27+00:00",
           "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
+      "id": "mistral-studio-20261105",
+      "entity_ids": [
+        "mistral"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "feature"
+      ],
+      "title_zh": "Mistral 发布 Mistral Studio 企业智能体平台",
+      "summary_zh": "Mistral 发布 Mistral Studio，配合 Le Chonk 用于更快构建与部署企业智能体、工作流与应用，官方强调对模型、数据与基础设施的完全控制。",
+      "key_points_zh": [
+        "Mistral Studio 用于构建与部署企业智能体、工作流与应用。",
+        "官方强调对模型、数据与基础设施的完全控制。"
+      ],
+      "importance_reason_zh": "企业智能体平台是 Mistral 产品线的实质扩展。",
+      "title_en": "Mistral launches Mistral Studio enterprise agent platform",
+      "summary_en": "Mistral launched Mistral Studio, paired with Le Chonk to build and deploy enterprise agents, workflows, and apps faster, with full control over models, data, and infrastructure.",
+      "key_points_en": [
+        "Mistral Studio targets building and deploying enterprise agents, workflows, and apps.",
+        "The announcement stresses full control over models, data, and infrastructure."
+      ],
+      "importance_reason_en": "The enterprise agent platform is a substantive expansion of Mistral's product line.",
+      "published_at": "2026-11-05T12:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "mistral-official",
+          "content_id": "https://mistral.ai/news/build-with-studio/",
+          "url": "https://mistral.ai/news/build-with-studio/",
+          "collected_at": "2026-11-19T14:50:41+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },

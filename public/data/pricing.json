@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-17",
+  "checked_at": "2026-11-19",
   "plans": [
     {
       "id": "gpt-6-astra",
@@ -3374,11 +3374,11 @@
       },
       "scope_zh": "B.AI · 标准高峰 API",
       "scope_en": "B.AI · Standard peak API",
-      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 高峰为北京时间周一至周五 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间每百万 tokens 输入 $0.15、输出 $0.60、缓存读取 $0.003、写入 $0.15。Chat 按非高峰价。2026-10-04 10:00 UTC+8 起符合条件的活动用量按对应标准价 60% 结算，结束时间未公开，以平台为准。",
-      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Peak is Monday–Friday 09:00–12:00 and 14:00–18:00 UTC+8, excluding Chinese public holidays. Off-peak input/output/cache read/write rates are $0.15/$0.60/$0.003/$0.15 per million tokens. Chat uses off-peak rates. Eligible promotional usage costs 60% of the applicable standard rate from 2026-10-04 10:00 UTC+8; no end date is published and platform terms prevail.",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 高峰为北京时间周一至周五 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间每百万 tokens 输入 $0.15、输出 $0.60、缓存读取 $0.003、写入 $0.15。Chat 按非高峰价。2026-11-19 核验：符合条件的活动用量按对应标准价 50% 结算（2026-10-24 核验时为 60%，切换日期未单独公布），促销价随 DeepSeek 分时定价同步变化，结束时间未公开，以平台为准。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Peak is Monday–Friday 09:00–12:00 and 14:00–18:00 UTC+8, excluding Chinese public holidays. Off-peak input/output/cache read/write rates are $0.15/$0.60/$0.003/$0.15 per million tokens. Chat uses off-peak rates. As verified on 2026-11-19, eligible promotional usage costs 50% of the applicable standard rate (60% at the 2026-10-24 check; the switch date is not published separately), with promotional prices following DeepSeek time-based pricing; no end date is published and platform terms prevail.",
       "source_url": "https://docs.b.ai/llmservice/models/deepseek-v4-1-flash/",
       "checked_at": "2026-10-24",
-      "updated_at": "2026-10-18",
+      "updated_at": "2026-11-19",
       "offers": [
         {
           "id": "eligible-time-window-promotion",
@@ -3389,19 +3389,19 @@
             "DeepSeek-V4.1-Flash"
           ],
           "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
-          "checked_at": "2026-10-24",
-          "conditions_zh": "符合资格的用量按适用高峰或非高峰标准价的 60% 结算。此处列高峰活动价；非高峰每百万 tokens 输入 / 写缓存 $0.09、输出 $0.36、缓存读取 $0.0018。高峰为周一至周五北京时间 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间非高峰。",
-          "conditions_en": "Eligible usage settles at 60% of the applicable peak or off-peak standard rate. Peak promotional rates are shown here; off-peak input/cache writes cost $0.09, output $0.36 and cache reads $0.0018 per million tokens. Peak hours are Monday–Friday 09:00–12:00 and 14:00–18:00 Beijing time, excluding Chinese public holidays; all other hours are off-peak.",
+          "checked_at": "2026-11-19",
+          "conditions_zh": "符合资格的用量按适用高峰或非高峰标准价的 50% 结算，促销价随 DeepSeek 分时定价同步变化。此处列高峰活动价；非高峰每百万 tokens 输入 / 写缓存 $0.075、输出 $0.30、缓存读取 $0.0015。高峰为周一至周五北京时间 09:00–12:00、14:00–18:00，中国法定节假日除外；其余时间非高峰。2026-10-24 核验时比例为 60%，切换日期未单独公布，以平台结算为准。",
+          "conditions_en": "Eligible usage settles at 50% of the applicable peak or off-peak standard rate, with promotional prices following DeepSeek's time-based pricing. Peak promotional rates are shown here; off-peak input/cache writes cost $0.075, output $0.30 and cache reads $0.0015 per million tokens. Peak hours are Monday–Friday 09:00–12:00 and 14:00–18:00 Beijing time, excluding Chinese public holidays; all other hours are off-peak. The ratio was 60% at the October 24, 2026 check; the switch date is not published separately and platform billing prevails.",
           "eligibility_zh": "仅符合 B.AI 活动资格的 API 用量；最终账单以平台为准",
           "eligibility_en": "Only eligible B.AI API usage; platform billing prevails",
           "card_required": "unknown",
           "starts_at": "2026-10-04T10:00:00+08:00",
           "ends_at": null,
           "price": {
-            "input": 0.18,
-            "output": 0.72,
-            "cached": 0.0036,
-            "cache_write": 0.18
+            "input": 0.15,
+            "output": 0.6,
+            "cached": 0.003,
+            "cache_write": 0.15
           },
           "reference": {
             "label_zh": "B.AI 同模型高峰标准价",
@@ -4653,7 +4653,7 @@
       "note_en": "Per million tokens; settlement uses 1 USD = 1,000,000 Credits. Standard reference and promotional rates are separate; platform eligibility and final billing prevail.",
       "source_url": "https://docs.b.ai/llmservice/pricing-and-usage/",
       "checked_at": "2026-10-24",
-      "updated_at": "2026-10-18",
+      "updated_at": "2026-11-19",
       "offers": [
         {
           "id": "eligible-usage-promotion",
@@ -4664,19 +4664,19 @@
             "GLM-5.3-Flash"
           ],
           "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
-          "checked_at": "2026-10-24",
-          "conditions_zh": "符合官方资格的用量按标准参考价的 70% 结算；该页未公布结束时间，活动与最终账单以平台为准。",
-          "conditions_en": "Eligible usage settles at 70% of the standard reference rate. No end date is published on this page; platform terms and final billing prevail.",
+          "checked_at": "2026-11-19",
+          "conditions_zh": "通过 B.AI API 与 Chat 的符合资格用量按标准参考价的 60% 结算；该页未公布结束时间，活动与最终账单以平台为准。2026-10-24 核验时比例为 70%，切换日期未单独公布。",
+          "conditions_en": "Eligible GLM-5.3-Flash usage through B.AI API and Chat is billed at 60% of the standard reference rate. No end date is published on this page; platform terms and final billing prevail. The ratio was 70% at the October 24, 2026 check; the switch date is not published separately.",
           "eligibility_zh": "仅符合 B.AI 活动资格的用量",
           "eligibility_en": "Only usage eligible under B.AI promotion terms",
           "card_required": "unknown",
           "starts_at": "2026-10-04T10:00:00+08:00",
           "ends_at": null,
           "price": {
-            "input": 0.105,
-            "output": 0.35,
-            "cached": 0.021,
-            "cache_write": 0.105
+            "input": 0.09,
+            "output": 0.3,
+            "cached": 0.018,
+            "cache_write": 0.09
           },
           "reference": {
             "label_zh": "B.AI 标准参考价",
@@ -5066,6 +5066,198 @@
       "source_url": "https://docs.b.ai/llmservice/pricing-and-usage/",
       "checked_at": "2026-10-24",
       "updated_at": "2026-10-21"
+    },
+    {
+      "id": "b-ai-hy4",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "Hy4",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 0.834,
+        "output": 2.501,
+        "cached": 0.042,
+        "cache_write": 0.834
+      },
+      "scope_zh": "B.AI · 标准参考价 · 1M 上下文",
+      "scope_en": "B.AI · standard reference rate · 1M context",
+      "note_zh": "腾讯 Hy4 系列模型，面向多步 Agent 工作流，支持文本与图像输入、深度思考与函数调用。展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算。上下文 1M tokens，最大输入 960,000、最大输出 64,000 tokens。促销仅适用于 hy4，不含 hy4-preview。活动、充值赠送与账户权益可能影响实际结算。",
+      "note_en": "Tencent Hy4-series model for multi-step agent workflows with text and image input, deep thinking and function calling. B.AI standard reference rates are shown; accounts settle at 1 USD = 1,000,000 Credits. Context is 1M tokens with 960,000 maximum input and 64,000 maximum output tokens. The promotion applies only to hy4, not hy4-preview. Promotions, top-up bonuses and account benefits may affect settlement.",
+      "source_url": "https://docs.b.ai/llmservice/models/hy4/",
+      "checked_at": "2026-11-19",
+      "updated_at": "2026-11-19",
+      "offers": [
+        {
+          "id": "fifty-percent-promotion",
+          "type": "discount",
+          "kind": "promotion",
+          "status": "verified",
+          "models": [
+            "Hy4"
+          ],
+          "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
+          "checked_at": "2026-11-19",
+          "conditions_zh": "活动期间输入、输出、缓存写入与缓存读取均按标准参考价的 50% 结算，仅适用于 hy4，不含 hy4-preview；每项促销价为官方目录价 50%，保留四位小数。结束时间未公布，促销期、实际结算价与最终账单以平台显示为准。",
+          "conditions_en": "During the promotion, input, output, cache writes and cache reads are billed at 50% of the standard reference price, applying only to hy4 and not hy4-preview; each promotional price is 50% of the official list price shown to four decimal places. No end date is published; the promotion period, actual settlement prices and final billing follow the platform display.",
+          "eligibility_zh": "仅通过 B.AI API 使用 hy4 的用量",
+          "eligibility_en": "Only hy4 usage through the B.AI API",
+          "card_required": "unknown",
+          "starts_at": null,
+          "ends_at": null,
+          "price": {
+            "input": 0.417,
+            "output": 1.2505,
+            "cached": 0.021,
+            "cache_write": 0.417
+          },
+          "reference": {
+            "label_zh": "B.AI 同模型标准参考价",
+            "label_en": "B.AI standard reference rate for the same model",
+            "currency": "USD",
+            "billing": "token",
+            "price": {
+              "input": 0.834,
+              "output": 2.501,
+              "cached": 0.042,
+              "cache_write": 0.834
+            },
+            "source_url": "https://docs.b.ai/llmservice/models/hy4/",
+            "checked_at": "2026-11-19",
+            "comparison_zh": "相同平台、型号、币种及每百万 tokens 单位的标准价与活动价比较",
+            "comparison_en": "Same platform, model, currency and per-million-token units for standard and promotional rates"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b-ai-hy4-flash",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "Hy4 Flash",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 0.07,
+        "output": 0.281,
+        "cached": 0.003,
+        "cache_write": 0.07
+      },
+      "scope_zh": "B.AI · 标准参考价 · 1M 上下文",
+      "scope_en": "B.AI · standard reference rate · 1M context",
+      "note_zh": "腾讯 Hy4 系列轻量模型，面向日常办公与高吞吐任务，默认开启深度思考且可关闭。展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算。上下文 1M tokens，最大输入 960,000、最大输出 64,000 tokens。活动、充值赠送与账户权益可能影响实际结算。",
+      "note_en": "Tencent's lightweight Hy4-series model for everyday productivity and high-volume workloads, with deep thinking enabled by default and disableable. B.AI standard reference rates are shown; accounts settle at 1 USD = 1,000,000 Credits. Context is 1M tokens with 960,000 maximum input and 64,000 maximum output tokens. Promotions, top-up bonuses and account benefits may affect settlement.",
+      "source_url": "https://docs.b.ai/llmservice/models/hy4-flash/",
+      "checked_at": "2026-11-19",
+      "updated_at": "2026-11-19",
+      "offers": [
+        {
+          "id": "fifty-percent-promotion",
+          "type": "discount",
+          "kind": "promotion",
+          "status": "verified",
+          "models": [
+            "Hy4 Flash"
+          ],
+          "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
+          "checked_at": "2026-11-19",
+          "conditions_zh": "活动期间输入、输出、缓存写入与缓存读取均按标准参考价的 50% 结算，仅适用于 hy4-flash；2026-11-30 12:00（北京时间，UTC+8）结束后按标准参考价计费。适用条款与最终账单以平台显示和实际账单为准。",
+          "conditions_en": "During the promotion, input, output, cache writes and cache reads are billed at 50% of the standard reference price, applying only to hy4-flash; after the offer ends at 12:00 noon on November 30, 2026 (Beijing Time, UTC+8), usage is billed at standard reference prices. Applicable terms and final charges follow the platform display and actual billing records.",
+          "eligibility_zh": "仅通过 B.AI 使用 hy4-flash 的用量",
+          "eligibility_en": "Only hy4-flash usage through B.AI",
+          "card_required": "unknown",
+          "starts_at": null,
+          "ends_at": "2026-11-30T12:00:00+08:00",
+          "price": {
+            "input": 0.035,
+            "output": 0.1405,
+            "cached": 0.0015,
+            "cache_write": 0.035
+          },
+          "reference": {
+            "label_zh": "B.AI 同模型标准参考价",
+            "label_en": "B.AI standard reference rate for the same model",
+            "currency": "USD",
+            "billing": "token",
+            "price": {
+              "input": 0.07,
+              "output": 0.281,
+              "cached": 0.003,
+              "cache_write": 0.07
+            },
+            "source_url": "https://docs.b.ai/llmservice/models/hy4-flash/",
+            "checked_at": "2026-11-19",
+            "comparison_zh": "相同平台、型号、币种及每百万 tokens 单位的标准价与活动价比较",
+            "comparison_en": "Same platform, model, currency and per-million-token units for standard and promotional rates"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b-ai-qwen4-max",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "Qwen4-Max",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 1.5,
+        "output": 4.5,
+        "cached": 0.075,
+        "cache_write": 1.875
+      },
+      "scope_zh": "B.AI · 标准参考价 · 新加坡国际目录价 · 1M 上下文",
+      "scope_en": "B.AI · standard reference rate · Singapore international list prices · 1M context",
+      "note_zh": "阿里 Qwen4 系列首个发布的旗舰模型，支持思考/非思考模式、三档推理力度、原生视觉理解（文本、图像与视频）与并行工具调用。展示 B.AI 标准参考价，采用厂商新加坡国际目录价；账户按 1 USD = 1,000,000 Credits 结算。上下文 1M tokens；非思考模式最大输入 991,808、思考模式 983,616；输出非思考模式 131,072、思考模式含最终答案共 262,144 tokens。显式缓存写入分 5 分钟（$1.875）与 1 小时（$3.00）两档，price 中的 cache_write 为 5 分钟档；隐式与显式缓存读取均为 $0.075。活动、充值赠送与账户权益可能影响实际结算。",
+      "note_en": "Alibaba's flagship model and first release in the Qwen4 family, with thinking/non-thinking modes, three reasoning effort levels, native visual understanding (text, images and video) and parallel tool calls. B.AI standard reference rates use the provider's Singapore international list prices; accounts settle at 1 USD = 1,000,000 Credits. Context is 1M tokens; maximum input is 991,808 in non-thinking and 983,616 in thinking mode; output is 131,072 in non-thinking and 262,144 tokens shared between thinking and the final answer in thinking mode. Explicit cache writes have 5-minute ($1.875) and 1-hour ($3.00) lifetimes; price.cache_write shows the 5-minute tier; implicit and explicit cache reads both cost $0.075. Promotions, top-up bonuses and account benefits may affect settlement.",
+      "source_url": "https://docs.b.ai/llmservice/models/qwen4-max/",
+      "checked_at": "2026-11-19",
+      "updated_at": "2026-11-19",
+      "offers": [
+        {
+          "id": "ninety-percent-promotion",
+          "type": "discount",
+          "kind": "promotion",
+          "status": "verified",
+          "models": [
+            "Qwen4-Max"
+          ],
+          "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
+          "checked_at": "2026-11-19",
+          "conditions_zh": "活动期间输入、输出、两档显式缓存写入与缓存读取均按标准参考价的 90% 结算。促销价：输入 $1.35、输出 $4.05、5 分钟显式缓存写入 $1.6875、1 小时显式缓存写入 $2.70、缓存读取 $0.0675；price 中 cache_write 为 5 分钟档。结束时间未公布，促销期与最终账单以平台显示为准。",
+          "conditions_en": "During the promotion, input, output, both explicit cache write lifetimes and cache reads are billed at 90% of the standard reference price. Promotional rates: input $1.35, output $4.05, 5-minute explicit cache writes $1.6875, 1-hour explicit cache writes $2.70 and cache reads $0.0675; price.cache_write shows the 5-minute tier. No end date is published; the promotion period and final billing follow the platform display.",
+          "eligibility_zh": "仅通过 B.AI 使用 Qwen4-Max 的用量",
+          "eligibility_en": "Only Qwen4-Max usage through B.AI",
+          "card_required": "unknown",
+          "starts_at": null,
+          "ends_at": null,
+          "price": {
+            "input": 1.35,
+            "output": 4.05,
+            "cached": 0.0675,
+            "cache_write": 1.6875
+          },
+          "reference": {
+            "label_zh": "B.AI 同模型标准参考价（新加坡国际目录价）",
+            "label_en": "B.AI standard reference rate for the same model (Singapore international list prices)",
+            "currency": "USD",
+            "billing": "token",
+            "price": {
+              "input": 1.5,
+              "output": 4.5,
+              "cached": 0.075,
+              "cache_write": 1.875
+            },
+            "source_url": "https://docs.b.ai/llmservice/models/qwen4-max/",
+            "checked_at": "2026-11-19",
+            "comparison_zh": "相同平台、型号、币种及每百万 tokens 单位的标准价与活动价比较；显式缓存写入按 5 分钟档对照，1 小时档见条件",
+            "comparison_en": "Same platform, model, currency and per-million-token units for standard and promotional rates; explicit cache writes compare the 5-minute tier, with the 1-hour tier in conditions"
+          }
+        }
+      ]
     },
     {
       "id": "kimi-k3-1-pro",

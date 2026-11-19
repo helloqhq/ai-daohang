@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "67572900218baefb",
+  "snapshot_id": "aca972abe7ed0884",
   "events": [
     {
       "id": "claude-code-2-1-316",
@@ -369,6 +369,46 @@
           "url": "https://antigravity.google/blog/plugin-marketplace-in-antigravity",
           "collected_at": "2026-11-08T06:08:12+00:00",
           "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
+      "id": "mistral-large-4-open-weights-20261029",
+      "entity_ids": [
+        "mistral"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "availability"
+      ],
+      "title_zh": "Mistral 开放 Le Chonk（Mistral Large 4）权重",
+      "summary_zh": "Mistral 开放其旗舰模型 Mistral Large 4（代号 Le Chonk）的权重：1T 参数多模态模型，官方称其为最佳开放权重编码模型，在欧洲训练。",
+      "key_points_zh": [
+        "Mistral Large 4（Le Chonk）权重现已开放。",
+        "官方称其为 1T 参数多模态模型，是编码方向的最佳开放权重模型。",
+        "官方强调模型在欧洲训练。"
+      ],
+      "importance_reason_zh": "旗舰级开放权重模型影响开源生态的可用上限。",
+      "title_en": "Mistral open-weights Le Chonk (Mistral Large 4)",
+      "summary_en": "Mistral open-weights its flagship Mistral Large 4 (Le Chonk): a 1T-parameter multimodal model described as the best open-weight model for coding, trained in Europe.",
+      "key_points_en": [
+        "The weights of Mistral Large 4 (Le Chonk) are now open.",
+        "Mistral describes it as a 1T-parameter multimodal model and the best open-weight model for coding.",
+        "The announcement states the model was trained in Europe."
+      ],
+      "importance_reason_en": "A flagship open-weights release raises the ceiling of what open ecosystems can use.",
+      "published_at": "2026-10-29T12:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "mistral-official",
+          "content_id": "https://mistral.ai/news/mistral-large-4-oss/",
+          "url": "https://mistral.ai/news/mistral-large-4-oss/",
+          "collected_at": "2026-11-19T14:50:41+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },
@@ -1234,6 +1274,44 @@
       ]
     },
     {
+      "id": "claude-gsa-discount-20261027",
+      "entity_ids": [
+        "anthropic"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "Anthropic 扩大 GSA 合作，向美国政府各级提供 Claude 折扣",
+      "summary_zh": "Anthropic 与美国总务管理局（GSA）扩大合作：新协议向政府合作伙伴提供 Claude Enterprise、Claude for Government 与 Claude API 的 40% 折扣，覆盖联邦政府各级机构。",
+      "key_points_zh": [
+        "新协议向政府合作伙伴提供 Claude Enterprise、Claude for Government 与 Claude API 的 40% 折扣。",
+        "合作旨在让 Claude 覆盖美国政府各级机构。"
+      ],
+      "importance_reason_zh": "政府市场折扣协议直接影响 Claude 在公共部门的可用性与价格。",
+      "title_en": "Anthropic expands GSA partnership with 40% discount across US government levels",
+      "summary_en": "Anthropic expanded its partnership with the US General Services Administration: a new agreement gives government partners a 40% discount on Claude Enterprise, Claude for Government, and the Claude API, covering all levels of government.",
+      "key_points_en": [
+        "The new agreement gives government partners a 40% discount on Claude Enterprise, Claude for Government, and the Claude API.",
+        "The partnership aims to bring Claude to all levels of government."
+      ],
+      "importance_reason_en": "The government-market discount directly affects Claude availability and pricing in the public sector.",
+      "published_at": "2026-10-27",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/expanding-partnership-gsa",
+          "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+          "collected_at": "2026-11-19T14:40:39+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
       "id": "claude-code-2-1-311",
       "entity_ids": [
         "claude-code"
@@ -1313,6 +1391,46 @@
           "content_id": "https://openai.com/index/introducing-gpt-6-1-terra",
           "url": "https://openai.com/index/introducing-gpt-6-1-terra",
           "collected_at": "2026-11-08T06:07:27+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "zcode-daily-free-glm53-flash-tokens-20261026",
+      "entity_ids": [
+        "zcode",
+        "zhipu"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing"
+      ],
+      "title_zh": "ZCode 推出每日 300 万免费 GLM-5.3-Flash tokens 领取",
+      "summary_zh": "ZCode 官方账号宣布每天可领取 300M 免费 GLM-5.3-Flash tokens：11:00 UTC 起领取，15:00 至次日 01:00 UTC 使用；需更新 ZCode 后在应用内领取，切换到 Global Building 并选择 GLM-5.3-Flash。原帖未说明活动截止日期。",
+      "key_points_zh": [
+        "每天 300M 免费 GLM-5.3-Flash tokens，11:00 UTC 起可领取。",
+        "使用时段为 15:00 至次日 01:00 UTC。",
+        "需更新 ZCode、应用内领取、切换到 Global Building 并选择 GLM-5.3-Flash。"
+      ],
+      "importance_reason_zh": "每日免费额度计划影响 ZCode 的实际使用成本，属免费权益信息。",
+      "title_en": "ZCode offers 300M free GLM-5.3-Flash tokens daily",
+      "summary_en": "ZCode's official account announced 300M free GLM-5.3-Flash tokens every day: claim from 11:00 UTC and use 15:00-01:00 UTC; update ZCode, claim in-app, switch to Global Building, and pick GLM-5.3-Flash. The post gives no end date.",
+      "key_points_en": [
+        "300M free GLM-5.3-Flash tokens daily, claimable from 11:00 UTC.",
+        "Usage window is 15:00-01:00 UTC.",
+        "Requires updating ZCode, claiming in-app, switching to Global Building, and picking GLM-5.3-Flash."
+      ],
+      "importance_reason_en": "A daily free-allowance program that changes ZCode's effective usage cost.",
+      "published_at": "2026-10-26T16:55:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-19T15:30:00+00:00",
+      "sources": [
+        {
+          "source_id": "zcode-x",
+          "content_id": "https://x.com/zcode_ai/status/2114762939421139426",
+          "url": "https://x.com/zcode_ai/status/2114762939421139426",
+          "collected_at": "2026-11-19T14:50:29+00:00",
           "material_scope": "partial_text"
         }
       ]

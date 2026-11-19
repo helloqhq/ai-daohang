@@ -167,6 +167,19 @@ class ConversionTests(unittest.TestCase):
         own=body.replace('quote:{core:', 'note_tweet:{note_tweet_results:$R[8]={result:{text:"Own long post"}}},quote:{core:')
         self.assertEqual(convert(source,lambda *a:own,START,END)[0]['text'],'Own long post')
 
+    def test_x_dom_fallback_parses_rendered_tweets_without_hydration(self):
+        body=('<article data-testid="tweet"><a href="/OpenAI/status/555"><time datetime="2026-11-18T23:07:23.000Z">15h</time></a>'
+              '<div data-testid="tweetText">We are sharing new research data</div></article>'
+              '<article data-testid="tweet"><a href="/Other/status/999"><time datetime="2026-11-18T10:00:00.000Z">18h</time></a>'
+              '<div data-testid="tweetText">Not our account</div></article>')
+        source=self.source('openai-x','https://x.com/OpenAI','x')
+        rows=convert(source,lambda *a:body,START,END)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['url'],'https://x.com/OpenAI/status/555')
+        self.assertEqual(rows[0]['published_at'],'2026-11-18T23:07:23+00:00')
+        self.assertEqual(rows[0]['text'],'We are sharing new research data')
+        with self.assertRaises(SourceError):convert(source,lambda *a:'<html>Log in</html>',START,END)
+
     def test_login_shell_and_empty_tiktok_do_not_become_successful_feeds(self):
         for sid,platform in [('openai-tiktok','tiktok'),('mark-zuckerberg-threads','threads')]:
             with self.assertRaises(SourceError) as error:convert(self.source(sid,platform=platform),lambda *a:'<html>Log in<script type="application/json">{"itemList":[]}</script></html>',START,END)

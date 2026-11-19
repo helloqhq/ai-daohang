@@ -195,6 +195,33 @@ def js_object(text,key):
     return None
 
 
+def x_dom_posts(tree,username):
+    """Fallback for pages without inline hydration data: parse rendered tweets from the DOM."""
+    out=[]
+    for art in tree.nodes('article'):
+        if art.attrs.get('data-testid')!='tweet':continue
+        status=None;stamp=None
+        for a in art.nodes('a'):
+            m=re.fullmatch('/'+re.escape(username)+'/status/(\\d+)',a.attrs.get('href') or '',re.IGNORECASE)
+            if not m:continue
+            status=m.group(1)
+            t=next(iter(a.nodes('time')),None) or next(iter(art.nodes('time')),None)
+            stamp=t.attrs.get('datetime') if t else None
+            break
+        if not status or not stamp:continue
+        try:when=dt.datetime.fromisoformat(stamp.replace('Z','+00:00'))
+        except ValueError:continue
+        body_el=next((d for d in art.nodes('div') if d.attrs.get('data-testid')=='tweetText'),None)
+        text=body_el.text() if body_el else ''
+        if not text:continue
+        out.append(item(username+' · '+text.splitlines()[0][:110],f'https://x.com/{username}/status/{status}',text,when.isoformat(),False))
+    seen=set();deduped=[]
+    for row in out:
+        if row['url'] in seen:continue
+        seen.add(row['url']);deduped.append(row)
+    return deduped
+
+
 def x_posts(tree,source):
     username=urllib.parse.urlparse(source['url']).path.strip('/');out=[]
     for script in tree.nodes('script'):
@@ -214,6 +241,7 @@ def x_posts(tree,source):
             if note:body=js_string(note,'text') or body
             timestamp=dt.datetime.fromtimestamp(int(date.group(1))/1000,dt.timezone.utc).isoformat()
             out.append(item(username+' · '+body.splitlines()[0][:110],f'https://x.com/{username}/status/{m.group(1)}',body,timestamp,False))
+    if not out:out=x_dom_posts(tree,username)
     if not out:raise SourceError('X 公开页未提供可核实正文和日期的帖子','blocked')
     return out
 

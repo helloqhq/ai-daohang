@@ -140,6 +140,6 @@ test('expanded agent catalog retains requested products, tiers and the Windsurf 
   }
   assert.deepEqual(filterPlans(snapshot.plans,{category:'agent',query:'Windsurf'}).map(p=>p.id),['devin-free','devin-pro','devin-max','devin-teams']);
   assert.deepEqual(filterPlans(snapshot.plans,{query:'opencode go'}).filter(p=>p.product_id==='opencode-go').map(p=>p.price.amount),[10,40]);
-  assert.equal(snapshot.plans.find(p=>p.id==='devin-teams').price.amount,120);
+  assert.equal(snapshot.plans.find(p=>p.id==='devin-teams').price.amount,80);
   assert.ok(!snapshot.plans.find(p=>p.id==='kiro-free').supported_models.includes('Claude Opus 5.5'));
 });

@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "aca972abe7ed0884",
-  "generated_at": "2026-11-19T15:03:18+00:00",
+  "snapshot_id": "650aa154cee1b245",
+  "generated_at": "2026-11-20T19:17:16+00:00",
   "months": [
     {
       "month": "2026-11",
       "path": "events/2026-11.json",
-      "count": 160,
+      "count": 178,
       "min_date": "2026-11-02",
-      "max_date": "2026-11-19T11:38:00+00:00"
+      "max_date": "2026-11-20T14:54:27Z"
     },
     {
       "month": "2026-10",
@@ -26,16 +26,34 @@
     }
   ],
   "event_locations": {
+    "kilo-7-8-32": "2026-11",
+    "copilot-cli-1-0-115-2": "2026-11",
+    "deeptutor-1-7-4-signing-key-rotation": "2026-11",
+    "pi-v160": "2026-11",
+    "codex-01710": "2026-11",
+    "hermes-v0233": "2026-11",
+    "anthropic-ipo-close-20261120": "2026-11",
+    "kiro-ide-1-5-remote-ssh": "2026-11",
+    "claude-code-v21329": "2026-11",
+    "hermes-v0232": "2026-11",
+    "kilo-gpt62-pyramid-test": "2026-11",
     "kimi-code-cli-2-7-0-20261119": "2026-11",
     "kimi-code-desktop-1-4-0-20261119": "2026-11",
+    "openai-performance-factory": "2026-11",
     "worldrouter-ragflow-provider-20261119": "2026-11",
     "claude-code-2-1-328-20261119": "2026-11",
+    "google-maxtext-streaming-diloco": "2026-11",
+    "google-tunix-agentic-rl-gemma-4": "2026-11",
+    "kiro-vscode-extension": "2026-11",
+    "kiro-crew-0-13": "2026-11",
+    "kiro-cloud-sessions-vpc": "2026-11",
     "tibo-gpt62-astra-hard-tasks-20261118": "2026-11",
     "chatgpt-for-accounting-20261118": "2026-11",
     "gemini-4-neon-20261118": "2026-11",
     "genie-4-availability-20261118": "2026-11",
     "tibo-asks-sol-feedback-20261118": "2026-11",
     "kilo-claude-linked-billing-20261118": "2026-11",
+    "nvidia-rtx-spark-compact-desktops": "2026-11",
     "b-ai-deepseek-v41-flash-discount-20261118": "2026-11",
     "openai-research-acceleration-20261118": "2026-11",
     "openai-frontier-risk-20261118": "2026-11",
@@ -579,5 +597,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 552
+  "total_events": 570
 }

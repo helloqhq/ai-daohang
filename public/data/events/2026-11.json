@@ -1,7 +1,494 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "aca972abe7ed0884",
+  "snapshot_id": "650aa154cee1b245",
   "events": [
+    {
+      "id": "kilo-7-8-32",
+      "kind": "update",
+      "published_at": "2026-11-20T14:54:27Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-20T19:00:55+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.32",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.32",
+          "collected_at": "2026-11-20T19:00:55+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "kilo"
+      ],
+      "topics": [
+        "availability",
+        "feature"
+      ],
+      "title_zh": "Kilo 7.8.32 弃用 Mercury Edit 2 自动补全，Codestral 成为默认补全模型",
+      "summary_zh": "Kilo VS Code 7.8.32 稳定版（汇总 7.8.30-7.8.31 变更）退役 Mercury Edit 2 自动补全模型与 Next Edit 功能，原 Mercury 或 Inception 选择改用 Codestral，SDK 移除 client.kilo.edit，@kilocode/kilo-gateway 不再导出 ./edit 与 ./edit-prompt。遥测偏好改为从 VS Code About 页或核心遥测 API 设置，Kilo 配置、VS Code 或环境任一禁用时遥测保持关闭。另含 Agent Manager 工作树删除确认防误触修复。",
+      "key_points_zh": [
+        "退役 Mercury Edit 2 自动补全模型与 Next Edit，Codestral 成为默认补全模型。",
+        "原 Mercury 或 Inception 选择改用 Codestral；SDK 移除 client.kilo.edit。",
+        "遥测偏好改经 VS Code About 或核心遥测 API 设置，任一层禁用即保持关闭。",
+        "修复按住按键或重复关闭命令误确认工作树删除的问题。"
+      ],
+      "importance_reason_zh": "自动补全模型整体退役并更换默认模型，影响所有 Kilo 用户的补全行为与第三方模型依赖。",
+      "title_en": "Kilo 7.8.32 retires Mercury Edit 2 autocomplete; Codestral becomes the default",
+      "summary_en": "Kilo VS Code 7.8.32 (rolling up 7.8.30-7.8.31) retires the Mercury Edit 2 autocomplete models and Next Edit. Saved Mercury or Inception selections move to Codestral, the SDK drops client.kilo.edit, and @kilocode/kilo-gateway no longer exports ./edit or ./edit-prompt. The telemetry preference moves to VS Code's About tab or the core telemetry API and stays off if Kilo config, VS Code, or the environment disables it. It also prevents held keys and repeated close commands from confirming worktree deletion in Agent Manager.",
+      "key_points_en": [
+        "Mercury Edit 2 autocomplete models and Next Edit are retired; Codestral becomes the default autocomplete model.",
+        "Saved Mercury or Inception selections use Codestral; the SDK drops client.kilo.edit.",
+        "The telemetry preference moves to VS Code About or the core telemetry API, staying off when any layer disables it.",
+        "Held keys and repeated close commands can no longer confirm worktree deletion in Agent Manager."
+      ],
+      "importance_reason_en": "Retiring an entire autocomplete model line and switching defaults changes completion behavior and third-party model dependencies for all Kilo users."
+    },
+    {
+      "id": "copilot-cli-1-0-115-2",
+      "kind": "update",
+      "published_at": "2026-11-20T14:33:56Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-20T19:00:54+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.115-2",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115-2",
+          "collected_at": "2026-11-20T19:00:54+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "copilot"
+      ],
+      "topics": [
+        "availability",
+        "feature"
+      ],
+      "title_zh": "Copilot CLI 1.0.115-2 接入 GPT-6.2 Astra、Gemini 4 Hydrogen 与 MAI-Code-2-Flash",
+      "summary_zh": "Copilot CLI 1.0.115-2 在 /model 选择器加入 GPT-6.2 Astra、Gemini 4 Hydrogen（账号可用时支持 Extra High 推理力度）与 New models 分组下的 MAI-Code-2-Flash。Windows 沙箱默认启用包查询，macOS 沙箱可配置额外 Mach 服务查询；/model 支持直接管理自定义提供方模型（Ctrl+X 再按 A 添加并切换）；原生化扩展可在用户调用其声明的斜杠命令时延迟激活；Browser Use 升级到 0.2.1，提供会话级标签页；新增 showTimelineTimestamps 设置。",
+      "key_points_zh": [
+        "/model 加入 GPT-6.2 Astra、Gemini 4 Hydrogen（可用时支持 Extra High）与 MAI-Code-2-Flash。",
+        "Windows 沙箱默认启用包查询，可用 sandbox.userPolicy.capabilities=[] 关闭。",
+        "macOS 沙箱支持通过 sandbox.userPolicy.seatbelt.extraMachLookups 放行特定 Mach 服务查询。",
+        "/model 可直接管理自定义提供方模型，Ctrl+X 再按 A 添加并可选切换。",
+        "原生化扩展按声明的斜杠命令延迟激活；Browser Use 0.2.1 提供会话级标签页；新增 showTimelineTimestamps。"
+      ],
+      "importance_reason_zh": "一次更新同时接入三款模型并默认放开 Windows 沙箱包查询，改变模型可用面与沙箱默认行为。",
+      "title_en": "Copilot CLI 1.0.115-2 adds GPT-6.2 Astra, Gemini 4 Hydrogen, and MAI-Code-2-Flash",
+      "summary_en": "Copilot CLI 1.0.115-2 adds GPT-6.2 Astra, Gemini 4 Hydrogen (with Extra High reasoning when available for your account), and MAI-Code-2-Flash under New models to the /model picker. Windows sandbox enables package queries by default (opt out via sandbox.userPolicy.capabilities=[]); macOS sandbox supports extra Mach service lookups; /model manages custom provider models directly (Ctrl+X then A to add and switch); native extensions activate lazily when their slash commands are invoked; Browser Use updates to 0.2.1 with session-scoped tabs; a showTimelineTimestamps setting is added.",
+      "key_points_en": [
+        "/model adds GPT-6.2 Astra, Gemini 4 Hydrogen (Extra High reasoning when available), and MAI-Code-2-Flash.",
+        "Windows sandbox enables package queries by default; opt out with sandbox.userPolicy.capabilities=[].",
+        "macOS sandbox supports specific Mach service lookups via sandbox.userPolicy.seatbelt.extraMachLookups.",
+        "/model manages custom provider models directly; Ctrl+X then A adds and optionally switches.",
+        "Native extensions activate lazily on their declared slash commands; Browser Use 0.2.1 adds session-scoped tabs; new showTimelineTimestamps setting."
+      ],
+      "importance_reason_en": "One release adds three models and turns on Windows sandbox package queries by default, changing both model availability and sandbox defaults."
+    },
+    {
+      "id": "deeptutor-1-7-4-signing-key-rotation",
+      "kind": "update",
+      "published_at": "2026-11-20T12:48:45Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-20T19:00:55+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "deeptutor-releases",
+          "content_id": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.7.4",
+          "url": "https://github.com/HKUDS/DeepTutor/releases/tag/v1.7.4",
+          "collected_at": "2026-11-20T19:00:55+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "deeptutor"
+      ],
+      "topics": [
+        "critical_fix"
+      ],
+      "title_zh": "DeepTutor 1.7.4 轮换运行时签名密钥：桌面发布凭据曾在 CI 产物中泄露",
+      "summary_zh": "DeepTutor 发布 1.7.4 安全更新：11 月 20 日其桌面版发布凭据在 GitHub Actions 产物中暴露（相关产物已删除）。新版本改用新公钥校验运行时更新；发现以旧密钥签名的已存运行时时，安装随新版打包的已验证运行时并在启动前备份工作区。带标签的桌面构建现需维护者批准才能访问发布凭据。",
+      "key_points_zh": [
+        "11 月 20 日桌面版发布凭据在 GitHub Actions 产物中暴露，相关产物已删除。",
+        "桌面应用改用新公钥校验运行时更新。",
+        "发现旧密钥签名的运行时时，安装随新版打包的已验证运行时并在启动前备份工作区。",
+        "带标签的桌面构建需维护者批准才能访问发布凭据。"
+      ],
+      "importance_reason_zh": "签名密钥轮换直接关系桌面更新链的可信性，凭据暴露属于真实供应链风险事件及其处置。",
+      "title_en": "DeepTutor 1.7.4 rotates runtime signing keys after desktop release credentials leaked in CI artifacts",
+      "summary_en": "DeepTutor shipped a 1.7.4 security update: on November 20, desktop release credentials were exposed in GitHub Actions artifacts (the artifacts have been removed). The desktop app now verifies runtime updates with a new public key; when it finds a saved runtime signed with the retired key, it installs the verified runtime bundled with the new app and backs up the existing workspace before starting it. Tagged desktop builds now require maintainer approval to access release credentials.",
+      "key_points_en": [
+        "On November 20, desktop release credentials were exposed in GitHub Actions artifacts; the artifacts have been removed.",
+        "The desktop app verifies runtime updates with a new public key.",
+        "When a runtime signed with the retired key is found, the verified bundled runtime is installed and the workspace is backed up before starting.",
+        "Tagged desktop builds now require maintainer approval to access release credentials."
+      ],
+      "importance_reason_en": "The signing-key rotation directly concerns trust in the desktop update chain, and the credential exposure is a real supply-chain incident plus its remediation."
+    },
+    {
+      "id": "pi-v160",
+      "kind": "update",
+      "published_at": "2026-11-20T11:35:03Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-20T19:00:54+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.6.0",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.6.0",
+          "collected_at": "2026-11-20T19:00:54+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "pi"
+      ],
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Pi 1.6.0 默认切换 GPT-6.2 Sol 并扩展 Qwen Token Plan 模型",
+      "summary_zh": "Pi 1.6.0 在 openai、azure 与 openai-codex 三个提供方接入 GPT-6.2 Astra 与 Sol，Sol 成为三者默认模型。Azure 上下文窗口 1.05M；Codex 提供 Sol 500K、Astra 272K。两个模型都拒绝 none 与 minimal 推理力度，思考等级 off 不可用。Qwen Token Plan Individual 提供方加入 qwen4-max-preview 与 deepseek-v4.1-flash（含 1017 版本）及各套餐 API key 变量。扩展组件 render() 改为返回 readonly string[]，就地修改输出的扩展需先复制，属破坏性变更。",
+      "key_points_zh": [
+        "GPT-6.2 Astra 与 Sol 进入 openai、azure、openai-codex 提供方，Sol 为默认。",
+        "Azure 上下文窗口 1.05M；Codex 上 Sol 500K、Astra 272K。",
+        "两模型拒绝 none/minimal 推理力度，思考等级 off 不可用。",
+        "Qwen Token Plan Individual 加入 qwen4-max-preview 与 deepseek-v4.1-flash（含 1017 版）。",
+        "破坏性变更：扩展组件 render() 返回 readonly string[]，就地修改输出需先复制。"
+      ],
+      "importance_reason_zh": "Pi 的默认模型切换到 GPT-6.2 Sol 直接改变用户默认体验，Qwen Token Plan 扩展让该订阅用户可用 DeepSeek 模型。",
+      "title_en": "Pi 1.6.0 makes GPT-6.2 Sol the default and expands Qwen Token Plan models",
+      "summary_en": "Pi 1.6.0 adds GPT-6.2 Astra and GPT-6.2 Sol to the openai, azure, and openai-codex providers, with Sol now the default for all three. Azure serves a 1.05M context window; Codex serves GPT-6.2 Sol with 500K and Astra with 272K. Both models reject reasoning effort none and minimal, so thinking level off is unavailable. The Qwen Token Plan Individual providers gain qwen4-max-preview and deepseek-v4.1-flash (plus the 1017 snapshot) with per-plan key variables. Extension components' render() now returns readonly string[], a breaking change requiring extensions to copy before mutating output.",
+      "key_points_en": [
+        "GPT-6.2 Astra and Sol join the openai, azure, and openai-codex providers, with Sol as the default.",
+        "Azure serves a 1.05M context window; Codex serves Sol with 500K and Astra with 272K.",
+        "Both models reject none/minimal reasoning effort; thinking level off is unavailable.",
+        "Qwen Token Plan Individual gains qwen4-max-preview and deepseek-v4.1-flash (plus the 1017 snapshot).",
+        "Breaking change: extension render() returns readonly string[]; in-place mutation requires copying first."
+      ],
+      "importance_reason_en": "Pi's default model switch to GPT-6.2 Sol directly changes the default user experience, and the Qwen Token Plan expansion lets those subscribers use DeepSeek models."
+    },
+    {
+      "id": "codex-01710",
+      "kind": "update",
+      "published_at": "2026-11-20T00:47:14Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-20T19:00:54+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+          "collected_at": "2026-11-20T19:00:54+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Codex CLI 0.171.0 默认接入 GPT-6.2 Sol 并默认启用 TUI 工作区",
+      "summary_zh": "Codex CLI 0.171.0 把 GPT-6.2 Sol 与 Astra 加入模型目录，Sol 成为目录默认；TUI 工作区默认启用，支持可搜索的文档预览、图像预览与子代理转录。新增 codex exec --remote 在已有应用服务器上启动或恢复非交互会话，以及 /rc 与 /remote 本地远程控制和设备配对码。",
+      "key_points_zh": [
+        "模型目录加入 GPT-6.2 Sol 与 Astra，Sol 成为默认选择。",
+        "TUI 工作区默认启用：可搜索文档预览、图像预览与主会话旁的子代理转录。",
+        "新增 codex exec --remote <ADDR> 在已有应用服务器上启动或恢复非交互会话。",
+        "新增 /rc 与 /remote 管理本地远程控制并显示设备配对码。",
+        "修复会话切换丢失草稿与排队追问、切换工作目录丢权限配置，以及无刷新令牌的 IdP 企业 MCP 登录失败。"
+      ],
+      "importance_reason_zh": "0.171.0 把 GPT-6.2 设为默认并默认开启 TUI 工作区，是 CLI 日常体验与默认模型行为的显著变化。",
+      "title_en": "Codex CLI 0.171.0 makes GPT-6.2 Sol the default and enables the TUI workspace by default",
+      "summary_en": "Codex CLI 0.171.0 adds GPT-6.2 Sol and Astra to the model catalogs with Sol as the default selection, and enables the TUI workspace by default with searchable document previews, image previews, and subagent transcripts. It adds codex exec --remote to start or resume noninteractive sessions on an existing app server, plus /rc and /remote for local remote control with device pairing codes.",
+      "key_points_en": [
+        "GPT-6.2 Sol and Astra join the model catalogs, with Sol as the default selection.",
+        "The TUI workspace is enabled by default: searchable document previews, image previews, and subagent transcripts beside the main conversation.",
+        "New codex exec --remote <ADDR> starts or resumes noninteractive sessions on an existing app server.",
+        "New /rc and /remote commands manage local remote control and display device pairing codes.",
+        "Fixes cover drafts and queued follow-ups lost when switching sessions, permission profiles dropped when changing working directories, and enterprise MCP sign-in for identity providers that issue ID tokens without refresh tokens."
+      ],
+      "importance_reason_en": "0.171.0 makes GPT-6.2 the default and turns on the TUI workspace by default, a notable change to daily CLI experience and default model behavior."
+    },
+    {
+      "id": "hermes-v0233",
+      "kind": "update",
+      "published_at": "2026-11-20T00:34:38Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-20T19:00:54+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3",
+          "collected_at": "2026-11-20T19:00:54+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "hermes"
+      ],
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "related_event_ids": [
+        "hermes-v0232"
+      ],
+      "title_zh": "Hermes Agent 0.23.3 稳定版上线：默认开启工具结果修剪并接入 GPT-6.2",
+      "summary_zh": "Hermes Agent 0.23.3 把 0.23.2 以来约 370 个 PR 打包为面向 GitHub、Microsoft Store、Docker 与 Hermes Cloud 的稳定版。窗口内变化包括：提示缓存生命周期控制器（长工具运行期间的缓存预热、空闲会话在 1 小时缓存到期前压缩、cache_ttl 默认 auto）、压缩会归档被丢弃的工具结果、主动工具结果修剪默认开启、一次提问即可完成的首跑设置（含免费额度），以及 OpenRouter 与 Nous Portal 接入 GPT-6.2 Astra 与 Sol（含 Pro）。",
+      "key_points_zh": [
+        "提示缓存生命周期控制器：长工具运行期间预热、空闲会话在 1 小时缓存到期前压缩，cache_ttl 默认 auto。",
+        "压缩归档被丢弃的工具结果，主动工具结果修剪默认开启。",
+        "首跑改为一次提问完成设置，包含免费额度。",
+        "OpenRouter 与 Nous Portal 提供 GPT-6.2 Astra 与 Sol（含 Pro）。"
+      ],
+      "importance_reason_zh": "0.23.3 是面向全渠道用户的稳定版，提示缓存与工具结果修剪默认值变化会影响所有会话的资源与上下文行为。",
+      "title_en": "Hermes Agent 0.23.3 ships stable with default-on tool-result pruning and GPT-6.2 access",
+      "summary_en": "Hermes Agent 0.23.3 rolls up about 370 PRs since 0.23.2 into a stable release for GitHub, the Microsoft Store, Docker, and Hermes Cloud. The window includes a prompt-cache lifecycle controller (warming through long tool runs, compacting idle chats before the 1h cache expires, cache_ttl defaulting to auto), compaction that archives dropped tool results, proactive tool-result pruning on by default, a one-question first-run setup that includes the free tier, and GPT-6.2 Astra and Sol (+ Pro) on OpenRouter and Nous Portal.",
+      "key_points_en": [
+        "Prompt-cache lifecycle controller: warming through long tool runs, idle chats compacted before the 1h cache expires, cache_ttl defaulting to auto.",
+        "Compaction archives the tool results it drops, and proactive tool-result pruning is on by default.",
+        "First-run setup now needs a single question and includes the free tier.",
+        "GPT-6.2 Astra and Sol (+ Pro) are available on OpenRouter and Nous Portal."
+      ],
+      "importance_reason_en": "0.23.3 is the stable channel release for all users; the new prompt-cache and tool-result pruning defaults change resource and context behavior in every session."
+    },
+    {
+      "id": "anthropic-ipo-close-20261120",
+      "kind": "update",
+      "published_at": "2026-11-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:53+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "anthropic-official",
+          "content_id": "https://www.anthropic.com/news/ipo-close",
+          "url": "https://www.anthropic.com/news/ipo-close",
+          "collected_at": "2026-11-20T19:00:53+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "entity_ids": [
+        "anthropic"
+      ],
+      "topics": [
+        "availability"
+      ],
+      "related_event_ids": [
+        "anthropic-ipo-pricing-20261118",
+        "anthropic-ipo-roadshow-20261110"
+      ],
+      "title_zh": "Anthropic 宣布 IPO 收官：全额行使超额配售并完成同步私募配售",
+      "summary_zh": "Anthropic 宣布完成首次公开募股交割：共发行 11.27 亿股 A 类普通股，发行价每股 83.00 美元，其中包含承销商全额行使的额外 1.47 亿股超额配售权；同步进行的私募配售也已一并交割。",
+      "key_points_zh": [
+        "IPO 共发行 1,127,000,000 股 A 类普通股，发行价每股 83.00 美元。",
+        "承销商可额外认购 147,000,000 股的超额配售权已全额行使。",
+        "同步进行的私募配售一并完成交割。"
+      ],
+      "importance_reason_zh": "IPO 交割与超额配售全额落地，标志上市融资阶段完成，直接影响 Anthropic 算力扩张与产品投入的可用资金。",
+      "title_en": "Anthropic announces closing of its IPO with full greenshoe exercise and concurrent private placement",
+      "summary_en": "Anthropic announced the closing of its initial public offering of an aggregate of 1,127,000,000 shares of Class A common stock at a public offering price of $83.00 per share, including the full exercise of the underwriters' option to purchase an additional 147,000,000 shares at the IPO price. The concurrent private placement also closed.",
+      "key_points_en": [
+        "The IPO totaled 1,127,000,000 Class A shares at a public offering price of $83.00 per share.",
+        "The underwriters' option to purchase an additional 147,000,000 shares was exercised in full.",
+        "The concurrent private placement closed alongside the IPO."
+      ],
+      "importance_reason_en": "The closing and full greenshoe exercise complete the listing stage of fundraising, directly affecting the capital available for Anthropic's compute expansion and product investment."
+    },
+    {
+      "id": "kiro-ide-1-5-remote-ssh",
+      "kind": "update",
+      "published_at": "2026-11-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:55+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/ide/1-5",
+          "url": "https://kiro.dev/changelog/ide/1-5",
+          "collected_at": "2026-11-20T19:00:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "entity_ids": [
+        "kiro"
+      ],
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro IDE 1.5 支持远程 SSH、Dev Containers 与 IDE 内云会话",
+      "summary_zh": "Kiro IDE 1.5 让用户直接在 IDE 里进入远程环境：可经 SSH 连接自己的 Linux 机器、在 Dev Container 中打开项目，或在独立 Kiro 窗口中打开云会话。",
+      "key_points_zh": [
+        "支持 SSH 连接自有 Linux 机器进行远程开发。",
+        "支持在 Dev Container 中打开项目。",
+        "云会话可在独立 Kiro 窗口中打开。"
+      ],
+      "importance_reason_zh": "远程 SSH 与 Dev Containers 是开发工具的关键基础设施能力，Kiro 由此补齐远程开发主路径。",
+      "title_en": "Kiro IDE 1.5 adds Remote SSH, Dev Containers, and cloud sessions in the IDE",
+      "summary_en": "Kiro IDE 1.5 lets you work in a remote environment from the IDE: connect to your own Linux machine over SSH, open a project in its Dev Container, or open a cloud session in its own Kiro window.",
+      "key_points_en": [
+        "Connect to your own Linux machine over SSH.",
+        "Open a project in its Dev Container.",
+        "Open a cloud session in its own Kiro window."
+      ],
+      "importance_reason_en": "Remote SSH and Dev Containers are core infrastructure capabilities for development tools, closing a major remote-development gap for Kiro."
+    },
+    {
+      "id": "claude-code-v21329",
+      "kind": "update",
+      "published_at": "2026-11-19T22:20:41+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:54+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-329",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-329",
+          "collected_at": "2026-11-20T19:00:54+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "claude-code",
+        "anthropic"
+      ],
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Claude Code 2.1.329 把定时任务与 loop 唤醒纳入 /tasks 并收紧 macOS 计算机使用规则",
+      "summary_zh": "Claude Code 2.1.329 的 /tasks 新增显示本会话的定时任务、/loop 唤醒、goal 与会话分叉，x 可在询问后停止单项；/mcp 服务器页新增 JSON-RPC 错误行；/status 新增托管市场自动更新状态行。Code Mode 可在启用 OpenTelemetry 事件与指标时开启，工具调用会发送事件。macOS 计算机使用改用更严格安全规则：部分操作被拒绝、部分应用权限收窄，未完成的启动 30 秒后放弃。",
+      "key_points_zh": [
+        "/tasks 汇总本会话定时任务、/loop 唤醒、goal 与会话分叉，x 经询问后停止。",
+        "Code Mode 与 OpenTelemetry 事件、指标可同时启用，工具调用发送事件。",
+        "/mcp 服务器页显示远端 HTTP 服务器拒绝连接的 JSON-RPC 错误；/status 显示托管市场自动更新状态。",
+        "macOS 计算机使用采用更严格安全规则：部分操作被拒、部分应用权限收窄、启动 30 秒未完成即放弃。",
+        "/code-review 不带目标时改为对照默认分支审查整个分支。"
+      ],
+      "importance_reason_zh": "定时任务与 loop 进入统一管理面板并支持终止，补齐长周期自动化任务的可观测性；macOS 计算机使用规则收紧影响自动化操作面。",
+      "title_en": "Claude Code 2.1.329 brings scheduled tasks and loop wakeups into /tasks and tightens macOS computer use rules",
+      "summary_en": "Claude Code 2.1.329 adds this session's scheduled tasks, /loop wakeups, the goal, and conversation forks to /tasks, with x stopping one after asking; /mcp server pages gain a JSON-RPC error row; /status gains a marketplace auto-update row. Code Mode can now run while OpenTelemetry events and metrics are enabled, with each tool call sending its events. Computer use on macOS switches to stricter safety rules: some actions are refused, some apps have less access, and an unfinished launch gives up after 30 seconds.",
+      "key_points_en": [
+        "/tasks aggregates this session's scheduled tasks, /loop wakeups, the goal, and conversation forks, with x stopping one after asking.",
+        "Code Mode works alongside OpenTelemetry events and metrics, with tool calls sending their events.",
+        "/mcp server pages show the JSON-RPC error of a refusing remote HTTP server; /status shows managed marketplace auto-update status.",
+        "Computer use on macOS follows stricter safety rules: some actions refused, some apps with less access, launches abandoned after 30 seconds.",
+        "/code-review with no target now reviews the whole branch against the default branch."
+      ],
+      "importance_reason_en": "Bringing scheduled tasks and loops into one manageable panel with stopping support closes a visibility gap for long-running automation, and tighter macOS computer-use rules shrink the blast radius of automated actions."
+    },
+    {
+      "id": "hermes-v0232",
+      "kind": "update",
+      "published_at": "2026-11-19T15:28:07Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-20T19:00:54+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2",
+          "collected_at": "2026-11-20T19:00:54+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "hermes"
+      ],
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Hermes Agent 0.23.2 引入可跨崩溃存活的持久子代理并修复高危漏洞",
+      "summary_zh": "Hermes Agent 0.23.2 汇总 0.23.1 以来约 1,989 个 PR：子代理可在网关重启或崩溃后存活并在独立会话中继续；Gemini 3 及之后版本与 Gemini 4 Carbon 默认走 Gemini Interactions API；Claude Mythos 5.2 增加 fast 模式；新增插件 API（ctx.fork_session、ctx.redact_text()、ctx.register_idle_task）与按任务的 cron 选项。安全方面修复 GHSA-p22p-9ph6-gmrh（CVE-2026-130164，High）：Bot Desktop 在 docker 或 ssh 终端后端下对 screen 环境文件做白名单校验。",
+      "key_points_zh": [
+        "持久子代理可在网关重启或崩溃后存活，并在自己的会话中继续。",
+        "Gemini 3+ 与 Gemini 4 Carbon 默认改用 Gemini Interactions API。",
+        "Claude Mythos 5.2 支持 fast 模式。",
+        "新增插件 API：ctx.fork_session、ctx.redact_text()、ctx.register_idle_task，以及按任务 cron 选项。",
+        "修复 CVE-2026-130164（High）：Bot Desktop docker/ssh 后端的 screen 环境文件改为白名单校验。"
+      ],
+      "importance_reason_zh": "持久子代理改变长时间任务的可靠性边界，High 级 CVE 修复直接影响 Bot Desktop 在容器与远程终端场景的安全。",
+      "title_en": "Hermes Agent 0.23.2 adds durable subagents that survive crashes and fixes a high-severity CVE",
+      "summary_en": "Hermes Agent 0.23.2 rolls up roughly 1,989 PRs since 0.23.1: durable subagents survive a gateway restart or crash and continue in their own conversation; the Gemini Interactions API becomes the default for Gemini 3 and later plus Gemini 4 Carbon; Claude Mythos 5.2 gains a fast mode; new plugin APIs (ctx.fork_session, ctx.redact_text(), ctx.register_idle_task) and per-job cron options land. Security: fixes GHSA-p22p-9ph6-gmrh (CVE-2026-130164, High) by allowlisting and validating the Bot Desktop screen env file under docker or ssh terminal backends.",
+      "key_points_en": [
+        "Durable subagents survive a gateway restart or crash and can be continued on their own conversation.",
+        "The Gemini Interactions API is now the default for Gemini 3 and later plus Gemini 4 Carbon.",
+        "Claude Mythos 5.2 gains a fast mode.",
+        "New plugin APIs: ctx.fork_session, ctx.redact_text(), ctx.register_idle_task, plus per-job cron options.",
+        "Fixes CVE-2026-130164 (High): the Bot Desktop screen env file under docker/ssh backends is now allowlisted and validated."
+      ],
+      "importance_reason_en": "Durable subagents change the reliability boundary for long-running tasks, and the High-severity CVE fix directly affects Bot Desktop safety in container and remote-terminal setups."
+    },
+    {
+      "id": "kilo-gpt62-pyramid-test",
+      "kind": "update",
+      "published_at": "2026-11-19T15:07:40+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:55+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/gpt-62-astra-vs-sol-in-kilo-the-great-pyramid",
+          "url": "https://blog.kilo.ai/p/gpt-62-astra-vs-sol-in-kilo-the-great-pyramid",
+          "collected_at": "2026-11-20T19:00:55+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "openai",
+        "kilo"
+      ],
+      "topics": [
+        "capability",
+        "pricing"
+      ],
+      "title_zh": "Kilo 用同题 3D 场景实测 GPT-6.2 Astra 与 Sol，并确认 API 定价变化",
+      "summary_zh": "Kilo 博客以同一提示让 GPT-6.2 Astra 与 Sol 各自构建埃及工人建造金字塔、船只沿河运石的交互式 3D 场景，并排对比输出。文中引用的标准 API 价：Astra 每百万输入 8 美元、输出 40 美元，较 GPT-6 Astra 下降 20%，缓存输入享 60% 折扣；Sol 每百万 2/10 美元，与 GPT-6.1 Sol 持平；输入超过 272K 后价格更高。两款模型面向 Plus、Pro、Enterprise、Edu 用户进入 ChatGPT Work 与 Codex，API 模型名为 gpt-6.2-astra 与 gpt-6.2-sol，上线即支持 Ultrafast。OpenAI 称 FrontierCode 2.0 上 Sol 在约五分之一成本下与 Astra 差距不足 0.5 分（均为 max 档）；其 Fable 5.2 在 Agents' Last Exam 的结果未包含 9 个使用回退模型的任务。",
+      "key_points_zh": [
+        "同题对比：两模型分别构建金字塔建造的交互式 3D 场景并排展示。",
+        "Astra 定价 $8/$40（每百万输入/输出），比 GPT-6 Astra 低 20%，缓存输入 60% 折扣；Sol 维持 GPT-6.1 Sol 的 $2/$10。",
+        "输入超 272K 后价格更高；两模型在 ChatGPT Work 与 Codex 面向 Plus/Pro/Enterprise/Edu，API 为 gpt-6.2-astra 与 gpt-6.2-sol，上线支持 Ultrafast。",
+        "OpenAI 称 FrontierCode 2.0 上 Sol 以约 1/5 成本达到与 Astra 差距不足 0.5 分（均为 max）。",
+        "OpenAI 的 Fable 5.2 在 Agents' Last Exam 的结果未计入 9 个使用回退模型的任务。"
+      ],
+      "importance_reason_zh": "该测试提供了 Astra 相对 GPT-6 Astra 降价 20% 的第三方确认与 Sol 的成本效率证据，价格信息与能力差距数字可直接用于选型。",
+      "title_en": "Kilo tests GPT-6.2 Astra vs. Sol on an identical 3D scene prompt and confirms pricing changes",
+      "summary_en": "Kilo's blog gave GPT-6.2 Astra and Sol the same prompt to build an interactive 3D scene of Egyptian workers building a pyramid with boats delivering stones along a river, comparing the results side by side. Cited standard API rates: Astra is $8/$40 per million input/output tokens, 20% lower than GPT-6 Astra, with a 60% discount on cached input; Sol holds GPT-6.1 Sol's $2/$10; rates are higher above 272K input tokens. Both models are in ChatGPT Work and Codex for Plus, Pro, Enterprise, and Edu users and in the API as gpt-6.2-astra and gpt-6.2-sol, with Ultrafast available at launch. OpenAI says Sol comes within 0.5 points of Astra on FrontierCode 2.0 at about one-fifth the cost (both at max), and that its Fable 5.2 Agents' Last Exam results omit nine tasks that used a fallback model.",
+      "key_points_en": [
+        "Identical-prompt comparison: each model built an interactive 3D pyramid-building scene, shown side by side.",
+        "Astra is priced $8/$40 per million input/output tokens, 20% lower than GPT-6 Astra, with a 60% cached-input discount; Sol keeps GPT-6.1 Sol's $2/$10.",
+        "Rates are higher above 272K input; both are in ChatGPT Work and Codex for Plus/Pro/Enterprise/Edu and the API as gpt-6.2-astra and gpt-6.2-sol, with Ultrafast at launch.",
+        "OpenAI says Sol comes within 0.5 points of Astra on FrontierCode 2.0 at about one-fifth the cost (both at max).",
+        "OpenAI's Fable 5.2 Agents' Last Exam results leave out nine tasks that used a fallback model."
+      ],
+      "importance_reason_en": "The test offers third-party confirmation of Astra's 20% price drop versus GPT-6 Astra and cost-efficiency evidence for Sol; the pricing and capability-gap numbers are directly useful for model selection."
+    },
     {
       "id": "kimi-code-cli-2-7-0-20261119",
       "entity_ids": [
@@ -83,6 +570,48 @@
       ]
     },
     {
+      "id": "openai-performance-factory",
+      "kind": "update",
+      "published_at": "2026-11-19T08:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:53+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+          "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+          "collected_at": "2026-11-20T19:00:53+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "OpenAI 介绍以 Codex 工作流驱动的 Performance Factory 维持 ChatGPT 性能",
+      "summary_zh": "OpenAI 发布工程文章，介绍其 Performance Factory：一套由 Codex 驱动的工作流系统，用于发现并修复性能问题，帮助 ChatGPT 保持快速响应。",
+      "key_points_zh": [
+        "Performance Factory 是一套 Codex 驱动的工作流系统。",
+        "用于发现并修复性能问题。",
+        "目标是帮助 ChatGPT 保持快速响应。"
+      ],
+      "importance_reason_zh": "把编码智能体用于自身产品的持续性能工程，是智能体进入关键生产运维环节的一手案例。",
+      "title_en": "OpenAI describes its Codex-powered Performance Factory that keeps ChatGPT fast",
+      "summary_en": "OpenAI published an engineering post describing the Performance Factory: a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+      "key_points_en": [
+        "The Performance Factory is a system of Codex-powered workflows.",
+        "It finds and fixes performance issues.",
+        "The goal is helping ChatGPT stay fast."
+      ],
+      "importance_reason_en": "Using coding agents for continuous performance engineering of its own product is a first-hand case of agents entering critical production operations."
+    },
+    {
       "id": "worldrouter-ragflow-provider-20261119",
       "entity_ids": [
         "worldrouter"
@@ -160,6 +689,210 @@
           "material_scope": "full_text"
         }
       ]
+    },
+    {
+      "id": "google-maxtext-streaming-diloco",
+      "kind": "update",
+      "published_at": "2026-11-19T00:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:55+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/distributed-llm-training-across-metros-streaming-diloco-in-maxtext/",
+          "url": "https://developers.googleblog.com/en/distributed-llm-training-across-metros-streaming-diloco-in-maxtext/",
+          "collected_at": "2026-11-20T19:00:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "entity_ids": [
+        "google"
+      ],
+      "topics": [
+        "capability",
+        "feature"
+      ],
+      "title_zh": "Google MaxText 支持 Streaming DiLoCo：跨都会区分布式训练通信量降逾 60 倍",
+      "summary_zh": "Google 介绍 MaxText 中的 Streaming DiLoCo：跨地理分布的 TPU 分片训练大语言模型时，以流式传输参数片段代替每一步同步完整模型，跨分片通信量削减逾 60 倍并消除网络停顿，可在不损害收敛与模型质量的前提下实现多数据中心扩展。",
+      "key_points_zh": [
+        "以流式参数片段替代每步全模型同步。",
+        "跨分片通信量削减超过 60 倍，消除网络停顿。",
+        "支持多数据中心扩展且不降低收敛与质量。"
+      ],
+      "importance_reason_zh": "60 倍通信削减把跨都会区广域训练从理论可行推向工程可用，改变大模型训练的地理布局成本结构。",
+      "title_en": "Google's MaxText adds Streaming DiLoCo, cutting cross-slice communication over 60x",
+      "summary_en": "Google describes Streaming DiLoCo in MaxText: for training LLMs across geographically distributed TPU slices, it streams parameter fragments instead of synchronizing full models at every step, cutting cross-slice communication volume by over 60x and eliminating network stalls, enabling multi-datacenter scaling without degrading convergence or quality.",
+      "key_points_en": [
+        "Streams parameter fragments instead of synchronizing full models every step.",
+        "Cuts cross-slice communication volume by over 60x and eliminates network stalls.",
+        "Enables multi-datacenter scaling without degrading convergence or quality."
+      ],
+      "importance_reason_en": "A 60x communication cut moves cross-metro wide-area training from theoretical to engineering-practical, changing the cost structure of geographic model-training footprints."
+    },
+    {
+      "id": "google-tunix-agentic-rl-gemma-4",
+      "kind": "update",
+      "published_at": "2026-11-19T00:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:55+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/multi-turn-agentic-reinforcement-learning-with-tunix-and-gemma-4-on-google-tpus/",
+          "url": "https://developers.googleblog.com/en/multi-turn-agentic-reinforcement-learning-with-tunix-and-gemma-4-on-google-tpus/",
+          "collected_at": "2026-11-20T19:00:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "entity_ids": [
+        "google"
+      ],
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Google 发布用 Tunix 与 Gemma 4 在 TPU 上训练多轮智能体 RL 的方法",
+      "summary_zh": "Google 工程博客给出在 Cloud TPU 上用 Tunix 与 Gemma 4 训练多轮、可使用工具的 LLM 智能体的完整方法：采用智能体化 GRPO 与异步 vLLM 回放，在交互环境中显著提升复杂推理与工具遵从。",
+      "key_points_zh": [
+        "面向多轮工具使用智能体的 RL 训练方法，基于 Tunix 与 Gemma 4。",
+        "使用智能体化 GRPO 与异步 vLLM 回放。",
+        "在交互环境中显著提升复杂推理与工具遵从。"
+      ],
+      "importance_reason_zh": "把多轮智能体 RL 的训练栈在 TPU 上工程化并开放方法，降低智能体训练复现门槛。",
+      "title_en": "Google details multi-turn agentic RL training with Tunix and Gemma 4 on TPUs",
+      "summary_en": "Google's engineering blog walks through training a multi-turn, tool-using LLM agent with Tunix and Gemma 4 on Cloud TPUs: agentic Group Relative Policy Optimization (GRPO) and asynchronous vLLM rollouts significantly improve complex reasoning and tool compliance in interactive environments.",
+      "key_points_en": [
+        "RL training recipe for multi-turn tool-using agents, built on Tunix and Gemma 4.",
+        "Uses agentic GRPO and asynchronous vLLM rollouts.",
+        "Substantially improves complex reasoning and tool compliance in interactive environments."
+      ],
+      "importance_reason_en": "Engineering the multi-turn agentic RL stack on TPUs and publishing the method lowers the reproduction barrier for agent training."
+    },
+    {
+      "id": "kiro-vscode-extension",
+      "kind": "update",
+      "published_at": "2026-11-19",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:55+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/extensions/kiro-for-vs-code",
+          "url": "https://kiro.dev/changelog/extensions/kiro-for-vs-code",
+          "collected_at": "2026-11-20T19:00:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "entity_ids": [
+        "kiro"
+      ],
+      "topics": [
+        "availability",
+        "feature"
+      ],
+      "title_zh": "Kiro 推出 VS Code 扩展并纳入所有套餐",
+      "summary_zh": "Kiro for VS Code 已可在 Visual Studio Marketplace 安装，支持 macOS、Windows 与 Linux，登录后即可使用。该扩展包含在每个 Kiro 套餐中，使用既有账号登录，套餐与计费不变。",
+      "key_points_zh": [
+        "Kiro for VS Code 已上架 Visual Studio Marketplace。",
+        "支持 macOS、Windows 与 Linux。",
+        "包含在每个 Kiro 套餐中，账号与计费不变。"
+      ],
+      "importance_reason_zh": "进入 VS Code 生态把 Kiro 从独立 IDE 扩展为主流编辑器内的可选代理层，显著扩大可触达用户面。",
+      "title_en": "Kiro ships a VS Code extension included in every plan",
+      "summary_en": "Kiro for VS Code is available from the Visual Studio Marketplace on macOS, Windows, and Linux, ready after sign-in. The extension is included in every Kiro plan: sign in with your existing account, with no change to plans or billing.",
+      "key_points_en": [
+        "Kiro for VS Code is available on the Visual Studio Marketplace.",
+        "It runs on macOS, Windows, and Linux.",
+        "It is included in every Kiro plan, with no change to accounts or billing."
+      ],
+      "importance_reason_en": "Entering the VS Code ecosystem extends Kiro beyond its standalone IDE into an optional agent layer in mainstream editors, substantially widening reach."
+    },
+    {
+      "id": "kiro-crew-0-13",
+      "kind": "update",
+      "published_at": "2026-11-19",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:55+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/crew/0-13",
+          "url": "https://kiro.dev/changelog/crew/0-13",
+          "collected_at": "2026-11-20T19:00:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "entity_ids": [
+        "kiro"
+      ],
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro Crew 0.13.0 向所有标准构建开放 Conductor 模式并支持随处回复",
+      "summary_zh": "Kiro Crew 0.13.0 在每个标准构建中启用原 Ultra 模式更名为 Conductor 模式的功能；用户可从侧边栏或自己的聊天应用回复需要介入的会话，可提前看到下一次更新，并可重开、分叉与优化会话。Files 与 Git 面板优先显示代理改动，Bot 可自选运行底座。",
+      "key_points_zh": [
+        "原 Ultra 模式以 Conductor 模式名义在所有标准构建开放。",
+        "可从侧边栏或自己的聊天应用回复待介入会话。",
+        "可提前查看下一次更新，重开、分叉与优化会话。",
+        "Files 与 Git 面板优先展示代理改动；Bot 可自选 harness。"
+      ],
+      "importance_reason_zh": "Conductor 模式从高级档位下放到全部标准构建并打通站外回复入口，改变 Crew 多会话编排的日常使用方式。",
+      "title_en": "Kiro Crew 0.13.0 opens Conductor Mode to everyone and adds replies from anywhere",
+      "summary_en": "Kiro Crew 0.13.0 turns on Conductor Mode, formerly Ultra Mode, in every standard build. You can answer a session that needs you from the sidebar or your own chat app, see the next update before it arrives, and reopen, fork, and optimize chats. The Files and Git panels lead with what the agent changed, and Bots choose their own harness.",
+      "key_points_en": [
+        "Conductor Mode, formerly Ultra Mode, is now on in every standard build.",
+        "Sessions needing input can be answered from the sidebar or your own chat app.",
+        "The next update can be previewed before it arrives, and chats can be reopened, forked, and optimized.",
+        "Files and Git panels lead with agent changes; Bots choose their own harness."
+      ],
+      "importance_reason_en": "Moving Conductor Mode from a premium tier into all standard builds, plus out-of-app replies, changes day-to-day multi-session orchestration in Crew."
+    },
+    {
+      "id": "kiro-cloud-sessions-vpc",
+      "kind": "update",
+      "published_at": "2026-11-19",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:55+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/general/connect-cloud-sessions-to-your-vpc",
+          "url": "https://kiro.dev/changelog/general/connect-cloud-sessions-to-your-vpc",
+          "collected_at": "2026-11-20T19:00:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "entity_ids": [
+        "kiro"
+      ],
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kiro 云会话可接入组织 Amazon VPC 私有资源",
+      "summary_zh": "Kiro 组织可将云会话连接到 Amazon VPC 中的私有资源：管理员在 Kiro 控制台创建连接，再在 Controls 中设为 profile 默认；新云会话沿用 VPC 的网络控制，团队无需把资源公开即可让 Kiro 访问。",
+      "key_points_zh": [
+        "云会话可连接 Amazon VPC 内的私有资源。",
+        "管理员在 Kiro 控制台创建连接并在 Controls 设为 profile 默认。",
+        "新云会话沿用 VPC 网络控制，资源无需公开。"
+      ],
+      "importance_reason_zh": "VPC 直连解决企业把 Kiro 接入内网数据与服务的合规前提，是云会话走向企业内网的关键能力。",
+      "title_en": "Kiro cloud sessions can connect to your organization's Amazon VPC",
+      "summary_en": "Kiro organizations can connect cloud sessions to private resources in an Amazon VPC: administrators create the connection in the Kiro console, then set it as the profile default in Controls. New cloud sessions use the VPC's network controls, so teams can give Kiro access without making those resources public.",
+      "key_points_en": [
+        "Cloud sessions can connect to private resources inside an Amazon VPC.",
+        "Administrators create the connection in the Kiro console and set it as the profile default in Controls.",
+        "New cloud sessions follow the VPC's network controls, with no need to expose resources publicly."
+      ],
+      "importance_reason_en": "Direct VPC connectivity addresses the compliance prerequisite for putting Kiro on internal data and services, a key capability for enterprise adoption of cloud sessions."
     },
     {
       "id": "tibo-gpt62-astra-hard-tasks-20261118",
@@ -425,6 +1158,48 @@
           "material_scope": "full_text"
         }
       ]
+    },
+    {
+      "id": "nvidia-rtx-spark-compact-desktops",
+      "kind": "update",
+      "published_at": "2026-11-18T14:00:31+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-20T19:00:46+00:00",
+      "updated_at": "2026-11-20T19:40:00+00:00",
+      "sources": [
+        {
+          "source_id": "nvidia-ai-blog",
+          "content_id": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/",
+          "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/",
+          "collected_at": "2026-11-20T19:00:46+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "entity_ids": [
+        "nvidia"
+      ],
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "NVIDIA RTX Spark 迷你桌面主机上市：华硕、戴尔、微星同步出货",
+      "summary_zh": "NVIDIA 宣布华硕、戴尔与微星的 RTX Spark 迷你桌面主机即日起上市，面向本地 AI 智能体、图像与视频生成及模型微调，统一内存最高 128GB。同步扩展的软件生态包括 Adobe 的 Windows on Arm 原生应用、Blender 的 DLSS Ray Reconstruction 与 ComfyUI 本地生成工作流，全部在单台 Windows PC 上运行。",
+      "key_points_zh": [
+        "华硕、戴尔、微星的 RTX Spark 迷你桌面主机即日上市。",
+        "统一内存最高 128GB，可容纳更大本地模型。",
+        "面向本地智能体、图像视频生成与模型微调的专用 Windows PC。",
+        "软件生态：Adobe Windows on Arm 原生应用、Blender DLSS Ray Reconstruction、ComfyUI 本地生成。"
+      ],
+      "importance_reason_zh": "桌面级 128GB 统一内存硬件把本地运行更大模型与常驻智能体变为消费级选择，扩大本地推理生态的硬件基础。",
+      "title_en": "NVIDIA RTX Spark compact desktops out now from ASUS, Dell, and MSI",
+      "summary_en": "NVIDIA announces that RTX Spark compact desktops from ASUS, Dell, and MSI are available today, bringing local AI agents, image and video generation, and model fine-tuning to a dedicated Windows PC with up to 128GB of unified memory. An expanding software ecosystem adds Adobe's native Windows on Arm applications, NVIDIA DLSS Ray Reconstruction in Blender, and local generation workflows in ComfyUI, all on one Windows PC.",
+      "key_points_en": [
+        "RTX Spark compact desktops from ASUS, Dell, and MSI are available now.",
+        "Up to 128GB of unified memory leaves room for larger local models.",
+        "A dedicated Windows PC built for local agents, image/video generation, and fine-tuning.",
+        "Software ecosystem: Adobe native Windows on Arm apps, DLSS Ray Reconstruction in Blender, and ComfyUI local generation workflows."
+      ],
+      "importance_reason_en": "Desktop-class 128GB unified-memory hardware makes running larger local models and always-on agents a consumer option, widening the hardware base for local inference."
     },
     {
       "id": "b-ai-deepseek-v41-flash-discount-20261118",

@@ -8,6 +8,8 @@
 
 ## 数据与核验
 
+2026-11-21 独立复核约 40 个官方价格 / 权益页，新增 OpenAI GPT-6.2 Astra / GPT-6.2 Sol / GPT-6.1 Terra 与 Google Gemini 4 Carbon / Neon / Hydrogen / Gemini 3.6 Flash 七项，目录共 143 项（API 71、Token Plan 19、Agent 52、聊天 1）。Mistral Large 4 于 11 月 5 日转 GA，标准价减半至 $0.7 / $2.1 / $0.07；Devin Teams 改为固定 $80/月（至多 100 名成员）；Antigravity 免费档第三方模型移除日期顺延至 11-30；MiniMax M2.7 已从官方价格页移除但保留历史价，K2 系列预告 12 月底退役，Kilo 的 MiniMax 免费优惠转待核验。77 项已有条目核验日期刷新为本轮（Mistral Large 4 与 Devin Teams 价格变化、GLM 三档与 MiniMax 旧 Token Plan 三档 pending 复核、其余 69 项价格重读未变）；59 项保留原日期。Anthropic 全部条目因地区封锁、codex Plus / Free / Go 因 Cloudflare 挑战页未核到，均保留原日期。详见 [本轮更新记录](DATA-UPDATE-2026-11-21.md)。
+
 2026-10-24 新增 Kimi K3.1 Pro / Highspeed 两个官方 API 端点，目录共 133 项。同步 Kimi 编程权益、OpenCode MiniMax M3.1 Flash 转计量及 Flint 40B 免费端点、Kiro 正式可用性与推理路由、Antigravity Pro 的 Argon 试用资格。两个 WorldRouter 旧详情页返回 404，标为待核验并保留历史价格日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-24.md)。
 
 2026-10-20 按新增与退役线索复核目录，新增 Mistral Large 4 Preview 官方 API 及五折优惠，共 129 项。Copilot 三档移除 10 月 19 日已退役模型；OpenCode 免费与 Go 模型表以 MiniMax M3.1 Flash Free 替代 Space Bunny。MiniMax 首月五折的三条记录因截止日缺年份保留 pending；6 项价格仍待核验，未批量刷新其他方案日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-20.md)。

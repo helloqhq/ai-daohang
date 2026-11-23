@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "55f638293ee897f2",
+  "snapshot_id": "805f82c2c15ba062",
   "entities": [
     {
       "id": "openai",
@@ -804,10 +804,37 @@
       "adapter": "rss",
       "feed_url": null,
       "feed_provider": "offline",
-      "subscription_note": "官方更新页已可按需转为含日期与正文的本地 RSS；尚无本轮验证可用的在线订阅，保留完整时间窗缺口。",
+      "subscription_note": "官方更新页已可按需转为含日期与正文的本地 RSS；尚无本轮验证可用的在线订阅，保留完整时间窗缺口。 2026-11-23 发现更新页对新模型发布存在滞后（GLM-5.4 当日发布未同步），博客公告改由 zhipu-blog 覆盖。",
       "feed_checked_at": "2026-10-04",
       "name_en": "Zhipu Model Releases",
-      "subscription_note_en": "The official changelog can be converted on demand to local RSS with dates and text. No online feed was verified as usable in this check; the full-window gap remains.",
+      "subscription_note_en": "The official changelog can be converted on demand to local RSS with dates and text. No online feed was verified as usable in this check; the full-window gap remains. On 2026-11-23 the changelog lagged a model launch (GLM-5.4 was not yet listed on release day); blog announcements are now covered by zhipu-blog.",
+      "offline_conversion": true
+    },
+    {
+      "id": "zhipu-blog",
+      "name": "智谱官方博客",
+      "name_en": "Z.ai Blog",
+      "entity_ids": [
+        "zhipu"
+      ],
+      "url": "https://z.ai/blog/glm-5.4",
+      "platform": "web",
+      "enabled": true,
+      "verification": "verified",
+      "verification_url": "https://z.ai/blog/glm-5.4",
+      "capabilities": {
+        "list": false,
+        "text": true,
+        "captions": false,
+        "complete_window": false
+      },
+      "adapter": "rss",
+      "feed_url": null,
+      "feed_provider": "offline",
+      "feed_date_precision": "date",
+      "subscription_note": "官方博客为前端渲染页面，按需用浏览器打开原文并转为本地 RSS 导入；尚无在线订阅，完整时间窗覆盖未确认。文章页标注日期（如 2026-11-23）。",
+      "subscription_note_en": "The official blog is client-rendered; posts are opened in a browser on demand and imported as local RSS. No online feed exists and full-window coverage is unconfirmed. Article pages carry an explicit date label (e.g. 2026-11-23).",
+      "feed_checked_at": "2026-11-23",
       "offline_conversion": true
     },
     {

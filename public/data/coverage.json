@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "55f638293ee897f2",
+  "snapshot_id": "805f82c2c15ba062",
   "sources": [
     {
       "source_id": "openai-official",
@@ -74,6 +74,19 @@
       "note": "离线 RSS 已导入，在线覆盖未确认",
       "note_en": "Offline RSS imported; online coverage remains unconfirmed.",
       "offline_import_at": "2026-11-17T13:41:46+00:00"
+    },
+    {
+      "source_id": "zhipu-blog",
+      "status": "partial",
+      "verification": "verified",
+      "last_attempt_at": "2026-11-23T15:06:38+00:00",
+      "fetched_through": null,
+      "reviewed_through": null,
+      "uncovered_from": "2026-11-19T00:00:00+00:00",
+      "pending_count": 0,
+      "note": "离线 RSS 已导入，在线覆盖未确认",
+      "note_en": "Offline RSS imported; online coverage remains unconfirmed.",
+      "offline_import_at": "2026-11-23T15:06:38+00:00"
     },
     {
       "source_id": "moonshot-official",

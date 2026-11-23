@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "55f638293ee897f2",
+  "snapshot_id": "805f82c2c15ba062",
   "events": [
     {
       "id": "opencode-2-4-0-20261123",
@@ -38,6 +38,51 @@
           "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
           "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
           "collected_at": "2026-11-23T13:54:51+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "glm-5-4-loop-transformer-20261123",
+      "entity_ids": [
+        "zhipu"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "availability"
+      ],
+      "title_zh": "智谱发布 GLM-5.4：首个 Loop Transformer 旗舰模型，宣称达 2T–3T 参数模型水平",
+      "summary_zh": "智谱 Z.ai 发布 GLM-5.4，这是其首个基于 Loop Transformer 架构的旗舰模型：将 GLM-5 基座的 28 层循环执行两遍，在 750B 参数量下宣称达到 2T–3T 参数模型的智力水平。为控制部署成本，模型引入逐 token 门控渐进更新、混合 KV Cache（复用第一遍的稀疏 KV 并叠加独立滑动窗口）和稀疏注意力索引复用，官方称在 1M 上下文下额外循环只增加一个滑动窗口的 KV 开销。智谱表示已按 1B、4B、30B、750B 逐级验证循环架构；30B 等参对照实验在仅增加约 10% 训练算力时，数学、科学推理和长上下文任务收益最大，部分基准输出长度下降 10–14%。推理方面，非高峰可达 200 tokens/s，高峰维持 70–80 tokens/s。模型已可通过 GLM Coding Plan、ZCode 和 Z.ai Chat 使用，API 标注「即将推出」，权重计划在完成安全加固后开源。官方也承认模型存在陷入过长「马拉松思考」循环的已知局限。",
+      "key_points_zh": [
+        "GLM-5.4 是首个采用 Loop Transformer 的旗舰模型：在 750B 的 GLM-5 基座上把 28 层循环两遍，官方宣称智力水平接近 2T–3T 参数模型。",
+        "架构改动包括逐 token 门控渐进更新、混合 KV Cache（复用第一遍稀疏 KV、叠加独立滑动窗口）和稀疏注意力索引复用；额外循环只需一个滑动窗口的 KV，1M 上下文下部署成本增幅受控。",
+        "循环架构按 1B、4B、30B、750B 逐级验证；30B 等参对照实验在约 10% 额外训练算力下，数学、科学推理与长上下文收益最大，GPQA-Diamond、MMLU-Pro 等基准平均输出长度下降 10–14%。",
+        "非高峰推理速度可达 200 tokens/s，高峰负载下维持 70–80 tokens/s；「Generalized Coding」演示涵盖自动配乐音乐视频、FreeCAD 六轴机械臂建模、完整游戏和交互式 3D 观鸟场景。",
+        "已可通过 GLM Coding Plan、ZCode 与 Z.ai Chat 使用，API 标注即将推出，权重计划在安全加固后开源；官方承认仍存在过长「马拉松思考」循环的局限。"
+      ],
+      "importance_reason_zh": "这是智谱旗舰模型首次切换循环架构，直接参与与 OpenAI、Anthropic、Google 旗舰模型的竞争；Coding Plan 用户可立即使用、API 与开源权重后续跟进，会影响开发者的模型选型与成本预期。",
+      "title_en": "Z.ai Releases GLM-5.4, Its First Loop Transformer Flagship, Claiming 2T–3T-Class Intelligence",
+      "summary_en": "Z.ai released GLM-5.4, its first flagship built on the Loop Transformer architecture: 28 layers of the GLM-5 base model run for two iterations, and the company claims 750B-scale GLM-5.4 matches the intelligence of 2T–3T parameter models. To control deployment cost it adds per-token gated progressive updates, a hybrid KV cache that reuses the first pass's sparse KV alongside an independent sliding window, and sparse attention index reuse; Z.ai says an extra loop costs only one sliding window of KV cache, keeping the deployment cost increase at 1M context under control relative to GLM-5.3. Z.ai reports validating the loop architecture progressively at 1B, 4B, 30B and 750B, with a 30B iso-parameter ablation showing the largest gains in math, scientific reasoning and long-context tasks at roughly 10% extra training compute, and 10–14% shorter average outputs on benchmarks such as GPQA-Diamond and MMLU-Pro. Inference reaches up to 200 tokens/s off-peak and 70–80 tokens/s at peak. The model is usable through GLM Coding Plan, ZCode and Z.ai Chat; the API is marked as coming soon, and weights are planned for release after safety hardening. Z.ai also acknowledges a known limitation: the model can get caught in overly long \"marathon thinking\" loops.",
+      "key_points_en": [
+        "GLM-5.4 is the first flagship built on Loop Transformer: 28 layers of the 750B GLM-5 base run for two iterations, which Z.ai claims brings it to the intelligence level of 2T–3T parameter models.",
+        "Architecture changes include per-token gated progressive updates, a hybrid KV cache reusing first-pass sparse KV plus an independent sliding window, and sparse attention index reuse; an extra loop costs only one sliding window of KV, keeping 1M-context deployment cost growth controlled.",
+        "The loop architecture was validated at 1B, 4B, 30B and 750B; a 30B iso-parameter comparison with about 10% more training compute shows the largest gains in math, scientific reasoning and long-context tasks, with average output length down 10–14% on benchmarks such as GPQA-Diamond and MMLU-Pro.",
+        "Throughput reaches up to 200 tokens/s off-peak and 70–80 tokens/s at peak; \"Generalized Coding\" demos cover a self-narrated music video, a 6-axis robotic arm modeled in FreeCAD, a complete game and an interactive 3D bird-watching experience.",
+        "Available through GLM Coding Plan, ZCode and Z.ai Chat; the API is marked coming soon and weights are planned for open release after safety hardening; Z.ai acknowledges a known limitation of overly long \"marathon thinking\" loops."
+      ],
+      "importance_reason_en": "Zhipu's flagship model switches to a looped architecture for the first time, directly competing with OpenAI, Anthropic and Google flagships; Coding Plan users can use it immediately while the API and open weights follow, affecting developer model selection and cost expectations.",
+      "published_at": "2026-11-23",
+      "date_precision": "date",
+      "first_collected_at": "2026-11-23T15:06:38+00:00",
+      "updated_at": "2026-11-23T15:07:38+00:00",
+      "sources": [
+        {
+          "source_id": "zhipu-blog",
+          "content_id": "https://z.ai/blog/glm-5.4",
+          "url": "https://z.ai/blog/glm-5.4",
+          "collected_at": "2026-11-23T15:06:38+00:00",
           "material_scope": "full_text"
         }
       ]

@@ -1,12 +1,12 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "55f638293ee897f2",
-  "generated_at": "2026-11-23T14:27:56+00:00",
+  "snapshot_id": "805f82c2c15ba062",
+  "generated_at": "2026-11-23T15:07:59+00:00",
   "months": [
     {
       "month": "2026-11",
       "path": "events/2026-11.json",
-      "count": 186,
+      "count": 187,
       "min_date": "2026-11-02",
       "max_date": "2026-11-23T09:22:21Z"
     },
@@ -27,6 +27,7 @@
   ],
   "event_locations": {
     "opencode-2-4-0-20261123": "2026-11",
+    "glm-5-4-loop-transformer-20261123": "2026-11",
     "deepseek-harness-0-2-3-alpha1-20261122": "2026-11",
     "openrouter-data-incidents-20261122": "2026-11",
     "claude-code-2-1-330-20261120": "2026-11",
@@ -605,5 +606,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 578
+  "total_events": 579
 }

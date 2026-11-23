@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "650aa154cee1b245",
-  "generated_at": "2026-11-20T19:17:16+00:00",
+  "snapshot_id": "55f638293ee897f2",
+  "generated_at": "2026-11-23T14:27:56+00:00",
   "months": [
     {
       "month": "2026-11",
       "path": "events/2026-11.json",
-      "count": 178,
+      "count": 186,
       "min_date": "2026-11-02",
-      "max_date": "2026-11-20T14:54:27Z"
+      "max_date": "2026-11-23T09:22:21Z"
     },
     {
       "month": "2026-10",
@@ -26,12 +26,20 @@
     }
   ],
   "event_locations": {
+    "opencode-2-4-0-20261123": "2026-11",
+    "deepseek-harness-0-2-3-alpha1-20261122": "2026-11",
+    "openrouter-data-incidents-20261122": "2026-11",
+    "claude-code-2-1-330-20261120": "2026-11",
     "kilo-7-8-32": "2026-11",
     "copilot-cli-1-0-115-2": "2026-11",
     "deeptutor-1-7-4-signing-key-rotation": "2026-11",
     "pi-v160": "2026-11",
+    "openai-adversarial-distillation-20261120": "2026-11",
     "codex-01710": "2026-11",
     "hermes-v0233": "2026-11",
+    "openai-medchembench-20261120": "2026-11",
+    "google-agent-anomaly-multicloud-20261120": "2026-11",
+    "google-semantic-governance-20261120": "2026-11",
     "anthropic-ipo-close-20261120": "2026-11",
     "kiro-ide-1-5-remote-ssh": "2026-11",
     "claude-code-v21329": "2026-11",
@@ -597,5 +605,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 570
+  "total_events": 578
 }

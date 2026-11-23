@@ -1,7 +1,181 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "650aa154cee1b245",
+  "snapshot_id": "55f638293ee897f2",
   "events": [
+    {
+      "id": "opencode-2-4-0-20261123",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "OpenCode 2.4.0 内置桌面浏览器与 Automations 自动化",
+      "summary_zh": "OpenCode v2.4.0 新增内置桌面浏览器与 Automations 自动化。浏览器可导入已有登录态与浏览历史，使用持久桌面配置，智能体可在同一应用内读取并操作页面；Automations 支持按定时器、cron 计划或 MCP 服务器事件运行提示词、脚本或 shell 命令。",
+      "key_points_zh": [
+        "内置桌面浏览器支持从 Chrome、Edge、Firefox 或 Safari 导入登录态与浏览历史，并可从 Chromium 浏览器或 Chrome、Edge 商店添加扩展",
+        "浏览器使用持久桌面配置：聊天链接保持登录、标签页在重启后保留，智能体可读取并操作同一批页面",
+        "Automations 可按定时器、cron 计划或 MCP 服务器事件运行提示词、脚本或 shell 命令，用 /automation 管理，配置 \"automations\": false 可关闭"
+      ],
+      "importance_reason_zh": "桌面内置浏览器与定时自动化显著扩展 OpenCode 作为桌面智能体的操作范围，浏览器登录态复用降低实际使用门槛。",
+      "title_en": "OpenCode 2.4.0 adds built-in desktop browser and Automations",
+      "summary_en": "OpenCode v2.4.0 adds a built-in desktop browser and Automations. The browser can import existing sign-ins and browsing history, keeps everything in one persistent desktop profile, and lets the agent read and drive the same pages without switching apps; Automations runs prompts, scripts, or shell commands on a timer, a cron schedule, or MCP server events.",
+      "key_points_en": [
+        "The built-in desktop browser imports sign-ins and browsing history from Chrome, Edge, Firefox, or Safari, and adds extensions from Chromium browsers or the Chrome and Edge stores",
+        "Everything stays in one persistent desktop profile: chat links open signed in, tabs survive restarts, and the agent can read and drive the same pages",
+        "Automations run a prompt, script, or shell command on a timer, on a cron schedule, or when an MCP server sends an event, managed with /automation and disabled with \"automations\": false"
+      ],
+      "importance_reason_en": "The desktop browser and scheduled automations materially widen what OpenCode can operate on as a desktop agent, and reusing browser sign-ins lowers the barrier to real use.",
+      "published_at": "2026-11-23T09:22:21Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-23T13:54:51+00:00",
+      "updated_at": "2026-11-23T14:05:00+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
+          "collected_at": "2026-11-23T13:54:51+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-harness-0-2-3-alpha1-20261122",
+      "entity_ids": [
+        "deepseek-harness"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "DeepSeek Harness 0.2.3-alpha.1：插件市场 Git 源、代码审阅页与连接器生态",
+      "summary_zh": "DeepSeek Harness（DSH）v0.2.3-alpha.1 集中扩充插件与协作能力：插件市场支持 Git 仓库（含私有仓库）来源，新增实验性时间线插件与代码审阅页面，Web 连接模式支持远程登录，连接器账号统一管理并新增 Linear、Notion 等连接器；Computer Use 调整授权方式并可经 cua-mcp 对外提供。该版本为 alpha，界面与接口多项调整要求插件按升级指南迁移。",
+      "key_points_zh": [
+        "插件市场支持添加 Git 仓库（含私有仓库）作为插件来源",
+        "新增实验性时间线插件，可查看智能体任务树、阻塞事项和进展报告",
+        "新增代码审阅页面集中查看本人相关的 GitHub PR 并可在页内与智能体协作审阅；审阅插件扩展机制支持自定义视图与行注解，同时支持评审和合并 GitLab",
+        "Web 连接模式新增远程登录，可使用独立登录链接或设备配对访问，并提供标准化连接鉴权 API",
+        "插件页统一管理连接器账号，MCP 支持 OAuth 授权与凭据自动刷新；新增 Linear、Notion、腾讯文档、飞书、企业微信、腾讯会议和钉钉连接器插件",
+        "Computer Use 在 macOS 统一系统键鼠输入授权、新增实验性 Windows 支持，并可通过 cua-mcp 以 MCP 服务器形式对外提供",
+        "Node PTC 默认在调用间保留变量并支持重复声明，移除 Python PTC 支持"
+      ],
+      "importance_reason_zh": "代码审阅、连接器生态与远程登录把 DSH 从单人桌面智能体向团队协作与外部服务集成推进，发布说明同时列出多项需要插件迁移的接口变更，实际升级成本可观。",
+      "title_en": "DeepSeek Harness 0.2.3-alpha.1: Git-sourced plugin market, code review page, and connector ecosystem",
+      "summary_en": "DeepSeek Harness (DSH) v0.2.3-alpha.1 expands plugin and collaboration features: the plugin market accepts Git repositories including private ones, an experimental Timeline plugin and a code review page arrive, web connection mode gains remote sign-in, connector accounts are managed in one place with new Linear, Notion, and other connectors; Computer Use changes its approval model and can be served through cua-mcp. This is an alpha release with several interface changes that require plugins to migrate per the upgrade guide.",
+      "key_points_en": [
+        "The plugin market can add Git repositories, including private ones, as plugin sources",
+        "A new experimental Timeline plugin shows agent task trees, blockers, and progress reports",
+        "A new code review page centrally lists GitHub pull requests involving you with in-page agent collaboration; plugins can extend review with custom views and line annotations, and GitLab merge requests can be reviewed and merged",
+        "Web connection mode adds remote sign-in via a dedicated link or device pairing, with a standardized connection authentication API for plugins",
+        "Connector accounts are managed from the Plugins page with MCP OAuth authorization and automatic credential refresh; optional connector plugins arrive for Linear, Notion, Tencent Docs, Feishu, WeCom, Tencent Meeting, and DingTalk",
+        "Computer Use unifies system keyboard and mouse approval on macOS, adds experimental Windows support, and can be served externally as an MCP server through cua-mcp",
+        "Node PTC retains variables across calls by default and allows redeclaration; Python PTC support is removed"
+      ],
+      "importance_reason_en": "Code review, connectors, and remote sign-in push DSH from a single-user desktop agent toward team collaboration and external service integration, and the release notes list multiple interface changes requiring plugin migration, so the upgrade cost is real.",
+      "published_at": "2026-11-22T06:40:15Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-23T13:54:51+00:00",
+      "updated_at": "2026-11-23T14:05:00+00:00",
+      "sources": [
+        {
+          "source_id": "deepseek-harness-releases",
+          "content_id": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.3-alpha.1",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.3-alpha.1",
+          "collected_at": "2026-11-23T13:54:51+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openrouter-data-incidents-20261122",
+      "entity_ids": [
+        "openrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "OpenRouter 通报推理提供商数据处理事件",
+      "summary_zh": "OpenRouter 发文通报：安全研究人员发现部分推理提供商未遵守其自身的数据政策；OpenRouter 称调查未显示其自身系统被突破，并说明已采取的措施与后续安排。本轮仅取得官方摘要，全文未入队。",
+      "key_points_zh": [
+        "安全研究人员发现部分推理提供商未遵守其自身数据政策",
+        "OpenRouter 称调查未显示 OpenRouter 本身被突破",
+        "OpenRouter 说明已采取的措施与后续步骤"
+      ],
+      "importance_reason_zh": "OpenRouter 聚合多家推理提供商，提供商层面的数据政策违约直接影响用户数据流向判断；平台对事件边界的澄清对依赖其路由的用户重要。",
+      "title_en": "OpenRouter discloses data processing incidents on inference providers",
+      "summary_en": "OpenRouter disclosed that security researchers found some inference providers did not uphold their own data policies; it states the findings did not show any breach of OpenRouter itself and describes what has been done and what comes next. Only the official summary was collected this round; the full article is not in the queue.",
+      "key_points_en": [
+        "Security researchers found that some inference providers did not uphold their own data policies",
+        "OpenRouter states the findings did not show any breach of OpenRouter itself",
+        "OpenRouter describes what it has done and what comes next"
+      ],
+      "importance_reason_en": "OpenRouter aggregates many inference providers, so provider-level data policy violations directly affect where user data may flow; the platform's clarification of the incident boundary matters to users relying on its routing.",
+      "published_at": "2026-11-22T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-23T13:54:51+00:00",
+      "updated_at": "2026-11-23T14:05:00+00:00",
+      "sources": [
+        {
+          "source_id": "openrouter-official",
+          "content_id": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+          "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+          "collected_at": "2026-11-23T13:54:51+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-330-20261120",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Claude Code 2.1.330：企业组织登录、内置 easel 图表与定时任务延长到 30 天",
+      "summary_zh": "Claude Code 2.1.330 支持登录 Enterprise Admin Console 管理的组织，新增内置 easel mod 在对话与 MCP 指标结果下绘制图表，定时任务与 /loop 最长运行时间从 7 天延长到 30 天，并恢复 2.1.329 移除的 max_tokens 超限自动重试。",
+      "key_points_zh": [
+        "支持登录 Anthropic Enterprise Admin Console 管理的组织：claude auth login 后应用组织设置并使用其云提供商或网关",
+        "新增内置 easel mod：按请求及 MCP 指标结果绘制图表，覆盖 Pro、Max 及可用的 Team、Enterprise（macOS 与 Linux），可在 /config 关闭自动图表",
+        "定时任务与 /loop 最长可运行 30 天（原 7 天），旧任务仍按 7 天结束",
+        "更多针对根目录、主目录、顶层文件夹或工作目录的 rm 命令改为请求批准，无人应答时直接拒绝",
+        "恢复 2.1.329 移除的 max_tokens 超过模型或网关上限时的自动重试",
+        "VS Code 新增 /fork 会话分叉、/workflows 工作流地图及 escapeStopsClaude、pinPrompt、contextUsageThreshold 等设置",
+        "自托管 runner 新增 --start-dir 指定仓库内起始目录，spawn-runner 钩子默认可并发运行（上限 --hook-concurrency，默认 4）"
+      ],
+      "importance_reason_zh": "组织级登录打通企业管理控制台，easel 让对话直接产出图表，30 天定时任务与 rm 审批调整影响长时自动化与安全默认值，均为可感知的使用变化。",
+      "title_en": "Claude Code 2.1.330: enterprise org sign-in, built-in easel charts, and 30-day scheduled tasks",
+      "summary_en": "Claude Code 2.1.330 adds sign-in to organizations managed in Anthropic's Enterprise Admin Console, a built-in easel mod that draws charts in conversations and under MCP metrics results, extends recurring tasks and /loop from 7 to up to 30 days, and restores the automatic retry for over-limit max_tokens that 2.1.329 removed.",
+      "key_points_en": [
+        "Sign-in to organizations managed in Anthropic's Enterprise Admin Console: after claude auth login, Claude Code applies the organization's settings and uses its cloud provider or gateway",
+        "A built-in easel mod draws charts when asked and under MCP metrics results, on Pro, Max and, where available, Team and Enterprise on macOS and Linux; turn automatic charts off in /config",
+        "Recurring scheduled tasks and /loop run up to 30 days instead of 7 while the session keeps running; tasks made before this release still end at 7 days",
+        "More rm commands aimed at the root, home, a top-level folder or the working folder ask for approval, and are refused where nobody can answer",
+        "Restores 2.1.329's removal of the automatic retry when max_tokens exceeds a model's or gateway's limit",
+        "VS Code adds /fork to fork a conversation, /workflows for the agent map, and settings including escapeStopsClaude, pinPrompt, and contextUsageThreshold",
+        "The self-hosted runner adds --start-dir to start work in a repository folder, and spawn-runner hooks run concurrently by default up to --hook-concurrency (4)"
+      ],
+      "importance_reason_en": "Organization sign-in connects Claude Code to enterprise admin, easel turns conversations into charts directly, and the 30-day task window plus rm approval changes affect long-running automation and safety defaults in noticeable ways.",
+      "published_at": "2026-11-20T22:38:51+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-23T13:53:35+00:00",
+      "updated_at": "2026-11-23T14:05:00+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-330",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-330",
+          "collected_at": "2026-11-23T13:53:35+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "kilo-7-8-32",
       "kind": "update",
@@ -178,6 +352,43 @@
       "importance_reason_en": "Pi's default model switch to GPT-6.2 Sol directly changes the default user experience, and the Qwen Token Plan expansion lets those subscribers use DeepSeek models."
     },
     {
+      "id": "openai-adversarial-distillation-20261120",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 说明应对对抗性蒸馏的分层防御方法",
+      "summary_zh": "OpenAI 发布题为 Combatting adversarial distillation 的文章，说明其结合模型训练、防护措施、检测与执法的分层方法，用于防止模型能力被对抗性蒸馏提取。本轮仅取得官方摘要，全文未入队。",
+      "key_points_zh": [
+        "OpenAI 公布针对对抗性蒸馏的分层方法，覆盖模型训练、防护措施、检测与执法",
+        "该方法的目标是防止通过蒸馏提取模型能力"
+      ],
+      "importance_reason_zh": "头部厂商公开描述防蒸馏的完整防御链条，反映模型保护与竞争边界的策略走向，对理解模型能力外流风险有参考价值。",
+      "title_en": "OpenAI describes its layered defense against adversarial distillation",
+      "summary_en": "OpenAI published \"Combatting adversarial distillation\", describing a layered approach that combines model training, safeguards, detection, and enforcement to protect against capability extraction. Only the official summary was collected this round; the full article is not in the queue.",
+      "key_points_en": [
+        "OpenAI outlines a layered approach to adversarial distillation covering model training, safeguards, detection, and enforcement",
+        "The approach aims to protect against capability extraction through distillation"
+      ],
+      "importance_reason_en": "A leading lab publicly describing its full anti-distillation defense chain signals how model protection and competitive boundaries are evolving, which is useful for understanding capability leakage risk.",
+      "published_at": "2026-11-20T10:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-23T13:53:24+00:00",
+      "updated_at": "2026-11-23T14:05:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/combatting-adversarial-distillation",
+          "url": "https://openai.com/index/combatting-adversarial-distillation",
+          "collected_at": "2026-11-23T13:53:24+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
       "id": "codex-01710",
       "kind": "update",
       "published_at": "2026-11-20T00:47:14Z",
@@ -268,6 +479,124 @@
         "GPT-6.2 Astra and Sol (+ Pro) are available on OpenRouter and Nous Portal."
       ],
       "importance_reason_en": "0.23.3 is the stable channel release for all users; the new prompt-cache and tool-result pruning defaults change resource and context behavior in every session."
+    },
+    {
+      "id": "openai-medchembench-20261120",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 推出药物发现评估基准 MedChemBench",
+      "summary_zh": "OpenAI 发布 MedChemBench，评估 AI 模型在早期药物发现中解读分子结构、基于实验证据推理以及选择候选化合物的能力。本轮仅取得官方摘要，全文未入队。",
+      "key_points_zh": [
+        "OpenAI 推出 MedChemBench 基准",
+        "基准评估模型解读分子结构、从实验证据推理与选择候选化合物的能力"
+      ],
+      "importance_reason_zh": "药物化学是 AI for Science 的重点方向，新基准为模型在真实科研任务上的表现提供了可比较的评估口径。",
+      "title_en": "OpenAI introduces MedChemBench for drug discovery evaluation",
+      "summary_en": "OpenAI released MedChemBench, a benchmark evaluating how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery. Only the official summary was collected this round; the full article is not in the queue.",
+      "key_points_en": [
+        "OpenAI introduces the MedChemBench benchmark",
+        "It evaluates models on interpreting molecular structures, reasoning from experimental evidence, and selecting candidate compounds"
+      ],
+      "importance_reason_en": "Medicinal chemistry is a focal AI-for-science direction, and the new benchmark gives comparable evaluation for model performance on real research tasks.",
+      "published_at": "2026-11-20T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-23T13:53:24+00:00",
+      "updated_at": "2026-11-23T14:05:00+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/introducing-medchembench",
+          "url": "https://openai.com/index/introducing-medchembench",
+          "collected_at": "2026-11-23T13:53:24+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "google-agent-anomaly-multicloud-20261120",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Google Agent Anomaly Detection 扩展支持 AWS、Azure 与本地部署智能体监控",
+      "summary_zh": "Google Cloud 宣布 Agent Anomaly Detection 现可监控运行在 AWS、Azure 或本地环境中的 ADK 智能体：通过 Telemetry API 摄取 OpenTelemetry 格式的追踪与日志，在 Google Cloud 项目中评估完整对话的行为漂移，无需访问智能体底层运行时，可检测越权行为、工具滥用与资源耗尽等风险。",
+      "key_points_zh": [
+        "Agent Anomaly Detection 现可监控运行在 AWS、Azure 或本地环境中的 ADK 智能体",
+        "通过 Telemetry API 摄取 OpenTelemetry 格式的追踪与日志，评估完整对话的行为漂移",
+        "无需访问智能体底层运行时，可检测越权行为、工具滥用与资源耗尽等风险"
+      ],
+      "importance_reason_zh": "把智能体行为安全监控扩展到多云与本地环境，回应企业智能体跨云部署的真实安全需求，是 11 月 12 日产品介绍的实质能力扩展。",
+      "title_en": "Google Agent Anomaly Detection extends monitoring to ADK agents on AWS, Azure, and on-premises",
+      "summary_en": "Google Cloud announced that Agent Anomaly Detection now monitors ADK agents running across AWS, Azure, or on-premises: it ingests OpenTelemetry-formatted traces and logs through the Telemetry API and evaluates full conversations for behavioral drift in your Google Cloud project without access to the agent's underlying runtime, detecting risks like rogue behaviors, tool misuse, and resource exhaustion.",
+      "key_points_en": [
+        "Agent Anomaly Detection now monitors ADK agents running across AWS, Azure, or on-premises",
+        "It ingests OpenTelemetry-formatted traces and logs through the Telemetry API and evaluates full conversations for behavioral drift",
+        "It needs no access to the agent's underlying runtime and detects risks like rogue behaviors, tool misuse, and resource exhaustion"
+      ],
+      "importance_reason_en": "Extending agent behavior monitoring to multi-cloud and on-premises deployments answers real security needs of enterprises running agents across clouds, a substantive capability expansion over the November 12 product introduction.",
+      "published_at": "2026-11-20T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-23T13:53:44+00:00",
+      "updated_at": "2026-11-23T14:05:00+00:00",
+      "related_event_ids": [
+        "google-agent-anomaly-detection-20261112"
+      ],
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/agent-anomaly-detection-safeguarding-agents-across-other-clouds/",
+          "url": "https://developers.googleblog.com/en/agent-anomaly-detection-safeguarding-agents-across-other-clouds/",
+          "collected_at": "2026-11-23T13:53:44+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "google-semantic-governance-20261120",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Google Cloud 推出语义治理策略，工具调用执行前内联审查",
+      "summary_zh": "Google Cloud 介绍 Semantic governance policies：开发者以自然语言规则约束 AI 智能体，策略引擎经 Agent Gateway 在每次工具调用执行前内联评估，比对用户意图与规则以阻止未授权数据共享和提示注入攻击，审计结论可经 Cloud Logging 查看。",
+      "key_points_zh": [
+        "语义治理策略在每次工具调用执行前内联评估提议的操作",
+        "策略引擎经 Agent Gateway 将操作与用户意图及自然语言规则比对",
+        "用于防止未授权数据共享与提示注入攻击，审计结论可经 Cloud Logging 查看"
+      ],
+      "importance_reason_zh": "在执行前审查工具调用是企业智能体安全的关键控制点，自然语言规则降低了治理策略的编写门槛。",
+      "title_en": "Google Cloud introduces Semantic governance policies that vet tool calls before execution",
+      "summary_en": "Google Cloud introduced Semantic governance policies: developers govern AI agents with plain-language rules, and the policy engine evaluates every proposed tool call inline before execution via Agent Gateway, checking actions against user intent and the rules to prevent unauthorized data sharing and prompt injection attacks, with auditable verdicts in Cloud Logging.",
+      "key_points_en": [
+        "Semantic governance policies evaluate every proposed tool call inline before execution",
+        "The policy engine checks each action against user intent and plain-language rules via Agent Gateway",
+        "They aim to prevent unauthorized data sharing and prompt injection attacks, with auditable verdicts in Cloud Logging"
+      ],
+      "importance_reason_en": "Vetting tool calls before execution is a key control point for enterprise agent security, and natural-language rules lower the bar for writing governance policies.",
+      "published_at": "2026-11-20T00:00:00+00:00",
+      "date_precision": "datetime",
+      "first_collected_at": "2026-11-23T13:53:44+00:00",
+      "updated_at": "2026-11-23T14:05:00+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/",
+          "url": "https://developers.googleblog.com/en/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/",
+          "collected_at": "2026-11-23T13:53:44+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
     },
     {
       "id": "anthropic-ipo-close-20261120",

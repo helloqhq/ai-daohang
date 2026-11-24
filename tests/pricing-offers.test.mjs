@@ -12,18 +12,21 @@ const free=snapshot.plans.find(plan=>plan.id==='kiro-free');
 const discount=snapshot.plans.find(plan=>plan.id==='deepseek-v4-1-flash');
 
 test('free access distinguishes inference allowances from free clients and stopped access',()=>{
-  const reviewed=new Date('2026-10-21T14:00:00Z');
+  const reviewed=new Date('2026-11-24T14:00:00Z');
   const ids=filterPlans(snapshot.plans,{offer:'free'},reviewed).map(plan=>plan.id);
   for(const id of ['kiro-free','codex-free','cursor-x-free','opencode-free']) assert.ok(ids.includes(id));
   for(const id of ['pi-free','cline-free','aider-free','gemini-cli-free']) assert.ok(!ids.includes(id));
   assert.ok(filterPlans(snapshot.plans,{offer:'free',includeUnavailable:true},reviewed).some(plan=>plan.id==='gemini-cli-free'));
   const limited=filterPlans(snapshot.plans,{offer:'free',offerKind:'limited-time'},reviewed);
-  assert.deepEqual(limited.map(plan=>plan.id).sort(),['opencode-free']);
+  assert.deepEqual(limited.map(plan=>plan.id).sort(),['kilo-free','opencode-free']);
+  const devinFlash=snapshot.plans.find(plan=>plan.id==='devin-free').offers.find(offer=>offer.id==='swe-2-flash-free');
+  assert.equal(devinFlash.status,'verified');
+  assert.equal(devinFlash.ends_at,'2026-12-04T18:00:00+00:00');
   assert.ok(limited.find(plan=>plan.id==='opencode-free').offers[0].models.includes('DeepSeek V4.1 Flash Free'));
-  assert.ok(filterPlans(snapshot.plans,{offer:'free',offerKind:'limited-time',includeUnavailable:true},reviewed).some(plan=>plan.id==='kilo-free'));
-  const kiloOffer=snapshot.plans.find(plan=>plan.id==='kilo-free').offers[0];
-  assert.equal(kiloOffer.status,'pending');
-  assert.deepEqual(kiloOffer.models,['MiniMax M3.1 Flash']);
+  assert.ok(filterPlans(snapshot.plans,{offer:'free',offerKind:'limited-time',includeUnavailable:true},reviewed).some(plan=>plan.id==='devin-pro'&&plan.offers.some(offer=>offer.id==='swe-2-self-serve-free'&&offer.status==='pending')));
+  const kiloOffer=snapshot.plans.find(plan=>plan.id==='kilo-free').offers.find(offer=>offer.id==='minimax-m31-flash-launch-free');
+  assert.equal(kiloOffer.status,'verified');
+  assert.deepEqual(kiloOffer.models,['minimax/minimax-m3.1-flash:free']);
 });
 test('shared chat and agent subscriptions appear once and work with other filters',()=>{
   const shared=snapshot.plans.find(plan=>plan.id==='cursor-x-free');

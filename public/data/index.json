@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "805f82c2c15ba062",
-  "generated_at": "2026-11-23T15:07:59+00:00",
+  "snapshot_id": "30fd56a914ffd4f2",
+  "generated_at": "2026-11-24T15:44:58+00:00",
   "months": [
     {
       "month": "2026-11",
       "path": "events/2026-11.json",
-      "count": 187,
+      "count": 213,
       "min_date": "2026-11-02",
-      "max_date": "2026-11-23T09:22:21Z"
+      "max_date": "2026-11-24T06:00:07+00:00"
     },
     {
       "month": "2026-10",
@@ -26,10 +26,27 @@
     }
   ],
   "event_locations": {
+    "zuck-aluminium-pronunciation-20261124": "2026-11",
+    "gemini-cli-0-71-1-a2a-auth-20261124": "2026-11",
+    "gemini-cli-0-72-0-preview-0-20261124": "2026-11",
+    "codex-0-172-0-20261124": "2026-11",
+    "qoder-0-5-18-20261124": "2026-11",
+    "claude-code-2-1-331-20261123": "2026-11",
+    "openai-cisco-shirudo-20261123": "2026-11",
+    "google-quantum-agents-lean-20261123": "2026-11",
+    "kimi-code-2-7-3-desktop-1-4-3-20261123": "2026-11",
+    "opencode-2-4-1-20261123": "2026-11",
+    "kimi-code-2-8-0-canary-20261123": "2026-11",
     "opencode-2-4-0-20261123": "2026-11",
     "glm-5-4-loop-transformer-20261123": "2026-11",
+    "hermes-v0234": "2026-11",
+    "zcode-4-0-0-20261123": "2026-11",
+    "kiro-claude-fable-5-2-preview-20261123": "2026-11",
+    "siliconflow-xing4-0-29b-retirement-20261123": "2026-11",
+    "devin-2026-11-23": "2026-11",
     "deepseek-harness-0-2-3-alpha1-20261122": "2026-11",
     "openrouter-data-incidents-20261122": "2026-11",
+    "zcode-3-19-1-20261122": "2026-11",
     "claude-code-2-1-330-20261120": "2026-11",
     "kilo-7-8-32": "2026-11",
     "copilot-cli-1-0-115-2": "2026-11",
@@ -43,6 +60,9 @@
     "google-semantic-governance-20261120": "2026-11",
     "anthropic-ipo-close-20261120": "2026-11",
     "kiro-ide-1-5-remote-ssh": "2026-11",
+    "qoder-0-5-17-20261120": "2026-11",
+    "minimax-internal-model-cryptanalysis-20261120": "2026-11",
+    "devin-2026-11-20": "2026-11",
     "claude-code-v21329": "2026-11",
     "hermes-v0232": "2026-11",
     "kilo-gpt62-pyramid-test": "2026-11",
@@ -56,6 +76,8 @@
     "kiro-vscode-extension": "2026-11",
     "kiro-crew-0-13": "2026-11",
     "kiro-cloud-sessions-vpc": "2026-11",
+    "qoder-0-5-16-20261119": "2026-11",
+    "devin-2026-11-19": "2026-11",
     "tibo-gpt62-astra-hard-tasks-20261118": "2026-11",
     "chatgpt-for-accounting-20261118": "2026-11",
     "gemini-4-neon-20261118": "2026-11",
@@ -73,6 +95,7 @@
     "openai-chip-design-20261118": "2026-11",
     "kiro-ide-20261118-gitlab-mcp": "2026-11",
     "anthropic-ipo-pricing-20261118": "2026-11",
+    "devin-2026-11-18": "2026-11",
     "mai-code-2-copilot-20261117": "2026-11",
     "copilot-ignite-20261117": "2026-11",
     "gpt-6-2-astra-sol-20261117": "2026-11",
@@ -81,6 +104,8 @@
     "copilot-cli-1-0-113-1-20261117": "2026-11",
     "openai-nato-cyber-defense-20261117": "2026-11",
     "gemini-4-hydrogen-robotics-20261117": "2026-11",
+    "google-abfs-open-source-20261117": "2026-11",
+    "google-ai-studio-android-fullstack-20261117": "2026-11",
     "nvidia-dgx-spark-hpc-kit-20261116": "2026-11",
     "claude-code-2-1-326-20261116": "2026-11",
     "copilot-weekly-20261116": "2026-11",
@@ -199,6 +224,7 @@
     "kiro-models-haiku-5-5-kimi-k3": "2026-11",
     "kiro-credit-pooling": "2026-11",
     "swe-2-flash": "2026-11",
+    "devin-2026-11-04": "2026-11",
     "copilot-jetbrains-air": "2026-11",
     "claude-code-2-1-317": "2026-11",
     "kiro-cli-3-0-v3-default": "2026-11",
@@ -606,5 +632,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 579
+  "total_events": 605
 }

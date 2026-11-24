@@ -1,7 +1,505 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "805f82c2c15ba062",
+  "snapshot_id": "30fd56a914ffd4f2",
   "events": [
+    {
+      "id": "zuck-aluminium-pronunciation-20261124",
+      "entity_ids": [
+        "meta"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "扎克伯格称已训练某产品新的 aluminium 发音",
+      "summary_zh": "马克·扎克伯格转发并写道：“We’ve even trained it on a new way to pronounce ‘aluminium’. Give it a try today.” 帖中未说明 it 指代的产品或模型，也未给出新的可用时间；被引用的英国用户提问来自 2026 年 9 月 9 日，不能据此推断当前英国可用性。",
+      "key_points_zh": [
+        "扎克伯格本人表示已训练某对象新的 aluminium 发音。",
+        "原帖没有说明对象、模型名称、实现方式或适用地区。",
+        "引用的英国可用性提问日期为 2026 年 9 月 9 日，不是本次发帖日期。"
+      ],
+      "importance_reason_zh": "这是负责人账号中的一手产品进展表述，但对象和范围不明确，应保留归属与证据边界。",
+      "title_en": "Zuckerberg says a product was trained for a new aluminium pronunciation",
+      "summary_en": "Mark Zuckerberg reposted and wrote, “We’ve even trained it on a new way to pronounce ‘aluminium’. Give it a try today.” The post does not identify the product or model or give a new availability date. The quoted UK user question is dated September 9, 2026, so it does not establish current UK availability.",
+      "key_points_en": [
+        "Zuckerberg says an unspecified subject was trained for a new aluminium pronunciation.",
+        "The post does not name the product, model, implementation or applicable region.",
+        "The quoted UK availability question is dated September 9, 2026, not the date of this repost."
+      ],
+      "importance_reason_en": "This is a first-hand product-progress statement from a verified responsible person, but its subject and scope remain unclear and must stay attributed.",
+      "published_at": "2026-11-24T06:00:07+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:18:29+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "mark-zuckerberg-threads",
+          "content_id": "https://www.threads.com/t/DgHQuRJm8lC",
+          "url": "https://www.threads.com/t/DgHQuRJm8lC",
+          "collected_at": "2026-11-24T15:18:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-0-71-1-a2a-auth-20261124",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "api"
+      ],
+      "title_zh": "Gemini CLI 0.71.1 修复 A2A 服务认证与输入校验",
+      "summary_zh": "Gemini CLI 0.71.1 将 nightly 提交 aafdfdf 回补到稳定版，要求 A2A 服务强制执行 bearer token 认证并校验请求输入。同一修复也出现在 0.71.0-nightly.20261124.gaafdfdfb5 中。",
+      "key_points_zh": [
+        "0.71.1 回补 A2A 服务认证修复。",
+        "A2A 服务强制执行 bearer token 认证。",
+        "A2A 服务增加请求输入校验。"
+      ],
+      "importance_reason_zh": "修复直接关系 Agent 服务端点的访问控制与输入边界。",
+      "title_en": "Gemini CLI 0.71.1 patches A2A authentication and input validation",
+      "summary_en": "Gemini CLI 0.71.1 cherry-picks nightly commit aafdfdf into the stable line, enforcing bearer-token authentication and request-input validation in the A2A server. The same fix appears in 0.71.0-nightly.20261124.gaafdfdfb5.",
+      "key_points_en": [
+        "0.71.1 cherry-picks the A2A server authentication fix.",
+        "The A2A server now enforces bearer-token authentication.",
+        "The A2A server validates request input."
+      ],
+      "importance_reason_en": "The patch directly strengthens access control and input boundaries for Agent service endpoints.",
+      "published_at": "2026-11-24T03:50:24Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-24T15:18:10+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.1",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.1",
+          "collected_at": "2026-11-24T15:18:10+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.0-nightly.20261124.gaafdfdfb5",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.0-nightly.20261124.gaafdfdfb5",
+          "collected_at": "2026-11-24T15:18:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "gemini-cli-0-72-0-preview-0-20261124",
+      "entity_ids": [
+        "gemini-cli"
+      ],
+      "kind": "preview",
+      "topics": [
+        "critical_fix",
+        "compatibility",
+        "feature"
+      ],
+      "title_zh": "Gemini CLI 0.72.0 预览版调整忽略规则与会话恢复",
+      "summary_zh": "Gemini CLI 0.72.0-preview.0 修复 dir/** 下嵌套 .gitignore 否定规则的解析、Windows 波浪号与反斜杠家目录路径，并将恢复目标改为最近活跃而非最近启动的会话。预览版同时包含 A2A bearer token 认证和请求输入校验修复。",
+      "key_points_zh": [
+        "修复 dir/** 模式下嵌套 .gitignore 否定规则。",
+        "支持 Windows 下波浪号和反斜杠表示的家目录相对路径。",
+        "恢复时选择最近活跃会话，而不是最近启动会话。",
+        "包含 A2A bearer token 认证与请求输入校验修复。"
+      ],
+      "importance_reason_zh": "预览版改变文件上下文匹配和会话恢复行为，可能影响开发者的工作区与续接流程。",
+      "title_en": "Gemini CLI 0.72.0 preview changes ignore handling and session resume",
+      "summary_en": "Gemini CLI 0.72.0-preview.0 fixes nested .gitignore negations under dir/** patterns and Windows tilde/backslash home-relative paths, and resumes the most recently active session rather than the most recently started one. The preview also includes A2A bearer-token authentication and request-input validation.",
+      "key_points_en": [
+        "Fixes nested .gitignore negations under dir/** patterns.",
+        "Supports Windows tilde and backslash home-relative paths.",
+        "Resumes the most recently active session instead of the most recently started session.",
+        "Includes A2A bearer-token authentication and request-input validation."
+      ],
+      "importance_reason_en": "The preview changes workspace context matching and session-resume behavior, both of which can affect daily developer workflows.",
+      "published_at": "2026-11-24T00:34:15Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-24T15:18:10+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "gemini-cli-releases",
+          "content_id": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.72.0-preview.0",
+          "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.72.0-preview.0",
+          "collected_at": "2026-11-24T15:18:10+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "gemini-cli-0-71-1-a2a-auth-20261124"
+      ]
+    },
+    {
+      "id": "codex-0-172-0-20261124",
+      "entity_ids": [
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Codex 0.172.0 改进线程导航、MCP 启动与权限审查",
+      "summary_zh": "Codex 0.172.0 在终端界面加入线程链接打开、斜杠命令参数补全和任务组导航，默认延迟启动 stdio MCP 服务，并允许 Codex 应用按工具配置审批审查者。更新还修复沙箱与工作目录跨平台保留、父回合中断后消息保留及提供商错误提示等问题。",
+      "key_points_zh": [
+        "终端界面支持打开 Codex 线程链接、斜杠命令参数补全和任务组导航。",
+        "stdio MCP 服务默认延迟启动；Codex 应用支持按工具设置审批审查者。",
+        "修复沙箱可写根、工作目录和线程工作目录的跨平台保留问题。",
+        "父回合中断时保留排队消息，并更早显示 Responses 流与提供商错误。"
+      ],
+      "importance_reason_zh": "更新同时改善日常导航、MCP 性能、审批颗粒度和沙箱恢复可靠性。",
+      "title_en": "Codex 0.172.0 improves thread navigation, MCP startup and approval reviews",
+      "summary_en": "Codex 0.172.0 adds thread-link navigation, slash-command argument completion and task-group navigation in the TUI, enables lazy startup for stdio MCP servers by default, and lets Codex apps configure per-tool approval reviewers. It also fixes sandbox and working-directory preservation across platforms, queued messages after interrupted parent turns, and provider-error reporting.",
+      "key_points_en": [
+        "The TUI can open Codex thread links, complete slash-command arguments and navigate task groups.",
+        "Stdio MCP servers start lazily by default; Codex apps support per-tool approval reviewers.",
+        "Fixes preserve sandbox writable roots, workspace roots and thread working directories across platforms.",
+        "Queued messages survive interrupted parent turns, and Responses stream and provider errors surface earlier."
+      ],
+      "importance_reason_en": "The release improves everyday navigation, MCP performance, approval granularity and sandbox recovery reliability.",
+      "published_at": "2026-11-24T00:06:41Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-24T15:18:10+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "codex-releases",
+          "content_id": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+          "collected_at": "2026-11-24T15:18:10+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "qoder-0-5-18-20261124",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "feature"
+      ],
+      "title_zh": "Qoder 0.5.18 修复远程控制与本地 MCP 配置阻断",
+      "summary_zh": "Qoder 0.5.18 改进远程设备后台任务进度和结束状态同步，修复设备时钟差异导致的配对失败，以及部分 Remote SSH 工作区在主机地址变化后无法重连的问题。损坏或不可读的本地 MCP 配置不再阻断对话与自动化。",
+      "key_points_zh": [
+        "改进远程设备后台任务进度与结束状态同步，修复时钟差异导致的配对失败。",
+        "修复部分 Remote SSH 工作区的预检、旧对话恢复和主机地址变化后重连问题。",
+        "损坏或不可读的本地 MCP 配置不再阻断对话与自动化。",
+        "修复跨文件系统保存图片附件、插件失败提示和移动端工具进度显示。"
+      ],
+      "importance_reason_zh": "更新聚焦远程工作与本地配置的阻断性问题，影响日常任务连续性。",
+      "title_en": "Qoder 0.5.18 fixes remote-control and local MCP blockers",
+      "summary_en": "Qoder 0.5.18 improves remote-device background-task progress and completion synchronization, fixes pairing failures caused by clock differences, and addresses Remote SSH preflight, old-conversation resume and reconnection issues. Corrupt or unreadable local MCP configurations no longer block conversations or automations.",
+      "key_points_en": [
+        "Improves remote background-task synchronization and fixes clock-related pairing failures.",
+        "Fixes Remote SSH preflight, old-conversation resume and reconnection after host-address changes.",
+        "Corrupt or unreadable local MCP configurations no longer block conversations or automations.",
+        "Fixes cross-filesystem image attachments, plugin failure messages and mobile tool-progress display."
+      ],
+      "importance_reason_en": "The update targets blockers in remote work and local configuration that interrupt everyday task continuity.",
+      "published_at": "2026-11-24",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#november-24-2026::0.5.18",
+          "url": "https://docs.qoder.com/release-notes/qoder#november-24-2026",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-331-20261123",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "compatibility",
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.331 扩展 Code Mode 云平台并增强 IDE 工作流",
+      "summary_zh": "Claude Code 2.1.331 让终端会话中的 Code Mode 支持 Amazon Bedrock、Google Cloud Agent Platform、Microsoft Foundry 和 Claude Platform on AWS。VSCode 增加笔记本单元格加入对话、错误与失败测试的 Fix with Claude Code、变更文件加入对话和合并冲突解决入口；网关、遥测、插件依赖和代理压缩兼容性也得到扩展。",
+      "key_points_zh": [
+        "Code Mode 终端会话新增四个云平台支持：Bedrock、Google Cloud Agent Platform、Microsoft Foundry 和 Claude Platform on AWS。",
+        "VSCode 支持把笔记本单元格、变更文件和失败测试直接加入对话或修复流程。",
+        "Claude apps gateway 增加 oidc.groups_jsonpath，并支持按 IdP 主机名连接代理。",
+        "插件可声明 optionalDependencies；新环境变量用于代理压缩兼容，遥测增加用量与模型字段。",
+        "2026 年 11 月 30 日或之后，托管 extraKnownMarketplaces 中的插件市场将默认自动更新，可设置 autoUpdate: false 退出。"
+      ],
+      "importance_reason_zh": "更新扩大 Code Mode 的部署面，并减少开发者在 IDE、测试和身份网关之间切换的成本。",
+      "title_en": "Claude Code 2.1.331 expands Code Mode clouds and IDE workflows",
+      "summary_en": "Claude Code 2.1.331 brings Code Mode in terminal sessions to Amazon Bedrock, Google Cloud Agent Platform, Microsoft Foundry and Claude Platform on AWS. VSCode adds notebook-cell and changed-file chat actions, Fix with Claude Code for errors and failed tests, and merge-conflict resolution. The release also extends gateway identity, telemetry, plugin dependencies and proxy compression compatibility.",
+      "key_points_en": [
+        "Code Mode terminal sessions add Amazon Bedrock, Google Cloud Agent Platform, Microsoft Foundry and Claude Platform on AWS.",
+        "VSCode can send notebook cells and changed files to chat and fix errors or failed tests.",
+        "Claude apps gateways add oidc.groups_jsonpath and hostname-based IdP proxy sign-in.",
+        "Plugins can declare optionalDependencies; new environment variables and telemetry fields improve proxy and usage compatibility.",
+        "On or after November 30, 2026, managed extraKnownMarketplaces entries auto-update by default unless autoUpdate is false."
+      ],
+      "importance_reason_en": "The update broadens Code Mode deployment options and reduces context switching across IDE, test and identity-gateway workflows.",
+      "published_at": "2026-11-23T21:40:51+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:18:14+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-331",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-331",
+          "collected_at": "2026-11-24T15:18:14+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-cisco-shirudo-20261123",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "api"
+      ],
+      "title_zh": "OpenAI 与 Cisco 开源 Linux 运行时 Shirudo",
+      "summary_zh": "OpenAI 与 Cisco 发布开源 Linux 运行时 Shirudo，用于帮助团队在滚动部署补丁时保护正在运行的系统。当前取得的公告只有简短说明，未包含架构、许可证或兼容性细节。",
+      "key_points_zh": [
+        "Shirudo 是 OpenAI 与 Cisco 推出的开源 Linux 运行时。",
+        "目标是团队滚动部署补丁时保护运行中的系统。",
+        "现有材料只有公告简介，不能据此描述具体隔离机制或支持范围。"
+      ],
+      "importance_reason_zh": "开源运行时面向补丁发布期间的系统保护，是与 AI 运维安全相关的基础工具更新。",
+      "title_en": "OpenAI and Cisco open-source the Shirudo Linux runtime",
+      "summary_en": "OpenAI and Cisco introduced Shirudo, an open-source Linux runtime that helps teams protect running systems while rolling out patches. The available announcement is only a short description and does not provide architecture, licensing or compatibility details.",
+      "key_points_en": [
+        "Shirudo is an open-source Linux runtime from OpenAI and Cisco.",
+        "It aims to protect running systems during patch rollouts.",
+        "The available announcement is only a short description, so specific isolation mechanisms and support scope are not established."
+      ],
+      "importance_reason_en": "The open-source runtime targets system protection during patch deployment, making it a relevant AI-operations security tool update.",
+      "published_at": "2026-11-23T21:20:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:18:09+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/introducing-shirudo",
+          "url": "https://openai.com/index/introducing-shirudo",
+          "collected_at": "2026-11-24T15:18:09+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "google-quantum-agents-lean-20261123",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "model_release"
+      ],
+      "title_zh": "Google 用 Gemini 4 Agent 团队与 Lean 改进量子算法",
+      "summary_zh": "Google DeepMind 与 Google Quantum AI 使用 Gemini 4 Agent 团队和 Lean 形式化验证改进量子算法，并开源 Lean 库、问题规格与已验证解。官方报告称，惯性约束聚变电路的计算成本降低 11.8 倍、内存从 5,650 降至 4,338 个纠错量子比特；部分分子模拟和算术例程也取得提升。",
+      "key_points_zh": [
+        "Agent 团队提出算法改进，Lean 对每个结果作数学正确性证明。",
+        "官方称聚变电路成本降低 11.8 倍，内存从 5,650 降至 4,338 个纠错量子比特。",
+        "一个光敏分子模拟成本降低 8 倍；Cytochrome P450 改进 2.5 倍，内存从 481 降至 333 个量子比特。",
+        "Grover 特定实现加速 2.57 倍，arcsin 例程加速 290 倍；Lean 库、规格与验证解已开源。",
+        "这些电路仍受早期量子硬件资源限制，性能数字是官方研究结果。"
+      ],
+      "importance_reason_zh": "这是形式化验证与多 Agent 科学发现结合的可复现研究进展，但尚非可直接运行的应用。",
+      "title_en": "Google uses Gemini 4 agent teams and Lean to improve quantum algorithms",
+      "summary_en": "Google DeepMind and Google Quantum AI used Gemini 4 agent teams and Lean formal verification to improve quantum algorithms, and open-sourced the Lean library, problem specifications and verified solutions. The official report claims an 11.8x reduction in computing cost for an inertial-confinement-fusion circuit, with memory falling from 5,650 to 4,338 error-corrected qubits, plus improvements in molecule simulations and arithmetic routines.",
+      "key_points_en": [
+        "Agent teams propose algorithm changes and Lean proves each result mathematically.",
+        "The official fusion-circuit result claims 11.8x lower cost and memory falling from 5,650 to 4,338 error-corrected qubits.",
+        "A light-sensitive molecule simulation is 8x cheaper; Cytochrome P450 improves 2.5x, with memory falling from 481 to 333 qubits.",
+        "A specific Grover implementation is 2.57x faster and arcsin is 290x faster; the Lean library, specifications and verified solutions are open source.",
+        "The circuits remain constrained by early quantum hardware, and the performance figures are official research results."
+      ],
+      "importance_reason_en": "This is reproducible progress at the intersection of formal verification and multi-agent scientific discovery, though not yet a directly runnable application.",
+      "published_at": "2026-11-23T16:59:40+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:55+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+          "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+          "collected_at": "2026-11-24T15:22:55+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-2-7-3-desktop-1-4-3-20261123",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Kimi Code 修复 MCP 授权与模型下线后的会话",
+      "summary_zh": "Kimi Code Desktop 1.4.3 与 CLI 2.7.3 修复模型变为不可用后会话无法打开的问题，并加入回复评分或 /feedback 反馈。桌面版还在 MCP 需要浏览器登录时显示授权按钮，自动检测插件 MCP 的 OAuth 要求并展示正确授权状态。",
+      "key_points_zh": [
+        "Desktop 1.4.3 与 CLI 2.7.3 均修复模型不可用后会话无法打开的问题。",
+        "两个版本均支持对回复评分或通过 /feedback 发送反馈。",
+        "桌面版在 MCP 需要浏览器登录时显示授权按钮。",
+        "桌面版自动检测插件 MCP 的 OAuth 要求并显示授权状态。"
+      ],
+      "importance_reason_zh": "修复阻断会话恢复的问题，并降低 MCP 身份授权失败带来的使用障碍。",
+      "title_en": "Kimi Code fixes MCP authorization and sessions after model unavailability",
+      "summary_en": "Kimi Code Desktop 1.4.3 and CLI 2.7.3 fix sessions that could not open after their model became unavailable and add reply ratings or /feedback. Desktop also shows an authorization button when an MCP needs browser sign-in and detects plugin MCP OAuth requirements to display the correct authorization state.",
+      "key_points_en": [
+        "Desktop 1.4.3 and CLI 2.7.3 fix sessions failing to open after model unavailability.",
+        "Both versions support rating replies or sending feedback with /feedback.",
+        "Desktop shows an authorization button when an MCP needs browser sign-in.",
+        "Desktop detects plugin MCP OAuth requirements and displays the authorization state."
+      ],
+      "importance_reason_en": "The patches remove session-recovery blockers and reduce friction caused by MCP identity authorization failures.",
+      "published_at": "2026-11-23T16:56:55Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-24T15:18:29+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/kimi-code-desktop%401.4.3",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/kimi-code-desktop%401.4.3",
+          "collected_at": "2026-11-24T15:18:29+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.7.3",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.7.3",
+          "collected_at": "2026-11-24T15:18:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "opencode-2-4-1-20261123",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "OpenCode 2.4.1 修复 macOS 12 保存并扩展模型速度层",
+      "summary_zh": "OpenCode 2.4.1 修复 macOS 12 系统 SQLite 不支持 JSON 运算符导致助手消息无法保存的问题，并让仅配置的提供商模型无需 /connect 登录即可显示。实验性 model_speeds 将服务档位暴露为可记忆的速度选项，更新还修正压缩历史保留、长目标会话缓存成本和插件兼容性。",
+      "key_points_zh": [
+        "修复 macOS 12 上助手消息无法保存的问题。",
+        "仅配置的提供商模型无需 /connect 登录即可出现在 /models。",
+        "实验性 model_speeds 在模型选择器和 /speed、/fast 中展示服务档位及相对价格。",
+        "修复压缩后保留过多历史、长目标会话额外缓存成本及部分插件安装兼容问题。"
+      ],
+      "importance_reason_zh": "修复影响旧 macOS 用户的数据保存，并改进自定义模型与成本／速度档位的可操作性。",
+      "title_en": "OpenCode 2.4.1 fixes macOS 12 saving and exposes model speed tiers",
+      "summary_en": "OpenCode 2.4.1 fixes assistant messages failing to save on macOS 12 because its system SQLite lacks the JSON operator, and shows models from config-only providers without a /connect login. Experimental model_speeds exposes service tiers as remembered speeds, while the release also fixes compaction history retention, extra cache costs in long goal sessions and plugin compatibility.",
+      "key_points_en": [
+        "Fixes assistant messages failing to save on macOS 12.",
+        "Config-only provider models appear in /models without a /connect login.",
+        "Experimental model_speeds shows service tiers and relative prices in the model picker and /speed or /fast.",
+        "Fixes excessive history after compaction, extra cache costs in long goal sessions and plugin installation compatibility."
+      ],
+      "importance_reason_en": "The release fixes data saving for older macOS users and improves custom-model and cost/speed-tier controls.",
+      "published_at": "2026-11-23T15:58:38Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-24T15:18:14+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.4.1",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.1",
+          "collected_at": "2026-11-24T15:18:14+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-2-8-0-canary-20261123",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "capability"
+      ],
+      "title_zh": "Kimi Code 2.8.0 canary 预览独立回合状态与延迟工具",
+      "summary_zh": "Kimi Code CLI 2.8.0 canary 将回合运行迁移到独立状态机，并在解析器中支持延迟工具。预览版还修复空文本历史后的压缩恢复、桌面更新重启后的会话继续、项目 MCP 按需启动和跨主机会话锁回收，并加入静态只读 Bash 命令自动批准。",
+      "key_points_zh": [
+        "回合运行改用独立状态机，工具解析器支持延迟工具。",
+        "修复空文本历史后的压缩恢复，并保留恢复时的原始工具参数字节。",
+        "桌面端更新重启后可继续运行会话，压缩排队与状态反馈得到改进。",
+        "项目 MCP 服务仅在需要时启动，并回收跨主机遗留会话锁。",
+        "新增静态只读 Bash 命令自动批准；移除实验性子代理上下文分叉。"
+      ],
+      "importance_reason_zh": "预览版涉及 Agent 核心执行模型、上下文恢复和工具权限，值得在正式版前跟踪。",
+      "title_en": "Kimi Code 2.8.0 canary previews independent turns and deferred tools",
+      "summary_en": "The Kimi Code CLI 2.8.0 canary moves turn execution to an independent state machine and supports deferred tools in the resolver. It also fixes compaction recovery from empty text history, continues desktop sessions after update restarts, starts project MCP servers on demand, reclaims session locks across hosts and adds automatic approval for statically read-only Bash commands.",
+      "key_points_en": [
+        "Turns use an independent state machine and the resolver supports deferred tools.",
+        "Fixes compaction recovery from empty text history and preserves raw tool arguments across resume.",
+        "Desktop sessions continue after update restarts, with improved compaction queue and status feedback.",
+        "Project MCP servers start only when needed and stale session locks are reclaimed across hosts.",
+        "Adds automatic approval for statically read-only Bash commands and removes experimental subagent context forking."
+      ],
+      "importance_reason_en": "The preview changes core Agent execution, context recovery and tool permissions, making it important to track before stable release.",
+      "published_at": "2026-11-23T15:06:51Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-24T15:18:29+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.8.0-canary.20261123144244-c0e9faf",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.8.0-canary.20261123144244-c0e9faf",
+          "collected_at": "2026-11-24T15:18:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "opencode-2-4-0-20261123",
       "entity_ids": [
@@ -83,6 +581,225 @@
           "content_id": "https://z.ai/blog/glm-5.4",
           "url": "https://z.ai/blog/glm-5.4",
           "collected_at": "2026-11-23T15:06:38+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "hermes-v0234",
+      "entity_ids": [
+        "hermes"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability",
+        "critical_fix"
+      ],
+      "title_zh": "Hermes Agent 0.23.4 汇总稳定更新并迁移网关后端",
+      "summary_zh": "Hermes Agent 0.23.4 将 v0.23.3 以来约 229 个合并 PR 打包为 GitHub、Microsoft Store、Docker 和 Hermes Cloud 的稳定版本。公告列出网关后端迁移、插件设置编辑、桌面审批卡、模型可用性和桌面流式性能改进；完整策划说明将在 v0.24.0 提供。",
+      "key_points_zh": [
+        "稳定版汇总 v0.23.3 以来约 229 个 PR；公告日期为 2026 年 11 月 23 日。",
+        "hermes gateway migrate --backends 可将旧 serve/dashboard 后端迁移到网关。",
+        "新增插件设置编辑、桌面文件夹与网站请求审批卡，以及网关客户端识别。",
+        "安装器版桌面应用本次不变，随下一捆绑版本更新；CLI 可使用 hermes update。"
+      ],
+      "importance_reason_zh": "这是 Hermes 本月首个稳定汇总版本，涉及网关架构、插件管理和桌面安全审批。",
+      "title_en": "Hermes Agent 0.23.4 rolls up stable changes and migrates gateway backends",
+      "summary_en": "Hermes Agent 0.23.4 packages about 229 merged PRs since v0.23.3 into stable releases for GitHub, Microsoft Store, Docker and Hermes Cloud. The announcement lists gateway-backend migration, plugin settings, desktop approval cards, model availability and desktop streaming performance work; full curated notes will ship with v0.24.0.",
+      "key_points_en": [
+        "The stable release rolls up about 229 PRs since v0.23.3 and is dated November 23, 2026.",
+        "hermes gateway migrate --backends moves older serve/dashboard backends to the gateway.",
+        "Adds plugin settings, desktop folder and site approval cards, and gateway client identification.",
+        "Installer-based desktop apps are unchanged in this release; CLI users can run hermes update."
+      ],
+      "importance_reason_en": "This is Hermes’s first stable rollup of the month and changes gateway architecture, plugin management and desktop security approvals.",
+      "published_at": "2026-11-23",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:18:14+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "hermes-releases",
+          "content_id": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.4",
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.4",
+          "collected_at": "2026-11-24T15:18:14+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "zcode-4-0-0-20261123",
+      "entity_ids": [
+        "zcode"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "availability",
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "ZCode 4.0.0 接入 GLM-5.4 Coding Plan 与视觉能力",
+      "summary_zh": "ZCode 4.0.0 在 Coding Plan 中预配置 GLM-5.4，并加入视觉能力和通用编程改进。插件商店按登录地区展示内容，配置服务不可用时工作流仍可按需启用；更新还修复会话启动卡死和切换模型或提供商后上下文丢失。",
+      "key_points_zh": [
+        "GLM-5.4 在 Coding Plan 中可用并预配置，新增视觉能力。",
+        "插件商店按登录地区展示插件。",
+        "配置服务不可用时，工作流仍可默认按需启用。",
+        "Documents、Spreadsheets 和 Presentations 插件不再增加视觉验收步骤。",
+        "修复会话启动长时间卡死及切换模型或提供商后上下文偶尔丢失。"
+      ],
+      "importance_reason_zh": "新模型与视觉能力直接改变 Coding Plan 可用面，可靠性修复则关系会话连续性。",
+      "title_en": "ZCode 4.0.0 adds GLM-5.4 Coding Plan and vision",
+      "summary_en": "ZCode 4.0.0 makes GLM-5.4 available and preconfigured on the Coding Plan, adding vision and stronger general coding capabilities. The plugin store reflects login region, workflows remain available on demand when the configuration service is down, and the release fixes long startup hangs and occasional context loss after model or provider switches.",
+      "key_points_en": [
+        "GLM-5.4 is available and preconfigured on the Coding Plan, with vision capabilities.",
+        "The plugin store displays plugins based on login region.",
+        "Workflows remain available on demand when the configuration service is unavailable.",
+        "Documents, Spreadsheets and Presentations plugins skip an additional visual acceptance step.",
+        "Fixes long startup hangs and occasional context loss after switching models or providers."
+      ],
+      "importance_reason_en": "The new model and vision capabilities change Coding Plan availability, while reliability fixes protect session continuity.",
+      "published_at": "2026-11-23",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "zcode-official",
+          "content_id": "https://zcode.z.ai/en/changelog::4.0.0",
+          "url": "https://zcode.z.ai/en/changelog",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-claude-fable-5-2-preview-20261123",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "preview",
+      "topics": [
+        "model_release",
+        "availability"
+      ],
+      "title_zh": "Kiro Enterprise 预览 Claude Fable 5.2",
+      "summary_zh": "Kiro 开始向 Enterprise 组织的各客户端预览 Claude Fable 5.2。Anthropic 称其适合大型、定义宽松的技术问题，可跨仓库工作、边执行边自测并协调子代理；Kiro 标明 1M 上下文、6 倍 credits 消耗，推理仅在美国区域运行。",
+      "key_points_zh": [
+        "Claude Fable 5.2 以 Preview 形式向 Kiro Enterprise 推出。",
+        "提供 1M 上下文窗口，Kiro 计费为 6 倍 credits。",
+        "推理仅在美国地理区域运行。",
+        "官方强调大型技术任务、跨仓库工作、自测与子代理协调。"
+      ],
+      "importance_reason_zh": "新模型的企业预览同时带来上下文、成本和推理地域限制，需要按账户与数据要求判断。",
+      "title_en": "Kiro Enterprise previews Claude Fable 5.2",
+      "summary_en": "Kiro is beginning a Preview rollout of Claude Fable 5.2 across clients for Enterprise organizations. Anthropic describes it for large, loosely defined technical work, including cross-repository tasks, self-testing and subagent coordination; Kiro lists a 1M context window, a 6x credit multiplier and US-only inference.",
+      "key_points_en": [
+        "Claude Fable 5.2 is in Preview for Kiro Enterprise.",
+        "It has a 1M context window and a 6x Kiro credit multiplier.",
+        "Inference runs only in the US geography.",
+        "The official description emphasizes large technical tasks, cross-repository work, self-testing and subagent coordination."
+      ],
+      "importance_reason_en": "The enterprise preview combines a larger context window with credit and inference-region constraints that matter for account and data planning.",
+      "published_at": "2026-11-23",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:18:29+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/claude-fable-5-2-for-enterprise",
+          "url": "https://kiro.dev/changelog/models/claude-fable-5-2-for-enterprise",
+          "collected_at": "2026-11-24T15:18:29+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "siliconflow-xing4-0-29b-retirement-20261123",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "preview",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "硅基流动将于 12 月 4 日下线 Xing4.0-29B",
+      "summary_zh": "硅基流动公告称，为优化资源配置，平台将于 2026 年 12 月 4 日下线 XingChenAGI/Xing4.0-29B。正在使用该模型的用户应切换到其他模型；公告没有指定替代模型。",
+      "key_points_zh": [
+        "XingChenAGI/Xing4.0-29B 计划于 2026 年 12 月 4 日下线。",
+        "公告建议现有用户尽快切换到其他模型。",
+        "公告未给出替代模型、迁移工具或数据保留说明。"
+      ],
+      "importance_reason_zh": "明确的模型停运时间会影响依赖该端点的应用，需要提前规划迁移。",
+      "title_en": "SiliconFlow will retire Xing4.0-29B on December 4",
+      "summary_en": "SiliconFlow announced that it will retire XingChenAGI/Xing4.0-29B on December 4, 2026 to optimize resource allocation. Current users should switch to another model; the notice does not name a replacement.",
+      "key_points_en": [
+        "XingChenAGI/Xing4.0-29B is scheduled to be retired on December 4, 2026.",
+        "The notice advises current users to switch to another model as soon as possible.",
+        "No replacement model, migration tool or data-retention terms are provided."
+      ],
+      "importance_reason_en": "The explicit retirement date affects applications that depend on the endpoint and requires migration planning.",
+      "published_at": "2026-11-23",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "siliconflow-updates",
+          "content_id": "https://docs.siliconflow.cn/docs/release-notes/overview#模型服务调整xing40-29b-模型将下线",
+          "url": "https://docs.siliconflow.cn/docs/release-notes/overview#模型服务调整xing40-29b-模型将下线",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "devin-2026-11-23",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Devin 增加会话级 MCP 授权与扫描取消审计",
+      "summary_zh": "Devin 11 月 23 日更新支持分屏打开会话、用命令面板搜索会话，并在审计日志记录代码扫描取消者。MCP 审批卡新增 Allow for this session，管理员可将市场插件标记为 Offered 而非 Required，删除被 Preflight 使用的密钥前也会列出相关自动化。",
+      "key_points_zh": [
+        "Option/Alt+点击会话链接可分屏打开，Cmd/Ctrl+K 搜索会话。",
+        "审计日志记录从网页或 v3 API 取消代码扫描的用户。",
+        "MCP 工具审批卡新增整个会话允许选项。",
+        "管理员可将市场插件设为 Offered；API-key MCP 空头部绑定到密钥并标记未使用密钥。",
+        "删除被 Preflight 检查使用的组织密钥前会提示受影响自动化。"
+      ],
+      "importance_reason_zh": "更新增强 MCP 授权粒度、密钥依赖可见性和企业审计能力。",
+      "title_en": "Devin adds session-wide MCP approval and scan-cancellation auditing",
+      "summary_en": "Devin’s November 23 update adds split-pane sessions and command-palette session search, records who cancels code scans in audit logs, and adds Allow for this session to MCP approval cards. Admins can mark marketplace plugins Offered rather than Required, and secret deletion warns about automations whose Preflight checks depend on the secret.",
+      "key_points_en": [
+        "Option/Alt-click opens a session in a split pane; Cmd/Ctrl+K searches sessions.",
+        "Audit logs identify users who cancel code scans from the web app or v3 API.",
+        "MCP approval cards add a whole-session allow option.",
+        "Admins can mark marketplace plugins Offered; blank API-key MCP headers bind to secrets and unused secrets are flagged.",
+        "Deleting an organization secret warns about automations whose Preflight checks use it."
+      ],
+      "importance_reason_en": "The update strengthens MCP authorization granularity, secret-dependency visibility and enterprise auditing.",
+      "published_at": "2026-11-23",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-23-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-23-2026",
+          "collected_at": "2026-11-24T15:22:56+00:00",
           "material_scope": "full_text"
         }
       ]
@@ -171,6 +888,52 @@
           "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
           "collected_at": "2026-11-23T13:54:51+00:00",
           "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "zcode-3-19-1-20261122",
+      "entity_ids": [
+        "zcode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "capability"
+      ],
+      "title_zh": "ZCode 3.19.1 扩展后台任务并收紧工具安全校验",
+      "summary_zh": "ZCode 3.19.1 加入回复语言、语音快捷键、内置文档工具和模型搜索，MCP 服务改为异步启动，子任务默认后台运行。内置设计插件加入图像生成，分享文件、adb、工作区 hooks 和插件选项的安全校验加强，并修复重启后子代理与活动记录丢失等问题。",
+      "key_points_zh": [
+        "新增回复语言、语音输入快捷键、模型搜索和内置 LibreOffice、Python、Poppler 工具。",
+        "MCP 服务异步启动，子任务默认后台运行，Send Now 可将前台 Agent 转入后台。",
+        "内置设计插件加入图像生成，文件链接支持行号与区间定位。",
+        "加强分享文件类型、adb、工作区 hooks 和插件选项的安全校验。",
+        "修复重启后子代理与活动记录丢失、登录失败、无限加载和速率限制重试不准。"
+      ],
+      "importance_reason_zh": "版本同时扩展文档与设计工作流，并修复任务状态持久化和多项安全边界问题。",
+      "title_en": "ZCode 3.19.1 expands background tasks and tightens tool security",
+      "summary_en": "ZCode 3.19.1 adds reply-language and voice controls, bundled document tools and model search, starts MCP services asynchronously and runs subtasks in the background by default. The built-in design plugin adds image generation, security validation is tightened for shared files, adb, workspace hooks and plugin options, and several restart, login and rate-limit bugs are fixed.",
+      "key_points_en": [
+        "Adds reply-language and voice controls, model search, and bundled LibreOffice, Python and Poppler tools.",
+        "MCP services start asynchronously, subtasks run in the background by default, and Send Now backgrounds the foreground Agent.",
+        "The built-in design plugin adds image generation, and file links support line and range locators.",
+        "Tightens security validation for shared-file types, adb, workspace hooks and plugin options.",
+        "Fixes lost subagents and activity records after restart, login failures, endless loading and inaccurate rate-limit retries."
+      ],
+      "importance_reason_en": "The release expands document and design workflows while fixing task-state persistence and several security boundaries.",
+      "published_at": "2026-11-22",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "zcode-official",
+          "content_id": "https://zcode.z.ai/en/changelog::3.19.1",
+          "url": "https://zcode.z.ai/en/changelog",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
         }
       ]
     },
@@ -590,7 +1353,7 @@
       "published_at": "2026-11-20T00:00:00+00:00",
       "date_precision": "datetime",
       "first_collected_at": "2026-11-23T13:53:44+00:00",
-      "updated_at": "2026-11-23T14:05:00+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
       "related_event_ids": [
         "google-agent-anomaly-detection-20261112"
       ],
@@ -599,8 +1362,8 @@
           "source_id": "google-developers-blog",
           "content_id": "https://developers.googleblog.com/en/agent-anomaly-detection-safeguarding-agents-across-other-clouds/",
           "url": "https://developers.googleblog.com/en/agent-anomaly-detection-safeguarding-agents-across-other-clouds/",
-          "collected_at": "2026-11-23T13:53:44+00:00",
-          "material_scope": "partial_text"
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
         }
       ]
     },
@@ -614,32 +1377,51 @@
         "feature"
       ],
       "title_zh": "Google Cloud 推出语义治理策略，工具调用执行前内联审查",
-      "summary_zh": "Google Cloud 介绍 Semantic governance policies：开发者以自然语言规则约束 AI 智能体，策略引擎经 Agent Gateway 在每次工具调用执行前内联评估，比对用户意图与规则以阻止未授权数据共享和提示注入攻击，审计结论可经 Cloud Logging 查看。",
+      "summary_zh": "Google Cloud 的后续实测显示，在 AgentDojo v1.2.2 上使用 gemini-2.5-flash 并仅开启默认用户意图检查时，攻击成功率从 48.7% 降至 0.9%，929 次需要工具调用的攻击在六轮中均未成功；正常任务效用平均下降 2.6 个百分点。该功能在 Gemini platform 预览，测试未覆盖针对策略判断器本身的自适应攻击。",
       "key_points_zh": [
-        "语义治理策略在每次工具调用执行前内联评估提议的操作",
-        "策略引擎经 Agent Gateway 将操作与用户意图及自然语言规则比对",
-        "用于防止未授权数据共享与提示注入攻击，审计结论可经 Cloud Logging 查看"
+        "AgentDojo v1.2.2 共 97 个正常任务、949 次攻击运行，每种配置完整运行六次取平均。",
+        "仅启用默认用户意图检查时，攻击成功率从 48.7% 降至 0.9%。",
+        "929 次需要工具调用的攻击在六轮中均未成功；正常任务效用平均下降 2.6 个百分点。",
+        "策略判断器与不可信内容之间仍靠提示隔离，并非硬技术边界；固定攻击未测试自适应攻击。",
+        "功能在 Gemini platform 预览，可先通过 Agent Gateway dry run 查看 Cloud Logging 判决。"
       ],
-      "importance_reason_zh": "在执行前审查工具调用是企业智能体安全的关键控制点，自然语言规则降低了治理策略的编写门槛。",
+      "importance_reason_zh": "实测把意图劫持防护效果量化，同时保留效用损失、预览状态和自适应攻击未覆盖的限制。",
       "title_en": "Google Cloud introduces Semantic governance policies that vet tool calls before execution",
-      "summary_en": "Google Cloud introduced Semantic governance policies: developers govern AI agents with plain-language rules, and the policy engine evaluates every proposed tool call inline before execution via Agent Gateway, checking actions against user intent and the rules to prevent unauthorized data sharing and prompt injection attacks, with auditable verdicts in Cloud Logging.",
+      "summary_en": "Google Cloud’s follow-up AgentDojo v1.2.2 tests with gemini-2.5-flash and only default user-intent matching report attack success falling from 48.7% to 0.9%, with none of 929 tool-call attacks succeeding across six runs; benign-task utility fell by 2.6 percentage points on average. The feature is in Preview in Gemini platform, and the fixed attacks did not cover adaptive attacks against the policy judge itself.",
       "key_points_en": [
-        "Semantic governance policies evaluate every proposed tool call inline before execution",
-        "The policy engine checks each action against user intent and plain-language rules via Agent Gateway",
-        "They aim to prevent unauthorized data sharing and prompt injection attacks, with auditable verdicts in Cloud Logging"
+        "AgentDojo v1.2.2 used 97 benign tasks and 949 attacked runs, with six full runs per configuration averaged.",
+        "Default user-intent matching alone reduced attack success from 48.7% to 0.9%.",
+        "None of 929 tool-call attacks succeeded across six runs; benign-task utility fell by 2.6 percentage points on average.",
+        "The judge still relies on prompt-level separation from untrusted content, not a hard boundary, and fixed attacks did not test adaptive attacks.",
+        "The feature is in Preview in Gemini platform and can run behind Agent Gateway in dry run with verdicts in Cloud Logging."
       ],
-      "importance_reason_en": "Vetting tool calls before execution is a key control point for enterprise agent security, and natural-language rules lower the bar for writing governance policies.",
+      "importance_reason_en": "The tests quantify protection against intent hijacking while preserving the utility cost, Preview status and untested adaptive-attack limitations.",
       "published_at": "2026-11-20T00:00:00+00:00",
       "date_precision": "datetime",
       "first_collected_at": "2026-11-23T13:53:44+00:00",
-      "updated_at": "2026-11-23T14:05:00+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
       "sources": [
         {
           "source_id": "google-developers-blog",
           "content_id": "https://developers.googleblog.com/en/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/",
           "url": "https://developers.googleblog.com/en/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/",
-          "collected_at": "2026-11-23T13:53:44+00:00",
-          "material_scope": "partial_text"
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/",
+          "url": "https://developers.googleblog.com/en/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-11-24T15:44:25+00:00",
+          "reason_zh": "补全 11 月 20 日公告全文，并合并 11 月 23 日 AgentDojo 实测、效用损失与限制说明。",
+          "reason_en": "Completed the November 20 article and merged the November 23 AgentDojo results, utility cost and limitations.",
+          "url": "https://developers.googleblog.com/en/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/"
         }
       ]
     },
@@ -650,14 +1432,14 @@
       "date_precision": "date",
       "date_kind": "published",
       "first_collected_at": "2026-11-20T19:00:53+00:00",
-      "updated_at": "2026-11-20T19:40:00+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
       "sources": [
         {
           "source_id": "anthropic-official",
           "content_id": "https://www.anthropic.com/news/ipo-close",
           "url": "https://www.anthropic.com/news/ipo-close",
-          "collected_at": "2026-11-20T19:00:53+00:00",
-          "material_scope": "partial_text"
+          "collected_at": "2026-11-24T15:22:55+00:00",
+          "material_scope": "full_text"
         }
       ],
       "entity_ids": [
@@ -671,21 +1453,33 @@
         "anthropic-ipo-roadshow-20261110"
       ],
       "title_zh": "Anthropic 宣布 IPO 收官：全额行使超额配售并完成同步私募配售",
-      "summary_zh": "Anthropic 宣布完成首次公开募股交割：共发行 11.27 亿股 A 类普通股，发行价每股 83.00 美元，其中包含承销商全额行使的额外 1.47 亿股超额配售权；同步进行的私募配售也已一并交割。",
+      "summary_zh": "Anthropic 宣布完成 IPO：以每股 83.00 美元发行合计 11.27 亿股 Class A 普通股，包含承销商全部行使额外 1.47 亿股期权，发行总募资约 935 亿美元，其中约 916 亿美元由 Anthropic 收取。同步完成约 260 亿美元的 Class N 私募配售，发行与私募配售合计约 1,195 亿美元。",
       "key_points_zh": [
-        "IPO 共发行 1,127,000,000 股 A 类普通股，发行价每股 83.00 美元。",
-        "承销商可额外认购 147,000,000 股的超额配售权已全额行使。",
-        "同步进行的私募配售一并完成交割。"
+        "IPO 合计 11.27 亿股 Class A 普通股，发行价为每股 83.00 美元。",
+        "承销商额外购买 1.47 亿股的期权全部行使。",
+        "发行总募资约 935 亿美元，Anthropic 收到约 916 亿美元。",
+        "同步配售 313,253,007 股 Class N 普通股，金额约 260 亿美元。",
+        "发行与私募配售合计约 1,195 亿美元；Class A 股票已于 11 月 19 日以 ANT 交易。"
       ],
-      "importance_reason_zh": "IPO 交割与超额配售全额落地，标志上市融资阶段完成，直接影响 Anthropic 算力扩张与产品投入的可用资金。",
+      "importance_reason_zh": "完整正文确认 IPO 与私募配售的实际规模、公司所得和上市交易状态。",
       "title_en": "Anthropic announces closing of its IPO with full greenshoe exercise and concurrent private placement",
-      "summary_en": "Anthropic announced the closing of its initial public offering of an aggregate of 1,127,000,000 shares of Class A common stock at a public offering price of $83.00 per share, including the full exercise of the underwriters' option to purchase an additional 147,000,000 shares at the IPO price. The concurrent private placement also closed.",
+      "summary_en": "Anthropic closed its IPO of 1.127 billion Class A common shares at $83.00 per share, including full exercise of the underwriters’ option for 147 million additional shares. Gross offering proceeds were about $93.5 billion, of which Anthropic received about $91.6 billion. It also closed a roughly $26.0 billion private placement of Class N shares, bringing the combined total to about $119.5 billion.",
       "key_points_en": [
-        "The IPO totaled 1,127,000,000 Class A shares at a public offering price of $83.00 per share.",
-        "The underwriters' option to purchase an additional 147,000,000 shares was exercised in full.",
-        "The concurrent private placement closed alongside the IPO."
+        "The IPO totaled 1.127 billion Class A common shares at $83.00 per share.",
+        "The underwriters’ option for 147 million additional shares was exercised in full.",
+        "Gross offering proceeds were about $93.5 billion, of which Anthropic received about $91.6 billion.",
+        "The concurrent private placement sold 313,253,007 Class N shares for about $26.0 billion.",
+        "The combined total was about $119.5 billion; Class A shares began trading as ANT on November 19."
       ],
-      "importance_reason_en": "The closing and full greenshoe exercise complete the listing stage of fundraising, directly affecting the capital available for Anthropic's compute expansion and product investment."
+      "importance_reason_en": "The full text confirms the actual IPO and private-placement scale, company proceeds and trading status.",
+      "corrections": [
+        {
+          "at": "2026-11-24T15:44:25+00:00",
+          "reason_zh": "用完整公告补录发行募资、公司所得、私募配售股数与合计金额。",
+          "reason_en": "Added offering proceeds, company proceeds, private-placement share count and combined amount from the full announcement.",
+          "url": "https://www.anthropic.com/news/ipo-close"
+        }
+      ]
     },
     {
       "id": "kiro-ide-1-5-remote-ssh",
@@ -726,6 +1520,139 @@
         "Open a cloud session in its own Kiro window."
       ],
       "importance_reason_en": "Remote SSH and Dev Containers are core infrastructure capabilities for development tools, closing a major remote-development gap for Kiro."
+    },
+    {
+      "id": "qoder-0-5-17-20261120",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "critical_fix",
+        "feature"
+      ],
+      "title_zh": "Qoder 0.5.17 修复 Windows 更新后启动与插件入口",
+      "summary_zh": "Qoder 0.5.17 修复部分按用户安装的 Windows 环境在快速更新后无法启动的问题，以及市场插件安装和授权后没有应用入口的问题。插件置顶指南随界面语言和明暗主题调整，模型请求失败也显示更具体的错误。",
+      "key_points_zh": [
+        "修复部分 Windows 按用户安装环境快速更新后无法启动的问题。",
+        "修复市场插件安装与授权后缺少应用入口。",
+        "插件置顶指南匹配界面语言和明暗主题。",
+        "模型请求失败不再只显示通用错误。"
+      ],
+      "importance_reason_zh": "版本重点在于恢复启动、插件入口和错误可诊断性。",
+      "title_en": "Qoder 0.5.17 fixes Windows startup and plugin entry points",
+      "summary_en": "Qoder 0.5.17 fixes startup failures after rapid updates in some per-user Windows installations and marketplace plugins missing an app entry point after installation and authorization. The plugin-pinning guide follows interface language and light/dark theme, and failed model requests show more specific errors.",
+      "key_points_en": [
+        "Fixes startup failures after rapid updates in some per-user Windows installations.",
+        "Fixes marketplace plugins missing an app entry point after installation and authorization.",
+        "The plugin-pinning guide follows interface language and light/dark theme.",
+        "Failed model requests show more specific errors."
+      ],
+      "importance_reason_en": "The release focuses on restoring startup, plugin entry points and error diagnosability.",
+      "published_at": "2026-11-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#november-20-2026::0.5.17",
+          "url": "https://docs.qoder.com/release-notes/qoder#november-20-2026",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "minimax-internal-model-cryptanalysis-20261120",
+      "entity_ids": [
+        "minimax"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "model_release"
+      ],
+      "title_zh": "MiniMax 报告内部模型自动密码分析研究成果",
+      "summary_zh": "MiniMax 称其内部研究模型 MIM 对历史密码标准候选、同行评审方案和公开挑战执行自动密码分析，取得多项实际攻击与求解结果。官方报告包括 Waterfall-256、Blender-256 碰撞，LOCKER、ROLLO-I 和 SBC-VOLE 密钥恢复，以及 McEliece 挑战中 94 个实例的求解；结果针对学术设计和公开参数，不影响已部署密码标准。",
+      "key_points_zh": [
+        "MIM 是仅限研究的内部模型；MiniMax 称其可将理论攻击转化为可执行代码。",
+        "官方报告对 Waterfall-256、Blender-256、LOCKER、ROLLO-I 和 SBC-VOLE 等方案取得碰撞或密钥恢复结果。",
+        "在 TII McEliece 挑战中求解 94 个实例，包括 55 个此前未解的困难实例。",
+        "结果针对学术设计、历史候选和公开挑战参数，不影响已部署密码标准。",
+        "MiniMax 表示已向相关作者提前披露，并发布技术报告与概念验证代码；研究访问需申请。"
+      ],
+      "importance_reason_zh": "这是模型长程推理与可执行科学研究的官方进展，但重大安全结论仍须密码学界独立复核。",
+      "title_en": "MiniMax reports automated cryptanalysis with its internal model",
+      "summary_en": "MiniMax says its internal research model MIM performed automated cryptanalysis on historical standards candidates, peer-reviewed schemes and public challenges, producing practical attacks and solutions. The official report includes collisions for Waterfall-256 and Blender-256, key recovery for LOCKER, ROLLO-I and SBC-VOLE, and solutions for 94 TII McEliece challenge instances. The work targets academic designs and public parameters, not deployed cryptographic standards.",
+      "key_points_en": [
+        "MIM is an internal research-only model that MiniMax says turns theoretical attacks into executable code.",
+        "The official report claims collision or key-recovery results for schemes including Waterfall-256, Blender-256, LOCKER, ROLLO-I and SBC-VOLE.",
+        "It solved 94 TII McEliece challenge instances, including 55 previously unsolved hard instances.",
+        "The work targets academic designs, historical candidates and public challenge parameters, not deployed standards.",
+        "MiniMax says it disclosed findings to authors in advance and released technical reports and proof-of-concept code; research access requires application."
+      ],
+      "importance_reason_en": "This is official progress in long-horizon reasoning and executable research, but major security claims still require independent review by cryptographers.",
+      "published_at": "2026-11-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "minimax-official",
+          "content_id": "https://www.minimax.io/blog/practical-cryptanalysis-with-minimaxs-latest-internal-model",
+          "url": "https://www.minimax.io/blog/practical-cryptanalysis-with-minimaxs-latest-internal-model",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "devin-2026-11-20",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Devin 推出分用户组与分会话的访问共享",
+      "summary_zh": "Devin 11 月 20 日推出 Access and Sharing，支持用户组、逐会话共享范围以及密钥、环境、插件、MCP 等资源的细粒度授权。新能力逐步推出且默认关闭，企业需联系 Cognition 启用；同时加入 SCM 权限差异检查和仓库同步。",
+      "key_points_zh": [
+        "新共享能力逐步推出、默认关闭，企业需联系 Cognition 启用。",
+        "用户组可替代个人或整个组织，会话可选择仅自己、用户组、组织或账户范围。",
+        "密钥、环境、插件、playbooks、skills、MCP、知识和自动化均可按用户组共享。",
+        "SCM 权限差异检查报告 Devin 与 GitHub/GitLab 访问不一致的仓库，并可同步仓库列表。",
+        "Slack 中无会话权限者不能下发指令，但可一键共享会话。"
+      ],
+      "importance_reason_zh": "这是企业访问模型的重要变化，兼顾协作共享与最小权限，但需要管理员启用和配置。",
+      "title_en": "Devin introduces group-based and per-session access sharing",
+      "summary_en": "Devin’s November 20 Access and Sharing update supports user groups, per-session sharing scopes and granular authorization for secrets, environments, plugins, MCP servers and other resources. The changes roll out gradually and are off by default for enterprises; it also adds an SCM access-mismatch checker and repository sync.",
+      "key_points_en": [
+        "The sharing changes roll out gradually and are off by default; enterprises must contact Cognition to enable them.",
+        "User groups can replace individuals or the whole organization, and sessions can be limited to self, groups, the organization or the account.",
+        "Secrets, environments, plugins, playbooks, skills, MCP servers, knowledge and automations can be shared with groups.",
+        "An SCM checker reports repositories where Devin access differs from GitHub or GitLab, with optional repository sync.",
+        "Slack users without session access cannot issue instructions but can request one-click sharing."
+      ],
+      "importance_reason_en": "This is a major enterprise access-model change that balances collaboration and least privilege, but requires administrator enablement and configuration.",
+      "published_at": "2026-11-20",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-20-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-20-2026",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
     },
     {
       "id": "claude-code-v21329",
@@ -1071,14 +1998,14 @@
       "date_precision": "datetime",
       "date_kind": "published",
       "first_collected_at": "2026-11-20T19:00:55+00:00",
-      "updated_at": "2026-11-20T19:40:00+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
       "sources": [
         {
           "source_id": "google-developers-blog",
           "content_id": "https://developers.googleblog.com/en/distributed-llm-training-across-metros-streaming-diloco-in-maxtext/",
           "url": "https://developers.googleblog.com/en/distributed-llm-training-across-metros-streaming-diloco-in-maxtext/",
-          "collected_at": "2026-11-20T19:00:55+00:00",
-          "material_scope": "partial_text"
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
         }
       ],
       "entity_ids": [
@@ -1112,14 +2039,14 @@
       "date_precision": "datetime",
       "date_kind": "published",
       "first_collected_at": "2026-11-20T19:00:55+00:00",
-      "updated_at": "2026-11-20T19:40:00+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
       "sources": [
         {
           "source_id": "google-developers-blog",
           "content_id": "https://developers.googleblog.com/en/multi-turn-agentic-reinforcement-learning-with-tunix-and-gemma-4-on-google-tpus/",
           "url": "https://developers.googleblog.com/en/multi-turn-agentic-reinforcement-learning-with-tunix-and-gemma-4-on-google-tpus/",
-          "collected_at": "2026-11-20T19:00:55+00:00",
-          "material_scope": "partial_text"
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
         }
       ],
       "entity_ids": [
@@ -1267,6 +2194,97 @@
         "New cloud sessions follow the VPC's network controls, with no need to expose resources publicly."
       ],
       "importance_reason_en": "Direct VPC connectivity addresses the compliance prerequisite for putting Kiro on internal data and services, a key capability for enterprise adoption of cloud sessions."
+    },
+    {
+      "id": "qoder-0-5-16-20261119",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "compatibility"
+      ],
+      "title_zh": "Qoder 0.5.16 支持跨网络设备控制与加密 Office 文档",
+      "summary_zh": "Qoder 0.5.16 允许同一账号设备跨不同网络建立 Remote Control，并将选定对话与输出文件分享到讨论或项目 Issue。Agent Teams 可分配和重新分配 Issue，密码保护的 Word／Excel 文档可编辑并保留加密，PAC 代理支持 URL 或本地文件。",
+      "key_points_zh": [
+        "同一账号设备可跨网络远程控制，目标设备需开启 Allow control。",
+        "可把选定对话和输出文件保存到本机、发送到讨论或项目 Issue。",
+        "Agent Teams 支持 Issue 分配、改派和人工介入状态查看。",
+        "支持打开、编辑并保留密码加密的 Word 与 Excel 文件。",
+        "PAC 代理支持 URL 或本地文件；远程工作区在托管 SSH 断线后可继续已接收任务。"
+      ],
+      "importance_reason_zh": "更新扩大跨设备协作、企业代理与敏感文档处理能力。",
+      "title_en": "Qoder 0.5.16 adds cross-network device control and encrypted Office documents",
+      "summary_en": "Qoder 0.5.16 lets devices on the same account use Remote Control across different networks and share selected conversations and output files to discussions or project Issues. Agent Teams can assign and reassign Issues, password-protected Word and Excel files remain encrypted after editing, and PAC proxies accept a URL or local file.",
+      "key_points_en": [
+        "Devices on one account can use Remote Control across networks when the target enables Allow control.",
+        "Selected conversations and output files can be saved locally or sent to discussions or project Issues.",
+        "Agent Teams supports Issue assignment, reassignment and visibility into runs needing human intervention.",
+        "Password-protected Word and Excel files can be edited while retaining encryption.",
+        "PAC proxies accept a URL or local file; managed SSH remote workspaces can continue accepted tasks after disconnection."
+      ],
+      "importance_reason_en": "The update broadens cross-device collaboration, enterprise proxy support and sensitive-document handling.",
+      "published_at": "2026-11-19",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#november-19-2026::0.5.16",
+          "url": "https://docs.qoder.com/release-notes/qoder#november-19-2026",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "devin-2026-11-19",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature"
+      ],
+      "title_zh": "Devin 推出可持续执行的 Devin Bots",
+      "summary_zh": "Devin Bots 是拥有独立身份、记忆和权限的常驻 Devin，可把目标拆解并在各自云机器上并行运行会话，持续到 PR 可合并。用户可从 QA、代码审查或值班工程师模板开始，并通过网页、Slack、短信、电话或群聊交互。",
+      "key_points_zh": [
+        "Devin Bots 拥有独立身份、记忆和权限，可持续执行目标。",
+        "Bot 可并行启动多个云机器会话，推进工作直到 PR 可合并。",
+        "支持 QA、代码审查、值班工程师模板或自定义目标。",
+        "可通过网页、Slack、短信、电话和群聊发送消息。",
+        "同版还支持按组织或预算结算仓库 Review，以及通过 API 关联代码扫描发现与现有会话。"
+      ],
+      "importance_reason_zh": "Bots 将 Devin 从单次会话推进到常驻、并行和可持续跟进的 Agent 形态。",
+      "title_en": "Devin launches always-on Devin Bots",
+      "summary_en": "Devin Bots are always-on Devins with their own identity, memory and permissions. They break down goals, run sessions in parallel on separate cloud machines and keep work moving until a pull request is ready to merge. Users can start from QA, code-review or on-call templates and interact through the web app, Slack, text, calls or group chats.",
+      "key_points_en": [
+        "Devin Bots have independent identity, memory and permissions and can pursue goals continuously.",
+        "Bots run multiple cloud-machine sessions in parallel until a pull request is ready to merge.",
+        "QA, code-review and on-call templates are available, or users can describe a custom outcome.",
+        "Users can message Bots through the web app, Slack, text, calls and group chats.",
+        "The same update adds organization/budget Review billing and API linking of code-scan findings to existing sessions."
+      ],
+      "importance_reason_en": "Bots move Devin from single sessions toward persistent, parallel Agents that can follow work through to merge readiness.",
+      "published_at": "2026-11-19",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-19-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-19-2026",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
     },
     {
       "id": "tibo-gpt62-astra-hard-tasks-20261118",
@@ -1962,35 +2980,94 @@
         "availability"
       ],
       "title_zh": "Anthropic 完成首次公开募股定价",
-      "summary_zh": "Anthropic 官网宣布其拟议首次公开募股完成定价；此前公司已于 10 月 26 日提交 S-1（拟以代码 ANT 上市）并于 11 月 10 日启动路演。",
+      "summary_zh": "Anthropic 宣布 IPO 定价为每股 83.00 美元，基础发行 9.8 亿股 Class A 普通股，其中 956,351,354 股由 Anthropic 出售。公告当时预计 11 月 19 日开始交易、11 月 20 日完成交割，并授予承销商 30 天内额外购买最多 1.47 亿股的期权。",
       "key_points_zh": [
-        "Anthropic 宣布 IPO 定价完成（官网公告，详情正文待补充）。",
-        "此前进程：10 月 26 日向 SEC 提交 S-1，11 月 10 日启动路演。"
+        "IPO 定价为每股 83.00 美元。",
+        "基础发行 9.8 亿股 Class A 普通股，其中 956,351,354 股由 Anthropic 出售。",
+        "23,648,646 股由现有股东出售，Anthropic 不收取这部分所得。",
+        "公告预计 11 月 19 日以 ANT 开始交易、11 月 20 日交割。",
+        "承销商拥有 30 天内额外购买最多 1.47 亿股的期权。"
       ],
-      "importance_reason_zh": "Anthropic 上市进程的关键节点，影响公司治理与行业资本格局。",
+      "importance_reason_zh": "完整正文补足定价、基础发行股数、股东出售部分和预期时间表。",
       "title_en": "Anthropic prices its initial public offering",
-      "summary_en": "Anthropic announced on its site that its proposed initial public offering has been priced; the company previously filed its S-1 on October 26 (listing under ticker ANT) and launched its roadshow on November 10.",
+      "summary_en": "Anthropic priced its IPO at $83.00 per share for a base offering of 980 million Class A common shares, including 956,351,354 shares sold by Anthropic. The announcement expected trading to begin on November 19 and closing on November 20, and granted underwriters a 30-day option to buy up to 147 million additional shares.",
       "key_points_en": [
-        "Anthropic announced its IPO pricing (site announcement; details pending full text).",
-        "Prior steps: S-1 filed with the SEC on October 26 and roadshow launched November 10."
+        "The IPO was priced at $83.00 per share.",
+        "The base offering was 980 million Class A common shares, including 956,351,354 sold by Anthropic.",
+        "Selling stockholders sold 23,648,646 shares, from which Anthropic received no proceeds.",
+        "The announcement expected trading as ANT on November 19 and closing on November 20.",
+        "Underwriters had a 30-day option to buy up to 147 million additional shares."
       ],
-      "importance_reason_en": "A key milestone in Anthropic's listing process, affecting governance and the industry's capital landscape.",
+      "importance_reason_en": "The full text adds the price, base share count, selling-stockholder portion and expected timetable.",
       "published_at": "2026-11-18",
       "date_precision": "date",
       "first_collected_at": "2026-11-19T15:30:00+00:00",
-      "updated_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
       "sources": [
         {
           "source_id": "anthropic-official",
           "content_id": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
           "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
-          "collected_at": "2026-11-19T14:40:39+00:00",
-          "material_scope": "metadata_only"
+          "collected_at": "2026-11-24T15:22:55+00:00",
+          "material_scope": "full_text"
         }
       ],
       "related_event_ids": [
         "anthropic-s1-ipo",
         "anthropic-ipo-roadshow-20261110"
+      ],
+      "corrections": [
+        {
+          "at": "2026-11-24T15:44:25+00:00",
+          "reason_zh": "用完整公告替换“细节待补”的占位摘要，补录定价、股数和预期交易／交割时间。",
+          "reason_en": "Replaced the placeholder summary with full offering price, share counts and expected trading/closing dates.",
+          "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+        }
+      ]
+    },
+    {
+      "id": "devin-2026-11-18",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix"
+      ],
+      "title_zh": "Devin 加强私有会话与 MCP 访问提示",
+      "summary_zh": "Devin 11 月 18 日更新让新会话可默认仅自己可见，并在扩大共享范围、使用共享插件或公开结果前显示谁会获得访问权限。组织附件跟随会话可见性，MCP 连接与安装界面也明确显示所用 Google 账号、个人或共享访问以及安装层级。",
+      "key_points_zh": [
+        "新会话可选择 Only you，设置中也可默认仅自己可见。",
+        "私有会话扩大共享范围或使用共享资源前会显示受影响人员并要求确认。",
+        "组织附件只能由可读取关联会话的人打开。",
+        "MCP 界面显示 Google 登录账号、Personal/Shared access 和安装层级。",
+        "Slack 无权限回复与 Teams 消息编辑等协作行为得到改进。"
+      ],
+      "importance_reason_zh": "更新把共享副作用和身份权限前置到操作确认中，降低企业数据意外暴露风险。",
+      "title_en": "Devin strengthens private-session and MCP access warnings",
+      "summary_en": "Devin’s November 18 update lets new sessions default to Only you and warns who will gain access before widening sharing, using shared resources or publishing results. Organization attachments follow session visibility, while MCP screens identify the Google account, personal/shared access and installation scope.",
+      "key_points_en": [
+        "New sessions can be Only you, including a default preference.",
+        "Private sessions confirm who will gain access before sharing widens or shared resources are used.",
+        "Organization attachments are readable only by people who can read an associated session.",
+        "MCP screens show the Google account, personal/shared access and installation scope.",
+        "Slack replies without session access and Teams message editing also improve."
+      ],
+      "importance_reason_en": "The update surfaces sharing side effects and identity permissions before actions, reducing accidental enterprise-data exposure.",
+      "published_at": "2026-11-18",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-18-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-18-2026",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
       ]
     },
     {
@@ -2369,18 +3446,109 @@
       "published_at": "2026-11-17T00:00:00+00:00",
       "date_precision": "datetime",
       "first_collected_at": "2026-11-19T15:30:00+00:00",
-      "updated_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
       "sources": [
         {
           "source_id": "google-developers-blog",
           "content_id": "https://developers.googleblog.com/en/gemini-hydrogen-for-robotics/",
           "url": "https://developers.googleblog.com/en/gemini-hydrogen-for-robotics/",
-          "collected_at": "2026-11-19T14:38:23+00:00",
-          "material_scope": "partial_text"
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
         }
       ],
       "related_event_ids": [
         "gemini-4-hydrogen-20261112"
+      ]
+    },
+    {
+      "id": "google-abfs-open-source-20261117",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "api"
+      ],
+      "title_zh": "Google 开源 ABFS，加速大型 Git 仓库构建",
+      "summary_zh": "Google 开源 Another Build File Service（ABFS），通过内容寻址文件系统 CASFS 按需加载源码，并用 Ninja-go 两阶段缓存复用构建结果。官方在 64 vCPU、256 GB 内存且服务端同云网络的 Android 17 基准中报告，检出从约 36 分钟降至 8 秒以内，完整构建从约 80 分钟降至约 2 分钟。",
+      "key_points_zh": [
+        "ABFS、CASFS 和 Ninja-go 已开源，支持按需加载与共享构建缓存。",
+        "Android 17 AOSP 包含 1,084 个 Git 项目、约 162 万文件和约 300 GB 构建工作区。",
+        "官方基准报告检出约 36 分钟降至 8 秒以内、完整构建约 80 分钟降至约 2 分钟。",
+        "测试条件为 64 vCPU、256 GB 内存的 GCE n2d-standard-64，且 ABFS 服务端与客户端位于同一云网络。",
+        "支持单机并行挂载多个 Android 分支；Android 17 之前版本需要部分补丁。"
+      ],
+      "importance_reason_zh": "ABFS 直接针对 Agent 并行工作区的冷启动和重复构建成本，对大型代码库开发影响显著。",
+      "title_en": "Google open-sources ABFS to accelerate massive Git repositories",
+      "summary_en": "Google open-sourced Another Build File Service (ABFS), which uses the content-addressable CASFS to load source on demand and Ninja-go two-phase caching to reuse build outputs. In an Android 17 benchmark on a 64-vCPU, 256-GB GCE VM with the server in the same cloud network, Google reports checkout falling from about 36 minutes to under 8 seconds and a full build from about 80 minutes to just over 2 minutes.",
+      "key_points_en": [
+        "ABFS, CASFS and Ninja-go are open source, providing on-demand loading and shared build caching.",
+        "Android 17 AOSP contains 1,084 Git projects, about 1.62 million files and a roughly 300-GB built workspace.",
+        "Official benchmarks report checkout falling from about 36 minutes to under 8 seconds and a full build from about 80 minutes to just over 2 minutes.",
+        "The test used a 64-vCPU, 256-GB GCE n2d-standard-64 VM with the ABFS server in the same cloud network.",
+        "Multiple Android branches can be mounted in parallel; releases before Android 17 require some patching."
+      ],
+      "importance_reason_en": "ABFS directly targets cold-start and repeated-build costs for parallel Agent workspaces, with significant implications for large repositories.",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/accelerating-development-for-massive-git-repositories/",
+          "url": "https://developers.googleblog.com/en/accelerating-development-for-massive-git-repositories/",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "google-ai-studio-android-fullstack-20261117",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature",
+        "availability"
+      ],
+      "title_zh": "Google AI Studio 支持构建并发布全栈 Android 应用",
+      "summary_zh": "Google AI Studio 使用 Gemini 4 Carbon 和 Hydrogen，支持从提示生成带数据持久化、登录和 AI 功能的全栈 Kotlin Android 应用。新流程自动配置 Cloud Firestore 与安全规则、Google Sign-In、Firebase AI Logic 和 App Check，并可发布到个人 Google Play 库；HD 模拟器、截图反馈、自定义字体和 Android CLI 同步上线。",
+      "key_points_zh": [
+        "AI Studio Build 可生成全栈 Kotlin Android 应用并自动配置 Firestore、Google Sign-In 与安全规则。",
+        "Firebase AI Logic 与 App Check 保护 Gemini API 调用，避免把 API Key 放入 APK。",
+        "支持构建、签名并发布到个人 Google Play 库，再安装到手机。",
+        "新增带实时音频的 HD 模拟器、一键截图给 Agent、自定义字体和 Android CLI 集成。",
+        "功能正在逐步推出，需在 AI Studio Build 选择 Android。"
+      ],
+      "importance_reason_zh": "更新把模型、后端、认证、测试和发布连成一条 Android 应用开发流程。",
+      "title_en": "Google AI Studio can build and publish full-stack Android apps",
+      "summary_en": "Google AI Studio uses Gemini 4 Carbon and Hydrogen to generate full-stack Kotlin Android apps with persistence, sign-in and AI features. The workflow provisions Cloud Firestore with Security Rules, Google Sign-In, Firebase AI Logic and App Check, and can publish to a personal Google Play library. HD emulators with audio, one-click screenshots, custom fonts and Android CLI integration are also rolling out.",
+      "key_points_en": [
+        "AI Studio Build generates full-stack Kotlin Android apps and provisions Firestore, Google Sign-In and Security Rules.",
+        "Firebase AI Logic and App Check protect Gemini API calls without embedding API keys in the APK.",
+        "Apps can be built, signed and published to a personal Google Play library for phone installation.",
+        "Adds HD emulators with live audio, one-click screenshots for Agents, custom fonts and Android CLI integration.",
+        "Features are rolling out and require selecting Android in AI Studio Build."
+      ],
+      "importance_reason_en": "The update connects model use, backend provisioning, authentication, testing and publishing in one Android development flow.",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/build-full-stack-android-apps-with-gemini-in-google-ai-studio/",
+          "url": "https://developers.googleblog.com/en/build-full-stack-android-apps-with-gemini-in-google-ai-studio/",
+          "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
       ]
     },
     {
@@ -7513,6 +8681,52 @@
           "content_id": "https://cognition.com/blog/swe-2-flash",
           "url": "https://cognition.com/blog/swe-2-flash",
           "collected_at": "2026-11-08T06:24:32+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "devin-2026-11-04",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "critical_fix"
+      ],
+      "title_zh": "Devin 扩展 Review 自动修复与 Jira 写操作",
+      "summary_zh": "Devin 11 月 4 日更新让 Review 每轮发布一份持续更新的报告，并按已修复、已忽略和待处理分组。内置 Jira 工具可创建议题，组织可连接多个 Jira 站点；GitLab 分支流水线结果进入会话，新服务用户默认启用记忆，分析页可隐藏逐用户数据。",
+      "key_points_zh": [
+        "Devin Review 每轮发布一份报告，并提供修复、忽略和待处理的分组视图。",
+        "内置 Jira 工具支持写操作，组织可连接多个 Jira 站点。",
+        "GitLab 分支流水线结果可发送到开放 MR 的会话。",
+        "新服务用户默认启用记忆；分析页可隐藏逐用户数据。",
+        "MCP 市场新增 X 只读令牌集成，Slack 顶级私信各自启动新会话。"
+      ],
+      "importance_reason_zh": "这批历史补采包含 Review、Jira、CI、记忆和隐私控制的实质变化。",
+      "title_en": "Devin expands Review auto-fix and Jira write actions",
+      "summary_en": "Devin’s November 4 update makes Review post one continuously updated report per round, grouped into fixed, dismissed and needs-attention findings. The built-in Jira tool can create issues, organizations can connect multiple Jira sites, GitLab branch-pipeline results reach sessions, new service users have memory enabled by default, and Analytics can hide per-user data.",
+      "key_points_en": [
+        "Devin Review posts one report per round with fixed, dismissed and needs-attention groups.",
+        "The built-in Jira tool supports write actions and organizations can connect multiple Jira sites.",
+        "GitLab branch-pipeline results reach sessions with open merge requests.",
+        "New service users have memory enabled by default; Analytics can hide per-user data.",
+        "The MCP marketplace adds X read-only-token integration, and top-level Slack DMs each start a new session."
+      ],
+      "importance_reason_en": "This historical gap includes substantive changes to Review, Jira, CI, memory and privacy controls.",
+      "published_at": "2026-11-04",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-24T15:22:56+00:00",
+      "updated_at": "2026-11-24T15:44:25+00:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-4-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-4-2026",
+          "collected_at": "2026-11-24T15:22:56+00:00",
           "material_scope": "full_text"
         }
       ]

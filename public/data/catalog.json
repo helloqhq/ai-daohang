@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "805f82c2c15ba062",
+  "snapshot_id": "30fd56a914ffd4f2",
   "entities": [
     {
       "id": "openai",
@@ -834,8 +834,7 @@
       "feed_date_precision": "date",
       "subscription_note": "官方博客为前端渲染页面，按需用浏览器打开原文并转为本地 RSS 导入；尚无在线订阅，完整时间窗覆盖未确认。文章页标注日期（如 2026-11-23）。",
       "subscription_note_en": "The official blog is client-rendered; posts are opened in a browser on demand and imported as local RSS. No online feed exists and full-window coverage is unconfirmed. Article pages carry an explicit date label (e.g. 2026-11-23).",
-      "feed_checked_at": "2026-11-23",
-      "offline_conversion": true
+      "feed_checked_at": "2026-11-23"
     },
     {
       "id": "moonshot-official",

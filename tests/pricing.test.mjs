@@ -76,7 +76,7 @@ test('model access is validated, searchable and tier-specific',()=>{
   }
   const inconsistent=structuredClone(snapshot);inconsistent.plans[index+1].product_name='Different';assert.throws(()=>validatePricing(inconsistent));
   assert.deepEqual(filterPlans(snapshot.plans,{provider:'Kimi',category:'token-plan',query:'K3'}).map(p=>p.tier_name),['Moderato (legacy)','Allegretto (legacy)','Allegro (legacy)','Plus','Pro','Max','Ultra']);
-  assert.deepEqual(filterPlans(snapshot.plans,{provider:'Kimi',category:'token-plan',query:'Highspeed'}).filter(p=>p.supported_models.includes('Kimi K2.7 Code Highspeed')).map(p=>p.tier_name),['Allegretto (legacy)','Allegro (legacy)','Pro','Max']);
+  assert.deepEqual(filterPlans(snapshot.plans,{provider:'Kimi',category:'token-plan',query:'Highspeed'}).filter(p=>p.supported_models.includes('Kimi K2.7 Code Highspeed')).map(p=>p.tier_name),['Allegretto (legacy)','Allegro (legacy)','Pro','Max','Ultra']);
   assert.deepEqual(filterPlans(snapshot.plans,{provider:'GitHub',category:'agent',query:'GPT-6.1 Sol'}).map(p=>p.tier_name),['Pro+','Max']);
   const oldRights={...snapshot.plans[index],models_checked_at:'2026-08-01'};
   assert.equal(pricingStatus(oldRights,now),'stale');

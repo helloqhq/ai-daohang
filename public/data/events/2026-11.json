@@ -1,7 +1,778 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "30fd56a914ffd4f2",
+  "snapshot_id": "d073b76adc1c143f",
   "events": [
+    {
+      "id": "pi-v161",
+      "entity_ids": [
+        "pi"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "api",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "pi 1.6.1 扩展 codemode 决策模型并修复会话与工具可靠性",
+      "summary_zh": "pi 1.6.1 让 codemode models.classify() 可调用 GitHub Copilot 的 gpt-6-luna-decisions 和 Radius 决策模型，并在结果中返回 responseId；OpenRouter System One 会填入 generation ID，并用实际计费成本替代目录估算。更新拆分通知设置、扩展 Gemini 严格工具与提供商错误钩子，同时修复大型会话加载、Windows 子进程退出、MCP 请求和多项模型兼容问题。",
+      "key_points_zh": [
+        "codemode models.classify() 新增 GitHub Copilot gpt-6-luna-decisions 与 Radius 决策模型，结果包含 responseId。",
+        "OpenRouter System One 将 responseId 填为 generation ID，并以实际计费成本替换目录估算。",
+        "showCacheMissNotices 拆分为 notices.cacheMisses、notices.cacheWarming、notices.compactionCosts 和 notices.reasoningDrops；旧 getter/setter 移除，改用 getNotices() 和 setNotice()。",
+        "为 google-generative-ai 和 google-vertex 模型增加 compat.supportsStrictMode，并修复带 vendor 前缀的 Gemini 3+ 模型的严格工具、tool-call ID 和函数响应图片支持。",
+        "after_provider_response 现覆盖 HTTP 4xx/5xx 响应和每次重试，并扩展到 OpenAI、Azure OpenAI、Anthropic 与 Google 模型。",
+        "关键修复覆盖约 120k 条及以上 compaction 后记录的会话加载、Windows SIGHUP/taskkill、MCP 字符串请求 ID 与大型事件、GPT-6.2 prefix_mismatch 和临时提供商错误重试。"
+      ],
+      "importance_reason_zh": "决策模型调用、计费口径和扩展 API 的变化直接影响自动化工作流；会话、Windows 和 MCP 修复则消除阻断性故障。",
+      "title_en": "pi 1.6.1 expands codemode decision models and fixes session and tool reliability",
+      "summary_en": "pi 1.6.1 lets codemode models.classify() call GitHub Copilot's gpt-6-luna-decisions and Radius decision models and return responseId; OpenRouter System One supplies its generation ID and replaces the catalog estimate with billed cost. The release splits notice settings, extends Gemini strict-tool and provider-error hooks, and fixes large-session loading, Windows child-process shutdown, MCP requests and several model compatibility issues.",
+      "key_points_en": [
+        "codemode models.classify() adds GitHub Copilot gpt-6-luna-decisions and Radius decision models, with responseId in the result.",
+        "OpenRouter System One sets responseId to its generation ID and replaces the catalog estimate with billed cost.",
+        "showCacheMissNotices splits into notices.cacheMisses, notices.cacheWarming, notices.compactionCosts and notices.reasoningDrops; the old getter/setter are removed in favor of getNotices() and setNotice().",
+        "Adds compat.supportsStrictMode for google-generative-ai and google-vertex models and fixes strict tools, tool-call IDs and images in function responses for vendor-prefixed Gemini 3+ model IDs.",
+        "after_provider_response now fires for HTTP 4xx/5xx responses and every retried attempt, extending to OpenAI, Azure OpenAI, Anthropic and Google models.",
+        "Key fixes cover sessions with about 120,000 or more entries after compaction, Windows SIGHUP/taskkill handling, MCP string request IDs and large events, GPT-6.2 prefix_mismatch, and retries for temporary provider failures."
+      ],
+      "importance_reason_en": "Decision-model access, billing semantics and extension API changes directly affect automated workflows, while the session, Windows and MCP fixes remove blocking failures.",
+      "published_at": "2026-11-25T13:41:35Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-25T13:43:34+00:00",
+      "updated_at": "2026-11-25T14:40:20Z",
+      "sources": [
+        {
+          "source_id": "pi-releases",
+          "content_id": "https://github.com/earendil-works/pi/releases/tag/v1.6.1",
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.6.1",
+          "collected_at": "2026-11-25T13:43:34+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-desktop-1-5-0-20261125",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Kimi Code Desktop 1.5.0 增加会话上下文视图并改进 Agent 控制",
+      "summary_zh": "Kimi Code Desktop 1.5.0 加入实验性提示预测、上下文用量视图和会话引用，并在 Always Ask 模式下自动批准静态验证为只读的 Bash 命令，但 ask 权限规则仍可要求逐次确认。桌面版还支持更新重启后继续会话、侧聊停止与中断、失败回合原地继续，并修复 Windows SSH 远程终端和未打开会话的 MCP 启动问题。",
+      "key_points_zh": [
+        "Settings > Lab 新增提示预测开关，可在回合完成后于输入框占位处显示预测的下一提示。",
+        "实验性 Context usage 在编辑器环和会话信息侧栏展示上下文用量与组成，并可列出模型收到的每一项；@ 菜单新增实验性 Sessions 引用，可按标题、最后消息或会话 ID 搜索。",
+        "静态验证为只读的 Bash 命令在 Always Ask 模式下自动批准；ask 权限规则可保留逐次确认。",
+        "移除 Agent 和 AgentSwarm 使用调用方会话历史启动子代理的实验性 fork 参数；更新重启后可继续运行中的会话，失败回合也可原地继续而不添加合成 Continue 用户消息。",
+        "侧聊支持停止按钮和双击 Escape 中断，关闭非空或活动侧聊前会提示，并终止后台侧聊 Agent；secondary_model 的当前选项会及时提供给 Agent。",
+        "修复 Windows SSH 远程项目的内置终端，并避免归档、删除或分叉未打开会话时启动 MCP；跨主机会话锁会自动回收，但共享状态目录不再跨机器或容器保护活跃持有者。"
+      ],
+      "importance_reason_zh": "上下文可见性、工具权限和会话连续性变化直接影响桌面 Agent 的日常使用，Windows SSH 与 MCP 生命周期修复则减少环境阻断。",
+      "title_en": "Kimi Code Desktop 1.5.0 adds context visibility and improves Agent controls",
+      "summary_en": "Kimi Code Desktop 1.5.0 adds experimental prompt prediction, a context-usage view and session mentions. It automatically approves statically verified read-only Bash commands even in Always Ask mode, while an ask permission rule can still require confirmation. Desktop also continues running sessions after update restarts, adds side-chat stop and interrupt controls, resumes failed turns in place, and fixes Windows SSH terminals and MCP startup for unopened sessions.",
+      "key_points_en": [
+        "A prompt-prediction switch in Settings > Lab shows a predicted next prompt in the composer placeholder after a turn completes.",
+        "Experimental Context usage shows context consumption and composition in the composer ring and session sidebar, with a list of everything the model receives; an experimental Sessions entry in the @ menu is searchable by title, last message or session ID.",
+        "Statically verified read-only Bash commands are auto-approved in Always Ask mode; an ask permission rule can retain per-command confirmation.",
+        "Removes the experimental fork parameter that let Agent and AgentSwarm start subagents with the caller's history; running sessions can continue after update restarts, and failed turns can resume in place without a synthetic Continue user message.",
+        "Side chats gain a stop button and double-Escape interrupt, prompt before non-empty or active tabs close, and terminate their background Agent; current secondary_model choices are exposed to the Agent as soon as they change.",
+        "Fixes the built-in terminal for Windows SSH remote projects and avoids starting MCP when archiving, deleting or forking an unopened session; cross-host locks are reclaimed automatically, but shared state directories no longer protect live holders across machines or containers."
+      ],
+      "importance_reason_en": "Context visibility, tool permissions and session continuity directly affect daily desktop Agent use, while the Windows SSH and MCP lifecycle fixes reduce environment-specific blockers.",
+      "published_at": "2026-11-25T12:55:10Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-25T13:43:49+00:00",
+      "updated_at": "2026-11-25T14:40:20Z",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/kimi-code-desktop%401.5.0",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/kimi-code-desktop%401.5.0",
+          "collected_at": "2026-11-25T13:43:49+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-cli-2-8-0-20261125",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Kimi Code CLI 2.8.0 稳定化 MCP 启动与媒体会话恢复",
+      "summary_zh": "Kimi Code CLI 2.8.0 稳定版加入实验性提示预测、上下文用量视图和 Web 会话引用，并让会话创建与恢复等待初始 MCP 连接完成，等待上限为各服务器的启动超时。更新还可在上传图片或视频不可读且提供商返回匹配的 400 错误后，经文件状态端点确认并从本地原件内联重发；静态只读 Bash 命令的自动批准规则也得到扩展。",
+      "key_points_zh": [
+        "设置 KIMI_CODE_EXPERIMENTAL_PROMPT_PREDICTION=1 后，可按 Tab 或右方向键接受预测的下一提示。",
+        "新增实验性 Context usage 视图；kimi web 的 @ 菜单新增实验性 Sessions 引用，可按标题、最后消息或会话 ID 搜索。",
+        "静态验证为只读的 Bash 命令在 Always Ask 模式下自动批准，ask 权限规则仍可要求确认；Agent 和 AgentSwarm 的调用方历史 fork 参数被移除。",
+        "会话创建和恢复会等待初始 MCP 服务器连接落定，上限为各服务器启动超时，并避免 CLI 启动时重复启动 MCP 服务器。",
+        "上传图片或视频不可读时，在匹配的提供商 400 错误后通过文件状态端点确认，永久标记跳过重新上传，并从本地原件内联重发。",
+        "保存的模型已从 config.toml 移除时，会话会恢复并提示选择其他模型，但在通过 /model 选定可用模型前阻止发送提示。"
+      ],
+      "importance_reason_zh": "MCP 工具初始化、媒体上传恢复和模型失效处理直接关系会话可用性，只读命令自动批准则改变工具权限边界。",
+      "title_en": "Kimi Code CLI 2.8.0 stabilizes MCP startup and media-session recovery",
+      "summary_en": "The stable Kimi Code CLI 2.8.0 release adds experimental prompt prediction, context-usage visibility and Web session mentions. Session creation and resume now wait for initial MCP connections to settle, bounded by each server's startup timeout. If an uploaded image or video is unreadable and the provider returns a matching 400 error, the CLI confirms file status and resends the local original inline; automatic approval for statically read-only Bash commands is also expanded.",
+      "key_points_en": [
+        "With KIMI_CODE_EXPERIMENTAL_PROMPT_PREDICTION=1, Tab or Right Arrow accepts the predicted next prompt.",
+        "Adds experimental Context usage visibility and an experimental Sessions entry in the kimi web @ menu, searchable by title, last message or session ID.",
+        "Statically verified read-only Bash commands are auto-approved in Always Ask mode unless an ask permission rule requires confirmation; the caller-history fork parameter for Agent and AgentSwarm is removed.",
+        "Session creation and resume wait for initial MCP connections to settle, bounded by each server's startup timeout, and CLI startup avoids starting MCP servers more than once.",
+        "For an unreadable uploaded image or video, a matching provider 400 error triggers file-status confirmation, permanent skip-reupload marking and inline resend from the local original.",
+        "Sessions whose saved model was removed from config.toml resume with a warning to choose another model, but prompts are blocked until an available model is selected with /model."
+      ],
+      "importance_reason_en": "MCP tool initialization, media-upload recovery and removed-model handling directly affect session availability, while read-only command auto-approval changes the tool-permission boundary.",
+      "published_at": "2026-11-25T12:50:55Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-25T13:43:49+00:00",
+      "updated_at": "2026-11-25T14:40:20Z",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.8.0",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.8.0",
+          "collected_at": "2026-11-25T13:43:49+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "kimi-code-2-8-0-canary-20261123"
+      ]
+    },
+    {
+      "id": "b-ai-credit-top-up-20261125",
+      "entity_ids": [
+        "b-ai"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing"
+      ],
+      "title_zh": "B.AI 升级积分充值，新增 $200、$500、$1,000 套餐",
+      "summary_zh": "B.AI 宣布升级 credit 充值功能，新增 $200、$500、$1,000 三档套餐，并允许自定义充值金额，单笔上限 $1,000。官方称汇率展示更清晰并支持多种支付渠道，但未给出具体兑换汇率。",
+      "key_points_zh": [
+        "新增 $200、$500、$1,000 三档 credit 套餐。",
+        "支持输入任意充值金额，单笔上限 $1,000。",
+        "官方称兑换汇率展示更清晰并支持多种支付渠道；原材料未列出汇率数值。"
+      ],
+      "importance_reason_zh": "具体套餐和单笔上限为高频及团队用户提供新的预算选择，但实际成本仍取决于未披露的兑换汇率。",
+      "published_at": "2026-11-25T09:00:00.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:44:24Z",
+      "sources": [
+        {
+          "source_id": "b-ai-x",
+          "content_id": "https://x.com/BAI_AGI/status/2125514830912372742",
+          "url": "https://x.com/BAI_AGI/status/2125514830912372742",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "title_en": "B.AI upgrades credit top-ups with $200, $500 and $1,000 packages",
+      "summary_en": "B.AI announced an upgrade to credit top-ups with new $200, $500 and $1,000 packages, custom top-up amounts and a $1,000 per-transaction cap. The company says exchange rates are displayed more clearly and multiple payment channels are supported, but it did not provide the actual exchange rates.",
+      "key_points_en": [
+        "Three new credit top-up packages are available: $200, $500 and $1,000.",
+        "Users can enter a custom top-up amount, with a $1,000 cap per transaction.",
+        "B.AI says exchange rates are shown more clearly and multiple payment channels are supported; the imported material does not list exchange-rate values."
+      ],
+      "importance_reason_en": "The concrete packages and per-transaction cap give frequent and team users additional budget options, but actual cost still depends on exchange rates that were not disclosed."
+    },
+    {
+      "id": "b-ai-minimax-h3-image-chat-20261125",
+      "entity_ids": [
+        "b-ai"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "capability",
+        "pricing"
+      ],
+      "title_zh": "B.AI Chat 上线 MiniMax H3 Image 与 Highspeed",
+      "summary_zh": "B.AI 宣布 MiniMax-H3-Image 和 MiniMax-H3-Image-Highspeed 在首次 API 发布后现已登陆 B.AI Chat，手机与网页端均可进行图像生成和编辑。官方称两款模型最多支持 16 张参考图、原生 4K 输出，B.AI 的 20% 折扣也同时覆盖 API 与 Chat。",
+      "key_points_zh": [
+        "两款模型在 B.AI Chat 移动端和网页端全面可用。",
+        "支持图像生成与编辑，最多 16 张参考图，原生 4K 输出。",
+        "B.AI 20% 折扣扩展至 Chat，现同时适用于 API 和 Chat；原文未说明截止日期。"
+      ],
+      "importance_reason_zh": "这是 H3 Image 的第三方平台可用性扩展，并附带明确折扣，但折扣期限未披露。",
+      "published_at": "2026-11-25T07:54:28.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:44:24Z",
+      "sources": [
+        {
+          "source_id": "b-ai-x",
+          "content_id": "https://x.com/BAI_AGI/status/2125498338980385115",
+          "url": "https://x.com/BAI_AGI/status/2125498338980385115",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "related_event_ids": [
+        "minimax-h3-image-20261111"
+      ],
+      "title_en": "B.AI Chat adds MiniMax H3 Image and Highspeed after their API release",
+      "summary_en": "B.AI says MiniMax-H3-Image and MiniMax-H3-Image-Highspeed are now available on B.AI Chat after their initial API release, with image generation and editing on mobile and web. The company claims support for up to 16 reference images and native 4K output, and says B.AI's 20% discount now covers both API and Chat.",
+      "key_points_en": [
+        "Both models are now available across B.AI Chat on mobile and web.",
+        "They support image generation and editing, up to 16 reference images and native 4K output.",
+        "B.AI's 20% discount has been extended to Chat and now covers both API and Chat; the source does not state an end date."
+      ],
+      "importance_reason_en": "This expands H3 Image onto a third-party chat platform with a stated discount, although the discount deadline was not disclosed."
+    },
+    {
+      "id": "worldrouter-black-friday-credits-20261125",
+      "entity_ids": [
+        "worldrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing"
+      ],
+      "title_zh": "WorldRouter 黑色星期五充值返 credits，最高 $100",
+      "summary_zh": "WorldRouter 于 11 月 25 日至 12 月 2 日推出充值返 credits：$100 返 $5、$500 返 $30、$1,000 返 $100。另有 3 名中奖者各得 $20 credits，需点赞、转发、标记 3 位好友并提交账户邮箱。",
+      "key_points_zh": [
+        "活动时间为 2026-11-25 至 2026-12-02。",
+        "充值 $100、$500、$1,000 分别返 $5、$30、$100 credits。",
+        "抽奖 3 名用户各得 $20 credits，条件包括点赞、转发、标记 3 位好友及回复或私信账户邮箱。"
+      ],
+      "importance_reason_zh": "明确的充值返还比例、额度和期限直接影响平台使用成本，属于可核算的限时优惠。",
+      "published_at": "2026-11-25T07:53:12.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:44:24Z",
+      "sources": [
+        {
+          "source_id": "worldrouter-x",
+          "content_id": "https://x.com/WorldClawAI/status/2125498021978988836",
+          "url": "https://x.com/WorldClawAI/status/2125498021978988836",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "title_en": "WorldRouter offers up to $100 in credits for Black Friday top-ups",
+      "summary_en": "WorldRouter is offering credit bonuses from November 25 through December 2: top up $100 to receive $5, $500 to receive $30, or $1,000 to receive $100. Three giveaway winners will also receive $20 in credits each; entry requires liking, reposting, tagging three friends and providing the account email address.",
+      "key_points_en": [
+        "The promotion runs from November 25 to December 2, 2026.",
+        "Top-ups of $100, $500 and $1,000 receive $5, $30 and $100 in credits, respectively.",
+        "Three winners receive $20 in credits each; entry requires a like, repost, three friend tags and an account email address submitted by reply or direct message."
+      ],
+      "importance_reason_en": "The stated top-up bonus amounts, ratios and dates provide concrete, calculable terms for a limited-time change in platform costs."
+    },
+    {
+      "id": "worldrouter-gemini-4-models-20261125",
+      "entity_ids": [
+        "worldrouter"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "capability"
+      ],
+      "title_zh": "WorldRouter 上线四款 Gemini 4 模型，均标称 1M 上下文",
+      "summary_zh": "WorldRouter 宣布 Hydrogen、Neon、Carbon、Argon 四款 Gemini 4 模型均可在平台使用，并称四者都有 1M-token 上下文窗口。WorldRouter 建议成本敏感任务选 Hydrogen、科学与图表密集任务选 Neon、长多步任务选 Carbon、成熟基线任务选 Argon；原帖提到当前价格，但导入材料未包含价格表。",
+      "key_points_zh": [
+        "Hydrogen、Neon、Carbon、Argon 四款 Gemini 4 模型已在 WorldRouter 上线。",
+        "WorldRouter 称四款模型均有 1M-token 上下文窗口。",
+        "WorldRouter 的工作负载建议为：Hydrogen 用于成本敏感任务，Neon 用于科学与图表密集任务，Carbon 用于长多步任务，Argon 作为成熟基线。",
+        "原帖引用 Google 基准图表并预告当前价格，但导入文本未包含图表数值或价格。"
+      ],
+      "importance_reason_zh": "明确可用模型和上下文规格，为平台用户选择模型提供依据；性能基准与价格仍需查看缺失续帖。",
+      "published_at": "2026-11-25T01:41:00.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:44:24Z",
+      "sources": [
+        {
+          "source_id": "worldrouter-x",
+          "content_id": "https://x.com/WorldClawAI/status/2125404351829008701",
+          "url": "https://x.com/WorldClawAI/status/2125404351829008701",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "title_en": "WorldRouter lists four Gemini 4 models, all claiming 1M-token context",
+      "summary_en": "WorldRouter says Hydrogen, Neon, Carbon and Argon are available on its platform and all have 1M-token context windows. It recommends Hydrogen for cost-sensitive work, Neon for science- and chart-heavy work, Carbon for long multi-step tasks and Argon as a baseline. The post references current pricing, but the imported material does not include a price table.",
+      "key_points_en": [
+        "Four Gemini 4 models are now available on WorldRouter: Hydrogen, Neon, Carbon and Argon.",
+        "WorldRouter says all four models have 1M-token context windows.",
+        "WorldRouter recommends Hydrogen for cost-sensitive work, Neon for science- and chart-heavy work, Carbon for long multi-step tasks and Argon as a baseline.",
+        "The post cites a Google benchmark chart and previews current pricing, but the imported text does not include the benchmark values or prices."
+      ],
+      "importance_reason_en": "The available model names and context specifications help users choose on the platform, while benchmark results and pricing remain missing from the imported continuation."
+    },
+    {
+      "id": "claude-code-2-1-332-20261125",
+      "entity_ids": [
+        "claude-code"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "availability",
+        "critical_fix"
+      ],
+      "title_zh": "Claude Code 2.1.332 加入 MCP Skills 与安全 Hook，调整云模型默认值",
+      "summary_zh": "Claude Code 2.1.332 新增来自 MCP 服务器的 beta Skills，以及可在 Skill 或命令加载时拒绝内联 shell 命令的 PreSkillShellCommand Hook。macOS computer use 采用更新的安全规则，部分操作会被拒绝且输入可能变慢；Microsoft Foundry 默认模型改为 Sonnet 5.5，多个云平台的模型别名、自动模式和区域变量也同步调整。",
+      "key_points_zh": [
+        "MCP 服务器 Skills 以 beta 形式加入 / 菜单并显示为 server:skill；PreSkillShellCommand 可在 Skill 或命令加载时拒绝其内联 shell 命令，2.1.331 及更早版本在 settings 中命名该 Hook 会在启动时打开对话框。",
+        "macOS computer use 采用更新的安全规则，部分操作会被拒绝且输入可能变慢；启用 computer use 的 Mac 上 computer-use 成为保留 Skill 名，同名自定义 Skill 或命令将停止加载。",
+        "Microsoft Foundry 默认模型改为 Sonnet 5.5，需部署 claude-sonnet-5-5；其 sonnet 和 opus 别名分别指向 Sonnet 5.5 与 Opus 5.5，Amazon Bedrock 的 sonnet 仍为 Sonnet 4.5，Foundry 中 Sonnet 4、Opus 4 和 Opus 4.1 已计为退役。",
+        "Bedrock Mantle、Agent Platform 和 Foundry 的终端及 VS Code 会话在未设置模式且使用 Sonnet 5 或 5.5 时默认进入 auto mode；设置 disableAutoMode 为 disable 可退出，默认模型不可用时只会回退到 auto mode 接受的旧模型。",
+        "Google Cloud Agent Platform 的 Sonnet 与后台请求改读 VERTEX_REGION_CLAUDE_5_5_SONNET；若只设置 4_5 变量，则使用 CLOUD_ML_REGION 或 us-east5。",
+        "VS Code 和 Desktop 的 Code 标签页新增会话未保存、恢复消息未加载及 /rewind 停止自定速 /loop 的警告；无法由 auto mode 安全判断的计划会请求批准，语音听写空闲上限从 15 秒/2 分钟提高到 60 秒/10 分钟。"
+      ],
+      "importance_reason_zh": "MCP Skills 与加载前 shell Hook 改变扩展执行边界，云模型默认值、别名和区域变量变化则要求企业检查部署与迁移配置。",
+      "title_en": "Claude Code 2.1.332 adds MCP Skills and a safety hook while changing cloud model defaults",
+      "summary_en": "Claude Code 2.1.332 adds beta Skills from MCP servers and a PreSkillShellCommand hook that can refuse inline shell commands as a skill or command loads. macOS computer use adopts newer safety rules, so some actions are refused and typing can be slower; Microsoft Foundry now defaults to Sonnet 5.5, with model-alias, auto-mode and region-variable changes across cloud platforms.",
+      "key_points_en": [
+        "MCP server Skills join the / menu in beta as server:skill; PreSkillShellCommand can refuse inline shell commands as a skill or command loads, while 2.1.331 and earlier open a startup dialog if a settings file names the hook.",
+        "macOS computer use adopts newer safety rules, so some actions are refused and typing can be slower; computer-use becomes a reserved skill name on Macs with computer use enabled, stopping same-named custom skills or commands from loading.",
+        "Microsoft Foundry defaults to Sonnet 5.5 and requires deploying claude-sonnet-5-5; its sonnet and opus aliases point to Sonnet 5.5 and Opus 5.5, Amazon Bedrock's sonnet stays on Sonnet 4.5, and Foundry counts Sonnet 4, Opus 4 and Opus 4.1 as retired.",
+        "Terminal and VS Code sessions using Sonnet 5 or 5.5 on Bedrock Mantle, Agent Platform and Foundry start in auto mode when no mode is set; disableAutoMode: \"disable\" opts out, and unavailable default models fall back only to older models accepted by auto mode.",
+        "Sonnet and background requests on Google Cloud Agent Platform read VERTEX_REGION_CLAUDE_5_5_SONNET; with only the 4_5 variable set, they use CLOUD_ML_REGION or us-east5.",
+        "The VS Code and Desktop Code tab adds warnings for unsaved sessions, unloaded resumed messages and /rewind stopping a self-paced /loop; plans that auto mode cannot safety-check request approval, and voice-dictation idle limits rise from 15 seconds/2 minutes to 60 seconds/10 minutes."
+      ],
+      "importance_reason_en": "MCP Skills and the pre-load shell hook change extension execution boundaries, while cloud model defaults, aliases and region variables require enterprises to review deployment and migration settings.",
+      "published_at": "2026-11-25T01:37:45+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T13:43:34+00:00",
+      "updated_at": "2026-11-25T14:40:20Z",
+      "sources": [
+        {
+          "source_id": "claude-code-changelog",
+          "content_id": "https://code.claude.com/docs/en/changelog#2-1-332",
+          "url": "https://code.claude.com/docs/en/changelog#2-1-332",
+          "collected_at": "2026-11-25T13:43:34+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-chatgpt-business-reset-fast-mode-20261124",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "feature"
+      ],
+      "title_zh": "Tibo：ChatGPT Business 推出 banked reset，fast mode 至 12 月 31 日免额外收费",
+      "title_en": "Tibo: ChatGPT Business gets a banked reset and fast mode at no extra charge through December 31",
+      "summary_zh": "Tibo 表示，ChatGPT Business 团队可获得 banked reset，并在 12 月 31 日前免额外费用使用 fast mode。原帖没有说明重置额度、fast mode 的具体速度或适用细则。",
+      "summary_en": "Tibo said ChatGPT Business teams can get a banked reset and use fast mode at no extra charge through December 31. The post does not specify the reset allowance, fast-mode speed or detailed eligibility terms.",
+      "key_points_zh": [
+        "Tibo 表示 ChatGPT Business 团队可获得 banked reset。",
+        "Tibo 表示 fast mode 在 12 月 31 日前不额外收费。",
+        "原帖未说明重置额度、fast mode 速度或适用细则。"
+      ],
+      "key_points_en": [
+        "Tibo said ChatGPT Business teams can get a banked reset.",
+        "Tibo said fast mode is available at no extra charge through December 31.",
+        "The post gives no reset allowance, fast-mode speed or detailed terms."
+      ],
+      "importance_reason_zh": "这是明确的账号权益与限时计费变化，直接影响 ChatGPT Business 团队使用；但额度和模式细节仍需官方说明。",
+      "importance_reason_en": "This is a clear account-benefit and time-limited pricing change for ChatGPT Business teams, though the allowance and mode details still need official documentation.",
+      "published_at": "2026-11-24T18:43:21.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:45:18+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2125299248782778588",
+          "url": "https://x.com/thsottiaux/status/2125299248782778588",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-agent-permissions-20261124",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Kilo 博客：Agent 指令不能替代系统权限",
+      "summary_zh": "Kilo 博客复盘 All Day AI 的安全讨论，区分 Agent 收到的指令与系统实际授予的权限，并以一个 $300 床垫返利 Agent 擅自接受条款和合同为例说明责任仍由用户承担。文章主张在工具、支付系统和数据访问层执行限制，为 Agent 设置独立身份、可撤销且会过期的授权，以及不可篡改的审计记录。",
+      "key_points_zh": [
+        "Always allow 或同类持续授权会把提示词变成长期权限；文章引用讲者观点称，授权范围与最终责任仍由用户承担。",
+        "读取发票不等于批准付款。示例 Agent 可为既有供应商批准最高 $10,000，超额时付款系统必须核对经理审批，不能只靠提示词约束。",
+        "邮件或附件中的请求不构成授权；Agent 不能修改策略或自行授权，身份、权限和授权范围需在执行时重新检查。",
+        "Kilo 当前每个工具可设 allow、ask、deny，多数工具默认 allow，读取 .env 会询问；macOS/Linux 沙箱默认关闭，限制写入和出站网络但不限制文件读取，也不能让 Allow Everything 变安全。",
+        "文章建议测试系统是否拒绝、阈值边界、不可编辑记录、任务中暂停和明确负责人；Anaconda 调查中仅 22% 的 59 名受访者在过去六个月测试过事件响应手册。"
+      ],
+      "importance_reason_zh": "文章把 Agent 安全从提示词工程推进到授权、支付和审计层，并披露 Kilo 权限设计的实际默认值与沙箱限制，对使用者判断风险有直接价值。",
+      "title_en": "Kilo blog: Agent instructions are not a substitute for system permissions",
+      "summary_en": "A Kilo blog post recapping the All Day AI security discussion separates the instructions an Agent receives from the authority the system actually grants. Using a $300 mattress-rebate Agent that accepted terms and contracts without asking, it argues that users retain responsibility. It recommends enforcing limits in tools, payment systems and data-access layers, with separate Agent identities, revocable expiring grants and immutable audit logs.",
+      "key_points_en": [
+        "Always allow and similar standing grants turn prompt text into durable authority; the post cites the speakers' view that users retain responsibility for the scope they grant.",
+        "Reading an invoice is not payment approval. In the example, an Agent may approve up to $10,000 for an existing supplier, but the payment system must check manager approval above that limit rather than relying on prompt instructions.",
+        "Requests in emails or attachments do not confer authority. Agents must not rewrite policy or authorize themselves; identity, permissions and grant scope need checks at execution time.",
+        "Kilo currently offers allow, ask and deny per tool; most tools default to allow, while reading .env asks first. Its macOS/Linux sandbox is off by default, restricts writes and outbound network but not filesystem reads, and does not make Allow Everything safe.",
+        "The post recommends testing refusal behavior, threshold boundaries, immutable records, mid-task pause and a named owner. In Anaconda's survey, only 22% of 59 respondents had tested an incident runbook in the previous six months."
+      ],
+      "importance_reason_en": "The post moves Agent safety from prompt engineering into authorization, payment and audit layers, while disclosing Kilo's actual permission defaults and sandbox limits. That makes it directly useful for users assessing operational risk.",
+      "published_at": "2026-11-24T18:18:21+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T13:43:49+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/your-agents-instructions-are-not",
+          "url": "https://blog.kilo.ai/p/your-agents-instructions-are-not",
+          "collected_at": "2026-11-25T13:43:49+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-chat-work-integration-preview-20261124",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "Tibo 预告整合聊天功能与工作经验，先向少量专业用户测试",
+      "title_en": "Tibo previews integration of chat and work experience for a small professional-user test",
+      "summary_zh": "Tibo 表示，团队即将开始整合聊天功能与工作经验，先向一小部分专业用户测试，根据反馈调整后再更广泛推广，并邀请用户提出想法。原帖未点名具体产品、模型或测试开始日期。",
+      "summary_en": "Tibo said the team will soon begin integrating chat features and work experience, testing first with a small group of professional users, adjusting based on feedback and then rolling out more broadly. The post does not name a specific product, model or test start date.",
+      "key_points_zh": [
+        "Tibo 预告将开始整合聊天功能与工作经验。",
+        "计划先向一小部分专业用户测试，再根据反馈调整并扩大推广。",
+        "原帖未说明具体产品、模型或测试开始日期。"
+      ],
+      "key_points_en": [
+        "Tibo previewed an upcoming integration of chat features and work experience.",
+        "The plan is to test with a small group of professional users, adjust based on feedback and then roll out more broadly.",
+        "The post does not identify a specific product, model or test start date."
+      ],
+      "importance_reason_zh": "这是负责人账号披露的产品方向与测试阶段，具有一手预告价值；但范围有限，不能据此认定正式发布或具体产品归属。",
+      "importance_reason_en": "This is a first-hand product-direction and testing-stage preview from a responsible account, but the limited scope does not establish a formal release or a specific product identity.",
+      "published_at": "2026-11-24T17:46:13.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:45:18+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2125284868414394550",
+          "url": "https://x.com/thsottiaux/status/2125284868414394550",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "antigravity-mcp-apps-20261124",
+      "entity_ids": [
+        "antigravity",
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Antigravity 支持 MCP Apps 交互式工具界面",
+      "summary_zh": "Google Antigravity 新增对 MCP Apps（SEP-1865，io.modelcontextprotocol/ui）的支持，使 MCP 工具可在工作区内渲染交互式 HTML，而不只返回文本或 JSON。标准应用无需改代码即可运行，Google 的扩展还支持持久侧栏、全页和自定义文件查看或编辑入口。",
+      "key_points_zh": [
+        "标准 MCP Apps 默认在聊天工具步骤下内联渲染，替代原始 JSON 包装并按内容调整高度。",
+        "com.google.antigravity/ui 支持持久侧栏标签、左侧全页视图和自定义文件查看器或编辑器；侧栏最多保留 5 个隐藏标签。",
+        "自定义文件视图使用 antigravity-file:// URI 隐藏真实路径并由宿主读取字节；仅编辑本地磁盘文件时允许保存。",
+        "已有 Better Stack、CodeRabbit、Datadog、monday.com、Qodo、Vercel 等插件；内置 /mcp-app-development skill 可生成单文件 HTML、MCP server 和 mcp_config.json 脚手架。"
+      ],
+      "importance_reason_zh": "MCP Apps 把工具结果从纯数据升级为可交互界面，并覆盖侧栏和文件编辑，是 Antigravity 插件兼容性与 Agent 工作流的重要变化。",
+      "title_en": "Antigravity adds support for interactive MCP Apps interfaces",
+      "summary_en": "Google Antigravity added support for MCP Apps (SEP-1865 and io.modelcontextprotocol/ui), allowing MCP tools to render interactive HTML inside the workspace instead of returning only text or JSON. Standard apps run without code changes, while Google's extensions add persistent sidebars, full-page views and custom file viewing or editing surfaces.",
+      "key_points_en": [
+        "Standard MCP Apps render inline beneath chat tool steps, replacing raw JSON wrappers and sizing themselves to their content.",
+        "com.google.antigravity/ui supports persistent sidebar tabs, full-page left views and custom file viewers or editors; up to five hidden sidebar tabs remain mounted.",
+        "Custom file views use antigravity-file:// URIs to conceal real paths and let the host read bytes; save-back is allowed only for files on local disk.",
+        "Existing integrations include Better Stack, CodeRabbit, Datadog, monday.com, Qodo and Vercel. A built-in /mcp-app-development skill scaffolds single-file HTML, an MCP server and mcp_config.json."
+      ],
+      "importance_reason_en": "MCP Apps turn tool output into interactive interfaces and add sidebar and file-editing surfaces, marking a substantial compatibility and workflow change for Antigravity plugins.",
+      "published_at": "2026-11-24T17:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:33+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "sources": [
+        {
+          "source_id": "antigravity-blog",
+          "content_id": "https://antigravity.google/blog/mcp-apps-in-antigravity",
+          "url": "https://antigravity.google/blog/mcp-apps-in-antigravity",
+          "collected_at": "2026-11-25T14:32:33+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1-0-116",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Copilot CLI 1.0.116 扩展进程环境配置并改进 MCP 与权限可靠性",
+      "summary_zh": "Copilot CLI 1.0.116 系列新增面向所有子进程的 env 设置和 ACP 编辑器上下文大小选择，改进 MCP 启动、认证与重复端点提示，并加入扩展清单 JSON Schema。补丁还修复 PowerShell 数字参数允许规则、长会话内存增长、无效 TERM_PROGRAM 阻断 hooks、ACP 授权命令显示和 /rewind 文件捕获限制提示。",
+      "key_points_zh": [
+        "env 设置可应用于 shell 命令、本地 LSP、MCP 服务器、hooks 和扩展启动的每个进程，无论是否启用沙箱；ACP 兼容编辑器可为支持的模型选择上下文大小而不改保存的默认值。",
+        "组织管理的 MCP 服务器可跳过个别慢连接和登录警告（Connectors 除外），启动摘要集中提示需处理的服务器；提示最多等待 30 秒以纳入受信任目录启动的 MCP 工具，插件与独立 MCP 共用端点时也会发出警告。",
+        "扩展清单新增构建时 JSON Schema；实验性扩展改用 Enabled/Disabled，原 Load Only 迁移为 disabled；沙箱阻止命令后可在策略允许时建议会话级关闭沙箱，Assisted Permissions 的判定与说明同步改进。",
+        "修复 PowerShell -n1、-ExpectedSha256 等数字参数不再匹配允许规则的问题；文件夹信任提示不再等待 MCP 重连，Swift 工具可在 macOS 和 Linux 沙箱写入编译器模块缓存与 SwiftPM 共享缓存。",
+        "修复长会话中文本测量缓存复制完整流式回复导致 JavaScript 堆耗尽，以及无效 TERM_PROGRAM 阻断配置的 HTTP hooks；Unix 上取消的前台 shell 命令可在输出到 stdout/stderr 时完成清理。",
+        "ACP 客户端 shell 授权提示显示实际命令而非描述；/rewind 会报告因回合超过文件捕获上限而无法恢复的文件；计划批准不再提供 fleet 选项，但仍可用 /fleet 启动。"
+      ],
+      "importance_reason_zh": "全局进程环境配置、MCP 初始化和权限规则影响企业部署与工具安全；内存、hook 和授权提示修复则关系长会话稳定性与可审计性。",
+      "title_en": "Copilot CLI 1.0.116 expands process environment configuration and improves MCP and permission reliability",
+      "summary_en": "The Copilot CLI 1.0.116 series adds an env setting for every child process and context-size selection for ACP-compatible editors, improves MCP startup, authentication and duplicate-endpoint warnings, and adds a build-time JSON Schema for extension manifests. Patches also fix PowerShell allow rules for numeric parameters, long-session memory growth, hooks blocked by invalid TERM_PROGRAM values, ACP command authorization display and /rewind file-capture-limit reporting.",
+      "key_points_en": [
+        "The env setting applies to every process Copilot starts for shell commands, local LSP, MCP servers, hooks and extensions, with or without the sandbox; ACP-compatible editors can choose context size for supported models without changing saved defaults.",
+        "Organization-managed MCP servers can skip individual slow-connection and sign-in warnings except Connectors, with needs-attention status in the startup summary; prompts wait up to 30 seconds for MCP tools started by folder trust, and shared plugin/standalone MCP endpoints trigger a warning.",
+        "Extension manifests gain a build-time JSON Schema; experimental extensions use Enabled/Disabled and migrate Load Only to disabled; blocked sandbox commands can suggest session-level sandbox disabling when policy allows, and Assisted Permissions decisions and explanations improve.",
+        "Fixes PowerShell parameters such as -n1 and -ExpectedSha256 no longer matching allow rules; folder trust closes without waiting for MCP reconnection, and Swift tools can write compiler module and SwiftPM shared caches in macOS and Linux sandboxes.",
+        "Fixes long-session JavaScript heap exhaustion from text-measurement caches copying full streamed replies and configured HTTP hooks being blocked by invalid TERM_PROGRAM values; canceled Unix foreground shell commands can finish cleanup while writing to stdout or stderr.",
+        "ACP shell approval prompts show the actual command rather than its description; /rewind reports files it cannot restore after a turn exceeds the file-capture limit; plan approval no longer offers fleet, though /fleet still starts it."
+      ],
+      "importance_reason_en": "Global process environment configuration, MCP initialization and permission rules affect enterprise deployment and tool safety, while memory, hook and authorization-display fixes improve long-session stability and auditability.",
+      "published_at": "2026-11-24T16:43:35Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-25T13:43:34+00:00",
+      "updated_at": "2026-11-25T14:40:20Z",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-0",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-0",
+          "collected_at": "2026-11-25T13:43:34+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-2",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-2",
+          "collected_at": "2026-11-25T13:43:34+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-3",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-3",
+          "collected_at": "2026-11-25T13:43:34+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-4",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-4",
+          "collected_at": "2026-11-25T13:43:34+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-5",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-5",
+          "collected_at": "2026-11-25T13:43:34+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt6-protein-design-20261124",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 报告 GPT-6 模型的内生蛋白质设计能力",
+      "summary_zh": "OpenAI 预印本称，GPT-6 系列可仅凭推理和代码设计新蛋白质的形状与氨基酸序列，而无需调用专门生物学模型来生成这些设计。内部研究模型在多项计算任务上媲美或超过专用模型；但实验室流程仍使用专用模型补充序列、筛选候选和预测结构，完整结构预测与端到端零样本设计仍有明显差距。",
+      "key_points_zh": [
+        "GPT-6 系列通过推理和代码设计蛋白质形状与序列，自然语言提示可指定附着位置、结构类型以及螺旋或折叠链数量。",
+        "内部研究模型在 14 项蛋白质任务的多项上随代际提升，但完整结构预测仍弱：平均 TM-score 为 0.38，而 ESMFold2 为 0.93。",
+        "Onava 实验室测试 322 个 minibinder、5 个靶点，35 个（10.9%）显示预期结合；专用模型负责补充序列并筛选候选。",
+        "既有多轮序列重设计实验中，MDM2、VEGF-A、PD-1 的结合比例分别为 75/88、26/42、8/59；两类抗体片段或循环改造为 128/182 和 179/272 保留结合。",
+        "结果不证明端到端零样本 minibinder 设计；特异性、稳定性、生物活性、安全性和疗效仍需验证，OpenAI 同时提示生物安全风险。"
+      ],
+      "importance_reason_zh": "这是通用模型参与蛋白质设计的实验室证据，可能改变科研工作流，但不能据此认为专用模型已被替代或成果可直接用于医疗。",
+      "title_en": "OpenAI reports intrinsic protein-design capabilities in GPT-6 models",
+      "summary_en": "In a preprint, OpenAI says GPT-6-family models can use reasoning and code to design new protein shapes and amino-acid sequences without calling specialized biology models to generate those designs. An internal research model matched or outperformed specialized models on several computational tasks, but the laboratory workflow still used specialized models to complete sequences, filter candidates and predict structures. Whole-structure prediction and end-to-end zero-shot design remain major gaps.",
+      "key_points_en": [
+        "GPT-6-family models use reasoning and code to design protein shapes and sequences; natural-language prompts can specify attachment sites, structural types, and numbers of helices or folded chains.",
+        "The internal model improved across generations on several of 14 protein tasks, but whole-structure prediction remains weak: average TM-score was 0.38 versus 0.93 for ESMFold2.",
+        "Onava laboratory tests covered 322 minibinders against five targets, with 35 binders (10.9%) showing expected binding; specialized models supplied sequences and filtered candidates.",
+        "In existing-structure redesign, binding proportions were 75/88 for MDM2, 26/42 for VEGF-A and 8/59 for PD-1; two antibody-fragment or loop redesign groups retained binding in 128/182 and 179/272 cases.",
+        "The results do not establish end-to-end zero-shot minibinder design. Specificity, stability, biological activity, safety and efficacy still require validation, and OpenAI flags biosecurity risks."
+      ],
+      "importance_reason_en": "This is laboratory evidence that general-purpose models can contribute to protein design and may change research workflows, but it does not show that specialized models are obsolete or that the results are ready for medical use.",
+      "published_at": "2026-11-24T13:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:33+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+          "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+          "collected_at": "2026-11-25T14:32:33+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2125334383490105601",
+          "url": "https://x.com/OpenAI/status/2125334383490105601",
+          "collected_at": "2026-11-25T14:32:33+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2125334385272774887",
+          "url": "https://x.com/OpenAI/status/2125334385272774887",
+          "collected_at": "2026-11-25T14:32:33+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-astra-exoplanet-search-20261124",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 介绍用 Codex 和 Astra 搜索系外行星候选",
+      "summary_zh": "OpenAI 科学文章称，Kevin Bond 用 Codex 搜索约 10 万颗开普勒恒星，Ethan Byrd 用 Astra 分析约 1,900 万颗恒星的数据，两人找到值得进一步复核的凌星信号。相关信号尚未确认是行星；SETI 研究者独立复现 Bond 的两条信号，Byrd 的一个候选正等待 TESS 团队分析。",
+      "key_points_zh": [
+        "Bond 的 Codex 程序标记了 200 多条信号，其中包括 10 颗已确认行星；KIC 5689121 的 13.8 天周期可能对应约 2.4 个地球直径的天体，KIC 6691030 的 4.8 天信号则与小于海王星的候选相符。",
+        "SETI 团队独立找到 Bond 报告的两条信号，但确认仍需数月甚至数年，并需排除双星食、仪器效应等解释。",
+        "Byrd 的 Astra 搜索覆盖约 1,900 万颗恒星，第一轮得到 49 个候选；一个较强的候选正等待 TESS 研究人员处理，另外两个等待提交，搜索仍在运行。",
+        "文章明确称这些结果不是已确认的行星发现，仍需后续观测、径向速度验证和同行评议。"
+      ],
+      "importance_reason_zh": "这是编码代理与通用模型处理大规模天文数据的实际案例，展示了候选筛选和跨团队协作价值，但不宜包装成已确认的科学发现或产品发布。",
+      "title_en": "OpenAI describes exoplanet-candidate searches with Codex and Astra",
+      "summary_en": "An OpenAI science article says Kevin Bond used Codex to search roughly 100,000 Kepler stars, while Ethan Byrd used Astra to analyze data from about 19 million stars, producing transit signals worth follow-up. None of the highlighted candidates is yet a confirmed planet. SETI researchers independently reproduced Bond's two signals, and one of Byrd's candidates is awaiting analysis by the TESS team.",
+      "key_points_en": [
+        "Bond's Codex program flagged more than 200 signals, including 10 already-confirmed planets. The 13.8-day signal from KIC 5689121 could indicate a body about 2.4 Earth diameters wide, while KIC 6691030's 4.8-day signal is consistent with a candidate smaller than Neptune.",
+        "The SETI team independently found Bond's two signals, but confirmation may take months or years and must rule out eclipsing binaries and instrumental effects.",
+        "Byrd's Astra search covered about 19 million stars and produced 49 first-pass candidates. One strong candidate awaits TESS researchers, two more await submission, and the search is still running.",
+        "The article explicitly presents candidates rather than confirmed planet discoveries; follow-up observations, radial-velocity validation and peer review are still required."
+      ],
+      "importance_reason_en": "This is a concrete use of coding agents and general models on large astronomical datasets, showing value in candidate screening and collaboration without turning unconfirmed signals into a scientific discovery or product launch.",
+      "published_at": "2026-11-24T11:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:33+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "sources": [
+        {
+          "source_id": "openai-official",
+          "content_id": "https://openai.com/index/searching-for-distant-planets-with-astra",
+          "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+          "collected_at": "2026-11-25T14:32:33+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2125305606685053416",
+          "url": "https://x.com/OpenAI/status/2125305606685053416",
+          "collected_at": "2026-11-25T14:32:33+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2125305608597590018",
+          "url": "https://x.com/OpenAI/status/2125305608597590018",
+          "collected_at": "2026-11-25T14:32:33+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-cisco-agent-cyber-infrastructure-20261124",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Tibo：正与 Cisco 开发面向安全 Agent 运维的网络安全基础设施",
+      "title_en": "Tibo: working with Cisco on cybersecurity infrastructure for safe agent operations",
+      "summary_zh": "Tibo 表示，其团队正与 Cisco 合作，他认为这些工作将成为网络安全新纪元的关键基础设施基础；所有系统都需要构建成可由经过对齐的 Agent 安全地以机器速度运维。原帖未说明具体产品、架构、发布时间或与现有 Cisco 项目的关系。",
+      "summary_en": "Tibo said his team is working with Cisco on what he believes will be key infrastructure primitives for a new era of cybersecurity, and that everything needs to be built for safe operation by aligned agents at machine speed. The post does not identify a specific product, architecture, release date or relationship to existing Cisco projects.",
+      "key_points_zh": [
+        "Tibo 表示其团队正与 Cisco 合作，并认为这些工作是网络安全新纪元的关键基础设施基础。",
+        "他表示，所有系统都需要构建成可由经过对齐的 Agent 安全地以机器速度运维。",
+        "原帖未披露具体产品、架构、发布时间或与现有 Cisco 项目的关系。"
+      ],
+      "key_points_en": [
+        "Tibo said his team is working with Cisco on what he considers key infrastructure primitives for a new era of cybersecurity.",
+        "He said everything needs to be built for safe operation by aligned agents at machine speed.",
+        "The post gives no specific product, architecture, release date or relationship to existing Cisco projects."
+      ],
+      "importance_reason_zh": "这提供了 AI 与网络安全基础设施合作方向的一手进展；但内容仍属方向性表述，不能据此补充具体实现、许可或上线信息。",
+      "importance_reason_en": "This provides first-hand evidence of the direction of an AI and cybersecurity infrastructure collaboration, but it does not support adding implementation, licensing or launch details.",
+      "published_at": "2026-11-24T08:15:44.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:45:18+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2125141302501417232",
+          "url": "https://x.com/thsottiaux/status/2125141302501417232",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
     {
       "id": "zuck-aluminium-pronunciation-20261124",
       "entity_ids": [
@@ -87,6 +858,47 @@
           "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.71.0-nightly.20261124.gaafdfdfb5",
           "collected_at": "2026-11-24T15:18:10+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-open-source-infrastructure-listening-20261124",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Tibo 推荐了解 OpenAI 团队的开源软件与基础设施修复工作",
+      "title_en": "Tibo recommends a listen on OpenAI’s open-source and infrastructure fixes",
+      "summary_zh": "Tibo 表示，想了解 OpenAI 团队思考方式的人值得一听，并称团队一直在修复其所依赖的开源软件和基础设施中的缺陷。原材料没有给出音频名称、链接、具体缺陷或修复清单。",
+      "summary_en": "Tibo said people curious about how OpenAI’s team thinks should give it a listen, and claimed the team has been working to fix defects in the open-source software and infrastructure it relies on. The material does not provide the audio’s name, link, specific defects or a fix list.",
+      "key_points_zh": [
+        "Tibo 推荐通过一段音频了解 OpenAI 团队的思考方式。",
+        "他称团队一直在修复其所依赖的开源软件和基础设施中的缺陷。",
+        "原材料未提供音频名称、链接、具体缺陷或修复清单。"
+      ],
+      "key_points_en": [
+        "Tibo recommended listening to an audio item to understand how OpenAI’s team thinks.",
+        "He said the team has been fixing defects in the open-source software and infrastructure it relies on.",
+        "The material provides no audio title, link, specific defects or fix list."
+      ],
+      "importance_reason_zh": "这是负责人账号对工程优先事项的一手观点，具有行业参考价值；但缺少可核验的修复对象与状态，不能当作已完成修复的公告。",
+      "importance_reason_en": "This is a first-hand view of engineering priorities from a responsible account, but without verifiable targets or status it should not be treated as an announcement of completed fixes.",
+      "published_at": "2026-11-24T00:43:26.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:45:18+00:00",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2125027477877887231",
+          "url": "https://x.com/thsottiaux/status/2125027477877887231",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },
@@ -182,6 +994,52 @@
       ]
     },
     {
+      "id": "google-agent-retrieval-managed-ingestion-preview-20261124",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "preview",
+      "topics": [
+        "api",
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Google Agent Retrieval 公共预览托管文件摄取与 SearchDocuments",
+      "summary_zh": "Google 为 Agent Retrieval（原 Vector Search 2.0）的 Managed Ingestion 和 SearchDocuments 开启 Public Preview，可从 Cloud Storage 解析、切分和嵌入 PDF、Office 文档与视频，再用一次 API 调用返回带页码或时间戳的段落。公共预览仅支持 us-east4 和 europe-west4，REST API 为 v1beta，Python SDK 尚未支持。",
+      "key_points_zh": [
+        "文档支持 PDF、DOCX、PPTX、XLSX、TXT；视频支持 MP4、MOV、WebM、MKV 等，托管流程负责解析、分段、Gemini Embedding 2 嵌入和 Collection 创建。",
+        "SearchDocuments 只需数据存储和文本查询，自动组合语义与全文检索；结果带源文件 URI、文档页码范围或视频起止时间。",
+        "视频默认仅嵌入画面，audio_mode: ENABLED 可检索首个音轨的语音；无需字幕或转写，reranking 不支持 VIDEO。",
+        "Google 测试 18 份 Alphabet 投资者 PDF 约 9 分钟可搜索；5 段共约 19 分钟视频的查询耗时 0.3–0.5 秒，但导入两个数据存储耗时 20–45 分钟。",
+        "Public Preview 仅限 us-east4/europe-west4 的 v1beta REST API；托管摄取暂不单独收费，底层 Collection 按标准价格计费，GA 后将对摄取收费。"
+      ],
+      "importance_reason_zh": "一次 API 调用覆盖文件解析、嵌入、混合检索和带引文段落返回，可显著减少自建 RAG 摄取链路；但预览区域、视频限制和后续计费仍需纳入评估。",
+      "title_en": "Google previews managed ingestion and SearchDocuments for Agent Retrieval",
+      "summary_en": "Google placed Managed Ingestion and SearchDocuments for Agent Retrieval, formerly Vector Search 2.0, into Public Preview. They can parse, chunk and embed PDF, Office documents and videos from Cloud Storage, then return passages with page ranges or timestamps in one API call. The preview is limited to us-east4 and europe-west4, uses the v1beta REST API and has no Python SDK support yet.",
+      "key_points_en": [
+        "Documents support PDF, DOCX, PPTX, XLSX and TXT; video supports MP4, MOV, WebM, MKV and more. The managed pipeline parses, chunks, embeds with Gemini Embedding 2 and creates the Collection.",
+        "SearchDocuments takes only a data store and a text query, automatically combining semantic and full-text retrieval; results include source URIs, document page ranges or video start and end times.",
+        "Video embeds visuals by default; audio_mode: ENABLED searches speech from the first audio track without subtitles or transcripts. Reranking does not support VIDEO.",
+        "Google's tests made 18 Alphabet investor PDFs searchable in about nine minutes. Queries across five clips totaling about 19 minutes took 0.3–0.5 seconds, but ingestion into two stores took 20–45 minutes.",
+        "Public Preview is limited to v1beta REST in us-east4 and europe-west4. Managed ingestion has no separate preview charge, the backing Collection uses standard pricing, and ingestion billing is planned for GA."
+      ],
+      "importance_reason_en": "A single API covers ingestion, embeddings, hybrid retrieval and cited passages, potentially removing much of a custom RAG ingestion pipeline. Preview regions, video limits and planned ingestion billing still matter for adoption.",
+      "published_at": "2026-11-24T00:00:00+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T13:47:41+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "sources": [
+        {
+          "source_id": "google-developers-blog",
+          "content_id": "https://developers.googleblog.com/en/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/",
+          "url": "https://developers.googleblog.com/en/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/",
+          "collected_at": "2026-11-25T13:47:41+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "qoder-0-5-18-20261124",
       "entity_ids": [
         "qoder"
@@ -220,6 +1078,144 @@
           "content_id": "https://docs.qoder.com/release-notes/qoder#november-24-2026::0.5.18",
           "url": "https://docs.qoder.com/release-notes/qoder#november-24-2026",
           "collected_at": "2026-11-24T15:22:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-3-6-20261124",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "availability"
+      ],
+      "title_zh": "Kiro CLI 3.6 增加 SubagentStop Hook 与压缩指导",
+      "summary_zh": "Kiro CLI 3.6 新增 SubagentStop hooks、完整保存的 Hook 输出和 /compact 摘要指导，并加入会话回顾、通知控制、managed V2 控制和面向所有用户的 Windows 安装器。",
+      "key_points_zh": [
+        "新增 SubagentStop hooks 和完整保存的 Hook 输出。",
+        "新增 /compact 摘要指导和会话回顾。",
+        "加入通知控制与 managed V2 控制。",
+        "提供面向所有用户的 Windows 安装器。"
+      ],
+      "importance_reason_zh": "子代理停止 Hook 和企业管理控制影响自动化生命周期与管理方式，Windows 安装器则扩大部署覆盖面。",
+      "title_en": "Kiro CLI 3.6 adds SubagentStop hooks and compaction guidance",
+      "summary_en": "Kiro CLI 3.6 adds SubagentStop hooks, full saved Hook output and instructions for /compact summaries, along with conversation recaps, notification controls, managed V2 controls and a Windows installer for all users.",
+      "key_points_en": [
+        "Adds SubagentStop hooks and full saved Hook output.",
+        "Adds instructions for /compact summaries and conversation recaps.",
+        "Adds notification controls and managed V2 controls.",
+        "Provides a Windows installer for all users."
+      ],
+      "importance_reason_en": "Subagent-stop hooks and managed controls affect automation lifecycle and administration, while the Windows installer broadens deployment options.",
+      "published_at": "2026-11-24",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T13:43:49+00:00",
+      "updated_at": "2026-11-25T14:40:20Z",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/3-6",
+          "url": "https://kiro.dev/changelog/cli/3-6",
+          "collected_at": "2026-11-25T13:43:49+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-enterprise-iphone-20261124",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "feature"
+      ],
+      "title_zh": "Kiro Enterprise for iPhone 上线，支持跨 Web 接续云会话",
+      "summary_zh": "Kiro Enterprise 现已登陆 App Store，这是面向组织账户的 Kiro Mobile 应用。用户可从 iPhone 启动云会话、跟随 Agent 工作、审查变更并在需要输入时回复；会话与 Kiro Web 同步，可在手机上开始并转到 Web 接续。",
+      "key_points_zh": [
+        "Kiro Enterprise 已在 App Store 上线，是面向组织账户的 Kiro Mobile 应用。",
+        "可从 iPhone 启动云会话、跟随 Agent 工作、审查变更并在需要时回复。",
+        "会话与 Kiro Web 同步，可在手机上开始并在 Web 接续。"
+      ],
+      "importance_reason_zh": "企业用户新增 iPhone 移动入口，并可跨设备接续同一云会话，扩大 Agent 工作的可用场景。",
+      "title_en": "Kiro Enterprise for iPhone launches with cloud sessions that continue on the web",
+      "summary_en": "Kiro Enterprise is now on the App Store as Kiro Mobile for organization accounts. Users can start cloud sessions from an iPhone, follow the Agent, review changes and reply when input is needed; sessions sync with Kiro Web so work can start on a phone and continue on the web.",
+      "key_points_en": [
+        "Kiro Enterprise is on the App Store as Kiro Mobile for organization accounts.",
+        "Users can start cloud sessions from an iPhone, follow the Agent, review changes and reply when needed.",
+        "Sessions sync with Kiro Web, allowing work to start on a phone and continue on the web."
+      ],
+      "importance_reason_en": "Enterprise users gain an iPhone entry point and can continue the same cloud session across devices, expanding where Agent work can happen.",
+      "published_at": "2026-11-24",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T13:43:49+00:00",
+      "updated_at": "2026-11-25T14:40:20Z",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/mobile/kiro-enterprise-for-ios",
+          "url": "https://kiro.dev/changelog/mobile/kiro-enterprise-for-ios",
+          "collected_at": "2026-11-25T13:43:49+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "related_event_ids": [
+        "kiro-mobile-android-20261112"
+      ]
+    },
+    {
+      "id": "devin-swe-2-1-20261124",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Cognition 发布 SWE-2.1，并推出 Ultrafast 与 Cyber 版本",
+      "summary_zh": "Cognition 发布 SWE-2.1，称其在 Kimi K3 上以纯强化学习训练，FrontierCode 2.0 得分 41.3，Terminal-Bench 4.1 得分 50.0，网络安全能力明显提升。同时推出经 Cerebras 提供 10 倍速度的 SWE-2.1 Ultrafast，并向 Devin Security 推出限制更宽松的 SWE-2.1 Cyber；两者定位与普通版不同。",
+      "key_points_zh": [
+        "SWE-2.1 在 FrontierCode 2.0 得 41.3、Terminal-Bench 4.1 得 50.0；官方称其相比 SWE-2 显著提升，数字来自不同 harness 的上游或自报结果。",
+        "ExploitBench 为 80%，ExploitGym intended-exploit success 为 27.3%、flag capture 为 44.8%；评测在关闭 mitigations 下运行，不能直接等同真实环境表现。",
+        "训练加入沙箱红队、持续监控和逃逸 canary；训练期间模型四次发现沙箱漏洞，每次都触发研究人员响应。",
+        "SWE-2.1 Ultrafast 与 Cerebras 合作，以同模型提供 10 倍速度；示例吞吐为 600 tokens/s，而普通版为 60 tokens/s、SWE-2 Flash 为 200 tokens/s。",
+        "SWE-2.1 Cyber 限制更宽松，正 rollout 到 Devin Security；普通版 Desktop/CLI 免费至 12/8，Desktop/Cloud/CLI 折扣至 1/30，文章未给出具体价格。"
+      ],
+      "importance_reason_zh": "这是 SWE-2 之后的重要模型升级，并同时改变高性能服务与安全研究路径；官方基准和不同变体的限制需要一起呈现。",
+      "title_en": "Cognition releases SWE-2.1 with Ultrafast and Cyber variants",
+      "summary_en": "Cognition released SWE-2.1, saying it was trained with pure reinforcement learning on Kimi K3, scored 41.3 on FrontierCode 2.0 and 50.0 on Terminal-Bench 4.1, and improved substantially in cybersecurity. It also introduced SWE-2.1 Ultrafast with 10x speed through Cerebras and is rolling out the more permissive SWE-2.1 Cyber variant to Devin Security; both have distinct positions from the standard model.",
+      "key_points_en": [
+        "SWE-2.1 scores 41.3 on FrontierCode 2.0 and 50.0 on Terminal-Bench 4.1. Cognition calls the gains over SWE-2 significant, while the numbers combine upstream results and self-reported results across harnesses.",
+        "SWE-2.1 reaches 80% on ExploitBench, with 27.3% intended-exploit success and 44.8% flag capture on ExploitGym. The evaluation runs with mitigations disabled and should not be treated as equivalent to real-world performance.",
+        "Training added sandbox red teams, continuous monitoring and escape canaries. The model discovered sandbox vulnerabilities four times during training, and researchers responded each time.",
+        "SWE-2.1 Ultrafast uses Cerebras to serve the same model at 10x speed; the example reaches 600 tokens/s versus 60 tokens/s for the standard model and 200 tokens/s for SWE-2 Flash.",
+        "SWE-2.1 Cyber has more permissive safeguards and is rolling out to Devin Security. The standard model is free on Desktop/CLI through 12/8 and discounted on Desktop/Cloud/CLI until 1/30; no exact prices are listed."
+      ],
+      "importance_reason_en": "This is a major SWE-2 upgrade that also changes high-performance serving and security-research options. Official benchmark claims and the limits of each variant need to be presented together.",
+      "published_at": "2026-11-24",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T13:47:41+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "related_event_ids": [
+        "swe-2-flash",
+        "frontiercode-2-0"
+      ],
+      "sources": [
+        {
+          "source_id": "cognition-blog",
+          "content_id": "https://cognition.com/blog/swe-2-1",
+          "url": "https://cognition.com/blog/swe-2-1",
+          "collected_at": "2026-11-25T13:47:41+00:00",
           "material_scope": "full_text"
         }
       ]
@@ -665,14 +1661,21 @@
       "date_precision": "date",
       "date_kind": "published",
       "first_collected_at": "2026-11-24T15:22:56+00:00",
-      "updated_at": "2026-11-24T15:44:25+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
       "sources": [
         {
           "source_id": "zcode-official",
           "content_id": "https://zcode.z.ai/en/changelog::4.0.0",
           "url": "https://zcode.z.ai/en/changelog",
-          "collected_at": "2026-11-24T15:22:56+00:00",
+          "collected_at": "2026-11-25T14:32:35+00:00",
           "material_scope": "full_text"
+        },
+        {
+          "source_id": "zcode-x",
+          "content_id": "https://x.com/zcode_ai/status/2124872093544403350",
+          "url": "https://x.com/zcode_ai/status/2124872093544403350",
+          "collected_at": "2026-11-25T14:32:33+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },
@@ -805,6 +1808,54 @@
       ]
     },
     {
+      "id": "antigravity-plugin-ecosystem-20261123",
+      "entity_ids": [
+        "antigravity",
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "feature",
+        "compatibility"
+      ],
+      "title_zh": "Antigravity 插件市场扩展可观测性、基础设施与科学工具",
+      "summary_zh": "Google 称 Antigravity Plugin Marketplace 新增一批第三方和 Google 插件，覆盖可观测性、事件响应、云基础设施、数据库、质量门禁、办公与媒体工作流。Google Workspace 补齐 Gmail，科学插件从单一 Science 扩展为 Chemistry、Genomics、Science Overview、Scientific Literature、Structural Biology 五个入口；文章所列插件已可在 App 和 CLI 安装。",
+      "key_points_zh": [
+        "Better Stack、Grafana Cloud、incident.io 与 Arize AX 新增日志、指标、追踪、值班和 LLM 评估连接。",
+        "Cloudflare、Clerk、Neo4j、SonarQube、Scandit、TestMu AI、Spacefast 等覆盖部署、认证、图查询、质量与移动或浏览器测试；SonarQube 宣称支持 40 多种语言和 7,500 多种 issue 类型。",
+        "Google 新增 Gmail、Looker、Robotics 与 Elephant-Goldfish Model；Robotics 带 MuJoCo 仿真和实时 3D sidecar。",
+        "Science 扩展为五个插件：Chemistry（RDKit、ChEMBL、PubChem）、Genomics（AlphaGenome 等）、Science Overview、Scientific Literature、Structural Biology（AlphaFold 等）；App 与 CLI 均可用 agy plugin install。"
+      ],
+      "importance_reason_zh": "这是市场上线后的具体可用性扩展，尤其把可观测性、部署、数据库和科研工作流接入 Agent；不是单纯宣传轮播。",
+      "title_en": "Antigravity plugin marketplace expands observability, infrastructure and science tools",
+      "summary_en": "Google says the Antigravity Plugin Marketplace has added third-party and Google plugins spanning observability, incident response, cloud infrastructure, databases, quality gates, office and media workflows. Google Workspace adds Gmail, while the single Science plugin becomes five specialized entries: Chemistry, Genomics, Science Overview, Scientific Literature and Structural Biology. The listed additions are installable in both the App and CLI.",
+      "key_points_en": [
+        "Better Stack, Grafana Cloud, incident.io and Arize AX add connections for logs, metrics, traces, on-call work and LLM evaluation.",
+        "Cloudflare, Clerk, Neo4j, SonarQube, Scandit, TestMu AI and Spacefast cover deployment, authentication, graph queries, quality and mobile or browser testing. SonarQube claims support for more than 40 languages and 7,500 issue types.",
+        "Google adds Gmail, Looker, Robotics and Elephant-Goldfish Model; Robotics includes MuJoCo simulation and a live 3D sidecar.",
+        "Science becomes five plugins: Chemistry (RDKit, ChEMBL, PubChem), Genomics (AlphaGenome and others), Science Overview, Scientific Literature and Structural Biology (AlphaFold and others). Both App and CLI use agy plugin install."
+      ],
+      "importance_reason_en": "This is a concrete availability expansion after the marketplace launch, connecting observability, deployment, databases and scientific workflows to Agents rather than offering only a promotional roundup.",
+      "published_at": "2026-11-23",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:33+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "related_event_ids": [
+        "antigravity-plugin-marketplace"
+      ],
+      "sources": [
+        {
+          "source_id": "antigravity-blog",
+          "content_id": "https://antigravity.google/blog/plugin-ecosystem-momentum",
+          "url": "https://antigravity.google/blog/plugin-ecosystem-momentum",
+          "collected_at": "2026-11-25T14:32:33+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "deepseek-harness-0-2-3-alpha1-20261122",
       "entity_ids": [
         "deepseek-harness"
@@ -926,14 +1977,56 @@
       "date_precision": "date",
       "date_kind": "published",
       "first_collected_at": "2026-11-24T15:22:56+00:00",
-      "updated_at": "2026-11-24T15:44:25+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
       "sources": [
         {
           "source_id": "zcode-official",
           "content_id": "https://zcode.z.ai/en/changelog::3.19.1",
           "url": "https://zcode.z.ai/en/changelog",
-          "collected_at": "2026-11-24T15:22:56+00:00",
+          "collected_at": "2026-11-25T14:32:35+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "jeff-dean-word-embeddings-paper-20261121",
+      "entity_ids": [
+        "discovery-loop"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Jeff Dean 称赞揭示词嵌入隐藏结构的论文分析",
+      "title_en": "Jeff Dean praises a paper analysis revealing hidden structure in word embeddings",
+      "summary_zh": "Jeff Dean 表示，他通过 Martin Casado 的帖子看到 arXiv:2602.15029，此前未注意到这篇最初于 2 月发布的论文；他称赞分析出色、图表让论文出彩，并点名 Dhruva Karkada、Daniel J. Korchinski、Andres Nava、Matthieu Wyart 和 @yasamanbb。他还表示，这类分析揭示了词嵌入中更多隐藏结构。",
+      "summary_en": "Jeff Dean said he saw arXiv:2602.15029 through Martin Casado’s post and had not noticed the paper when it was originally posted in February. He praised the analysis and figures and named Dhruva Karkada, Daniel J. Korchinski, Andres Nava, Matthieu Wyart and @yasamanbb, saying analyses like this reveal more hidden structure in word embeddings.",
+      "key_points_zh": [
+        "Jeff Dean 表示，他通过 Martin Casado 的帖子看到 arXiv:2602.15029，之前未注意到其 2 月的原始发布。",
+        "他称赞分析与图表，并点名 Dhruva Karkada、Daniel J. Korchinski、Andres Nava、Matthieu Wyart 和 @yasamanbb。",
+        "他表示，这类分析揭示了词嵌入中更多隐藏结构。",
+        "该帖是个人推荐与评价，没有提供独立基准测试或结果复核。"
+      ],
+      "key_points_en": [
+        "Jeff Dean said he saw arXiv:2602.15029 through Martin Casado’s post and had not noticed its original February release.",
+        "He praised the analysis and figures and named Dhruva Karkada, Daniel J. Korchinski, Andres Nava, Matthieu Wyart and @yasamanbb.",
+        "He said analyses like this reveal more hidden structure in word embeddings.",
+        "The post is a personal recommendation and evaluation, not an independent benchmark or verification of results."
+      ],
+      "importance_reason_zh": "这是 AI 研究者对词嵌入技术分析的一手推荐，有助于发现技术线索；但帖子本身不是论文结论，也不构成独立验证。",
+      "importance_reason_en": "This is a first-hand recommendation of a word-embedding analysis from an AI researcher, useful as a technical lead but not a paper conclusion or independent verification.",
+      "published_at": "2026-11-21T07:35:23.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:45:18+00:00",
+      "sources": [
+        {
+          "source_id": "jeff-dean-x",
+          "content_id": "https://x.com/JeffDean/status/2124043983878066407",
+          "url": "https://x.com/JeffDean/status/2124043983878066407",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },
@@ -981,6 +2074,46 @@
           "url": "https://code.claude.com/docs/en/changelog#2-1-330",
           "collected_at": "2026-11-23T13:53:35+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "demis-iso-merck-cancer-drugs-20261120",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Demis Hassabis 称 Iso 与默克合作设计新抗癌药物",
+      "title_en": "Demis Hassabis says Iso is working with Merck to design new cancer drugs",
+      "summary_zh": "Demis Hassabis 表示，能够与默克公司合作设计新的抗癌药物令他非常兴奋，并称这体现了 Iso 在药物研发中的快速进展和重要突破。原帖未披露候选药物、临床试验阶段、技术方法或时间表。",
+      "summary_en": "Demis Hassabis said he was thrilled to work with Merck on designing new cancer drugs, describing it as evidence of rapid progress and an important breakthrough at Iso. The post does not disclose a candidate drug, clinical-trial stage, technical method or timetable.",
+      "key_points_zh": [
+        "Demis Hassabis 表示 Iso 正与默克公司合作设计新的抗癌药物。",
+        "他称这体现了 Iso 在药物研发中的快速进展和重要突破。",
+        "原帖未披露候选药物、临床试验阶段、技术方法或时间表。"
+      ],
+      "key_points_en": [
+        "Demis Hassabis said Iso is working with Merck to design new cancer drugs.",
+        "He described this as evidence of rapid progress and an important breakthrough at Iso.",
+        "The post does not disclose a candidate drug, clinical-trial stage, technical method or timetable."
+      ],
+      "importance_reason_zh": "AI 药物研发负责人宣布具体产业合作，具有一手进展价值；但突破与效果仍属本人表述，不能视为临床或实验结果。",
+      "importance_reason_en": "An AI drug-discovery leader announced a specific industry collaboration, giving the update first-hand value, but the breakthrough and impact remain his claims rather than clinical or experimental results.",
+      "published_at": "2026-11-20T20:11:26.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:45:18+00:00",
+      "sources": [
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2123871861843075099",
+          "url": "https://x.com/demishassabis/status/2123871861843075099",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },
@@ -1287,6 +2420,46 @@
         "GPT-6.2 Astra and Sol (+ Pro) are available on OpenRouter and Nous Portal."
       ],
       "importance_reason_en": "0.23.3 is the stable channel release for all users; the new prompt-cache and tool-result pruning defaults change resource and context behavior in every session."
+    },
+    {
+      "id": "demis-gemini-gdm-reply-praise-20261120",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Demis Hassabis 在回复中称赞 Gemini 与 GDM 团队",
+      "title_en": "Demis Hassabis praises Gemini and GDM teams in a reply",
+      "summary_zh": "Demis Hassabis 感谢对方的道歉，并与 @_sholtodouglas 开玩笑；他表示对方可能没有考虑到“低估了那个破解了谷歌 DeepMind 团队的团队”这一选项，随后称赞 Gemini 和 GDM 团队的工作，并称很高兴大家喜欢他们的烹饪作品。原帖的父帖语境未包含在材料中，不能据此判断具体争议或产品结论。",
+      "summary_en": "Demis Hassabis thanked the person for an apology and joked with @_sholtodouglas. He said the person may not have considered the option of “underestimating the team that cracked the Google DeepMind team,” praised Gemini and GDM’s work, and said he was glad people enjoyed their cooking creations. The parent-thread context is not included in the material, so the specific dispute and any product implications cannot be established.",
+      "key_points_zh": [
+        "Demis Hassabis 感谢对方道歉，并与 @_sholtodouglas 开玩笑。",
+        "他还以“低估了那个破解了谷歌 DeepMind 团队的团队”开玩笑，并称 Gemini 与 GDM 团队的工作了不起。",
+        "他表示很高兴大家喜欢团队的烹饪作品；材料缺少父帖语境，不能形成具体产品结论。"
+      ],
+      "key_points_en": [
+        "Demis Hassabis thanked the person for an apology and joked with @_sholtodouglas.",
+        "He also joked about “underestimating the team that cracked the Google DeepMind team” and called Gemini and GDM’s work amazing.",
+        "He said he was glad people liked the team’s cooking creations; without the parent-thread context, no specific product conclusion can be drawn."
+      ],
+      "importance_reason_zh": "这是负责人账号中的一手 AI 团队评价与互动，按个人观点保留；内容主要是社交回复，不构成发布或性能证据。",
+      "importance_reason_en": "This is a first-hand AI-team evaluation and interaction from a responsible account, retained as a personal opinion; it is primarily a social reply and not release or performance evidence.",
+      "published_at": "2026-11-20T00:03:56.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-25T14:45:18+00:00",
+      "sources": [
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2123567986565173289",
+          "url": "https://x.com/demishassabis/status/2123567986565173289",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
     },
     {
       "id": "openai-medchembench-20261120",
@@ -2285,6 +3458,55 @@
           "material_scope": "full_text"
         }
       ]
+    },
+    {
+      "id": "siliconflow-yuan-jinhui-inference-interview-20261119",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability",
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "袁进辉：推理算力供需紧张或持续两三年",
+      "summary_zh": "在《中国证券报》专访中，硅基流动创始人兼 CEO 袁进辉将训练算力比作有边界的泳池、推理算力比作持续奔流的河流，并判断供不应求可能维持两三年。他预计长期 Token 价格会随供给充分而下降，认为异构算力编排和推理效率是平台价值；文中平台规模数据为公司披露。",
+      "key_points_zh": [
+        "袁进辉判断推理需求随模型日常使用持续增长，供需紧张可能维持两三年。",
+        "他引用国家数据局数据称，2026 年 3 月我国日均 Token 调用量突破 140 万亿，较 2024 年初增长超千倍。",
+        "硅基流动披露截至 2026 年 4 月注册用户 1,028 万、日均吞吐 5,785 亿、单日峰值超万亿；公有云付费开发者 71.6 万，专属实例企业客户 49 家。",
+        "他认为国产芯片受制造与软件生态制约，异构混布可缓解访存速度等短板。",
+        "他预计长期供给充分后 Token 价格下降，平台价值将来自效率提升。"
+      ],
+      "importance_reason_zh": "创始人对推理需求、国产算力和 Token 定价的一手行业判断，包含可核查供需数据；预测属于个人观点。",
+      "published_at": "2026-11-19",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:35+00:00",
+      "updated_at": "2026-11-25T14:44:24Z",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://www.siliconflow.cn/news/x9vxnxwcwf3zhsrytwb3cewu",
+          "url": "https://www.siliconflow.cn/news/x9vxnxwcwf3zhsrytwb3cewu",
+          "collected_at": "2026-11-25T14:32:35+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "siliconflow-yuan-jinhui-inference-20261116"
+      ],
+      "title_en": "Yuan Jinhui sees inference compute shortages lasting another two to three years",
+      "summary_en": "In a China Securities News interview, SiliconFlow founder and CEO Yuan Jinhui compared bounded training compute to a swimming pool and continuously growing inference demand to a river, saying the shortage could last another two to three years. He expects Token prices to fall as supply catches up and sees heterogeneous scheduling and inference efficiency as platform value; the scale figures in the article are company disclosures.",
+      "key_points_en": [
+        "Yuan expects inference demand to keep growing with everyday model use and says the supply-demand imbalance could last another two to three years.",
+        "Citing National Data Administration figures, he says China averaged more than 140 trillion daily Token calls in March 2026, over 1,000 times the level in early 2024.",
+        "SiliconFlow reported 10.28 million registered users, 578.5 billion average daily tokens and a peak above one trillion as of April 2026, plus 716,000 paid public-cloud developers and 49 dedicated-instance enterprise customers.",
+        "He says domestic chips face manufacturing and software-ecosystem constraints, while heterogeneous placement can mitigate memory-bandwidth and related bottlenecks.",
+        "He expects Token prices to decline once long-term supply is sufficient, leaving platform value in efficiency gains."
+      ],
+      "importance_reason_en": "The founder's first-hand view on inference demand, domestic compute and Token pricing includes concrete supply-demand data, but its forecasts remain personal opinions."
     },
     {
       "id": "tibo-gpt62-astra-hard-tasks-20261118",
@@ -3552,6 +4774,102 @@
       ]
     },
     {
+      "id": "siliconflow-yuan-jinhui-inference-20261116",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "availability"
+      ],
+      "title_zh": "袁进辉：推理算力供给远远不够，行业面临洗牌机会",
+      "summary_zh": "硅基流动创始人兼 CEO 袁进辉在 11 月 12 日第十七届财新峰会圆桌上表示，2026 年推理首次超过训练成为算力消耗主体，当前算力供给\"远远不够\"。他认为训练算力有上界（最先进模型完整训练约 100 万亿 token），而推理随持续调用没有理论上限，不少头部模型服务商单日处理 token 已超 100 万亿；推理场景可分散部署、按负载混合异构芯片，为训练市场优势厂商之外的新玩家提供洗牌机会。他还判断开源模型能力终将追平闭源，企业将更多基于开源构建自主、安全、可控的智能。以上为其个人观点。",
+      "key_points_zh": [
+        "2026 年推理首次超过训练成为算力消耗主体。",
+        "袁进辉判断当前算力供给远远不够。",
+        "训练算力有上界，推理 token 需求无理论上限；部分头部服务商单日处理超 100 万亿 token。",
+        "推理可分散部署、混合异构芯片，带来行业洗牌机会。",
+        "开源模型能力终将追平闭源，企业倾向基于开源构建自主智能。"
+      ],
+      "importance_reason_zh": "头部 AI Infra 厂商负责人对算力供需与开源趋势的一手判断，影响行业预期。",
+      "published_at": "2026-11-17",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-17T13:41:47+00:00",
+      "updated_at": "2026-11-25T14:44:24Z",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://www.siliconflow.cn/news/hn9kfedjyy1d18gyt0hj9r4c",
+          "url": "https://www.siliconflow.cn/news/hn9kfedjyy1d18gyt0hj9r4c",
+          "collected_at": "2026-11-25T14:32:35+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-11-25T14:44:24Z",
+          "reason_zh": "依据本次导入材料标注的日期，将原文发布日期由 2026-11-16 更正为 2026-11-17，并更新为对应 www 来源；发言日期与观点内容不变。",
+          "url": "https://www.siliconflow.cn/news/hn9kfedjyy1d18gyt0hj9r4c",
+          "reason_en": "Corrected the publication date from 2026-11-16 to the date shown on the newly imported material, 2026-11-17, and updated the source to its www URL. The talk date and editorial content are unchanged."
+        }
+      ],
+      "title_en": "Yuan Jinhui: inference compute supply falls far short, reshuffle ahead",
+      "summary_en": "SiliconFlow founder and CEO Yuan Jinhui said at the November 12 Caixin Summit roundtable that in 2026 inference overtook training for the first time as the main consumer of compute, and current supply is \"far from enough\". He argued training compute has an upper bound (a full training run of the most advanced models is around 100 trillion tokens) while inference has no theoretical ceiling as calls continue, with some leading model providers already processing over 100 trillion tokens per day; inference can be deployed in distributed clusters mixing heterogeneous chips by workload, opening reshuffle opportunities for new players beyond the vendors that dominate training. He also expects open-source models to eventually match closed-source capability, with enterprises increasingly building autonomous, secure and controllable intelligence on open source. These are his personal views.",
+      "key_points_en": [
+        "In 2026 inference overtook training as the main compute consumer for the first time.",
+        "Yuan Jinhui judges current compute supply far from enough.",
+        "Training compute has an upper bound; inference token demand has no theoretical ceiling, with some leaders processing over 100 trillion tokens daily.",
+        "Inference supports distributed deployment and heterogeneous chip mixing, creating reshuffle opportunities.",
+        "Open-source capability will eventually match closed source; enterprises lean toward building autonomous intelligence on open source."
+      ],
+      "importance_reason_en": "A first-hand view on compute supply-demand and open-source trends from a leading AI Infra founder shapes industry expectations."
+    },
+    {
+      "id": "trae-3-4-21-20261117",
+      "entity_ids": [
+        "trae"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "TRAE 3.4.21 加入文件夹拖入、站点部署与运行时引导",
+      "summary_zh": "TRAE 3.4.21 支持个人版拖入单个或多个文件夹并保留工作区信任与多根流程，可从 HTML 产物直接部署站点并管理进度和重部署，并在 Agent 窗口检测 Python、Node.js、Java、Go 运行时。浏览器预览新增多款 iPhone 模拟，更新同时改善断网恢复与 /plan、SSH 首条消息等问题。",
+      "key_points_zh": [
+        "个人版可将单个或多个文件夹拖入本地项目选择器或编辑器，同时保留工作区信任确认和多根工作区。",
+        "HTML 产物支持直接部署，提供进度、断点续传、重新部署和站点详情管理。",
+        "Agent Window 可检测 Python、Node.js、Java、Go 运行环境并引导安装或配置；浏览器预览新增 iPhone 17、17 Pro、17 Pro Max、18 Pro、18 Pro Max 模拟。",
+        "网络或进程失败后的任务恢复得到改善，并修复 /plan 或 @ 引用丢失、预览恢复和 SSH 首条消息删除流程等问题。"
+      ],
+      "importance_reason_zh": "版本直接影响项目组织、前端交付、远程开发与运行环境配置，并包含会话连续性关键修复。",
+      "title_en": "TRAE 3.4.21 adds folder drag-in, site deployment and runtime guidance",
+      "summary_en": "TRAE 3.4.21 lets the personal edition drag in one or more folders while preserving workspace trust and multi-root workflows. It adds direct deployment and lifecycle management for HTML artifacts, detects Python, Node.js, Java and Go runtimes in the Agent window, and expands browser previews to several iPhone profiles. The release also improves recovery after network or process failures and fixes /plan and SSH first-message issues.",
+      "key_points_en": [
+        "The personal edition can drag one or more folders into the local project picker or editor while retaining workspace-trust confirmation and multi-root workspaces.",
+        "HTML artifacts support direct deployment with progress, resumable deployment, redeployment and site-detail management.",
+        "Agent Window detects Python, Node.js, Java and Go runtimes and guides installation or configuration. Browser preview adds iPhone 17, 17 Pro, 17 Pro Max, 18 Pro and 18 Pro Max profiles.",
+        "Recovery after network or process failures improves, alongside fixes for lost /plan or @ references, preview restoration and the SSH first-message deletion flow."
+      ],
+      "importance_reason_en": "The release changes project organization, frontend delivery, remote development and runtime setup while adding important session-continuity fixes.",
+      "published_at": "2026-11-17",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T13:47:41+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "sources": [
+        {
+          "source_id": "trae-official",
+          "content_id": "https://docs.trae.cn/ide_changelog#hhBwN7toE",
+          "url": "https://docs.trae.cn/ide_changelog#hhBwN7toE",
+          "collected_at": "2026-11-25T13:47:41+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "nvidia-dgx-spark-hpc-kit-20261116",
       "entity_ids": [
         "nvidia"
@@ -4456,49 +5774,6 @@
       ]
     },
     {
-      "id": "siliconflow-yuan-jinhui-inference-20261116",
-      "entity_ids": [
-        "siliconflow"
-      ],
-      "kind": "opinion",
-      "topics": [
-        "availability"
-      ],
-      "title_zh": "袁进辉：推理算力供给远远不够，行业面临洗牌机会",
-      "summary_zh": "硅基流动创始人兼 CEO 袁进辉在 11 月 12 日第十七届财新峰会圆桌上表示，2026 年推理首次超过训练成为算力消耗主体，当前算力供给\"远远不够\"。他认为训练算力有上界（最先进模型完整训练约 100 万亿 token），而推理随持续调用没有理论上限，不少头部模型服务商单日处理 token 已超 100 万亿；推理场景可分散部署、按负载混合异构芯片，为训练市场优势厂商之外的新玩家提供洗牌机会。他还判断开源模型能力终将追平闭源，企业将更多基于开源构建自主、安全、可控的智能。以上为其个人观点。",
-      "key_points_zh": [
-        "2026 年推理首次超过训练成为算力消耗主体。",
-        "袁进辉判断当前算力供给远远不够。",
-        "训练算力有上界，推理 token 需求无理论上限；部分头部服务商单日处理超 100 万亿 token。",
-        "推理可分散部署、混合异构芯片，带来行业洗牌机会。",
-        "开源模型能力终将追平闭源，企业倾向基于开源构建自主智能。"
-      ],
-      "importance_reason_zh": "头部 AI Infra 厂商负责人对算力供需与开源趋势的一手判断，影响行业预期。",
-      "title_en": "Yuan Jinhui: inference compute supply falls far short, reshuffle ahead",
-      "summary_en": "SiliconFlow founder and CEO Yuan Jinhui said at the November 12 Caixin Summit roundtable that in 2026 inference overtook training for the first time as the main consumer of compute, and current supply is \"far from enough\". He argued training compute has an upper bound (a full training run of the most advanced models is around 100 trillion tokens) while inference has no theoretical ceiling as calls continue, with some leading model providers already processing over 100 trillion tokens per day; inference can be deployed in distributed clusters mixing heterogeneous chips by workload, opening reshuffle opportunities for new players beyond the vendors that dominate training. He also expects open-source models to eventually match closed-source capability, with enterprises increasingly building autonomous, secure and controllable intelligence on open source. These are his personal views.",
-      "key_points_en": [
-        "In 2026 inference overtook training as the main compute consumer for the first time.",
-        "Yuan Jinhui judges current compute supply far from enough.",
-        "Training compute has an upper bound; inference token demand has no theoretical ceiling, with some leaders processing over 100 trillion tokens daily.",
-        "Inference supports distributed deployment and heterogeneous chip mixing, creating reshuffle opportunities.",
-        "Open-source capability will eventually match closed source; enterprises lean toward building autonomous intelligence on open source."
-      ],
-      "importance_reason_en": "A first-hand view on compute supply-demand and open-source trends from a leading AI Infra founder shapes industry expectations.",
-      "published_at": "2026-11-16",
-      "date_precision": "date",
-      "first_collected_at": "2026-11-17T13:41:47+00:00",
-      "updated_at": "2026-11-17T13:54:28+00:00",
-      "sources": [
-        {
-          "source_id": "siliconflow-news",
-          "content_id": "https://siliconflow.cn/news/hn9kfedjyy1d18gyt0hj9r4c",
-          "url": "https://siliconflow.cn/news/hn9kfedjyy1d18gyt0hj9r4c",
-          "collected_at": "2026-11-17T13:41:47+00:00",
-          "material_scope": "full_text"
-        }
-      ]
-    },
-    {
       "first_collected_at": "2026-11-16T13:31:48+00:00",
       "updated_at": "2026-11-16T14:03:41+00:00",
       "sources": [
@@ -5293,6 +6568,58 @@
       "date_kind": "published"
     },
     {
+      "id": "siliconflow-api-data-handling-20261113",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "capability"
+      ],
+      "title_zh": "硅基流动说明 API 交互数据不留存及调试边界",
+      "summary_zh": "硅基流动在两篇同日文章中称，API 提示词和输出只在当次推理所需期间处理，未获授权时不做持久化存储，推理完成后从计算节点销毁或不可恢复；模型名称、Token 消耗、请求时间和状态码等元数据会保存。平台同时提醒，不留存交互数据会限制内容问题排查，用户需授权并提供复现数据；另有本地部署方案。",
+      "key_points_zh": [
+        "未获授权时，API 输入提示词与输出不作持久化存储；授权存储时会加密。",
+        "网关不保存提示词，KV Cache 与中间状态仅在 GPU 显存流转，推理结束后释放。",
+        "模型名称、Token 消耗量、请求时间、状态码等运维与计费元数据会持久化。",
+        "无交互数据留存时只能按元数据排查性能或异常；输入错误、输出不符需用户提供 trace_id、时间及复现输入和输出。",
+        "本地部署可将交互数据保留在企业内网。"
+      ],
+      "importance_reason_zh": "披露 API 数据生命周期、元数据范围及不留存带来的调试限制，关系企业数据治理与安全评估。",
+      "published_at": "2026-11-13",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:35+00:00",
+      "updated_at": "2026-11-25T14:44:24Z",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://www.siliconflow.cn/news/uaqmhp7otr98nq73ngkw8o7w",
+          "url": "https://www.siliconflow.cn/news/uaqmhp7otr98nq73ngkw8o7w",
+          "collected_at": "2026-11-25T14:32:35+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://www.siliconflow.cn/news/rnhm85zzx3pigl0zhul8tdqz",
+          "url": "https://www.siliconflow.cn/news/rnhm85zzx3pigl0zhul8tdqz",
+          "collected_at": "2026-11-25T14:32:35+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "title_en": "SiliconFlow details API interaction-data retention and troubleshooting limits",
+      "summary_en": "In two same-day articles, SiliconFlow says API prompts and outputs are processed only as needed for an inference request and are not persistently stored without authorization; after inference they are destroyed or unrecoverable on compute nodes. Metadata such as model name, Token usage, request time and status code is retained. The platform warns that retaining no interaction data limits content troubleshooting, so users may need to authorize storage and provide reproduction data; local deployment is also available.",
+      "key_points_en": [
+        "Without authorization, API input prompts and outputs are not persistently stored; authorized storage is encrypted.",
+        "Gateways do not retain prompts, and KV cache and intermediate states remain in GPU memory and are released after inference.",
+        "Operational and billing metadata such as model name, Token usage, request time and status code is retained.",
+        "Without retained interaction data, troubleshooting relies on metadata for performance or errors; input or output problems require users to provide a trace_id, time and reproduction input and output.",
+        "Local deployment can keep interaction data inside the enterprise intranet."
+      ],
+      "importance_reason_en": "The articles disclose the API data lifecycle, metadata scope and troubleshooting trade-offs of not retaining interactions, which matter for enterprise data-governance and security assessments."
+    },
+    {
       "id": "copilot-cli-1-0-110-20261112",
       "entity_ids": [
         "copilot"
@@ -5702,6 +7029,50 @@
       "published_at": "2026-11-12",
       "date_precision": "date",
       "date_kind": "published"
+    },
+    {
+      "id": "trae-3-4-19-20-20261112",
+      "entity_ids": [
+        "trae"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "TRAE 3.4.19–3.4.20 持久化会话草稿并修复终端与 SSH 环境",
+      "summary_zh": "TRAE 3.4.19–3.4.20 在 Agent Window 持续保存输入草稿和处理中图片，切换会话或重启后可继续；项目与任务归档恢复和置顶处于灰度。更新还修复终端未继承扩展 PATH 与 Node 环境、远程 SSH 客户端服务版本不兼容导致重复安装，以及附件缩略图和输入状态问题。",
+      "key_points_zh": [
+        "项目与任务的归档、恢复和置顶处于灰度，可按本地或远程环境筛选。",
+        "Agent Window 的输入草稿和处理中图片可在切换会话、重新启动 IDE 或更新后继续保留。",
+        "终端支持继承扩展 PATH 与 Node 环境；SSH 远程开发在服务版本不兼容时提示升级，避免重复安装。",
+        "修复加粗快捷键与斜杠命令触发冲突、图片草稿恢复与清除、附件缩略图等输入和显示问题。"
+      ],
+      "importance_reason_zh": "会话持久化和终端环境修复关系到日常开发连续性，灰度归档与置顶则改善多项目工作流。",
+      "title_en": "TRAE 3.4.19–3.4.20 persists session drafts and fixes terminal and SSH environments",
+      "summary_en": "TRAE 3.4.19–3.4.20 continuously preserves Agent Window drafts and in-progress images across session changes, IDE restarts and updates. Project and task archiving, restoration and pinning are in grayscale. The releases also fix terminals that failed to inherit extension PATH and Node settings, repeated SSH remote-service installations caused by version incompatibility, and attachment-thumbnail and input-state issues.",
+      "key_points_en": [
+        "Project and task archiving, restoration and pinning are in grayscale, with filtering by local or remote environment.",
+        "Agent Window input drafts and in-progress images survive session changes, IDE restarts and updates.",
+        "The terminal inherits extension PATH and Node settings; SSH remote development prompts for an upgrade when service versions are incompatible, avoiding repeated installation.",
+        "Fixes conflicts between bold shortcuts and slash-command triggers, image-draft restoration and clearing, attachment thumbnails, and other input or display issues."
+      ],
+      "importance_reason_en": "Session persistence and terminal-environment fixes protect everyday development continuity, while grayscale archiving and pinning improve multi-project workflows.",
+      "published_at": "2026-11-12",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T13:47:41+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "sources": [
+        {
+          "source_id": "trae-official",
+          "content_id": "https://docs.trae.cn/ide_changelog#hMhasMaZE",
+          "url": "https://docs.trae.cn/ide_changelog#hMhasMaZE",
+          "collected_at": "2026-11-25T13:47:41+00:00",
+          "material_scope": "full_text"
+        }
+      ]
     },
     {
       "id": "alphagenome-2-20261111",
@@ -6911,6 +8282,46 @@
       ]
     },
     {
+      "id": "zuck-muse-pavlova-baking-20261109",
+      "entity_ids": [
+        "meta"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "扎克伯格称 Muse 协助制作 Pavlova",
+      "title_en": "Zuckerberg says Muse helped with Pavlova baking",
+      "summary_zh": "Mark Zuckerberg 发帖称，Muse 正在帮助他超越初学者烘焙食谱，并提到 Pavlova。原帖未说明 Muse 提供的具体建议、生成方式或效果评估。",
+      "summary_en": "Mark Zuckerberg said Muse was helping him go beyond beginner baking recipes and mentioned Pavlova. The post does not describe the specific advice, how it was generated or any outcome evaluation.",
+      "key_points_zh": [
+        "扎克伯格表示 Muse 正在协助他的烘焙实践。",
+        "他提到 Pavlova，并表示希望超越初学者食谱。",
+        "原帖没有提供具体建议、实现方式或效果数据。"
+      ],
+      "key_points_en": [
+        "Zuckerberg said Muse was helping with his baking.",
+        "He mentioned Pavlova and a goal of going beyond beginner recipes.",
+        "The post provides no specific advice, implementation details or outcome data."
+      ],
+      "importance_reason_zh": "这是负责人账号的一手日常使用反馈，显示 Muse 进入烹饪场景；但不构成新功能发布或性能验证。",
+      "importance_reason_en": "This is first-hand everyday-use feedback showing Muse in a cooking context, but it is not a new-feature announcement or performance validation.",
+      "published_at": "2026-11-09T23:31:10.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:35+00:00",
+      "updated_at": "2026-11-25T14:45:18+00:00",
+      "sources": [
+        {
+          "source_id": "mark-zuckerberg-threads",
+          "content_id": "https://www.threads.com/@zuck/post/DfihFPxkaZ1",
+          "url": "https://www.threads.com/@zuck/post/DfihFPxkaZ1",
+          "collected_at": "2026-11-25T14:32:35+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "claude-code-2-1-321-20261109",
       "entity_ids": [
         "claude-code"
@@ -7488,6 +8899,49 @@
           "content_id": "https://code.claude.com/docs/en/changelog#2-1-319",
           "url": "https://code.claude.com/docs/en/changelog#2-1-319",
           "collected_at": "2026-11-08T06:08:29+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "zuck-muse-spaces-smoker-temperature-20261106",
+      "entity_ids": [
+        "meta"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "扎克伯格用 Muse Spaces 构建烟熏炉温度跟踪工具",
+      "title_en": "Zuckerberg uses Muse Spaces to build a smoker-temperature tracker",
+      "summary_zh": "Mark Zuckerberg 表示，他使用 Muse 的新 Spaces 功能为自己的烟熏炉构建工具；给 Muse 提示后，它帮助构建跟踪工具，并借助 Pit Viper 通风控制器的 Bluetooth 全天跟踪温度。原帖只描述这一个人用例，没有提供兼容设备清单、设置步骤或通用性能结果。",
+      "summary_en": "Mark Zuckerberg said he used Muse’s new Spaces feature to build a tool for his smoker. After receiving a prompt, Muse helped build a tracking tool and, using Bluetooth on the Pit Viper vent controller, tracked the temperature throughout the day. The post describes one personal use case without a compatible-device list, setup steps or general performance results.",
+      "key_points_zh": [
+        "扎克伯格表示，他使用 Muse 的新 Spaces 功能为自己的烟熏炉构建工具。",
+        "他称，给 Muse 提示后，它可以帮助构建任何想要跟踪内容的工具。",
+        "据他描述，Pit Viper 通风控制器具备 Bluetooth，Muse 全天跟踪温度。",
+        "原帖只提供个人用例，没有兼容设备清单、设置步骤或通用性能结果。"
+      ],
+      "key_points_en": [
+        "Zuckerberg said he used Muse’s new Spaces feature to build a tool for his smoker.",
+        "He said that after receiving a prompt, Muse can help build tools for whatever one wants to track.",
+        "According to him, the Pit Viper vent controller has Bluetooth, and Muse tracked the temperature throughout the day.",
+        "The post provides one personal use case without a compatible-device list, setup steps or general performance results."
+      ],
+      "importance_reason_zh": "这是一手的 Spaces 功能与蓝牙硬件联动示例，展示提示构建跟踪工具的用途；但不能据此推断通用设备兼容性、控制能力或性能。",
+      "importance_reason_en": "This is a first-hand example of Spaces working with Bluetooth hardware, illustrating prompt-built tracking; it does not establish general device compatibility, control capability or performance.",
+      "published_at": "2026-11-06T18:06:14.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:35+00:00",
+      "updated_at": "2026-11-25T14:45:18+00:00",
+      "sources": [
+        {
+          "source_id": "mark-zuckerberg-threads",
+          "content_id": "https://www.threads.com/@zuck/post/DfaNgswkQPG",
+          "url": "https://www.threads.com/@zuck/post/DfaNgswkQPG",
+          "collected_at": "2026-11-25T14:32:35+00:00",
           "material_scope": "full_text"
         }
       ]
@@ -8654,33 +10108,43 @@
         "model_release",
         "capability"
       ],
-      "title_zh": "Cognition 发布 SWE-2 Flash 编码模型",
-      "summary_zh": "Cognition 发布 SWE-2 Flash，一款 276B-A12B 的美国开放权重编码模型。它在强化学习前加入中期训练，使 Terminal-Bench 4.0 从基座模型的 0.9% 提升到 20.0%，FrontierCode 2.0 从 3.2% 提升到 24.0%。官方称其表现超过所有美国开放权重模型，包括参数量为其三倍的模型，并将通过合作计划受限共享权重。",
+      "title_zh": "Cognition 发布 SWE-2 Flash，并计划受限共享权重",
+      "summary_zh": "Cognition 发布 276B-A12B 的 SWE-2 Flash，称其为美国编码模型，在强化学习前加入中期训练，使 Terminal-Bench 4.0 从基座的 0.9% 提升至 20.0%，FrontierCode 2.0 从 4.0% 提升至 24.0%。它已在 Devin Desktop 和 CLI 上线，价格为 SWE-2 的五分之一、速度为 3 倍，11 月 30 日前免费；权重尚未公开，官方计划与可信行业伙伴和研究实验室受限共享。",
       "key_points_zh": [
-        "276B-A12B，在 RL 前加入中期训练。",
-        "Terminal-Bench 4.0 从 0.9% 提升到 20.0%，FrontierCode 2.0 从 3.2% 提升到 24.0%。",
-        "权重通过面向行业伙伴与研究者的计划受限共享。"
+        "276B-A12B，在强化学习前加入数万亿 token 的中期训练。",
+        "Terminal-Bench 4.0 从 0.9% 提升至 20.0%；FrontierCode 2.0 从 4.0% 提升至 24.0%；官方称其超过美国开放权重模型。",
+        "Devin Desktop 和 CLI 可用，价格为 SWE-2 的五分之一、速度为其 3 倍；11 月 30 日前免费。",
+        "ExploitBench 从 11.3% 提升至 34.8%；权重因网络滥用风险尚未公开，计划通过可信伙伴和研究实验室计划受限共享。"
       ],
-      "importance_reason_zh": "小激活参数模型在终端与真实代码任务上的提升，可能压低日常工程代理的推理成本。",
-      "title_en": "Cognition introduces SWE-2 Flash coding model",
-      "summary_en": "Cognition introduced SWE-2 Flash, a 276B-A12B US open-weight coding model. It adds a mid-training stage before reinforcement learning, raising Terminal-Bench 4.0 from the base model's 0.9% to 20.0% and FrontierCode 2.0 from 3.2% to 24.0%. Cognition says it outperforms all US open-weight models, including models three times larger, and will share weights through a gated partner and researcher program.",
+      "importance_reason_zh": "小激活参数模型在终端与真实代码任务上的提升，加上更低成本和更快服务，可能压低日常工程代理的推理成本；但权重并未公开。",
+      "title_en": "Cognition introduces SWE-2 Flash with gated weight-sharing plans",
+      "summary_en": "Cognition introduced SWE-2 Flash, a 276B-A12B US coding model with a mid-training stage before reinforcement learning. It raises Terminal-Bench 4.0 from the base model's 0.9% to 20.0% and FrontierCode 2.0 from 4.0% to 24.0%. The model is available in Devin Desktop and CLI at one-fifth of SWE-2's price and three times its speed, and is free through November 30. Its weights are not public; Cognition plans gated sharing with trusted industry partners and research labs.",
       "key_points_en": [
-        "276B-A12B with a mid-training stage before RL.",
-        "Terminal-Bench 4.0 rises from 0.9% to 20.0%; FrontierCode 2.0 from 3.2% to 24.0%.",
-        "Weights are shared through a gated industry and research program."
+        "276B-A12B with a mid-training stage covering trillions of tokens before RL.",
+        "Terminal-Bench 4.0 rises from 0.9% to 20.0%; FrontierCode 2.0 from 4.0% to 24.0%. Cognition says it outperforms US open-weight models.",
+        "Available in Devin Desktop and CLI at one-fifth of SWE-2's price and three times its speed, and free through November 30.",
+        "ExploitBench rises from 11.3% to 34.8%. Weights are not public because of cyber-misuse risk; gated sharing with trusted partners and research labs is planned."
       ],
-      "importance_reason_en": "Gains from a small-active-parameter model on terminal and real code tasks could lower inference costs for everyday engineering agents.",
+      "importance_reason_en": "Gains from a small-active-parameter model, combined with lower cost and faster serving, could reduce inference costs for everyday engineering agents, but the weights are not publicly available.",
       "published_at": "2026-11-04",
       "date_precision": "date",
       "date_kind": "published",
       "first_collected_at": "2026-11-08T06:24:32+00:00",
-      "updated_at": "2026-11-08T06:50:25+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
+      "corrections": [
+        {
+          "at": "2026-11-25T14:42:08+00:00",
+          "reason_zh": "根据完整公告纠正两点：SWE-2 Flash 并非已公开开放权重，而是计划受限共享；FrontierCode 2.0 基座分数应为 4.0%，不是 3.2%。同时补录 Desktop/CLI 可用性、价格与速度、免费期限及 ExploitBench 变化。",
+          "reason_en": "Corrected the full announcement: SWE-2 Flash is not publicly open-weight; weight sharing is planned through a gated program. Its FrontierCode 2.0 base score is 4.0%, not 3.2%. Added Desktop/CLI availability, relative price and speed, the free-through date and the ExploitBench change.",
+          "url": "https://cognition.com/blog/swe-2-flash"
+        }
+      ],
       "sources": [
         {
           "source_id": "cognition-blog",
           "content_id": "https://cognition.com/blog/swe-2-flash",
           "url": "https://cognition.com/blog/swe-2-flash",
-          "collected_at": "2026-11-08T06:24:32+00:00",
+          "collected_at": "2026-11-25T13:47:41+00:00",
           "material_scope": "full_text"
         }
       ]

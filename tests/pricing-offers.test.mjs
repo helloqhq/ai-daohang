@@ -18,12 +18,14 @@ test('free access distinguishes inference allowances from free clients and stopp
   for(const id of ['pi-free','cline-free','aider-free','gemini-cli-free']) assert.ok(!ids.includes(id));
   assert.ok(filterPlans(snapshot.plans,{offer:'free',includeUnavailable:true},reviewed).some(plan=>plan.id==='gemini-cli-free'));
   const limited=filterPlans(snapshot.plans,{offer:'free',offerKind:'limited-time'},reviewed);
-  assert.deepEqual(limited.map(plan=>plan.id).sort(),['kilo-free','opencode-free']);
+  assert.deepEqual(limited.map(plan=>plan.id).sort(),['devin-free','devin-max','devin-pro','devin-teams','kilo-free','opencode-free']);
   const devinFlash=snapshot.plans.find(plan=>plan.id==='devin-free').offers.find(offer=>offer.id==='swe-2-flash-free');
   assert.equal(devinFlash.status,'verified');
   assert.equal(devinFlash.ends_at,'2026-12-04T18:00:00+00:00');
   assert.ok(limited.find(plan=>plan.id==='opencode-free').offers[0].models.includes('DeepSeek V4.1 Flash Free'));
-  assert.ok(filterPlans(snapshot.plans,{offer:'free',offerKind:'limited-time',includeUnavailable:true},reviewed).some(plan=>plan.id==='devin-pro'&&plan.offers.some(offer=>offer.id==='swe-2-self-serve-free'&&offer.status==='pending')));
+  const devinSelfServe=snapshot.plans.find(plan=>plan.id==='devin-pro').offers.find(offer=>offer.id==='swe-2-self-serve-free');
+  assert.equal(devinSelfServe.status,'verified');
+  assert.equal(devinSelfServe.ends_at,'2026-12-01T00:00:00-08:00');
   const kiloOffer=snapshot.plans.find(plan=>plan.id==='kilo-free').offers.find(offer=>offer.id==='minimax-m31-flash-launch-free');
   assert.equal(kiloOffer.status,'verified');
   assert.deepEqual(kiloOffer.models,['minimax/minimax-m3.1-flash:free']);

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "30fd56a914ffd4f2",
+  "snapshot_id": "d073b76adc1c143f",
   "events": [
     {
       "id": "claude-code-2-1-316",
@@ -1262,13 +1262,13 @@
       "date_precision": "date",
       "date_kind": "published",
       "first_collected_at": "2026-11-08T06:24:32+00:00",
-      "updated_at": "2026-11-08T06:50:25+00:00",
+      "updated_at": "2026-11-25T14:42:08+00:00",
       "sources": [
         {
           "source_id": "cognition-blog",
           "content_id": "https://cognition.com/blog/frontier-code-2.0",
           "url": "https://cognition.com/blog/frontier-code-2.0",
-          "collected_at": "2026-11-08T06:24:32+00:00",
+          "collected_at": "2026-11-25T13:47:41+00:00",
           "material_scope": "full_text"
         }
       ]

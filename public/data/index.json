@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "1db65d1a172b3b15",
-  "generated_at": "2026-11-26T16:18:06+00:00",
+  "snapshot_id": "dbd9de9026df0acd",
+  "generated_at": "2026-11-27T16:06:27+00:00",
   "months": [
     {
       "month": "2026-11",
       "path": "events/2026-11.json",
-      "count": 273,
+      "count": 284,
       "min_date": "2026-11-02",
-      "max_date": "2026-11-26T09:57:51Z"
+      "max_date": "2026-11-27T14:19:03.609Z"
     },
     {
       "month": "2026-10",
@@ -26,17 +26,26 @@
     }
   ],
   "event_locations": {
+    "zcode-weekend-glm53-flash-300m-20261127": "2026-11",
+    "kilo-7-8-40": "2026-11",
+    "qoder-0-5-21-20261127": "2026-11",
+    "siliconflow-api-key-one-time-display-20261127": "2026-11",
     "cline-model-catalog-20261126": "2026-11",
     "cline-sdk-0-2-2-20261126": "2026-11",
+    "tibo-delayed-reset-live-20261126": "2026-11",
     "kimi-code-cli-2-9-0-canary-20261126": "2026-11",
     "meituan-care-customer-service-20261126": "2026-11",
+    "tibo-gpt62-billing-error-fix-20261126": "2026-11",
     "opencode-2-4-2-20261126": "2026-11",
     "minimax-h3-family-20261126": "2026-11",
+    "devin-2026-11-26": "2026-11",
     "copilot-code-review-org-billing-20261125": "2026-11",
     "copilot-cli-1-0-117-20261126": "2026-11",
+    "demis-gemini-neon-recommendation-20261125": "2026-11",
     "pi-v161": "2026-11",
     "kimi-code-desktop-1-5-0-20261125": "2026-11",
     "kimi-code-cli-2-8-0-20261125": "2026-11",
+    "openai-dot-monitoring-workflow-20261125": "2026-11",
     "musk-grok-tesla-road-trips-20261125": "2026-11",
     "b-ai-credit-top-up-20261125": "2026-11",
     "b-ai-minimax-h3-image-chat-20261125": "2026-11",
@@ -54,6 +63,7 @@
     "tibo-chat-work-integration-preview-20261124": "2026-11",
     "antigravity-mcp-apps-20261124": "2026-11",
     "copilot-cli-1-0-116": "2026-11",
+    "codex-svg-3d-design-plugin-20261124": "2026-11",
     "google-antigravity-mass-spec-skills-20261124": "2026-11",
     "openai-gpt6-protein-design-20261124": "2026-11",
     "openai-astra-exoplanet-search-20261124": "2026-11",
@@ -112,6 +122,7 @@
     "minimax-internal-model-cryptanalysis-20261120": "2026-11",
     "devin-2026-11-20": "2026-11",
     "claude-code-v21329": "2026-11",
+    "chatgpt-data-agent-20261119": "2026-11",
     "jeff-dean-david-patterson-laude-20261119": "2026-11",
     "hermes-v0232": "2026-11",
     "kilo-gpt62-pyramid-test": "2026-11",
@@ -129,12 +140,12 @@
     "devin-2026-11-19": "2026-11",
     "siliconflow-yuan-jinhui-inference-interview-20261119": "2026-11",
     "tibo-gpt62-astra-hard-tasks-20261118": "2026-11",
-    "chatgpt-for-accounting-20261118": "2026-11",
     "gemini-4-neon-20261118": "2026-11",
     "genie-4-availability-20261118": "2026-11",
     "tibo-asks-sol-feedback-20261118": "2026-11",
     "kilo-claude-linked-billing-20261118": "2026-11",
     "nvidia-rtx-spark-compact-desktops": "2026-11",
+    "chatgpt-for-accounting-20261118": "2026-11",
     "b-ai-deepseek-v41-flash-discount-20261118": "2026-11",
     "openai-research-acceleration-20261118": "2026-11",
     "openai-frontier-risk-20261118": "2026-11",
@@ -692,5 +703,5 @@
     "claude-code-v21286": "2026-09",
     "google-synthid-bio": "2026-09"
   },
-  "total_events": 665
+  "total_events": 676
 }

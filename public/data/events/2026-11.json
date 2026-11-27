@@ -1,7 +1,190 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "1db65d1a172b3b15",
+  "snapshot_id": "dbd9de9026df0acd",
   "events": [
+    {
+      "id": "zcode-weekend-glm53-flash-300m-20261127",
+      "entity_ids": [
+        "zcode"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "ZCode 周末每账号限领 3 亿 GLM-5.3-Flash tokens",
+      "summary_zh": "ZCode 官方账号宣布，11 月 27 日 11:00 UTC 起可领取 3 亿 GLM-5.3-Flash tokens，先到先得；使用时间为 11 月 27 日 15:00 至 11 月 30 日 01:00 UTC。用户需升级至 ZCode 4.0+，在应用内弹窗领取并切换至 Start Plan provider，每个账号和设备限领一次。",
+      "key_points_zh": [
+        "11 月 27 日 11:00 UTC 开放领取，每账号可领取 3 亿 GLM-5.3-Flash tokens，先到先得。",
+        "领取后须在 11 月 27 日 15:00 至 11 月 30 日 01:00 UTC 使用。",
+        "需 ZCode 4.0+，在应用内弹窗领取并切换到 Start Plan provider。",
+        "每个账号和设备限领一次。"
+      ],
+      "importance_reason_zh": "这是有明确额度、领取和使用窗口及账号限制的限时优惠，直接影响 ZCode 用户可获得的模型用量。",
+      "title_en": "ZCode offers 300 million GLM-5.3-Flash tokens per account this weekend",
+      "summary_en": "ZCode announced that users can claim 300 million GLM-5.3-Flash tokens per account starting at 11:00 UTC on November 27, while supplies last, for use from 15:00 UTC on November 27 to 01:00 UTC on November 30. Users need ZCode 4.0 or later, must claim through the in-app pop-up and switch to the Start Plan provider, and are limited to one claim per account and device.",
+      "key_points_en": [
+        "Claims open at 11:00 UTC on November 27 for 300 million GLM-5.3-Flash tokens per account, while supplies last.",
+        "The tokens must be used between 15:00 UTC on November 27 and 01:00 UTC on November 30.",
+        "ZCode 4.0 or later is required; users must claim through the in-app pop-up and switch to the Start Plan provider.",
+        "Each account and device is limited to one claim."
+      ],
+      "importance_reason_en": "This is a time-limited offer with an explicit allowance, claim and usage windows, and account restrictions, directly affecting the model allowance available to ZCode users.",
+      "published_at": "2026-11-27T14:19:03.609Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:37:01+00:00",
+      "updated_at": "2026-11-27T15:55:25Z",
+      "sources": [
+        {
+          "source_id": "zcode-x",
+          "content_id": "https://x.com/zcode_ai/status/2126319898653761700",
+          "url": "https://x.com/zcode_ai/status/2126319898653761700",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-7-8-40",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Kilo 7.8.40 收紧 Agent 权限并修复 MCP 与会话隔离",
+      "summary_zh": "Kilo 7.8.40 稳定版将自动批准改为用户级设置，补充权限卡不可见字符转义、环境文件读取批准和旧配置权限迁移；CLI 修复 Gemini 的 MCP schema 兼容性，并强化多项目会话、TUI 工作区与提供商认证状态隔离。更新还要求文件移动目标路径批准，并修复 shell 子进程占用输出时调用不结束的问题。",
+      "key_points_zh": [
+        "自动批准改为用户级设置；关闭自动批准会停止仍在重试的批准，关闭已保存规则会移除该规则，权限卡以转义形式显示控制字符、双向标记和不可见格式字符。",
+        "读取或输出环境文件前要求批准（示例环境文件仍可读）；写入工具在目标已变化、不是普通文件或无法取得文件系统身份时拒绝写入。",
+        "旧配置迁移保留文件写入权限、提供商 headers 与 bearer token；本地 MCP 使用配置的工作目录，并修复 Gemini 拒绝 array 与 anyOf/oneOf 组合 MCP schema 的问题。",
+        "会话操作限定在所属项目，TUI 保留各工作区配置并把权限提示路由到对应工作区；子代理标签与提问回答同步到发起会话。",
+        "登录状态区分吊销与临时故障，ChatGPT OAuth 刷新后保持登录，提供商与认证面板随项目切换重新加载；Azure/Vertex 端点、区域和凭据发送目标受到更严格校验。",
+        "CLI 在 patch 移动文件时要求批准目标路径，拒绝移动到 Agent Manager 状态；前台命令在 macOS/Linux 退出后即结束，即使后代进程仍占用 stdout/stderr。"
+      ],
+      "importance_reason_zh": "权限执行、旧配置迁移和 MCP 兼容性变化关系 Agent 安全与升级可靠性，多项目隔离及 shell、认证修复则改善日常运行稳定性。",
+      "title_en": "Kilo 7.8.40 tightens Agent permissions and fixes MCP and session isolation",
+      "summary_en": "Kilo 7.8.40 makes auto-approval a user-level setting, escapes invisible characters in permission cards, asks before environment-file access and preserves permissions during legacy configuration migration. The CLI fixes Gemini MCP schema compatibility and strengthens project-session, TUI workspace and provider-auth isolation. It also requires approval for patch move destinations and fixes shell calls that hang when descendant processes retain output streams.",
+      "key_points_en": [
+        "Auto-approval becomes a user-level setting; turning it off stops retried approvals, disabling a saved rule removes it, and permission cards escape control characters, bidi marks and invisible format characters.",
+        "Reading or printing environment files requires approval, while example environment files remain readable; the write tool refuses targets that changed, are not regular files or lack usable filesystem identity.",
+        "Legacy migration preserves file-write permissions, provider headers and bearer tokens; local MCP servers honor their configured working directory, and Gemini no longer rejects MCP schemas combining array with anyOf or oneOf.",
+        "Session actions stay within their owning project, the TUI retains per-workspace configuration and routes permission prompts to the right workspace, and subagent tabs and answers follow the initiating session.",
+        "Login state distinguishes revocation from outages, ChatGPT OAuth survives token refreshes, provider and auth panels reload on project switches, and Azure/Vertex endpoints, regions and credential destinations receive stricter validation.",
+        "The CLI requires approval for a patch's destination path and refuses moves onto Agent Manager state; foreground shell calls finish on macOS/Linux when the command exits even if descendants keep stdout or stderr open."
+      ],
+      "importance_reason_en": "Permission enforcement, legacy migration and MCP compatibility affect Agent safety and upgrade reliability, while project isolation and shell/auth fixes improve everyday stability.",
+      "published_at": "2026-11-27T10:12:03Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-27T15:12:37+00:00",
+      "updated_at": "2026-11-27T23:49:58+08:00",
+      "sources": [
+        {
+          "source_id": "kilo-releases",
+          "content_id": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.40",
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.40",
+          "collected_at": "2026-11-27T15:12:37+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "kilo-7-8-32"
+      ]
+    },
+    {
+      "id": "qoder-0-5-21-20261127",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Qoder 0.5.21 支持 AppHub 连接器同步到云端",
+      "summary_zh": "Qoder 0.5.21 可将本地已授权且使用 Streamable HTTP 的 AppHub 连接器同步到云端，供云端 Agent 与自动化使用。更新还修复云自动化资源选择残留、设备时钟差异导致的注册/配对/重连拒绝、系统代理下模型列表加载，以及 Windows OpenSSH 主机验证问题。",
+      "key_points_zh": [
+        "本地已授权且使用 Streamable HTTP 的 AppHub 连接器可同步到云端，供云端 Agent 与自动化使用。",
+        "修改云自动化时，已移除的 Skills 或连接器不再保持选中，资源列表加载完成前也不会清空既有选择。",
+        "修复设备时钟差异导致有效注册请求、配对批准或重连尝试被拒绝；代理设置变更后网络诊断会提示重新运行。",
+        "修复系统代理设置下部分本地任务无法加载模型列表，以及 Windows 连接工作区或主机地址变化后 OpenSSH 主机验证失败。"
+      ],
+      "importance_reason_zh": "把本地授权连接器扩展到云端 Agent 与自动化，同时修复会影响连接建立和模型可用性的跨平台问题。",
+      "title_en": "Qoder 0.5.21 syncs AppHub connectors to the cloud",
+      "summary_en": "Qoder 0.5.21 can sync locally authorized AppHub connectors that use Streamable HTTP to the cloud for cloud agents and automations. It also fixes stale cloud-automation selections, registration/pairing/reconnection rejections caused by device clock differences, model-list loading under system proxies, and Windows OpenSSH host verification failures.",
+      "key_points_en": [
+        "Locally authorized AppHub connectors using Streamable HTTP can be synced to the cloud for cloud agents and automations.",
+        "Editing a cloud automation no longer leaves removed Skills or connectors selected or clears existing selections before the resource list finishes loading.",
+        "Fixes valid registration requests, pairing approvals and reconnection attempts being rejected because of device clock differences; network diagnostics prompts a rerun after proxy settings change.",
+        "Fixes model-list loading failures for some local tasks under system proxy settings and Windows OpenSSH host verification failures when connecting to a workspace or reconnecting after a host address change."
+      ],
+      "importance_reason_en": "The update extends locally authorized connectors to cloud agents and automations while fixing cross-platform issues that affect connection setup and model availability.",
+      "published_at": "2026-11-27",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:17:57+00:00",
+      "updated_at": "2026-11-27T23:49:58+08:00",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#november-27-2026::0.5.21",
+          "url": "https://docs.qoder.com/release-notes/qoder#november-27-2026",
+          "collected_at": "2026-11-27T15:17:57+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "siliconflow-api-key-one-time-display-20261127",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "availability"
+      ],
+      "title_zh": "SiliconFlow API Key 明文将仅在新建时展示一次",
+      "summary_zh": "SiliconFlow 宣布自 2026 年 11 月 28 日起，API Key 完整明文只在创建成功时展示一次，此后平台不再以任何形式回显。存量 Key 无法再查看或复制，但已配置在客户端、环境变量或第三方工具中的调用不受影响；管理界面和费用明细保留末尾几位用于区分。",
+      "key_points_zh": [
+        "新政策自 2026-11-28 起生效，平台不再以任何形式回显 API Key 完整明文。",
+        "新建 API Key 仅在创建成功时展示一次完整明文，用户需立即复制并妥善保管。",
+        "存量 API Key 不再支持查看或复制明文，但已配置在客户端、环境变量或第三方工具中的调用不受影响。",
+        "平台保留每个 Key 的末尾几位并写入备注，API 密钥管理界面与费用明细可据此区分 Key。",
+        "已遗失明文时，应新建 Key 替换旧 Key，确认替换完成后再删除旧 Key。"
+      ],
+      "importance_reason_zh": "密钥明文不可回显改变账户安全与运维流程，存量调用虽不受影响，但遗失密钥的用户必须及时轮换。",
+      "title_en": "SiliconFlow API key plaintext will be shown only once at creation",
+      "summary_en": "SiliconFlow says that from November 28, 2026, a full API key will be shown only once, immediately after successful creation, and will never be displayed again in any form. Existing keys can no longer be viewed or copied, but calls using keys already configured in clients, environment variables or third-party tools are unaffected. The last few digits remain in key notes and billing details for identification.",
+      "key_points_en": [
+        "The policy takes effect on 2026-11-28; the platform will no longer display a full API key in any form.",
+        "A new API key's full plaintext is shown only once after successful creation and must be copied and stored immediately.",
+        "Existing API keys can no longer be viewed or copied, but calls using keys already configured in clients, environment variables or third-party tools are unaffected.",
+        "The last few digits of each key remain in its notes, allowing the API key management page and billing details to distinguish keys.",
+        "If a plaintext key is lost, create a replacement, confirm the switch and only then delete the old key."
+      ],
+      "importance_reason_en": "Making key plaintext non-retrievable changes account security and operations. Existing calls continue, but users who lose a key must rotate it promptly.",
+      "published_at": "2026-11-27",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:18:00+00:00",
+      "updated_at": "2026-11-27T23:49:58+08:00",
+      "sources": [
+        {
+          "source_id": "siliconflow-updates",
+          "content_id": "https://docs.siliconflow.cn/docs/release-notes/overview#账户安全api-key-仅在新建时展示一次不再回显明文",
+          "url": "https://docs.siliconflow.cn/docs/release-notes/overview#账户安全api-key-仅在新建时展示一次不再回显明文",
+          "collected_at": "2026-11-27T15:18:00+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "cline-model-catalog-20261126",
       "entity_ids": [
@@ -104,6 +287,46 @@
       ]
     },
     {
+      "id": "tibo-delayed-reset-live-20261126",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "availability"
+      ],
+      "title_zh": "Tibo 称延迟重置功能已上线",
+      "summary_zh": "Tibo 发帖表示“延迟重置功能已上线”。原帖未说明适用产品、账号范围、重置额度或实现方式，不能据此补充具体权益。",
+      "key_points_zh": [
+        "Tibo 直接表示延迟重置功能已上线。",
+        "原帖未交代适用产品、账号范围、重置额度或实现方式。"
+      ],
+      "importance_reason_zh": "负责人账号直接通报一项功能的上线状态，具有一手进展价值；但信息范围有限，需保留归属和未知项。",
+      "title_en": "Tibo says delayed reset is now live",
+      "summary_en": "Tibo posted that the delayed reset feature is now live. The post does not identify the product, eligible accounts, reset allowance, or implementation, so no specific benefits can be inferred.",
+      "key_points_en": [
+        "Tibo directly stated that the delayed reset feature is now live.",
+        "The post does not identify the product, eligible accounts, reset allowance, or implementation."
+      ],
+      "importance_reason_en": "A direct first-party status update from the responsible executive is useful progress evidence, but the limited detail requires preserving both the attribution and the unknowns.",
+      "published_at": "2026-11-26T07:26:16.082Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:37:02+00:00",
+      "updated_at": "2026-11-27T15:55:25Z",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2125853628250599730",
+          "url": "https://x.com/thsottiaux/status/2125853628250599730",
+          "collected_at": "2026-11-27T15:37:02+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
       "id": "kimi-code-cli-2-9-0-canary-20261126",
       "entity_ids": [
         "moonshot",
@@ -113,31 +336,34 @@
       "topics": [
         "feature",
         "capability",
-        "critical_fix"
+        "critical_fix",
+        "compatibility"
       ],
-      "title_zh": "Kimi Code CLI 2.9.0 canary 预览自动审查与多会话工作流",
-      "summary_zh": "Kimi Code CLI 2.9.0 canary 加入实验性自动审查、Git worktrees、三标签 /sessions 和同项目会话恢复，并修复子代理权限模式继承、模型状态同步、会话元数据加载与文件监视竞争等问题。",
+      "title_zh": "Kimi Code CLI 2.9.0 canary 完善工作树、MCP 与多会话工作流",
+      "summary_zh": "Kimi Code CLI 2.9.0 canary 在 11 月 27 日的连续构建中将 Git worktree 支持从实验性转为正式，加入按会话 MCP 来源管理与预连接仲裁、默认延迟 MCP 工具加载，并支持通过 KIMI_CODE_SWARM 以 swarm 模式启动新会话。外部 hooks 新增上下文注入和工具 I/O 重写，TUI 增加全屏搜索与鼠标支持；同批构建也撤除了实验性 auto review。",
       "key_points_zh": [
-        "agent-core-v2 加入实验性 auto review。",
-        "新增实验性 Git worktrees、三标签 /sessions 和同项目 resume。",
-        "btw 子代理改用主 Agent 的权限模式启动；模型切换的 compact 变更会应用到原会话。",
-        "修复会话加载时元数据文档竞争、macOS 原生文件监视只重扫一次及 Git reaper 锁持有者检查。"
+        "Git worktree 支持由实验性转为正式；新建 worktree 可迁移当前活动会话，TUI 为 /tasks、takeover viewers 等加入全屏鼠标支持。",
+        "agent-core-v2 默认延迟 MCP 工具加载，启动等待上限为 2 秒，并按会话管理 MCP 来源及执行预连接仲裁。",
+        "设置 KIMI_CODE_SWARM 后，新会话可以 swarm 模式启动。",
+        "外部 hooks 支持上下文注入与工具 I/O 重写；TUI 可用 Ctrl+F 或 /find 进入全屏搜索。",
+        "后续构建撤除实验性 auto review，并修复恢复会话的历史展示、远程控制锁释放和压缩后的 token 计数显示。"
       ],
-      "importance_reason_zh": "预览版同时改变自动审查、并行工作区和会话组织方式，值得在稳定版前跟踪。",
-      "title_en": "Kimi Code CLI 2.9.0 canary previews auto-review and multisession workflows",
-      "summary_en": "Kimi Code CLI 2.9.0 canary adds experimental auto-review, Git worktrees, a three-tab /sessions view and same-project resume. It also fixes subagent permission-mode inheritance, model-state synchronization, session metadata loading and file-watcher races.",
+      "importance_reason_zh": "这些变化直接影响并行工作区、MCP 初始化与 Agent 扩展方式；撤除 auto review 也改变此前预览的能力范围，需以同一稳定事件记录完整演进。",
+      "title_en": "Kimi Code CLI 2.9.0 canary refines worktrees, MCP and multisession workflows",
+      "summary_en": "Continuous Kimi Code CLI 2.9.0 canary builds on November 27 graduate Git worktree support from experimental status, add per-session MCP source management with pre-connect arbitration, defer MCP tools by default, and allow new sessions to start in swarm mode via KIMI_CODE_SWARM. External hooks gain context injection and tool I/O rewriting, while the TUI adds fullscreen search and mouse support. The same build stream also removes experimental auto review.",
       "key_points_en": [
-        "agent-core-v2 adds experimental auto review.",
-        "Adds experimental Git worktrees, a three-tab /sessions view and same-project resume.",
-        "btw subagents start in the main Agent’s permission mode, and compact-and-switch model changes apply to the original session.",
-        "Fixes metadata-document races during session loading, a single rescan after macOS native file watching starts, and Git reaper lock-holder checks."
+        "Git worktree support graduates from experimental status; creating a worktree can move the active session, and fullscreen mouse support is added for /tasks, takeover viewers and other docked dialogs or selectors.",
+        "agent-core-v2 defers MCP tools by default, caps startup waiting at 2 seconds, and manages MCP sources per session with pre-connect arbitration.",
+        "Setting KIMI_CODE_SWARM lets new sessions start in swarm mode.",
+        "External hooks support context injection and tool I/O rewriting; the TUI adds fullscreen search with Ctrl+F or /find.",
+        "A later build removes experimental auto review and fixes resumed-session history display, remote-control lock release and post-compaction token-count display."
       ],
-      "importance_reason_en": "The preview changes auto-review, parallel workspaces and session organization, making it worth tracking before stable release.",
+      "importance_reason_en": "These changes directly affect parallel workspaces, MCP initialization and Agent extensibility. Removing auto review also narrows the earlier preview, so the full progression belongs in one stable event.",
       "published_at": "2026-11-26T07:10:43Z",
       "date_precision": "datetime",
       "date_kind": "updated",
       "first_collected_at": "2026-11-26T15:30:08+00:00",
-      "updated_at": "2026-11-26T16:17:50Z",
+      "updated_at": "2026-11-27T23:49:58+08:00",
       "sources": [
         {
           "source_id": "kimi-code-releases",
@@ -145,6 +371,35 @@
           "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261126065002-1fa6471",
           "collected_at": "2026-11-26T15:30:08+00:00",
           "material_scope": "full_text"
+        },
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261127020632-46beafd",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261127020632-46beafd",
+          "collected_at": "2026-11-27T15:12:39+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261127101819-da8bdbb",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261127101819-da8bdbb",
+          "collected_at": "2026-11-27T15:12:39+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261127130549-5304618",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261127130549-5304618",
+          "collected_at": "2026-11-27T15:12:39+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-11-27T23:49:58+08:00",
+          "reason_zh": "后续 canary 撤除实验性 auto review，将 Git worktree 支持从实验性转为正式，并补充 MCP 延迟加载、按会话仲裁、swarm 启动和外部 hooks 扩展；原首次采集时间保持不变。",
+          "reason_en": "Later canary builds remove experimental auto review, graduate Git worktree support, and add deferred MCP loading, per-session MCP arbitration, swarm startup and external-hook extensions. The original first-collected time is preserved.",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261127101819-da8bdbb"
         }
       ],
       "related_event_ids": [
@@ -196,6 +451,53 @@
           "url": "https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html",
           "collected_at": "2026-11-26T15:30:00+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-gpt62-billing-error-fix-20261126",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "critical_fix"
+      ],
+      "title_zh": "Tibo 称 GPT-6.2 计费错误已修复，资源消耗较上周快约 40%",
+      "summary_zh": "Tibo 表示，GPT-6.2 发布时错误地降低了大多数用户使用 GPT-6.2 Astra 和 Sol 的订阅费用，现已修复；同样的任务现在会消耗更多资源，GPT-6.2 的资源消耗速度较上周约快 40%。原帖未给出具体价目、套餐范围或计算口径。",
+      "key_points_zh": [
+        "Tibo 承认 GPT-6.2 发布时存在计费错误，误降低了大多数用户使用 GPT-6.2 Astra 和 Sol 的订阅费用。",
+        "Tibo 表示该问题已经修复。",
+        "同样的任务现在消耗更多资源；按 Tibo 表述，GPT-6.2 的资源消耗速度较上周约快 40%。",
+        "原帖未提供具体价目、套餐范围或计算口径，40% 不能解读为统一价格涨幅。"
+      ],
+      "importance_reason_zh": "负责人直接披露计费错误、修复状态与资源消耗变化，会影响用户成本预期；约 40% 是本人对消耗速度的比较，不是独立核验的价格结论。",
+      "title_en": "Tibo says GPT-6.2 billing error is fixed and resources deplete about 40% faster",
+      "summary_en": "Tibo said subscription charges for most users of GPT-6.2 Astra and Sol were mistakenly reduced at launch and that the billing error has been fixed. The same tasks now consume more resources, with GPT-6.2 resource use running about 40% faster than the previous week. The post gives no exact prices, plan scope, or calculation method.",
+      "key_points_en": [
+        "Tibo acknowledged a billing error at the GPT-6.2 launch that mistakenly reduced subscription charges for most users of GPT-6.2 Astra and Sol.",
+        "Tibo said the issue has been fixed.",
+        "The same tasks now consume more resources; according to Tibo, GPT-6.2 resource use is running about 40% faster than the previous week.",
+        "The post provides no exact prices, plan scope, or calculation method, so 40% must not be read as a uniform price increase."
+      ],
+      "importance_reason_en": "The executive's first-party disclosure of the billing error, fix status, and changed resource use affects cost expectations. The roughly 40% figure is his comparison of depletion speed, not an independently verified pricing conclusion.",
+      "published_at": "2026-11-26T02:50:10.673Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:37:02+00:00",
+      "updated_at": "2026-11-27T15:55:25Z",
+      "related_event_ids": [
+        "gpt-6-2-astra-sol-20261117"
+      ],
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2125784147889393806",
+          "url": "https://x.com/thsottiaux/status/2125784147889393806",
+          "collected_at": "2026-11-27T15:37:02+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },
@@ -294,6 +596,53 @@
       ]
     },
     {
+      "id": "devin-2026-11-26",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "api",
+        "compatibility",
+        "critical_fix"
+      ],
+      "title_zh": "Devin 扩展 Slack 自动化与企业管理能力",
+      "summary_zh": "Devin 11 月 26 日更新加入 Slack 频道自动化派发通知和 Oncall 响应语言设置，并分页读取企业服务用户及其 API。Changes 面板可查看已删除文件内容，Bots 恢复此前聊天状态；共享对话框按真实授权显示所有者与访问权限，并修复 Enterprise Grid Slack 访问和扫描结果跳转。",
+      "key_points_zh": [
+        "自动化可通过 v3 API 的 notifications.slack 把派发状态通知发送到 Slack 频道；Devin Oncall 响应者与事件设置新增响应语言下拉框。",
+        "服务用户列表与 manageable-service-users API 按调用者 grants 分页，避免大型组织一次加载全部用户导致超时或错误。",
+        "会话共享对话框显示所有者、仅显示真实授予访问权限的角色组，并在账户策略禁止共享时隐藏按钮；搜索访问列表改读资源 grants。",
+        "Changes 面板显示 Devin 删除文件的内容；从其他标签返回 Bots 时恢复原会话和工作区标签；批量代码扫描卡打开对应扫描的 findings。",
+        "Slack Enterprise Grid 中，Bot 的“Who can message”设为工作区 anyone 后可接收私信和提及；Slack“not a member”回复新增重新授权设置链接。"
+      ],
+      "importance_reason_zh": "自动化和企业 API 的扩展提升工作流集成与大规模组织可用性，访问权限和扫描导航修复则关系安全审计与操作效率。",
+      "title_en": "Devin expands Slack automations and enterprise administration",
+      "summary_en": "Devin's November 26 update adds Slack-channel automation dispatch notifications and an Oncall response-language setting, and pages service users and their API through the caller's grants. The Changes pane can show deleted file contents, Bots restores the previous chat state, and the share dialog reflects real access. It also fixes Enterprise Grid Slack access and scan-result navigation.",
+      "key_points_en": [
+        "Automations can post dispatch status notifications to Slack channels through notifications.slack in the v3 API; Devin Oncall responders and incident settings gain a response-language dropdown.",
+        "The service-user list and manageable-service-users API page through the caller's grants, avoiding timeouts and errors when very large organizations would otherwise load every user at once.",
+        "The session share dialog shows the owner, lists role groups only where they grant access and hides the share button when account policy blocks sharing; access-list search reads the resource's grants.",
+        "The Changes pane shows contents of files Devin deleted; returning to Bots restores the open session and workspace tab; a bulk code-scan card opens that scan's findings.",
+        "On Slack Enterprise Grid, a Bot set to allow anyone in the Slack workspace can receive DMs and mentions; the Slack not-a-member reply links to settings for re-authorizing a stale connection."
+      ],
+      "importance_reason_en": "The automation and enterprise API additions improve workflow integration and large-organization usability, while access-control and scan-navigation fixes support safer auditing and more efficient operations.",
+      "published_at": "2026-11-26",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:17:58+00:00",
+      "updated_at": "2026-11-27T23:49:58+08:00",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-26-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-26-2026",
+          "collected_at": "2026-11-27T15:17:58+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "copilot-code-review-org-billing-20261125",
       "entity_ids": [
         "copilot"
@@ -349,31 +698,33 @@
         "critical_fix",
         "compatibility"
       ],
-      "title_zh": "Copilot CLI 1.0.117 扩展自定义 Agent 工具并修复恢复与权限流程",
-      "summary_zh": "Copilot CLI 1.0.117 系列让自定义 Agent 显式选择工具，后台 Agent 可在重启并恢复会话后继续对话，并改进连接器加载、MCP 缓存、沙箱符号链接诊断和权限重试。补丁还加入模型退役提示、不可用模型恢复、Linux shell 恢复及 Windows PowerShell hook 退出码保留。",
+      "title_zh": "Copilot CLI 1.0.117 强化沙箱与权限边界并修复会话恢复",
+      "summary_zh": "Copilot CLI 1.0.117 系列让自定义 Agent 显式选择工具，为沙箱命令增加自定义 CA 证书配置，并修复 MCP 批准范围、恢复会话和后台 Agent 连续性。后续补丁还恢复可写 Git worktree 中的提交、分支与暂存操作，避免退出后执行排队提示，并加入模型退役提示与不可用模型处理。",
       "key_points_zh": [
         "自定义 Agent 可显式选择工具；无 prompt 的自定义 Agent 文件也会遵守工具列表。",
+        "sandbox.userPolicy.network.extraCaCertificates 可在用户或托管设置中信任 TLS 拦截代理使用的自定义 CA；现有仓库设置文件在可写 Git worktree 的沙箱命令和 Agent 编辑中保持只读。",
+        "MCP 工具批准不再因服务器名与内置权限类型重合而同时批准 shell、memory store 等内置请求；/mcp 与 --disable-mcp-server 不区分服务器名大小写，精确匹配优先。",
         "后台 Agent 在 CLI 重启并恢复会话后继续对话；GitHub 登录尚未完成时也可加载已连接 Copilot Connectors。",
-        "COPILOT_MCP_TOOL_CACHE=false 在重载后持续禁用工具快照读写；/sandbox policy 会标记损坏符号链接授权。",
         "权限提示说明恢复会话后仍有效的批准；计划模式在创建分支或安装包前要求批准，被自动拒绝的动作可在后续消息中重新审查一次。",
-        "/model 标记退役模型；不可用模型不再静默切换提供商，共享会话可恢复后改用 /model；PowerShell hooks 保留原生退出码。"
+        "/model 标记退役模型；不可用模型不再静默切换提供商，共享会话可恢复后改用 /model；/exit 或 Ctrl+D 会丢弃排队提示，PowerShell hooks 保留原生退出码。"
       ],
-      "importance_reason_zh": "工具暴露、后台连续性和权限恢复变化直接影响 Agent 自动化安全与可靠性。",
-      "title_en": "Copilot CLI 1.0.117 expands custom-agent tools and fixes recovery and permissions",
-      "summary_en": "The Copilot CLI 1.0.117 series lets custom agents opt into explicit tools and allows background agents to continue after a CLI restart and session resume. It improves connector loading, MCP cache behavior, sandbox symlink diagnostics and permission retries. Patches add model-retirement notices, unavailable-model recovery, Linux shell recovery and native PowerShell hook exit-code preservation.",
+      "importance_reason_zh": "工具暴露、沙箱证书兼容、MCP 批准隔离和会话恢复变化直接影响 Agent 自动化安全与企业部署可靠性。",
+      "title_en": "Copilot CLI 1.0.117 tightens sandbox and permission boundaries and fixes session recovery",
+      "summary_en": "The Copilot CLI 1.0.117 series lets custom agents opt into explicit tools, adds custom CA certificates for sandboxed commands, and fixes MCP approval scope, session recovery and background-agent continuity. Later patches restore commits, branches and stashing in writable Git worktrees, discard queued prompts on exit, and add model-retirement notices and unavailable-model handling.",
       "key_points_en": [
         "Custom agents can explicitly select tools, and custom agent files without prompts still honor their tool list.",
-        "Background agents continue after restart and resume; connected Copilot Connectors can load while GitHub sign-in is still finishing.",
-        "COPILOT_MCP_TOOL_CACHE=false persists across reloads, and /sandbox policy flags grants pointing to broken symlinks.",
+        "sandbox.userPolicy.network.extraCaCertificates trusts custom CAs used by TLS-intercepting proxies from user or managed settings; existing repository settings files stay read-only to sandboxed commands and Agent edits in writable Git worktrees.",
+        "Approving an MCP server's tools no longer also approves built-in requests such as shell commands or memory stores when names collide; /mcp and --disable-mcp-server match server names case-insensitively, with exact matches taking precedence.",
+        "Background agents continue after a CLI restart and session resume; connected Copilot Connectors can load while GitHub sign-in is still finishing.",
         "Permission help explains which approvals survive resume; plan mode asks before branch creation or package installation, and an automatically denied action can be reviewed once after a later request.",
-        "/model marks retiring models; unavailable models no longer trigger silent provider switching, shared sessions can resume and change models, and PowerShell hooks preserve native exit codes."
+        "/model marks retiring models; unavailable models no longer trigger silent provider switching, shared sessions can resume and change models, /exit or Ctrl+D discards queued prompts, and PowerShell hooks preserve native exit codes."
       ],
-      "importance_reason_en": "Tool exposure, background continuity and permission recovery directly affect the safety and reliability of Agent automation.",
+      "importance_reason_en": "Tool exposure, sandbox certificate compatibility, MCP approval isolation and session recovery directly affect the safety and reliability of Agent automation in enterprise deployments.",
       "published_at": "2026-11-25T21:21:51Z",
       "date_precision": "datetime",
       "date_kind": "updated",
       "first_collected_at": "2026-11-26T15:30:04+00:00",
-      "updated_at": "2026-11-26T16:17:50Z",
+      "updated_at": "2026-11-27T23:49:58+08:00",
       "sources": [
         {
           "source_id": "copilot-releases",
@@ -395,6 +746,83 @@
           "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-2",
           "collected_at": "2026-11-26T15:30:04+00:00",
           "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-3",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-3",
+          "collected_at": "2026-11-27T15:12:35+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-4",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-4",
+          "collected_at": "2026-11-27T15:12:35+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-5",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-5",
+          "collected_at": "2026-11-27T15:12:35+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.117",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117",
+          "collected_at": "2026-11-27T15:12:35+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-11-27T23:49:58+08:00",
+          "reason_zh": "补充 1.0.117-3 至 1.0.117-5 及汇总发布说明中的自定义 CA、MCP 批准隔离、worktree 恢复和退出队列清理等变化；首次采集时间保持不变。",
+          "reason_en": "Adds custom CA support, MCP approval isolation, worktree recovery and queued-prompt cleanup from 1.0.117-3 through 1.0.117-5 and the consolidated release notes. The first-collected time is preserved.",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117"
+        }
+      ]
+    },
+    {
+      "id": "demis-gemini-neon-recommendation-20261125",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Demis Hassabis 推荐试用 Gemini Neon",
+      "summary_zh": "Demis Hassabis 发帖建议用户试用 Gemini Neon，并称它是一款好模型。原帖未提供评测数据、具体场景或比较结果，该表述属于负责人个人推荐。",
+      "key_points_zh": [
+        "Demis Hassabis 建议试用 Gemini Neon，并称它是一款好模型。",
+        "原帖没有评测数据、具体场景或比较结果，应按个人推荐而非独立性能验证处理。"
+      ],
+      "importance_reason_zh": "这是负责人对已发布模型的一手推荐与使用判断，按观点保留；它不构成新发布，也不能替代独立评测。",
+      "title_en": "Demis Hassabis recommends trying Gemini Neon",
+      "summary_en": "Demis Hassabis suggested trying Gemini Neon and called it a good model. The post provides no benchmarks, specific use cases, or comparisons, so the statement is a personal recommendation from the executive.",
+      "key_points_en": [
+        "Demis Hassabis suggested trying Gemini Neon and called it a good model.",
+        "The post provides no benchmarks, specific use cases, or comparisons, so it is a personal recommendation rather than independent performance evidence."
+      ],
+      "importance_reason_en": "This is a first-party recommendation and usage judgment from the executive and is worth retaining as an opinion. It is neither a new release nor a substitute for independent evaluation.",
+      "published_at": "2026-11-25T18:48:54.870Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:37:01+00:00",
+      "updated_at": "2026-11-27T15:55:25Z",
+      "related_event_ids": [
+        "gemini-4-neon-20261118"
+      ],
+      "sources": [
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2125663033993437651",
+          "url": "https://x.com/demishassabis/status/2125663033993437651",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },
@@ -550,6 +978,52 @@
       ]
     },
     {
+      "id": "openai-dot-monitoring-workflow-20261125",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "OpenAI 展示 dot 在用户离岗时监控项目并调用 Codex 的工作流",
+      "summary_zh": "OpenAI 官方 YouTube 简介给出的 Raymond 工作流显示，dot 可监视指定的 Slack 与值班频道，把相关反馈归并到现有 Linear 工单，或新建工单并链接 Slack 消息；仅在停机、关键事故或多份核心功能故障报告时提醒用户。简介中的提示词还允许 dot 在启用 Codex 时启动调查线程、发送发现，并在用户审核前不修改代码。",
+      "key_points_zh": [
+        "dot 监视指定的 Slack 与值班频道，持续关注进行中的项目。",
+        "相关反馈可归并到现有 Linear 工单，必要时新建工单并链接 Slack 消息。",
+        "仅在停机、关键事故或多份核心功能故障报告时提醒用户。",
+        "启用 Codex 时，dot 可启动线程调查值班告警并发送发现；提示词明确要求用户审核前不改代码。"
+      ],
+      "importance_reason_zh": "这是对 dot 异步监控、工单流转和 Codex 调查协作的具体说明，有助于判断 Agent 在无人值守场景中的边界；材料仅为官方简介，未独立验证运行效果或普遍可用性。",
+      "title_en": "OpenAI shows a dot workflow for monitoring projects and invoking Codex while the user is away",
+      "summary_en": "A Raymond workflow in OpenAI's official YouTube description shows a dot monitoring designated Slack and on-call channels, grouping related feedback into an existing Linear ticket or creating a new ticket linked to Slack messages, and pinging the user only for an outage, critical incident or multiple reports of a broken core feature. The sample prompt also lets the dot start a Codex investigation thread when Codex is enabled, send findings, and make no code changes before user review.",
+      "key_points_en": [
+        "The dot monitors designated Slack and on-call channels to keep watch over ongoing projects.",
+        "Related feedback can be grouped into an existing Linear ticket, with a new ticket created and linked to Slack messages when needed.",
+        "The user is pinged only for an outage, critical incident or multiple reports of a broken core feature.",
+        "When Codex is enabled, the dot can start a thread to investigate on-call alerts and send findings; the prompt explicitly requires no code changes before user review."
+      ],
+      "importance_reason_en": "This is a concrete account of asynchronous monitoring, ticket routing and Codex investigation in a dot workflow, helping define agent boundaries in unattended work. The evidence is limited to the official description, with no independent verification of results or general availability.",
+      "published_at": "2026-11-25T10:21:11-08:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:37:01+00:00",
+      "updated_at": "2026-11-27T15:47:18Z",
+      "sources": [
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=A4UNP-axGHU",
+          "url": "https://www.youtube.com/watch?v=A4UNP-axGHU",
+          "published_at": "2026-11-25T10:21:11-08:00",
+          "date_kind": "published",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
       "id": "musk-grok-tesla-road-trips-20261125",
       "entity_ids": [
         "grok"
@@ -691,20 +1165,6 @@
         "抽奖 3 名用户各得 $20 credits，条件包括点赞、转发、标记 3 位好友及回复或私信账户邮箱。"
       ],
       "importance_reason_zh": "明确的充值返还比例、额度和期限直接影响平台使用成本，属于可核算的限时优惠。",
-      "published_at": "2026-11-25T07:53:12.000Z",
-      "date_precision": "datetime",
-      "date_kind": "published",
-      "first_collected_at": "2026-11-25T14:32:34+00:00",
-      "updated_at": "2026-11-25T14:44:24Z",
-      "sources": [
-        {
-          "source_id": "worldrouter-x",
-          "content_id": "https://x.com/WorldClawAI/status/2125498021978988836",
-          "url": "https://x.com/WorldClawAI/status/2125498021978988836",
-          "collected_at": "2026-11-25T14:32:34+00:00",
-          "material_scope": "partial_text"
-        }
-      ],
       "title_en": "WorldRouter offers up to $100 in credits for Black Friday top-ups",
       "summary_en": "WorldRouter is offering credit bonuses from November 25 through December 2: top up $100 to receive $5, $500 to receive $30, or $1,000 to receive $100. Three giveaway winners will also receive $20 in credits each; entry requires liking, reposting, tagging three friends and providing the account email address.",
       "key_points_en": [
@@ -712,7 +1172,28 @@
         "Top-ups of $100, $500 and $1,000 receive $5, $30 and $100 in credits, respectively.",
         "Three winners receive $20 in credits each; entry requires a like, repost, three friend tags and an account email address submitted by reply or direct message."
       ],
-      "importance_reason_en": "The stated top-up bonus amounts, ratios and dates provide concrete, calculable terms for a limited-time change in platform costs."
+      "importance_reason_en": "The stated top-up bonus amounts, ratios and dates provide concrete, calculable terms for a limited-time change in platform costs.",
+      "published_at": "2026-11-25T07:53:12.000Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T14:32:34+00:00",
+      "updated_at": "2026-11-27T15:55:25Z",
+      "sources": [
+        {
+          "source_id": "worldrouter-x",
+          "content_id": "https://x.com/WorldClawAI/status/2125498021978988836",
+          "url": "https://x.com/WorldClawAI/status/2125498021978988836",
+          "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "worldrouter-x",
+          "content_id": "https://x.com/WorldClawAI/status/2126190280567115903",
+          "url": "https://x.com/WorldClawAI/status/2126190280567115903",
+          "collected_at": "2026-11-27T15:37:02+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
     },
     {
       "id": "worldrouter-gemini-4-models-20261125",
@@ -1332,6 +1813,52 @@
           "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-5",
           "collected_at": "2026-11-25T13:43:34+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "codex-svg-3d-design-plugin-20261124",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "Codex SVG & 3D Design 插件支持参考图转可编辑图形和模型",
+      "summary_zh": "OpenAI 官方简介称，Codex 的 SVG & 3D Design 插件可把参考图转为可编辑图形或 3D 模型，并接受自然语言修改。简介给出的示例包括小幅修改 SVG 代码让角色眼睛跟随光标，以及由 Codex 调用 Blender 从另一角度检查模型；同时附有插件与从概念图到可编辑 SVG、3D 场景的指南链接。",
+      "key_points_zh": [
+        "插件提供从参考图到可编辑 SVG 或 3D 模型的工作流，并支持用自然语言继续修改。",
+        "SVG 示例通过小幅代码修改让角色眼睛跟随光标。",
+        "Codex 使用 Blender 从另一角度检查 3D 模型。",
+        "简介提供插件和指南链接并说明可在 Codex 中启用；metadata_only 材料不能证明实际效果或完整可用范围。"
+      ],
+      "importance_reason_zh": "该插件把编码代理接入 SVG 与 Blender 设计工作流，扩展了 Codex 在可编辑视觉和 3D 制作中的用途；效果与适用范围仍只据官方简介，未独立验证。",
+      "title_en": "Codex SVG & 3D Design plugin turns reference images into editable graphics and models",
+      "summary_en": "OpenAI's official description says the SVG & 3D Design plugin for Codex can turn a reference image into an editable graphic or 3D model and accept further changes in plain language. Examples include a small SVG code change that makes a character's eyes follow the cursor and Codex using Blender to check a model from another angle. The description links to the plugin and a guide on creating editable SVGs and 3D scenes from concept art.",
+      "key_points_en": [
+        "The plugin offers a workflow from reference images to editable SVGs or 3D models, with further changes requested in plain language.",
+        "The SVG example uses a small code change to make a character's eyes follow the cursor.",
+        "Codex uses Blender to inspect a 3D model from another angle.",
+        "The description links to the plugin and guide and says it can be enabled in Codex; metadata_only evidence does not establish results or full availability."
+      ],
+      "importance_reason_en": "The plugin connects a coding agent to SVG and Blender design workflows, extending Codex into editable visual and 3D production. Results and availability remain based only on the official description and were not independently verified.",
+      "published_at": "2026-11-24T13:32:42-08:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:37:01+00:00",
+      "updated_at": "2026-11-27T15:47:18Z",
+      "sources": [
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=1u0hTd86_HU",
+          "url": "https://www.youtube.com/watch?v=1u0hTd86_HU",
+          "published_at": "2026-11-24T13:32:42-08:00",
+          "date_kind": "published",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "metadata_only"
         }
       ]
     },
@@ -3946,6 +4473,87 @@
       "importance_reason_en": "Bringing scheduled tasks and loops into one manageable panel with stopping support closes a visibility gap for long-running automation, and tighter macOS computer-use rules shrink the blast radius of automated actions."
     },
     {
+      "id": "chatgpt-data-agent-20261119",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "capability"
+      ],
+      "title_zh": "OpenAI 介绍 ChatGPT Data Agent 的数据连接、分析与协作流程",
+      "summary_zh": "OpenAI 的 Data Agent 系列视频简介介绍 ChatGPT 中的 Data 插件：连接文件与团队工具后，可提问、生成可视化、创建仪表盘并分享报告。系列还展示工作区管理员的 Snowflake 与自定义 MCP 配置、销售数据追问与来源检查、通过 Sites 分享连接数据的仪表盘，以及在 Space 中协作编辑和评论报告；插件可用性、数据连接与刷新选项取决于工作区和数据源。",
+      "key_points_zh": [
+        "Data 插件支持连接文件与团队工具后提问、生成可视化、创建仪表盘和分享报告，并提供数据质量、KPI 定义与商业分析等技能。",
+        "工作区管理员可启用 Data 插件、控制成员安装方式，并配置 Snowflake 连接或自定义插件、MCP 服务器；连接消息、邮件和文件可增加回答上下文。",
+        "系列使用虚构 Acme 销售数据演示季度对比、客户跟进、来源检查、追问分析，并把结果整理成三页演示文稿。",
+        "仪表盘可检查图表底层数据、调整外观、刷新并通过 Sites 与连接数据一起分享；报告可转为 Space Page，设置访问权限、编辑标题、提问和评论。连接与刷新选项受工作区和数据源限制。"
+      ],
+      "importance_reason_zh": "Data Agent 将数据接入、分析、展示和团队协作串成具体流程，并明确管理员配置、来源检查与权限边界；简介未提供性能基准，且本包未取得字幕或画面。",
+      "title_en": "OpenAI introduces ChatGPT Data Agent workflows for connected data, analysis and collaboration",
+      "summary_en": "Descriptions for OpenAI's Data Agent series introduce the Data plugin in ChatGPT for asking questions, creating visualizations and dashboards, and sharing reports using files and connected team tools. The series also covers Snowflake and custom MCP setup for workspace admins, follow-up sales analysis with source checks, dashboards shared through Sites with connected data, and collaborative report editing and comments in Space. Plugin availability, data connections and refresh options depend on workspace settings and the data source.",
+      "key_points_en": [
+        "The Data plugin supports questions, visualizations, dashboards and report sharing with files and connected team tools, plus skills for data quality, KPI definition and business analysis.",
+        "Workspace admins can enable the plugin, control how teammates install it, and configure a Snowflake connection or a custom plugin or MCP server; connecting messages, email and files adds context to answers.",
+        "Using fictional Acme sales data, the series demonstrates quarterly comparisons, customer follow-ups, source checks, follow-up analysis and a concise three-slide presentation.",
+        "Dashboards can expose chart data, change appearance, refresh and be shared through Sites with connected data; reports can become Space Pages with access controls, editable headings, questions and comments. Connection and refresh options depend on the workspace and data source."
+      ],
+      "importance_reason_en": "Data Agent connects data access, analysis, presentation and team collaboration in a concrete workflow while identifying admin setup, source-checking and permission boundaries. The descriptions provide no benchmarks, and this packet has no subtitles or video frames.",
+      "published_at": "2026-11-19T21:35:32-08:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-27T15:37:01+00:00",
+      "updated_at": "2026-11-27T15:47:18Z",
+      "sources": [
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=KrlfehIapEA",
+          "url": "https://www.youtube.com/watch?v=KrlfehIapEA",
+          "published_at": "2026-11-19T21:35:32-08:00",
+          "date_kind": "published",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=oJIuz3AFfEQ",
+          "url": "https://www.youtube.com/watch?v=oJIuz3AFfEQ",
+          "published_at": "2026-11-19T22:02:57-08:00",
+          "date_kind": "published",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=JEgTn37Sk50",
+          "url": "https://www.youtube.com/watch?v=JEgTn37Sk50",
+          "published_at": "2026-11-19T22:05:59-08:00",
+          "date_kind": "published",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=OSHSopaYjTw",
+          "url": "https://www.youtube.com/watch?v=OSHSopaYjTw",
+          "published_at": "2026-11-19T22:07:50-08:00",
+          "date_kind": "published",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "metadata_only"
+        },
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=3_fayTbZrW8",
+          "url": "https://www.youtube.com/watch?v=3_fayTbZrW8",
+          "published_at": "2026-11-19T21:32:52-08:00",
+          "date_kind": "published",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "metadata_only"
+        }
+      ]
+    },
+    {
       "id": "jeff-dean-david-patterson-laude-20261119",
       "entity_ids": [
         "discovery-loop"
@@ -4662,43 +5270,6 @@
       ]
     },
     {
-      "id": "chatgpt-for-accounting-20261118",
-      "entity_ids": [
-        "openai"
-      ],
-      "kind": "update",
-      "topics": [
-        "feature"
-      ],
-      "title_zh": "OpenAI 介绍 ChatGPT for Accounting",
-      "summary_zh": "OpenAI 在 YouTube 发布 ChatGPT for Accounting 介绍视频（仅标题级证据，正文细节待补充）。",
-      "key_points_zh": [
-        "OpenAI 官方 YouTube 频道发布 ChatGPT for Accounting 介绍视频。",
-        "视频简介未提供更多细节。"
-      ],
-      "importance_reason_zh": "ChatGPT 向会计场景的产品扩展，证据目前限于视频标题。",
-      "title_en": "OpenAI introduces ChatGPT for Accounting",
-      "summary_en": "OpenAI published an introducing video for ChatGPT for Accounting on its YouTube channel (title-level evidence; details pending).",
-      "key_points_en": [
-        "OpenAI's official YouTube channel published an introducing video for ChatGPT for Accounting.",
-        "The video description adds no further detail."
-      ],
-      "importance_reason_en": "A product expansion of ChatGPT into accounting; evidence is currently title-level only.",
-      "published_at": "2026-11-18T21:38:00+00:00",
-      "date_precision": "datetime",
-      "first_collected_at": "2026-11-19T15:30:00+00:00",
-      "updated_at": "2026-11-19T15:30:00+00:00",
-      "sources": [
-        {
-          "source_id": "openai-youtube",
-          "content_id": "https://www.youtube.com/watch?v=AhmCKHNqhB8",
-          "url": "https://www.youtube.com/watch?v=AhmCKHNqhB8",
-          "collected_at": "2026-11-19T14:38:23+00:00",
-          "material_scope": "metadata_only"
-        }
-      ]
-    },
-    {
       "id": "gemini-4-neon-20261118",
       "entity_ids": [
         "google",
@@ -4927,6 +5498,58 @@
         "Software ecosystem: Adobe native Windows on Arm apps, DLSS Ray Reconstruction in Blender, and ComfyUI local generation workflows."
       ],
       "importance_reason_en": "Desktop-class 128GB unified-memory hardware makes running larger local models and always-on agents a consumer option, widening the hardware base for local inference."
+    },
+    {
+      "id": "chatgpt-for-accounting-20261118",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature"
+      ],
+      "title_zh": "OpenAI 介绍 ChatGPT for Accounting",
+      "summary_zh": "OpenAI 的 YouTube 简介称，ChatGPT for Accounting 可减少月末结账事务：从邮件中找出已完成的工作并起草 QuickBooks 发票供用户审核，遇到不明确处会标记；Accounting 插件还支持使用现有电子表格和已连接会计工具对账、处理发票与收据、编制月报。",
+      "key_points_zh": [
+        "插件可从邮件中找出已完成的工作，并起草 QuickBooks 发票供用户审核。",
+        "起草过程中遇到不明确事项会标记出来。",
+        "插件支持对账、处理发票与收据，并使用现有电子表格和已连接会计工具编制月报。",
+        "依据仅为官方视频标题与简介，未取得字幕或画面，不能确认完整操作流程。"
+      ],
+      "importance_reason_zh": "会计插件把邮件、QuickBooks 和会计工具接入月末结账流程，是 ChatGPT 在专业财务工作流中的实质扩展；简介未给出可用地区、套餐或完整自动化边界。",
+      "title_en": "OpenAI introduces ChatGPT for Accounting",
+      "summary_en": "OpenAI's YouTube description says ChatGPT for Accounting can reduce month-end close busywork by finding completed jobs in email and drafting QuickBooks invoices for user review, flagging anything unclear. The Accounting plugin also reconciles transactions, processes invoices and receipts, and prepares monthly reports using existing spreadsheets and connected accounting tools.",
+      "key_points_en": [
+        "The plugin can find completed jobs in email and draft QuickBooks invoices for user review.",
+        "It flags anything unclear during invoice drafting.",
+        "It supports transaction reconciliation, invoice and receipt processing, and monthly reports using existing spreadsheets and connected accounting tools.",
+        "Evidence is limited to the official video title and description; without subtitles or frames, the complete operating flow cannot be confirmed."
+      ],
+      "importance_reason_en": "The Accounting plugin brings email, QuickBooks and accounting tools into the month-end close, a substantive expansion of ChatGPT into professional finance workflows. The description does not specify regions, plans or full automation boundaries.",
+      "published_at": "2026-11-18T13:01:26-08:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-19T15:30:00+00:00",
+      "updated_at": "2026-11-27T15:47:18Z",
+      "sources": [
+        {
+          "source_id": "openai-youtube",
+          "content_id": "https://www.youtube.com/watch?v=AhmCKHNqhB8",
+          "url": "https://www.youtube.com/watch?v=AhmCKHNqhB8",
+          "published_at": "2026-11-18T13:01:26-08:00",
+          "date_kind": "published",
+          "collected_at": "2026-11-27T15:37:01+00:00",
+          "material_scope": "metadata_only"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-11-27T15:47:18Z",
+          "reason_zh": "依据同一官方 YouTube 视频的新简介补充月末结账、QuickBooks 发票起草、对账、发票与收据处理及月报功能，并将视频发布时间校正为简介快照中的 2026-11-18T13:01:26-08:00；证据范围仍为 metadata_only。",
+          "reason_en": "Used the new description for the same official YouTube video to add month-end close, QuickBooks invoice drafting, reconciliation, invoice and receipt processing, and monthly reporting, and corrected the video publication time to 2026-11-18T13:01:26-08:00 from the description snapshot. Evidence remains metadata_only.",
+          "url": "https://www.youtube.com/watch?v=AhmCKHNqhB8"
+        }
+      ]
     },
     {
       "id": "b-ai-deepseek-v41-flash-discount-20261118",

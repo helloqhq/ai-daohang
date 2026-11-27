@@ -729,7 +729,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-11-26"
+      "models_checked_at": "2026-11-27"
     },
     {
       "id": "minimax-plan-max",
@@ -762,7 +762,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-11-26"
+      "models_checked_at": "2026-11-27"
     },
     {
       "id": "minimax-plan-ultra",
@@ -795,7 +795,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-11-26"
+      "models_checked_at": "2026-11-27"
     },
     {
       "id": "glm-plan-lite",
@@ -841,9 +841,9 @@
             "GLM-5.3-Flash"
           ],
           "source_url": "https://docs.z.ai/devpack/overview",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "官方页面显示 11 月 24 日至 12 月 24 日期间，GLM-5.3-Flash 的 Coding Plan credits 消耗按标准费率的 50% 结算，即可用额度翻倍。该优惠不改变 Model API 的 Token 价格；活动年份、结束时刻与时区未注明，因此保持待核验。",
-          "conditions_en": "The official page shows that from November 24 to December 24, GLM-5.3-Flash consumes Coding Plan credits at 50% of the standard rate, effectively doubling available quota. It does not change Model API token prices. The year, exact end time and timezone are not stated, so the offer remains pending.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "官方页面显示 11 月 24 日至 12 月 24 日期间，GLM-5.3-Flash 的 Coding Plan credits 消耗按标准费率的 50% 结算，即可用额度翻倍。该优惠不改变 Model API 的 Token 价格；活动年份、结束时刻与时区未注明，因此保持待核验。 非高峰时段按标准 credits 费率的 50% 扣减；高峰为周一至周五 14:00–18:00（UTC+8）。",
+          "conditions_en": "The official page shows that from November 24 to December 24, GLM-5.3-Flash consumes Coding Plan credits at 50% of the standard rate, effectively doubling available quota. It does not change Model API token prices. The year, exact end time and timezone are not stated, so the offer remains pending. Off-peak usage consumes 50% of the standard credit rate; peak hours are Monday–Friday, 14:00–18:00 UTC+8.",
           "eligibility_zh": "所有 GLM Coding Plan 用户；仅适用于套餐 credits 消耗，不适用于标准 Model API 计费。",
           "eligibility_en": "All GLM Coding Plan users; applies only to plan credit consumption, not standard Model API billing.",
           "card_required": "yes",
@@ -900,9 +900,9 @@
             "GLM-5.3-Flash"
           ],
           "source_url": "https://docs.z.ai/devpack/overview",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "官方页面显示 11 月 24 日至 12 月 24 日期间，GLM-5.3-Flash 的 Coding Plan credits 消耗按标准费率的 50% 结算，即可用额度翻倍。该优惠不改变 Model API 的 Token 价格；活动年份、结束时刻与时区未注明，因此保持待核验。",
-          "conditions_en": "The official page shows that from November 24 to December 24, GLM-5.3-Flash consumes Coding Plan credits at 50% of the standard rate, effectively doubling available quota. It does not change Model API token prices. The year, exact end time and timezone are not stated, so the offer remains pending.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "官方页面显示 11 月 24 日至 12 月 24 日期间，GLM-5.3-Flash 的 Coding Plan credits 消耗按标准费率的 50% 结算，即可用额度翻倍。该优惠不改变 Model API 的 Token 价格；活动年份、结束时刻与时区未注明，因此保持待核验。 非高峰时段按标准 credits 费率的 50% 扣减；高峰为周一至周五 14:00–18:00（UTC+8）。",
+          "conditions_en": "The official page shows that from November 24 to December 24, GLM-5.3-Flash consumes Coding Plan credits at 50% of the standard rate, effectively doubling available quota. It does not change Model API token prices. The year, exact end time and timezone are not stated, so the offer remains pending. Off-peak usage consumes 50% of the standard credit rate; peak hours are Monday–Friday, 14:00–18:00 UTC+8.",
           "eligibility_zh": "所有 GLM Coding Plan 用户；仅适用于套餐 credits 消耗，不适用于标准 Model API 计费。",
           "eligibility_en": "All GLM Coding Plan users; applies only to plan credit consumption, not standard Model API billing.",
           "card_required": "yes",
@@ -959,9 +959,9 @@
             "GLM-5.3-Flash"
           ],
           "source_url": "https://docs.z.ai/devpack/overview",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "官方页面显示 11 月 24 日至 12 月 24 日期间，GLM-5.3-Flash 的 Coding Plan credits 消耗按标准费率的 50% 结算，即可用额度翻倍。该优惠不改变 Model API 的 Token 价格；活动年份、结束时刻与时区未注明，因此保持待核验。",
-          "conditions_en": "The official page shows that from November 24 to December 24, GLM-5.3-Flash consumes Coding Plan credits at 50% of the standard rate, effectively doubling available quota. It does not change Model API token prices. The year, exact end time and timezone are not stated, so the offer remains pending.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "官方页面显示 11 月 24 日至 12 月 24 日期间，GLM-5.3-Flash 的 Coding Plan credits 消耗按标准费率的 50% 结算，即可用额度翻倍。该优惠不改变 Model API 的 Token 价格；活动年份、结束时刻与时区未注明，因此保持待核验。 非高峰时段按标准 credits 费率的 50% 扣减；高峰为周一至周五 14:00–18:00（UTC+8）。",
+          "conditions_en": "The official page shows that from November 24 to December 24, GLM-5.3-Flash consumes Coding Plan credits at 50% of the standard rate, effectively doubling available quota. It does not change Model API token prices. The year, exact end time and timezone are not stated, so the offer remains pending. Off-peak usage consumes 50% of the standard credit rate; peak hours are Monday–Friday, 14:00–18:00 UTC+8.",
           "eligibility_zh": "所有 GLM Coding Plan 用户；仅适用于套餐 credits 消耗，不适用于标准 Model API 计费。",
           "eligibility_en": "All GLM Coding Plan users; applies only to plan credit consumption, not standard Model API billing.",
           "card_required": "yes",
@@ -987,11 +987,11 @@
       },
       "scope_zh": "基础 Agent 额度 · 共享会员额度",
       "scope_en": "Base Agent quota · shared membership pool",
-      "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。 此为旧套餐：档位名称、周限额与续订规则保持原样。新套餐 Plus 及以上才含 Kimi Code，新会员取消周限额；不要混用两套规则。",
-      "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle. Legacy tier: names, weekly limits and renewal rules remain unchanged. New Plus and higher tiers include Kimi Code and remove the weekly limit; these rules must not be conflated.",
+      "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。 此为旧套餐：档位名称、周限额与续订规则保持原样，仍可续订。官方当前页面只列新 Go / Plus / Pro / Max / Ultra，价格分别为 ¥49 / ¥99 / ¥199 / ¥699 / ¥1,399；不能按价格或名称映射到旧四档。旧套餐有周限额与 5 小时窗口，新套餐没有周限额；不要混用两套规则。新 Go 不含 Kimi Code，Plus 及以上才含。",
+      "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle. This is a legacy tier: its name, weekly limits and renewal rules remain unchanged, and it can still be renewed. The official page now lists only new Go / Plus / Pro / Max / Ultra tiers at ¥49 / ¥99 / ¥199 / ¥699 / ¥1,399; these cannot be mapped to the four legacy tiers by price or name. Legacy tiers have weekly limits and a 5-hour window, while new tiers have no weekly limit; the two rule sets must not be conflated. New Go excludes Kimi Code; Plus and higher include it.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
       "checked_at": "2026-10-11",
-      "updated_at": "2026-11-24",
+      "updated_at": "2026-11-27",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
       "tier_name": "Andante (legacy)",
@@ -1005,7 +1005,7 @@
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-27",
       "use_cases": [
         "chat",
         "agent"
@@ -1024,11 +1024,11 @@
       },
       "scope_zh": "2× Agent 额度 · 共享会员额度",
       "scope_en": "2× Agent quota · shared membership pool",
-      "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。 此为旧套餐：档位名称、周限额与续订规则保持原样。新套餐 Plus 及以上才含 Kimi Code，新会员取消周限额；不要混用两套规则。",
-      "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle. Legacy tier: names, weekly limits and renewal rules remain unchanged. New Plus and higher tiers include Kimi Code and remove the weekly limit; these rules must not be conflated.",
+      "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。 此为旧套餐：档位名称、周限额与续订规则保持原样，仍可续订。官方当前页面只列新 Go / Plus / Pro / Max / Ultra，价格分别为 ¥49 / ¥99 / ¥199 / ¥699 / ¥1,399；不能按价格或名称映射到旧四档。旧套餐有周限额与 5 小时窗口，新套餐没有周限额；不要混用两套规则。新 Go 不含 Kimi Code，Plus 及以上才含。",
+      "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle. This is a legacy tier: its name, weekly limits and renewal rules remain unchanged, and it can still be renewed. The official page now lists only new Go / Plus / Pro / Max / Ultra tiers at ¥49 / ¥99 / ¥199 / ¥699 / ¥1,399; these cannot be mapped to the four legacy tiers by price or name. Legacy tiers have weekly limits and a 5-hour window, while new tiers have no weekly limit; the two rule sets must not be conflated. New Go excludes Kimi Code; Plus and higher include it.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
       "checked_at": "2026-10-11",
-      "updated_at": "2026-11-24",
+      "updated_at": "2026-11-27",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
       "tier_name": "Moderato (legacy)",
@@ -1037,14 +1037,14 @@
         "Kimi K2.8 Preview",
         "Kimi K3 · 256K"
       ],
-      "models_note_zh": "包含 K3.1 Pro 与 K3，最高 256K；K3.1 Pro 仅支持思考模式，默认 high，关闭思考会拒绝。1M 上下文及高速模型需新 Pro / 旧 Allegretto 或以上。",
-      "models_note_en": "Includes K3.1 Pro and K3 with up to 256K context. K3.1 Pro is thinking-only, defaults to high and rejects requests with thinking disabled. 1M context and highspeed models require new Pro / legacy Allegretto or higher.",
+      "models_note_zh": "包含 K3.1 Pro 与 K3，最高 256K；K3.1 Pro 仅支持思考模式，关闭思考会拒绝；官方 models 页称默认 high，docs 首页称默认 max，两处冲突未解决，不静默归一。1M 上下文及高速模型需新 Pro / 旧 Allegretto 或以上。",
+      "models_note_en": "Includes K3.1 Pro and K3 with up to 256K context. K3.1 Pro is thinking-only and rejects requests with thinking disabled. The official models page says the default is high, while the docs homepage says max; this conflict remains unresolved and is not silently normalized. 1M context and highspeed models require new Pro / legacy Allegretto or higher.",
       "models_source_urls": [
         "https://www.kimi.com/code/docs/kimi-code/models.html",
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-27",
       "use_cases": [
         "chat",
         "agent"
@@ -1063,11 +1063,11 @@
       },
       "scope_zh": "4× Agent 额度 · 共享会员额度",
       "scope_en": "4× Agent quota · shared membership pool",
-      "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。 此为旧套餐：档位名称、周限额与续订规则保持原样。新套餐 Plus 及以上才含 Kimi Code，新会员取消周限额；不要混用两套规则。",
-      "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle. Legacy tier: names, weekly limits and renewal rules remain unchanged. New Plus and higher tiers include Kimi Code and remove the weekly limit; these rules must not be conflated.",
+      "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。 此为旧套餐：档位名称、周限额与续订规则保持原样，仍可续订。官方当前页面只列新 Go / Plus / Pro / Max / Ultra，价格分别为 ¥49 / ¥99 / ¥199 / ¥699 / ¥1,399；不能按价格或名称映射到旧四档。旧套餐有周限额与 5 小时窗口，新套餐没有周限额；不要混用两套规则。新 Go 不含 Kimi Code，Plus 及以上才含。",
+      "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle. This is a legacy tier: its name, weekly limits and renewal rules remain unchanged, and it can still be renewed. The official page now lists only new Go / Plus / Pro / Max / Ultra tiers at ¥49 / ¥99 / ¥199 / ¥699 / ¥1,399; these cannot be mapped to the four legacy tiers by price or name. Legacy tiers have weekly limits and a 5-hour window, while new tiers have no weekly limit; the two rule sets must not be conflated. New Go excludes Kimi Code; Plus and higher include it.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
       "checked_at": "2026-10-11",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
       "tier_name": "Allegretto (legacy)",
@@ -1079,14 +1079,14 @@
         "Kimi K3 · 256K",
         "Kimi K2.7 Code Highspeed"
       ],
-      "models_note_zh": "包含 K3.1 Pro 与 Highspeed，最高 1M 上下文，及原有 K3、K2.8 Preview、K2.7 Code Highspeed。K3.1 Pro 仅支持思考模式，默认 high；Highspeed 输出约快 2–3 倍、额度约消耗 2 倍。旧套餐仍有周限额，新套餐没有周限额；均保留共享月额度与 5 小时窗口。",
-      "models_note_en": "Includes K3.1 Pro and Highspeed with up to 1M context, plus existing K3, K2.8 Preview and K2.7 Code Highspeed. K3.1 Pro is thinking-only with high as default. Highspeed output is roughly 2–3× faster and consumes about 2× quota. Legacy plans retain weekly limits; new plans do not. Both retain shared monthly credits and a 5-hour window.",
+      "models_note_zh": "包含 K3.1 Pro 与 Highspeed，最高 1M 上下文，及原有 K3、K2.8 Preview、K2.7 Code Highspeed。K3.1 Pro 仅支持思考模式；官方 models 页称默认 high，docs 首页称默认 max，两处冲突未解决，不静默归一。Highspeed 输出约快 2–3 倍、额度约消耗 2 倍。旧套餐仍有周限额，新套餐没有周限额；均保留共享月额度与 5 小时窗口。",
+      "models_note_en": "Includes K3.1 Pro and Highspeed with up to 1M context, plus existing K3, K2.8 Preview and K2.7 Code Highspeed. K3.1 Pro is thinking-only. The official models page says the default is high, while the docs homepage says max; this conflict remains unresolved and is not silently normalized. Highspeed output is roughly 2–3× faster and consumes about 2× quota. Legacy plans retain weekly limits; new plans do not. Both retain shared monthly credits and a 5-hour window.",
       "models_source_urls": [
         "https://www.kimi.com/code/docs/kimi-code/models.html",
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-27",
       "use_cases": [
         "chat",
         "agent"
@@ -1105,11 +1105,11 @@
       },
       "scope_zh": "10× Agent 额度 · 共享会员额度",
       "scope_en": "10× Agent quota · shared membership pool",
-      "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。 此为旧套餐：档位名称、周限额与续订规则保持原样。新套餐 Plus 及以上才含 Kimi Code，新会员取消周限额；不要混用两套规则。",
-      "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle. Legacy tier: names, weekly limits and renewal rules remain unchanged. New Plus and higher tiers include Kimi Code and remove the weekly limit; these rules must not be conflated.",
+      "note_zh": "包含 Kimi Code；与网页、Work、Claw 等共用会员额度。Code 另受每周额度与 5 小时滚动窗口限制，非固定 token 包。 此为旧套餐：档位名称、周限额与续订规则保持原样，仍可续订。官方当前页面只列新 Go / Plus / Pro / Max / Ultra，价格分别为 ¥49 / ¥99 / ¥199 / ¥699 / ¥1,399；不能按价格或名称映射到旧四档。旧套餐有周限额与 5 小时窗口，新套餐没有周限额；不要混用两套规则。新 Go 不含 Kimi Code，Plus 及以上才含。",
+      "note_en": "Includes Kimi Code; shares membership credits with web, Work and Claw. Code also has weekly and rolling 5-hour limits; not a fixed token bundle. This is a legacy tier: its name, weekly limits and renewal rules remain unchanged, and it can still be renewed. The official page now lists only new Go / Plus / Pro / Max / Ultra tiers at ¥49 / ¥99 / ¥199 / ¥699 / ¥1,399; these cannot be mapped to the four legacy tiers by price or name. Legacy tiers have weekly limits and a 5-hour window, while new tiers have no weekly limit; the two rule sets must not be conflated. New Go excludes Kimi Code; Plus and higher include it.",
       "source_url": "https://www.kimi.com/en/help/membership/membership-overview",
       "checked_at": "2026-10-11",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "product_id": "kimi-code",
       "product_name": "Kimi Code",
       "tier_name": "Allegro (legacy)",
@@ -1121,14 +1121,14 @@
         "Kimi K3 · 256K",
         "Kimi K2.7 Code Highspeed"
       ],
-      "models_note_zh": "包含 K3.1 Pro 与 Highspeed，最高 1M 上下文，及原有 K3、K2.8 Preview、K2.7 Code Highspeed。K3.1 Pro 仅支持思考模式，默认 high；Highspeed 输出约快 2–3 倍、额度约消耗 2 倍。旧套餐仍有周限额，新套餐没有周限额；均保留共享月额度与 5 小时窗口。",
-      "models_note_en": "Includes K3.1 Pro and Highspeed with up to 1M context, plus existing K3, K2.8 Preview and K2.7 Code Highspeed. K3.1 Pro is thinking-only with high as default. Highspeed output is roughly 2–3× faster and consumes about 2× quota. Legacy plans retain weekly limits; new plans do not. Both retain shared monthly credits and a 5-hour window.",
+      "models_note_zh": "包含 K3.1 Pro 与 Highspeed，最高 1M 上下文，及原有 K3、K2.8 Preview、K2.7 Code Highspeed。K3.1 Pro 仅支持思考模式；官方 models 页称默认 high，docs 首页称默认 max，两处冲突未解决，不静默归一。Highspeed 输出约快 2–3 倍、额度约消耗 2 倍。旧套餐仍有周限额，新套餐没有周限额；均保留共享月额度与 5 小时窗口。",
+      "models_note_en": "Includes K3.1 Pro and Highspeed with up to 1M context, plus existing K3, K2.8 Preview and K2.7 Code Highspeed. K3.1 Pro is thinking-only. The official models page says the default is high, while the docs homepage says max; this conflict remains unresolved and is not silently normalized. Highspeed output is roughly 2–3× faster and consumes about 2× quota. Legacy plans retain weekly limits; new plans do not. Both retain shared monthly credits and a 5-hour window.",
       "models_source_urls": [
         "https://www.kimi.com/code/docs/kimi-code/models.html",
         "https://www.kimi.com/code/docs/",
         "https://www.kimi.com/code/docs/kimi-code/membership.html"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-27",
       "use_cases": [
         "chat",
         "agent"
@@ -1190,7 +1190,7 @@
       "note_zh": "Work 与 Codex 订阅额度已调整为原额度的 2 倍；实际用量仍受模型、任务和面板重置时间影响，不代表完成任务数翻倍。API Key 会话按 API 价格另计费。",
       "note_en": "Work and Codex included allowance is now twice the previous level; actual usage still depends on model, task, and dashboard reset times, and does not guarantee twice as many completed tasks. API-key sessions use separate API pricing.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "codex",
       "product_name": "Codex",
@@ -1210,7 +1210,7 @@
         "https://learn.chatgpt.com/docs/pricing",
         "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
       ],
-      "models_checked_at": "2026-11-26",
+      "models_checked_at": "2026-11-27",
       "use_cases": [
         "chat",
         "agent"
@@ -1232,7 +1232,7 @@
       "note_zh": "新订阅已恢复，采用提高后的 Work / Codex 额度；2026-09-29 宣布的额度下调已取消。原较高额度保留，原较低额度已翻倍至相同水平；无需取消后重订。API Key 会话按 API 价格另计费。",
       "note_en": "Sign-ups are open with the increased Work and Codex allowance; the reduction announced September 29 was canceled. Existing higher allowances are retained and lower allowances have doubled to match; active subscribers do not need to cancel and resubscribe. API-key sessions use separate API pricing.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "codex",
       "product_name": "Codex",
@@ -1252,7 +1252,7 @@
         "https://learn.chatgpt.com/docs/pricing",
         "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
       ],
-      "models_checked_at": "2026-11-26",
+      "models_checked_at": "2026-11-27",
       "use_cases": [
         "chat",
         "agent"
@@ -1274,7 +1274,7 @@
       "note_zh": "Work 与 Codex 订阅额度已调整为原额度的 2 倍，为 Pro 档位中最高。API Key 会话按 API 价格另计费；实际用量、模型额度与重置时间以面板为准。",
       "note_en": "Work and Codex included allowance is now twice the previous level and is the highest among Pro plans. API-key sessions use separate API pricing; actual usage, model allowances, and reset times follow the dashboard.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "codex",
       "product_name": "Codex",
@@ -1294,7 +1294,7 @@
         "https://learn.chatgpt.com/docs/pricing",
         "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
       ],
-      "models_checked_at": "2026-11-26",
+      "models_checked_at": "2026-11-27",
       "use_cases": [
         "chat",
         "agent"
@@ -1649,7 +1649,7 @@
       "note_zh": "含 CLI、Agent 与代码审查；每月 $10 含 1,000 base + 500 flex AI credits（合计 1,500 credits，按官方 1 credit = $0.01 即 $15）。flex 为浮动额度；credits 不结转，在每月首个日历日 00:00:00 UTC 重置；用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review. The $10/month plan includes 1,000 base + 500 flex AI credits (1,500 credits total, equal to $15 at the official 1 credit = $0.01 rate). Flex is variable; credits do not roll over and reset at 00:00:00 UTC on the first calendar day of each month. Additional paid usage can be budgeted after the included amount is exhausted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
@@ -1693,7 +1693,7 @@
             "GitHub Copilot Fusion Standard"
           ],
           "source_url": "https://docs.github.com/copilot/concepts/models/copilot-fusion",
-          "checked_at": "2026-11-26",
+          "checked_at": "2026-11-27",
           "conditions_zh": "官方 Fusion 文档、套餐页横幅与用量计费文档均确认：付费 Copilot 套餐使用 Fusion 可享模型成本 30% 折扣，活动写至 2026-12-31。该折扣只针对 Fusion 模型成本，不是套餐月费折扣。",
           "conditions_en": "The Fusion documentation, plans-page banner and usage-billing documentation all confirm that paid Copilot plans receive 30% off model costs when using Fusion through 2026-12-31. This discounts Fusion model costs, not the monthly subscription fee.",
           "eligibility_zh": "仅 Pro 的 Fusion Standard。",
@@ -1722,7 +1722,7 @@
       "note_zh": "含 CLI、Agent 与代码审查；每月 $39 含 3,900 base + 3,100 flex AI credits（合计 7,000 credits，按官方 1 credit = $0.01 即 $70）。flex 为浮动额度；credits 不结转，在每月首个日历日 00:00:00 UTC 重置；用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review. The $39/month plan includes 3,900 base + 3,100 flex AI credits (7,000 credits total, equal to $70 at the official 1 credit = $0.01 rate). Flex is variable; credits do not roll over and reset at 00:00:00 UTC on the first calendar day of each month. Additional paid usage can be budgeted after the included amount is exhausted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
@@ -1784,7 +1784,7 @@
             "GitHub Copilot Fusion Max"
           ],
           "source_url": "https://docs.github.com/copilot/concepts/models/copilot-fusion",
-          "checked_at": "2026-11-26",
+          "checked_at": "2026-11-27",
           "conditions_zh": "官方 Fusion 文档、套餐页横幅与用量计费文档均确认：付费 Copilot 套餐使用 Fusion 可享模型成本 30% 折扣，活动写至 2026-12-31。该折扣只针对 Fusion 模型成本，不是套餐月费折扣。",
           "conditions_en": "The Fusion documentation, plans-page banner and usage-billing documentation all confirm that paid Copilot plans receive 30% off model costs when using Fusion through 2026-12-31. This discounts Fusion model costs, not the monthly subscription fee.",
           "eligibility_zh": "Pro+ / Max 的 Fusion Standard、High 与 Max。",
@@ -1813,7 +1813,7 @@
       "note_zh": "含 CLI、Agent 与代码审查；每月 $100 含 10,000 base + 10,000 flex AI credits（合计 20,000 credits，按官方 1 credit = $0.01 即 $200）。flex 为浮动额度；credits 不结转，在每月首个日历日 00:00:00 UTC 重置；用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review. The $100/month plan includes 10,000 base + 10,000 flex AI credits (20,000 credits total, equal to $200 at the official 1 credit = $0.01 rate). Flex is variable; credits do not roll over and reset at 00:00:00 UTC on the first calendar day of each month. Additional paid usage can be budgeted after the included amount is exhausted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
@@ -1874,7 +1874,7 @@
             "GitHub Copilot Fusion Max"
           ],
           "source_url": "https://docs.github.com/copilot/concepts/models/copilot-fusion",
-          "checked_at": "2026-11-26",
+          "checked_at": "2026-11-27",
           "conditions_zh": "官方 Fusion 文档、套餐页横幅与用量计费文档均确认：付费 Copilot 套餐使用 Fusion 可享模型成本 30% 折扣，活动写至 2026-12-31。该折扣只针对 Fusion 模型成本，不是套餐月费折扣。",
           "conditions_en": "The Fusion documentation, plans-page banner and usage-billing documentation all confirm that paid Copilot plans receive 30% off model costs when using Fusion through 2026-12-31. This discounts Fusion model costs, not the monthly subscription fee.",
           "eligibility_zh": "Pro+ / Max 的 Fusion Standard、High 与 Max。",
@@ -2192,7 +2192,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。免费档模型有限；公开文档确认 SWE-2 Flash Medium、SWE-2 与 SWE-2.1 的 self-serve 免费活动，其他内置型号以客户端为准。",
       "note_en": "Windsurf became Devin Desktop. Free has limited models; public docs confirm SWE-2 Flash Medium and the self-serve SWE-2/SWE-2.1 offers, while other built-ins remain client-dependent.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -2222,9 +2222,9 @@
             "SWE-2 Flash Medium"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。",
-          "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "免费档仅 SWE-2 Flash Medium；High / Max 需付费计划。",
           "eligibility_en": "Free includes SWE-2 Flash Medium only; High/Max require a paid plan.",
           "card_required": "unknown",
@@ -2242,9 +2242,9 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。",
-          "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户；Enterprise 与 cloud sessions 另有规则。",
           "eligibility_en": "Self-serve Desktop/CLI users on this tier; Enterprise and cloud sessions follow separate rules.",
           "card_required": "unknown",
@@ -2264,9 +2264,9 @@
             "SWE-2.1"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。",
-          "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "所有 self-serve Desktop / CLI 计划；型号须在客户端可用。",
           "eligibility_en": "All self-serve Desktop/CLI plans; the model must be available in the client.",
           "card_required": "unknown",
@@ -2293,7 +2293,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop；付费 self-serve 计划为完整模型可用性。额外用量按 API 价格购买，账号实际型号与收费以客户端为准。",
       "note_en": "Windsurf became Devin Desktop; paid self-serve plans have full model availability. Extra usage is purchased at API rates, with account-specific models and charges shown in the client.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -2339,9 +2339,9 @@
             "SWE-2 Flash Max"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。",
-          "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户可使用 Medium / High / Max。",
           "eligibility_en": "Self-serve Desktop/CLI users on this tier can use Medium/High/Max.",
           "card_required": "unknown",
@@ -2359,9 +2359,9 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。",
-          "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户；Enterprise 与 cloud sessions 另有规则。",
           "eligibility_en": "Self-serve Desktop/CLI users on this tier; Enterprise and cloud sessions follow separate rules.",
           "card_required": "unknown",
@@ -2381,9 +2381,9 @@
             "SWE-2.1"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。",
-          "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "所有 self-serve Desktop / CLI 计划；型号须在客户端可用。",
           "eligibility_en": "All self-serve Desktop/CLI plans; the model must be available in the client.",
           "card_required": "unknown",
@@ -2410,7 +2410,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop；付费 self-serve 计划为完整模型可用性。额外用量按 API 价格购买，账号实际型号与收费以客户端为准。",
       "note_en": "Windsurf became Devin Desktop; paid self-serve plans have full model availability. Extra usage is purchased at API rates, with account-specific models and charges shown in the client.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -2456,9 +2456,9 @@
             "SWE-2 Flash Max"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。",
-          "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户可使用 Medium / High / Max。",
           "eligibility_en": "Self-serve Desktop/CLI users on this tier can use Medium/High/Max.",
           "card_required": "unknown",
@@ -2476,9 +2476,9 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。",
-          "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户；Enterprise 与 cloud sessions 另有规则。",
           "eligibility_en": "Self-serve Desktop/CLI users on this tier; Enterprise and cloud sessions follow separate rules.",
           "card_required": "unknown",
@@ -2498,9 +2498,9 @@
             "SWE-2.1"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。",
-          "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "所有 self-serve Desktop / CLI 计划；型号须在客户端可用。",
           "eligibility_en": "All self-serve Desktop/CLI plans; the model must be available in the client.",
           "card_required": "unknown",
@@ -2527,7 +2527,7 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop；付费 self-serve 计划为完整模型可用性。额外用量按 API 价格购买，账号实际型号与收费以客户端为准。",
       "note_en": "Windsurf became Devin Desktop; paid self-serve plans have full model availability. Extra usage is purchased at API rates, with account-specific models and charges shown in the client.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
@@ -2573,9 +2573,9 @@
             "SWE-2 Flash Max"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。",
-          "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户可使用 Medium / High / Max。",
           "eligibility_en": "Self-serve Desktop/CLI users on this tier can use Medium/High/Max.",
           "card_required": "unknown",
@@ -2593,9 +2593,9 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。",
-          "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户；Enterprise 与 cloud sessions 另有规则。",
           "eligibility_en": "Self-serve Desktop/CLI users on this tier; Enterprise and cloud sessions follow separate rules.",
           "card_required": "unknown",
@@ -2615,9 +2615,9 @@
             "SWE-2.1"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-26",
-          "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。",
-          "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。 Voice 通话不适用本模型特定促销。",
+          "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50. Voice calls are not eligible for this model-specific promotion.",
           "eligibility_zh": "所有 self-serve Desktop / CLI 计划；型号须在客户端可用。",
           "eligibility_en": "All self-serve Desktop/CLI plans; the model must be available in the client.",
           "card_required": "unknown",
@@ -2635,7 +2635,7 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/admin/billing/self-serve",
-          "checked_at": "2026-11-26",
+          "checked_at": "2026-11-27",
           "conditions_zh": "Teams 每名成员可在 agent selector 选择 Free（powered by SWE-2），同时运行最多 2 个 Devin cloud sessions，且不消耗付费 credits；其他模式按常规规则计费。",
           "conditions_en": "Each Teams member can select Free (powered by SWE-2) in the agent selector and run up to two Devin cloud sessions concurrently at no cost; other modes bill normally.",
           "eligibility_zh": "Devin Teams 订阅成员。",
@@ -2943,7 +2943,7 @@
       "note_zh": "官方提供 SSO / OIDC / SCIM、审计日志、SLA、专属支持、模型 / 提供商控制与 Shared Private Gateway BYOK；订阅金额需联系销售。AI usage、credits、Kilo Pass 与单独计费服务不包含在 Cursor Exodus 的 $0 订阅优惠中。一次性与自动 credits 充值、月付 / 年付 Kilo Pass 收取不退还的 5% 处理费；Teams / Enterprise 席位订阅及 invoice、wire、ACH 付款豁免。",
       "note_en": "Official features include SSO/OIDC/SCIM, audit logs, SLA, dedicated support, model/provider controls and Shared Private Gateway BYOK; subscription pricing requires sales. AI usage, credits, Kilo Pass and separately billed services are excluded from the $0 Cursor Exodus subscription offer. A non-refundable 5% processing fee applies to one-off and automatic credit top-ups and monthly/annual Kilo Pass purchases. Teams/Enterprise seat subscriptions and invoice, wire or ACH payments are exempt.",
       "source_url": "https://kilo.ai/pricing",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "product_id": "kilo-code",
       "product_name": "Kilo Code",
@@ -2960,7 +2960,7 @@
         "https://kilo.ai/pricing",
         "https://kilo.ai/cursor-exodus"
       ],
-      "models_checked_at": "2026-11-26",
+      "models_checked_at": "2026-11-27",
       "use_cases": [
         "chat",
         "agent"
@@ -2978,7 +2978,7 @@
             "Eligible ChatGPT subscription models"
           ],
           "source_url": "https://kilo.ai/cursor-exodus",
-          "checked_at": "2026-11-26",
+          "checked_at": "2026-11-27",
           "conditions_zh": "获批后 Kilo Enterprise 订阅费为 $0，覆盖符合条件的有效付费 Cursor Enterprise 合同剩余期限，最长 12 个月；席位数按遮盖合同中的 Cursor 席位数 1:1 匹配。AI usage、usage credits、Kilo Pass 与单独计费服务不含在内。需签署有效合同声明并提交仅保留客户名、档位、席位数与合同结束日的遮盖证明；提交申请不等于自动批准，优惠可由官方修改或撤销，也不取消或报销 Cursor 合同。",
           "conditions_en": "For approved customers, the Kilo Enterprise subscription fee is $0 for the remainder of an eligible active paid Cursor Enterprise contract, up to 12 months, with seats matched 1:1 to the redacted Cursor contract. AI usage, usage credits, Kilo Pass and separately billed services are excluded. A signed active-contract attestation and redacted proof showing only customer name, tier, seat count and contract end date are required. Submission is not approval; the discretionary offer may be changed or withdrawn and does not cancel or reimburse Cursor.",
           "eligibility_zh": "持有效付费 Cursor Enterprise 合同的公司团队；须在 2026-11-30 前提交申请并满足官方审核，后续商业条款需另行确认。",
@@ -3503,8 +3503,8 @@
       "note_zh": "标准月费；官方页面确认首月半价上线活动已于 2026 年 10 月 14 日结束，不再作为当前优惠。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
       "note_en": "Regular monthly fee. The official page confirms the first-month 50% launch offer ended on October 14, 2026; it is no longer a current promotion. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-17",
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
       "tier_name": "Go",
@@ -3529,9 +3529,9 @@
             "MiniMax M3.1 Flash"
           ],
           "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-          "checked_at": "2026-11-25",
-          "conditions_zh": "上线活动期内月付新购或符合条件的升级首月五折，第二个月起按标准价自动续费；年付不参与。官方页面确认活动已于 2026 年 10 月 14 日结束，规则仅作历史参考。",
-          "conditions_en": "During the launch offer, new monthly purchases and eligible upgrades received 50% off the first month, with standard auto-renewal from month two; annual billing was excluded. The official page confirms the offer ended on October 14, 2026; the rules are retained for historical reference only.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "上线活动期内月付新购或符合条件的升级首月五折，第二个月起按标准价自动续费；年付不参与。官方页面确认活动已于 2026 年 10 月 14 日结束，规则仅作历史参考。 符合条件的升级按官方规则扣除剩余价值。",
+          "conditions_en": "During the launch offer, new monthly purchases and eligible upgrades received 50% off the first month, with standard auto-renewal from month two; annual billing was excluded. The official page confirms the offer ended on October 14, 2026; the rules are retained for historical reference only. Eligible upgrades follow the official remaining-value deduction rule.",
           "eligibility_zh": "活动期内 Go、Explore 或 Build 的月付新购与符合规则的升级；活动已结束，不再对新购生效。",
           "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; the offer has ended and no longer applies to new purchases.",
           "card_required": "unknown",
@@ -3552,7 +3552,7 @@
               "amount": 22
             },
             "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-            "checked_at": "2026-11-25"
+            "checked_at": "2026-11-27"
           }
         }
       ]
@@ -3573,8 +3573,8 @@
       "note_zh": "标准月费；官方页面确认首月半价上线活动已于 2026 年 10 月 14 日结束，不再作为当前优惠。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
       "note_en": "Regular monthly fee. The official page confirms the first-month 50% launch offer ended on October 14, 2026; it is no longer a current promotion. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-17",
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
       "tier_name": "Explore",
@@ -3600,9 +3600,9 @@
             "MiniMax M3.1 Flash"
           ],
           "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-          "checked_at": "2026-11-25",
-          "conditions_zh": "上线活动期内月付新购或符合条件的升级首月五折，第二个月起按标准价自动续费；年付不参与。官方页面确认活动已于 2026 年 10 月 14 日结束，规则仅作历史参考。",
-          "conditions_en": "During the launch offer, new monthly purchases and eligible upgrades received 50% off the first month, with standard auto-renewal from month two; annual billing was excluded. The official page confirms the offer ended on October 14, 2026; the rules are retained for historical reference only.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "上线活动期内月付新购或符合条件的升级首月五折，第二个月起按标准价自动续费；年付不参与。官方页面确认活动已于 2026 年 10 月 14 日结束，规则仅作历史参考。 符合条件的升级按官方规则扣除剩余价值。",
+          "conditions_en": "During the launch offer, new monthly purchases and eligible upgrades received 50% off the first month, with standard auto-renewal from month two; annual billing was excluded. The official page confirms the offer ended on October 14, 2026; the rules are retained for historical reference only. Eligible upgrades follow the official remaining-value deduction rule.",
           "eligibility_zh": "活动期内 Go、Explore 或 Build 的月付新购与符合规则的升级；活动已结束，不再对新购生效。",
           "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; the offer has ended and no longer applies to new purchases.",
           "card_required": "unknown",
@@ -3623,7 +3623,7 @@
               "amount": 55
             },
             "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-            "checked_at": "2026-11-25"
+            "checked_at": "2026-11-27"
           }
         }
       ]
@@ -3644,8 +3644,8 @@
       "note_zh": "标准月费；官方页面确认首月半价上线活动已于 2026 年 10 月 14 日结束，不再作为当前优惠。年付为 10 个月价格。非视频受 5 小时与周窗口限制，视频仅受周窗口限制；额度不结转，超额可用另购 Credits。",
       "note_en": "Regular monthly fee. The official page confirms the first-month 50% launch offer ended on October 14, 2026; it is no longer a current promotion. Annual billing charges ten months. Non-video usage has five-hour and weekly windows; video has only a weekly window. Usage does not roll over; purchased Credits can cover eligible overflow.",
       "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-17",
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
       "product_id": "minimax-m-plan",
       "product_name": "M Plan",
       "tier_name": "Build",
@@ -3671,9 +3671,9 @@
             "MiniMax M3.1 Flash"
           ],
           "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-          "checked_at": "2026-11-25",
-          "conditions_zh": "上线活动期内月付新购或符合条件的升级首月五折，第二个月起按标准价自动续费；年付不参与。官方页面确认活动已于 2026 年 10 月 14 日结束，规则仅作历史参考。",
-          "conditions_en": "During the launch offer, new monthly purchases and eligible upgrades received 50% off the first month, with standard auto-renewal from month two; annual billing was excluded. The official page confirms the offer ended on October 14, 2026; the rules are retained for historical reference only.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "上线活动期内月付新购或符合条件的升级首月五折，第二个月起按标准价自动续费；年付不参与。官方页面确认活动已于 2026 年 10 月 14 日结束，规则仅作历史参考。 符合条件的升级按官方规则扣除剩余价值。",
+          "conditions_en": "During the launch offer, new monthly purchases and eligible upgrades received 50% off the first month, with standard auto-renewal from month two; annual billing was excluded. The official page confirms the offer ended on October 14, 2026; the rules are retained for historical reference only. Eligible upgrades follow the official remaining-value deduction rule.",
           "eligibility_zh": "活动期内 Go、Explore 或 Build 的月付新购与符合规则的升级；活动已结束，不再对新购生效。",
           "eligibility_en": "New Go, Explore or Build monthly purchases and eligible upgrades during the campaign; the offer has ended and no longer applies to new purchases.",
           "card_required": "unknown",
@@ -3694,7 +3694,7 @@
               "amount": 132
             },
             "source_url": "https://platform.minimax.io/docs/m-plan/monthly-offer",
-            "checked_at": "2026-11-25"
+            "checked_at": "2026-11-27"
           }
         }
       ]
@@ -4362,11 +4362,11 @@
       },
       "scope_zh": "B.AI · 标准参考价 · 非活动价",
       "scope_en": "B.AI · Standard reference · before promotion",
-      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 2026-09-25 15:00 UTC+8 起符合条件用量按标准参考价 10% 结算；结束时间未公开，活动资格和结算以平台为准。 B.AI 通知：10 月 14 日 18:00 SGT（北京时间同刻）起 MiMo-V2.5 旧 ID 转发至本模型并按本模型费率计费，10 月 21 日 10:00 SGT 起旧 ID 返回错误、不再转发。 活动与价格更新现由独立官方公告页维护；模型详情页继续显示标准参考价。 2026-11-25 官方促销页仍未列出该 MiMo 型号的 10% 活动；历史优惠保持 paused，当前资格、费率与结束时间未确认。",
-      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Eligible usage costs 10% of standard rates from 2026-09-25 15:00 UTC+8. No end date is published; platform eligibility and settlement prevail. B.AI notice: from October 14, 18:00 SGT (the same Beijing time), old MiMo-V2.5 IDs redirect to this model at its rates; from October 21, 10:00 SGT, the old IDs return errors without redirection. Promotions and pricing updates are now maintained on a separate official notice page; model details retain standard reference prices. On 2026-11-25 the official promotions page still did not list a 10% offer for this MiMo model; the historical offer remains paused and current eligibility, rates and end time are unconfirmed.",
+      "note_zh": "展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算，活动折扣、充值赠送和账户权益可能影响实际费用。 2026-09-25 15:00 UTC+8 起符合条件用量按标准参考价 10% 结算；结束时间未公开，活动资格和结算以平台为准。 B.AI 通知：10 月 14 日 18:00 SGT（北京时间同刻）起 MiMo-V2.5 旧 ID 转发至本模型并按本模型费率计费，10 月 21 日 10:00 SGT 起旧 ID 返回错误、不再转发。 活动与价格更新现由独立官方公告页维护；模型详情页继续显示标准参考价。 2026-11-27 官方 active/upcoming 促销列表仍未列出该 MiMo 型号，也未重述此前 10% 优惠；历史优惠保持 paused，当前资格、费率与结束时间未确认。",
+      "note_en": "B.AI standard reference rates are shown. Accounts settle at 1 USD = 1,000,000 Credits; promotions, top-up bonuses and account benefits may affect actual charges. Eligible usage costs 10% of standard rates from 2026-09-25 15:00 UTC+8. No end date is published; platform eligibility and settlement prevail. B.AI notice: from October 14, 18:00 SGT (the same Beijing time), old MiMo-V2.5 IDs redirect to this model at its rates; from October 21, 10:00 SGT, the old IDs return errors without redirection. Promotions and pricing updates are now maintained on a separate official notice page; model details retain standard reference prices. On 2026-11-27 the official active/upcoming promotions list still omits this MiMo model and does not restate the earlier 10% offer; the historical offer remains paused and current eligibility, rates and end time are unconfirmed.",
       "source_url": "https://docs.b.ai/llmservice/models/mimo-v2.6-flash/",
       "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "offers": [
         {
           "id": "eligible-usage-promotion",
@@ -4377,9 +4377,9 @@
             "MiMo-V2.6-Flash"
           ],
           "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
-          "checked_at": "2026-10-25",
-          "conditions_zh": "本轮官方模型页只列标准参考价，最新活动页预告 10 月 22 日 17:00 UTC+8 的新阵容，未重述该 MiMo 型号的此前折扣。保留历史优惠价与 ID，当前资格、费率和结束时间仍待确认，不作为已核实有效优惠推荐。",
-          "conditions_en": "The model page lists standard reference prices, while the latest promotion page previews an October 22, 17:00 UTC+8 lineup without restating this MiMo model’s earlier discount. Historical offer prices and IDs are retained; current eligibility, rates and end time remain unconfirmed and are not recommended as verified active offers.",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "2026-11-27 官方 active/upcoming 促销列表未列出 MiMo-V2.6-Flash，也未重述此前 10% 优惠。保留历史优惠价与 ID，当前资格、费率和结束时间仍待确认，不作为已核实有效优惠推荐。",
+          "conditions_en": "On 2026-11-27 the official active/upcoming promotions list omits MiMo-V2.6-Flash and does not restate the earlier 10% offer. Historical offer prices and IDs are retained; current eligibility, rates and end time remain unconfirmed and are not recommended as verified active offers.",
           "eligibility_zh": "仅符合平台活动资格的用量；结算以平台为准",
           "eligibility_en": "Only platform-eligible promotional usage; platform settlement prevails",
           "card_required": "unknown",
@@ -4407,8 +4407,8 @@
             "comparison_en": "Same-channel model reference rate; eligible usage settles at 10% of it"
           },
           "starts_at": "2026-09-25T15:00:00+08:00",
-          "end_note_zh": "2026-10-25 官方促销页不再列出 MiMo 条目，未公布结束日期",
-          "end_note_en": "As of 2026-10-25 the official promotions page no longer lists the MiMo entries; no end date was published"
+          "end_note_zh": "2026-11-27 官方 active/upcoming 促销列表仍未列出 MiMo 条目，未公布结束日期",
+          "end_note_en": "As of 2026-11-27 the official active/upcoming promotions list still omits the MiMo entries; no end date was published"
         }
       ]
     },
@@ -5685,8 +5685,8 @@
       "note_zh": "美国美元月费，其他地区及税费以结算页为准；Google AI 共享订阅仅登记一次，可用于聊天与 Antigravity。免费 / Plus 的 Agent 额度按周刷新；Pro 和 Ultra 有五小时与周窗口，官方未给出固定请求数。Pro / Ultra 超额可选择消耗另购 AI credits；不换算成 tokens。",
       "note_en": "US monthly USD price; regional pricing and taxes follow checkout. Each shared Google AI subscription is recorded once for chat and Antigravity. Free/Plus agent quotas refresh weekly; Pro and Ultra have five-hour and weekly windows, with no fixed request count published. Pro and Ultra users can opt into purchased AI-credit overages; quotas are not converted to tokens.",
       "source_url": "https://antigravity.google/pricing",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-11-24",
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
       "product_id": "google-ai-antigravity",
       "product_name": "Google AI / Antigravity",
       "tier_name": "Free",
@@ -5696,10 +5696,10 @@
       ],
       "supported_models": [
         "Gemini 4 Hydrogen",
-        "Gemini 3.8 Flash",
-        "Claude Sonnet 4.6 (Thinking)",
-        "Claude Opus 4.6 (Thinking)",
-        "GPT-OSS 120B"
+        "Gemini 3.8 Flash (until 2026-11-30)",
+        "Claude Sonnet 4.6 (Thinking) (until 2026-11-30)",
+        "Claude Opus 4.6 (Thinking) (until 2026-11-30)",
+        "GPT-OSS 120B (until 2026-11-30)"
       ],
       "models_note_zh": "这里列 Antigravity 核心推理模型，不穷举共享订阅其他产品的模型。Gemini 4 Hydrogen 为当前默认模型；Gemini 3.8 Flash、Claude Sonnet / Opus 4.6 与 GPT-OSS 120B 将于 2026-11-30 移除。",
       "models_note_en": "These are Antigravity core reasoning models, not every model across other bundled products. Gemini 4 Hydrogen is the current default. Gemini 3.8 Flash, Claude Sonnet/Opus 4.6 and GPT-OSS 120B will be removed on 2026-11-30.",
@@ -5707,7 +5707,7 @@
         "https://antigravity.google/docs/models",
         "https://antigravity.google/docs/plans"
       ],
-      "models_checked_at": "2026-11-24",
+      "models_checked_at": "2026-11-27",
       "offers": [
         {
           "id": "weekly-model-allowance",
@@ -5722,7 +5722,7 @@
             "GPT-OSS 120B"
           ],
           "source_url": "https://antigravity.google/docs/plans",
-          "checked_at": "2026-11-24",
+          "checked_at": "2026-11-27",
           "conditions_zh": "免费个人账号的基础周额度；模型与地区限制遵循官方表。Gemini 4 Hydrogen 为当前默认模型，Gemini 3.8 Flash、Claude 4.6 与 GPT-OSS 模型将于 2026-11-30 移除。",
           "conditions_en": "Baseline weekly quota for free individual accounts; official model and regional restrictions apply. Gemini 4 Hydrogen is the current default. Gemini 3.8 Flash, Claude 4.6 and GPT-OSS models will be removed on 2026-11-30.",
           "eligibility_zh": "受支持地区的个人 Google 账号，服务资格以官方为准",
@@ -5750,8 +5750,8 @@
       "note_zh": "美国美元月费，其他地区及税费以结算页为准；Google AI 共享订阅仅登记一次，可用于聊天与 Antigravity。免费 / Plus 的 Agent 额度按周刷新；Pro 和 Ultra 有五小时与周窗口，官方未给出固定请求数。Pro / Ultra 超额可选择消耗另购 AI credits；不换算成 tokens。",
       "note_en": "US monthly USD price; regional pricing and taxes follow checkout. Each shared Google AI subscription is recorded once for chat and Antigravity. Free/Plus agent quotas refresh weekly; Pro and Ultra have five-hour and weekly windows, with no fixed request count published. Pro and Ultra users can opt into purchased AI-credit overages; quotas are not converted to tokens.",
       "source_url": "https://gemini.google/us/subscriptions/",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-11-24",
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
       "product_id": "google-ai-antigravity",
       "product_name": "Google AI / Antigravity",
       "tier_name": "Google AI Plus",
@@ -5761,10 +5761,10 @@
       ],
       "supported_models": [
         "Gemini 4 Hydrogen",
-        "Gemini 3.8 Flash",
-        "Claude Sonnet 4.6 (Thinking)",
-        "Claude Opus 4.6 (Thinking)",
-        "GPT-OSS 120B"
+        "Gemini 3.8 Flash (until 2026-11-30)",
+        "Claude Sonnet 4.6 (Thinking) (until 2026-11-30)",
+        "Claude Opus 4.6 (Thinking) (until 2026-11-30)",
+        "GPT-OSS 120B (until 2026-11-30)"
       ],
       "models_note_zh": "这里列 Antigravity 核心推理模型，不穷举共享订阅其他产品的模型。Gemini 4 Hydrogen 为当前默认模型；Gemini 3.8 Flash、Claude Sonnet / Opus 4.6 与 GPT-OSS 120B 将于 2026-11-30 移除。",
       "models_note_en": "These are Antigravity core reasoning models, not every model across other bundled products. Gemini 4 Hydrogen is the current default. Gemini 3.8 Flash, Claude Sonnet/Opus 4.6 and GPT-OSS 120B will be removed on 2026-11-30.",
@@ -5772,7 +5772,7 @@
         "https://antigravity.google/docs/models",
         "https://antigravity.google/docs/plans"
       ],
-      "models_checked_at": "2026-11-24"
+      "models_checked_at": "2026-11-27"
     },
     {
       "id": "google-ai-antigravity-pro",
@@ -5790,8 +5790,8 @@
       "note_zh": "美国美元月费，其他地区及税费以结算页为准；Google AI 共享订阅仅登记一次，可用于聊天与 Antigravity。免费 / Plus 的 Agent 额度按周刷新；Pro 和 Ultra 有五小时与周窗口，官方未给出固定请求数。Pro / Ultra 超额可选择消耗另购 AI credits；不换算成 tokens。",
       "note_en": "US monthly USD price; regional pricing and taxes follow checkout. Each shared Google AI subscription is recorded once for chat and Antigravity. Free/Plus agent quotas refresh weekly; Pro and Ultra have five-hour and weekly windows, with no fixed request count published. Pro and Ultra users can opt into purchased AI-credit overages; quotas are not converted to tokens.",
       "source_url": "https://gemini.google/us/subscriptions/",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-11-24",
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
       "product_id": "google-ai-antigravity",
       "product_name": "Google AI / Antigravity",
       "tier_name": "Google AI Pro",
@@ -5802,22 +5802,23 @@
       "supported_models": [
         "Gemini 4 Neon",
         "Gemini 4 Carbon",
-        "Gemini 4 Argon",
+        "Gemini 4 Argon (until 2026-11-30)",
         "Gemini 4 Hydrogen",
-        "Gemini 3.8 Flash",
+        "Orchestrator (paid Pro / eligible premium-device trial)",
+        "Gemini 3.8 Flash (until 2026-11-30)",
         "Claude Sonnet 5.5 (Thinking)",
         "Claude Opus 5.5 (Thinking)",
-        "Claude Sonnet 4.6 (Thinking)",
-        "Claude Opus 4.6 (Thinking)",
-        "GPT-OSS 120B"
+        "Claude Sonnet 4.6 (Thinking) (trial; until 2026-11-30)",
+        "Claude Opus 4.6 (Thinking) (trial; until 2026-11-30)",
+        "GPT-OSS 120B (until 2026-11-30)"
       ],
-      "models_note_zh": "这里列 Antigravity 核心推理模型，不穷举共享订阅其他产品的模型。Gemini 4 Neon / Carbon / Argon 对付费 Pro 或符合条件的高端设备试用开放，普通 Pro 试用不能推定包含；Claude 5.5 对付费非试用 Pro 开放，Claude 4.6 列于试用档。Gemini 4 Argon、Gemini 3.8 Flash、Claude 4.6 与 GPT-OSS 120B 将于 2026-11-30 移除。",
-      "models_note_en": "These are Antigravity core reasoning models, not every model across other bundled products. Gemini 4 Neon/Carbon/Argon require paid Pro or an eligible premium-device trial; access is not inferred for other Pro trials. Claude 5.5 requires paid non-trial Pro, while Claude 4.6 is listed for trials. Gemini 4 Argon, Gemini 3.8 Flash, Claude 4.6 and GPT-OSS 120B will be removed on 2026-11-30.",
+      "models_note_zh": "这里列 Antigravity 核心推理模型，不穷举共享订阅其他产品的模型。Gemini 4 Neon / Carbon / Argon 对付费 Pro 或符合条件的高端设备试用开放，普通 Pro 试用不能推定包含；Claude 5.5 对付费非试用 Pro 开放，Claude 4.6 列于试用档。Gemini 4 Argon、Gemini 3.8 Flash、Claude 4.6 与 GPT-OSS 120B 将于 2026-11-30 移除。Orchestrator 对付费 Pro 与符合条件的 premium-device trial 开放，配对 planner 与 executor；不据此推断额外额度。",
+      "models_note_en": "These are Antigravity core reasoning models, not every model across other bundled products. Gemini 4 Neon/Carbon/Argon require paid Pro or an eligible premium-device trial; access is not inferred for other Pro trials. Claude 5.5 requires paid non-trial Pro, while Claude 4.6 is listed for trials. Gemini 4 Argon, Gemini 3.8 Flash, Claude 4.6 and GPT-OSS 120B will be removed on 2026-11-30. Orchestrator is available on paid Pro and eligible premium-device trials, pairing a planner with an executor; no additional quota is inferred.",
       "models_source_urls": [
         "https://antigravity.google/docs/models",
         "https://antigravity.google/docs/plans"
       ],
-      "models_checked_at": "2026-11-24"
+      "models_checked_at": "2026-11-27"
     },
     {
       "id": "google-ai-antigravity-ultra-5x",
@@ -5835,8 +5836,8 @@
       "note_zh": "美国美元月费，其他地区及税费以结算页为准；Google AI 共享订阅仅登记一次，可用于聊天与 Antigravity。免费 / Plus 的 Agent 额度按周刷新；Pro 和 Ultra 有五小时与周窗口，官方未给出固定请求数。Pro / Ultra 超额可选择消耗另购 AI credits；不换算成 tokens。",
       "note_en": "US monthly USD price; regional pricing and taxes follow checkout. Each shared Google AI subscription is recorded once for chat and Antigravity. Free/Plus agent quotas refresh weekly; Pro and Ultra have five-hour and weekly windows, with no fixed request count published. Pro and Ultra users can opt into purchased AI-credit overages; quotas are not converted to tokens.",
       "source_url": "https://gemini.google/us/subscriptions/",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-11-24",
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
       "product_id": "google-ai-antigravity",
       "product_name": "Google AI / Antigravity",
       "tier_name": "Google AI Ultra 5x",
@@ -5847,20 +5848,21 @@
       "supported_models": [
         "Gemini 4 Neon",
         "Gemini 4 Carbon",
-        "Gemini 4 Argon",
+        "Gemini 4 Argon (until 2026-11-30)",
         "Gemini 4 Hydrogen",
-        "Gemini 3.8 Flash",
+        "Orchestrator",
+        "Gemini 3.8 Flash (until 2026-11-30)",
         "Claude Sonnet 5.5 (Thinking)",
         "Claude Opus 5.5 (Thinking)",
-        "GPT-OSS 120B"
+        "GPT-OSS 120B (until 2026-11-30)"
       ],
-      "models_note_zh": "这里列 Antigravity 核心推理模型，不穷举共享订阅其他产品的模型。Ultra 包含 Gemini 4 Neon / Carbon / Argon / Hydrogen 与 Claude 5.5；Gemini 4 Argon、Gemini 3.8 Flash 与 GPT-OSS 120B 将于 2026-11-30 移除，Claude 4.6 不在当前 Ultra 模型表中。",
-      "models_note_en": "These are Antigravity core reasoning models, not every model across other bundled products. Ultra includes Gemini 4 Neon/Carbon/Argon/Hydrogen and Claude 5.5. Gemini 4 Argon, Gemini 3.8 Flash and GPT-OSS 120B will be removed on 2026-11-30; Claude 4.6 is absent from the current Ultra model table.",
+      "models_note_zh": "这里列 Antigravity 核心推理模型，不穷举共享订阅其他产品的模型。Ultra 包含 Gemini 4 Neon / Carbon / Argon / Hydrogen 与 Claude 5.5；Gemini 4 Argon、Gemini 3.8 Flash 与 GPT-OSS 120B 将于 2026-11-30 移除，Claude 4.6 不在当前 Ultra 模型表中。Orchestrator 在本档可用，配对 planner 与 executor；可选角色以官方模型表为准，不据此推断额外额度。",
+      "models_note_en": "These are Antigravity core reasoning models, not every model across other bundled products. Ultra includes Gemini 4 Neon/Carbon/Argon/Hydrogen and Claude 5.5. Gemini 4 Argon, Gemini 3.8 Flash and GPT-OSS 120B will be removed on 2026-11-30; Claude 4.6 is absent from the current Ultra model table. Orchestrator is available on this tier, pairing a planner with an executor; selectable roles follow the official model table, and no additional quota is inferred.",
       "models_source_urls": [
         "https://antigravity.google/docs/models",
         "https://antigravity.google/docs/plans"
       ],
-      "models_checked_at": "2026-11-24"
+      "models_checked_at": "2026-11-27"
     },
     {
       "id": "google-ai-antigravity-ultra-20x",
@@ -5878,8 +5880,8 @@
       "note_zh": "美国美元月费，其他地区及税费以结算页为准；Google AI 共享订阅仅登记一次，可用于聊天与 Antigravity。免费 / Plus 的 Agent 额度按周刷新；Pro 和 Ultra 有五小时与周窗口，官方未给出固定请求数。Pro / Ultra 超额可选择消耗另购 AI credits；不换算成 tokens。",
       "note_en": "US monthly USD price; regional pricing and taxes follow checkout. Each shared Google AI subscription is recorded once for chat and Antigravity. Free/Plus agent quotas refresh weekly; Pro and Ultra have five-hour and weekly windows, with no fixed request count published. Pro and Ultra users can opt into purchased AI-credit overages; quotas are not converted to tokens.",
       "source_url": "https://gemini.google/us/subscriptions/",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-11-24",
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
       "product_id": "google-ai-antigravity",
       "product_name": "Google AI / Antigravity",
       "tier_name": "Google AI Ultra 20x",
@@ -5890,20 +5892,21 @@
       "supported_models": [
         "Gemini 4 Neon",
         "Gemini 4 Carbon",
-        "Gemini 4 Argon",
+        "Gemini 4 Argon (until 2026-11-30)",
         "Gemini 4 Hydrogen",
-        "Gemini 3.8 Flash",
+        "Orchestrator",
+        "Gemini 3.8 Flash (until 2026-11-30)",
         "Claude Sonnet 5.5 (Thinking)",
         "Claude Opus 5.5 (Thinking)",
-        "GPT-OSS 120B"
+        "GPT-OSS 120B (until 2026-11-30)"
       ],
-      "models_note_zh": "这里列 Antigravity 核心推理模型，不穷举共享订阅其他产品的模型。Ultra 包含 Gemini 4 Neon / Carbon / Argon / Hydrogen 与 Claude 5.5；Gemini 4 Argon、Gemini 3.8 Flash 与 GPT-OSS 120B 将于 2026-11-30 移除，Claude 4.6 不在当前 Ultra 模型表中。",
-      "models_note_en": "These are Antigravity core reasoning models, not every model across other bundled products. Ultra includes Gemini 4 Neon/Carbon/Argon/Hydrogen and Claude 5.5. Gemini 4 Argon, Gemini 3.8 Flash and GPT-OSS 120B will be removed on 2026-11-30; Claude 4.6 is absent from the current Ultra model table.",
+      "models_note_zh": "这里列 Antigravity 核心推理模型，不穷举共享订阅其他产品的模型。Ultra 包含 Gemini 4 Neon / Carbon / Argon / Hydrogen 与 Claude 5.5；Gemini 4 Argon、Gemini 3.8 Flash 与 GPT-OSS 120B 将于 2026-11-30 移除，Claude 4.6 不在当前 Ultra 模型表中。Orchestrator 在本档可用，配对 planner 与 executor；可选角色以官方模型表为准，不据此推断额外额度。",
+      "models_note_en": "These are Antigravity core reasoning models, not every model across other bundled products. Ultra includes Gemini 4 Neon/Carbon/Argon/Hydrogen and Claude 5.5. Gemini 4 Argon, Gemini 3.8 Flash and GPT-OSS 120B will be removed on 2026-11-30; Claude 4.6 is absent from the current Ultra model table. Orchestrator is available on this tier, pairing a planner with an executor; selectable roles follow the official model table, and no additional quota is inferred.",
       "models_source_urls": [
         "https://antigravity.google/docs/models",
         "https://antigravity.google/docs/plans"
       ],
-      "models_checked_at": "2026-11-24"
+      "models_checked_at": "2026-11-27"
     },
     {
       "id": "mistral-large-4",
@@ -6134,7 +6137,7 @@
       "note_zh": "腾讯 Hy4 系列轻量模型，面向日常办公与高吞吐任务，默认开启深度思考且可关闭。展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算。上下文 1M tokens，最大输入 960,000、最大输出 64,000 tokens。活动、充值赠送与账户权益可能影响实际结算。",
       "note_en": "Tencent's lightweight Hy4-series model for everyday productivity and high-volume workloads, with deep thinking enabled by default and disableable. B.AI standard reference rates are shown; accounts settle at 1 USD = 1,000,000 Credits. Context is 1M tokens with 960,000 maximum input and 64,000 maximum output tokens. Promotions, top-up bonuses and account benefits may affect settlement.",
       "source_url": "https://docs.b.ai/llmservice/models/hy4-flash/",
-      "checked_at": "2026-11-26",
+      "checked_at": "2026-11-27",
       "updated_at": "2026-11-27",
       "offers": [
         {
@@ -6146,7 +6149,7 @@
             "Hy4 Flash"
           ],
           "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
-          "checked_at": "2026-11-26",
+          "checked_at": "2026-11-27",
           "conditions_zh": "活动期间输入、输出、缓存写入与缓存读取均按标准参考价的 50% 结算，仅适用于 hy4-flash；2026-11-30 12:00（北京时间，UTC+8）结束后按标准参考价计费。适用条款与最终账单以平台显示和实际账单为准。",
           "conditions_en": "During the promotion, input, output, cache writes and cache reads are billed at 50% of the standard reference price, applying only to hy4-flash; after the offer ends at 12:00 noon on November 30, 2026 (Beijing Time, UTC+8), usage is billed at standard reference prices. Applicable terms and final charges follow the platform display and actual billing records.",
           "eligibility_zh": "仅通过 B.AI 使用 hy4-flash 的用量",
@@ -6172,7 +6175,7 @@
               "cache_write": 0.07
             },
             "source_url": "https://docs.b.ai/llmservice/models/hy4-flash/",
-            "checked_at": "2026-11-26",
+            "checked_at": "2026-11-27",
             "comparison_zh": "相同平台、型号、币种及每百万 tokens 单位的标准价与活动价比较",
             "comparison_en": "Same platform, model, currency and per-million-token units for standard and promotional rates"
           }
@@ -6677,11 +6680,33 @@
       },
       "scope_zh": "Standard · 文本输入 / 图像输出",
       "scope_en": "Standard · text input / image output",
-      "note_zh": "官方图像生成标准价：文本输入 $2.30、图像输出 $3.80 / 百万 tokens；图像输入另为 $1.50 / 百万 tokens。页面显示最终交付图片至少 16,600,000 像素（宽 × 高）时，H3-Image 与 H3-Image-Highspeed 的整个请求费用限时五折，但未公布截止日，也未按 token 维度列出折扣价，故不纳入结构化折扣价格。",
-      "note_en": "Official Standard image-generation rates are $2.30 per million text-input tokens and $3.80 per million image-output tokens; image input is separately $1.50 per million tokens. The page advertises a limited-time 50% discount on the total request cost for H3-Image and H3-Image-Highspeed when the final delivered image is at least 16,600,000 pixels (width × height), but publishes no deadline or token-dimension discount rates, so no structured discount price is inferred.",
+      "note_zh": "官方图像生成标准价：文本输入 $2.30、图像输出 $3.80 / 百万 tokens；图像输入另为 $1.50 / 百万 tokens。页面显示最终交付图片至少 16,600,000 像素（宽 × 高）时，H3-Image 与 H3-Image-Highspeed 的整个请求费用限时五折，但未公布截止日，也未按 token 维度列出折扣价，故仅记录为 pending 优惠，不填写结构化折扣价。",
+      "note_en": "Official Standard image-generation rates are $2.30 per million text-input tokens and $3.80 per million image-output tokens; image input is separately $1.50 per million tokens. The page advertises a limited-time 50% discount on the total request cost for H3-Image and H3-Image-Highspeed when the final delivered image is at least 16,600,000 pixels (width × height), but publishes no deadline or token-dimension discount rates, so only a pending offer is recorded, with no structured discount price.",
       "source_url": "https://platform.minimax.io/docs/pricing/overview",
-      "checked_at": "2026-11-26",
-      "updated_at": "2026-11-27"
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
+      "offers": [
+        {
+          "id": "large-image-request-half-price",
+          "type": "discount",
+          "kind": "promotion",
+          "status": "pending",
+          "models": [
+            "MiniMax H3-Image"
+          ],
+          "source_url": "https://platform.minimax.io/docs/pricing/overview",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "官方页面显示：最终交付图片至少 16,600,000 像素（宽 × 高）时，本型号整个请求费用限时五折。折扣按整个请求计费，不是把 output token 单价乘 0.5；官方未公布截止日。4096×4096 仅为单图示例，不是优惠像素门槛。",
+          "conditions_en": "The official page advertises a limited-time 50% discount on the total request cost for this model when the final delivered image is at least 16,600,000 pixels (width × height). The discount applies to the whole request, not by multiplying the output-token rate by 0.5, and no deadline is published. 4096×4096 is only a per-image example, not the promotion threshold.",
+          "eligibility_zh": "最终交付图片宽 × 高至少 16,600,000 像素的本型号请求；具体资格以平台为准。",
+          "eligibility_en": "Requests for this model whose final delivered image is at least 16,600,000 pixels in width × height; platform eligibility prevails.",
+          "card_required": "unknown",
+          "starts_at": null,
+          "ends_at": null,
+          "end_note_zh": "官方未公布截止日；保持 pending，不补造结束时间。",
+          "end_note_en": "No deadline is published; the offer remains pending and no end timestamp is inferred."
+        }
+      ]
     },
     {
       "id": "minimax-h3-image-highspeed",
@@ -6699,11 +6724,33 @@
       },
       "scope_zh": "Highspeed · 文本输入 / 图像输出",
       "scope_en": "Highspeed · text input / image output",
-      "note_zh": "官方图像生成 Highspeed 价：文本输入 $2.30、图像输出 $7.60 / 百万 tokens；图像输入另为 $3.00 / 百万 tokens。页面显示最终交付图片至少 16,600,000 像素（宽 × 高）时，H3-Image 与 H3-Image-Highspeed 的整个请求费用限时五折，但未公布截止日，也未按 token 维度列出折扣价，故不纳入结构化折扣价格。",
-      "note_en": "Official Highspeed image-generation rates are $2.30 per million text-input tokens and $7.60 per million image-output tokens; image input is separately $3.00 per million tokens. The page advertises a limited-time 50% discount on the total request cost for H3-Image and H3-Image-Highspeed when the final delivered image is at least 16,600,000 pixels (width × height), but publishes no deadline or token-dimension discount rates, so no structured discount price is inferred.",
+      "note_zh": "官方图像生成 Highspeed 价：文本输入 $2.30、图像输出 $7.60 / 百万 tokens；图像输入另为 $3.00 / 百万 tokens。页面显示最终交付图片至少 16,600,000 像素（宽 × 高）时，H3-Image 与 H3-Image-Highspeed 的整个请求费用限时五折，但未公布截止日，也未按 token 维度列出折扣价，故仅记录为 pending 优惠，不填写结构化折扣价。",
+      "note_en": "Official Highspeed image-generation rates are $2.30 per million text-input tokens and $7.60 per million image-output tokens; image input is separately $3.00 per million tokens. The page advertises a limited-time 50% discount on the total request cost for H3-Image and H3-Image-Highspeed when the final delivered image is at least 16,600,000 pixels (width × height), but publishes no deadline or token-dimension discount rates, so only a pending offer is recorded, with no structured discount price.",
       "source_url": "https://platform.minimax.io/docs/pricing/overview",
-      "checked_at": "2026-11-26",
-      "updated_at": "2026-11-27"
+      "checked_at": "2026-11-27",
+      "updated_at": "2026-11-27",
+      "offers": [
+        {
+          "id": "large-image-request-half-price",
+          "type": "discount",
+          "kind": "promotion",
+          "status": "pending",
+          "models": [
+            "MiniMax H3-Image Highspeed"
+          ],
+          "source_url": "https://platform.minimax.io/docs/pricing/overview",
+          "checked_at": "2026-11-27",
+          "conditions_zh": "官方页面显示：最终交付图片至少 16,600,000 像素（宽 × 高）时，本型号整个请求费用限时五折。折扣按整个请求计费，不是把 output token 单价乘 0.5；官方未公布截止日。4096×4096 仅为单图示例，不是优惠像素门槛。",
+          "conditions_en": "The official page advertises a limited-time 50% discount on the total request cost for this model when the final delivered image is at least 16,600,000 pixels (width × height). The discount applies to the whole request, not by multiplying the output-token rate by 0.5, and no deadline is published. 4096×4096 is only a per-image example, not the promotion threshold.",
+          "eligibility_zh": "最终交付图片宽 × 高至少 16,600,000 像素的本型号请求；具体资格以平台为准。",
+          "eligibility_en": "Requests for this model whose final delivered image is at least 16,600,000 pixels in width × height; platform eligibility prevails.",
+          "card_required": "unknown",
+          "starts_at": null,
+          "ends_at": null,
+          "end_note_zh": "官方未公布截止日；保持 pending，不补造结束时间。",
+          "end_note_en": "No deadline is published; the offer remains pending and no end timestamp is inferred."
+        }
+      ]
     }
   ]
 }

@@ -1,7 +1,403 @@
 {
   "schema_version": "1.1",
-  "snapshot_id": "d073b76adc1c143f",
+  "snapshot_id": "1db65d1a172b3b15",
   "events": [
+    {
+      "id": "cline-model-catalog-20261126",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Cline 扩展与桌面版清理 OpenAI 模型目录并新增两家提供商",
+      "summary_zh": "Cline 4.1.28、Desktop 0.0.51 和 CLI 3.0.76 同步刷新模型目录：OpenAI 提供商不再列出上游标为弃用的模型 ID，ChatGPT 订阅不再列出 gpt-5.3-codex-spark；扩展和桌面版新增 Concentrate 与 Prima Labs。CLI 同时统一第三方声明文件的打包方式。",
+      "key_points_zh": [
+        "OpenAI 目录移除 gpt-4o、gpt-4.1、gpt-5、gpt-5-mini、gpt-5.1、gpt-5.3-codex、o3 和 o3-pro 等弃用 ID。",
+        "gpt-5.3-codex-spark 不再出现在 ChatGPT 订阅模型列表中。",
+        "扩展与桌面版新增 Concentrate 和 Prima Labs 提供商。",
+        "CLI npm 包改为在根目录提供一份覆盖所有平台二进制的 THIRD_PARTY_NOTICES.txt。"
+      ],
+      "importance_reason_zh": "模型目录变化直接影响可选模型和订阅入口，跨客户端同步更新可减少选择失效。",
+      "title_en": "Cline prunes deprecated OpenAI models and adds two providers",
+      "summary_en": "Cline 4.1.28, Desktop 0.0.51 and CLI 3.0.76 refresh their model catalogs: the OpenAI provider no longer lists IDs marked deprecated upstream, and ChatGPT subscriptions no longer list gpt-5.3-codex-spark. The extension and desktop app add Concentrate and Prima Labs, while the CLI consolidates third-party notices across platform binaries.",
+      "key_points_en": [
+        "The OpenAI catalog removes deprecated IDs including gpt-4o, gpt-4.1, gpt-5, gpt-5-mini, gpt-5.1, gpt-5.3-codex, o3 and o3-pro.",
+        "gpt-5.3-codex-spark is no longer listed for ChatGPT subscriptions.",
+        "The extension and desktop app add Concentrate and Prima Labs providers.",
+        "The CLI npm package ships one root-level THIRD_PARTY_NOTICES.txt covering every platform binary."
+      ],
+      "importance_reason_en": "The catalog changes directly affect model choices and subscription entry points, while synchronized client updates reduce stale selections.",
+      "published_at": "2026-11-26T09:57:51Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-26T15:30:06+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/v4.1.28",
+          "url": "https://github.com/cline/cline/releases/tag/v4.1.28",
+          "collected_at": "2026-11-26T15:30:06+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/desktop-v0.0.51",
+          "url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.51",
+          "collected_at": "2026-11-26T15:30:06+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/cli-v3.0.76",
+          "url": "https://github.com/cline/cline/releases/tag/cli-v3.0.76",
+          "collected_at": "2026-11-26T15:30:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "cline-sdk-0-2-2-20261126",
+      "entity_ids": [
+        "cline"
+      ],
+      "kind": "update",
+      "topics": [
+        "api",
+        "availability",
+        "compatibility"
+      ],
+      "title_zh": "Cline SDK 0.2.2 调整 28 家提供商默认模型并精简遥测 API",
+      "summary_zh": "Cline SDK 0.2.2 新增 concentrate 与 primalabs 提供商，改变 28 家提供商的默认模型，并移除上游标为弃用的 OpenAI ID；MiniMax-M3 不再列于 MiniMax coding plans。遥测清理还移除了部分 helper 导出，三个全局设置函数不再接受 options 参数。",
+      "key_points_zh": [
+        "新增 concentrate 与 primalabs 提供商，并更新 28 家提供商的默认模型。",
+        "移除 gpt-4o、gpt-4.1、gpt-5 系列、gpt-5.3-codex、gpt-5.3-codex-spark、gpt-5.4-nano、gpt-image-2、o3 与 o3-pro 等弃用 ID。",
+        "MiniMax-M3 不再列于 MiniMax coding plans。",
+        "@cline/llms、@cline/shared 和 @cline/core 移除部分遥测 helper 导出；writeGlobalSettings、setTelemetryOptOutGlobally 和 setAutoUpdateEnabledGlobally 去掉 options 参数。"
+      ],
+      "importance_reason_zh": "默认模型和 SDK 函数签名变化可能影响集成方，需要在升级时检查模型选择与构建兼容性。",
+      "title_en": "Cline SDK 0.2.2 changes defaults for 28 providers and trims telemetry APIs",
+      "summary_en": "Cline SDK 0.2.2 adds concentrate and primalabs, changes default models for 28 providers and removes OpenAI IDs marked deprecated upstream; MiniMax-M3 is no longer listed on MiniMax coding plans. Telemetry cleanup removes selected helper exports, and writeGlobalSettings, setTelemetryOptOutGlobally and setAutoUpdateEnabledGlobally no longer accept an options argument.",
+      "key_points_en": [
+        "Adds concentrate and primalabs and changes default models for 28 providers.",
+        "Removes deprecated IDs including gpt-4o, gpt-4.1, gpt-5 variants, gpt-5.3-codex, gpt-5.3-codex-spark, gpt-5.4-nano, gpt-image-2, o3 and o3-pro.",
+        "MiniMax-M3 is no longer listed on MiniMax coding plans.",
+        "@cline/llms, @cline/shared and @cline/core remove selected telemetry helpers; writeGlobalSettings, setTelemetryOptOutGlobally and setAutoUpdateEnabledGlobally drop their options argument."
+      ],
+      "importance_reason_en": "Default-model and SDK signature changes can affect integrations, so upgrades require checking model selection and build compatibility.",
+      "published_at": "2026-11-26T08:40:10Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-26T15:30:06+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "cline-releases",
+          "content_id": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.2.2",
+          "url": "https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.2.2",
+          "collected_at": "2026-11-26T15:30:06+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kimi-code-cli-2-9-0-canary-20261126",
+      "entity_ids": [
+        "moonshot",
+        "kimi-code"
+      ],
+      "kind": "preview",
+      "topics": [
+        "feature",
+        "capability",
+        "critical_fix"
+      ],
+      "title_zh": "Kimi Code CLI 2.9.0 canary 预览自动审查与多会话工作流",
+      "summary_zh": "Kimi Code CLI 2.9.0 canary 加入实验性自动审查、Git worktrees、三标签 /sessions 和同项目会话恢复，并修复子代理权限模式继承、模型状态同步、会话元数据加载与文件监视竞争等问题。",
+      "key_points_zh": [
+        "agent-core-v2 加入实验性 auto review。",
+        "新增实验性 Git worktrees、三标签 /sessions 和同项目 resume。",
+        "btw 子代理改用主 Agent 的权限模式启动；模型切换的 compact 变更会应用到原会话。",
+        "修复会话加载时元数据文档竞争、macOS 原生文件监视只重扫一次及 Git reaper 锁持有者检查。"
+      ],
+      "importance_reason_zh": "预览版同时改变自动审查、并行工作区和会话组织方式，值得在稳定版前跟踪。",
+      "title_en": "Kimi Code CLI 2.9.0 canary previews auto-review and multisession workflows",
+      "summary_en": "Kimi Code CLI 2.9.0 canary adds experimental auto-review, Git worktrees, a three-tab /sessions view and same-project resume. It also fixes subagent permission-mode inheritance, model-state synchronization, session metadata loading and file-watcher races.",
+      "key_points_en": [
+        "agent-core-v2 adds experimental auto review.",
+        "Adds experimental Git worktrees, a three-tab /sessions view and same-project resume.",
+        "btw subagents start in the main Agent’s permission mode, and compact-and-switch model changes apply to the original session.",
+        "Fixes metadata-document races during session loading, a single rescan after macOS native file watching starts, and Git reaper lock-holder checks."
+      ],
+      "importance_reason_en": "The preview changes auto-review, parallel workspaces and session organization, making it worth tracking before stable release.",
+      "published_at": "2026-11-26T07:10:43Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-26T15:30:08+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "kimi-code-releases",
+          "content_id": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261126065002-1fa6471",
+          "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.9.0-canary.20261126065002-1fa6471",
+          "collected_at": "2026-11-26T15:30:08+00:00",
+          "material_scope": "full_text"
+        }
+      ],
+      "related_event_ids": [
+        "kimi-code-cli-2-8-0-20261125"
+      ]
+    },
+    {
+      "id": "meituan-care-customer-service-20261126",
+      "entity_ids": [
+        "meituan"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "model_release",
+        "critical_fix"
+      ],
+      "title_zh": "美团报告 CARE 递归自我改进客服模型实践",
+      "summary_zh": "美团介绍 CARE 闭环：31B 客服模型承接部分线上流量后，由外部强模型巡检、归因并构造首个错误决策的修复，再通过在线自蒸馏训练模型本身。五轮迭代后，巡检 Bad Case 率从 6.42% 降至 1.97%，部分地区满意度追平或略超线上强模型；全量替换的服务成本模型估算下降 70.5%。",
+      "key_points_zh": [
+        "五轮迭代后，31B 模型巡检 Bad Case 率从 6.42% 降至 1.97%。",
+        "部分地区线上满意度从落后强模型 4.57 个百分点追平，后续版本略高于同期强模型。",
+        "全量替换时单均服务成本降低 70.5%，模型服务部分降低 92.8%；切换一半流量时成本降低 35.8%。",
+        "巡检、归因、修复构造和上线审批由外部模型或人类完成；OPSD 的 Teacher 是获得特权信息的冻结模型副本。",
+        "部署在覆盖七个地区、多种语言的部分外卖售后流量中，尚未全量上线。",
+        "归因准确率和模拟器与线上环境的差距尚未量化，成本口径不含研发、存储、网络和额外运维人力。"
+      ],
+      "importance_reason_zh": "这是中等规模模型在真实客服流量中持续纠错的完整工程案例，同时保留外部评判、人工审批和未量化误差边界。",
+      "title_en": "Meituan reports CARE recursive self-improvement for customer-service models",
+      "summary_en": "Meituan describes CARE, where a 31B customer-service model handles part of live traffic while external models inspect failures, attribute responsibility and construct repairs for the first wrong decision before on-policy self-distillation updates the model. After five iterations, inspected bad-case rate fell from 6.42% to 1.97%, satisfaction in some regions reached or slightly exceeded the strong online model, and modeled full-replacement service cost fell 70.5%.",
+      "key_points_en": [
+        "After five iterations, the 31B model’s inspected bad-case rate fell from 6.42% to 1.97%.",
+        "In some regions, satisfaction recovered from 4.57 percentage points below the strong model to parity, with later versions slightly above the contemporaneous model.",
+        "Full replacement cut service cost per case by 70.5% and the model-service portion by 92.8%; shifting half the traffic cut cost by 35.8%.",
+        "External models or humans perform inspection, attribution, repair construction and launch approval; the OPSD Teacher is a frozen model copy given privileged information.",
+        "Deployment is partial across seven regions and multiple languages in food-delivery after-sales support, not a full rollout.",
+        "Attribution accuracy and simulator fidelity remain unquantified, and cost figures exclude R&D, storage, networking and additional operations labor."
+      ],
+      "importance_reason_en": "This is a complete engineering case of continuous correction for a mid-sized model on real customer-service traffic, while preserving external judgment, human approval and unquantified error boundaries.",
+      "published_at": "2026-11-26T06:41:01.000Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-26T15:30:00+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "meituan-official",
+          "content_id": "https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html",
+          "url": "https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html",
+          "collected_at": "2026-11-26T15:30:00+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "opencode-2-4-2-20261126",
+      "entity_ids": [
+        "opencode"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "compatibility",
+        "api"
+      ],
+      "title_zh": "OpenCode 2.4.2 收紧网页授权并改进自动化与 Code Mode",
+      "summary_zh": "OpenCode 2.4.2 为 GPT-6.2 Sol、Astra 和 gpt-latest 别名启用专用系统提示，将图像与视频生成工具移入 Code Mode，并把网页 fetch 的“始终允许”收窄到当前站点。自动化失败后会记录失败并继续下次调度，超时 shell 命令会被终止；服务档位成本估算、会话迁移、SDK 和插件接口也得到改进。",
+      "key_points_zh": [
+        "GPT-6.2 Sol、Astra 与 gpt-latest 别名使用 GPT-6.2 系统提示。",
+        "generate_image 和 generate_video 移入 Code Mode，工具定义不再为每次请求增加约 700 tokens。",
+        "网页 fetch 的 Always allow 只适用于该站点；旧授权保持原样。",
+        "自动化失败后记录失败并继续按计划运行；创建会话或目录失效、配置无效时仍暂停，超时 shell 命令会停止并失败。",
+        "服务档位成本估算采用其自身价格及长上下文费率；移动会话会同时移动子代理，workerd SDK 转发 alarm 以支持空闲远程工作区挂起。"
+      ],
+      "importance_reason_zh": "授权范围收窄直接降低过度许可风险，Code Mode 与自动化变化则影响 token 成本和任务连续性。",
+      "title_en": "OpenCode 2.4.2 narrows web approvals and improves automations and Code Mode",
+      "summary_en": "OpenCode 2.4.2 gives GPT-6.2 Sol, Astra and gpt-latest aliases a dedicated system prompt, moves image and video generation into Code Mode, and scopes web-fetch “Always allow” to the current site. Failed automations are recorded and continue on schedule, timed-out shell commands are stopped, and service-tier cost estimates, session moves, SDK behavior and plugin APIs improve.",
+      "key_points_en": [
+        "GPT-6.2 Sol, Astra and gpt-latest aliases use a GPT-6.2 system prompt.",
+        "generate_image and generate_video move into Code Mode, removing about 700 tool-definition tokens from every request.",
+        "Web-fetch “Always allow” applies only to that site; approvals saved by earlier versions remain unchanged.",
+        "Failed automations are recorded and continue on schedule, but pause when their session, directory or setup is invalid; timed-out shell commands stop and fail.",
+        "Service-tier estimates use their own prices and long-context rates; moving a session moves its subagents, and the workerd SDK forwards alarms so idle remote workspaces can suspend."
+      ],
+      "importance_reason_en": "Narrower approval scope reduces over-permission risk, while Code Mode and automation changes affect token cost and task continuity.",
+      "published_at": "2026-11-26T01:00:12Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-26T15:30:04+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "opencode-releases",
+          "content_id": "https://github.com/anomalyco/opencode/releases/tag/v2.4.2",
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.2",
+          "collected_at": "2026-11-26T15:30:04+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "minimax-h3-family-20261126",
+      "entity_ids": [
+        "minimax"
+      ],
+      "kind": "update",
+      "topics": [
+        "model_release",
+        "availability",
+        "pricing",
+        "capability"
+      ],
+      "title_zh": "MiniMax 发布 H3 Family 并公布视频与图像阶梯价格",
+      "summary_zh": "MiniMax 将开源 H3 扩展为包含旗舰模型、H3-Image 系列和合作衍生模型的 H3 Family。官方称开源 100 天内产生 1,472 个衍生模型、下载超过 1.48 亿次，并公布 H3、H3-Highspeed、H3-Lite 的视频起步价及两款 H3-Image 的图像输出 token 价格。",
+      "key_points_zh": [
+        "官方称 H3 开源 100 天内形成 1,472 个衍生模型，累计下载超过 1.48 亿次。",
+        "H3、H3-Highspeed、H3-Lite 的视频输出分别从每秒 $0.08、$0.04、$0.025 起；分辨率与高速模式影响价格。",
+        "H3-Image 与 H3-Image Highspeed 的图像输出价格分别为每百万 tokens $3.80 和 $7.60。",
+        "Family 包含 fal、HeyGen、Suno、Pika、Creatify 等合作衍生模型，并可通过 MiniMax Open Platform 等渠道获取。",
+        "下载量、速度与价格比较均为官方披露，不代表独立评测。"
+      ],
+      "importance_reason_zh": "系列化模型、衍生生态和明确计价单位直接影响多模态创作选型与成本估算。",
+      "title_en": "MiniMax introduces H3 Family with tiered video and image pricing",
+      "summary_en": "MiniMax has expanded open-source H3 into the H3 Family, including flagship models, the H3-Image series and partner derivatives. The company claims 1,472 derivative models and more than 148 million downloads in 100 days, and lists starting video prices for H3, H3-Highspeed and H3-Lite plus per-million-token image output prices for H3-Image and H3-Image Highspeed.",
+      "key_points_en": [
+        "MiniMax claims 1,472 derivatives and more than 148 million downloads within 100 days of open-sourcing H3.",
+        "Video output starts at $0.08/s for H3, $0.04/s for H3-Highspeed and $0.025/s for H3-Lite; resolution and speed mode affect pricing.",
+        "H3-Image and H3-Image Highspeed image output cost $3.80 and $7.60 per million tokens, respectively.",
+        "The Family includes derivatives from fal, HeyGen, Suno, Pika and Creatify and is available through MiniMax Open Platform and other channels.",
+        "Download, speed and price comparisons are company disclosures, not independent evaluations."
+      ],
+      "importance_reason_en": "The model family, derivative ecosystem and explicit billing units directly affect multimodal creation choices and cost estimates.",
+      "published_at": "2026-11-26",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:35:56+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "minimax-official",
+          "content_id": "https://www.minimax.io/blog/minimax-h3-family",
+          "url": "https://www.minimax.io/blog/minimax-h3-family",
+          "collected_at": "2026-11-26T15:35:56+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-code-review-org-billing-20261125",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "feature"
+      ],
+      "title_zh": "Copilot 代码审查未选计费方时将默认组织付费",
+      "summary_zh": "GitHub 宣布，从 2026 年 12 月 30 日起，Business 或 Enterprise 组织中持有 Copilot 许可证的成员若未选择代码审查计费方，审查费用将默认由组织承担。要维持成员额度计费需在此之前选择 Member；已保存的 Member 或 Organization 选择不变，部分无 AI Credits 付费用量、计费锁定或无可计费客户的账户会设为 Member。",
+      "key_points_zh": [
+        "2026 年 12 月 30 日起，未保存计费选择时默认由组织支付代码审查费用。",
+        "适用于 Business 或 Enterprise 组织中有 Copilot 许可证的成员。",
+        "选择 Member 可保持使用成员 Copilot entitlement；已有 Member 或 Organization 选择保持不变。",
+        "无 AI Credits 付费用量、计费锁定或无可计费客户的账户将设为 Member。",
+        "组织计费需要启用 AI Credits 付费用量，并可能增加组织支出。"
+      ],
+      "importance_reason_zh": "默认计费方变化会直接影响企业成本归属，管理员需要在生效前检查政策设置。",
+      "title_en": "Copilot code review will default to organization billing when unset",
+      "summary_en": "GitHub announced that from December 30, 2026, code reviews by licensed members in Business or Enterprise organizations will be billed to the organization when no billing choice is saved. Selecting Member before then preserves member-entitlement billing; existing Member or Organization choices remain unchanged, while accounts without AI Credits paid usage, with billing locks or without a billable customer are set to Member.",
+      "key_points_en": [
+        "From December 30, 2026, an unset billing choice defaults code-review charges to the organization.",
+        "The change applies to licensed members in Business or Enterprise organizations.",
+        "Selecting Member preserves member Copilot entitlement billing; existing Member or Organization choices remain unchanged.",
+        "Accounts without AI Credits paid usage, with billing locks or without a billable customer are set to Member.",
+        "Organization billing requires AI Credits paid usage and can increase organizational spending."
+      ],
+      "importance_reason_en": "The default billing change directly affects enterprise cost allocation, so administrators need to review policy settings before it takes effect.",
+      "published_at": "2026-11-25T22:18:03+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:30:08+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "copilot-changelog",
+          "content_id": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization",
+          "url": "https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization",
+          "collected_at": "2026-11-26T15:30:08+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "copilot-cli-1-0-117-20261126",
+      "entity_ids": [
+        "copilot"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Copilot CLI 1.0.117 扩展自定义 Agent 工具并修复恢复与权限流程",
+      "summary_zh": "Copilot CLI 1.0.117 系列让自定义 Agent 显式选择工具，后台 Agent 可在重启并恢复会话后继续对话，并改进连接器加载、MCP 缓存、沙箱符号链接诊断和权限重试。补丁还加入模型退役提示、不可用模型恢复、Linux shell 恢复及 Windows PowerShell hook 退出码保留。",
+      "key_points_zh": [
+        "自定义 Agent 可显式选择工具；无 prompt 的自定义 Agent 文件也会遵守工具列表。",
+        "后台 Agent 在 CLI 重启并恢复会话后继续对话；GitHub 登录尚未完成时也可加载已连接 Copilot Connectors。",
+        "COPILOT_MCP_TOOL_CACHE=false 在重载后持续禁用工具快照读写；/sandbox policy 会标记损坏符号链接授权。",
+        "权限提示说明恢复会话后仍有效的批准；计划模式在创建分支或安装包前要求批准，被自动拒绝的动作可在后续消息中重新审查一次。",
+        "/model 标记退役模型；不可用模型不再静默切换提供商，共享会话可恢复后改用 /model；PowerShell hooks 保留原生退出码。"
+      ],
+      "importance_reason_zh": "工具暴露、后台连续性和权限恢复变化直接影响 Agent 自动化安全与可靠性。",
+      "title_en": "Copilot CLI 1.0.117 expands custom-agent tools and fixes recovery and permissions",
+      "summary_en": "The Copilot CLI 1.0.117 series lets custom agents opt into explicit tools and allows background agents to continue after a CLI restart and session resume. It improves connector loading, MCP cache behavior, sandbox symlink diagnostics and permission retries. Patches add model-retirement notices, unavailable-model recovery, Linux shell recovery and native PowerShell hook exit-code preservation.",
+      "key_points_en": [
+        "Custom agents can explicitly select tools, and custom agent files without prompts still honor their tool list.",
+        "Background agents continue after restart and resume; connected Copilot Connectors can load while GitHub sign-in is still finishing.",
+        "COPILOT_MCP_TOOL_CACHE=false persists across reloads, and /sandbox policy flags grants pointing to broken symlinks.",
+        "Permission help explains which approvals survive resume; plan mode asks before branch creation or package installation, and an automatically denied action can be reviewed once after a later request.",
+        "/model marks retiring models; unavailable models no longer trigger silent provider switching, shared sessions can resume and change models, and PowerShell hooks preserve native exit codes."
+      ],
+      "importance_reason_en": "Tool exposure, background continuity and permission recovery directly affect the safety and reliability of Agent automation.",
+      "published_at": "2026-11-25T21:21:51Z",
+      "date_precision": "datetime",
+      "date_kind": "updated",
+      "first_collected_at": "2026-11-26T15:30:04+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-0",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-0",
+          "collected_at": "2026-11-26T15:30:04+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-1",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-1",
+          "collected_at": "2026-11-26T15:30:04+00:00",
+          "material_scope": "full_text"
+        },
+        {
+          "source_id": "copilot-releases",
+          "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-2",
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-2",
+          "collected_at": "2026-11-26T15:30:04+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
     {
       "id": "pi-v161",
       "entity_ids": [
@@ -154,6 +550,46 @@
       ]
     },
     {
+      "id": "musk-grok-tesla-road-trips-20261125",
+      "entity_ids": [
+        "grok"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "马斯克分享 Grok 在特斯拉公路旅行中的使用体验",
+      "summary_zh": "马斯克表示：“Grok is so much fun on Tesla road trips!” 这是一条关于 Grok 车载使用体验的简短反馈，未说明具体功能、车型、软件版本或可用范围。",
+      "key_points_zh": [
+        "马斯克称 Grok 在特斯拉公路旅行中很有趣。",
+        "反馈来自负责人本人账号。",
+        "原帖没有提供具体功能、车型、版本或地区可用性。"
+      ],
+      "importance_reason_zh": "这是负责人对 Grok 实际使用场景的一手反馈，但不应扩展为完整功能发布。",
+      "title_en": "Musk shares Grok experience on Tesla road trips",
+      "summary_en": "Musk wrote, “Grok is so much fun on Tesla road trips!” The post is brief feedback about using Grok in a car and does not identify specific features, vehicle models, software versions or availability regions.",
+      "key_points_en": [
+        "Musk says Grok is fun on Tesla road trips.",
+        "The feedback comes from his own account.",
+        "The post gives no specific features, vehicle model, software version or regional availability."
+      ],
+      "importance_reason_en": "This is first-hand usage feedback from a responsible person, but it should not be expanded into a full feature launch.",
+      "published_at": "2026-11-25T09:06:32.653Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "elon-musk-x",
+          "content_id": "https://x.com/elonmusk/status/2125516475712844116",
+          "url": "https://x.com/elonmusk/status/2125516475712844116",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
       "id": "b-ai-credit-top-up-20261125",
       "entity_ids": [
         "b-ai"
@@ -288,20 +724,21 @@
         "availability",
         "capability"
       ],
-      "title_zh": "WorldRouter 上线四款 Gemini 4 模型，均标称 1M 上下文",
-      "summary_zh": "WorldRouter 宣布 Hydrogen、Neon、Carbon、Argon 四款 Gemini 4 模型均可在平台使用，并称四者都有 1M-token 上下文窗口。WorldRouter 建议成本敏感任务选 Hydrogen、科学与图表密集任务选 Neon、长多步任务选 Carbon、成熟基线任务选 Argon；原帖提到当前价格，但导入材料未包含价格表。",
+      "title_zh": "WorldRouter 上线四款 Gemini 4，并补充 Hydrogen 价格",
+      "summary_zh": "WorldRouter 宣布 Hydrogen、Neon、Carbon、Argon 四款 Gemini 4 模型均可在平台使用，并称四者都有 1M-token 上下文。后续帖子补充 Hydrogen 每百万 tokens 输入 $0.675、输出 $3.375、缓存读取 $0.03375；其余三款价格未出现在已导入材料中。",
       "key_points_zh": [
         "Hydrogen、Neon、Carbon、Argon 四款 Gemini 4 模型已在 WorldRouter 上线。",
         "WorldRouter 称四款模型均有 1M-token 上下文窗口。",
-        "WorldRouter 的工作负载建议为：Hydrogen 用于成本敏感任务，Neon 用于科学与图表密集任务，Carbon 用于长多步任务，Argon 作为成熟基线。",
-        "原帖引用 Google 基准图表并预告当前价格，但导入文本未包含图表数值或价格。"
+        "工作负载建议为：Hydrogen 用于成本敏感任务，Neon 用于科学与图表密集任务，Carbon 用于长多步任务，Argon 作为成熟基线。",
+        "Hydrogen 每百万 tokens 输入 $0.675、输出 $3.375、缓存读取 $0.03375。",
+        "其余三款模型价格和原帖引用的基准图表数值仍未取得。"
       ],
-      "importance_reason_zh": "明确可用模型和上下文规格，为平台用户选择模型提供依据；性能基准与价格仍需查看缺失续帖。",
+      "importance_reason_zh": "在可用模型和上下文规格之外补齐 Hydrogen 的可核算价格，便于平台用户进行成本比较。",
       "published_at": "2026-11-25T01:41:00.000Z",
       "date_precision": "datetime",
       "date_kind": "published",
       "first_collected_at": "2026-11-25T14:32:34+00:00",
-      "updated_at": "2026-11-25T14:44:24Z",
+      "updated_at": "2026-11-26T16:17:50Z",
       "sources": [
         {
           "source_id": "worldrouter-x",
@@ -309,17 +746,33 @@
           "url": "https://x.com/WorldClawAI/status/2125404351829008701",
           "collected_at": "2026-11-25T14:32:34+00:00",
           "material_scope": "partial_text"
+        },
+        {
+          "source_id": "worldrouter-x",
+          "content_id": "https://x.com/WorldClawAI/status/2125404352626008183",
+          "url": "https://x.com/WorldClawAI/status/2125404352626008183",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
         }
       ],
-      "title_en": "WorldRouter lists four Gemini 4 models, all claiming 1M-token context",
-      "summary_en": "WorldRouter says Hydrogen, Neon, Carbon and Argon are available on its platform and all have 1M-token context windows. It recommends Hydrogen for cost-sensitive work, Neon for science- and chart-heavy work, Carbon for long multi-step tasks and Argon as a baseline. The post references current pricing, but the imported material does not include a price table.",
+      "title_en": "WorldRouter lists four Gemini 4 models and adds Hydrogen pricing",
+      "summary_en": "WorldRouter says Hydrogen, Neon, Carbon and Argon are available on its platform and all have 1M-token context windows. A follow-up lists Hydrogen at $0.675 input, $3.375 output and $0.03375 cached read per million tokens; prices for the other three models are absent from the imported material.",
       "key_points_en": [
-        "Four Gemini 4 models are now available on WorldRouter: Hydrogen, Neon, Carbon and Argon.",
+        "Four Gemini 4 models are available on WorldRouter: Hydrogen, Neon, Carbon and Argon.",
         "WorldRouter says all four models have 1M-token context windows.",
-        "WorldRouter recommends Hydrogen for cost-sensitive work, Neon for science- and chart-heavy work, Carbon for long multi-step tasks and Argon as a baseline.",
-        "The post cites a Google benchmark chart and previews current pricing, but the imported text does not include the benchmark values or prices."
+        "It recommends Hydrogen for cost-sensitive work, Neon for science- and chart-heavy work, Carbon for long multistep tasks and Argon as a mature baseline.",
+        "Hydrogen costs $0.675 input, $3.375 output and $0.03375 cached read per million tokens.",
+        "Prices for the other three models and the benchmark values in the original chart remain unavailable."
       ],
-      "importance_reason_en": "The available model names and context specifications help users choose on the platform, while benchmark results and pricing remain missing from the imported continuation."
+      "importance_reason_en": "The follow-up adds calculable Hydrogen pricing to the available model names and context specifications, enabling platform cost comparisons.",
+      "corrections": [
+        {
+          "at": "2026-11-26T16:17:50Z",
+          "reason_zh": "依据 2/6 续帖补充 Hydrogen 的输入、输出和缓存读取价格，并明确其余模型价格仍未取得。",
+          "reason_en": "Added Hydrogen input, output and cached-read prices from the 2/6 follow-up while noting that the other model prices remain unavailable.",
+          "url": "https://x.com/WorldClawAI/status/2125404352626008183"
+        }
+      ]
     },
     {
       "id": "claude-code-2-1-332-20261125",
@@ -366,6 +819,226 @@
           "content_id": "https://code.claude.com/docs/en/changelog#2-1-332",
           "url": "https://code.claude.com/docs/en/changelog#2-1-332",
           "collected_at": "2026-11-25T13:43:34+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-gpt-6-2-astra-enterprise-preview-20261125",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "preview",
+      "topics": [
+        "model_release",
+        "availability",
+        "pricing"
+      ],
+      "title_zh": "Kiro Enterprise 预览 GPT-6.2 Astra",
+      "summary_zh": "Kiro 开始向 Enterprise 组织的各客户端预览 GPT-6.2 Astra。官方列出 1M 上下文、7.2 倍 credits 消耗，超过 272K tokens 的请求升至 14.4 倍，且推理仅在美国地理区域运行。",
+      "key_points_zh": [
+        "GPT-6.2 Astra 以 Preview 形式向 Kiro Enterprise 推出。",
+        "上下文窗口为 1M，基础 credits 倍率为 7.2。",
+        "请求超过 272K tokens 时 credits 倍率升至 14.4。",
+        "推理仅在美国地理区域运行。"
+      ],
+      "importance_reason_zh": "企业预览同时带来大上下文、显著 credits 成本和地域限制，需要按任务与数据要求评估。",
+      "title_en": "Kiro Enterprise previews GPT-6.2 Astra",
+      "summary_en": "Kiro is beginning a Preview rollout of GPT-6.2 Astra across clients for Enterprise organizations. It lists a 1M context window, a 7.2x credit multiplier that rises to 14.4x above 272K tokens, and US-only inference.",
+      "key_points_en": [
+        "GPT-6.2 Astra is in Preview for Kiro Enterprise.",
+        "The context window is 1M with a base 7.2x credit multiplier.",
+        "Requests above 272K tokens use a 14.4x multiplier.",
+        "Inference runs only in the US geography."
+      ],
+      "importance_reason_en": "The enterprise preview combines a large context window with substantial credit costs and a geographic restriction that matter for task and data planning.",
+      "published_at": "2026-11-25",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:30:06+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/models/gpt-6-2-astra-for-enterprise",
+          "url": "https://kiro.dev/changelog/models/gpt-6-2-astra-for-enterprise",
+          "collected_at": "2026-11-26T15:30:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-aws-soc-2-type-ii-20261125",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "compatibility",
+        "availability"
+      ],
+      "title_zh": "Kiro 纳入 AWS SOC 2 Type II 报告范围",
+      "summary_zh": "Kiro 宣布已纳入 AWS SOC 2 Type II 报告范围，可为安全、采购和供应商风险团队提供独立审计证据。公告没有列出报告覆盖的具体服务、控制项或例外事项。",
+      "key_points_zh": [
+        "Kiro 已纳入 AWS SOC 2 Type II 报告范围。",
+        "安全、采购和供应商风险团队可使用相关独立审计证据。",
+        "公告未展开具体服务边界、控制项或审计例外。"
+      ],
+      "importance_reason_zh": "纳入审计报告范围有助于企业供应商评估，但具体覆盖仍需查阅报告。",
+      "title_en": "Kiro is now in scope for AWS SOC 2 Type II reports",
+      "summary_en": "Kiro announced that it is included in the scope of AWS SOC 2 Type II reports, giving security, procurement and vendor-risk teams independently audited evidence for evaluations. The announcement does not detail covered services, controls or exceptions.",
+      "key_points_en": [
+        "Kiro is included in AWS SOC 2 Type II report scope.",
+        "Security, procurement and vendor-risk teams can use the independently audited evidence.",
+        "The announcement does not detail service boundaries, controls or audit exceptions."
+      ],
+      "importance_reason_en": "Inclusion in audit scope supports enterprise vendor assessment, although exact coverage still requires reviewing the report.",
+      "published_at": "2026-11-25",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:30:06+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/general/kiro-is-now-in-scope-for-aws-soc-reports",
+          "url": "https://kiro.dev/changelog/general/kiro-is-now-in-scope-for-aws-soc-reports",
+          "collected_at": "2026-11-26T15:30:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-credit-pooling-limits-20261125",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "pricing"
+      ],
+      "title_zh": "Kiro Enterprise 增加额度池上限与超额控制",
+      "summary_zh": "Kiro Enterprise 管理员现可在 Controls 设置额度池的用量上限和超额开关。creditpool.usagelimit 可限制每用户每计费周期使用的池内 credits；优先级为用户自身设置、用户所属组中的最高限额、profile 默认值。profile 控制项可统一开关整个账户的超额。",
+      "key_points_zh": [
+        "creditpool.usagelimit 可设置每用户每计费周期的池内 credits 上限。",
+        "限额优先级为用户自身设置、所属组中的最高限额、profile 默认值。",
+        "profile 的 overages 控制可统一开关整个账户的超额。",
+        "管理员可在 Enterprise Management 的 Controls 中配置。"
+      ],
+      "importance_reason_zh": "明确限额优先级和账户级超额开关，有助于企业控制 Agent 用量与意外支出。",
+      "title_en": "Kiro Enterprise adds credit-pool limits and overage controls",
+      "summary_en": "Kiro Enterprise administrators can now set credit-pool usage limits and overage settings in Controls. creditpool.usagelimit caps pooled credits per user per billing cycle, with precedence of the user’s own limit, the highest limit among their groups and then the profile default. A profile overage control enables or disables overages account-wide.",
+      "key_points_en": [
+        "creditpool.usagelimit caps pooled credits per user per billing cycle.",
+        "Precedence is the user’s own limit, the highest limit among their groups and then the profile default.",
+        "A profile overage control enables or disables overages for the whole account.",
+        "Administrators configure these controls in Enterprise Management."
+      ],
+      "importance_reason_en": "Clear limit precedence and account-wide overage controls help enterprises manage Agent usage and unexpected spending.",
+      "published_at": "2026-11-25",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:30:06+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/general/enterprise-management-credit-pooling-controls",
+          "url": "https://kiro.dev/changelog/general/enterprise-management-credit-pooling-controls",
+          "collected_at": "2026-11-26T15:30:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "qoder-0-5-20-20261125",
+      "entity_ids": [
+        "qoder"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Qoder 0.5.20 支持桌面云任务与跨设备文件协作",
+      "summary_zh": "Qoder 0.5.20 允许在桌面端创建或继续云任务、查看进度和生成文件，并按权限从已连接设备下载工作区文件及管理该设备自动化。本地未完成任务可在退出或更新后恢复；企业可限制托管设备仅登录批准组织的企业账号。",
+      "key_points_zh": [
+        "桌面端支持创建或继续云任务、跟踪进度和查看生成文件。",
+        "跨设备协作支持下载连接设备的工作区文件，并按权限管理其自动化。",
+        "退出或更新 Qoder 后，可恢复符合条件的本地未完成任务。",
+        "企业管理员可限制托管设备仅使用批准组织的企业账号登录。",
+        "修复插件数据迁移后安装失败、受限 Windows 环境后台服务、断线阻塞下一次自动化及远程控制消息乱序。"
+      ],
+      "importance_reason_zh": "云任务、跨设备操作和任务恢复扩大移动工作连续性，托管设备登录限制则加强企业访问控制。",
+      "title_en": "Qoder 0.5.20 adds desktop cloud tasks and cross-device file collaboration",
+      "summary_en": "Qoder 0.5.20 lets users create or continue cloud tasks in the desktop app, track progress and view generated files. Cross-device collaboration supports downloading workspace files from connected devices and managing their automations within permissions; eligible unfinished local tasks resume after quitting or updating, and managed-device sign-in can be restricted to approved enterprise organizations.",
+      "key_points_en": [
+        "The desktop app can create or continue cloud tasks, track progress and view generated files.",
+        "Cross-device collaboration downloads workspace files and manages automations on connected devices within permissions.",
+        "Eligible unfinished local tasks resume after quitting or updating Qoder.",
+        "Enterprise administrators can restrict managed-device sign-in to accounts from approved organizations.",
+        "Fixes plugin installation after data migration, background services in restricted Windows environments, disconnects blocking the next automation and out-of-order Remote Control messages."
+      ],
+      "importance_reason_en": "Cloud tasks, cross-device actions and task recovery broaden mobile work continuity, while managed-device sign-in restrictions strengthen enterprise access control.",
+      "published_at": "2026-11-25",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:35:58+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "qoder-official",
+          "content_id": "https://docs.qoder.com/release-notes/qoder#november-25-2026::0.5.20",
+          "url": "https://docs.qoder.com/release-notes/qoder#november-25-2026",
+          "collected_at": "2026-11-26T15:35:58+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "devin-2026-11-25",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "compatibility"
+      ],
+      "title_zh": "Devin 增加 Apps 元素选择与 MCP 令牌失败诊断",
+      "summary_zh": "Devin 11 月 25 日更新让会话 Browser 标签中的 Devin Apps 使用元素选择器，Review 全页增加 Fixes 标签，企业管理员可在 Creator-only 限制下以只读方式加入会话。Blueprint 支持 blobless/treeless 克隆，MCP 客户端凭据令牌请求失败会显示端点、HTTP 状态和错误码；Jira Rovo 会话可应用配置的 playbooks 并读取附件。",
+      "key_points_zh": [
+        "Devin Apps 在会话 Browser 标签中启用元素选择器。",
+        "Devin Review 全页 Fixes 标签列出 PR 修复的代码扫描发现；Creator-only 会话允许企业管理员只读加入。",
+        "Blueprint 的 clone.filter 支持 blob:none 或 tree:none，加快初始克隆。",
+        "MCP OAuth 客户端凭据令牌失败会显示端点、状态码、错误码和 token not issued，而不再误报成功。",
+        "Jira Rovo 中提及或指派 @Devin 的会话会应用配置的 playbooks 并接收工作项附件。"
+      ],
+      "importance_reason_zh": "更新改善应用调试、审查可见性和集成故障诊断，同时扩展 Jira 自动化上下文。",
+      "title_en": "Devin adds Apps element picking and MCP token-failure diagnostics",
+      "summary_en": "Devin’s November 25 update enables the element picker for Devin Apps in a session’s Browser tab, adds a Fixes tab to the full Review page and lets enterprise admins join Creator-only sessions read-only. Blueprints support blobless or treeless clones; failed MCP OAuth client-credentials token requests now show endpoint, HTTP status and error details, and Jira Rovo sessions apply configured playbooks and receive work-item attachments.",
+      "key_points_en": [
+        "Devin Apps enable the element picker in a session’s Browser tab.",
+        "The full Review page lists code-scan fixes, and enterprise admins can join Creator-only sessions read-only.",
+        "Blueprint clone.filter supports blob:none or tree:none for faster initial clones.",
+        "Failed MCP client-credentials token requests show the endpoint, status, error code and token-not-issued state instead of reporting success.",
+        "Jira Rovo sessions that mention or assign @Devin apply configured playbooks and receive work-item attachments."
+      ],
+      "importance_reason_en": "The update improves app debugging, review visibility and integration diagnostics while adding context for Jira automation.",
+      "published_at": "2026-11-25",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:35:59+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-25-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-25-2026",
+          "collected_at": "2026-11-26T15:35:59+00:00",
           "material_scope": "full_text"
         }
       ]
@@ -452,6 +1125,51 @@
           "content_id": "https://blog.kilo.ai/p/your-agents-instructions-are-not",
           "url": "https://blog.kilo.ai/p/your-agents-instructions-are-not",
           "collected_at": "2026-11-25T13:43:49+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kilo-agent-permission-enforcement-20261124",
+      "entity_ids": [
+        "kilo"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability",
+        "critical_fix"
+      ],
+      "title_zh": "Kilo 主张 Agent 权限必须在模型之外执行",
+      "summary_zh": "Kilo 博客总结 All Day AI 安全讨论，区分写给 Agent 的指令与系统实际授予的权限，主张在工具、支付系统和数据访问点执行限制。文章建议使用范围化批准、不可篡改记录、暂停控制、明确负责人、独立身份和到期／撤销检查，并通过对抗测试确认“系统拒绝”而非“Agent 自行放弃”。",
+      "key_points_zh": [
+        "指令只是指导，权限必须在 Agent 之外的系统中检查和执行。",
+        "批准应有金额、资源与有效期边界；读取请求或不可信文本不自动授予操作权限。",
+        "Agent 应使用独立身份，系统需保留不可编辑记录、明确负责人并在任务唤醒时重新检查撤销状态。",
+        "测试应覆盖阈值上下、拆分支付、缺席批准者、自我授权和中途暂停。",
+        "Kilo 沙箱限制写入和出站网络，但不限制文件读取，且默认关闭；官方明确它不会让 Allow Everything 变安全。"
+      ],
+      "importance_reason_zh": "文章把提示词治理与可执行授权边界区分开，对高风险 Agent 部署具有直接安全价值。",
+      "title_en": "Kilo argues Agent permissions must be enforced outside the model",
+      "summary_en": "A Kilo blog recap of All Day AI distinguishes instructions given to an Agent from permissions granted by the system and argues for enforcement at tools, payment systems and data-access points. It recommends scoped approvals, immutable records, pause controls, named owners, independent identities, expiry and revocation checks, and adversarial tests that verify the system refuses rather than the Agent choosing not to act.",
+      "key_points_en": [
+        "Instructions are guidance; limits must be checked and enforced outside the Agent.",
+        "Approvals need amount, resource and time boundaries; reading a request or untrusted text does not grant authority to act.",
+        "Agents need independent identities, immutable records, named owners and fresh revocation checks when tasks wake.",
+        "Tests should cover threshold boundaries, split payments, absent approvers, self-approval and mid-task pauses.",
+        "Kilo’s sandbox limits writes and outbound networking but not file reads, is off by default and explicitly does not make Allow Everything safe."
+      ],
+      "importance_reason_en": "The article separates prompt governance from enforceable authorization boundaries, offering directly useful guidance for high-risk Agent deployments.",
+      "published_at": "2026-11-24T18:18:21+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:30:06+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "kilo-blog",
+          "content_id": "https://blog.kilo.ai/p/your-agents-instructions-are-not",
+          "url": "https://blog.kilo.ai/p/your-agents-instructions-are-not",
+          "collected_at": "2026-11-26T15:30:06+00:00",
           "material_scope": "full_text"
         }
       ]
@@ -613,6 +1331,52 @@
           "content_id": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-5",
           "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-5",
           "collected_at": "2026-11-25T13:43:34+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "google-antigravity-mass-spec-skills-20261124",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "availability",
+        "feature"
+      ],
+      "title_zh": "Google 为 Antigravity 推出 Mass Spec Skills 质谱解析工具",
+      "summary_zh": "Google DeepMind 与分析化学家合作推出 Mass Spec Skills，让 Antigravity 调用社区质谱工具和公开化学数据库，为化学家生成可审计的结构解析报告，现已面向普通和 Enterprise 用户开放。官方在 100 种化合物、三款模型上报告约 97% 的精确识别与验证率；无互联网或 skills 时准确率低于 4%。",
+      "key_points_zh": [
+        "Mass Spec Skills 已在 Google Antigravity 上线，Enterprise 用户可使用 Business Account 登录。",
+        "官方测试覆盖 100 种化合物和 Gemini 3.8 Flash、Gemini 4 Argon、Gemini 4 Carbon；加入 skills 后精确识别与验证约 97%，无互联网或 skills 时低于 4%。",
+        "生成 tokens 在 Flash 上减少近四倍、Argon 上减少一半、Carbon 上减少近五分之一。",
+        "镜像分子和部分同分异构体仍需色谱、离子迁移或 NMR 等额外测量；数据库中没有的新分子无法独立确认。",
+        "Google 向 1 万名科学家提供最高 Antigravity 用量等级免费六个月，滚动入驻并受资格、容量和选拔条件限制，申请已开放。"
+      ],
+      "importance_reason_zh": "这是领域工具、Agent 推理和公开数据库结合的可审计科研工作流，但评测范围和分子鉴别限制必须保留。",
+      "title_en": "Google launches Mass Spec Skills for Antigravity",
+      "summary_en": "Google DeepMind and analytical chemists launched Mass Spec Skills so Antigravity can call community mass-spectrometry tools and public chemical databases and produce auditable structure-elucidation reports. The skills are available to standard and Enterprise users. Google reports around 97% exact identification and verification across 100 compounds and three models, versus below 4% without internet or skills.",
+      "key_points_en": [
+        "Mass Spec Skills are available in Google Antigravity, including Enterprise access through a Business Account.",
+        "Official tests covered 100 compounds with Gemini 3.8 Flash, Gemini 4 Argon and Gemini 4 Carbon; exact identification and verification reached around 97% with skills versus below 4% without internet or skills.",
+        "Generated tokens fell by nearly 4x on Flash, half on Argon and nearly one-fifth on Carbon.",
+        "Mirror-image molecules and some isomers still need chromatography, ion mobility or NMR; genuinely new molecules absent from databases cannot be independently confirmed.",
+        "Google is offering 10,000 scientists the highest Antigravity usage tier free for six months, with rolling onboarding subject to eligibility, capacity and selection; applications are open."
+      ],
+      "importance_reason_en": "This is an auditable scientific workflow combining domain tools, Agent reasoning and public databases, but its evaluation scope and molecular-identification limits must remain explicit.",
+      "published_at": "2026-11-24T13:07:53+00:00",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:35:51+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "google-official",
+          "content_id": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
+          "url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
+          "collected_at": "2026-11-26T15:35:51+00:00",
           "material_scope": "full_text"
         }
       ]
@@ -1083,50 +1847,6 @@
       ]
     },
     {
-      "id": "kiro-cli-3-6-20261124",
-      "entity_ids": [
-        "kiro"
-      ],
-      "kind": "update",
-      "topics": [
-        "feature",
-        "compatibility",
-        "availability"
-      ],
-      "title_zh": "Kiro CLI 3.6 增加 SubagentStop Hook 与压缩指导",
-      "summary_zh": "Kiro CLI 3.6 新增 SubagentStop hooks、完整保存的 Hook 输出和 /compact 摘要指导，并加入会话回顾、通知控制、managed V2 控制和面向所有用户的 Windows 安装器。",
-      "key_points_zh": [
-        "新增 SubagentStop hooks 和完整保存的 Hook 输出。",
-        "新增 /compact 摘要指导和会话回顾。",
-        "加入通知控制与 managed V2 控制。",
-        "提供面向所有用户的 Windows 安装器。"
-      ],
-      "importance_reason_zh": "子代理停止 Hook 和企业管理控制影响自动化生命周期与管理方式，Windows 安装器则扩大部署覆盖面。",
-      "title_en": "Kiro CLI 3.6 adds SubagentStop hooks and compaction guidance",
-      "summary_en": "Kiro CLI 3.6 adds SubagentStop hooks, full saved Hook output and instructions for /compact summaries, along with conversation recaps, notification controls, managed V2 controls and a Windows installer for all users.",
-      "key_points_en": [
-        "Adds SubagentStop hooks and full saved Hook output.",
-        "Adds instructions for /compact summaries and conversation recaps.",
-        "Adds notification controls and managed V2 controls.",
-        "Provides a Windows installer for all users."
-      ],
-      "importance_reason_en": "Subagent-stop hooks and managed controls affect automation lifecycle and administration, while the Windows installer broadens deployment options.",
-      "published_at": "2026-11-24",
-      "date_precision": "date",
-      "date_kind": "published",
-      "first_collected_at": "2026-11-25T13:43:49+00:00",
-      "updated_at": "2026-11-25T14:40:20Z",
-      "sources": [
-        {
-          "source_id": "kiro-changelog",
-          "content_id": "https://kiro.dev/changelog/cli/3-6",
-          "url": "https://kiro.dev/changelog/cli/3-6",
-          "collected_at": "2026-11-25T13:43:49+00:00",
-          "material_scope": "partial_text"
-        }
-      ]
-    },
-    {
       "id": "kiro-enterprise-iphone-20261124",
       "entity_ids": [
         "kiro"
@@ -1221,6 +1941,98 @@
       ]
     },
     {
+      "id": "devin-2026-11-24",
+      "entity_ids": [
+        "devin"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "critical_fix",
+        "capability"
+      ],
+      "title_zh": "Devin 加强 Bot 自动化审批与安全扫描工作流",
+      "summary_zh": "Devin 11 月 24 日更新允许企业要求 Bot 保存自动化前获得人工批准，并为 Findings 增加可分享筛选视图、Pending 状态和逐次扫描标签。Split scan 会先构建威胁模型再按仓库扫描；MCP 头部支持引用已保存密钥，自动化列表筛选可写入分享链接。",
+      "key_points_zh": [
+        "企业 Trigger policies 可要求每个 Bot 保存自身自动化前获得人工批准。",
+        "Findings 支持分享并更新筛选视图、Pending 状态和每次扫描运行的独立标签。",
+        "Split scan 先建立威胁模型，再为每个仓库启动扫描。",
+        "MCP 头部输入 $ 时可建议并插入已保存密钥的引用。",
+        "自动化筛选条件保存在 URL，复制链接可打开相同筛选列表。"
+      ],
+      "importance_reason_zh": "自动化人工审批、威胁模型优先和密钥引用直接改善企业 Agent 的变更控制与安全边界。",
+      "title_en": "Devin strengthens Bot automation approvals and security-scan workflows",
+      "summary_en": "Devin’s November 24 update lets enterprises require human approval before Bots save their own automations and adds shareable Findings filters, a Pending state and per-run scan tabs. Split scans build a threat model before scanning each repository; MCP headers can reference saved secrets, and automation filters are preserved in shareable URLs.",
+      "key_points_en": [
+        "Enterprise Trigger policies can require human approval before each Bot saves its own automations.",
+        "Findings support shareable and updatable filtered views, a Pending state and separate tabs for each scan run.",
+        "Split scans build a threat model before launching one scan per repository.",
+        "Typing $ in an MCP header suggests and inserts saved-secret references.",
+        "Automation filters are stored in the URL so copied links reopen the same filtered list."
+      ],
+      "importance_reason_en": "Human approval for automation changes, threat-model-first scanning and secret references directly improve enterprise Agent change control and security boundaries.",
+      "published_at": "2026-11-24",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:35:59+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "devin-changelog",
+          "content_id": "https://docs.devin.ai/release-notes/overview#november-24-2026",
+          "url": "https://docs.devin.ai/release-notes/overview#november-24-2026",
+          "collected_at": "2026-11-26T15:35:59+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt6-cyber-linux-kernel-20261123",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "critical_fix"
+      ],
+      "title_zh": "OpenAI 称 GPT-6 Cyber 单次验证 948 个 Linux 内核漏洞",
+      "summary_zh": "OpenAI 表示，GPT-6 Cyber 在一次运行中验证了 948 个可能导致本地 root 权限的 Linux 内核漏洞，并生成可审查补丁；研究人员与内核维护者合作，将修复提交上游。现有帖子只有简短说明，未包含完整方法、漏洞分布或独立复核结果。",
+      "key_points_zh": [
+        "官方称单次运行验证 948 个 Linux 内核漏洞。",
+        "这些漏洞可能导致本地 root 权限，并生成了可供审查的补丁。",
+        "研究人员与维护者合作，将修复方案提交到上游代码。",
+        "导入材料为部分文本，不能据此确认完整测试方法、修复率或独立验证结论。"
+      ],
+      "importance_reason_zh": "这是模型用于真实内核安全审计与上游修复的一手进展，但重大安全结论仍需完整研究和社区复核。",
+      "title_en": "OpenAI says GPT-6 Cyber validated 948 Linux kernel vulnerabilities in one run",
+      "summary_en": "OpenAI says GPT-6 Cyber validated 948 Linux kernel vulnerabilities that could enable local root access in a single run and produced reviewable patches. Researchers worked with maintainers to submit fixes upstream. The available post is brief and does not provide the full method, vulnerability breakdown or independent verification.",
+      "key_points_en": [
+        "OpenAI says one run validated 948 Linux kernel vulnerabilities.",
+        "The vulnerabilities could enable local root access, and reviewable patches were generated.",
+        "Researchers worked with maintainers to submit fixes upstream.",
+        "The imported material is partial text, so it does not establish the full test method, fix rate or independent verification."
+      ],
+      "importance_reason_en": "This is first-hand progress in applying the model to real kernel auditing and upstream fixes, but major security claims still need full research and community review.",
+      "published_at": "2026-11-23T23:25:45.215Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2125007927098699827",
+          "url": "https://x.com/OpenAI/status/2125007927098699827",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "related_event_ids": [
+        "gpt-6-cyber"
+      ]
+    },
+    {
       "id": "claude-code-2-1-331-20261123",
       "entity_ids": [
         "claude-code"
@@ -1304,6 +2116,135 @@
           "content_id": "https://openai.com/index/introducing-shirudo",
           "url": "https://openai.com/index/introducing-shirudo",
           "collected_at": "2026-11-24T15:18:09+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "tibo-dots-internal-work-20261123",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability",
+        "feature"
+      ],
+      "title_zh": "Tibo 称 dots 正成为 OpenAI 内部主要工作方式",
+      "summary_zh": "Tibo 表示，在 OpenAI 内部，dots 正迅速成为完成工作的主要方式，并出现“dots building the dots system”的现象。帖子没有给出采用范围、效率数据或具体功能，属于负责人对内部使用状态的一手描述。",
+      "key_points_zh": [
+        "Tibo 表示 dots 正迅速成为 OpenAI 内部的主要工作方式。",
+        "他提到 dots 正在构建 dots 系统本身。",
+        "原帖未提供用户规模、效率指标或具体实现细节。"
+      ],
+      "importance_reason_zh": "负责人直接描述 AI 产品在研发组织内的使用变化，但不应补写未披露的采用数据。",
+      "title_en": "Tibo says dots are becoming OpenAI’s primary internal way of working",
+      "summary_en": "Tibo says dots are quickly becoming the primary way work gets done inside OpenAI and describes “dots building the dots system.” The post provides no adoption numbers, efficiency metrics or implementation details and is a first-hand account of internal product use.",
+      "key_points_en": [
+        "Tibo says dots are quickly becoming the primary way work gets done inside OpenAI.",
+        "He says dots are building the dots system itself.",
+        "The post provides no adoption scale, efficiency metrics or implementation details."
+      ],
+      "importance_reason_en": "A responsible person directly describes changing use of an AI product inside the development organization, without disclosing adoption data that can be quantified.",
+      "published_at": "2026-11-23T17:48:30.147Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2124923055072043052",
+          "url": "https://x.com/thsottiaux/status/2124923055072043052",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-business-double-usage-20261123",
+      "entity_ids": [
+        "openai",
+        "codex"
+      ],
+      "kind": "update",
+      "topics": [
+        "pricing",
+        "availability"
+      ],
+      "title_zh": "Tibo 宣布新 ChatGPT Business 工作区可获双倍包含用量",
+      "summary_zh": "Tibo 表示，11 月 30 日前创建的新 ChatGPT Business 工作区，其所有席位类型在 12 月 31 日前可获得双倍包含用量；已有 Business 用户也将获得后续礼物，但帖子没有说明形式、额度或资格细节。",
+      "key_points_zh": [
+        "11 月 30 日前创建的新 ChatGPT Business 工作区可参与。",
+        "所有席位类型在 12 月 31 日前获得双倍包含用量。",
+        "已有 Business 用户将获得后续礼物，但具体内容和时间未披露。",
+        "帖子没有给出时区、额度上限或更详细资格条件。"
+      ],
+      "importance_reason_zh": "明确的席位范围和优惠窗口影响团队采购与用量规划，但完整条款仍待官方说明。",
+      "title_en": "Tibo announces double included usage for new ChatGPT Business workspaces",
+      "summary_en": "Tibo says new ChatGPT Business workspaces created by November 30 receive double included usage for every seat type through December 31. Existing Business users will also receive a later gift, but the post does not specify its form, amount or eligibility details.",
+      "key_points_en": [
+        "New ChatGPT Business workspaces created by November 30 are eligible.",
+        "Every seat type receives double included usage through December 31.",
+        "Existing Business users will receive a later gift, but its content and timing are unspecified.",
+        "The post gives no timezone, usage cap or detailed eligibility terms."
+      ],
+      "importance_reason_en": "The stated seat scope and promotion window affect team purchasing and usage planning, although full terms still need official clarification.",
+      "published_at": "2026-11-23T17:45:33.228Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "tibo-x",
+          "content_id": "https://x.com/thsottiaux/status/2124922313019953319",
+          "url": "https://x.com/thsottiaux/status/2124922313019953319",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "openai-openworks-small-business-20261123",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "OpenAI 推出 OpenWorks，资助本地 AI 专家帮助小企业",
+      "summary_zh": "OpenAI 宣布通过新项目 OpenWorks 资助本地 AI 专家，免费帮助小企业发展业务所需的工具和技能，并邀请愿意教学的 AI 专家及希望学习应用 AI 的小企业主参与。帖子未提供资助金额、地区范围或申请时间。",
+      "key_points_zh": [
+        "OpenWorks 由 OpenAI 资助本地 AI 专家。",
+        "受助小企业免费获得工具和技能支持。",
+        "项目同时邀请 AI 专家与希望学习实施 AI 的小企业主。",
+        "现有材料未说明资助金额、覆盖地区、选拔方式或截止日期。"
+      ],
+      "importance_reason_zh": "项目把 AI 能力建设延伸到本地专家和小企业，但实际覆盖与申请条件仍待补充。",
+      "title_en": "OpenAI launches OpenWorks to fund local AI experts for small businesses",
+      "summary_en": "OpenAI announced OpenWorks, a program that funds local AI experts to help small businesses develop the tools and skills they need at no cost. It invites AI experts who enjoy teaching and small-business owners who want to learn to implement AI. The post does not state funding amounts, regions, selection criteria or deadlines.",
+      "key_points_en": [
+        "OpenWorks funds local AI experts through OpenAI.",
+        "Small businesses receive tool and skills support at no cost.",
+        "The program invites both AI experts and small-business owners who want to learn AI implementation.",
+        "The available material does not state funding amounts, regions, selection criteria or deadlines."
+      ],
+      "importance_reason_en": "The program extends AI capability-building to local experts and small businesses, although coverage and application terms remain unspecified.",
+      "published_at": "2026-11-23T17:44:50.438Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2124922133545714160",
+          "url": "https://x.com/OpenAI/status/2124922133545714160",
+          "collected_at": "2026-11-26T15:52:55+00:00",
           "material_scope": "partial_text"
         }
       ]
@@ -1533,6 +2474,58 @@
           "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
           "collected_at": "2026-11-23T13:54:51+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "kiro-cli-3-6-20261124",
+      "entity_ids": [
+        "kiro"
+      ],
+      "kind": "update",
+      "topics": [
+        "feature",
+        "compatibility",
+        "availability"
+      ],
+      "title_zh": "Kiro CLI 3.6 增加 SubagentStop Hook 与压缩指导",
+      "summary_zh": "Kiro CLI 3.6 新增 SubagentStop hooks、完整保存的 Hook 输出和 /compact 摘要指导，并加入会话回顾、通知控制、managed V2 控制和面向所有用户的 Windows 安装器。",
+      "key_points_zh": [
+        "新增 SubagentStop hooks 和完整保存的 Hook 输出。",
+        "新增 /compact 摘要指导和会话回顾。",
+        "加入通知控制与 managed V2 控制。",
+        "提供面向所有用户的 Windows 安装器。"
+      ],
+      "importance_reason_zh": "子代理停止 Hook 和企业管理控制影响自动化生命周期与管理方式，Windows 安装器则扩大部署覆盖面。",
+      "title_en": "Kiro CLI 3.6 adds SubagentStop hooks and compaction guidance",
+      "summary_en": "Kiro CLI 3.6 adds SubagentStop hooks, full saved Hook output and instructions for /compact summaries, along with conversation recaps, notification controls, managed V2 controls and a Windows installer for all users.",
+      "key_points_en": [
+        "Adds SubagentStop hooks and full saved Hook output.",
+        "Adds instructions for /compact summaries and conversation recaps.",
+        "Adds notification controls and managed V2 controls.",
+        "Provides a Windows installer for all users."
+      ],
+      "importance_reason_en": "Subagent-stop hooks and managed controls affect automation lifecycle and administration, while the Windows installer broadens deployment options.",
+      "published_at": "2026-11-23",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-25T13:43:49+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "kiro-changelog",
+          "content_id": "https://kiro.dev/changelog/cli/3-6",
+          "url": "https://kiro.dev/changelog/cli/3-6",
+          "collected_at": "2026-11-26T15:30:06+00:00",
+          "material_scope": "partial_text"
+        }
+      ],
+      "corrections": [
+        {
+          "at": "2026-11-26T16:17:50Z",
+          "reason_zh": "根据同一官方页面的新材料将发布日期由 2026-11-24 更正为页面显示的 2026-11-23；功能内容不变。",
+          "reason_en": "Corrected the publication date from November 24 to November 23, 2026 as shown on the same official page; the feature content is unchanged.",
+          "url": "https://kiro.dev/changelog/cli/3-6"
         }
       ]
     },
@@ -2078,6 +3071,46 @@
       ]
     },
     {
+      "id": "openai-neurodegenerative-research-20261120",
+      "entity_ids": [
+        "openai"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "OpenAI 介绍与 PerturbAI 和 Scripps Research 的神经退行性疾病研究",
+      "summary_zh": "OpenAI 表示，AI 正在帮助科学家发现用于理解和治疗神经退行性疾病的新线索，并介绍了与 PerturbAI 和 Scripps Research 的脑研究合作。帖子没有给出具体疾病、实验数据、候选药物或临床结论，不能将其表述为已验证疗法。",
+      "key_points_zh": [
+        "OpenAI 称 AI 有助于发现神经退行性疾病研究与治疗的新线索。",
+        "合作方包括 PerturbAI 和 Scripps Research，方向涉及脑研究。",
+        "现有部分文本未提供疾病名称、实验指标、候选结果或临床验证。"
+      ],
+      "importance_reason_zh": "这是 AI 辅助脑科学合作的一手进展，但证据仅限合作描述，不能外推为治疗突破。",
+      "title_en": "OpenAI describes neurodegenerative-disease research with PerturbAI and Scripps Research",
+      "summary_en": "OpenAI says AI is helping scientists find new leads for understanding and treating neurodegenerative diseases and describes brain research with PerturbAI and Scripps Research. The post gives no specific disease, experimental data, drug candidates or clinical conclusions, so it does not establish a validated therapy.",
+      "key_points_en": [
+        "OpenAI says AI is helping find new leads for neurodegenerative-disease research and treatment.",
+        "Collaborators include PerturbAI and Scripps Research, with work involving brain research.",
+        "The available partial text gives no disease name, experimental metrics, candidate results or clinical validation."
+      ],
+      "importance_reason_en": "This is first-hand progress in AI-assisted brain research, but the evidence is limited to a collaboration description and does not establish a treatment breakthrough.",
+      "published_at": "2026-11-20T22:00:53.321Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "openai-x",
+          "content_id": "https://x.com/OpenAI/status/2123899406550528422",
+          "url": "https://x.com/OpenAI/status/2123899406550528422",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
       "id": "demis-iso-merck-cancer-drugs-20261120",
       "entity_ids": [
         "google"
@@ -2113,6 +3146,46 @@
           "content_id": "https://x.com/demishassabis/status/2123871861843075099",
           "url": "https://x.com/demishassabis/status/2123871861843075099",
           "collected_at": "2026-11-25T14:32:34+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
+      "id": "jeff-dean-student-detention-opinion-20261120",
+      "entity_ids": [
+        "discovery-loop"
+      ],
+      "kind": "opinion",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Jeff Dean 批评拘留普林斯顿神经科学博士生不利于吸引科研人才",
+      "summary_zh": "Jeff Dean 表示，一名普林斯顿大学博士生在会议结束返回途中被拘留，无助于吸引全球优秀科学家来到美国，并希望问题尽快解决。帖子链接了相关报道，但导入文本没有提供完整身份、调查状态或处理结果。",
+      "key_points_zh": [
+        "Jeff Dean 对一名普林斯顿神经科学博士生被拘留表达批评。",
+        "他认为这种做法不利于吸引全球优秀科学家赴美。",
+        "原帖没有给出完整身份、调查状态或后续处理结果。"
+      ],
+      "importance_reason_zh": "这是 AI 科研负责人对人才流动政策的一手观点，关系到美国吸引研究人才的环境。",
+      "title_en": "Jeff Dean criticizes student detention as harmful to attracting research talent",
+      "summary_en": "Jeff Dean said detaining a Princeton neuroscience PhD student on the way back from a conference does not help attract the world’s best scientists to the United States and expressed hope for a quick resolution. The post links to reporting, but the imported text does not provide full identity details, investigation status or outcome.",
+      "key_points_en": [
+        "Jeff Dean criticized the detention of a Princeton neuroscience PhD student.",
+        "He said the practice does not help attract the world’s best scientists to the US.",
+        "The post does not provide full identity details, investigation status or outcome."
+      ],
+      "importance_reason_en": "This is a first-hand view from an AI research leader on talent-mobility policy and the environment for attracting researchers to the US.",
+      "published_at": "2026-11-20T15:00:45.637Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "jeff-dean-x",
+          "content_id": "https://x.com/JeffDean/status/2123793677860696070",
+          "url": "https://x.com/JeffDean/status/2123793677860696070",
+          "collected_at": "2026-11-26T15:52:55+00:00",
           "material_scope": "partial_text"
         }
       ]
@@ -2871,6 +3944,46 @@
         "/code-review with no target now reviews the whole branch against the default branch."
       ],
       "importance_reason_en": "Bringing scheduled tasks and loops into one manageable panel with stopping support closes a visibility gap for long-running automation, and tighter macOS computer-use rules shrink the blast radius of automated actions."
+    },
+    {
+      "id": "jeff-dean-david-patterson-laude-20261119",
+      "entity_ids": [
+        "discovery-loop"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Jeff Dean 欢迎 David Patterson 加入 Laude Institute",
+      "summary_zh": "Jeff Dean 表示，很高兴看到前同事、好友 David Patterson 加入 Laude Institute。帖子未说明 Patterson 的具体职务、研究计划或机构未来项目。",
+      "key_points_zh": [
+        "David Patterson 已加入 Laude Institute。",
+        "Jeff Dean 称其为前同事和好友。",
+        "现有帖子没有披露具体角色、研究项目或时间表。"
+      ],
+      "importance_reason_zh": "计算机体系结构领域重要研究者加入新的开放科学机构，是 AI 科研生态的人事进展。",
+      "title_en": "Jeff Dean welcomes David Patterson to Laude Institute",
+      "summary_en": "Jeff Dean said he was glad to see his former colleague and friend David Patterson join Laude Institute. The post does not specify Patterson’s role, research plans or the institute’s upcoming projects.",
+      "key_points_en": [
+        "David Patterson has joined Laude Institute.",
+        "Jeff Dean described him as a former colleague and friend.",
+        "The post does not disclose a specific role, research project or timeline."
+      ],
+      "importance_reason_en": "A prominent computer-architecture researcher joining an open-science institute is a personnel development in the AI research ecosystem.",
+      "published_at": "2026-11-19T20:58:31.529Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "jeff-dean-x",
+          "content_id": "https://x.com/JeffDean/status/2123521324471795785",
+          "url": "https://x.com/JeffDean/status/2123521324471795785",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
     },
     {
       "id": "hermes-v0232",
@@ -4516,6 +5629,56 @@
       ]
     },
     {
+      "id": "isomorphic-labs-5-billion-funding-20261117",
+      "entity_ids": [
+        "google"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "availability"
+      ],
+      "title_zh": "Demis Hassabis 宣布 Isomorphic Labs 获得 50 亿美元融资",
+      "summary_zh": "Demis Hassabis 宣布 Isomorphic Labs 获得 50 亿美元融资支持，以加速其利用 AI 从基础原理重新设计药物、应对“解决所有疾病”使命的研发。他同时提及 Greenoaks、Sequoia、Andreessen Horowitz 等新投资者及现有投资者；帖子未披露估值、资金用途拆分或具体临床时间表。",
+      "key_points_zh": [
+        "Isomorphic Labs 获得 50 亿美元融资支持。",
+        "资金用于加速 AI 药物设计及“解决所有疾病”的研发使命。",
+        "Demis Hassabis 提及 Greenoaks、Sequoia、Andreessen Horowitz 等投资者。",
+        "现有材料未给出估值、资金分配、管线里程碑或临床结果。"
+      ],
+      "importance_reason_zh": "大规模融资为 AI 原生药物研发提供资源信号，但研发目标和实际临床进展仍需区分。",
+      "title_en": "Demis Hassabis announces $5 billion in funding for Isomorphic Labs",
+      "summary_en": "Demis Hassabis announced $5 billion in funding for Isomorphic Labs to accelerate its mission of using AI to redesign drugs from first principles toward “solving all diseases.” He named Greenoaks, Sequoia, Andreessen Horowitz and other new and existing investors; the posts do not disclose valuation, use-of-funds breakdown or clinical timelines.",
+      "key_points_en": [
+        "Isomorphic Labs received $5 billion in funding.",
+        "The funding supports its AI drug-design mission of “solving all diseases.”",
+        "Demis Hassabis named Greenoaks, Sequoia, Andreessen Horowitz and other investors.",
+        "The available material gives no valuation, allocation, pipeline milestones or clinical results."
+      ],
+      "importance_reason_en": "The large funding round signals resources for AI-native drug discovery, but research ambitions must remain distinct from actual clinical progress.",
+      "published_at": "2026-11-17T12:06:19.563Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2122662616367853670",
+          "url": "https://x.com/demishassabis/status/2122662616367853670",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
+        },
+        {
+          "source_id": "demis-hassabis-x",
+          "content_id": "https://x.com/demishassabis/status/2122662619614236909",
+          "url": "https://x.com/demishassabis/status/2122662619614236909",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
+        }
+      ]
+    },
+    {
       "id": "chatgpt-for-sales-20261117",
       "entity_ids": [
         "openai"
@@ -5820,6 +6983,50 @@
       "date_kind": "published"
     },
     {
+      "id": "siliconflow-guangdong-token-platform-20261114",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "availability",
+        "capability",
+        "feature"
+      ],
+      "title_zh": "硅基流动加入广东词元交易平台并介绍 AI 网关运营能力",
+      "summary_zh": "硅基流动公告称，公司参与全国首个省级词元交易平台“湾数·元启”的发布与聚合服务商入驻签约。其 AI 智能网关提供多模型统一代理、六种协同路由策略、租户／项目／成员治理、调用链观测与计量计费，并可与异构算力纳管、推理框架和 MaaS 平台组合。",
+      "key_points_zh": [
+        "“湾数·元启”于 11 月 11 日在广州发布，硅基流动参与聚合服务商入驻签约。",
+        "AI 网关支持多模型统一代理、API 统一管理和六种协同智能路由策略。",
+        "网关提供租户、项目、成员层级治理，以及模型性能、调用链和计量计费能力。",
+        "联合运营主张先用外部模型供给验证交付、计费与回款，再按真实需求建设自建产能。"
+      ],
+      "importance_reason_zh": "省级 Token 交易平台和可计量网关为算力资源转向 Token 服务运营提供了具体落地路径。",
+      "title_en": "SiliconFlow joins Guangdong Token platform and details AI gateway operations",
+      "summary_en": "SiliconFlow says it participated in the launch of “Bay Data · Yuanqi,” described as China’s first provincial Token trading platform, and signed on as an aggregation service provider. Its AI gateway offers unified multi-model proxying, six coordinated routing strategies, tenant/project/member governance, trace observability and metering, and can be combined with heterogeneous compute management, inference engines and MaaS platforms.",
+      "key_points_en": [
+        "Bay Data · Yuanqi launched in Guangzhou on November 11, with SiliconFlow joining the aggregation-provider signup.",
+        "The AI gateway provides unified multi-model proxying, API management and six coordinated routing strategies.",
+        "It offers tenant, project and member governance plus model-performance, trace and metering/billing visibility.",
+        "The joint-operation approach validates delivery, billing and collection with external model supply before building dedicated capacity around real demand."
+      ],
+      "importance_reason_en": "The provincial Token platform and metered gateway provide a concrete path for converting compute resources into operable Token services.",
+      "published_at": "2026-11-14",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:50:05+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://siliconflow.cn/news/c0s3u0arcih6unvdv4s9m2wy",
+          "url": "https://siliconflow.cn/news/c0s3u0arcih6unvdv4s9m2wy",
+          "collected_at": "2026-11-26T15:50:05+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "claude-code-2-1-325-20261113",
       "entity_ids": [
         "claude-code"
@@ -6618,6 +7825,49 @@
         "Local deployment can keep interaction data inside the enterprise intranet."
       ],
       "importance_reason_en": "The articles disclose the API data lifecycle, metadata scope and troubleshooting trade-offs of not retaining interactions, which matter for enterprise data-governance and security assessments."
+    },
+    {
+      "id": "siliconflow-token-data-security-20261113",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "compatibility"
+      ],
+      "title_zh": "硅基流动说明 Token 服务数据留存与私有部署边界",
+      "summary_zh": "硅基流动表示，模型名称、Token 消耗、请求时间和状态码等运维计费元数据会持久化；提示词和输出等交互数据未经授权不会持久化，也不用于预训练、微调或其他商业用途。故障排查可能需要用户主动提供 trace_id 和复现数据；本地部署可让交互数据留在企业内网。",
+      "key_points_zh": [
+        "运维与计费元数据会持久化，用于计费、安全审计和服务改进。",
+        "交互数据未经授权不会持久化，也不用于预训练、微调或其他商业用途；授权存储时会加密。",
+        "请求结束后交互数据从计算节点和网关释放；内容相关排错需用户授权并提供复现输入输出。",
+        "本地部署支持把推理引擎和算力编排系统放入企业数据中心，交互数据不离开内网。"
+      ],
+      "importance_reason_zh": "明确元数据、交互数据和私有部署的处理边界，有助于企业做数据合规与供应商评估。",
+      "title_en": "SiliconFlow details Token-service data retention and private deployment",
+      "summary_en": "SiliconFlow says operational and billing metadata such as model name, Token usage, request time and status code are persisted. Prompts and outputs are not persisted without authorization or used for pretraining, fine-tuning or other commercial purposes, and authorized storage is encrypted. Content-related debugging may require user-provided traces and reproduction data; local deployment keeps interactions inside the enterprise network.",
+      "key_points_en": [
+        "Operational and billing metadata are persisted for billing, security audits and service improvement.",
+        "Interaction data is not persisted without authorization or used for pretraining, fine-tuning or other commercial purposes; authorized storage is encrypted.",
+        "Interaction data is released from compute nodes and gateways after requests, while content debugging requires authorized reproduction inputs and outputs.",
+        "Local deployment places inference engines and compute orchestration in the enterprise data center so interactions remain on the internal network."
+      ],
+      "importance_reason_en": "Clear boundaries for metadata, interaction data and private deployment support enterprise compliance and vendor assessment.",
+      "published_at": "2026-11-13",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:50:05+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://siliconflow.cn/news/rnhm85zzx3pigl0zhul8tdqz",
+          "url": "https://siliconflow.cn/news/rnhm85zzx3pigl0zhul8tdqz",
+          "collected_at": "2026-11-26T15:50:05+00:00",
+          "material_scope": "full_text"
+        }
+      ]
     },
     {
       "id": "copilot-cli-1-0-110-20261112",
@@ -8740,6 +9990,52 @@
       ]
     },
     {
+      "id": "siliconflow-token-factory-tokenplus-20261107",
+      "entity_ids": [
+        "siliconflow"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability",
+        "feature",
+        "availability"
+      ],
+      "title_zh": "硅基流动介绍 Token 工厂调度优化与 TokenPlus",
+      "summary_zh": "硅基流动在行业演讲中介绍 Token 工厂的产能、利用率和价格经营方法，包括预填充／解码分离、国产与英伟达芯片混合调度、模型加载优化及 TokenPlus 合作模式。公司称模型启动可从约 30 分钟缩短到一分钟以内，并披露注册用户超过 1,000 万、企业客户超过 13,000 家。",
+      "key_points_zh": [
+        "Token 工厂以产能、利用率和价格衡量竞争力，强调按流量弹性扩缩容。",
+        "采用预填充／解码分离，并探索按任务混合使用国产芯片与英伟达芯片。",
+        "公司称模型加载优化可将启动时间从约 30 分钟缩短到一分钟以内。",
+        "TokenPlus 旨在帮助算力公司建设 Token 工厂能力并连接企业、模型公司和海外客户。",
+        "注册用户超过 1,000 万、企业客户超过 13,000 家，均为公司披露数据。"
+      ],
+      "importance_reason_zh": "具体调度与加载优化为推理成本控制提供工程路径，TokenPlus 则扩展算力合作伙伴的运营模式。",
+      "title_en": "SiliconFlow details Token factory scheduling and TokenPlus",
+      "summary_en": "SiliconFlow described Token factory operations around capacity, utilization and pricing, including prefill/decode separation, mixed domestic and NVIDIA chip scheduling, model-loading optimization and the TokenPlus partnership model. The company claims model startup can fall from about 30 minutes to under one minute and reports more than 10 million registered users and 13,000 enterprise customers.",
+      "key_points_en": [
+        "Token factories are evaluated on capacity, utilization and price, with elastic scaling for changing traffic.",
+        "The platform separates prefill and decode and explores mixing domestic and NVIDIA chips by task.",
+        "The company claims model-loading optimization can cut startup from about 30 minutes to under one minute.",
+        "TokenPlus helps compute providers build Token factory capabilities and connect with enterprises, model companies and overseas customers.",
+        "The figures of more than 10 million registered users and 13,000 enterprise customers are company disclosures."
+      ],
+      "importance_reason_en": "Concrete scheduling and loading optimizations offer engineering paths to lower inference costs, while TokenPlus expands the operating model for compute partners.",
+      "published_at": "2026-11-07",
+      "date_precision": "date",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:50:05+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "siliconflow-news",
+          "content_id": "https://siliconflow.cn/news/dzrl9qom37luz971sw5ctxzh",
+          "url": "https://siliconflow.cn/news/dzrl9qom37luz971sw5ctxzh",
+          "collected_at": "2026-11-26T15:50:05+00:00",
+          "material_scope": "full_text"
+        }
+      ]
+    },
+    {
       "id": "opencode-2-2-6",
       "entity_ids": [
         "opencode"
@@ -9068,6 +10364,48 @@
           "url": "https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%402.5.2",
           "collected_at": "2026-11-08T06:08:59+00:00",
           "material_scope": "full_text"
+        }
+      ]
+    },
+    {
+      "id": "jeff-dean-laude-open-science-20261106",
+      "entity_ids": [
+        "discovery-loop"
+      ],
+      "kind": "update",
+      "topics": [
+        "capability"
+      ],
+      "title_zh": "Jeff Dean 宣布与 Laude Institute 合作支持开放科学",
+      "summary_zh": "Jeff Dean 表示将与 Laude Institute 合作，并和 Sanjay Ghemawat、John Hennessy、Dave Patterson、Ben Gomes、Andy Konwinski 一起支持开放科学领域的重大项目。帖子没有列出受资助项目、金额或遴选机制。",
+      "key_points_zh": [
+        "Jeff Dean 宣布与 Laude Institute 合作。",
+        "合作者包括 Sanjay Ghemawat、John Hennessy、Dave Patterson、Ben Gomes 和 Andy Konwinski。",
+        "目标是支持开放科学领域的重大项目。",
+        "现有材料未披露具体项目、资助金额或申请机制。"
+      ],
+      "importance_reason_zh": "多位计算机科学研究者共同支持开放科学重大项目，可能影响 AI 研究的公开协作与基础设施。",
+      "title_en": "Jeff Dean announces Laude Institute collaboration for open science",
+      "summary_en": "Jeff Dean said he would collaborate with Laude Institute and work with Sanjay Ghemawat, John Hennessy, Dave Patterson, Ben Gomes and Andy Konwinski to support major open-science projects. The post does not list funded projects, amounts or selection mechanisms.",
+      "key_points_en": [
+        "Jeff Dean announced a collaboration with Laude Institute.",
+        "Collaborators include Sanjay Ghemawat, John Hennessy, Dave Patterson, Ben Gomes and Andy Konwinski.",
+        "The effort supports major open-science projects.",
+        "The available material does not disclose specific projects, funding amounts or application mechanisms."
+      ],
+      "importance_reason_en": "A group of prominent computer scientists supporting major open-science projects could influence public collaboration and infrastructure for AI research.",
+      "published_at": "2026-11-06T04:01:32.738Z",
+      "date_precision": "datetime",
+      "date_kind": "published",
+      "first_collected_at": "2026-11-26T15:52:55+00:00",
+      "updated_at": "2026-11-26T16:17:50Z",
+      "sources": [
+        {
+          "source_id": "jeff-dean-x",
+          "content_id": "https://x.com/JeffDean/status/2118554350859813374",
+          "url": "https://x.com/JeffDean/status/2118554350859813374",
+          "collected_at": "2026-11-26T15:52:55+00:00",
+          "material_scope": "partial_text"
         }
       ]
     },

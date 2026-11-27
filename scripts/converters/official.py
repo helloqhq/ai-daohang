@@ -115,7 +115,7 @@ def article_text(tree,sid):
              'dario-blog':('rich-text','w-richtext','essay-content'),
              'grok-official':('prose',), 'moonshot-official':('prose','blog-content','blog-v2-page-container'),
              'minimax-official':('prose','blog-content'), 'meta-official':('article-body',),
-             'siliconflow-news':('sf_f_md_style',)}
+             'siliconflow-news':('sf_f_md_style','markdown_content')}
     candidates=[n for n in tree.nodes() if n.tag in ('div','section','article') and any(m in n.attrs.get('class','') for m in markers.get(sid,())) and n.text()]
     # Outer containers include all rich-text blocks; exclude nested duplicates.
     selected=[n for n in candidates if not any(n is child for p in candidates if p is not n for child in p.nodes())]
@@ -308,13 +308,14 @@ def convert(source,fetch,since,until,reconcile=()):
         out=[];seen=set()
         for link in tree.nodes('a'):
             href=link.attrs.get('href','')
-            if not re.fullmatch(r'/news/[a-z0-9]+',href):continue
+            if not re.fullmatch(r'/news/[a-z0-9-]+',href):continue
             # Both the pinned card and article rows have one article and their own date label.
             card=link.parent
             while card and card.tag not in ('main','body'):
                 heading=card.first('h3')
-                labels=[n.text() for n in card.nodes('div') if re.fullmatch(r'20\d{2}-\d{2}-\d{2}',n.text())]
-                urls={a.attrs.get('href') for a in card.nodes('a') if re.fullmatch(r'/news/[a-z0-9]+',a.attrs.get('href',''))}
+                labels=[n.text() or n.attrs.get('datetime') for n in card.nodes('time')]
+                labels += [n.text() for n in card.nodes('div') if re.fullmatch(r'20\d{2}-\d{2}-\d{2}',n.text())]
+                urls={a.attrs.get('href') for a in card.nodes('a') if re.fullmatch(r'/news/[a-z0-9-]+',a.attrs.get('href',''))}
                 if heading and len(labels)==1 and urls=={href}:break
                 card=card.parent
             if not card or card.tag in ('main','body'):continue

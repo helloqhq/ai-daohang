@@ -99,16 +99,16 @@ class ConversionTests(unittest.TestCase):
 
     def test_siliconflow_pinned_news_keeps_card_dates_and_reads_only_article_body(self):
         source=self.source('siliconflow-news','https://siliconflow.cn/news')
-        index='<main><div><a href="/news/pinned"></a><h3>Pinned</h3><div>2026-09-01</div></div><article><a href="/news/latest"></a><h3>Latest</h3><p>Campaign starts 2026-10-08</p><div>2026-10-01</div></article><article><a href="/news/older"></a><h3>Older</h3><div>2026-09-29</div></article></main>'
-        detail='<article><h1>Latest</h1><div>2026-10-01 Return</div><div class="sf_f_md_style"><p>Actual details</p></div></article>'
+        index='<main><div><a href="/news/pinned"></a><h3>Pinned</h3><div>模型上新</div><time datetime="2026-08-31T17:30:00.000Z">2026-09-01</time></div><article><a href="/news/56472fa4-aaf6-4bbe-8a1e-140fa2558b7f"></a><h3>Latest</h3><p>Campaign starts 2026-10-08</p><div>企业动态</div><time datetime="2026-10-01T07:50:00.000Z">2026-10-01</time></article><article><a href="/news/older"></a><h3>Older</h3><time datetime="2026-09-29T10:00:00.000Z">2026-09-29</time></article></main>'
+        detail='<article><h1>Latest</h1><div>2026-10-01 Return</div><div class="markdown_content__jEYcJ"><p>Actual details</p></div></article>'
         requested=[]
         def fetch(url):
             requested.append(url);return index if url==source['url'] else detail
         rows=convert(source,fetch,START,END)
         self.assertEqual([r['published_at'] for r in rows],['2026-09-01','2026-10-01','2026-09-29'])
         self.assertEqual(rows[1]['text'],'Actual details');self.assertTrue(rows[1]['full'])
-        self.assertEqual(requested,[source['url'],'https://siliconflow.cn/news/latest'])
-        changed=convert(source,lambda url:index if url==source['url'] else detail.replace('sf_f_md_style','unknown-layout'),START,END)
+        self.assertEqual(requested,[source['url'],'https://siliconflow.cn/news/56472fa4-aaf6-4bbe-8a1e-140fa2558b7f'])
+        changed=convert(source,lambda url:index if url==source['url'] else detail.replace('markdown_content__jEYcJ','unknown-layout'),START,END)
         self.assertFalse(changed[1]['full']);self.assertNotIn('Return',changed[1]['text'])
 
     def test_plan_notices_never_use_campaign_dates_as_publication_dates(self):

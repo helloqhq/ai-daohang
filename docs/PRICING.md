@@ -8,6 +8,8 @@
 
 ## 数据与核验
 
+2026-11-26 读取官方公开页面并核验目录，11-27 完成本地更新与校验：新增 Google Genie 4、Gemini Omni 1.2 Flash、B.AI Hy4 Preview、MiniMax H3-Image 两档及五个 WorldRouter 模型，共 163 项。Copilot 三档统一确认 Fusion 模型成本七折至 2026-12-31，但官方未给出截止时刻或时区，优惠保持 `pending`；OpenAI API 六档标准价重读未变，并补充 GPT-6.2 Ultrafast 优惠于 2027-02-28 Pacific 后恢复 6 倍的关系。WorldRouter 官方确认 100 Credits = 1 USD，目录仍保留 Credits 原币种；MiniMax M2.7、GLM 完整档位价、旧 Token Plan 结算价及未知截止条件不据推测填补。官方证据日期保留 2026-11-26，本地内容修改日期为 2026-11-27。
+
 2026-11-21 独立复核约 40 个官方价格 / 权益页，新增 OpenAI GPT-6.2 Astra / GPT-6.2 Sol / GPT-6.1 Terra 与 Google Gemini 4 Carbon / Neon / Hydrogen / Gemini 3.6 Flash 七项，目录共 143 项（API 71、Token Plan 19、Agent 52、聊天 1）。Mistral Large 4 于 11 月 5 日转 GA，标准价减半至 $0.7 / $2.1 / $0.07；Devin Teams 改为固定 $80/月（至多 100 名成员）；Antigravity 免费档第三方模型移除日期顺延至 11-30；MiniMax M2.7 已从官方价格页移除但保留历史价，K2 系列预告 12 月底退役，Kilo 的 MiniMax 免费优惠转待核验。77 项已有条目核验日期刷新为本轮（Mistral Large 4 与 Devin Teams 价格变化、GLM 三档与 MiniMax 旧 Token Plan 三档 pending 复核、其余 69 项价格重读未变）；59 项保留原日期。Anthropic 全部条目因地区封锁、codex Plus / Free / Go 因 Cloudflare 挑战页未核到，均保留原日期。详见 [本轮更新记录](DATA-UPDATE-2026-11-21.md)。
 
 2026-10-24 新增 Kimi K3.1 Pro / Highspeed 两个官方 API 端点，目录共 133 项。同步 Kimi 编程权益、OpenCode MiniMax M3.1 Flash 转计量及 Flint 40B 免费端点、Kiro 正式可用性与推理路由、Antigravity Pro 的 Argon 试用资格。两个 WorldRouter 旧详情页返回 404，标为待核验并保留历史价格日期。详见 [本轮更新记录](DATA-UPDATE-2026-10-24.md)。

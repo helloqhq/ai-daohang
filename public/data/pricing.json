@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-25",
+  "checked_at": "2026-11-27",
   "plans": [
     {
       "id": "gpt-6-astra",
@@ -21,8 +21,8 @@
       "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $20、输出 $75、缓存读取 $2、写入 $25。Batch / Flex 为 Standard 的 50%，Fast 为 2 倍；适用地域处理端点加价 10%，工具另计。 Astra Ultrafast 为对应 Standard 的 6 倍；短上下文输入 $60、输出 $300、缓存读取 $6、写入 $75。",
       "note_en": "Standard short-context rates. Long context per million tokens: input $20, output $75, cache reads $2, writes $25. Batch / Flex costs 50% of Standard and Fast costs 2×. Eligible regional-processing endpoints add 10%; tools bill separately. Astra Ultrafast costs 6× the applicable Standard rate: short-context input $60, output $300, cache reads $6 and writes $75.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-11-21",
-      "updated_at": "2026-10-06"
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
     },
     {
       "id": "gpt-6-1-sol",
@@ -43,8 +43,8 @@
       "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $4、输出 $15、缓存读取 $0.20、写入 $5。Batch / Flex 为 Standard 的 50%，Fast 为 2 倍；适用地域处理端点加价 10%，工具另计。 Ultrafast 为 Standard 的 6 倍；短上下文输入 $12、输出 $60、缓存读取 $0.60、写入 $15，长上下文为 $24/$90/$1.20/$30。",
       "note_en": "Standard short-context rates. Long context per million tokens: input $4, output $15, cache reads $0.20, writes $5. Batch / Flex costs 50% of Standard and Fast costs 2×. Eligible regional-processing endpoints add 10%; tools bill separately. Ultrafast costs 6× Standard: short-context input/output/cache reads/writes $12/$60/$0.60/$15; long-context $24/$90/$1.20/$30.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-11-21",
-      "updated_at": "2026-10-09"
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
     },
     {
       "id": "gpt-6-luna",
@@ -65,8 +65,8 @@
       "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $0.20、输出 $0.75、缓存读取 $0.02、写入 $0.25。Batch / Flex 为 Standard 的 50%，Fast 为 2 倍；适用地域处理端点加价 10%，工具另计。",
       "note_en": "Standard short-context rates. Long context per million tokens: input $0.20, output $0.75, cache reads $0.02, writes $0.25. Batch / Flex costs 50% of Standard and Fast costs 2×. Eligible regional-processing endpoints add 10%; tools bill separately.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-11-21",
-      "updated_at": "2026-10-06"
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
     },
     {
       "id": "claude-fable-5-2",
@@ -238,11 +238,11 @@
       },
       "scope_zh": "Standard · 2026 年内活动价",
       "scope_en": "Standard · promotional rates through 2026",
-      "note_zh": "历史活动价为输入 $0.75、输出 $3.75、缓存读取 $0.075 / 百万 tokens；输出含思考 tokens，缓存存储与搜索另计。官方弃用表确认该模型已不再在 Google AI Studio 提供，endpoint 未关闭，API 请求自动路由至 Gemini 3.8 Flash。当前 3.8 Flash 的 Standard 活动价至 2026-12-31，之后输入 $1.50、输出 $7.50、缓存读取 $0.15；定价页不再单列 3.7 Flash，本记录保留其历史价格。",
-      "note_en": "Historical promotional rates: input $0.75, output $3.75, cached $0.075 per million tokens; output includes thinking tokens, and cache storage and search cost extra. The official deprecations page confirms this model is no longer selectable in Google AI Studio, its endpoint is not shutting down, and API requests automatically route to Gemini 3.8 Flash. Current Gemini 3.8 Flash Standard promotional rates run through Dec 31, 2026, then input $1.50, output $7.50 and cached $0.15; the pricing page no longer lists Gemini 3.7 Flash separately, so this record retains its historical price.",
+      "note_zh": "历史活动价为输入 $0.75、输出 $3.75、缓存读取 $0.075 / 百万 tokens；输出含思考 tokens，缓存存储与搜索另计。官方弃用表确认该模型已不再在 Google AI Studio 提供，endpoint 未关闭，API 请求自动路由至 Gemini 3.8 Flash。当前 3.8 Flash 的 Standard 活动价至 2026-12-31，之后输入 $1.50、输出 $7.50、缓存读取 $0.15；定价页不再单列 3.7 Flash，本记录保留其历史价格。 2026-11-26 官方弃用表仍确认该 endpoint 未关闭，并自动路由至 Gemini 3.8 Flash；历史价格与原核验日期不变。",
+      "note_en": "Historical promotional rates: input $0.75, output $3.75, cached $0.075 per million tokens; output includes thinking tokens, and cache storage and search cost extra. The official deprecations page confirms this model is no longer selectable in Google AI Studio, its endpoint is not shutting down, and API requests automatically route to Gemini 3.8 Flash. Current Gemini 3.8 Flash Standard promotional rates run through Dec 31, 2026, then input $1.50, output $7.50 and cached $0.15; the pricing page no longer lists Gemini 3.7 Flash separately, so this record retains its historical price. Re-checked on 2026-11-26: the official deprecations table still confirms that the endpoint remains open and automatically routes to Gemini 3.8 Flash; historical rates and the original verification date are unchanged.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-10-17",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "valid_until": "2026-12-31"
     },
     {
@@ -264,8 +264,8 @@
       "note_zh": "活动截至 2026-12-31；之后输入 $1.50、输出 $7.50、缓存读取 $0.15 / 百万 tokens。输出含思考 tokens；缓存存储和搜索另计。",
       "note_en": "Until Dec 31, 2026; then input $1.50, output $7.50, cache reads $0.15 / million tokens. Output includes thinking; cache storage and search cost extra.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-10-21",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "valid_until": "2026-12-31",
       "offers": [
         {
@@ -277,7 +277,7 @@
             "Gemini 3.8 Flash"
           ],
           "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-          "checked_at": "2026-11-24",
+          "checked_at": "2026-11-26",
           "conditions_zh": "仅 Gemini API 免费层，输入输出免费且受服务额度限制；免费层内容可用于改进 Google 产品。付费层 token 费率、缓存和搜索等费用分别适用。",
           "conditions_en": "Applies only to the Gemini API free tier, with free input/output subject to service limits. Free-tier content may be used to improve Google products. Paid token rates, caching and search charges apply separately.",
           "eligibility_zh": "符合 Gemini API 免费层资格的账号、地区与用量。",
@@ -305,11 +305,11 @@
       },
       "scope_zh": "Standard · 付费层",
       "scope_en": "Standard · paid tier",
-      "note_zh": "历史价格为输入 $1.50、输出 $9.00、缓存读取 $0.15 / 百万 tokens；输出含思考 tokens，缓存存储与搜索另计。官方弃用表确认该模型已不再在 Google AI Studio 提供，endpoint 未关闭，API 请求自动路由至 Gemini 3.6 Flash。当前 3.6 Flash 的 Standard 活动价与 3.8 Flash 相同，至 2026-12-31；定价页不再单列 3.5 Flash，本记录保留其历史价格。",
-      "note_en": "Historical rates: input $1.50, output $9.00, cached $0.15 per million tokens; output includes thinking tokens, and cache storage and search cost extra. The official deprecations page confirms this model is no longer selectable in Google AI Studio, its endpoint is not shutting down, and API requests automatically route to Gemini 3.6 Flash. Current Gemini 3.6 Flash Standard promotional rates match Gemini 3.8 Flash through Dec 31, 2026; the pricing page no longer lists Gemini 3.5 Flash separately, so this record retains its historical price.",
+      "note_zh": "历史价格为输入 $1.50、输出 $9.00、缓存读取 $0.15 / 百万 tokens；输出含思考 tokens，缓存存储与搜索另计。官方弃用表确认该模型已不再在 Google AI Studio 提供，endpoint 未关闭，API 请求自动路由至 Gemini 3.6 Flash。当前 3.6 Flash 的 Standard 活动价与 3.8 Flash 相同，至 2026-12-31；定价页不再单列 3.5 Flash，本记录保留其历史价格。 2026-11-26 官方弃用表仍确认该 endpoint 未关闭，并自动路由至 Gemini 3.6 Flash；历史价格与原核验日期不变。",
+      "note_en": "Historical rates: input $1.50, output $9.00, cached $0.15 per million tokens; output includes thinking tokens, and cache storage and search cost extra. The official deprecations page confirms this model is no longer selectable in Google AI Studio, its endpoint is not shutting down, and API requests automatically route to Gemini 3.6 Flash. Current Gemini 3.6 Flash Standard promotional rates match Gemini 3.8 Flash through Dec 31, 2026; the pricing page no longer lists Gemini 3.5 Flash separately, so this record retains its historical price. Re-checked on 2026-11-26: the official deprecations table still confirms that the endpoint remains open and automatically routes to Gemini 3.6 Flash; historical rates and the original verification date are unchanged.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-10-17",
-      "updated_at": "2026-11-25"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "gemini-3-5-flash-lite",
@@ -330,8 +330,8 @@
       "note_zh": "输出含思考 tokens；缓存存储和搜索费用另计。",
       "note_en": "Output includes thinking tokens. Cache storage and search are billed separately.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-10-21",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "offers": [
         {
           "id": "api-free-tier",
@@ -342,7 +342,7 @@
             "Gemini 3.5 Flash-Lite"
           ],
           "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-          "checked_at": "2026-11-24",
+          "checked_at": "2026-11-26",
           "conditions_zh": "仅 Gemini API 免费层，输入输出免费且受服务额度限制；免费层内容可用于改进 Google 产品。付费层 token 费率、缓存和搜索等费用分别适用。",
           "conditions_en": "Applies only to the Gemini API free tier, with free input/output subject to service limits. Free-tier content may be used to improve Google products. Paid token rates, caching and search charges apply separately.",
           "eligibility_zh": "符合 Gemini API 免费层资格的账号、地区与用量。",
@@ -648,11 +648,11 @@
       },
       "scope_zh": "标准速度",
       "scope_en": "Standard speed",
-      "note_zh": "highspeed 版本输入 $0.60、输出 $2.40；缓存读取和写入同标准版本。 2026-11-21 官方 API 价格页已不再列出该模型；保留历史价格与原核验日期，不据此判定停服，当前可用性以平台为准。 2026-11-25 复核：官方 API 价格页仍未列出该模型，当前价格与可用性继续待核验。",
-      "note_en": "The highspeed variant charges $0.60 input and $2.40 output; cache read and write rates are unchanged. As of 2026-11-21 the official API pricing page no longer lists this model. Historical rates and their original verification date are retained, without inferring retirement; current availability follows the platform. Re-checked on 2026-11-25: the official API pricing page still omits this model; current price and availability remain unverified.",
+      "note_zh": "highspeed 版本输入 $0.60、输出 $2.40；缓存读取和写入同标准版本。 2026-11-21 官方 API 价格页已不再列出该模型；保留历史价格与原核验日期，不据此判定停服，当前可用性以平台为准。 2026-11-25 复核：官方 API 价格页仍未列出该模型，当前价格与可用性继续待核验。 2026-11-26 复核：官方 API 价格页仍未列出 M2.7；保留历史价格与 2026-10-18 核验日期，不据此判定停服。",
+      "note_en": "The highspeed variant charges $0.60 input and $2.40 output; cache read and write rates are unchanged. As of 2026-11-21 the official API pricing page no longer lists this model. Historical rates and their original verification date are retained, without inferring retirement; current availability follows the platform. Re-checked on 2026-11-25: the official API pricing page still omits this model; current price and availability remain unverified. Re-checked on 2026-11-26: the official API pricing page still omits M2.7; historical rates and the 2026-10-18 verification date are retained without inferring retirement.",
       "source_url": "https://platform.minimax.io/docs/pricing/overview",
       "checked_at": "2026-10-18",
-      "updated_at": "2026-11-25"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "kimi-k3",
@@ -711,11 +711,11 @@
       },
       "scope_zh": "已停止新购；旧订阅可按历史条件续订",
       "scope_en": "Closed to new purchases; legacy renewal terms apply",
-      "note_zh": "此前记录的标准月费为 $22，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。 2026-11-17 复核：迁移通知页仍确认上述续订、升降档与升级规则；旧档位结算价仍仅在需登录页面展示，保持待核验。  2026-11-21 复核：官方页重申 Token Plan 已停止新购，存量用户可按原价继续自动续订；旧档位结算价仍未重列，保持待核验。",
-      "note_en": "The previously recorded standard monthly fee was $22, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits. Re-checked on 2026-11-17: the migration notice still confirms the renewal, tier-change and upgrade rules above; legacy checkout prices remain visible only on the login-gated page and stay pending.  Re-checked on 2026-11-21: the official page reaffirms that the Token Plan is closed to new purchases while existing subscribers keep auto-renewal at their original price; legacy tier prices are still not restated and remain pending.",
+      "note_zh": "此前记录的标准月费为 $22，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。 2026-11-17 复核：迁移通知页仍确认上述续订、升降档与升级规则；旧档位结算价仍仅在需登录页面展示，保持待核验。  2026-11-21 复核：官方页重申 Token Plan 已停止新购，存量用户可按原价继续自动续订；旧档位结算价仍未重列，保持待核验。 2026-11-26 复核：官方迁移通知再次确认 Token Plan 停止新购；存量订阅保持自动续费即可按原价与历史权益续订，关闭后不可重新开启。旧档位结算价仍未公开，保持待核验。",
+      "note_en": "The previously recorded standard monthly fee was $22, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits. Re-checked on 2026-11-17: the migration notice still confirms the renewal, tier-change and upgrade rules above; legacy checkout prices remain visible only on the login-gated page and stay pending.  Re-checked on 2026-11-21: the official page reaffirms that the Token Plan is closed to new purchases while existing subscribers keep auto-renewal at their original price; legacy tier prices are still not restated and remain pending. Re-checked on 2026-11-26: the official migration notice again confirms that Token Plan is closed to new purchases; existing subscriptions renew at their original price and benefits while auto-renewal remains on, and it cannot be re-enabled once disabled. Legacy tier checkout prices remain unpublished and pending.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
       "checked_at": "2026-11-24",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
       "tier_name": "Plus (legacy)",
@@ -729,7 +729,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-11-25"
+      "models_checked_at": "2026-11-26"
     },
     {
       "id": "minimax-plan-max",
@@ -744,11 +744,11 @@
       },
       "scope_zh": "已停止新购；旧订阅可按历史条件续订",
       "scope_en": "Closed to new purchases; legacy renewal terms apply",
-      "note_zh": "此前记录的标准月费为 $55，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。 2026-11-17 复核：迁移通知页仍确认上述续订、升降档与升级规则；旧档位结算价仍仅在需登录页面展示，保持待核验。  2026-11-21 复核：官方页重申 Token Plan 已停止新购，存量用户可按原价继续自动续订；旧档位结算价仍未重列，保持待核验。",
-      "note_en": "The previously recorded standard monthly fee was $55, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits. Re-checked on 2026-11-17: the migration notice still confirms the renewal, tier-change and upgrade rules above; legacy checkout prices remain visible only on the login-gated page and stay pending.  Re-checked on 2026-11-21: the official page reaffirms that the Token Plan is closed to new purchases while existing subscribers keep auto-renewal at their original price; legacy tier prices are still not restated and remain pending.",
+      "note_zh": "此前记录的标准月费为 $55，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。 2026-11-17 复核：迁移通知页仍确认上述续订、升降档与升级规则；旧档位结算价仍仅在需登录页面展示，保持待核验。  2026-11-21 复核：官方页重申 Token Plan 已停止新购，存量用户可按原价继续自动续订；旧档位结算价仍未重列，保持待核验。 2026-11-26 复核：官方迁移通知再次确认 Token Plan 停止新购；存量订阅保持自动续费即可按原价与历史权益续订，关闭后不可重新开启。旧档位结算价仍未公开，保持待核验。",
+      "note_en": "The previously recorded standard monthly fee was $55, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits. Re-checked on 2026-11-17: the migration notice still confirms the renewal, tier-change and upgrade rules above; legacy checkout prices remain visible only on the login-gated page and stay pending.  Re-checked on 2026-11-21: the official page reaffirms that the Token Plan is closed to new purchases while existing subscribers keep auto-renewal at their original price; legacy tier prices are still not restated and remain pending. Re-checked on 2026-11-26: the official migration notice again confirms that Token Plan is closed to new purchases; existing subscriptions renew at their original price and benefits while auto-renewal remains on, and it cannot be re-enabled once disabled. Legacy tier checkout prices remain unpublished and pending.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
       "checked_at": "2026-11-24",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
       "tier_name": "Max (legacy)",
@@ -762,7 +762,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-11-25"
+      "models_checked_at": "2026-11-26"
     },
     {
       "id": "minimax-plan-ultra",
@@ -777,11 +777,11 @@
       },
       "scope_zh": "已停止新购；旧订阅可按历史条件续订",
       "scope_en": "Closed to new purchases; legacy renewal terms apply",
-      "note_zh": "此前记录的标准月费为 $132，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。 2026-11-17 复核：迁移通知页仍确认上述续订、升降档与升级规则；旧档位结算价仍仅在需登录页面展示，保持待核验。  2026-11-21 复核：官方页重申 Token Plan 已停止新购，存量用户可按原价继续自动续订；旧档位结算价仍未重列，保持待核验。",
-      "note_en": "The previously recorded standard monthly fee was $132, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits. Re-checked on 2026-11-17: the migration notice still confirms the renewal, tier-change and upgrade rules above; legacy checkout prices remain visible only on the login-gated page and stay pending.  Re-checked on 2026-11-21: the official page reaffirms that the Token Plan is closed to new purchases while existing subscribers keep auto-renewal at their original price; legacy tier prices are still not restated and remain pending.",
+      "note_zh": "此前记录的标准月费为 $132，仅作历史参考；本轮未重新确认旧档位结算价，当前价格待核验。旧账号按自身原价与历史优惠续订。保持自动续费可保留原权益；关闭后不可重新开启，且旧档之间不可升降档。升级 M Plan 后不能回到 Token Plan，历史 ∞ 与 150% 周额度等优惠不再适用。 2026-11-17 复核：迁移通知页仍确认上述续订、升降档与升级规则；旧档位结算价仍仅在需登录页面展示，保持待核验。  2026-11-21 复核：官方页重申 Token Plan 已停止新购，存量用户可按原价继续自动续订；旧档位结算价仍未重列，保持待核验。 2026-11-26 复核：官方迁移通知再次确认 Token Plan 停止新购；存量订阅保持自动续费即可按原价与历史权益续订，关闭后不可重新开启。旧档位结算价仍未公开，保持待核验。",
+      "note_en": "The previously recorded standard monthly fee was $132, for historical reference only. Numeric legacy checkout prices were not re-established this round and remain pending. Legacy accounts renew at their own original price and discounts. Auto-renewal preserves original benefits; once disabled it cannot be re-enabled, and legacy tiers cannot be upgraded or downgraded. Moving to M Plan is irreversible and removes historical benefits such as ∞ limits and 150% weekly limits. Re-checked on 2026-11-17: the migration notice still confirms the renewal, tier-change and upgrade rules above; legacy checkout prices remain visible only on the login-gated page and stay pending.  Re-checked on 2026-11-21: the official page reaffirms that the Token Plan is closed to new purchases while existing subscribers keep auto-renewal at their original price; legacy tier prices are still not restated and remain pending. Re-checked on 2026-11-26: the official migration notice again confirms that Token Plan is closed to new purchases; existing subscriptions renew at their original price and benefits while auto-renewal remains on, and it cannot be re-enabled once disabled. Legacy tier checkout prices remain unpublished and pending.",
       "source_url": "https://platform.minimax.io/docs/m-plan/token-plan-notice",
       "checked_at": "2026-11-24",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "product_id": "minimax-token-plan",
       "product_name": "Token Plan",
       "tier_name": "Ultra (legacy)",
@@ -795,7 +795,7 @@
         "https://platform.minimax.io/docs/m-plan/token-plan-notice",
         "https://platform.minimax.io/docs/m-plan/faq"
       ],
-      "models_checked_at": "2026-11-25"
+      "models_checked_at": "2026-11-26"
     },
     {
       "id": "glm-plan-lite",
@@ -810,11 +810,11 @@
       },
       "scope_zh": "2,000 credits / 5 小时 · 10,000 / 周",
       "scope_en": "2,000 credits / 5 hours · 10,000 / week",
-      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-10-25 复核：官方概述页标明套餐“每月 18 美元起”（Starting at just 18 USD per month）并确认各档 credits 与模型路由不变；各档完整结算价在需登录的订阅页展示，仍待核验。 2026-11-17 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），各档 credits、模型路由与非高峰半价（高峰为周一至周五 14:00–18:00 UTC+8）不变；各档完整结算价仍在需登录的订阅页展示，保持待核验。  2026-11-21 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），官方 API 价格页同称套餐自每月 18 美元起；各档 credits、模型路由与非高峰半价不变。2026-04-21 官方迁移公告列示参考月价 Lite $18 / Pro $72 / Max $160（注明仅供参考）；各档当前结算价仍在需登录的订阅页展示，保持待核验。",
-      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-10-25: the official overview states plans \"Starting at just 18 USD per month\" and confirms tier credits and model routing unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending. Re-checked on 2026-11-17: the overview still states plans \"Starting at just 18 USD per month\" and confirms tier credits, model routing and off-peak half-credit billing (peak Monday–Friday 14:00–18:00 UTC+8) unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.  Re-checked on 2026-11-21: the overview still states plans \"Starting at just 18 USD per month\" and the official API pricing page likewise says plans start at $18 per month; tier credits, model routing and off-peak half-credit billing are unchanged. The official April 21, 2026 migration notice lists reference monthly prices of Lite $18 / Pro $72 / Max $160 (marked for reference only); current per-tier checkout prices remain behind the login-only subscribe page and stay pending.",
+      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-10-25 复核：官方概述页标明套餐“每月 18 美元起”（Starting at just 18 USD per month）并确认各档 credits 与模型路由不变；各档完整结算价在需登录的订阅页展示，仍待核验。 2026-11-17 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），各档 credits、模型路由与非高峰半价（高峰为周一至周五 14:00–18:00 UTC+8）不变；各档完整结算价仍在需登录的订阅页展示，保持待核验。  2026-11-21 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），官方 API 价格页同称套餐自每月 18 美元起；各档 credits、模型路由与非高峰半价不变。2026-04-21 官方迁移公告列示参考月价 Lite $18 / Pro $72 / Max $160（注明仅供参考）；各档当前结算价仍在需登录的订阅页展示，保持待核验。 2026-11-26 复核：官方概述页仍显示套餐每月 18 美元起、三档模型与 credits 倍率不变；完整档位结算价仍需登录，保持待核验。Flash 优惠页仍只写 11 月 24 日至 12 月 24 日，未补造年份、截止时刻或时区。",
+      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-10-25: the official overview states plans \"Starting at just 18 USD per month\" and confirms tier credits and model routing unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending. Re-checked on 2026-11-17: the overview still states plans \"Starting at just 18 USD per month\" and confirms tier credits, model routing and off-peak half-credit billing (peak Monday–Friday 14:00–18:00 UTC+8) unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.  Re-checked on 2026-11-21: the overview still states plans \"Starting at just 18 USD per month\" and the official API pricing page likewise says plans start at $18 per month; tier credits, model routing and off-peak half-credit billing are unchanged. The official April 21, 2026 migration notice lists reference monthly prices of Lite $18 / Pro $72 / Max $160 (marked for reference only); current per-tier checkout prices remain behind the login-only subscribe page and stay pending. Re-checked on 2026-11-26: the official overview still says plans start at $18 per month and confirms the three tiers’ models and credit multipliers; complete tier checkout prices remain login-gated and pending. The Flash promotion still gives only November 24 to December 24, with no year, cutoff time or timezone inferred.",
       "source_url": "https://docs.z.ai/devpack/overview",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
       "tier_name": "Lite",
@@ -830,7 +830,7 @@
         "https://docs.z.ai/guides/llm/glm-5.4",
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "glm-5-3-flash-half-credits",
@@ -841,7 +841,7 @@
             "GLM-5.3-Flash"
           ],
           "source_url": "https://docs.z.ai/devpack/overview",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "官方页面显示 11 月 24 日至 12 月 24 日期间，GLM-5.3-Flash 的 Coding Plan credits 消耗按标准费率的 50% 结算，即可用额度翻倍。该优惠不改变 Model API 的 Token 价格；活动年份、结束时刻与时区未注明，因此保持待核验。",
           "conditions_en": "The official page shows that from November 24 to December 24, GLM-5.3-Flash consumes Coding Plan credits at 50% of the standard rate, effectively doubling available quota. It does not change Model API token prices. The year, exact end time and timezone are not stated, so the offer remains pending.",
           "eligibility_zh": "所有 GLM Coding Plan 用户；仅适用于套餐 credits 消耗，不适用于标准 Model API 计费。",
@@ -869,11 +869,11 @@
       },
       "scope_zh": "12,000 credits / 5 小时 · 60,000 / 周",
       "scope_en": "12,000 credits / 5 hours · 60,000 / week",
-      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-11-17 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），各档 credits、模型路由与非高峰半价（高峰为周一至周五 14:00–18:00 UTC+8）不变；各档完整结算价仍在需登录的订阅页展示，保持待核验。  2026-11-21 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），官方 API 价格页同称套餐自每月 18 美元起；各档 credits、模型路由与非高峰半价不变。2026-04-21 官方迁移公告列示参考月价 Lite $18 / Pro $72 / Max $160（注明仅供参考）；各档当前结算价仍在需登录的订阅页展示，保持待核验。",
-      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-11-17: the overview still states plans \"Starting at just 18 USD per month\" and confirms tier credits, model routing and off-peak half-credit billing (peak Monday–Friday 14:00–18:00 UTC+8) unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.  Re-checked on 2026-11-21: the overview still states plans \"Starting at just 18 USD per month\" and the official API pricing page likewise says plans start at $18 per month; tier credits, model routing and off-peak half-credit billing are unchanged. The official April 21, 2026 migration notice lists reference monthly prices of Lite $18 / Pro $72 / Max $160 (marked for reference only); current per-tier checkout prices remain behind the login-only subscribe page and stay pending.",
+      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-11-17 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），各档 credits、模型路由与非高峰半价（高峰为周一至周五 14:00–18:00 UTC+8）不变；各档完整结算价仍在需登录的订阅页展示，保持待核验。  2026-11-21 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），官方 API 价格页同称套餐自每月 18 美元起；各档 credits、模型路由与非高峰半价不变。2026-04-21 官方迁移公告列示参考月价 Lite $18 / Pro $72 / Max $160（注明仅供参考）；各档当前结算价仍在需登录的订阅页展示，保持待核验。 2026-11-26 复核：官方概述页仍显示套餐每月 18 美元起、三档模型与 credits 倍率不变；完整档位结算价仍需登录，保持待核验。Flash 优惠页仍只写 11 月 24 日至 12 月 24 日，未补造年份、截止时刻或时区。",
+      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-11-17: the overview still states plans \"Starting at just 18 USD per month\" and confirms tier credits, model routing and off-peak half-credit billing (peak Monday–Friday 14:00–18:00 UTC+8) unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.  Re-checked on 2026-11-21: the overview still states plans \"Starting at just 18 USD per month\" and the official API pricing page likewise says plans start at $18 per month; tier credits, model routing and off-peak half-credit billing are unchanged. The official April 21, 2026 migration notice lists reference monthly prices of Lite $18 / Pro $72 / Max $160 (marked for reference only); current per-tier checkout prices remain behind the login-only subscribe page and stay pending. Re-checked on 2026-11-26: the official overview still says plans start at $18 per month and confirms the three tiers’ models and credit multipliers; complete tier checkout prices remain login-gated and pending. The Flash promotion still gives only November 24 to December 24, with no year, cutoff time or timezone inferred.",
       "source_url": "https://docs.z.ai/devpack/overview",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
       "tier_name": "Pro",
@@ -889,7 +889,7 @@
         "https://docs.z.ai/guides/llm/glm-5.4",
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "glm-5-3-flash-half-credits",
@@ -900,7 +900,7 @@
             "GLM-5.3-Flash"
           ],
           "source_url": "https://docs.z.ai/devpack/overview",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "官方页面显示 11 月 24 日至 12 月 24 日期间，GLM-5.3-Flash 的 Coding Plan credits 消耗按标准费率的 50% 结算，即可用额度翻倍。该优惠不改变 Model API 的 Token 价格；活动年份、结束时刻与时区未注明，因此保持待核验。",
           "conditions_en": "The official page shows that from November 24 to December 24, GLM-5.3-Flash consumes Coding Plan credits at 50% of the standard rate, effectively doubling available quota. It does not change Model API token prices. The year, exact end time and timezone are not stated, so the offer remains pending.",
           "eligibility_zh": "所有 GLM Coding Plan 用户；仅适用于套餐 credits 消耗，不适用于标准 Model API 计费。",
@@ -928,11 +928,11 @@
       },
       "scope_zh": "28,000 credits / 5 小时 · 140,000 / 周",
       "scope_en": "28,000 credits / 5 hours · 140,000 / week",
-      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-11-17 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），各档 credits、模型路由与非高峰半价（高峰为周一至周五 14:00–18:00 UTC+8）不变；各档完整结算价仍在需登录的订阅页展示，保持待核验。  2026-11-21 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），官方 API 价格页同称套餐自每月 18 美元起；各档 credits、模型路由与非高峰半价不变。2026-04-21 官方迁移公告列示参考月价 Lite $18 / Pro $72 / Max $160（注明仅供参考）；各档当前结算价仍在需登录的订阅页展示，保持待核验。",
-      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-11-17: the overview still states plans \"Starting at just 18 USD per month\" and confirms tier credits, model routing and off-peak half-credit billing (peak Monday–Friday 14:00–18:00 UTC+8) unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.  Re-checked on 2026-11-21: the overview still states plans \"Starting at just 18 USD per month\" and the official API pricing page likewise says plans start at $18 per month; tier credits, model routing and off-peak half-credit billing are unchanged. The official April 21, 2026 migration notice lists reference monthly prices of Lite $18 / Pro $72 / Max $160 (marked for reference only); current per-tier checkout prices remain behind the login-only subscribe page and stay pending.",
+      "note_zh": "保留官方 credits 额度，档位完整结算价待核验；credits 不等于 tokens。常规非高峰按半价扣 credits，高峰为周一至周五北京时间 14:00–18:00。2026-09-25 至 10-07 全天半价活动已结束。自 2026-10-16 起，标准模型 API 与 Coding Plan 的 API Key 分开管理：标准密钥在编码工具中也不消耗 Coding Plan 额度、可能按量计费；Coding Plan 密钥按套餐额度计费，切换端点不改变计费类型；存量密钥自动归类，无需替换。 2026-11-17 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），各档 credits、模型路由与非高峰半价（高峰为周一至周五 14:00–18:00 UTC+8）不变；各档完整结算价仍在需登录的订阅页展示，保持待核验。  2026-11-21 复核：概述页仍标明“每月 18 美元起”（Starting at just 18 USD per month），官方 API 价格页同称套餐自每月 18 美元起；各档 credits、模型路由与非高峰半价不变。2026-04-21 官方迁移公告列示参考月价 Lite $18 / Pro $72 / Max $160（注明仅供参考）；各档当前结算价仍在需登录的订阅页展示，保持待核验。 2026-11-26 复核：官方概述页仍显示套餐每月 18 美元起、三档模型与 credits 倍率不变；完整档位结算价仍需登录，保持待核验。Flash 优惠页仍只写 11 月 24 日至 12 月 24 日，未补造年份、截止时刻或时区。",
+      "note_en": "Official credit allowances are retained; complete tier checkout prices remain unverified. Credits are not tokens. Off-peak usage consumes half the credits; peak hours are Monday–Friday, 14:00–18:00 UTC+8. The all-day half-credit campaign of September 25–October 7, 2026 has ended. Since October 16, 2026, standard API and Coding Plan keys are managed separately: a Standard key used in coding tools does not consume Coding Plan quota and may incur pay-as-you-go charges; Coding Plan keys bill against plan quota, and switching endpoints does not change the billing type; existing keys are classified automatically and need no replacement. Re-checked on 2026-11-17: the overview still states plans \"Starting at just 18 USD per month\" and confirms tier credits, model routing and off-peak half-credit billing (peak Monday–Friday 14:00–18:00 UTC+8) unchanged; full per-tier checkout prices remain behind the login-only subscribe page and stay pending.  Re-checked on 2026-11-21: the overview still states plans \"Starting at just 18 USD per month\" and the official API pricing page likewise says plans start at $18 per month; tier credits, model routing and off-peak half-credit billing are unchanged. The official April 21, 2026 migration notice lists reference monthly prices of Lite $18 / Pro $72 / Max $160 (marked for reference only); current per-tier checkout prices remain behind the login-only subscribe page and stay pending. Re-checked on 2026-11-26: the official overview still says plans start at $18 per month and confirms the three tiers’ models and credit multipliers; complete tier checkout prices remain login-gated and pending. The Flash promotion still gives only November 24 to December 24, with no year, cutoff time or timezone inferred.",
       "source_url": "https://docs.z.ai/devpack/overview",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-11-25",
+      "updated_at": "2026-11-27",
       "product_id": "glm-coding-plan",
       "product_name": "GLM Coding Plan",
       "tier_name": "Max",
@@ -948,7 +948,7 @@
         "https://docs.z.ai/guides/llm/glm-5.4",
         "https://docs.z.ai/devpack/overview"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "glm-5-3-flash-half-credits",
@@ -959,7 +959,7 @@
             "GLM-5.3-Flash"
           ],
           "source_url": "https://docs.z.ai/devpack/overview",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "官方页面显示 11 月 24 日至 12 月 24 日期间，GLM-5.3-Flash 的 Coding Plan credits 消耗按标准费率的 50% 结算，即可用额度翻倍。该优惠不改变 Model API 的 Token 价格；活动年份、结束时刻与时区未注明，因此保持待核验。",
           "conditions_en": "The official page shows that from November 24 to December 24, GLM-5.3-Flash consumes Coding Plan credits at 50% of the standard rate, effectively doubling available quota. It does not change Model API token prices. The year, exact end time and timezone are not stated, so the offer remains pending.",
           "eligibility_zh": "所有 GLM Coding Plan 用户；仅适用于套餐 credits 消耗，不适用于标准 Model API 计费。",
@@ -1190,8 +1190,8 @@
       "note_zh": "Work 与 Codex 订阅额度已调整为原额度的 2 倍；实际用量仍受模型、任务和面板重置时间影响，不代表完成任务数翻倍。API Key 会话按 API 价格另计费。",
       "note_en": "Work and Codex included allowance is now twice the previous level; actual usage still depends on model, task, and dashboard reset times, and does not guarantee twice as many completed tasks. API-key sessions use separate API pricing.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "codex",
       "product_name": "Codex",
       "tier_name": "Pro $100",
@@ -1210,7 +1210,7 @@
         "https://learn.chatgpt.com/docs/pricing",
         "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "use_cases": [
         "chat",
         "agent"
@@ -1232,8 +1232,8 @@
       "note_zh": "新订阅已恢复，采用提高后的 Work / Codex 额度；2026-09-29 宣布的额度下调已取消。原较高额度保留，原较低额度已翻倍至相同水平；无需取消后重订。API Key 会话按 API 价格另计费。",
       "note_en": "Sign-ups are open with the increased Work and Codex allowance; the reduction announced September 29 was canceled. Existing higher allowances are retained and lower allowances have doubled to match; active subscribers do not need to cancel and resubscribe. API-key sessions use separate API pricing.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "codex",
       "product_name": "Codex",
       "tier_name": "Pro $200",
@@ -1252,7 +1252,7 @@
         "https://learn.chatgpt.com/docs/pricing",
         "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "use_cases": [
         "chat",
         "agent"
@@ -1274,8 +1274,8 @@
       "note_zh": "Work 与 Codex 订阅额度已调整为原额度的 2 倍，为 Pro 档位中最高。API Key 会话按 API 价格另计费；实际用量、模型额度与重置时间以面板为准。",
       "note_en": "Work and Codex included allowance is now twice the previous level and is the highest among Pro plans. API-key sessions use separate API pricing; actual usage, model allowances, and reset times follow the dashboard.",
       "source_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "codex",
       "product_name": "Codex",
       "tier_name": "Pro $500",
@@ -1294,7 +1294,7 @@
         "https://learn.chatgpt.com/docs/pricing",
         "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "use_cases": [
         "chat",
         "agent"
@@ -1649,8 +1649,8 @@
       "note_zh": "含 CLI、Agent 与代码审查；每月 $10 含 1,000 base + 500 flex AI credits（合计 1,500 credits，按官方 1 credit = $0.01 即 $15）。flex 为浮动额度；credits 不结转，在每月首个日历日 00:00:00 UTC 重置；用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review. The $10/month plan includes 1,000 base + 500 flex AI credits (1,500 credits total, equal to $15 at the official 1 credit = $0.01 rate). Flex is variable; credits do not roll over and reset at 00:00:00 UTC on the first calendar day of each month. Additional paid usage can be budgeted after the included amount is exhausted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
       "tier_name": "Pro",
@@ -1682,7 +1682,7 @@
         "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals",
         "https://docs.github.com/copilot/concepts/models/copilot-fusion"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "copilot-fusion-30-percent",
@@ -1693,16 +1693,16 @@
             "GitHub Copilot Fusion Standard"
           ],
           "source_url": "https://docs.github.com/copilot/concepts/models/copilot-fusion",
-          "checked_at": "2026-11-25",
-          "conditions_zh": "Fusion 详细文档与套餐页横幅均称付费 Copilot 套餐使用 Fusion 可享模型成本 30% 折扣，并写至 2026-12-31；用量计费文档则写至 2026-11-30。该折扣只针对 Fusion 模型成本，不是套餐月费折扣。",
-          "conditions_en": "The detailed Fusion docs and plans-page banner both say paid Copilot plans receive 30% off model costs when using Fusion through 2026-12-31, while usage-based billing docs say through 2026-11-30. This discounts Fusion model costs, not the monthly subscription fee.",
+          "checked_at": "2026-11-26",
+          "conditions_zh": "官方 Fusion 文档、套餐页横幅与用量计费文档均确认：付费 Copilot 套餐使用 Fusion 可享模型成本 30% 折扣，活动写至 2026-12-31。该折扣只针对 Fusion 模型成本，不是套餐月费折扣。",
+          "conditions_en": "The Fusion documentation, plans-page banner and usage-billing documentation all confirm that paid Copilot plans receive 30% off model costs when using Fusion through 2026-12-31. This discounts Fusion model costs, not the monthly subscription fee.",
           "eligibility_zh": "仅 Pro 的 Fusion Standard。",
           "eligibility_en": "Fusion Standard on Pro only.",
           "card_required": "unknown",
           "starts_at": null,
           "ends_at": null,
-          "end_note_zh": "Fusion 详细文档与套餐页横幅写至 2026-12-31，用量计费文档写至 2026-11-30；均未给出具体截止时刻与时区，保持待核验。",
-          "end_note_en": "The detailed Fusion docs and plans-page banner say through 2026-12-31, while usage-based billing docs say through 2026-11-30; neither gives a cutoff time or timezone, so the offer remains pending."
+          "end_note_zh": "官方统一写至 2026-12-31，但未给出具体截止时刻与时区；保持待核验，不补造 ISO 截止时间。",
+          "end_note_en": "Official pages consistently say through 2026-12-31 but give no cutoff time or timezone; the offer remains pending and no ISO deadline is inferred."
         }
       ]
     },
@@ -1722,8 +1722,8 @@
       "note_zh": "含 CLI、Agent 与代码审查；每月 $39 含 3,900 base + 3,100 flex AI credits（合计 7,000 credits，按官方 1 credit = $0.01 即 $70）。flex 为浮动额度；credits 不结转，在每月首个日历日 00:00:00 UTC 重置；用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review. The $39/month plan includes 3,900 base + 3,100 flex AI credits (7,000 credits total, equal to $70 at the official 1 credit = $0.01 rate). Flex is variable; credits do not roll over and reset at 00:00:00 UTC on the first calendar day of each month. Additional paid usage can be budgeted after the included amount is exhausted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
       "tier_name": "Pro+",
@@ -1771,7 +1771,7 @@
         "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals",
         "https://docs.github.com/copilot/concepts/models/copilot-fusion"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "copilot-fusion-30-percent",
@@ -1784,16 +1784,16 @@
             "GitHub Copilot Fusion Max"
           ],
           "source_url": "https://docs.github.com/copilot/concepts/models/copilot-fusion",
-          "checked_at": "2026-11-25",
-          "conditions_zh": "Fusion 详细文档与套餐页横幅均称付费 Copilot 套餐使用 Fusion 可享模型成本 30% 折扣，并写至 2026-12-31；用量计费文档则写至 2026-11-30。该折扣只针对 Fusion 模型成本，不是套餐月费折扣。",
-          "conditions_en": "The detailed Fusion docs and plans-page banner both say paid Copilot plans receive 30% off model costs when using Fusion through 2026-12-31, while usage-based billing docs say through 2026-11-30. This discounts Fusion model costs, not the monthly subscription fee.",
+          "checked_at": "2026-11-26",
+          "conditions_zh": "官方 Fusion 文档、套餐页横幅与用量计费文档均确认：付费 Copilot 套餐使用 Fusion 可享模型成本 30% 折扣，活动写至 2026-12-31。该折扣只针对 Fusion 模型成本，不是套餐月费折扣。",
+          "conditions_en": "The Fusion documentation, plans-page banner and usage-billing documentation all confirm that paid Copilot plans receive 30% off model costs when using Fusion through 2026-12-31. This discounts Fusion model costs, not the monthly subscription fee.",
           "eligibility_zh": "Pro+ / Max 的 Fusion Standard、High 与 Max。",
           "eligibility_en": "Fusion Standard, High and Max on Pro+ / Max.",
           "card_required": "unknown",
           "starts_at": null,
           "ends_at": null,
-          "end_note_zh": "Fusion 详细文档与套餐页横幅写至 2026-12-31，用量计费文档写至 2026-11-30；均未给出具体截止时刻与时区，保持待核验。",
-          "end_note_en": "The detailed Fusion docs and plans-page banner say through 2026-12-31, while usage-based billing docs say through 2026-11-30; neither gives a cutoff time or timezone, so the offer remains pending."
+          "end_note_zh": "官方统一写至 2026-12-31，但未给出具体截止时刻与时区；保持待核验，不补造 ISO 截止时间。",
+          "end_note_en": "Official pages consistently say through 2026-12-31 but give no cutoff time or timezone; the offer remains pending and no ISO deadline is inferred."
         }
       ]
     },
@@ -1813,8 +1813,8 @@
       "note_zh": "含 CLI、Agent 与代码审查；每月 $100 含 10,000 base + 10,000 flex AI credits（合计 20,000 credits，按官方 1 credit = $0.01 即 $200）。flex 为浮动额度；credits 不结转，在每月首个日历日 00:00:00 UTC 重置；用尽后可设置额外付费预算。",
       "note_en": "Includes CLI, Agent and code review. The $100/month plan includes 10,000 base + 10,000 flex AI credits (20,000 credits total, equal to $200 at the official 1 credit = $0.01 rate). Flex is variable; credits do not roll over and reset at 00:00:00 UTC on the first calendar day of each month. Additional paid usage can be budgeted after the included amount is exhausted.",
       "source_url": "https://github.com/features/copilot/plans",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "github-copilot",
       "product_name": "GitHub Copilot",
       "tier_name": "Max",
@@ -1861,7 +1861,7 @@
         "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals",
         "https://docs.github.com/copilot/concepts/models/copilot-fusion"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "copilot-fusion-30-percent",
@@ -1874,16 +1874,16 @@
             "GitHub Copilot Fusion Max"
           ],
           "source_url": "https://docs.github.com/copilot/concepts/models/copilot-fusion",
-          "checked_at": "2026-11-25",
-          "conditions_zh": "Fusion 详细文档与套餐页横幅均称付费 Copilot 套餐使用 Fusion 可享模型成本 30% 折扣，并写至 2026-12-31；用量计费文档则写至 2026-11-30。该折扣只针对 Fusion 模型成本，不是套餐月费折扣。",
-          "conditions_en": "The detailed Fusion docs and plans-page banner both say paid Copilot plans receive 30% off model costs when using Fusion through 2026-12-31, while usage-based billing docs say through 2026-11-30. This discounts Fusion model costs, not the monthly subscription fee.",
+          "checked_at": "2026-11-26",
+          "conditions_zh": "官方 Fusion 文档、套餐页横幅与用量计费文档均确认：付费 Copilot 套餐使用 Fusion 可享模型成本 30% 折扣，活动写至 2026-12-31。该折扣只针对 Fusion 模型成本，不是套餐月费折扣。",
+          "conditions_en": "The Fusion documentation, plans-page banner and usage-billing documentation all confirm that paid Copilot plans receive 30% off model costs when using Fusion through 2026-12-31. This discounts Fusion model costs, not the monthly subscription fee.",
           "eligibility_zh": "Pro+ / Max 的 Fusion Standard、High 与 Max。",
           "eligibility_en": "Fusion Standard, High and Max on Pro+ / Max.",
           "card_required": "unknown",
           "starts_at": null,
           "ends_at": null,
-          "end_note_zh": "Fusion 详细文档与套餐页横幅写至 2026-12-31，用量计费文档写至 2026-11-30；均未给出具体截止时刻与时区，保持待核验。",
-          "end_note_en": "The detailed Fusion docs and plans-page banner say through 2026-12-31, while usage-based billing docs say through 2026-11-30; neither gives a cutoff time or timezone, so the offer remains pending."
+          "end_note_zh": "官方统一写至 2026-12-31，但未给出具体截止时刻与时区；保持待核验，不补造 ISO 截止时间。",
+          "end_note_en": "Official pages consistently say through 2026-12-31 but give no cutoff time or timezone; the offer remains pending and no ISO deadline is inferred."
         }
       ]
     },
@@ -2192,8 +2192,8 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop。免费档模型有限；公开文档确认 SWE-2 Flash Medium、SWE-2 与 SWE-2.1 的 self-serve 免费活动，其他内置型号以客户端为准。",
       "note_en": "Windsurf became Devin Desktop. Free has limited models; public docs confirm SWE-2 Flash Medium and the self-serve SWE-2/SWE-2.1 offers, while other built-ins remain client-dependent.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
       "tier_name": "Free",
@@ -2211,7 +2211,7 @@
         "https://devin.ai/pricing",
         "https://docs.devin.ai/admin/billing/self-serve"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "swe-2-flash-free",
@@ -2222,7 +2222,7 @@
             "SWE-2 Flash Medium"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。",
           "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens.",
           "eligibility_zh": "免费档仅 SWE-2 Flash Medium；High / Max 需付费计划。",
@@ -2242,7 +2242,7 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。",
           "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户；Enterprise 与 cloud sessions 另有规则。",
@@ -2264,7 +2264,7 @@
             "SWE-2.1"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。",
           "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50.",
           "eligibility_zh": "所有 self-serve Desktop / CLI 计划；型号须在客户端可用。",
@@ -2293,8 +2293,8 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop；付费 self-serve 计划为完整模型可用性。额外用量按 API 价格购买，账号实际型号与收费以客户端为准。",
       "note_en": "Windsurf became Devin Desktop; paid self-serve plans have full model availability. Extra usage is purchased at API rates, with account-specific models and charges shown in the client.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
       "tier_name": "Pro",
@@ -2326,7 +2326,7 @@
         "https://devin.ai/pricing",
         "https://docs.devin.ai/admin/billing/self-serve"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "swe-2-flash-free",
@@ -2339,7 +2339,7 @@
             "SWE-2 Flash Max"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。",
           "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户可使用 Medium / High / Max。",
@@ -2359,7 +2359,7 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。",
           "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户；Enterprise 与 cloud sessions 另有规则。",
@@ -2381,7 +2381,7 @@
             "SWE-2.1"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。",
           "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50.",
           "eligibility_zh": "所有 self-serve Desktop / CLI 计划；型号须在客户端可用。",
@@ -2410,8 +2410,8 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop；付费 self-serve 计划为完整模型可用性。额外用量按 API 价格购买，账号实际型号与收费以客户端为准。",
       "note_en": "Windsurf became Devin Desktop; paid self-serve plans have full model availability. Extra usage is purchased at API rates, with account-specific models and charges shown in the client.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
       "tier_name": "Max",
@@ -2443,7 +2443,7 @@
         "https://devin.ai/pricing",
         "https://docs.devin.ai/admin/billing/self-serve"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "swe-2-flash-free",
@@ -2456,7 +2456,7 @@
             "SWE-2 Flash Max"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。",
           "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户可使用 Medium / High / Max。",
@@ -2476,7 +2476,7 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。",
           "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户；Enterprise 与 cloud sessions 另有规则。",
@@ -2498,7 +2498,7 @@
             "SWE-2.1"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。",
           "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50.",
           "eligibility_zh": "所有 self-serve Desktop / CLI 计划；型号须在客户端可用。",
@@ -2527,8 +2527,8 @@
       "note_zh": "Windsurf 已升级为 Devin Desktop；付费 self-serve 计划为完整模型可用性。额外用量按 API 价格购买，账号实际型号与收费以客户端为准。",
       "note_en": "Windsurf became Devin Desktop; paid self-serve plans have full model availability. Extra usage is purchased at API rates, with account-specific models and charges shown in the client.",
       "source_url": "https://devin.ai/pricing",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-25",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "devin",
       "product_name": "Devin / Windsurf",
       "tier_name": "Teams",
@@ -2560,7 +2560,7 @@
         "https://devin.ai/pricing",
         "https://docs.devin.ai/admin/billing/self-serve"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "offers": [
         {
           "id": "swe-2-flash-free",
@@ -2573,7 +2573,7 @@
             "SWE-2 Flash Max"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2 Flash 在 self-serve Devin Desktop / CLI 免费至 2026-12-04 18:00 UTC；不适用于 Devin cloud sessions。之后每百万 tokens 输入 $0.10、缓存读取 $0.01、缓存写入 $0.125、输出 $0.50。",
           "conditions_en": "SWE-2 Flash is free in self-serve Devin Desktop/CLI through 2026-12-04 18:00 UTC, excluding Devin cloud sessions. Afterward it costs $0.10 input, $0.01 cache reads, $0.125 cache writes and $0.50 output per million tokens.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户可使用 Medium / High / Max。",
@@ -2593,7 +2593,7 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2 在 self-serve Devin Desktop / CLI 免费至 2026-12-01 00:00 Pacific time（不含），不适用于 Devin cloud sessions。2026-12-01 至 2026-12-31（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $3、输出 $15、缓存读取 $0.30。",
           "conditions_en": "SWE-2 is free for self-serve Devin Desktop/CLI through 2026-12-01 00:00 Pacific time (exclusive), excluding Devin cloud sessions. From December 1 through December 31, 2026 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $3/$15/$0.30.",
           "eligibility_zh": "该档 self-serve Desktop / CLI 用户；Enterprise 与 cloud sessions 另有规则。",
@@ -2615,7 +2615,7 @@
             "SWE-2.1"
           ],
           "source_url": "https://docs.devin.ai/desktop/models",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "SWE-2.1 在 self-serve Devin Desktop / CLI 免费至 2026-12-09 00:00 Pacific time（不含）；不含 Devin cloud sessions，也不含 SWE-2.1 Ultrafast。2026-12-09 至 2027-01-30（Pacific time）每百万 tokens 输入 $0.50、输出 $2.50、缓存读取 $0.05；其后标准价输入 $2、输出 $10、缓存读取 $0.20。Ultrafast 为输入 $5、输出 $25、缓存读取 $0.50。",
           "conditions_en": "SWE-2.1 is free for self-serve Devin Desktop/CLI through 2026-12-09 00:00 Pacific time (exclusive), excluding Devin cloud sessions and SWE-2.1 Ultrafast. From December 9, 2026 through January 30, 2027 Pacific time it costs $0.50 input, $2.50 output and $0.05 cache reads per million tokens; list pricing afterward is $2/$10/$0.20. Ultrafast costs $5/$25/$0.50.",
           "eligibility_zh": "所有 self-serve Desktop / CLI 计划；型号须在客户端可用。",
@@ -2635,7 +2635,7 @@
             "SWE-2"
           ],
           "source_url": "https://docs.devin.ai/admin/billing/self-serve",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "Teams 每名成员可在 agent selector 选择 Free（powered by SWE-2），同时运行最多 2 个 Devin cloud sessions，且不消耗付费 credits；其他模式按常规规则计费。",
           "conditions_en": "Each Teams member can select Free (powered by SWE-2) in the agent selector and run up to two Devin cloud sessions concurrently at no cost; other modes bill normally.",
           "eligibility_zh": "Devin Teams 订阅成员。",
@@ -2943,8 +2943,8 @@
       "note_zh": "官方提供 SSO / OIDC / SCIM、审计日志、SLA、专属支持、模型 / 提供商控制与 Shared Private Gateway BYOK；订阅金额需联系销售。AI usage、credits、Kilo Pass 与单独计费服务不包含在 Cursor Exodus 的 $0 订阅优惠中。一次性与自动 credits 充值、月付 / 年付 Kilo Pass 收取不退还的 5% 处理费；Teams / Enterprise 席位订阅及 invoice、wire、ACH 付款豁免。",
       "note_en": "Official features include SSO/OIDC/SCIM, audit logs, SLA, dedicated support, model/provider controls and Shared Private Gateway BYOK; subscription pricing requires sales. AI usage, credits, Kilo Pass and separately billed services are excluded from the $0 Cursor Exodus subscription offer. A non-refundable 5% processing fee applies to one-off and automatic credit top-ups and monthly/annual Kilo Pass purchases. Teams/Enterprise seat subscriptions and invoice, wire or ACH payments are exempt.",
       "source_url": "https://kilo.ai/pricing",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-24",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "product_id": "kilo-code",
       "product_name": "Kilo Code",
       "tier_name": "Enterprise",
@@ -2960,7 +2960,7 @@
         "https://kilo.ai/pricing",
         "https://kilo.ai/cursor-exodus"
       ],
-      "models_checked_at": "2026-11-25",
+      "models_checked_at": "2026-11-26",
       "use_cases": [
         "chat",
         "agent"
@@ -2978,7 +2978,7 @@
             "Eligible ChatGPT subscription models"
           ],
           "source_url": "https://kilo.ai/cursor-exodus",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "获批后 Kilo Enterprise 订阅费为 $0，覆盖符合条件的有效付费 Cursor Enterprise 合同剩余期限，最长 12 个月；席位数按遮盖合同中的 Cursor 席位数 1:1 匹配。AI usage、usage credits、Kilo Pass 与单独计费服务不含在内。需签署有效合同声明并提交仅保留客户名、档位、席位数与合同结束日的遮盖证明；提交申请不等于自动批准，优惠可由官方修改或撤销，也不取消或报销 Cursor 合同。",
           "conditions_en": "For approved customers, the Kilo Enterprise subscription fee is $0 for the remainder of an eligible active paid Cursor Enterprise contract, up to 12 months, with seats matched 1:1 to the redacted Cursor contract. AI usage, usage credits, Kilo Pass and separately billed services are excluded. A signed active-contract attestation and redacted proof showing only customer name, tier, seat count and contract end date are required. Submission is not approval; the discretionary offer may be changed or withdrawn and does not cancel or reimburse Cursor.",
           "eligibility_zh": "持有效付费 Cursor Enterprise 合同的公司团队；须在 2026-11-30 前提交申请并满足官方审核，后续商业条款需另行确认。",
@@ -4450,11 +4450,11 @@
       },
       "scope_zh": "WorldRouter · 输入 0–272K",
       "scope_en": "WorldRouter · Input 0–272K",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 272K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 1400/5250/140/1750 Credits。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 272K–1M input, input/output/cache read/write rates are 1400/5250/140/1750 Credits per million tokens.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。 输入 272K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 1400/5250/140/1750 Credits。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. The official model page confirms 100 Credits = 1 USD; this catalog retains native Credits and does not treat another platform’s points as the same unit. Rates and routes may change; platform billing prevails. For 272K–1M input, input/output/cache read/write rates are 1400/5250/140/1750 Credits per million tokens.",
       "source_url": "https://router.worldclaw.ai/models/gpt-6-astra",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-10-10"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-claude-opus-5-5",
@@ -4472,11 +4472,11 @@
       },
       "scope_zh": "WorldRouter · 平台文本 API",
       "scope_en": "WorldRouter · Platform text API",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. The official model page confirms 100 Credits = 1 USD; this catalog retains native Credits and does not treat another platform’s points as the same unit. Rates and routes may change; platform billing prevails.",
       "source_url": "https://router.worldclaw.ai/models/claude-opus-5-5",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-10-10"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-gemini-3-1-pro-preview",
@@ -4494,11 +4494,11 @@
       },
       "scope_zh": "WorldRouter · 输入 0–200K",
       "scope_en": "WorldRouter · Input 0–200K",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 200K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 280/1260/28/280 Credits。 2026-10-24 原型号官方详情页返回 HTTP 404；保留历史价格与核验日期，当前费率及可用性待确认，未据此判定停服。 2026-10-25 详情页仍返回 HTTP 404，且官方模型列表已不含 Gemini 与 MiMo 系列条目；继续保留历史价格与原核验日期，不据此判定停服。 2026-11-21 复核：官方模型列表仍不含该条目。 2026-11-24 详情页再次返回 HTTP 404；当前费率及可用性仍待确认。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 200K–1M input, input/output/cache read/write rates are 280/1260/28/280 Credits per million tokens. On October 24, 2026 the official detail page returns HTTP 404. Historical rates and their verification date are retained; current rates and availability remain unconfirmed, without inferring retirement. On 2026-10-25 the detail page still returns HTTP 404 and the official model list no longer includes any Gemini or MiMo entries; historical rates and their original verification dates are retained, without inferring retirement. Re-checked on 2026-11-21: the official model list still does not include this entry. Re-checked on 2026-11-24: the official detail page returns HTTP 404 again; current rates and availability remain unconfirmed.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。 输入 200K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 280/1260/28/280 Credits。 2026-10-24 原型号官方详情页返回 HTTP 404；保留历史价格与核验日期，当前费率及可用性待确认，未据此判定停服。 2026-10-25 详情页仍返回 HTTP 404，且当时的官方模型列表已不含 Gemini 与 MiMo 系列条目；继续保留历史价格与原核验日期，不据此判定停服。 2026-11-21 复核：官方模型列表仍不含该条目。 2026-11-24 详情页再次返回 HTTP 404；当前费率及可用性仍待确认。 2026-11-26 详情页再次返回 HTTP 404；保留历史价格与 2026-10-25 核验日期，当前费率及可用性仍待确认。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. The official model page confirms 100 Credits = 1 USD; this catalog retains native Credits and does not treat another platform’s points as the same unit. Rates and routes may change; platform billing prevails. For 200K–1M input, input/output/cache read/write rates are 280/1260/28/280 Credits per million tokens. On October 24, 2026 the official detail page returns HTTP 404. Historical rates and their verification date are retained; current rates and availability remain unconfirmed, without inferring retirement. On 2026-10-25 the detail page still returns HTTP 404 and the official model list no longer includes any Gemini or MiMo entries; historical rates and their original verification dates are retained, without inferring retirement. Re-checked on 2026-11-21: the official model list still does not include this entry. Re-checked on 2026-11-24: the official detail page returns HTTP 404 again; current rates and availability remain unconfirmed. Re-checked on 2026-11-26: the official detail page returns HTTP 404 again; historical rates and the 2026-10-25 verification date are retained, while current rates and availability remain unconfirmed.",
       "source_url": "https://router.worldclaw.ai/models/gemini-3.1-pro-preview",
       "checked_at": "2026-10-25",
-      "updated_at": "2026-11-24"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-deepseek-v4-flash",
@@ -4516,11 +4516,11 @@
       },
       "scope_zh": "WorldRouter · UTC 工作日高峰（中国法定节假日除外）",
       "scope_en": "WorldRouter · UTC weekday peak, excluding CN public holidays",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 官方高峰仅适用于工作日（中国法定节假日除外）的 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 15.4/46.2/0.49/15.4 Credits。周末与中国法定节假日全天采用非高峰价。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. The published peak windows apply on weekdays excluding Chinese public holidays, at UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 15.4/46.2/0.49/15.4 Credits for input/output/cache read/write. All weekends and Chinese public holidays use off-peak pricing throughout the day.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。 官方高峰仅适用于工作日（中国法定节假日除外）的 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 15.4/46.2/0.49/15.4 Credits。周末与中国法定节假日全天采用非高峰价。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. The official model page confirms 100 Credits = 1 USD; this catalog retains native Credits and does not treat another platform’s points as the same unit. Rates and routes may change; platform billing prevails. The published peak windows apply on weekdays excluding Chinese public holidays, at UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 15.4/46.2/0.49/15.4 Credits for input/output/cache read/write. All weekends and Chinese public holidays use off-peak pricing throughout the day.",
       "source_url": "https://router.worldclaw.ai/models/deepseek-v4-flash",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-10-16"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-deepseek-v4-pro",
@@ -4538,11 +4538,11 @@
       },
       "scope_zh": "WorldRouter · UTC 工作日高峰（中国法定节假日除外）",
       "scope_en": "WorldRouter · UTC weekday peak, excluding CN public holidays",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 官方高峰仅适用于工作日（中国法定节假日除外）的 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 46.2/138.6/1.54/46.2 Credits。周末与中国法定节假日全天采用非高峰价。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. The published peak windows apply on weekdays excluding Chinese public holidays, at UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 46.2/138.6/1.54/46.2 Credits for input/output/cache read/write. All weekends and Chinese public holidays use off-peak pricing throughout the day.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。 官方高峰仅适用于工作日（中国法定节假日除外）的 UTC 01:00–04:00、06:00–10:00；其余 UTC 00:00–01:00、04:00–06:00、10:00–24:00 为非高峰，输入/输出/缓存读取/写入为 46.2/138.6/1.54/46.2 Credits。周末与中国法定节假日全天采用非高峰价。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. The official model page confirms 100 Credits = 1 USD; this catalog retains native Credits and does not treat another platform’s points as the same unit. Rates and routes may change; platform billing prevails. The published peak windows apply on weekdays excluding Chinese public holidays, at UTC 01:00–04:00 and 06:00–10:00. Off-peak UTC 00:00–01:00, 04:00–06:00 and 10:00–24:00 costs 46.2/138.6/1.54/46.2 Credits for input/output/cache read/write. All weekends and Chinese public holidays use off-peak pricing throughout the day.",
       "source_url": "https://router.worldclaw.ai/models/deepseek-v4-pro",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-10-16"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-kimi-k3",
@@ -4560,11 +4560,11 @@
       },
       "scope_zh": "WorldRouter · 平台文本 API",
       "scope_en": "WorldRouter · Platform text API",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. The official model page confirms 100 Credits = 1 USD; this catalog retains native Credits and does not treat another platform’s points as the same unit. Rates and routes may change; platform billing prevails.",
       "source_url": "https://router.worldclaw.ai/models/kimi-k3",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-10-10"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-glm-5-3",
@@ -4582,11 +4582,11 @@
       },
       "scope_zh": "WorldRouter · 平台文本 API",
       "scope_en": "WorldRouter · Platform text API",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. The official model page confirms 100 Credits = 1 USD; this catalog retains native Credits and does not treat another platform’s points as the same unit. Rates and routes may change; platform billing prevails.",
       "source_url": "https://router.worldclaw.ai/models/glm-5.3",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-10-10"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-minimax-m3",
@@ -4604,11 +4604,11 @@
       },
       "scope_zh": "WorldRouter · 输入 0–512K",
       "scope_en": "WorldRouter · Input 0–512K",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 512K–1M 的每百万 tokens 输入/输出/缓存读取为 60/240/12 Credits；缓存写入标为 N/A，不视为免费。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 512K–1M input, input/output/cache read rates are 60/240/12 Credits per million tokens. Cache writes are listed as N/A and are not assumed free.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。 输入 512K–1M 的每百万 tokens 输入/输出/缓存读取为 60/240/12 Credits；缓存写入标为 N/A，不视为免费。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. The official model page confirms 100 Credits = 1 USD; this catalog retains native Credits and does not treat another platform’s points as the same unit. Rates and routes may change; platform billing prevails. For 512K–1M input, input/output/cache read rates are 60/240/12 Credits per million tokens. Cache writes are listed as N/A and are not assumed free.",
       "source_url": "https://router.worldclaw.ai/models/MiniMax-M3",
       "checked_at": "2026-11-21",
-      "updated_at": "2026-10-10"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-mimo-v2-5",
@@ -4626,11 +4626,11 @@
       },
       "scope_zh": "WorldRouter · 输入 0–256K",
       "scope_en": "WorldRouter · Input 0–256K",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 256K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 80/400/16/80 Credits。 2026-10-24 原型号官方详情页返回 HTTP 404；保留历史价格与核验日期，当前费率及可用性待确认，未据此判定停服。 2026-10-25 详情页仍返回 HTTP 404，且官方模型列表已不含 Gemini 与 MiMo 系列条目；继续保留历史价格与原核验日期，不据此判定停服。 2026-11-21 复核：官方模型列表仍不含该条目。 2026-11-24 详情页再次返回 HTTP 404；当前费率及可用性仍待确认。",
-      "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform’s credits. Rates and routes may change; platform billing prevails. For 256K–1M input, input/output/cache read/write rates are 80/400/16/80 Credits per million tokens. On October 24, 2026 the official detail page returns HTTP 404. Historical rates and their verification date are retained; current rates and availability remain unconfirmed, without inferring retirement. On 2026-10-25 the detail page still returns HTTP 404 and the official model list no longer includes any Gemini or MiMo entries; historical rates and their original verification dates are retained, without inferring retirement. Re-checked on 2026-11-21: the official model list still does not include this entry. Re-checked on 2026-11-24: the official detail page returns HTTP 404 again; current rates and availability remain unconfirmed.",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。 输入 256K–1M 的每百万 tokens 输入/输出/缓存读取/写入为 80/400/16/80 Credits。 2026-10-24 原型号官方详情页返回 HTTP 404；保留历史价格与核验日期，当前费率及可用性待确认，未据此判定停服。 2026-10-25 详情页仍返回 HTTP 404，且当时的官方模型列表已不含 Gemini 与 MiMo 系列条目；继续保留历史价格与原核验日期，不据此判定停服。 2026-11-21 复核：官方模型列表仍不含该条目。 2026-11-24 详情页再次返回 HTTP 404；当前费率及可用性仍待确认。 2026-11-26 详情页再次返回 HTTP 404；保留历史价格与 2026-10-25 核验日期，当前费率及可用性仍待确认。",
+      "note_en": "Native WorldRouter Credits per million tokens are shown. The official model page confirms 100 Credits = 1 USD; this catalog retains native Credits and does not treat another platform’s points as the same unit. Rates and routes may change; platform billing prevails. For 256K–1M input, input/output/cache read/write rates are 80/400/16/80 Credits per million tokens. On October 24, 2026 the official detail page returns HTTP 404. Historical rates and their verification date are retained; current rates and availability remain unconfirmed, without inferring retirement. On 2026-10-25 the detail page still returns HTTP 404 and the official model list no longer includes any Gemini or MiMo entries; historical rates and their original verification dates are retained, without inferring retirement. Re-checked on 2026-11-21: the official model list still does not include this entry. Re-checked on 2026-11-24: the official detail page returns HTTP 404 again; current rates and availability remain unconfirmed. Re-checked on 2026-11-26: the official detail page returns HTTP 404 again; historical rates and the 2026-10-25 verification date are retained, while current rates and availability remain unconfirmed.",
       "source_url": "https://router.worldclaw.ai/models/mimo-v2.5",
       "checked_at": "2026-10-25",
-      "updated_at": "2026-11-24"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-gpt-6-2-astra",
@@ -4648,11 +4648,11 @@
       },
       "scope_zh": "WorldRouter · 输入 0–272K",
       "scope_en": "WorldRouter · Input 0–272K",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 输入 272K–1.05M 的每百万 tokens 输入/输出/缓存读取/写入为 1600/6000/80/2000 Credits；上下文 1.1M。",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。 输入 272K–1.05M 的每百万 tokens 输入/输出/缓存读取/写入为 1600/6000/80/2000 Credits；上下文 1.1M。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform's credits. Rates and routes may change; platform billing prevails. For 272K–1.05M input, input/output/cache read/write rates are 1600/6000/80/2000 Credits per million tokens; context is 1.1M.",
       "source_url": "https://router.worldclaw.ai/models/gpt-6.2-astra",
       "checked_at": "2026-11-23",
-      "updated_at": "2026-11-23"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-gemini-4-carbon",
@@ -4670,11 +4670,11 @@
       },
       "scope_zh": "WorldRouter · 上下文 1.0M",
       "scope_en": "WorldRouter · 1.0M context",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 页面缓存写入标为 N/A，不视为免费；上下文 1.0M。",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。 页面缓存写入标为 N/A，不视为免费；上下文 1.0M。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform's credits. Rates and routes may change; platform billing prevails. The page lists cache writes as N/A, not assumed free; context is 1.0M.",
       "source_url": "https://router.worldclaw.ai/models/gemini-4-carbon",
       "checked_at": "2026-11-23",
-      "updated_at": "2026-11-23"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "worldrouter-kimi-k2-6",
@@ -4692,11 +4692,11 @@
       },
       "scope_zh": "WorldRouter · 上下文 256K",
       "scope_en": "WorldRouter · 256K context",
-      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；未核实 Credits 与美元的兑换比例，不按美元或其他平台积分换算。价格及路由可能调整，以平台账单为准。 上下文 256K。",
+      "note_zh": "按 WorldRouter 官方 Credits / 百万 tokens 原价展示；官方模型页确认 100 Credits = 1 USD，本目录仍保留 Credits 原币种，不把其他平台积分当作同一单位。价格及路由可能调整，以平台账单为准。 上下文 256K。",
       "note_en": "Native WorldRouter Credits per million tokens are shown. No Credits-to-USD conversion was verified; values are not converted to dollars or another platform's credits. Rates and routes may change; platform billing prevails. Context is 256K.",
       "source_url": "https://router.worldclaw.ai/models/kimi-k2.6",
       "checked_at": "2026-11-23",
-      "updated_at": "2026-11-23"
+      "updated_at": "2026-11-27"
     },
     {
       "id": "b-ai-plan-pro",
@@ -5350,8 +5350,8 @@
       "note_zh": "2026-12-01 起输入 $4、输出 $20、缓存输入 $0.20 / 百万 tokens。仅支持隐式缓存，不支持显式缓存。Batch / Flex 为 Standard 的一半，Priority 为 1.8 倍。Contributor 为受邀私密预览、价格为 Standard 的一半，但数据可用于改进产品；不与普通付费层混同。搜索另计，无免费 API 层。",
       "note_en": "From Dec 1, 2026: input $4, output $20 and cached input $0.20 per million tokens. Implicit caching only; explicit caching is unsupported. Batch / Flex costs half of Standard and Priority costs 1.8×. The invite-only Contributor private preview costs half of Standard but permits product-improvement data use; it is distinct from ordinary paid tiers. Search costs extra; no free API tier.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-10-15",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "valid_until": "2026-11-30"
     },
     {
@@ -6134,8 +6134,8 @@
       "note_zh": "腾讯 Hy4 系列轻量模型，面向日常办公与高吞吐任务，默认开启深度思考且可关闭。展示 B.AI 标准参考价；账户按 1 USD = 1,000,000 Credits 结算。上下文 1M tokens，最大输入 960,000、最大输出 64,000 tokens。活动、充值赠送与账户权益可能影响实际结算。",
       "note_en": "Tencent's lightweight Hy4-series model for everyday productivity and high-volume workloads, with deep thinking enabled by default and disableable. B.AI standard reference rates are shown; accounts settle at 1 USD = 1,000,000 Credits. Context is 1M tokens with 960,000 maximum input and 64,000 maximum output tokens. Promotions, top-up bonuses and account benefits may affect settlement.",
       "source_url": "https://docs.b.ai/llmservice/models/hy4-flash/",
-      "checked_at": "2026-11-25",
-      "updated_at": "2026-11-19",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "offers": [
         {
           "id": "fifty-percent-promotion",
@@ -6146,7 +6146,7 @@
             "Hy4 Flash"
           ],
           "source_url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
-          "checked_at": "2026-11-25",
+          "checked_at": "2026-11-26",
           "conditions_zh": "活动期间输入、输出、缓存写入与缓存读取均按标准参考价的 50% 结算，仅适用于 hy4-flash；2026-11-30 12:00（北京时间，UTC+8）结束后按标准参考价计费。适用条款与最终账单以平台显示和实际账单为准。",
           "conditions_en": "During the promotion, input, output, cache writes and cache reads are billed at 50% of the standard reference price, applying only to hy4-flash; after the offer ends at 12:00 noon on November 30, 2026 (Beijing Time, UTC+8), usage is billed at standard reference prices. Applicable terms and final charges follow the platform display and actual billing records.",
           "eligibility_zh": "仅通过 B.AI 使用 hy4-flash 的用量",
@@ -6172,7 +6172,7 @@
               "cache_write": 0.07
             },
             "source_url": "https://docs.b.ai/llmservice/models/hy4-flash/",
-            "checked_at": "2026-11-25",
+            "checked_at": "2026-11-26",
             "comparison_zh": "相同平台、型号、币种及每百万 tokens 单位的标准价与活动价比较",
             "comparison_en": "Same platform, model, currency and per-million-token units for standard and promotional rates"
           }
@@ -6306,8 +6306,8 @@
       "note_zh": "官方最强推理模型，支持最长 1M tokens 的长输出生成。每百万 tokens 输入 $2、输出（含思考 tokens）$10、缓存读取 $0.10，至 2026-11-30；2026-12-01 起输入 $4、输出 $20、缓存读取 $0.20。仅支持隐式缓存，不支持显式缓存；不提供免费层。",
       "note_en": "Google's most capable reasoning model, with long-decode generation up to 1M tokens. Per million tokens: input $2, output (including thinking tokens) $10 and cache reads $0.10 through Nov 30, 2026; from Dec 1, 2026 input $4, output $20 and cache reads $0.20. Implicit caching only; no free tier.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-11-21",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "valid_until": "2026-11-30"
     },
     {
@@ -6329,8 +6329,8 @@
       "note_zh": "统一 1M-token 上下文窗口的前沿模型，面向复杂软件工程与知识工作。每百万 tokens 输入 $3、输出（含思考 tokens）$15、缓存读取 $0.15；官方未公布调价时间。仅支持隐式缓存，不支持显式缓存；不提供免费层。",
       "note_en": "A frontier model with a unified 1M-token context window for complex software engineering and knowledge work. Per million tokens: input $3, output (including thinking tokens) $15 and cache reads $0.15; no price-change date is published. Implicit caching only; no free tier.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-11-21"
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
     },
     {
       "id": "gemini-4-hydrogen",
@@ -6351,8 +6351,8 @@
       "note_zh": "每百万 tokens 输入 $1.50、输出（含思考 tokens）$7.50、缓存读取 $0.075。提供免费层；仅支持隐式缓存，不支持显式缓存。",
       "note_en": "Per million tokens: input $1.50, output (including thinking tokens) $7.50 and cache reads $0.075. A free tier is available; implicit caching only.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-11-21",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "offers": [
         {
           "id": "api-free-tier",
@@ -6363,7 +6363,7 @@
             "Gemini 4 Hydrogen"
           ],
           "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-          "checked_at": "2026-11-24",
+          "checked_at": "2026-11-26",
           "conditions_zh": "仅 Gemini API 免费层，输入输出免费且受服务额度限制；免费层内容可用于改进 Google 产品。付费层 token 费率、缓存和搜索等费用分别适用。",
           "conditions_en": "Applies only to the Gemini API free tier, with free input/output subject to service limits. Free-tier content may be used to improve Google products. Paid token rates, caching and search charges apply separately.",
           "eligibility_zh": "符合 Gemini API 免费层资格的账号、地区与用量。",
@@ -6394,8 +6394,8 @@
       "note_zh": "活动价至 2026-12-31：每百万 tokens 输入 $0.75、输出 $3.75（含思考 tokens）、缓存读取 $0.075；2027-01-01 起输入 $1.50、输出 $7.50、缓存读取 $0.15。缓存存储 $0.50 / 百万 tokens / 小时至 2026-12-31，之后 $1.00。提供免费层；搜索另计。",
       "note_en": "Promotional rates through Dec 31, 2026: input $0.75, output $3.75 (including thinking tokens) and cache reads $0.075 per million tokens; from Jan 1, 2027 input $1.50, output $7.50 and cache reads $0.15. Cache storage is $0.50 per million tokens per hour through Dec 31, 2026, then $1.00. A free tier is available; search costs extra.",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "checked_at": "2026-11-24",
-      "updated_at": "2026-11-21",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27",
       "valid_until": "2026-12-31",
       "offers": [
         {
@@ -6407,7 +6407,7 @@
             "Gemini 3.6 Flash"
           ],
           "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-          "checked_at": "2026-11-24",
+          "checked_at": "2026-11-26",
           "conditions_zh": "仅 Gemini API 免费层，输入输出免费且受服务额度限制；免费层内容可用于改进 Google 产品。付费层 token 费率、缓存和搜索等费用分别适用。",
           "conditions_en": "Applies only to the Gemini API free tier, with free input/output subject to service limits. Free-tier content may be used to improve Google products. Paid token rates, caching and search charges apply separately.",
           "eligibility_zh": "符合 Gemini API 免费层资格的账号、地区与用量。",
@@ -6435,11 +6435,11 @@
       },
       "scope_zh": "Standard · 短上下文",
       "scope_en": "Standard · short context",
-      "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $16、输出 $60、缓存读取 $0.80、30 分钟缓存写入 $20、12 小时缓存写入 $40。Batch / Flex 为 Standard 的 50%；Ultrafast 为 Standard 的 3 倍，短上下文输入 $24、输出 $120、缓存读取 $1.20、30 分钟写入 $30、12 小时写入 $60。适用地域处理端点加价 10%；符合条件的后台请求在 2 小时完成窗口按低于 Standard 30%、8 小时窗口按低于 Standard 40% 计费。",
-      "note_en": "Standard short-context rates. Long context per million tokens: input $16, output $60, cache reads $0.80, 30-minute cache writes $20 and 12-hour writes $40. Batch / Flex cost 50% of Standard; Ultrafast costs 3× Standard with short-context input $24, output $120, cache reads $1.20 and 30m/12h writes of $30/$60. Eligible regional-processing endpoints add 10%; eligible background requests bill 30% below Standard within the 2-hour completion window and 40% below within 8 hours.",
+      "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $16、输出 $60、缓存读取 $0.80、30 分钟缓存写入 $20、12 小时缓存写入 $40。Batch / Flex 为 Standard 的 50%；Ultrafast 为 Standard 的 3 倍，短上下文输入 $24、输出 $120、缓存读取 $1.20、30 分钟写入 $30、12 小时写入 $60。适用地域处理端点加价 10%；符合条件的后台请求在 2 小时完成窗口按低于 Standard 30%、8 小时窗口按低于 Standard 40% 计费。 Ultrafast 优惠费率适用至 2027-02-28（Pacific time）；自 2027-03-01 起恢复 Standard 的 6 倍：短上下文输入 $48、输出 $240、缓存读取 $2.40、30 分钟写入 $60、12 小时写入 $120；长上下文 $96/$360/$4.80/$120/$240。",
+      "note_en": "Standard short-context rates. Long context per million tokens: input $16, output $60, cache reads $0.80, 30-minute cache writes $20 and 12-hour writes $40. Batch / Flex cost 50% of Standard; Ultrafast costs 3× Standard with short-context input $24, output $120, cache reads $1.20 and 30m/12h writes of $30/$60. Eligible regional-processing endpoints add 10%; eligible background requests bill 30% below Standard within the 2-hour completion window and 40% below within 8 hours. Ultrafast promotional rates apply through February 28, 2027 (Pacific time). Starting March 1, 2027, list pricing returns to 6× Standard: short-context input $48, output $240, cache reads $2.40, 30-minute writes $60 and 12-hour writes $120; long context $96/$360/$4.80/$120/$240.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-11-21",
-      "updated_at": "2026-11-21"
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
     },
     {
       "id": "gpt-6-2-sol",
@@ -6457,11 +6457,11 @@
       },
       "scope_zh": "Standard · 短上下文",
       "scope_en": "Standard · short context",
-      "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $4、输出 $15、缓存读取 $0.20、30 分钟缓存写入 $5、12 小时缓存写入 $10。Batch / Flex 为 Standard 的 50%；Ultrafast 为 Standard 的 3 倍，短上下文输入 $6、输出 $30。适用地域处理端点加价 10%；符合条件的后台请求在 2 小时完成窗口按低于 Standard 30%、8 小时窗口按低于 Standard 40% 计费。",
-      "note_en": "Standard short-context rates. Long context per million tokens: input $4, output $15, cache reads $0.20, 30-minute cache writes $5 and 12-hour writes $10. Batch / Flex cost 50% of Standard; Ultrafast costs 3× Standard with short-context input $6 and output $30. Eligible regional-processing endpoints add 10%; eligible background requests bill 30% below Standard within the 2-hour completion window and 40% below within 8 hours.",
+      "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $4、输出 $15、缓存读取 $0.20、30 分钟缓存写入 $5、12 小时缓存写入 $10。Batch / Flex 为 Standard 的 50%；Ultrafast 为 Standard 的 3 倍，短上下文输入 $6、输出 $30。适用地域处理端点加价 10%；符合条件的后台请求在 2 小时完成窗口按低于 Standard 30%、8 小时窗口按低于 Standard 40% 计费。 Ultrafast 优惠费率适用至 2027-02-28（Pacific time）；自 2027-03-01 起恢复 Standard 的 6 倍：短上下文输入 $12、输出 $60、缓存读取 $0.60、30 分钟写入 $15、12 小时写入 $30；长上下文 $24/$90/$1.20/$30/$60。",
+      "note_en": "Standard short-context rates. Long context per million tokens: input $4, output $15, cache reads $0.20, 30-minute cache writes $5 and 12-hour writes $10. Batch / Flex cost 50% of Standard; Ultrafast costs 3× Standard with short-context input $6 and output $30. Eligible regional-processing endpoints add 10%; eligible background requests bill 30% below Standard within the 2-hour completion window and 40% below within 8 hours. Ultrafast promotional rates apply through February 28, 2027 (Pacific time). Starting March 1, 2027, list pricing returns to 6× Standard: short-context input $12, output $60, cache reads $0.60, 30-minute writes $15 and 12-hour writes $30; long context $24/$90/$1.20/$30/$60.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-11-21",
-      "updated_at": "2026-11-21"
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
     },
     {
       "id": "gpt-6-1-terra",
@@ -6482,8 +6482,228 @@
       "note_zh": "展示 Standard 短上下文价；长上下文每百万 tokens：输入 $2、输出 $7.50、缓存读取 $0.10、30 分钟缓存写入 $2.50、12 小时缓存写入 $5。Batch / Flex 为 Standard 的 50%。适用地域处理端点加价 10%；符合条件的后台请求在 2 小时完成窗口按低于 Standard 30%、8 小时窗口按低于 Standard 40% 计费。",
       "note_en": "Standard short-context rates. Long context per million tokens: input $2, output $7.50, cache reads $0.10, 30-minute cache writes $2.50 and 12-hour writes $5. Batch / Flex cost 50% of Standard. Eligible regional-processing endpoints add 10%; eligible background requests bill 30% below Standard within the 2-hour completion window and 40% below within 8 hours.",
       "source_url": "https://developers.openai.com/api/docs/pricing",
-      "checked_at": "2026-11-21",
-      "updated_at": "2026-11-21"
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "genie-4",
+      "category": "api",
+      "provider": "Google",
+      "name": "Genie 4",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 1.5,
+        "output": 17.5,
+        "cached": null,
+        "cache_write": null
+      },
+      "scope_zh": "Standard · 视频与音频输出",
+      "scope_en": "Standard · video and audio output",
+      "note_zh": "实时交互世界生成模型，输出 16:9、24 fps 视频与同步 48 kHz 立体声音频。输入（文本 / 参考图片）$1.50、视频输出（含音频）$17.50、文本输出 $9 / 百万 tokens。视频按每帧 240 tokens、每秒 5,760 tokens 计费，Standard 约 $0.10/秒；须调用 complete() 结束会话并停止计费。不支持免费层、Batch、Flex、Priority 或上下文缓存；服务区域为美国、西欧和日本。",
+      "note_en": "Real-time interactive world generation with 16:9, 24 fps video and synchronized 48 kHz stereo audio. Input (text/reference image) costs $1.50, video output including audio $17.50, and text output $9 per million tokens. Video bills at 240 tokens per frame and 5,760 tokens per second, approximately $0.10/second at Standard; call complete() to end the session and stop billing. No Free tier, Batch, Flex, Priority or context caching; serving regions are the United States, Western Europe and Japan.",
+      "source_url": "https://aistudio.google.com/docs/models/genie-4",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "gemini-omni-1-2-flash",
+      "category": "api",
+      "provider": "Google",
+      "name": "Gemini Omni 1.2 Flash",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 1.5,
+        "output": 12,
+        "cached": null,
+        "cache_write": null
+      },
+      "scope_zh": "Standard · 视频输出",
+      "scope_en": "Standard · video output",
+      "note_zh": "已正式开放的对话式视频生成与编辑模型，支持原生音频、最长 15 秒视频和最高 4K 输出。输入（文本 / 图片 / 视频）$1.50、视频输出 $12、文本输出 $9 / 百万 tokens。720p 按每秒 5,792 tokens 计费，Standard 约 $0.07/秒；360p 约 $0.023/秒、1080p 约 $0.104/秒、4K 约 $0.209/秒。不提供免费层。",
+      "note_en": "Generally available conversational video generation and editing with native audio, up to 15-second videos and up to 4K output. Input (text/image/video) costs $1.50, video output $12, and text output $9 per million tokens. 720p bills at 5,792 tokens per second, approximately $0.07/second at Standard; 360p is about $0.023/second, 1080p $0.104/second and 4K $0.209/second. No Free tier is offered.",
+      "source_url": "https://aistudio.google.com/docs/models/gemini-omni-flash",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "b-ai-hy4-preview",
+      "category": "api",
+      "provider": "B.AI",
+      "name": "Hy4 Preview",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 0.834,
+        "output": 2.501,
+        "cached": 0.042,
+        "cache_write": 0.834
+      },
+      "scope_zh": "B.AI · 标准参考价 · 1M 上下文",
+      "scope_en": "B.AI · standard reference rate · 1M context",
+      "note_zh": "腾讯 Hy4 系列早期开源权重模型，B.AI 模型 ID 为 hy4-preview。标准参考价为输入 $0.834、缓存写入 $0.834、缓存读取 $0.042、输出 $2.501 / 百万 tokens；账户按 1 USD = 1,000,000 Credits 结算。上下文 1M，最大输入 960,000、最大输出 64,000 tokens；默认开启思考，仅支持文本，不原生理解图片、音频或视频。",
+      "note_en": "Tencent’s early open-weight Hy4-series model, served on B.AI as hy4-preview. Standard reference rates are $0.834 input, $0.834 cache writes, $0.042 cache reads and $2.501 output per million tokens; accounts settle at 1 USD = 1,000,000 Credits. Context is 1M with 960,000 maximum input and 64,000 maximum output tokens. Thinking is enabled by default; the model is text-only and does not natively understand images, audio or video.",
+      "source_url": "https://docs.b.ai/llmservice/models/hy4-preview/",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "worldrouter-claude-fable-5-2",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "Claude Fable 5.2",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 320,
+        "output": 1600,
+        "cached": 8,
+        "cache_write": 400
+      },
+      "scope_zh": "WorldRouter · 默认路由 · 1M 上下文",
+      "scope_en": "WorldRouter · default route · 1M context",
+      "note_zh": "官方默认路由价格为输入 320、输出 1,600、缓存读取 8、缓存写入 400 Credits / 百万 tokens；官方价格更新于 2026-11-10。100 Credits = 1 USD，本目录保留 Credits 原币种。",
+      "note_en": "Official default-route rates are 320 input, 1,600 output, 8 cache-read and 400 cache-write Credits per million tokens; official prices were updated on 2026-11-10. 100 Credits = 1 USD; this catalog retains native Credits.",
+      "source_url": "https://router.worldclaw.ai/models/claude-fable-5.2",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "worldrouter-gpt-6-2-sol",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "GPT-6.2 Sol",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 200,
+        "output": 1000,
+        "cached": 10,
+        "cache_write": 250
+      },
+      "scope_zh": "WorldRouter · 输入 0–272K",
+      "scope_en": "WorldRouter · input 0–272K",
+      "note_zh": "输入 272K–1.05M 时，输入 / 输出 / 缓存读取 / 缓存写入为 400 / 1,500 / 20 / 500 Credits / 百万 tokens；官方价格更新于 2026-11-18。100 Credits = 1 USD，本目录保留 Credits 原币种。",
+      "note_en": "For input from 272K to 1.05M, input/output/cache-read/cache-write rates are 400/1,500/20/500 Credits per million tokens; official prices were updated on 2026-11-18. 100 Credits = 1 USD; this catalog retains native Credits.",
+      "source_url": "https://router.worldclaw.ai/models/gpt-6.2-sol",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "worldrouter-gemini-4-hydrogen",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "Gemini 4 Hydrogen",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 67.5,
+        "output": 337.5,
+        "cached": 3.375,
+        "cache_write": null
+      },
+      "scope_zh": "WorldRouter · Primary 路由 · 1M 上下文",
+      "scope_en": "WorldRouter · Primary route · 1M context",
+      "note_zh": "Primary 路由输入 / 输出 / 缓存读取为 67.5 / 337.5 / 3.375 Credits / 百万 tokens；自动 fallback 为 75 / 375 / 3.75，价格随实际路由变化。缓存写入标为 N/A，不视为免费；官方价格更新于 2026-11-14。100 Credits = 1 USD，本目录保留 Credits 原币种。",
+      "note_en": "Primary-route input/output/cache-read rates are 67.5/337.5/3.375 Credits per million tokens; automatic fallback is 75/375/3.75, and pricing follows the route used. Cache writes are N/A, not assumed free; official prices were updated on 2026-11-14. 100 Credits = 1 USD; this catalog retains native Credits.",
+      "source_url": "https://router.worldclaw.ai/models/gemini-4-hydrogen",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "worldrouter-gemini-4-neon",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "Gemini 4 Neon",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 165,
+        "output": 825,
+        "cached": 8.25,
+        "cache_write": null
+      },
+      "scope_zh": "WorldRouter · 1M 上下文",
+      "scope_en": "WorldRouter · 1M context",
+      "note_zh": "官方输入 / 输出 / 缓存读取为 165 / 825 / 8.25 Credits / 百万 tokens；缓存写入标为 N/A，不视为免费。官方价格更新于 2026-11-19。100 Credits = 1 USD，本目录保留 Credits 原币种。",
+      "note_en": "Official input/output/cache-read rates are 165/825/8.25 Credits per million tokens; cache writes are N/A, not assumed free. Official prices were updated on 2026-11-19. 100 Credits = 1 USD; this catalog retains native Credits.",
+      "source_url": "https://router.worldclaw.ai/models/gemini-4-neon",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "worldrouter-gemini-4-argon",
+      "category": "api",
+      "provider": "WorldRouter",
+      "name": "Gemini 4 Argon",
+      "currency": "CREDITS",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 90,
+        "output": 450,
+        "cached": 4.5,
+        "cache_write": 90
+      },
+      "scope_zh": "WorldRouter · 1M 上下文",
+      "scope_en": "WorldRouter · 1M context",
+      "note_zh": "官方输入 / 输出 / 缓存读取 / 缓存写入为 90 / 450 / 4.5 / 90 Credits / 百万 tokens；官方价格更新于 2026-11-05。100 Credits = 1 USD，本目录保留 Credits 原币种。",
+      "note_en": "Official input/output/cache-read/cache-write rates are 90/450/4.5/90 Credits per million tokens; official prices were updated on 2026-11-05. 100 Credits = 1 USD; this catalog retains native Credits.",
+      "source_url": "https://router.worldclaw.ai/models/gemini-4-argon",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "minimax-h3-image",
+      "category": "api",
+      "provider": "MiniMax",
+      "name": "MiniMax H3-Image",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 2.3,
+        "output": 3.8,
+        "cached": null,
+        "cache_write": null
+      },
+      "scope_zh": "Standard · 文本输入 / 图像输出",
+      "scope_en": "Standard · text input / image output",
+      "note_zh": "官方图像生成标准价：文本输入 $2.30、图像输出 $3.80 / 百万 tokens；图像输入另为 $1.50 / 百万 tokens。页面显示最终交付图片至少 16,600,000 像素（宽 × 高）时，H3-Image 与 H3-Image-Highspeed 的整个请求费用限时五折，但未公布截止日，也未按 token 维度列出折扣价，故不纳入结构化折扣价格。",
+      "note_en": "Official Standard image-generation rates are $2.30 per million text-input tokens and $3.80 per million image-output tokens; image input is separately $1.50 per million tokens. The page advertises a limited-time 50% discount on the total request cost for H3-Image and H3-Image-Highspeed when the final delivered image is at least 16,600,000 pixels (width × height), but publishes no deadline or token-dimension discount rates, so no structured discount price is inferred.",
+      "source_url": "https://platform.minimax.io/docs/pricing/overview",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
+    },
+    {
+      "id": "minimax-h3-image-highspeed",
+      "category": "api",
+      "provider": "MiniMax",
+      "name": "MiniMax H3-Image Highspeed",
+      "currency": "USD",
+      "billing": "token",
+      "status": "verified",
+      "price": {
+        "input": 2.3,
+        "output": 7.6,
+        "cached": null,
+        "cache_write": null
+      },
+      "scope_zh": "Highspeed · 文本输入 / 图像输出",
+      "scope_en": "Highspeed · text input / image output",
+      "note_zh": "官方图像生成 Highspeed 价：文本输入 $2.30、图像输出 $7.60 / 百万 tokens；图像输入另为 $3.00 / 百万 tokens。页面显示最终交付图片至少 16,600,000 像素（宽 × 高）时，H3-Image 与 H3-Image-Highspeed 的整个请求费用限时五折，但未公布截止日，也未按 token 维度列出折扣价，故不纳入结构化折扣价格。",
+      "note_en": "Official Highspeed image-generation rates are $2.30 per million text-input tokens and $7.60 per million image-output tokens; image input is separately $3.00 per million tokens. The page advertises a limited-time 50% discount on the total request cost for H3-Image and H3-Image-Highspeed when the final delivered image is at least 16,600,000 pixels (width × height), but publishes no deadline or token-dimension discount rates, so no structured discount price is inferred.",
+      "source_url": "https://platform.minimax.io/docs/pricing/overview",
+      "checked_at": "2026-11-26",
+      "updated_at": "2026-11-27"
     }
   ]
 }
